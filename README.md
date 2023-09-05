@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 # Visual Studio documentation for Microsoft C++
-=======
-# Visual Studio 2017 documentation for Visual C++
 ss
->>>>>>> other2/live
-
 Welcome! This repository contains source files for the work-in-progress Microsoft C++ (MSVC or Visual C++) technical documentation. The articles are published on the [C++ in Visual Studio documentation site](https://learn.microsoft.com/cpp).
 
 The documentation for Visual Basic and Visual C# are located in a separate repository at [https://github.com/dotnet/core-docs](https://github.com/dotnet/core-docs), and the Visual Studio documentation is located in the repository located at [https://github.com/Microsoft/visualstudio-docs](https://github.com/Microsoft/visualstudio-docs).
