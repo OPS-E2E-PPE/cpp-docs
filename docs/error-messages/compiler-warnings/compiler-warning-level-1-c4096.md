@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4096"
 title: "Compiler Warning (level 1) C4096"
 ms.date: "11/04/2016"
 f1_keywords: ["C4096"]
@@ -15,7 +16,7 @@ See [Interface Attributes](../../windows/attributes/interface-attributes.md) for
 
 The following sample generates C4096:
 
-```
+```cpp
 // C4096.cpp
 // compile with: /W1 /LD
 #include "windows.h"

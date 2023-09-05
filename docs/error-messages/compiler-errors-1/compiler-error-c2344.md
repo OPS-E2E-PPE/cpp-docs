@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2344"
 title: "Compiler Error C2344"
 ms.date: "11/04/2016"
 f1_keywords: ["C2344"]
@@ -13,7 +14,7 @@ When using the [align](../../cpp/align-cpp.md) keyword, the value you pass must 
 
 For example, the following code generates C2344 because 3 is not a power of two:
 
-```
+```cpp
 // C2344.cpp
 // compile with: /c
 __declspec(align(3)) int a;   // C2344

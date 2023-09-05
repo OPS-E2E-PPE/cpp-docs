@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: CDynamicAccessor Class"
 title: "CDynamicAccessor Class"
 ms.date: "11/04/2016"
-f1_keywords: ["ATL.CDynamicAccessor", "ATL::CDynamicAccessor", "CDynamicAccessor", "ATL::CDynamicAccessor::AddBindEntry", "AddBindEntry", "CDynamicAccessor.AddBindEntry", "CDynamicAccessor::AddBindEntry", "ATL.CDynamicAccessor.AddBindEntry", "CDynamicAccessor::CDynamicAccessor", "ATL::CDynamicAccessor::CDynamicAccessor", "ATL.CDynamicAccessor.CDynamicAccessor", "CDynamicAccessor.CDynamicAccessor", "ATL::CDynamicAccessor::Close", "ATL.CDynamicAccessor.Close", "CDynamicAccessor.Close", "CDynamicAccessor::Close", "ATL.CDynamicAccessor.GetBlobHandling", "CDynamicAccessor::GetBlobHandling", "ATL::CDynamicAccessor::GetBlobHandling", "GetBlobHandling", "CDynamicAccessor.GetBlobHandling", "ATL::CDynamicAccessor::GetBlobSizeLimit", "CDynamicAccessor.GetBlobSizeLimit", "CDynamicAccessor::GetBlobSizeLimit", "GetBlobSizeLimit", "ATL.CDynamicAccessor.GetBlobSizeLimit", "CDynamicAccessor.GetBookmark", "GetBookmark", "CDynamicAccessor::GetBookmark", "ATL.CDynamicAccessor.GetBookmark", "ATL::CDynamicAccessor::GetBookmark", "ATL.CDynamicAccessor.GetColumnCount", "ATL::CDynamicAccessor::GetColumnCount", "CDynamicAccessor::GetColumnCount", "CDynamicAccessor.GetColumnCount", "GetColumnCount", "CDynamicAccessor.GetColumnFlags", "ATL::CDynamicAccessor::GetColumnFlags", "ATL.CDynamicAccessor.GetColumnFlags", "CDynamicAccessor::GetColumnFlags", "GetColumnFlags", "GetColumnInfo", "ATL.CDynamicAccessor.GetColumnInfo", "ATL::CDynamicAccessor::GetColumnInfo", "CDynamicAccessor.GetColumnInfo", "CDynamicAccessor::GetColumnInfo", "ATL::CDynamicAccessor::GetColumnName", "GetColumnName", "ATL.CDynamicAccessor.GetColumnName", "CDynamicAccessor::GetColumnName", "CDynamicAccessor.GetColumnName", "ATL.CDynamicAccessor.GetColumnType", "CDynamicAccessor::GetColumnType", "GetColumnType", "CDynamicAccessor.GetColumnType", "ATL::CDynamicAccessor::GetColumnType", "CDynamicAccessor.GetLength", "ATL.CDynamicAccessor.GetLength", "CDynamicAccessor::GetLength", "ATL::CDynamicAccessor::GetLength", "CDynamicAccessor.GetOrdinal", "ATL::CDynamicAccessor::GetOrdinal", "CDynamicAccessor::GetOrdinal", "ATL.CDynamicAccessor.GetOrdinal", "GetOrdinal", "ATL::CDynamicAccessor::GetStatus", "CDynamicAccessor.GetStatus", "ATL.CDynamicAccessor.GetStatus", "CDynamicAccessor::GetStatus", "GetValue", "CDynamicAccessor::GetValue<ctype>", "ATL.CDynamicAccessor.GetValue<ctype>", "CDynamicAccessor.GetValue", "CDynamicAccessor::GetValue", "ATL.CDynamicAccessor.GetValue", "ATL::CDynamicAccessor::GetValue", "ATL::CDynamicAccessor::GetValue<ctype>", "CDynamicAccessor::SetBlobHandling", "CDynamicAccessor.SetBlobHandling", "ATL::CDynamicAccessor::SetBlobHandling", "SetBlobHandling", "ATL.CDynamicAccessor.SetBlobHandling", "CDynamicAccessor::SetBlobSizeLimit", "SetBlobSizeLimit", "CDynamicAccessor.SetBlobSizeLimit", "ATL.CDynamicAccessor.SetBlobSizeLimit", "ATL::CDynamicAccessor::SetBlobSizeLimit", "ATL::CDynamicAccessor::SetLength", "CDynamicAccessor.SetLength", "CDynamicAccessor::SetLength", "ATL.CDynamicAccessor.SetLength", "CDynamicAccessor::SetStatus", "ATL::CDynamicAccessor::SetStatus", "CDynamicAccessor.SetStatus", "ATL.CDynamicAccessor.SetStatus", "ATL.CDynamicAccessor.SetValue", "ATL::CDynamicAccessor::SetValue", "ATL::CDynamicAccessor::SetValue<ctype>", "CDynamicAccessor.SetValue", "ATL.CDynamicAccessor.SetValue<ctype>", "CDynamicAccessor::SetValue", "CDynamicAccessor::SetValue<ctype>"]
+f1_keywords: ["ATL.CDynamicAccessor", "ATL::CDynamicAccessor", "CDynamicAccessor", "ATL::CDynamicAccessor::AddBindEntry", "CDynamicAccessor.AddBindEntry", "CDynamicAccessor::AddBindEntry", "ATL.CDynamicAccessor.AddBindEntry", "CDynamicAccessor::CDynamicAccessor", "ATL::CDynamicAccessor::CDynamicAccessor", "ATL.CDynamicAccessor.CDynamicAccessor", "CDynamicAccessor.CDynamicAccessor", "ATL::CDynamicAccessor::Close", "ATL.CDynamicAccessor.Close", "CDynamicAccessor.Close", "CDynamicAccessor::Close", "ATL.CDynamicAccessor.GetBlobHandling", "CDynamicAccessor::GetBlobHandling", "ATL::CDynamicAccessor::GetBlobHandling", "GetBlobHandling", "CDynamicAccessor.GetBlobHandling", "ATL::CDynamicAccessor::GetBlobSizeLimit", "CDynamicAccessor.GetBlobSizeLimit", "CDynamicAccessor::GetBlobSizeLimit", "GetBlobSizeLimit", "ATL.CDynamicAccessor.GetBlobSizeLimit", "CDynamicAccessor.GetBookmark", "GetBookmark", "CDynamicAccessor::GetBookmark", "ATL.CDynamicAccessor.GetBookmark", "ATL::CDynamicAccessor::GetBookmark", "ATL.CDynamicAccessor.GetColumnCount", "ATL::CDynamicAccessor::GetColumnCount", "CDynamicAccessor::GetColumnCount", "CDynamicAccessor.GetColumnCount", "GetColumnCount", "CDynamicAccessor.GetColumnFlags", "ATL::CDynamicAccessor::GetColumnFlags", "ATL.CDynamicAccessor.GetColumnFlags", "CDynamicAccessor::GetColumnFlags", "ATL.CDynamicAccessor.GetColumnInfo", "ATL::CDynamicAccessor::GetColumnInfo", "CDynamicAccessor.GetColumnInfo", "CDynamicAccessor::GetColumnInfo", "ATL::CDynamicAccessor::GetColumnName", "GetColumnName", "ATL.CDynamicAccessor.GetColumnName", "CDynamicAccessor::GetColumnName", "CDynamicAccessor.GetColumnName", "ATL.CDynamicAccessor.GetColumnType", "CDynamicAccessor::GetColumnType", "GetColumnType", "CDynamicAccessor.GetColumnType", "ATL::CDynamicAccessor::GetColumnType", "CDynamicAccessor.GetLength", "ATL.CDynamicAccessor.GetLength", "CDynamicAccessor::GetLength", "ATL::CDynamicAccessor::GetLength", "CDynamicAccessor.GetOrdinal", "ATL::CDynamicAccessor::GetOrdinal", "CDynamicAccessor::GetOrdinal", "ATL.CDynamicAccessor.GetOrdinal", "GetOrdinal", "ATL::CDynamicAccessor::GetStatus", "CDynamicAccessor.GetStatus", "ATL.CDynamicAccessor.GetStatus", "CDynamicAccessor::GetStatus", "GetValue", "CDynamicAccessor::GetValue<ctype>", "ATL.CDynamicAccessor.GetValue<ctype>", "CDynamicAccessor.GetValue", "CDynamicAccessor::GetValue", "ATL.CDynamicAccessor.GetValue", "ATL::CDynamicAccessor::GetValue", "ATL::CDynamicAccessor::GetValue<ctype>", "CDynamicAccessor::SetBlobHandling", "CDynamicAccessor.SetBlobHandling", "ATL::CDynamicAccessor::SetBlobHandling", "SetBlobHandling", "ATL.CDynamicAccessor.SetBlobHandling", "CDynamicAccessor::SetBlobSizeLimit", "SetBlobSizeLimit", "CDynamicAccessor.SetBlobSizeLimit", "ATL.CDynamicAccessor.SetBlobSizeLimit", "ATL::CDynamicAccessor::SetBlobSizeLimit", "ATL::CDynamicAccessor::SetLength", "CDynamicAccessor.SetLength", "CDynamicAccessor::SetLength", "ATL.CDynamicAccessor.SetLength", "CDynamicAccessor::SetStatus", "ATL::CDynamicAccessor::SetStatus", "CDynamicAccessor.SetStatus", "ATL.CDynamicAccessor.SetStatus", "ATL.CDynamicAccessor.SetValue", "ATL::CDynamicAccessor::SetValue", "ATL::CDynamicAccessor::SetValue<ctype>", "CDynamicAccessor.SetValue", "ATL.CDynamicAccessor.SetValue<ctype>", "CDynamicAccessor::SetValue", "CDynamicAccessor::SetValue<ctype>"]
 helpviewer_keywords: ["CDynamicAccessor class", "AddBindEntry method", "CDynamicAccessor class, constructor", "Close method", "GetBlobHandling method", "GetBlobSizeLimit method", "GetBookmark method", "GetColumnCount method", "GetColumnFlags method", "GetColumnInfo method", "GetColumnName method", "GetColumnType method", "GetLength method", "GetOrdinal method", "GetStatus method", "GetValue method", "SetBlobHandling method", "SetBlobSizeLimit method", "SetLength method", "SetStatus method", "SetValue method"]
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
 ---
@@ -23,11 +24,11 @@ class CDynamicAccessor : public CAccessorBase
 
 ### Methods
 
-|||
+| Name | Description |
 |-|-|
 |[AddBindEntry](#addbindentry)|Adds a bind entry to the output columns when overriding the default accessor.|
 |[CDynamicAccessor](#cdynamicaccessor)|Instantiates and initializes the `CDynamicAccessor` object.|
-|[Close](#close)|Unbinds all the columns, releases the allocated memory, and releases the [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85)) interface pointer in the class.|
+|[Close](#close)|Unbinds all the columns, releases the allocated memory, and releases the [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) interface pointer in the class.|
 |[GetBlobHandling](#getblobhandling)|Retrieves the BLOB handling value for the current row.|
 |[GetBlobSizeLimit](#getblobsizelimit)|Retrieves the maximum BLOB size in bytes.|
 |[GetBookmark](#getbookmark)|Retrieves the bookmark for the current row.|
@@ -50,7 +51,7 @@ class CDynamicAccessor : public CAccessorBase
 
 Use `CDynamicAccessor` methods to obtain column information such as column names, column count, data type, and so on. You then use this column information to create an accessor dynamically at run time.
 
-The column information is stored in a buffer that is created and managed by this class. Obtain data from the buffer using [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md).
+The column information is stored in a buffer that is created and managed by this class. Obtain data from the buffer using [GetValue](#getvalue).
 
 For a discussion and examples of using the dynamic accessor classes, see [Using Dynamic Accessors](../../data/oledb/using-dynamic-accessors.md).
 
@@ -67,7 +68,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 #### Parameters
 
 *info*<br/>
-[in] A `DBCOLUMNINFO` structure containing column information. See "DBCOLUMNINFO Structures" in [IColumnsInfo::GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) in the *OLE DB Programmer's Reference*.
+[in] A `DBCOLUMNINFO` structure containing column information. See "DBCOLUMNINFO Structures" in [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in the *OLE DB Programmer's Reference*.
 
 ### Return Value
 
@@ -91,10 +92,10 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 #### Parameters
 
 *eBlobHandling*<br/>
-Specifies how the binary large object (BLOB) data is to be handled. The default value is DBBLOBHANDLING_DEFAULT. See [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) for a description of the DBBLOBHANDLINGENUM values.
+Specifies how the binary large object (BLOB) data is to be handled. The default value is DBBLOBHANDLING_DEFAULT. See [SetBlobHandling](#setblobhandling) for a description of the DBBLOBHANDLINGENUM values.
 
 *nBlobSize*<br/>
-The maximum BLOB size in bytes; column data over this value is treated as a BLOB. The default value is 8,000. See [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) for details.
+The maximum BLOB size in bytes; column data over this value is treated as a BLOB. The default value is 8,000. See [SetBlobSizeLimit](#setblobsizelimit) for details.
 
 ### Remarks
 
@@ -104,7 +105,7 @@ You can also specify how `CDynamicAccessor` handles column data that qualifies a
 
 ## <a name="close"></a> CDynamicAccessor::Close
 
-Unbinds all the columns, releases the allocated memory, and releases the [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85)) interface pointer in the class.
+Unbinds all the columns, releases the allocated memory, and releases the [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) interface pointer in the class.
 
 ### Syntax
 
@@ -124,7 +125,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 ### Remarks
 
-Returns the BLOB handling value *eBlobHandling* as set by [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md).
+Returns the BLOB handling value *eBlobHandling* as set by [SetBlobHandling](#setblobhandling).
 
 ## <a name="getblobsizelimit"></a> CDynamicAccessor::GetBlobSizeLimit
 
@@ -138,7 +139,7 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 ### Remarks
 
-Returns the BLOB handling value *nBlobSize* as set by [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).
+Returns the BLOB handling value *nBlobSize* as set by [SetBlobSizeLimit](#setblobsizelimit).
 
 ## <a name="getbookmark"></a> CDynamicAccessor::GetBookmark
 
@@ -194,11 +195,11 @@ bool GetColumnFlags(DBORDINAL nColumn,
 [in] The column number. Column numbers start with 1. A value of 0 refers to the bookmark column, if any.
 
 *pFlags*<br/>
-[out] A pointer to a bitmask that describes column characteristics. See "DBCOLUMNFLAGS Enumerated Type" in [IColumnsInfo::GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) in the *OLE DB Programmer's Reference*.
+[out] A pointer to a bitmask that describes column characteristics. See "DBCOLUMNFLAGS Enumerated Type" in [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in the *OLE DB Programmer's Reference*.
 
 ### Return Value
 
-Returns **true** if the column characteristics are successfully retrieved. Otherwise, it returns **false**.
+Returns **`true`** if the column characteristics are successfully retrieved. Otherwise, it returns **`false`**.
 
 ### Remarks
 
@@ -220,13 +221,13 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 #### Parameters
 
 *pRowset*<br/>
-[in] A pointer to the [IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) interface.
+[in] A pointer to the [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) interface.
 
 *pColumns*<br/>
 [out] A pointer to memory in which to return the number of columns in the rowset; this number includes the bookmark column, if there is one.
 
 *ppColumnInfo*<br/>
-[out] A pointer to memory in which to return an array of `DBCOLUMNINFO` structures. See "DBCOLUMNINFO Structures" in [IColumnsInfo::GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) in the *OLE DB Programmer's Reference*.
+[out] A pointer to memory in which to return an array of `DBCOLUMNINFO` structures. See "DBCOLUMNINFO Structures" in [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in the *OLE DB Programmer's Reference*.
 
 *ppStringsBuffer*<br/>
 [out] A pointer to memory in which to return a pointer to storage for all string values (names used either within *columnid* or for *pwszName*) within a single allocation block.
@@ -237,7 +238,7 @@ One of the standard HRESULT values.
 
 ### Remarks
 
-See [IColumnsInfo::GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) in the *OLE DB Programmer's Reference* for information on the data types `DBORDINAL`, `DBCOLUMNINFO`, and `OLECHAR`.
+See [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in the *OLE DB Programmer's Reference* for information on the data types `DBORDINAL`, `DBCOLUMNINFO`, and `OLECHAR`.
 
 ## <a name="getcolumnname"></a> CDynamicAccessor::GetColumnName
 
@@ -279,7 +280,7 @@ bool GetColumnType(DBORDINAL nColumn,
 
 ### Return Value
 
-Returns **true** on success or **false** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ## <a name="getlength"></a> CDynamicAccessor::GetLength
 
@@ -311,7 +312,7 @@ bool GetLength(const WCHAR* pColumnName,
 
 ### Return Value
 
-Returns **true** if the specified column is found. Otherwise, this function returns **false**.
+Returns **`true`** if the specified column is found. Otherwise, this function returns **`false`**.
 
 ### Remarks
 
@@ -341,7 +342,7 @@ bool GetOrdinal(const WCHAR* pColumnName,
 
 ### Return Value
 
-Returns **true** if a column with the specified name is found. Otherwise, this function returns **false**.
+Returns **`true`** if a column with the specified name is found. Otherwise, this function returns **`false`**.
 
 ## <a name="getstatus"></a> CDynamicAccessor::GetStatus
 
@@ -369,11 +370,11 @@ bool GetStatus(const WCHAR* pColumnName,
 [in] A pointer to a character string containing the column name.
 
 *pStatus*<br/>
-[out] A pointer to the variable containing the column status. See [DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) in the *OLE DB Programmer's Reference* for more information.
+[out] A pointer to the variable containing the column status. See [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) in the *OLE DB Programmer's Reference* for more information.
 
 ### Return Value
 
-Returns **true** if the specified column is found. Otherwise, this function returns **false**.
+Returns **`true`** if the specified column is found. Otherwise, this function returns **`false`**.
 
 ## <a name="getvalue"></a> CDynamicAccessor::GetValue
 
@@ -414,9 +415,9 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 
 ### Return Value
 
-If you want to pass string data, use the nontemplated versions of `GetValue`. The nontemplated versions of this method return `void*`, which points to the part of the buffer that contains the specified column data. Returns NULL if the column is not found.
+If you want to pass string data, use the nontemplated versions of `GetValue`. The nontemplated versions of this method return **`void*`**, which points to the part of the buffer that contains the specified column data. Returns NULL if the column is not found.
 
-For all other data types, it is simpler to use the templated versions of `GetValue`. The templated versions return **true** on success or **false** on failure.
+For all other data types, it is simpler to use the templated versions of `GetValue`. The templated versions return **`true`** on success or **`false`** on failure.
 
 ### Remarks
 
@@ -502,7 +503,7 @@ bool SetLength(const WCHAR* pColumnName,
 
 ### Return Value
 
-Returns **true** if the specified column length is set successfully. Otherwise, this function returns **false**.
+Returns **`true`** if the specified column length is set successfully. Otherwise, this function returns **`false`**.
 
 ## <a name="setstatus"></a> CDynamicAccessor::SetStatus
 
@@ -527,14 +528,14 @@ bool SetStatus(const WCHAR* pColumnName,
 [in] The column number. Column numbers start with 1. A value of 0 refers to the bookmark column, if any.
 
 *status*<br/>
-[in] The column status. See [DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) in the *OLE DB Programmer's Reference* for more information.
+[in] The column status. See [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) in the *OLE DB Programmer's Reference* for more information.
 
 *pColumnName*<br/>
 [in] A pointer to a character string containing the column name.
 
 ### Return Value
 
-Returns **true** if the specified column status is set successfully. Otherwise, this function returns **false**.
+Returns **`true`** if the specified column status is set successfully. Otherwise, this function returns **`false`**.
 
 ## <a name="setvalue"></a> CDynamicAccessor::SetValue
 
@@ -548,7 +549,7 @@ bool SetValue(
    DBORDINAL nColumn,
    constctype& data) throw( );
 
-template <class ctype> 
+template <class ctype>
 bool SetValue(
    const CHAR * pColumnName,
    const ctype& data) throw( );
@@ -575,11 +576,11 @@ bool SetValue(
 
 ### Return Value
 
-If you want to set string data, use the nontemplated versions of `GetValue`. The nontemplated versions of this method return `void*`, which points to the part of the buffer that contains the specified column data. Returns NULL if the column is not found.
+If you want to set string data, use the nontemplated versions of `GetValue`. The nontemplated versions of this method return **`void*`**, which points to the part of the buffer that contains the specified column data. Returns NULL if the column is not found.
 
-For all other data types, it is simpler to use the templated versions of `GetValue`. The templated versions return **true** on success or **false** on failure.
+For all other data types, it is simpler to use the templated versions of `GetValue`. The templated versions return **`true`** on success or **`false`** on failure.
 
-## See Also
+## See also
 
 [OLE DB Consumer Templates](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB Consumer Templates Reference](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

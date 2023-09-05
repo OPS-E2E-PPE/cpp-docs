@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3853"
 title: "Compiler Error C3853"
 ms.date: "11/04/2016"
 f1_keywords: ["C3853"]
@@ -13,7 +14,7 @@ Cannot assign to a reference through a function because functions are not lvalue
 
 The following samples generate C3853:
 
-```
+```cpp
 // C3853.cpp
 // compile with: /EHsc
 #include <iostream>

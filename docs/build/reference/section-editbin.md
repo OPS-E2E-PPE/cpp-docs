@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: /SECTION (EDITBIN)"
 title: "/SECTION (EDITBIN)"
 ms.date: "11/04/2016"
-f1_keywords: ["/section"]
+f1_keywords: ["/section_editbin"]
 helpviewer_keywords: ["-SECTION editbin option", "SECTION editbin option", "alignment characters in sections", "/SECTION editbin option"]
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
 ---
@@ -49,6 +50,6 @@ To control *alignment*, specify the character **A** followed by one of the follo
 
 Specify the `attributes` and *alignment* characters as a string with no white space. The characters are not case sensitive.
 
-## See Also
+## See also
 
-[EDITBIN Options](../../build/reference/editbin-options.md)
+[EDITBIN Options](editbin-options.md)

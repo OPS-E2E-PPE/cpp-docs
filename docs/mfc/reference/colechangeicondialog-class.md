@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleChangeIconDialog Class"
 title: "COleChangeIconDialog Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COleChangeIconDialog", "AFXODLGS/COleChangeIconDialog", "AFXODLGS/COleChangeIconDialog::COleChangeIconDialog", "AFXODLGS/COleChangeIconDialog::DoChangeIcon", "AFXODLGS/COleChangeIconDialog::DoModal", "AFXODLGS/COleChangeIconDialog::GetIconicMetafile", "AFXODLGS/COleChangeIconDialog::m_ci"]
@@ -41,7 +42,7 @@ class COleChangeIconDialog : public COleDialog
 
 Create an object of class `COleChangeIconDialog` when you want to call this dialog box. After a `COleChangeIconDialog` object has been constructed, you can use the [m_ci](#m_ci) structure to initialize the values or states of controls in the dialog box. The `m_ci` structure is of type OLEUICHANGEICON. For more information about using this dialog class, see the [DoModal](#domodal) member function.
 
-For more information, see the [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) structure in the Windows SDK.
+For more information, see the [OLEUICHANGEICON](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw) structure in the Windows SDK.
 
 For more information about OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).
 
@@ -65,7 +66,7 @@ For more information about OLE-specific dialog boxes, see the article [Dialog Bo
 
 **Header:** afxodlgs.h
 
-##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog
+## <a name="colechangeicondialog"></a> COleChangeIconDialog::COleChangeIconDialog
 
 This function constructs only a `COleChangeIconDialog` object.
 
@@ -101,9 +102,9 @@ Points to the parent or owner window object (of type `CWnd`) to which the dialog
 
 To display the dialog box, call the [DoModal](#domodal) function.
 
-For more information, see the [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) structure in the Windows SDK.
+For more information, see the [OLEUICHANGEICON](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw) structure in the Windows SDK.
 
-##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon
+## <a name="dochangeicon"></a> COleChangeIconDialog::DoChangeIcon
 
 Call this function to change the icon representing the item to the one selected in the dialog box after [DoModal](#domodal) returns IDOK.
 
@@ -120,7 +121,7 @@ Points to the item whose icon is changing.
 
 Nonzero if change is successful; otherwise 0.
 
-##  <a name="domodal"></a>  COleChangeIconDialog::DoModal
+## <a name="domodal"></a> COleChangeIconDialog::DoModal
 
 Call this function to display the OLE Change Icon dialog box.
 
@@ -136,7 +137,7 @@ Completion status for the dialog box. One of the following values:
 
 - IDCANCEL if the user canceled the dialog box.
 
-- IDABORT if an error occurred. If IDABORT is returned, call the `COleDialog::GetLastError` member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIChangeIcon](/windows/desktop/api/oledlg/nf-oledlg-oleuichangeicona) function in the Windows SDK.
+- IDABORT if an error occurred. If IDABORT is returned, call the `COleDialog::GetLastError` member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIChangeIcon](/windows/win32/api/oledlg/nf-oledlg-oleuichangeiconw) function in the Windows SDK.
 
 ### Remarks
 
@@ -144,7 +145,7 @@ If you want to initialize the various dialog box controls by setting members of 
 
 If `DoModal` returns IDOK, you can call other member functions to retrieve the settings or information that was input by the user into the dialog box.
 
-##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile
+## <a name="geticonicmetafile"></a> COleChangeIconDialog::GetIconicMetafile
 
 Call this function to get a handle to the metafile that contains the iconic aspect of the selected item.
 
@@ -156,7 +157,7 @@ HGLOBAL GetIconicMetafile() const;
 
 The handle to the metafile containing the iconic aspect of the new icon, if the dialog box was dismissed by choosing **OK**; otherwise, the icon as it was before the dialog was displayed.
 
-##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci
+## <a name="m_ci"></a> COleChangeIconDialog::m_ci
 
 Structure of type OLEUICHANGEICON used to control the behavior of the Change Icon dialog box.
 
@@ -168,9 +169,9 @@ OLEUICHANGEICON m_ci;
 
 Members of this structure can be modified either directly or through member functions.
 
-For more information, see the [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) structure in the Windows SDK.
+For more information, see the [OLEUICHANGEICON](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw) structure in the Windows SDK.
 
-## See Also
+## See also
 
 [COleDialog Class](../../mfc/reference/coledialog-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

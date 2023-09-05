@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3626"
 title: "Compiler Error C3626"
 ms.date: "11/04/2016"
 f1_keywords: ["C3626"]
@@ -13,7 +14,7 @@ A keyword was used incorrectly.
 
 The following sample generates C3626:
 
-```
+```cpp
 // C3626.cpp
 // compile with: /c
 struct A {

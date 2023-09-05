@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2324"
 title: "Compiler Error C2324"
 ms.date: "11/04/2016"
 f1_keywords: ["C2324"]
@@ -13,7 +14,7 @@ A destructor is called using an incorrect identifier.
 
 The following sample generates C2324:
 
-```
+```cpp
 // C2324.cpp
 class A {};
 typedef A* pA_t;

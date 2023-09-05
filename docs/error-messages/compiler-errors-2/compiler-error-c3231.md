@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3231"
 title: "Compiler Error C3231"
 ms.date: "11/04/2016"
 f1_keywords: ["C3231"]
@@ -13,7 +14,7 @@ Templates are instantiated at compile time, but generics are instantiated at run
 
 The following sample generates C3231:
 
-```
+```cpp
 // C3231.cpp
 // compile with: /clr /LD
 template <class T> class A;

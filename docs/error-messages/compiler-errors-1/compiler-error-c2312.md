@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2312"
 title: "Compiler Error C2312"
 ms.date: "11/04/2016"
 f1_keywords: ["C2312"]
@@ -13,7 +14,7 @@ Two handlers catch the same exception type.
 
 The following sample generates C2312:
 
-```
+```cpp
 // C2312.cpp
 // compile with: /EHsc
 #include <eh.h>

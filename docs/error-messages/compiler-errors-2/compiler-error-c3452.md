@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3452"
 title: "Compiler Error C3452"
 ms.date: "11/04/2016"
 f1_keywords: ["C3452"]
@@ -15,7 +16,7 @@ An argument was passed to an attribute that expected a constant, a value that ca
 
 The following sample generates C3452.
 
-```
+```cpp
 // C3452.cpp
 // compile with: /c
 int i;

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2831"
 title: "Compiler Error C2831"
 ms.date: "11/04/2016"
 f1_keywords: ["C2831"]
@@ -19,7 +20,7 @@ Only three operators can have default parameters:
 
 The following sample generates C2831:
 
-```
+```cpp
 // C2831.cpp
 // compile with: /c
 #define BINOP <=

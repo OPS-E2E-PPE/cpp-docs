@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: defaultbind"
 title: "defaultbind (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.defaultbind"]
@@ -17,7 +18,7 @@ Indicates the single, bindable property that best represents the object.
 
 ## Remarks
 
-The **defaultbind** C++ attribute has the same functionality as the [defaultbind](/windows/desktop/Midl/defaultbind) MIDL attribute.
+The **defaultbind** C++ attribute has the same functionality as the [defaultbind](/windows/win32/Midl/defaultbind) MIDL attribute.
 
 ## Example
 
@@ -25,9 +26,7 @@ See the example for [bindable](bindable.md) for an example of how to use **defau
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface method|
 |**Repeatable**|No|
@@ -36,7 +35,7 @@ See the example for [bindable](bindable.md) for an example of how to use **defau
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Method Attributes](method-attributes.md)<br/>

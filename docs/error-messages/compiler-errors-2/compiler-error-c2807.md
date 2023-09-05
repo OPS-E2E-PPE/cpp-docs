@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2807"
 title: "Compiler Error C2807"
 ms.date: "11/04/2016"
 f1_keywords: ["C2807"]
@@ -13,7 +14,7 @@ The second parameter to a postfix operator has the wrong type.
 
 The following sample generates C2807:
 
-```
+```cpp
 // C2807.cpp
 // compile with: /c
 class X {

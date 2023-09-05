@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: moneypunct Class"
 title: "moneypunct Class"
 ms.date: "11/04/2016"
 f1_keywords: ["xlocmon/std::moneypunct", "xlocmon/std::moneypunct::char_type", "xlocmon/std::moneypunct::string_type", "xlocmon/std::moneypunct::curr_symbol", "xlocmon/std::moneypunct::decimal_point", "xlocmon/std::moneypunct::do_curr_symbol", "xlocmon/std::moneypunct::do_decimal_point", "xlocmon/std::moneypunct::do_frac_digits", "xlocmon/std::moneypunct::do_grouping", "xlocmon/std::moneypunct::do_neg_format", "xlocmon/std::moneypunct::do_negative_sign", "xlocmon/std::moneypunct::do_pos_format", "xlocmon/std::moneypunct::do_positive_sign", "xlocmon/std::moneypunct::do_thousands_sep", "xlocmon/std::moneypunct::frac_digits", "xlocmon/std::moneypunct::grouping", "xlocmon/std::moneypunct::neg_format", "xlocmon/std::moneypunct::negative_sign", "xlocmon/std::moneypunct::pos_format", "xlocmon/std::moneypunct::positive_sign", "xlocmon/std::moneypunct::thousands_sep"]
@@ -7,7 +8,7 @@ ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ---
 # moneypunct Class
 
-The template class describes an object that can serve as a locale facet to describe the sequences of type *CharType* used to represent a monetary input field or a monetary output field. If the template parameter *Intl* is *true*, international conventions are observed.
+The class template describes an object that can serve as a locale facet to describe the sequences of type *CharType* used to represent a monetary input field or a monetary output field. If the template parameter *Intl* is *true*, international conventions are observed.
 
 ## Syntax
 
@@ -18,10 +19,10 @@ class moneypunct;
 
 ### Parameters
 
-*CharType*<br/>
+*CharType*\
 The type used within a program to encode characters.
 
-*Intl*<br/>
+*Intl*\
 A flag specifying whether international conventions are to be observed.
 
 ## Remarks
@@ -72,7 +73,7 @@ The const static object intl stores the value of the template parameter *Intl*.
 
 **Namespace:** std
 
-## <a name="char_type"></a>  moneypunct::char_type
+## <a name="char_type"></a> moneypunct::char_type
 
 A type that is used to describe a character used by a locale.
 
@@ -84,7 +85,7 @@ typedef CharType char_type;
 
 The type is a synonym for the template parameter **CharType**.
 
-## <a name="curr_symbol"></a>  moneypunct::curr_symbol
+## <a name="curr_symbol"></a> moneypunct::curr_symbol
 
 Returns a locale-specific sequence of elements to use as a currency symbol.
 
@@ -121,7 +122,7 @@ int main( )
 };
 ```
 
-## <a name="decimal_point"></a>  moneypunct::decimal_point
+## <a name="decimal_point"></a> moneypunct::decimal_point
 
 Returns a locale-specific sequence of elements to use as a decimal point symbol.
 
@@ -167,7 +168,7 @@ German_Germany.1252 international decimal point ,
 German_Germany.1252 domestic decimal point ,
 ```
 
-## <a name="do_curr_symbol"></a>  moneypunct::do_curr_symbol
+## <a name="do_curr_symbol"></a> moneypunct::do_curr_symbol
 
 A protected virtual member function that returns a locale-specific sequence of elements to use as a currency symbol.
 
@@ -183,7 +184,7 @@ A locale-specific sequence of elements to use as a decimal point symbol.
 
 See the example for [curr_symbol](#curr_symbol), where the virtual member function is called by `curr_symbol`.
 
-## <a name="do_decimal_point"></a>  moneypunct::do_decimal_point
+## <a name="do_decimal_point"></a> moneypunct::do_decimal_point
 
 A protected virtual member function that returns a locale-specific sequence of elements to use as a decimal point symbol.
 
@@ -199,7 +200,7 @@ A locale-specific sequence of elements to use as a decimal point symbol.
 
 See the example for [decimal_point](#decimal_point), where the virtual member function is called by `decimal_point`.
 
-## <a name="do_frac_digits"></a>  moneypunct::do_frac_digits
+## <a name="do_frac_digits"></a> moneypunct::do_frac_digits
 
 A protected virtual member function that returns a locale-specific count of the number of digits to display to the right of any decimal point.
 
@@ -215,7 +216,7 @@ A locale-specific count of the number of digits to display to the right of any d
 
 See the example for [frac_digits](#frac_digits), where the virtual member function is called by `frac_digits`.
 
-## <a name="do_grouping"></a>  moneypunct::do_grouping
+## <a name="do_grouping"></a> moneypunct::do_grouping
 
 A protected virtual member function that returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.
 
@@ -231,7 +232,7 @@ A locale-specific rule for determining how digits are grouped to the left of any
 
 See the example for [grouping](#grouping), where the virtual member function is called by `grouping`.
 
-## <a name="do_neg_format"></a>  moneypunct::do_neg_format
+## <a name="do_neg_format"></a> moneypunct::do_neg_format
 
 A protected virtual member function that is called to return a locale-specific rule for formatting outputs with negative amounts.
 
@@ -253,15 +254,15 @@ The protected virtual member function returns a locale-specific rule for determi
 
 - `value` to match or generate a monetary value.
 
-Components of a monetary output field are generated and components of a monetary input field are matched in the order in which these elements appear in `pattern::field`. Each of the values `sign`, `symbol`, `value`, and either `none` or `space` must appear exactly once. The value `none` must not appear first. The value space **must** not appear first or last. If `Intl` is true, the order is `symbol`, `sign`, `none`, then `value`.
+Components of a monetary output field are generated and components of a monetary input field are matched in the order in which these elements appear in `pattern::field`. Each of the values `sign`, `symbol`, `value`, and either `none` or `space` must appear exactly once. The value `none` must not appear first. The value `space` must not appear first or last. If `Intl` is true, the order is `symbol`, `sign`, `none`, then `value`.
 
-The template version of `moneypunct`\< **CharType**, **Intl**> returns `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
+The template version of `moneypunct< CharType, Intl >` returns `{money_base::symbol, money_base::sign, money_base::value, money_base::none}`.
 
 ### Example
 
 See the example for [neg_format](#neg_format), where the virtual member function is called by `neg_format`.
 
-## <a name="do_negative_sign"></a>  moneypunct::do_negative_sign
+## <a name="do_negative_sign"></a> moneypunct::do_negative_sign
 
 A protected virtual member function that is called to return a locale-specific sequence of elements to use as a negative sign symbol.
 
@@ -277,7 +278,7 @@ A locale-specific sequence of elements to use as a negative sign.
 
 See the example for [negative_sign](#negative_sign), where the virtual member function is called by `negative_sign`.
 
-## <a name="do_pos_format"></a>  moneypunct::do_pos_format
+## <a name="do_pos_format"></a> moneypunct::do_pos_format
 
 A protected virtual member function that is called to return a locale-specific rule for formatting outputs with positive amounts.
 
@@ -289,13 +290,13 @@ virtual pattern do_pos_format() const;
 
 The protected virtual member function returns a locale-specific rule for determining how to generate a monetary output field for a positive amount. (It also determines how to match the components of a monetary input field.) The encoding is the same as for [do_neg_format](#do_neg_format).
 
-The template version of moneypunct\< **CharType**, **Inputlterator**> returns `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
+The template version of `moneypunct< CharType, Inputlterator >` returns `{ money_base::symbol, money_base::sign, money_base::value, money_base::none }`.
 
 ### Example
 
 See the example for [pos_format](#pos_format), where the virtual member function is called by `pos_format`.
 
-## <a name="do_positive_sign"></a>  moneypunct::do_positive_sign
+## <a name="do_positive_sign"></a> moneypunct::do_positive_sign
 
 A protected virtual member function that returns a locale-specific sequence of elements to use as a positive sign.
 
@@ -311,7 +312,7 @@ A locale-specific sequence of elements to use as a positive sign.
 
 See the example for [positive_sign](#positive_sign), where the virtual member function is called by `positive_sign`.
 
-## <a name="do_thousands_sep"></a>  moneypunct::do_thousands_sep
+## <a name="do_thousands_sep"></a> moneypunct::do_thousands_sep
 
 A protected virtual member function that returns a locale-specific element to use as a group separator to the left of any decimal point.
 
@@ -327,7 +328,7 @@ A locale-specific element to use as a group separator to the left of any decimal
 
 See the example for [thousands_sep](#thousands_sep), where the virtual member function is called by `thousands_sep`.
 
-## <a name="frac_digits"></a>  moneypunct::frac_digits
+## <a name="frac_digits"></a> moneypunct::frac_digits
 
 Returns a locale-specific count of the number of digits to display to the right of any decimal point.
 
@@ -396,7 +397,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="grouping"></a>  moneypunct::grouping
+## <a name="grouping"></a> moneypunct::grouping
 
 Returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.
 
@@ -465,7 +466,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="moneypunct"></a>  moneypunct::moneypunct
+## <a name="moneypunct"></a> moneypunct::moneypunct
 
 Constructor of objects of type `moneypunct`.
 
@@ -475,7 +476,7 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### Parameters
 
-*_Refs*<br/>
+*_Refs*\
 Integer value used to specify the type of memory management for the object.
 
 ### Remarks
@@ -492,7 +493,7 @@ No direct examples are possible, because the destructor is protected.
 
 The constructor initializes its base object with [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).
 
-## <a name="neg_format"></a>  moneypunct::neg_format
+## <a name="neg_format"></a> moneypunct::neg_format
 
 Returns a locale-specific rule for formatting outputs with negative amounts.
 
@@ -540,7 +541,7 @@ int main( ) {
 }
 ```
 
-## <a name="negative_sign"></a>  moneypunct::negative_sign
+## <a name="negative_sign"></a> moneypunct::negative_sign
 
 Returns a locale-specific sequence of elements to use as a negative sign symbol.
 
@@ -602,7 +603,7 @@ French_France.1252 international negative sign: -
 French_France.1252 domestic negative sign: -
 ```
 
-## <a name="pos_format"></a>  moneypunct::pos_format
+## <a name="pos_format"></a> moneypunct::pos_format
 
 Returns a locale-specific rule for formatting outputs with positive amounts.
 
@@ -650,7 +651,7 @@ int main() {
 }
 ```
 
-## <a name="positive_sign"></a>  moneypunct::positive_sign
+## <a name="positive_sign"></a> moneypunct::positive_sign
 
 Returns a locale-specific sequence of elements to use as a positive sign symbol.
 
@@ -712,7 +713,7 @@ French_France.1252 international positive sign:
 French_France.1252 domestic positive sign:
 ```
 
-## <a name="string_type"></a>  moneypunct::string_type
+## <a name="string_type"></a> moneypunct::string_type
 
 A type that describes a string containing characters of type **CharType**.
 
@@ -722,9 +723,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### Remarks
 
-The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the punctuation sequences.
+The type describes a specialization of class template [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the punctuation sequences.
 
-## <a name="thousands_sep"></a>  moneypunct::thousands_sep
+## <a name="thousands_sep"></a> moneypunct::thousands_sep
 
 Returns a locale-specific sequence of elements to use as a thousands separator symbol.
 
@@ -787,5 +788,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## See also
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

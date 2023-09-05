@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3073"
 title: "Compiler Error C3073"
 ms.date: "11/04/2016"
 f1_keywords: ["C3073"]
@@ -17,7 +18,7 @@ For more information, see [C++ Stack Semantics for Reference Types](../../dotnet
 
 The following sample generates C3073.
 
-```
+```cpp
 // C3073.cpp
 // compile with: /clr
 ref class R {

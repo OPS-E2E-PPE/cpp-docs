@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2279"
 title: "Compiler Error C2279"
 ms.date: "11/04/2016"
 f1_keywords: ["C2279"]
@@ -13,7 +14,7 @@ Under **/Za**, [exception specifications](../../cpp/exception-specifications-thr
 
 The following sample generates C2279:
 
-```
+```cpp
 // C2279.cpp
 // compile with: /Za /c
 typedef int (*xy)() throw(...);   // C2279

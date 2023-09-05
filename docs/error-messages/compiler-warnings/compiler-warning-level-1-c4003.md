@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4003"
 title: "Compiler Warning (level 1) C4003"
 ms.date: "11/04/2016"
 f1_keywords: ["C4003"]
@@ -13,7 +14,7 @@ The number of formal parameters in the macro definition exceeds the number of ac
 
 The following sample generates C4003:
 
-```
+```cpp
 // C4003.cpp
 // compile with: /WX
 #define test(a,b) (a+b)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IConnectionPointContainerImpl Class"
 title: "IConnectionPointContainerImpl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["IConnectionPointContainerImpl", "ATLCOM/ATL::IConnectionPointContainerImpl", "ATLCOM/ATL::IConnectionPointContainerImpl::EnumConnectionPoints", "ATLCOM/ATL::IConnectionPointContainerImpl::FindConnectionPoint"]
@@ -51,7 +52,7 @@ For information about using connection points in ATL, see the article [Connectio
 
 **Header:** atlcom.h
 
-##  <a name="enumconnectionpoints"></a>  IConnectionPointContainerImpl::EnumConnectionPoints
+## <a name="enumconnectionpoints"></a> IConnectionPointContainerImpl::EnumConnectionPoints
 
 Creates an enumerator to iterate through the connection points supported in the connectable object.
 
@@ -61,9 +62,9 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 
 ### Remarks
 
-See [IConnectionPointContainer::EnumConnectionPoints](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints) in the Windows SDK.
+See [IConnectionPointContainer::EnumConnectionPoints](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints) in the Windows SDK.
 
-##  <a name="findconnectionpoint"></a>  IConnectionPointContainerImpl::FindConnectionPoint
+## <a name="findconnectionpoint"></a> IConnectionPointContainerImpl::FindConnectionPoint
 
 Retrieves an interface pointer to the connection point that supports the specified IID.
 
@@ -73,9 +74,9 @@ STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
 
 ### Remarks
 
-See [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) in the Windows SDK.
+See [IConnectionPointContainer::FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) in the Windows SDK.
 
-## See Also
+## See also
 
-[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
+[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

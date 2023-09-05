@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Automation Clients: Using Type Libraries"
 title: "Automation Clients: Using Type Libraries"
 ms.date: "11/04/2016"
 f1_keywords: ["MkTypLib"]
@@ -11,9 +12,9 @@ Automation clients must have information about server objects' properties and me
 
 This type information can be made known in several ways. The recommended way is to create a type library.
 
-For information on [MkTypLib](/windows/desktop/Midl/differences-between-midl-and-mktyplib), see the Windows SDK.
+For information on [MkTypLib](/windows/win32/Midl/differences-between-midl-and-mktyplib), see the Windows SDK.
 
-Visual C++ can read a type-library file and create a dispatch class derived from [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). An object of that class has properties and operations duplicating those of the server object. Your application calls this object's properties and operations, and functionality inherited from `COleDispatchDriver` routes these calls to the OLE system, which in turn routes them to the server object.
+Visual C++ can read a type-library file and create a dispatch class derived from [COleDispatchDriver](reference/coledispatchdriver-class.md). An object of that class has properties and operations duplicating those of the server object. Your application calls this object's properties and operations, and functionality inherited from `COleDispatchDriver` routes these calls to the OLE system, which in turn routes them to the server object.
 
 Visual C++ automatically maintains this type-library file for you if you chose to include Automation when the project was created. As part of each build, the .tlb file will be built with MkTypLib.
 
@@ -42,7 +43,6 @@ Visual C++ automatically maintains this type-library file for you if you chose t
 
    The wizard will then write the code for your dispatch classes using the specified class and file names.
 
-## See Also
+## See also
 
-[Automation Clients](../mfc/automation-clients.md)
-
+[Automation Clients](automation-clients.md)

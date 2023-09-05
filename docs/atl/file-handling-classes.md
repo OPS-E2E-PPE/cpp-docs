@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: File Handling Classes"
 title: "File Handling Classes (ATL)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
@@ -17,7 +18,6 @@ These classes provide methods for handling files, temporary files, and memory-ma
 
 - [CAtlTemporaryFile](../atl/reference/catltemporaryfile-class.md) This class provides methods for the creation and use of a temporary file.
 
-## See Also
+## See also
 
 [Class Overview](../atl/atl-class-overview.md)
-

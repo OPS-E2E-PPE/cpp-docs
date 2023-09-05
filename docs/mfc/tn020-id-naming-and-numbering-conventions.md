@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: TN020: ID Naming and Numbering Conventions"
 title: "TN020: ID Naming and Numbering Conventions"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.id"]
@@ -93,8 +94,7 @@ Reasons for these range limits:
 
 - The range of 0x8000 through 0xFFFF for strings is reserved for menu prompts for commands.
 
-## See Also
+## See also
 
 [Technical Notes by Number](../mfc/technical-notes-by-number.md)<br/>
 [Technical Notes by Category](../mfc/technical-notes-by-category.md)
-

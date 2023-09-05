@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDefaultElementTraits Class"
 title: "CDefaultElementTraits Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CDefaultElementTraits", "atlcoll/ATL::CDefaultElementTraits"]
@@ -33,6 +34,6 @@ For more information, see [ATL Collection Classes](../../atl/atl-collection-clas
 
 **Header:** atlcoll.h
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

@@ -1,19 +1,22 @@
 ---
-title: "&lt;thread&gt; operators"
+description: "Learn more about: <thread> operators"
+title: "<thread> operators"
 ms.date: "11/04/2016"
-f1_keywords: ["thread/std::operator!=", "thread/std::operator&gt;", "thread/std::operator&gt;=", "thread/std::operator&lt;", "thread/std::operator&lt;&lt;", "thread/std::operator&lt;=", "thread/std::operator=="]
+f1_keywords: ["thread/std::operator!=", "thread/std::operator>", "thread/std::operator>=", "thread/std::operator<", "thread/std::operator<<", "thread/std::operator<=", "thread/std::operator=="]
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
-helpviewer_keywords: ["std::operator!= (thread)", "std::operator&gt; (thread)", "std::operator&gt;= (thread)", "std::operator&lt; (thread)", "std::operator&lt;&lt; (thread)", "std::operator&lt;= (thread)", "std::operator== (thread)"]
+helpviewer_keywords: ["std::operator!= (thread)", "std::operator> (thread)", "std::operator>= (thread)", "std::operator< (thread)", "std::operator<< (thread)", "std::operator<= (thread)", "std::operator== (thread)"]
 ---
-# &lt;thread&gt; operators
+# `<thread>` operators
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
+[operator!=](#op_neq)\
+[`operator>`](#op_gt)\
+[`operator>=`](#op_gt_eq)\
+[`operator<`](#op_lt)\
+[`operator<<`](#op_lt_lt)\
+[`operator<=`](#op_lt_eq)\
+[operator==](#op_eq_eq)
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> `operator>=`
 
 Determines whether one `thread::id` object is greater than or equal to another.
 
@@ -25,10 +28,10 @@ bool operator>= (
 
 ### Parameters
 
-*Left*<br/>
+*Left*\
 The left `thread::id` object.
 
-*Right*<br/>
+*Right*\
 The right `thread::id` object.
 
 ### Return Value
@@ -39,7 +42,7 @@ The right `thread::id` object.
 
 This function does not throw any exceptions.
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> `operator>`
 
 Determines whether one `thread::id` object is greater than another.
 
@@ -51,10 +54,10 @@ bool operator> (
 
 ### Parameters
 
-*Left*<br/>
+*Left*\
 The left `thread::id` object.
 
-*Right*<br/>
+*Right*\
 The right `thread::id` object.
 
 ### Return Value
@@ -65,7 +68,7 @@ The right `thread::id` object.
 
 This function does not throw any exceptions.
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> `operator<=`
 
 Determines whether one `thread::id` object is less than or equal to another.
 
@@ -77,10 +80,10 @@ bool operator<= (
 
 ### Parameters
 
-*Left*<br/>
+*Left*\
 The left `thread::id` object.
 
-*Right*<br/>
+*Right*\
 The right `thread::id` object.
 
 ### Return Value
@@ -91,7 +94,7 @@ The right `thread::id` object.
 
 This function does not throw any exceptions.
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> `operator<`
 
 Determines whether one `thread::id` object is less than another.
 
@@ -103,15 +106,15 @@ bool operator<(
 
 ### Parameters
 
-*Left*<br/>
+*Left*\
 The left `thread::id` object.
 
-*Right*<br/>
+*Right*\
 The right `thread::id` object.
 
 ### Return Value
 
-**true** if *Left* precedes *Right* in the total ordering; otherwise, **false**.
+**`true`** if *Left* precedes *Right* in the total ordering; otherwise, **`false`**.
 
 ### Remarks
 
@@ -119,7 +122,7 @@ The operator defines a total ordering on all `thread::id` objects. These objects
 
 This function does not throw any exceptions.
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 Compares two `thread::id` objects for inequality.
 
@@ -131,10 +134,10 @@ bool operator!= (
 
 ### Parameters
 
-*Left*<br/>
+*Left*\
 The left `thread::id` object.
 
-*Right*<br/>
+*Right*\
 The right `thread::id` object.
 
 ### Return Value
@@ -145,7 +148,7 @@ The right `thread::id` object.
 
 This function does not throw any exceptions.
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Compares two `thread::id` objects for equality.
 
@@ -157,21 +160,21 @@ bool operator== (
 
 ### Parameters
 
-*Left*<br/>
+*Left*\
 The left `thread::id` object.
 
-*Right*<br/>
+*Right*\
 The right `thread::id` object.
 
 ### Return Value
 
-**true** if the two objects represent the same thread of execution or if neither object represents a thread of execution; otherwise, **false**.
+**`true`** if the two objects represent the same thread of execution or if neither object represents a thread of execution; otherwise, **`false`**.
 
 ### Remarks
 
 This function does not throw any exceptions.
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="op_lt_lt"></a> `operator<<`
 
 Inserts a text representation of a `thread::id` object into a stream.
 
@@ -183,10 +186,10 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### Parameters
 
-*Ostr*<br/>
+*Ostr*\
 A [basic_ostream](../standard-library/basic-ostream-class.md) object.
 
-*Id*<br/>
+*Id*\
 A `thread::id` object.
 
 ### Return Value
@@ -201,4 +204,4 @@ If two `thread::id` objects compare equal, the inserted text representations of 
 
 ## See also
 
-[\<thread>](../standard-library/thread.md)<br/>
+[\<thread>](../standard-library/thread.md)

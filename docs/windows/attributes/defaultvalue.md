@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: defaultvalue"
 title: "defaultvalue (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.defaultvalue"]
@@ -22,7 +23,7 @@ The default value for the parameter.
 
 ## Remarks
 
-The **defaultvalue** C++ attribute has the same functionality as the [defaultvalue](/windows/desktop/Midl/defaultvalue) MIDL attribute.
+The **defaultvalue** C++ attribute has the same functionality as the [defaultvalue](/windows/win32/Midl/defaultvalue) MIDL attribute.
 
 ## Example
 
@@ -48,9 +49,7 @@ __interface IFireTabCtrl : IDispatch {
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface parameter|
 |**Repeatable**|No|
@@ -59,7 +58,7 @@ __interface IFireTabCtrl : IDispatch {
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Parameter Attributes](parameter-attributes.md)<br/>

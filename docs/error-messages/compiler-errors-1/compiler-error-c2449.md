@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2449"
 title: "Compiler Error C2449"
 ms.date: "11/04/2016"
 f1_keywords: ["C2449"]
@@ -15,7 +16,7 @@ This error can be caused by a semicolon between a function header and the openin
 
 The following sample generates C2499:
 
-```
+```c
 // C2449.c
 // compile with: /c
 void __stdcall func(void) {}   // OK

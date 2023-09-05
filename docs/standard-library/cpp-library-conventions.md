@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: C++ Library Conventions"
 title: "C++ Library Conventions"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["C++ Standard Library, conventions", "classes [C++]", "functions [C++], library naming conventions", "naming conventions [C++], C++ Standard Library", "conventions [C++], C++ Standard Library", "function names [C++]", "coding conventions, C++ Standard Library", "naming conventions [C++], C++ library"]
@@ -10,7 +11,7 @@ The C++ library obeys much the same conventions as the Standard C Library, plus 
 
 An implementation has certain latitude in how it declares types and functions in the C++ library:
 
-- Names of functions in the Standard C library may have either extern #"C++" or extern "C" linkage. Include the appropriate Standard C header rather than declare a library entity inline.
+- Names of functions in the Standard C library may have either extern "C++" or extern "C" linkage. Include the appropriate Standard C header rather than declare a library entity inline.
 
 - A member function name in a library class may have additional function signatures over those listed in this document. You can be sure that a function call described here behaves as expected, but you cannot reliably take the address of a library member function. (The type may not be what you expect.)
 
@@ -36,5 +37,5 @@ On the other hand, there are some restrictions:
 
 ## See also
 
-[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

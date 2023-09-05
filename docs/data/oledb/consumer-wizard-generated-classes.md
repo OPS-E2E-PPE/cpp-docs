@@ -1,16 +1,25 @@
 ---
+description: "Learn more about: Consumer Wizard-Generated Classes"
 title: "Consumer Wizard-Generated Classes"
-ms.date: "10/17/2018"
-helpviewer_keywords: ["attribute-injected classes and methods", "wizard-generated classes and methods", "OLE DB consumers, wizard-generated classes and methods", "command classes in OLE DB consumer", "classes [C++], OLE DB Consumer Wizard-generated", "consumer wizard-generated classes and methods", "user record classes in OLE DB consumer"]
+ms.date: "05/09/2019"
+helpviewer_keywords: ["user record classes in OLE DB consumer"]
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
 ---
 # Consumer Wizard-Generated Classes
+
+::: moniker range=">=msvc-160"
+
+The ATL OLE DB Consumer wizard is not available in Visual Studio 2019 and later. You can still add the functionality manually.
+
+::: moniker-end
+
+::: moniker range="<=msvc-150"
 
 When you use the **ATL OLE DB Consumer Wizard** to generate a consumer, you have the choice of using OLE DB Templates or OLE DB attributes. In both cases, the wizard generates a command class and a user record class. The command class contains code to open the data source and rowset you specified in the wizard. The user record class contains a column map for the database table you selected. However, the generated code differs in each case:
 
 - If you select a templated consumer, the wizard generates a command class and a user record class. The command class will have the name that you enter in the **Class** box in the wizard (for example, `CProducts`), and the user record class will have a name of the form "*ClassName*Accessor" (for example, `CProductsAccessor`). Both classes are placed in the consumer's header file.
 
-- If you select an attributed consumer, the user record class will have a name of the form "_*ClassName*Accessor" and will be injected. That is, you'll be able to view only the command class in the text editor; you can only view the user record class as injected code. For information about viewing injected code, see [Debugging Injected Code](/visualstudio/debugger/how-to-debug-injected-code).
+- If you select an attributed consumer, the user record class will have a name of the form "_*ClassName*Accessor" and will be injected. That is, you'll be able to view only the command class in the text editor; you can only view the user record class as injected code. For information about viewing injected code, see [Debugging Injected Code](../../windows/attributes/cpp-attributes-com-net.md#debug-injected-code).
 
 The following examples use a command class created on the `Products` table of the `Northwind` database to demonstrate the wizard-generated consumer code for the command class and user record class.
 
@@ -135,7 +144,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
 
 ## Attribute-Injected User Record Classes
 
-If you create an OLE DB consumer using the database attributes ([db_command](../../windows/db-command.md) or [db_table](../../windows/db-table.md)), the attributes inject a user record class with a name of the form "_*ClassName*Accessor." For example, if you named your command class `COrders`, the user record class will be `_COrdersAccessor`. Although the user record class appears in **Class View**, double-clicking it navigates to the command or table class in the header file instead. In these cases, you can only view the actual declaration of the user record class by viewing the attribute-injected code.
+If you create an OLE DB consumer using the database attributes ([db_command](../../windows/attributes/db-command.md) or [db_table](../../windows/attributes/db-table.md)), the attributes inject a user record class with a name of the form "_*ClassName*Accessor." For example, if you named your command class `COrders`, the user record class will be `_COrdersAccessor`. Although the user record class appears in **Class View**, double-clicking it navigates to the command or table class in the header file instead. In these cases, you can only view the actual declaration of the user record class by viewing the attribute-injected code.
 
 There can be potential complications if you add or override methods in attributed consumers. For example, you could add a `_COrdersAccessor` constructor to the `COrders` declaration, but note that in reality this adds a constructor to the injected `COrdersAccessor` class. Such a constructor can initialize the columns/parameters, but you can't create a copy constructor this way, because it can't directly instantiate the `COrdersAccessor` object. If you need a constructor (or other method) directly on the `COrders` class, it's recommended that you define a new class deriving from `COrders` and add the necessary methods there.
 
@@ -169,8 +178,10 @@ class CProducts : public CCommand<CAccessor<_CProductsAccessor>>
 
 Most of the injected code is the same as or similar to the templated version. The main differences are in the injected methods, which are described in [Consumer Wizard-Generated Methods](../../data/oledb/consumer-wizard-generated-methods.md).
 
-For information about viewing injected code, see [Debugging Injected Code](/visualstudio/debugger/how-to-debug-injected-code).
+For information about viewing injected code, see [Debugging Injected Code](../../windows/attributes/cpp-attributes-com-net.md#debug-injected-code).
 
-## See Also
+::: moniker-end
+
+## See also
 
 [Creating an OLE DB Consumer Using a Wizard](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

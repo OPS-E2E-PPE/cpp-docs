@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Create a Partially Trusted Application by Removing Dependency on the CRT Library DLL"
 title: "How to: Create a Partially Trusted Application (C++/CLI)"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -14,7 +15,7 @@ A Visual C++ application built with **/clr** will have a dependency on msvcm90.d
 If your application does not use any functionality of the C-Runtime Library and you would like to remove the dependency on this library from your code, you will have to use the **/NODEFAULTLIB:msvcmrt.lib** linker option and link with either ptrustm.lib or ptrustmd.lib. These libraries contain object files for initialization and uninitialization of an application, exception classes used by the initialization code, and managed exception handling code. Linking in one of these libraries will remove any dependency on msvcm90.dll.
 
 > [!NOTE]
->  The order of assembly uninitialization might differ for applications that use the ptrust libraries. For normal applications, assemblies are usually unloaded in the reverse order that they are loaded, but this is not guaranteed. For partial trust applications, assemblies are usually unloaded in the same order that they are loaded. This, also, is not guaranteed.
+> The order of assembly uninitialization might differ for applications that use the ptrust libraries. For normal applications, assemblies are usually unloaded in the reverse order that they are loaded, but this is not guaranteed. For partial trust applications, assemblies are usually unloaded in the same order that they are loaded. This, also, is not guaranteed.
 
 ### To create a partially trusted mixed (/clr) application
 
@@ -22,7 +23,7 @@ If your application does not use any functionality of the C-Runtime Library and 
 
 1. Add one of the ptrustm libraries to the linker input dependencies. Use ptrustm.lib if you are building your application in release mode. For debug mode, use ptrustmd.lib. For information on how to do this using the Visual Studio development environment or programmatically, see [.Lib Files as Linker Input](../build/reference/dot-lib-files-as-linker-input.md).
 
-## See Also
+## See also
 
 [Mixed (Native and Managed) Assemblies](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
 [Initialization of Mixed Assemblies](../dotnet/initialization-of-mixed-assemblies.md)<br/>

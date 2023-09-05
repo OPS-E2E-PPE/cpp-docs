@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2394"
 title: "Compiler Error C2394"
 ms.date: "11/04/2016"
 f1_keywords: ["C2394"]
@@ -13,7 +14,7 @@ An operator in a Windows Runtime or managed type did not have at least one param
 
 The following sample generates C2394:
 
-```
+```cpp
 // C2394.cpp
 // compile with: /clr /c
 ref struct Y {

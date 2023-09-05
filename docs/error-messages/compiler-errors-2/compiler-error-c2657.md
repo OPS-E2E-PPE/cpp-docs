@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2657"
 title: "Compiler Error C2657"
 ms.date: "11/04/2016"
 f1_keywords: ["C2657"]
@@ -15,7 +16,7 @@ This error can be caused by a missing type specifier in the declaration of a poi
 
 The following sample generates C2657:
 
-```
+```cpp
 // C2657.cpp
 class C {};
 int main() {

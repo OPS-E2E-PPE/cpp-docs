@@ -1,16 +1,13 @@
 ---
-title: "&lt;exception&gt; typedefs"
+description: "Learn more about: <exception> typedefs"
+title: "<exception> typedefs"
 ms.date: "11/04/2016"
 f1_keywords: ["exception/std::exception_ptr", "exception/std::terminate_handler", "exception/std::unexpected_handler"]
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
 ---
-# &lt;exception&gt; typedefs
+# `<exception>` typedefs
 
-||||
-|-|-|-|
-|[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|
-
-## <a name="exception_ptr"></a>  exception_ptr
+## <a name="exception_ptr"></a> exception_ptr
 
 A type that describes a pointer to an exception.
 
@@ -22,7 +19,7 @@ typedef unspecified exception_ptr;
 
 An unspecified internal class that is used to implement the `exception_ptr` type.
 
-Use an `exception_ptr` object to reference the current exception or an instance of a user-specified exception. In the Microsoft implementation, an exception is represented by an [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) structure. Each `exception_ptr` object includes an exception reference field that points to a copy of the `EXCEPTION_RECORD` structure that represents the exception.
+Use an `exception_ptr` object to reference the current exception or an instance of a user-specified exception. In the Microsoft implementation, an exception is represented by an [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) structure. Each `exception_ptr` object includes an exception reference field that points to a copy of the `EXCEPTION_RECORD` structure that represents the exception.
 
 When you declare an `exception_ptr` variable, the variable is not associated with any exception. That is, its exception reference field is NULL. Such an `exception_ptr` object is called a *null exception_ptr*.
 
@@ -34,7 +31,7 @@ Despite its name, an `exception_ptr` object is not itself a pointer. It does not
 
 You can use the equal ( `==`) and not-equal ( `!=`) operators to compare two `exception_ptr` objects. The operators do not compare the binary value (bit pattern) of the `EXCEPTION_RECORD` structures that represent the exceptions. Instead, the operators compare the addresses in the exception reference field of the `exception_ptr` objects. Consequently, a null `exception_ptr` and the NULL value compare as equal.
 
-## <a name="terminate_handler"></a>  terminate_handler
+## <a name="terminate_handler"></a> terminate_handler
 
 The type describes a pointer to a function suitable for use as a `terminate_handler`.
 
@@ -50,7 +47,7 @@ The type describes a pointer to a function suitable for use as a terminate handl
 
 See [set_terminate](../standard-library/exception-functions.md#set_terminate) for an example of the use of `terminate_handler`.
 
-## <a name="unexpected_handler"></a>  unexpected_handler
+## <a name="unexpected_handler"></a> unexpected_handler
 
 The type describes a pointer to a function suitable for use as an `unexpected_handler`.
 
@@ -61,7 +58,3 @@ typedef void (*unexpected_handler)();
 ### Example
 
 See [set_unexpected](../standard-library/exception-functions.md#set_unexpected) for an example of the use of `unexpected_handler`.
-
-## See also
-
-[\<exception>](../standard-library/exception.md)<br/>

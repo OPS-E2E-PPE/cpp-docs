@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2745"
 title: "Compiler Error C2745"
 ms.date: "11/04/2016"
 f1_keywords: ["C2745"]
@@ -13,7 +14,7 @@ Identifiers must be comprised of legal characters.
 
 The following sample generates C2745:
 
-```
+```cpp
 // C2745.cpp
 // compile with: /clr
 int main() {

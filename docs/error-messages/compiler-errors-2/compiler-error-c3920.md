@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3920"
 title: "Compiler Error C3920"
 ms.date: "11/04/2016"
 f1_keywords: ["C3920"]
@@ -13,7 +14,7 @@ The Windows Runtime and CLR do not support the postfix operator and user-defined
 
 The following sample generates C3920 and shows how to fix it:
 
-```
+```cpp
 // C3920.cpp
 // compile with: /clr /LD
 public value struct V {

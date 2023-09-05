@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using an Animation Control"
 title: "Using an Animation Control"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["controls [MFC], animation", "CAnimateCtrl class [MFC], animation controls", "animation controls [MFC]"]
@@ -20,8 +21,7 @@ Typical usage of an animation control follows the pattern below:
 
 - If the animation control is in a dialog box, it and the `CAnimateCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CAnimateCtrl` object are properly destroyed. Destroying the control automatically closes the AVI clip.
 
-## See Also
+## See also
 
 [Using CAnimateCtrl](../mfc/using-canimatectrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

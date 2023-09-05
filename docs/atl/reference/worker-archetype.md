@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Worker Archetype"
 title: "Worker Archetype"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["Worker archetype"]
@@ -47,11 +48,11 @@ These template parameters expect the class to conform to this archetype:
 
 **Header:** atlutil.h
 
-## <a name="execute"></a>WorkerArchetype::Execute
+## <a name="execute"></a> WorkerArchetype::Execute
 
 Called to process a work item.
 
-```
+```cpp
 void Execute(
     RequestType request,
     void* pvWorkerParam,
@@ -67,11 +68,12 @@ The work item to be processed. The work item is of the same type as `RequestType
 A custom parameter understood by the worker class. Also passed to `WorkerArchetype::Initialize` and `Terminate`.
 
 *pOverlapped*<br/>
-A pointer to the [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) structure used to create the queue on which work items were queued.
+A pointer to the [OVERLAPPED](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) structure used to create the queue on which work items were queued.
 
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 
 Called to initialize the worker object before any requests are passed to `WorkerArchetype::Execute`.
+
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
@@ -101,7 +103,7 @@ This type must be used as the first parameter of `WorkerArchetype::Execute` and 
 
 Called to uninitialize the worker object after all requests have been passed to `WorkerArchetype::Execute`).
 
-```
+```cpp
 void Terminate(void* pvParam) throw();
 ```
 
@@ -110,8 +112,7 @@ void Terminate(void* pvParam) throw();
 *pvParam*<br/>
 A custom parameter understood by the worker class. Also passed to `WorkerArchetype::Initialize` and `WorkerArchetype::Execute`.
 
-## See Also
+## See also
 
 [Concepts](../../atl/active-template-library-atl-concepts.md)<br/>
 [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md)
-

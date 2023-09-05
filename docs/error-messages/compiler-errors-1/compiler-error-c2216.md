@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2216"
 title: "Compiler Error C2216"
 ms.date: "11/04/2016"
 f1_keywords: ["C2216"]
@@ -11,11 +12,11 @@ ms.assetid: 250f6bdc-a5e1-495f-a1e8-6e8e7021ad9d
 
 Two keywords that are mutually exclusive were used together.
 
-## Example
+## Examples
 
 The following sample generates C2216.
 
-```
+```cpp
 // C2216.cpp
 // compile with: /clr /c
 ref struct Y1 {
@@ -24,11 +25,9 @@ ref struct Y1 {
 };
 ```
 
-## Example
-
 The following sample generates C2216.
 
-```
+```cpp
 // C2216b.cpp
 // compile with: /clr /c
 public ref class X {
@@ -37,11 +36,9 @@ public ref class X {
 };
 ```
 
-## Example
-
 The following sample generates C2216.
 
-```
+```cpp
 // C2216c.cpp
 // compile with: /clr /c
 public interface struct I {

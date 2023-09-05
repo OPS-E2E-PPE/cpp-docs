@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2766"
 title: "Compiler Error C2766"
 ms.date: "11/04/2016"
 f1_keywords: ["C2766"]
@@ -13,7 +14,7 @@ Duplicate explicit specializations are not allowed. For more information, see [E
 
 The following sample generates C2766:
 
-```
+```cpp
 // C2766.cpp
 // compile with: /c
 template<class T>

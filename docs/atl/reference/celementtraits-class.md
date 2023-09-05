@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CElementTraits Class"
 title: "CElementTraits Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CElementTraits", "atlcoll/ATL::CElementTraits"]
@@ -33,7 +34,7 @@ For more information, see [ATL Collection Classes](../../atl/atl-collection-clas
 
 **Header:** atlcoll.h
 
-## See Also
+## See also
 
 [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

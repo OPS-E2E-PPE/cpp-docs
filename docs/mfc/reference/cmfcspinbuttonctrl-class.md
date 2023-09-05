@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCSpinButtonCtrl Class"
 title: "CMFCSpinButtonCtrl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCSpinButtonCtrl", "AFXSPINBUTTONCTRL/CMFCSpinButtonCtrl", "AFXSPINBUTTONCTRL/CMFCSpinButtonCtrl::OnDraw"]
@@ -56,7 +57,7 @@ The following example demonstrates how to create an object of the `CMFCSpinButto
 
 **Header:** afxspinbuttonctrl.h
 
-##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw
+## <a name="ondraw"></a> CMFCSpinButtonCtrl::OnDraw
 
 Repaints the current spin button control.
 
@@ -73,7 +74,7 @@ virtual void OnDraw(CDC* pDC);
 
 The framework calls the `CMFCSpinButtonCtrl::OnPaint` method to handle the [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) message, and that method in turn calls this `CMFCSpinButtonCtrl::OnDraw` method. Override this method to customize the way the framework draws the spin button control.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

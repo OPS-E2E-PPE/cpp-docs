@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3277"
 title: "Compiler Error C3277"
 ms.date: "11/04/2016"
 f1_keywords: ["C3277"]
@@ -13,7 +14,7 @@ An enumeration was defined incorrectly inside a managed type.
 
 The following sample generates C3277:
 
-```
+```cpp
 // C3277a.cpp
 // compile with: /clr
 ref class A

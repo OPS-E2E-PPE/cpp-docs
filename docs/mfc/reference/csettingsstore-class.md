@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CSettingsStore Class"
 title: "CSettingsStore Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CSettingsStore", "AFXSETTINGSSTORE/CSettingsStore", "AFXSETTINGSSTORE/CSettingsStore::CSettingsStore", "AFXSETTINGSSTORE/CSettingsStore::Close", "AFXSETTINGSSTORE/CSettingsStore::CreateKey", "AFXSETTINGSSTORE/CSettingsStore::DeleteKey", "AFXSETTINGSSTORE/CSettingsStore::DeleteValue", "AFXSETTINGSSTORE/CSettingsStore::Open", "AFXSETTINGSSTORE/CSettingsStore::Read", "AFXSETTINGSSTORE/CSettingsStore::Write"]
@@ -41,7 +42,7 @@ The member functions `CreateKey` and `Open` are very similar. If the registry ke
 
 ## Example
 
-The following example demonstrates how to use the Open and Read methods of the `CSettingsStore` class. This code snippet is part of the [Tool Tip Demo sample](../../visual-cpp-samples.md).
+The following example demonstrates how to use the Open and Read methods of the `CSettingsStore` class. This code snippet is part of the [Tool Tip Demo sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_ToolTipDemo#1](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]
 
@@ -55,7 +56,7 @@ The following example demonstrates how to use the Open and Read methods of the `
 
 **Header:** afxsettingsstore.h
 
-##  <a name="close"></a>  CSettingsStore::Close
+## <a name="close"></a> CSettingsStore::Close
 
 Closes the open registry key.
 
@@ -67,7 +68,7 @@ virtual void Close();
 
 By default, this method is called from the destructor of the [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).
 
-##  <a name="createkey"></a>  CSettingsStore::CreateKey
+## <a name="createkey"></a> CSettingsStore::CreateKey
 
 Opens a registry key or creates it if it does not exist.
 
@@ -88,7 +89,7 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 
 `CreateKey` uses `m_hKey` as the root of registry inquiries. It searches for *pszPath* as a subkey of `m_hKey`. If the key does not exist, `CreateKey` creates it. Otherwise, it opens the key. `CreateKey` then sets `m_hKey` to the created or opened key.
 
-##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore
+## <a name="csettingsstore"></a> CSettingsStore::CSettingsStore
 
 Creates a `CSettngsStore` object.
 
@@ -110,11 +111,11 @@ CSettingsStore(
 
 If *bAdmin* is set to TRUE, the `m_hKey` member variable is set to **HKEY_LOCAL_MACHINE**. If you set *bAdmin* to FALSE, `m_hKey` is set to **HKEY_CURRENT_USER**.
 
-The security access depends on the *bReadOnly* parameter. If *bReadonly* is FALSE, the security access will be set to **KEY_ALL_ACCESS**. If *bReadyOnly* is TRUE, the security access will be set to a combination of **KEY_QUERY_VALUE, KEY_NOTIFY** and **KEY_ENUMERATE_SUB_KEYS**. For more information about security access together with the registry, see [Registry Key Security and Access Rights](/windows/desktop/SysInfo/registry-key-security-and-access-rights).
+The security access depends on the *bReadOnly* parameter. If *bReadonly* is FALSE, the security access will be set to **KEY_ALL_ACCESS**. If *bReadyOnly* is TRUE, the security access will be set to a combination of **KEY_QUERY_VALUE, KEY_NOTIFY** and **KEY_ENUMERATE_SUB_KEYS**. For more information about security access together with the registry, see [Registry Key Security and Access Rights](/windows/win32/SysInfo/registry-key-security-and-access-rights).
 
 The destructor for `CSettingsStore` releases `m_hKey` automatically.
 
-##  <a name="deletekey"></a>  CSettingsStore::DeleteKey
+## <a name="deletekey"></a> CSettingsStore::DeleteKey
 
 Deletes a key and all its children from the registry.
 
@@ -142,7 +143,7 @@ This method will fail if the `CSettingsStore` object is in read-only mode.
 
 If the parameter *bAdmin* is zero, `DeleteKey` searches for the key to delete under **HKEY_CURRENT_USER**. If *bAdmin* is nonzero, `DeleteKey` searches for the key to delete under **HKEY_LOCAL_MACHINE**.
 
-##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue
+## <a name="deletevalue"></a> CSettingsStore::DeleteValue
 
 Deletes a value from `m_hKey`.
 
@@ -159,7 +160,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 
 Nonzero if successful; otherwise 0.
 
-##  <a name="open"></a>  CSettingsStore::Open
+## <a name="open"></a> CSettingsStore::Open
 
 Opens a registry key.
 
@@ -180,7 +181,7 @@ Nonzero if successful; otherwise 0.
 
 After this method successfully opens the specified key, it sets `m_hKey` to the handle of this key.
 
-##  <a name="read"></a>  CSettingsStore::Read
+## <a name="read"></a> CSettingsStore::Read
 
 Reads a value from a key in the registry.
 
@@ -301,7 +302,7 @@ Nonzero if successful; otherwise 0.
 
 `Read` checks for *pszKey* as a subkey of `m_hKey`.
 
-##  <a name="write"></a>  CSettingsStore::Write
+## <a name="write"></a> CSettingsStore::Write
 
 Writes a value to the registry under the open key.
 
@@ -422,7 +423,7 @@ TRUE if successful; otherwise FALSE.
 
 In order to write to the registry, you must set *bReadOnly* to a nonzero value when you create a [CSettingsStore](../../mfc/reference/csettingsstore-class.md) object. For more information, see [CSettingsStore::CSettingsStore](#csettingsstore).
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

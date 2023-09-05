@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Debugging and Error Reporting Macros"
 title: "Debugging and Error Reporting Macros"
-ms.date: "11/04/2016"
-f1_keywords: ["atldef/ATL::_ATL_DEBUG_INTERFACES", "atldef/ATL::_ATL_DEBUG_QI", "atldef/ATL::ATLASSERT", "afx/ATL::ATLENSURE", "atltrace/ATL::ATLTRACENOTIMPL", "atltrace/ATL::ATLTRACE"]
+ms.date: "05/06/2019"
+f1_keywords: ["atldef/ATL::_ATL_DEBUG_INTERFACES", "atldef/ATL::_ATL_DEBUG_QI", "atldef/ATL::ATLASSERT", "afx/ATL::ATLENSURE", "atltrace/ATL::ATLTRACENOTIMPL", "atltrace/ATL::ATLTRACE", "ATLDEF/_ATL_DEBUG_INTERFACES", "ATLDEF/_ATL_DEBUG_QI", "ATLDEF/ATLASSERT", "AFX/ATLENSURE", "ATLTRACE/ATLTRACENOTIMPL", "ATLTRACE/ATLTRACE", "ATLDEF/ATLSTATIC_ASSERT"]
 helpviewer_keywords: ["macros, error reporting"]
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
 ---
@@ -9,17 +10,17 @@ ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
 
 These macros provide useful debugging and trace facilities.
 
-|||
+|Name|Description|
 |-|-|
 |[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Writes, to the output window, any interface leaks that are detected when `_Module.Term` is called.|
 |[_ATL_DEBUG_QI](#_atl_debug_qi)|Writes all calls to `QueryInterface` to the output window.|
 |[ATLASSERT](#atlassert)|Performs the same functionality as the [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) macro found in the C run-time library.|
 |[ATLENSURE](#atlensure)|Performs parameters validation. Call `AtlThrow` if needed|
 |[ATLTRACENOTIMPL](#atltracenotimpl)|Sends a message to the dump device that the specified function is not implemented.|
-|[ATLTRACE](#alttrace)|Reports warnings to an output device, such as the debugger window, according to the indicated flags and levels. Included for backward compatibility.|
+|[ATLTRACE](#atltrace)|Reports warnings to an output device, such as the debugger window, according to the indicated flags and levels. Included for backward compatibility.|
 |[ATLTRACE2](#atltrace2)|Reports warnings to an output device, such as the debugger window, according to the indicated flags and levels.|
 
-##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES
+## <a name="_atl_debug_interfaces"></a> _ATL_DEBUG_INTERFACES
 
 Define this macro before including any ATL header files to trace all `AddRef` and `Release` calls on your components' interfaces to the output window.
 
@@ -35,7 +36,7 @@ The trace output will appear as shown below:
 
 The first part of each trace will always be `ATL: QIThunk`. Next is a value identifying the particular *interface thunk* being used. An interface thunk is an object used to maintain a reference count and provide the tracing capability used here. A new interface thunk is created on every call to `QueryInterface` except for requests for the `IUnknown` interface (in this case, the same thunk is returned every time to comply with COM's identity rules).
 
-Next you'll see `AddRef` or `Release` indicating which method was called. Following that, you'll see a value identifying the object whose interface reference count was changed. The value traced is the **this** pointer of the object.
+Next you'll see `AddRef` or `Release` indicating which method was called. Following that, you'll see a value identifying the object whose interface reference count was changed. The value traced is the **`this`** pointer of the object.
 
 The reference count that is traced is the reference count on that thunk after `AddRef` or `Release` was called. Note that this reference count may not match the reference count for the object. Each thunk maintains its own reference count to help you fully comply with COM's reference-counting rules.
 
@@ -50,7 +51,7 @@ The information provided here maps directly to the information provided in the p
 > [!NOTE]
 > _ATL_DEBUG_INTERFACES can be used in retail builds.
 
-##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI
+## <a name="_atl_debug_qi"></a> _ATL_DEBUG_QI
 
 Writes all calls to `QueryInterface` to the output window.
 
@@ -64,7 +65,7 @@ If a call to `QueryInterface` failed, the output window will display:
 
 *interface name* - `failed`
 
-##  <a name="atlassert"></a>  ATLASSERT
+## <a name="atlassert"></a> ATLASSERT
 
 The ATLASSERT macro performs the same functionality as the [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) macro found in the C run-time library.
 
@@ -81,11 +82,11 @@ Expression (including pointers) that evaluates to nonzero or 0.
 
 In debug builds, ATLASSERT evaluates *booleanExpression* and generates a debug report when the result is false.
 
-## Requirements
+### Requirements
 
 **Header:** atldef.h
 
-##  <a name="atlensure"></a>  ATLENSURE
+## <a name="atlensure"></a> ATLENSURE
 
 This macro is used to validate parameters passed to a function.
 
@@ -118,11 +119,11 @@ The difference between ATLENSURE and ATLASSERT is that ATLENSURE throws an excep
 
 [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
-## Requirements
+### Requirements
 
 **Header:** afx.h
 
-##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL
+## <a name="atltracenotimpl"></a> ATLTRACENOTIMPL
 
 In debug builds of ATL, sends the string " *funcname* is not implemented" to the dump device and returns E_NOTIMPL.
 
@@ -143,11 +144,11 @@ In release builds, simply returns E_NOTIMPL.
 
 [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]
 
-## Requirements
+### Requirements
 
 **Header:** atltrace.h
 
-##  <a name="atltrace"></a>  ATLTRACE
+## <a name="atltrace"></a> ATLTRACE
 
 Reports warnings to an output device, such as the debugger window, according to the indicated flags and levels. Included for backward compatibility.
 
@@ -163,7 +164,7 @@ ATLTRACE(
 ### Parameters
 
 *exp*<br/>
-[in] The string and variables to send to the Visual C++ output window or any application that traps these messages.
+[in] The string and variables to send to the output window or any application that traps these messages.
 
 *category*<br/>
 [in] Type of event or method on which to report. See the Remarks for a list of categories.
@@ -178,7 +179,7 @@ ATLTRACE(
 
 See [ATLTRACE2](#atltrace2) for a description of ATLTRACE. ATLTRACE and ATLTRACE2 have the same behavior, ATLTRACE is included for backward compatibility.
 
-##  <a name="atltrace2"></a>  ATLTRACE2
+## <a name="atltrace2"></a> ATLTRACE2
 
 Reports warnings to an output device, such as the debugger window, according to the indicated flags and levels.
 
@@ -188,13 +189,13 @@ ATLTRACE2(exp);
 ATLTRACE2(
     DWORD category,
     UINT level,
-    LPCSTRlpszFormat,  ...);
+    LPCSTR lpszFormat,  ...);
 ```
 
 ### Parameters
 
 *exp*<br/>
-[in] The string to send to the Visual C++ output window or any application that traps these messages.
+[in] The string to send to the output window or any application that traps these messages.
 
 *category*<br/>
 [in] Type of event or method on which to report. See the Remarks for a list of categories.
@@ -207,7 +208,7 @@ ATLTRACE2(
 
 ### Remarks
 
-The short form of ATLTRACE2 writes a string to the debugger's output window. The second form of ATLTRACE2 also writes output to the debugger's output window, but is subject to the settings of the ATL/MFC Trace Tool (see [ATLTraceTool Sample](../../visual-cpp-samples.md)). For example, if you set *level* to 4 and the ATL/MFC Trace Tool to level 0, you will not see the message. *level* can be 0, 1, 2, 3, or 4. The default, 0, reports only the most serious problems.
+The short form of ATLTRACE2 writes a string to the debugger's output window. The second form of ATLTRACE2 also writes output to the debugger's output window, but is subject to the settings of the ATL/MFC Trace Tool (see [ATLTraceTool Sample](../../overview/visual-cpp-samples.md)). For example, if you set *level* to 4 and the ATL/MFC Trace Tool to level 0, you will not see the message. *level* can be 0, 1, 2, 3, or 4. The default, 0, reports only the most serious problems.
 
 The *category* parameter lists the trace flags to set. These flags correspond to the types of methods for which you want to report. The tables below list the valid trace flags you can use for the *category* parameter.
 
@@ -270,7 +271,7 @@ ATLTRACE and ATLTRACE2 have the same behavior, ATLTRACE is included for backward
 
 [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]
 
-## See Also
+## See also
 
 [Macros](../../atl/reference/atl-macros.md)<br/>
 [Debugging and Error Reporting Global Functions](../../atl/reference/debugging-and-error-reporting-global-functions.md)

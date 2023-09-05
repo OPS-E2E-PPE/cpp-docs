@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Reference-Type Function Returns"
 title: "Reference-Type Function Returns"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["function return types [C++], reference type", "data types [C++], function return types", "functions [C++], return types"]
@@ -77,7 +78,7 @@ Note also that in main, ThePoint object remains in scope, and therefore its refe
 
 Declarations of reference types must contain initializers except in the following cases:
 
-- Explicit **extern** declaration
+- Explicit **`extern`** declaration
 
 - Declaration of a class member
 
@@ -90,7 +91,7 @@ Declarations of reference types must contain initializers except in the followin
 If you declare an object at local scope, that object will be destroyed when the function returns. If the function returns a reference to that object, that reference will probably cause an access violation at runtime if the caller attempts to use the null reference.
 
 ```cpp
-// C4172 means Don’t do this!!!
+// C4172 means Don't do this!!!
 Foo& GetFoo()
 {
     Foo f;

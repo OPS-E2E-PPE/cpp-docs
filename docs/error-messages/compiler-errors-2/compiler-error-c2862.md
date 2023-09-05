@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2862"
 title: "Compiler Error C2862"
 ms.date: "11/04/2016"
 f1_keywords: ["C2862"]
@@ -13,7 +14,7 @@ Protected and private members may be accessed only from other member functions. 
 
 The following sample will generate C2862:
 
-```
+```cpp
 // C2862.cpp
 // compile with: /c
 #include <unknwn.h>

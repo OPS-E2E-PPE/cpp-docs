@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2970"
 title: "Compiler Error C2970"
 ms.date: "11/04/2016"
 f1_keywords: ["C2970"]
@@ -13,7 +14,7 @@ You cannot use the name or address of a static variable as a template argument. 
 
 The following sample generates C2970:
 
-```
+```cpp
 // C2970.cpp
 // compile with: /c
 static int si;

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDBException Class"
 title: "CDBException Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CDBException", "AFXDB/CDBException", "AFXDB/CDBException::m_nRetCode", "AFXDB/CDBException::m_strError", "AFXDB/CDBException::m_strStateNativeOrigin"]
@@ -30,7 +31,7 @@ class CDBException : public CException
 The class includes two public data members you can use to determine the cause of the exception or to display a text message describing the exception. `CDBException` objects are constructed and thrown by member functions of the database classes.
 
 > [!NOTE]
->  This class is one of MFC's Open Database Connectivity (ODBC) classes. If you are instead using the newer Data Access Objects (DAO) classes, use [CDaoException](../../mfc/reference/cdaoexception-class.md) instead. All DAO class names have "CDao" as a prefix. For more information, see the article [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).
+> This class is one of MFC's Open Database Connectivity (ODBC) classes. If you are instead using the newer Data Access Objects (DAO) classes, use [CDaoException](../../mfc/reference/cdaoexception-class.md) instead. All DAO class names have "CDao" as a prefix. For more information, see the article [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).
 
 Exceptions are cases of abnormal execution involving conditions outside the program's control, such as data source or network I/O errors. Errors that you might expect to see in the normal course of executing your program are usually not considered exceptions.
 
@@ -50,7 +51,7 @@ For more information about exception handling in general, or about `CDBException
 
 **Header:** afxdb.h
 
-##  <a name="m_nretcode"></a>  CDBException::m_nRetCode
+## <a name="m_nretcode"></a> CDBException::m_nRetCode
 
 Contains an ODBC error code of type RETCODE returned by an ODBC application programming interface (API) function.
 
@@ -60,7 +61,7 @@ This type includes SQL-prefixed codes defined by ODBC and AFX_SQL-prefixed codes
 
 - AFX_SQL_ERROR_API_CONFORMANCE The driver for a `CDatabase::OpenEx` or `CDatabase::Open` call does not conform to required ODBC API Conformance level 1 ( SQL_OAC_LEVEL1).
 
-- AFX_SQL_ERROR_CONNECT_FAIL Connection to the data source failed. You passed a NULL`CDatabase` pointer to your recordset constructor and the subsequent attempt to create a connection based on `GetDefaultConnect` failed.
+- AFX_SQL_ERROR_CONNECT_FAIL Connection to the data source failed. You passed a NULL `CDatabase` pointer to your recordset constructor and the subsequent attempt to create a connection based on `GetDefaultConnect` failed.
 
 - AFX_SQL_ERROR_DATA_TRUNCATED You requested more data than you have provided storage for. For information on increasing the provided data storage for `CString` or `CByteArray` data types, see the `nMaxLength` argument for [RFX_Text](record-field-exchange-functions.md#rfx_text) and [RFX_Binary](record-field-exchange-functions.md#rfx_binary) under "Macros and Globals."
 
@@ -102,7 +103,7 @@ This type includes SQL-prefixed codes defined by ODBC and AFX_SQL-prefixed codes
 
 The SQL-prefixed codes are defined by ODBC. The AFX-prefixed codes are defined in AFXDB.H, found in MFC\INCLUDE.
 
-##  <a name="m_strerror"></a>  CDBException::m_strError
+## <a name="m_strerror"></a> CDBException::m_strError
 
 Contains a string describing the error that caused the exception.
 
@@ -110,7 +111,7 @@ Contains a string describing the error that caused the exception.
 
 The string describes the error in alphanumeric terms. For more detailed information and an example, see `m_strStateNativeOrigin`.
 
-##  <a name="m_strstatenativeorigin"></a>  CDBException::m_strStateNativeOrigin
+## <a name="m_strstatenativeorigin"></a> CDBException::m_strStateNativeOrigin
 
 Contains a string describing the error that caused the exception.
 
@@ -118,7 +119,7 @@ Contains a string describing the error that caused the exception.
 
 The string is of the form "State:%s,Native:%ld,Origin:%s", where the format codes, in order, are replaced by values that describe:
 
-- The SQLSTATE, a null-terminated string containing a five-character error code returned in the *szSqlState* parameter of the ODBC function `SQLError`. SQLSTATE values are listed in Appendix A, [ODBC Error Codes](/previous-versions/windows/desktop/ms714687), in the *ODBC Programmer's Reference*. Example: "S0022".
+- The SQLSTATE, a null-terminated string containing a five-character error code returned in the *szSqlState* parameter of the ODBC function `SQLError`. SQLSTATE values are listed in Appendix A, [ODBC Error Codes](/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes), in the *ODBC Programmer's Reference*. Example: "S0022".
 
 - The native error code, specific to the data source, returned in the *pfNativeError* parameter of the `SQLError` function. Example: 207.
 
@@ -126,17 +127,17 @@ The string is of the form "State:%s,Native:%ld,Origin:%s", where the format code
 
 The framework interprets the error string and puts its components into `m_strStateNativeOrigin`; if `m_strStateNativeOrigin` contains information for more than one error, the errors are separated by newlines. The framework puts the alphanumeric error text into `m_strError`.
 
-For additional information about the codes used to make up this string, see the [SQLError](/previous-versions/windows/desktop/ms716312) function in the *ODBC Programmer's Reference*.
+For additional information about the codes used to make up this string, see the [SQLError](/sql/odbc/reference/syntax/sqlerror-function) function in the *ODBC Programmer's Reference*.
 
 ### Example
 
-  From ODBC: "State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server] Invalid column name 'ColName'"
+From ODBC: "State:S0022,Native:207,Origin:\[Microsoft]\[ODBC SQL Server Driver]\[SQL Server] Invalid column name 'ColName'"
 
-In `m_strStateNativeOrigin`: "State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server]"
+In `m_strStateNativeOrigin`: "State:S0022,Native:207,Origin:\[Microsoft]\[ODBC SQL Server Driver]\[SQL Server]"
 
 In `m_strError`: "Invalid column name 'ColName'"
 
-## See Also
+## See also
 
 [CException Class](../../mfc/reference/cexception-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

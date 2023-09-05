@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: numeric (STL/CLR)"
 title: "numeric (STL/CLR)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
@@ -8,7 +9,7 @@ ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
 ---
 # numeric (STL/CLR)
 
-Defines container template functions that perform algorithms provided for numerical processing.
+Defines container function templates that perform algorithms provided for numerical processing.
 
 ## Syntax
 

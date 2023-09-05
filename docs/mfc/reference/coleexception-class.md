@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleException Class"
 title: "COleException Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COleException", "AFXDISP/COleException", "AFXDISP/COleException::Process", "AFXDISP/COleException::m_sc"]
@@ -49,7 +50,7 @@ For more information on exceptions, see the articles [Exception Handling (MFC)](
 
 **Header:** afxdisp.h
 
-##  <a name="m_sc"></a>  COleException::m_sc
+## <a name="m_sc"></a> COleException::m_sc
 
 This data member holds the OLE status code that indicates the reason for the exception.
 
@@ -61,13 +62,13 @@ SCODE m_sc;
 
 This variable's value is set by [AfxThrowOleException](exception-processing.md#afxthrowoleexception).
 
-For more information on SCODE, see [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes) in the Windows SDK.
+For more information on SCODE, see [Structure of COM Error Codes](/windows/win32/com/structure-of-com-error-codes) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]
 
-##  <a name="process"></a>  COleException::Process
+## <a name="process"></a> COleException::Process
 
 Call the **Process** member function to translate a caught exception into an OLE status code.
 
@@ -87,17 +88,16 @@ An OLE status code.
 ### Remarks
 
 > [!NOTE]
->  This function is **static**.
+> This function is **`static`**.
 
-For more information on SCODE, see [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes) in the Windows SDK.
+For more information on SCODE, see [Structure of COM Error Codes](/windows/win32/com/structure-of-com-error-codes) in the Windows SDK.
 
 ### Example
 
   See the example for [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
 
-## See Also
+## See also
 
-[MFC Sample CALCDRIV](../../visual-cpp-samples.md)<br/>
+[MFC Sample CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [CException Class](../../mfc/reference/cexception-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

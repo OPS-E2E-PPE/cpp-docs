@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Character Assignment"
 title: "Character Assignment"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["characters [C++], assignments", "MBCS [C++], character assignments"]
@@ -6,7 +7,7 @@ ms.assetid: dcc329cd-92df-4e20-817d-364be62ff28f
 ---
 # Character Assignment
 
-Consider the following example, in which the **while** loop scans a string, copying all characters except 'X' into another string:
+Consider the following example, in which the **`while`** loop scans a string, copying all characters except 'X' into another string:
 
 ```cpp
 while( *sz2 )
@@ -34,7 +35,7 @@ while( *sz2 )
 }
 ```
 
-## See Also
+## See also
 
 [MBCS Programming Tips](../text/mbcs-programming-tips.md)<br/>
 [Character Comparison](../text/character-comparison.md)

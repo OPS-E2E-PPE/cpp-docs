@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: _variant_t::SetString"
 title: "_variant_t::SetString"
 ms.date: "11/04/2016"
 f1_keywords: ["_variant_t::SetString"]
@@ -13,7 +14,7 @@ Assigns a string to this `_variant_t` object.
 
 ## Syntax
 
-```
+```cpp
 void SetString(const char* pSrc);
 ```
 

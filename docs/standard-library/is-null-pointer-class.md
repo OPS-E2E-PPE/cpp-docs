@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_null_pointer Class"
 title: "is_null_pointer Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_null_pointer"]
@@ -18,7 +19,7 @@ struct is_null_pointer;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to query.
 
 ## Remarks
@@ -33,4 +34,4 @@ An instance of the type predicate holds true if the type *T* is `std::nullptr_t`
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

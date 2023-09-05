@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: time_get Class"
 title: "time_get Class"
 ms.date: "11/04/2016"
 f1_keywords: ["xloctime/std::time_get", "locale/std::time_get::char_type", "locale/std::time_get::iter_type", "locale/std::time_get::date_order", "locale/std::time_get::do_date_order", "locale/std::time_get::do_get", "locale/std::time_get::do_get_date", "locale/std::time_get::do_get_monthname", "locale/std::time_get::do_get_time", "locale/std::time_get::do_get_weekday", "locale/std::time_get::do_get_year", "locale/std::time_get::get", "locale/std::time_get::get_date", "locale/std::time_get::get_monthname", "locale/std::time_get::get_time", "locale/std::time_get::get_weekday", "locale/std::time_get::get_year"]
@@ -7,7 +8,7 @@ ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ---
 # time_get Class
 
-The template class describes an object that can serve as a locale facet to control conversions of sequences of type `CharType` to time values.
+The class template describes an object that can serve as a locale facet to control conversions of sequences of type `CharType` to time values.
 
 ## Syntax
 
@@ -19,10 +20,10 @@ class time_get : public time_base;
 
 ### Parameters
 
-*CharType*<br/>
+*CharType*\
 The type used within a program to encode characters.
 
-*InputIterator*<br/>
+*InputIterator*\
 The iterator from which the time values are read.
 
 ## Remarks
@@ -67,7 +68,7 @@ As with any locale facet, the static object ID has an initial stored value of ze
 
 **Namespace:** std
 
-## <a name="char_type"></a>  time_get::char_type
+## <a name="char_type"></a> time_get::char_type
 
 A type that is used to describe a character used by a locale.
 
@@ -79,7 +80,7 @@ typedef CharType char_type;
 
 The type is a synonym for the template parameter **CharType**.
 
-## <a name="date_order"></a>  time_get::date_order
+## <a name="date_order"></a> time_get::date_order
 
 Returns the date order used by a facet.
 
@@ -139,7 +140,7 @@ German_Germany.1252(day, month, year)
 English_United Kingdom.1252(day, month, year)
 ```
 
-## <a name="do_date_order"></a>  time_get::do_date_order
+## <a name="do_date_order"></a> time_get::do_date_order
 
 A protected virtual member function that is called to return the date order used by a facet.
 
@@ -159,7 +160,7 @@ The virtual protected member function returns a value of type **time_base::dateo
 
 See the example for [date_order](#date_order), which calls `do_date_order`.
 
-## <a name="do_get"></a>  time_get::do_get
+## <a name="do_get"></a> time_get::do_get
 
 Reads and converts character data to a time value. Accepts one conversion specifier and modifier.
 
@@ -177,25 +178,25 @@ iter_type first,
 
 ### Parameters
 
-*first*<br/>
+*first*\
 An Input iterator that indicates the start of the sequence to convert.
 
-*last*<br/>
+*last*\
 An Input iterator that indicates the end of the sequence.
 
-*iosbase*<br/>
+*iosbase*\
 A stream object.
 
-*state*<br/>
+*state*\
 A field in iosbase where appropriate bitmask elements are set to indicate errors.
 
-*ptm*<br/>
+*ptm*\
 A pointer to the time structure where the time is to be stored.
 
-*fmt*<br/>
+*fmt*\
 A conversion specifier character.
 
-*mod*<br/>
+*mod*\
 An optional modifier character.
 
 ### Return Value
@@ -256,7 +257,7 @@ The conversion specifiers are:
 
 Any other conversion specifier sets `ios_base::failbit` in `state` and returns. In this implementation, any modifier has no effect.
 
-## <a name="do_get_date"></a>  time_get::do_get_date
+## <a name="do_get_date"></a> time_get::do_get_date
 
 A protected virtual member function that is called to parse a string as the date produced by the *x* specifier for `strftime`.
 
@@ -270,19 +271,19 @@ virtual iter_type do_get_date(iter_type first,
 
 ### Parameters
 
-*first*<br/>
+*first*\
 Input iterator addressing the beginning of the sequence to be converted.
 
-*last*<br/>
+*last*\
 Input iterator addressing the end of the sequence to be converted.
 
-*iosbase*<br/>
+*iosbase*\
 A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.
 
-*state*<br/>
+*state*\
 Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.
 
-*ptm*<br/>
+*ptm*\
 A pointer to where the date information is to be stored.
 
 ### Return Value
@@ -307,7 +308,7 @@ The literal spaces and commas must match corresponding elements in the input seq
 
 See the example for [get_date](#get_date), which calls `do_get_date`.
 
-## <a name="do_get_monthname"></a>  time_get::do_get_monthname
+## <a name="do_get_monthname"></a> time_get::do_get_monthname
 
 A protected virtual member function that is called to parse a string as the name of the month.
 
@@ -321,19 +322,19 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### Parameters
 
-*first*<br/>
+*first*\
 Input iterator addressing the beginning of the sequence to be converted.
 
-*last*<br/>
+*last*\
 Input iterator addressing the end of the sequence to be converted.
 
-*iosbase*<br/>
+*iosbase*\
 Unused.
 
-*state*<br/>
+*state*\
 An output parameter that sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.
 
-*ptm*<br/>
+*ptm*\
 A pointer to where the month information is to be stored.
 
 ### Return Value
@@ -350,7 +351,7 @@ The month input field is a sequence that matches the longest of a set of locale-
 
 See the example for [get_monthname](#get_monthname), which calls `do_get_monthname`.
 
-## <a name="do_get_time"></a>  time_get::do_get_time
+## <a name="do_get_time"></a> time_get::do_get_time
 
 A protected virtual member function that is called to parse a string as the date produced by the *X* specifier for `strftime`.
 
@@ -364,19 +365,19 @@ virtual iter_type do_get_time(iter_type first,
 
 ### Parameters
 
-*first*<br/>
+*first*\
 Input iterator addressing the beginning of the sequence to be converted.
 
-*last*<br/>
+*last*\
 Input iterator addressing the end of the sequence to be converted.
 
-*iosbase*<br/>
+*iosbase*\
 Unused.
 
-*state*<br/>
+*state*\
 Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.
 
-*ptm*<br/>
+*ptm*\
 A pointer to where the date information is to be stored.
 
 ### Return Value
@@ -401,7 +402,7 @@ The literal colons must match corresponding elements in the input sequence.
 
 See the example for [get_time](#get_time), which calls `do_get_time`.
 
-## <a name="do_get_weekday"></a>  time_get::do_get_weekday
+## <a name="do_get_weekday"></a> time_get::do_get_weekday
 
 A protected virtual member function that is called to parse a string as the name of the day of the week.
 
@@ -415,19 +416,19 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### Parameters
 
-*first*<br/>
+*first*\
 Input iterator addressing the beginning of the sequence to be converted.
 
-*last*<br/>
+*last*\
 Input iterator addressing the end of the sequence to be converted.
 
-*iosbase*<br/>
+*iosbase*\
 A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.
 
-*state*<br/>
+*state*\
 Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.
 
-*ptm*<br/>
+*ptm*\
 A pointer to where the weekday information is to be stored.
 
 ### Return Value
@@ -444,7 +445,7 @@ The weekday input field is a sequence that matches the longest of a set of local
 
 See the example for [get_weekday](#get_weekday), which calls `do_get_weekday`.
 
-## <a name="do_get_year"></a>  time_get::do_get_year
+## <a name="do_get_year"></a> time_get::do_get_year
 
 A protected virtual member function that is called to parses a string as the name of the year.
 
@@ -458,19 +459,19 @@ virtual iter_type do_get_year(iter_type first,
 
 ### Parameters
 
-*first*<br/>
+*first*\
 Input iterator addressing the beginning of the sequence to be converted.
 
-*last*<br/>
+*last*\
 Input iterator addressing the end of the sequence to be converted.
 
-*iosbase*<br/>
+*iosbase*\
 A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.
 
-*state*<br/>
+*state*\
 Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.
 
-*ptm*<br/>
+*ptm*\
 A pointer to where the year information is to be stored.
 
 ### Return Value
@@ -487,7 +488,7 @@ The year input field is a sequence of decimal digits whose corresponding numeric
 
 See the example for [get_year](#get_year), which calls `do_get_year`.
 
-## <a name="get"></a>  time_get::get
+## <a name="get"></a> time_get::get
 
 Reads from a source of character data and converts that data to a time that is stored in a time struct. The first function accepts one conversion specifier and modifier, the second accepts several.
 
@@ -513,31 +514,31 @@ iter_type get(
 
 ### Parameters
 
-*first*<br/>
+*first*\
 Input iterator that indicates where the sequence to be converted starts.
 
-*last*<br/>
+*last*\
 Input iterator that indicates the end of the sequence to be converted.
 
-*iosbase*<br/>
+*iosbase*\
 The stream.
 
-*state*<br/>
+*state*\
 The appropriate bitmask elements are set for the stream state to indicate errors.
 
-*ptm*<br/>
+*ptm*\
 Pointer to the time structure where the time is to be stored.
 
-*fmt*<br/>
+*fmt*\
 A conversion specifier character.
 
-*mod*<br/>
+*mod*\
 An optional modifier character.
 
-*fmt_first*<br/>
+*fmt_first*\
 Points to where the format directives start.
 
-*fmt_last*<br/>
+*fmt_last*\
 Points to the end of the format directives.
 
 ### Return Value
@@ -556,7 +557,7 @@ A whitespace element in the format skips past zero or more input whitespace elem
 
 Any other element in the format must match the next input element, which is skipped. A match failure sets `ios_base::failbit` in *state* and returns.
 
-## <a name="get_date"></a>  time_get::get_date
+## <a name="get_date"></a> time_get::get_date
 
 Parses a string as the date produced by the *x* specifier for `strftime`.
 
@@ -570,19 +571,19 @@ iter_type get_date(iter_type first,
 
 ### Parameters
 
-*first*<br/>
+*first*\
 Input iterator addressing the beginning of the sequence to be converted.
 
-*last*<br/>
+*last*\
 Input iterator addressing the end of the sequence to be converted.
 
-*iosbase*<br/>
+*iosbase*\
 A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.
 
-*state*<br/>
+*state*\
 Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.
 
-*ptm*<br/>
+*ptm*\
 A pointer to where the date information is to be stored.
 
 ### Return Value
@@ -650,7 +651,7 @@ tm_yday: 0
 tm_isdst: 0
 ```
 
-## <a name="get_monthname"></a>  time_get::get_monthname
+## <a name="get_monthname"></a> time_get::get_monthname
 
 Parses a string as the name of the month.
 
@@ -664,19 +665,19 @@ iter_type get_monthname(iter_type first,
 
 ### Parameters
 
-*first*<br/>
+*first*\
 Input iterator addressing the beginning of the sequence to be converted.
 
-*last*<br/>
+*last*\
 Input iterator addressing the end of the sequence to be converted.
 
-*iosbase*<br/>
+*iosbase*\
 Unused.
 
-*state*<br/>
+*state*\
 An output parameter that sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.
 
-*ptm*<br/>
+*ptm*\
 A pointer to where the month information is to be stored.
 
 ### Return Value
@@ -742,7 +743,7 @@ tm_yday: 0
 tm_isdst: 0
 ```
 
-## <a name="get_time"></a>  time_get::get_time
+## <a name="get_time"></a> time_get::get_time
 
 Parses a string as the date produced by the *X* specifier for `strftime`.
 
@@ -756,19 +757,19 @@ iter_type get_time(iter_type first,
 
 ### Parameters
 
-*first*<br/>
+*first*\
 Input iterator addressing the beginning of the sequence to be converted.
 
-*last*<br/>
+*last*\
 Input iterator addressing the end of the sequence to be converted.
 
-*iosbase*<br/>
+*iosbase*\
 Unused.
 
-*state*<br/>
+*state*\
 Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.
 
-*ptm*<br/>
+*ptm*\
 A pointer to where the date information is to be stored.
 
 ### Return Value
@@ -823,7 +824,7 @@ tm_min: 13
 tm_hour: 11
 ```
 
-## <a name="get_weekday"></a>  time_get::get_weekday
+## <a name="get_weekday"></a> time_get::get_weekday
 
 Parses a string as the name of the day of the week.
 
@@ -837,19 +838,19 @@ iter_type get_weekday(iter_type first,
 
 ### Parameters
 
-*first*<br/>
+*first*\
 Input iterator addressing the beginning of the sequence to be converted.
 
-*last*<br/>
+*last*\
 Input iterator addressing the end of the sequence to be converted.
 
-*iosbase*<br/>
+*iosbase*\
 A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.
 
-*state*<br/>
+*state*\
 Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.
 
-*ptm*<br/>
+*ptm*\
 A pointer to where the weekday information is to be stored.
 
 ### Return Value
@@ -900,7 +901,7 @@ time_get::get_time(mercredi) =
 tm_wday: 3
 ```
 
-## <a name="get_year"></a>  time_get::get_year
+## <a name="get_year"></a> time_get::get_year
 
 Parses a string as the name of the year.
 
@@ -914,19 +915,19 @@ iter_type get_year(iter_type first,
 
 ### Parameters
 
-*first*<br/>
+*first*\
 Input iterator addressing the beginning of the sequence to be converted.
 
-*last*<br/>
+*last*\
 Input iterator addressing the end of the sequence to be converted.
 
-*iosbase*<br/>
+*iosbase*\
 A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.
 
-*state*<br/>
+*state*\
 Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.
 
-*ptm*<br/>
+*ptm*\
 A pointer to where the year information is to be stored.
 
 ### Return Value
@@ -978,7 +979,7 @@ time_get::get_year(1928) =
 tm_year: 28
 ```
 
-## <a name="iter_type"></a>  time_get::iter_type
+## <a name="iter_type"></a> time_get::iter_type
 
 A type that describes an input iterator.
 
@@ -990,7 +991,7 @@ typedef InputIterator iter_type;
 
 The type is a synonym for the template parameter **InputIterator**.
 
-## <a name="time_get"></a>  time_get::time_get
+## <a name="time_get"></a> time_get::time_get
 
 The constructor for objects of type `time_get`.
 
@@ -1000,7 +1001,7 @@ explicit time_get(size_t refs = 0);
 
 ### Parameters
 
-*refs*<br/>
+*refs*\
 Integer value used to specify the type of memory management for the object.
 
 ### Remarks
@@ -1019,6 +1020,6 @@ The constructor initializes its base object with **locale::**[facet](../standard
 
 ## See also
 
-[\<locale>](../standard-library/locale.md)<br/>
-[time_base Class](../standard-library/time-base-class.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[time_base Class](../standard-library/time-base-class.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

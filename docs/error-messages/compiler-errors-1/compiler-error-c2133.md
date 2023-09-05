@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2133"
 title: "Compiler Error C2133"
 ms.date: "11/04/2016"
 f1_keywords: ["C2133"]
@@ -13,7 +14,7 @@ An unsized array is declared as a member of a class, structure, union, or enumer
 
 The following sample generates C2133:
 
-```
+```cpp
 // C2133.cpp
 // compile with: /Za
 struct X {
@@ -23,7 +24,7 @@ struct X {
 
 Possible resolution:
 
-```
+```cpp
 // C2133b.cpp
 // compile with: /c
 struct X {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2196"
 title: "Compiler Error C2196"
 ms.date: "11/04/2016"
 f1_keywords: ["C2196"]
@@ -13,7 +14,7 @@ A switch statement uses the same case value more than once.
 
 The following sample generates C2196:
 
-```
+```cpp
 // C2196.cpp
 int main() {
    int i = 0;

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_signed Class"
 title: "is_signed Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_signed"]
@@ -18,7 +19,7 @@ struct is_signed;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
 ## Remarks
@@ -57,7 +58,7 @@ int main()
 is_signed<trivial> == false
 is_signed<int> == true
 is_signed<unsigned int> == false
-is_signed<float> == false
+is_signed<float> == true
 ```
 
 ## Requirements
@@ -68,5 +69,5 @@ is_signed<float> == false
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_unsigned Class](../standard-library/is-unsigned-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_unsigned Class](../standard-library/is-unsigned-class.md)

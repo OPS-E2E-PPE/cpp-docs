@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using an Unclipped Device Context"
 title: "Using an Unclipped Device Context"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["MFC ActiveX controls [MFC], unclipped device context"]
@@ -16,7 +17,6 @@ The code to remove this flag is automatically generated if you select the **Uncl
 
 If you are using windowless activation, this optimization has no effect.
 
-## See Also
+## See also
 
 [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
-

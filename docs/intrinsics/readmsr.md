@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: __readmsr"
 title: "__readmsr"
-ms.date: "11/04/2016"
+ms.date: "09/02/2019"
 f1_keywords: ["__readmsr"]
 helpviewer_keywords: ["Read Model Specific Register", "rdmsr instruction", "__readmsr intrinsic"]
 ms.assetid: 7ab1f8e8-72cb-4ce4-817d-3e728a3c9716
@@ -9,22 +10,22 @@ ms.assetid: 7ab1f8e8-72cb-4ce4-817d-3e728a3c9716
 
 **Microsoft Specific**
 
-Generates the `rdmsr` instruction, which reads the model-specific register specified by `register` and returns its value.
+Generates the `rdmsr` instruction, which reads the model-specific register specified by **`register`** and returns its value.
 
 ## Syntax
 
-```
+```C
 __int64 __readmsr(
    int register
 );
 ```
 
-#### Parameters
+### Parameters
 
-*register*<br/>
-[in] The model specific register to read.
+*register*\
+[in] The model-specific register to read.
 
-## Return Value
+## Return value
 
 The value in the specified register.
 
@@ -44,6 +45,6 @@ For more information, see the AMD documentation.
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
-[Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)
+[Compiler intrinsics](../intrinsics/compiler-intrinsics.md)

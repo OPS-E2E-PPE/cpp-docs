@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMemoryState Structure"
 title: "CMemoryState Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["CMemoryState"]
@@ -42,9 +43,9 @@ A "memory leak" occurs when memory for an object is allocated on the heap but no
 
 - Using the Windows API memory management functions, `LocalAlloc`/ `LocalFree` and `GlobalAlloc`/ `GlobalFree`.
 
-- Using the C++ **new** and **delete** operators.
+- Using the C++ **`new`** and **`delete`** operators.
 
-The `CMemoryState` diagnostics only help detect memory leaks caused when memory allocated using the **new** operator is not deallocated using **delete**. The other two groups of memory-management functions are for non-C++ programs, and mixing them with **new** and **delete** in the same program is not recommended. An additional macro, DEBUG_NEW, is provided to replace the **new** operator when you need file and line-number tracking of memory allocations. DEBUG_NEW is used whenever you would normally use the **new** operator.
+The `CMemoryState` diagnostics only help detect memory leaks caused when memory allocated using the **`new`** operator is not deallocated using **`delete`**. The other two groups of memory-management functions are for non-C++ programs, and mixing them with **`new`** and **`delete`** in the same program is not recommended. An additional macro, DEBUG_NEW, is provided to replace the **`new`** operator when you need file and line-number tracking of memory allocations. DEBUG_NEW is used whenever you would normally use the **`new`** operator.
 
 As with other diagnostics, the `CMemoryState` diagnostics are only available in debug versions of your program. A debug version must have the _DEBUG constant defined.
 
@@ -55,7 +56,7 @@ If simply knowing where the imbalance in allocation and deallocation occurs does
 For more information about how to use `CMemoryState` and other diagnostics, see [Debugging MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).
 
 > [!NOTE]
->  Declarations of objects of type `CMemoryState` and calls to member functions should be bracketed by `#if defined(_DEBUG)/#endif` directives. This causes memory diagnostics to be included only in debugging builds of your program.
+> Declarations of objects of type `CMemoryState` and calls to member functions should be bracketed by `#if defined(_DEBUG)/#endif` directives. This causes memory diagnostics to be included only in debugging builds of your program.
 
 ## Inheritance Hierarchy
 
@@ -65,11 +66,11 @@ For more information about how to use `CMemoryState` and other diagnostics, see 
 
 **Header:** afx.h
 
-##  <a name="checkpoint"></a>  CMemoryState::Checkpoint
+## <a name="checkpoint"></a> CMemoryState::Checkpoint
 
 Takes a snapshot summary of memory and stores it in this `CMemoryState` object.
 
-```
+```cpp
 void Checkpoint();
 ```
 
@@ -81,7 +82,7 @@ The `CMemoryState` member functions [Difference](#difference) and [DumpAllObject
 
   See the example for the [CMemoryState](#cmemorystate) constructor.
 
-##  <a name="cmemorystate"></a>  CMemoryState::CMemoryState
+## <a name="cmemorystate"></a> CMemoryState::CMemoryState
 
 Constructs an empty `CMemoryState` object that must be filled in by the [Checkpoint](#checkpoint) or [Difference](#difference) member function.
 
@@ -93,7 +94,7 @@ CMemoryState();
 
 [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]
 
-##  <a name="difference"></a>  CMemoryState::Difference
+## <a name="difference"></a> CMemoryState::Difference
 
 Compares two `CMemoryState` objects, then stores the difference into this `CMemoryState` object.
 
@@ -123,11 +124,11 @@ Nonzero if the two memory states are different; otherwise 0.
 
   See the example for the [CMemoryState](#cmemorystate) constructor.
 
-##  <a name="dumpallobjectssince"></a>  CMemoryState::DumpAllObjectsSince
+## <a name="dumpallobjectssince"></a> CMemoryState::DumpAllObjectsSince
 
 Calls the `Dump` function for all objects of a type derived from class `CObject` that were allocated (and are still allocated) since the last [Checkpoint](#checkpoint) call for this `CMemoryState` object.
 
-```
+```cpp
 void DumpAllObjectsSince() const;
 ```
 
@@ -139,11 +140,11 @@ Calling `DumpAllObjectsSince` with an uninitialized `CMemoryState` object will d
 
   See the example for the [CMemoryState](#cmemorystate) constructor.
 
-##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics
+## <a name="dumpstatistics"></a> CMemoryState::DumpStatistics
 
 Prints a concise memory statistics report from a `CMemoryState` object that is filled by the [Difference](#difference) member function.
 
-```
+```cpp
 void DumpStatistics() const;
 ```
 
@@ -185,7 +186,6 @@ Add a handler for the `ExitInstance` function and use the following code:
 
 You can now run the program in Debug mode to see the output of the `DumpStatistics` function.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

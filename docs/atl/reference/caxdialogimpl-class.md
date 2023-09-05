@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAxDialogImpl Class"
 title: "CAxDialogImpl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAxDialogImpl", "ATLWIN/ATL::CAxDialogImpl", "ATLWIN/ATL::CAxDialogImpl::AdviseSinkMap", "ATLWIN/ATL::CAxDialogImpl::Create", "ATLWIN/ATL::CAxDialogImpl::DestroyWindow", "ATLWIN/ATL::CAxDialogImpl::DoModal", "ATLWIN/ATL::CAxDialogImpl::EndDialog", "ATLWIN/ATL::CAxDialogImpl::GetDialogProc", "ATLWIN/ATL::CAxDialogImpl::GetIDD", "ATLWIN/ATL::CAxDialogImpl::IsDialogMessage", "ATLWIN/ATL::CAxDialogImpl::m_bModal"]
@@ -10,7 +11,7 @@ ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
 This class implements a dialog box (modal or modeless) that hosts ActiveX controls.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -64,7 +65,7 @@ See [Implementing a Dialog Box](../../atl/implementing-a-dialog-box.md) for more
 
 Note that an ActiveX control on a modal dialog box created with `CAxDialogImpl` will not support accelerator keys. To support accelerator keys on a dialog box created with `CAxDialogImpl`, create a modeless dialog box and, using your own message loop, use [CAxDialogImpl::IsDialogMessage](#isdialogmessage) after getting a message from the queue to handle an accelerator key.
 
-For more information on `CAxDialogImpl`, see [ATL Control Containment FAQ](../../atl/atl-control-containment-faq.md).
+For more information on `CAxDialogImpl`, see [ATL Control Containment FAQ](../../atl/atl-control-containment-faq.yml).
 
 ## Inheritance Hierarchy
 
@@ -82,7 +83,7 @@ For more information on `CAxDialogImpl`, see [ATL Control Containment FAQ](../..
 
 **Header:** atlwin.h
 
-##  <a name="advisesinkmap"></a>  CAxDialogImpl::AdviseSinkMap
+## <a name="advisesinkmap"></a> CAxDialogImpl::AdviseSinkMap
 
 Call this method to advise or unadvise all entries in the object's sink map event map.
 
@@ -99,7 +100,7 @@ Set to true if all sink entries are to be advised; false if all sink entries are
 
 Returns S_OK on success, or an error HRESULT on failure.
 
-##  <a name="create"></a>  CAxDialogImpl::Create
+## <a name="create"></a> CAxDialogImpl::Create
 
 Call this method to create a modeless dialog box.
 
@@ -129,7 +130,7 @@ This dialog box is automatically attached to the `CAxDialogImpl` object. To crea
 
 The second override is provided only so dialog boxes can be used with [CComControl](../../atl/reference/ccomcontrol-class.md).
 
-##  <a name="destroywindow"></a>  CAxDialogImpl::DestroyWindow
+## <a name="destroywindow"></a> CAxDialogImpl::DestroyWindow
 
 Call this method to destroy a modeless dialog box.
 
@@ -145,7 +146,7 @@ TRUE if the window is successfully destroyed; otherwise FALSE.
 
 Do not call `DestroyWindow` to destroy a modal dialog box. Call [EndDialog](#enddialog) instead.
 
-##  <a name="domodal"></a>  CAxDialogImpl::DoModal
+## <a name="domodal"></a> CAxDialogImpl::DoModal
 
 Call this method to create a modal dialog box.
 
@@ -158,7 +159,7 @@ INT_PTR DoModal(
 ### Parameters
 
 *hWndParent*<br/>
-[in] The handle to the owner window. The default value is the return value of the [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) Win32 function.
+[in] The handle to the owner window. The default value is the return value of the [GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) Win32 function.
 
 *dwInitParam*<br/>
 [in] Specifies the value to pass to the dialog box in the *lParam* parameter of the WM_INITDIALOG message.
@@ -173,7 +174,7 @@ This dialog box is automatically attached to the `CAxDialogImpl` object.
 
 To create a modeless dialog box, call [Create](#create).
 
-##  <a name="enddialog"></a>  CAxDialogImpl::EndDialog
+## <a name="enddialog"></a> CAxDialogImpl::EndDialog
 
 Call this method to destroy a modal dialog box.
 
@@ -195,9 +196,9 @@ TRUE if the dialog box is destroyed; otherwise, FALSE.
 `EndDialog` must be called through the dialog box procedure. After the dialog box is destroyed, Windows uses the value of *nRetCode* as the return value for `DoModal`, which created the dialog box.
 
 > [!NOTE]
->  Do not call `EndDialog` to destroy a modeless dialog box. Call [DestroyWindow](#destroywindow) instead.
+> Do not call `EndDialog` to destroy a modeless dialog box. Call [DestroyWindow](#destroywindow) instead.
 
-##  <a name="getdialogproc"></a>  CAxDialogImpl::GetDialogProc
+## <a name="getdialogproc"></a> CAxDialogImpl::GetDialogProc
 
 Call this method to get a pointer to the `DialogProc` callback function.
 
@@ -213,7 +214,7 @@ Returns a pointer to the `DialogProc` callback function.
 
 The `DialogProc` function is an application-defined callback function.
 
-##  <a name="getidd"></a>  CAxDialogImpl::GetIDD
+## <a name="getidd"></a> CAxDialogImpl::GetIDD
 
 Call this method to get the dialog template resource ID.
 
@@ -225,7 +226,7 @@ int GetIDD();
 
 Returns the dialog template resource ID.
 
-##  <a name="isdialogmessage"></a>  CAxDialogImpl::IsDialogMessage
+## <a name="isdialogmessage"></a> CAxDialogImpl::IsDialogMessage
 
 Call this method to determine whether a message is intended for this dialog box and, if it is, process the message.
 
@@ -236,7 +237,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### Parameters
 
 *pMsg*<br/>
-Pointer to a [MSG](/windows/desktop/api/winuser/ns-winuser-msg) structure that contains the message to be checked.
+Pointer to a [MSG](/windows/win32/api/winuser/ns-winuser-msg) structure that contains the message to be checked.
 
 ### Return Value
 
@@ -246,7 +247,7 @@ Returns TRUE if the message has been processed, FALSE otherwise.
 
 This method is intended to be called from within a message loop.
 
-##  <a name="m_bmodal"></a>  CAxDialogImpl::m_bModal
+## <a name="m_bmodal"></a> CAxDialogImpl::m_bModal
 
 A variable that exists only in debug builds and is set to true if the dialog box is modal.
 
@@ -254,7 +255,7 @@ A variable that exists only in debug builds and is set to true if the dialog box
 bool m_bModal;
 ```
 
-## See Also
+## See also
 
 [CDialogImpl Class](../../atl/reference/cdialogimpl-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

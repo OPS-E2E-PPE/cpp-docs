@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: __halt"
 title: "__halt"
-ms.date: "11/04/2016"
+ms.date: "09/02/2019"
 f1_keywords: ["__halt", "__halt_cpp"]
 helpviewer_keywords: ["__halt intrinsic", "HLT instruction"]
 ms.assetid: a074f44a-101c-45a5-8a5e-cfd223c34002
@@ -13,7 +14,7 @@ Halts the microprocessor until an enabled interrupt, a nonmaskable interrupt (NM
 
 ## Syntax
 
-```
+```C
 void __halt( void );
 ```
 
@@ -31,6 +32,6 @@ The `__halt` function is equivalent to the `HLT` machine instruction, and is ava
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
-[Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)
+[Compiler intrinsics](../intrinsics/compiler-intrinsics.md)

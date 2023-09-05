@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: nonbrowsable"
 title: "nonbrowsable (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.nonbrowsable"]
@@ -17,7 +18,7 @@ Indicates that an interface member should not be displayed in a property browser
 
 ## Remarks
 
-The **nonbrowsable** C++ attribute has the same functionality as the [nonbrowsable](/windows/desktop/Midl/nonbrowsable) MIDL attribute.
+The **nonbrowsable** C++ attribute has the same functionality as the [nonbrowsable](/windows/win32/Midl/nonbrowsable) MIDL attribute.
 
 ## Example
 
@@ -37,9 +38,7 @@ __interface IMyI
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface method|
 |**Repeatable**|No|
@@ -48,7 +47,7 @@ __interface IMyI
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Method Attributes](method-attributes.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3698"
 title: "Compiler Error C3698"
 ms.date: "11/04/2016"
 f1_keywords: ["C3698"]
@@ -13,7 +14,7 @@ A managed object was declared incorrectly.
 
 The following sample generates C3698:
 
-```
+```cpp
 // C3698.cpp
 // compile with: /clr
 

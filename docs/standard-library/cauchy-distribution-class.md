@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: cauchy_distribution Class"
 title: "cauchy_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::cauchy_distribution", "random/std::cauchy_distribution::reset", "random/std::cauchy_distribution::a", "random/std::cauchy_distribution::b", "random/std::cauchy_distribution::param", "random/std::cauchy_distribution::min", "random/std::cauchy_distribution::max", "random/std::cauchy_distribution::operator()", "random/std::cauchy_distribution::param_type", "random/std::cauchy_distribution::param_type::a", "random/std::cauchy_distribution::param_type::b", "random/std::cauchy_distribution::param_type::operator==", "random/std::cauchy_distribution::param_type::operator!="]
@@ -42,20 +43,18 @@ public:
 
 ### Parameters
 
-*RealType*<br/>
-The floating-point result type, defaults to **double**. For possible types, see [\<random>](../standard-library/random.md).
+*RealType*\
+The floating-point result type, defaults to **`double`**. For possible types, see [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
+*URNG*\
 The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes a distribution that produces values of a user-specified floating-point type, or type **double** if none is provided, distributed according to the Cauchy Distribution. The following table links to articles about individual members.
+The class template describes a distribution that produces values of a user-specified floating-point type, or type **`double`** if none is provided, distributed according to the Cauchy Distribution. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[cauchy_distribution](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|
-|`cauchy_distribution::operator()`|`cauchy_distribution::b`|[param_type](#param_type)|
+[cauchy_distribution](#cauchy_distribution)\
+[param_type](#param_type)
 
 The property functions `a()` and `b()` return their respective values for stored distribution parameters `a` and `b`.
 
@@ -69,7 +68,7 @@ The `operator()` member functions return the next generated value based on the U
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the cauchy distribution, see the Wolfram MathWorld article [Cauchy Distribution](http://go.microsoft.com/fwlink/p/?linkid=400523).
+For detailed information about the cauchy distribution, see the Wolfram MathWorld article [Cauchy Distribution](https://go.microsoft.com/fwlink/p/?linkid=400523).
 
 ## Example
 
@@ -212,7 +211,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="cauchy_distribution"></a>  cauchy_distribution::cauchy_distribution
+## <a name="cauchy_distribution"></a> cauchy_distribution::cauchy_distribution
 
 Constructs the distribution.
 
@@ -223,13 +222,13 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### Parameters
 
-*a*<br/>
+*a*\
 The `a` distribution parameter.
 
-*b*<br/>
+*b*\
 The `b` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The `param_type` structure used to construct the distribution.
 
 ### Remarks
@@ -240,7 +239,7 @@ The first constructor constructs an object whose stored `a` value holds the valu
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  cauchy_distribution::param_type
+## <a name="param_type"></a> cauchy_distribution::param_type
 
 Stores all the parameters of the distribution.
 
@@ -258,13 +257,13 @@ struct param_type {
 
 ### Parameters
 
-*a*<br/>
+*a*\
 The `a` distribution parameter.
 
-*b*<br/>
+*b*\
 The `b` distribution parameter.
 
-*right*<br/>
+*right*\
 The `param_type` object to compare to this.
 
 ### Remarks
@@ -275,4 +274,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

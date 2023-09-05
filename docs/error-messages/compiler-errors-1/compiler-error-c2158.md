@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2158"
 title: "Compiler Error C2158"
 ms.date: "11/04/2016"
 f1_keywords: ["C2158"]
@@ -15,7 +16,7 @@ The [make_public](../../preprocessor/make-public.md) pragma can only be applied 
 
 The following sample generates C2158.
 
-```
+```cpp
 // C2158.cpp
 // compile with: /clr /c
 ref class A {};

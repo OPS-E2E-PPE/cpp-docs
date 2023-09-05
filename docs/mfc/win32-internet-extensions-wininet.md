@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Win32 Internet Extensions (WinInet)"
 title: "Win32 Internet Extensions (WinInet)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["Internet applications [MFC], Win32 Internet Extensions", "Internet client applications [MFC], about Internet client applications", "client applications [MFC], Win32 Internet", "WinInet classes [MFC], about WinInet classes"]
@@ -36,8 +37,7 @@ The following topics provide steps for performing typical WinInet tasks:
 
 - [Steps in a Typical HTTP Client Application](../mfc/steps-in-a-typical-http-client-application.md)
 
-## See Also
+## See also
 
 [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)<br/>
 [WinInet Basics](../mfc/wininet-basics.md)
-

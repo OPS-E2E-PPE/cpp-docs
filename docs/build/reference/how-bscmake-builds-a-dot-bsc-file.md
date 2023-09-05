@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How BSCMAKE Builds a .Bsc File"
 title: "How BSCMAKE Builds a .Bsc File"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["browse information files (.bsc), building"]
@@ -16,6 +17,6 @@ BSCMAKE looks for a .bsc file that has the name specified with the /o option. If
 
 - For an incremental build to succeed, the .bsc file must exist. All contributing .sbr files, even empty files, must exist and must be specified on the BSCMAKE command line. If you omit an .sbr file from the command line, BSCMAKE removes its contribution from the file.
 
-## See Also
+## See also
 
-[Building a .Bsc File](../../build/reference/building-a-dot-bsc-file.md)
+[Building a .Bsc File](building-a-dot-bsc-file.md)

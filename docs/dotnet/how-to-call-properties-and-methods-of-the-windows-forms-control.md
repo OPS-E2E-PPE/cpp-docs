@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Call Properties and Methods of the Windows Forms Control"
 title: "How to: Call Properties and Methods of the Windows Forms Control"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -37,6 +38,6 @@ This topic assumes you have previously completed [How to: Create the User Contro
 
    Notice that the text box is now initialized.
 
-## See Also
+## See also
 
 [Hosting a Windows Forms User Control as an MFC View](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CHeapPtr Class"
 title: "CHeapPtr Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CHeapPtr", "ATLCORE/ATL::CHeapPtr", "ATLCORE/ATL::CHeapPtr::CHeapPtr", "ATLCORE/ATL::CHeapPtr::Allocate", "ATLCORE/ATL::CHeapPtr::Reallocate"]
@@ -10,7 +11,7 @@ ms.assetid: e5c5bfd4-9bf1-4164-8a83-8155fe253454
 A smart pointer class for managing heap pointers.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -62,7 +63,7 @@ The memory allocation class to use.
 
 **Header:** atlcore.h
 
-##  <a name="allocate"></a>  CHeapPtr::Allocate
+## <a name="allocate"></a> CHeapPtr::Allocate
 
 Call this method to allocate memory on the heap to store objects.
 
@@ -87,7 +88,7 @@ The allocator routines are used to reserve enough memory on the heap to store *n
 
 [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]
 
-##  <a name="cheapptr"></a>  CHeapPtr::CHeapPtr
+## <a name="cheapptr"></a> CHeapPtr::CHeapPtr
 
 The constructor.
 
@@ -110,7 +111,7 @@ The heap pointer can optionally be created using an existing pointer, or a `CHea
 
 [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]
 
-##  <a name="operator_eq"></a>  CHeapPtr::operator =
+## <a name="operator_eq"></a> CHeapPtr::operator =
 
 Assignment operator.
 
@@ -132,7 +133,7 @@ Returns a reference to the updated `CHeapPtr`.
 
 [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]
 
-##  <a name="reallocate"></a>  CHeapPtr::Reallocate
+## <a name="reallocate"></a> CHeapPtr::Reallocate
 
 Call this method to reallocate the memory on the heap.
 
@@ -153,7 +154,7 @@ Returns true if the memory was successfully allocated, false on failure.
 
 [!code-cpp[NVC_ATL_Utilities#79](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]
 
-## See Also
+## See also
 
 [CHeapPtrBase Class](../../atl/reference/cheapptrbase-class.md)<br/>
 [CCRTAllocator Class](../../atl/reference/ccrtallocator-class.md)<br/>

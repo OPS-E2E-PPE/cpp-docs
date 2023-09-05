@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3239"
 title: "Compiler Error C3239"
 ms.date: "11/04/2016"
 f1_keywords: ["C3239"]
@@ -13,7 +14,7 @@ The compiler encountered an invalid type.
 
 The following sample generates C3229:
 
-```
+```cpp
 // C3239.cpp
 // compile with: /clr
 int main() {

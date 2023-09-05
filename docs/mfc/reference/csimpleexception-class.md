@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CSimpleException Class"
 title: "CSimpleException Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CSimpleException", "AFX/CSimpleException", "AFX/CSimpleException::CSimpleException", "AFX/CSimpleException::GetErrorMessage"]
@@ -33,7 +34,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 
 `CSimpleException` is the base class for resource-critical MFC exceptions and handles the ownership and initialization of an error message. The following classes use `CSimpleException` as their base class:
 
-|||
+|Name|Description|
 |-|-|
 |[CMemoryException Class](../../mfc/reference/cmemoryexception-class.md)|Out-of-memory exception|
 |[CNotSupportedException Class](../../mfc/reference/cnotsupportedexception-class.md)|Requests for an unsupported operation|
@@ -57,7 +58,7 @@ For more information, see the [CException Class](../../mfc/reference/cexception-
 
 **Header:** afx.h
 
-##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException
+## <a name="csimpleexception"></a> CSimpleException::CSimpleException
 
 The constructor.
 
@@ -75,7 +76,7 @@ Specify TRUE if the memory for the `CSimpleException` object has been allocated 
 
 You would normally never need to call this constructor directly. A function that throws an exception should create an instance of a `CException`-derived class and call its constructor, or it should use one of the MFC throw functions, such as [AfxThrowFileException](exception-processing.md#afxthrowfileexception), to throw a predefined type.
 
-##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage
+## <a name="geterrormessage"></a> CSimpleException::GetErrorMessage
 
 Call this member function to provide text about an error that has occurred.
 
@@ -105,9 +106,8 @@ Nonzero if the function is successful; otherwise 0 if no error message text is a
 
 For more information, see [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CException Class](../../mfc/reference/cexception-class.md)<br/>
 [Exception Handling](../../mfc/exception-handling-in-mfc.md)
-

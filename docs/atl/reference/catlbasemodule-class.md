@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAtlBaseModule Class"
 title: "CAtlBaseModule Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAtlBaseModule", "ATLCORE/ATL::CAtlBaseModule", "ATLCORE/ATL::CAtlBaseModule::CAtlBaseModule", "ATLCORE/ATL::CAtlBaseModule::AddResourceInstance", "ATLCORE/ATL::CAtlBaseModule::GetHInstanceAt", "ATLCORE/ATL::CAtlBaseModule::GetModuleInstance", "ATLCORE/ATL::CAtlBaseModule::GetResourceInstance", "ATLCORE/ATL::CAtlBaseModule::RemoveResourceInstance", "ATLCORE/ATL::CAtlBaseModule::SetResourceInstance", "ATLCORE/ATL::CAtlBaseModule::m_bInitFailed"]
@@ -11,7 +12,7 @@ This class is instantiated in every ATL project.
 
 ## Syntax
 
-```
+```cpp
 class CAtlBaseModule : public _ATL_BASE_MODULE
 ```
 
@@ -56,11 +57,11 @@ This class replaces the obsolete [CComModule](../../atl/reference/ccommodule-cla
 
 **Header:** atlcore.h
 
-##  <a name="addresourceinstance"></a>  CAtlBaseModule::AddResourceInstance
+## <a name="addresourceinstance"></a> CAtlBaseModule::AddResourceInstance
 
 Adds a resource instance to the list of stored handles.
 
-```
+```cpp
 bool AddResourceInstance(HINSTANCE hInst) throw();
 ```
 
@@ -73,11 +74,11 @@ The resource instance to add.
 
 Returns true if the resource was successfully added, false otherwise.
 
-##  <a name="catlbasemodule"></a>  CAtlBaseModule::CAtlBaseModule
+## <a name="catlbasemodule"></a> CAtlBaseModule::CAtlBaseModule
 
 The constructor.
 
-```
+```cpp
 CAtlBaseModule() throw();
 ```
 
@@ -85,11 +86,11 @@ CAtlBaseModule() throw();
 
 Creates the `CAtlBaseModule`.
 
-##  <a name="gethinstanceat"></a>  CAtlBaseModule::GetHInstanceAt
+## <a name="gethinstanceat"></a> CAtlBaseModule::GetHInstanceAt
 
 Returns a handle to a specified resource instance.
 
-```
+```cpp
 HINSTANCE GetHInstanceAt(int i) throw();
 ```
 
@@ -102,11 +103,11 @@ The number of the resource instance.
 
 Returns the handle to the resource instance, or NULL if no corresponding resource instance exists.
 
-##  <a name="getmoduleinstance"></a>  CAtlBaseModule::GetModuleInstance
+## <a name="getmoduleinstance"></a> CAtlBaseModule::GetModuleInstance
 
 Returns the module instance from a `CAtlBaseModule` object.
 
-```
+```cpp
 HINSTANCE GetModuleInstance() throw();
 ```
 
@@ -114,11 +115,11 @@ HINSTANCE GetModuleInstance() throw();
 
 Returns the module instance.
 
-##  <a name="getresourceinstance"></a>  CAtlBaseModule::GetResourceInstance
+## <a name="getresourceinstance"></a> CAtlBaseModule::GetResourceInstance
 
 Returns the resource instance.
 
-```
+```cpp
 HINSTANCE GetResourceInstance() throw();
 ```
 
@@ -126,11 +127,11 @@ HINSTANCE GetResourceInstance() throw();
 
 Returns the resource instance.
 
-##  <a name="m_binitfailed"></a>  CAtlBaseModule::m_bInitFailed
+## <a name="m_binitfailed"></a> CAtlBaseModule::m_bInitFailed
 
 A variable that indicates if the module initialization has failed.
 
-```
+```cpp
 static bool m_bInitFailed;
 ```
 
@@ -138,11 +139,11 @@ static bool m_bInitFailed;
 
 True if the module initialized, false if it failed to initialize.
 
-##  <a name="removeresourceinstance"></a>  CAtlBaseModule::RemoveResourceInstance
+## <a name="removeresourceinstance"></a> CAtlBaseModule::RemoveResourceInstance
 
 Removes a resource instance from the list of stored handles.
 
-```
+```cpp
 bool RemoveResourceInstance(HINSTANCE hInst) throw();
 ```
 
@@ -155,11 +156,11 @@ The resource instance to remove.
 
 Returns true if the resource was successfully removed, false otherwise.
 
-##  <a name="setresourceinstance"></a>  CAtlBaseModule::SetResourceInstance
+## <a name="setresourceinstance"></a> CAtlBaseModule::SetResourceInstance
 
 Sets the resource instance of a `CAtlBaseModule` object.
 
-```
+```cpp
 HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 ```
 
@@ -172,7 +173,7 @@ The new resource instance.
 
 Returns the updated resource instance.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)<br/>
 [Module Classes](../../atl/atl-module-classes.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: _SCL_SECURE_NO_WARNINGS"
 title: "_SCL_SECURE_NO_WARNINGS"
 ms.date: "11/04/2016"
 f1_keywords: ["_SCL_SECURE_NO_DEPRECATE", "_SCL_SECURE_NO_WARNINGS"]
@@ -41,4 +42,4 @@ For more information, see [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wal
 
 ## See also
 
-[Safe Libraries: C++ Standard Library](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[Safe Libraries: C++ Standard Library](../standard-library/safe-libraries-cpp-standard-library.md)

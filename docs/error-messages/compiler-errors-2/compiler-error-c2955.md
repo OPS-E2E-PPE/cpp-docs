@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2955"
 title: "Compiler Error C2955"
 ms.date: "03/28/2017"
 f1_keywords: ["C2955"]
@@ -15,7 +16,7 @@ For more information, see [Class Templates](../../cpp/class-templates.md).
 
 The following sample generates C2955 and shows how to fix it:
 
-```
+```cpp
 // C2955.cpp
 // compile with: /c
 template<class T>
@@ -27,7 +28,7 @@ X<int> x2;   // OK - this is how to fix it.
 
 C2955 can also occur when attempting an out-of-line definition for a function declared in a class template:
 
-```
+```cpp
 // C2955_b.cpp
 // compile with: /c
 template <class T>
@@ -46,7 +47,7 @@ void CT<T>::CTFunc2() {}
 
 C2955 can also occur when using generics:
 
-```
+```cpp
 // C2955_c.cpp
 // compile with: /clr
 generic <class T>

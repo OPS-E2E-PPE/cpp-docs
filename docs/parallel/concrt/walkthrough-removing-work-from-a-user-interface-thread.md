@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Walkthrough: Removing Work from a User-Interface Thread"
 title: "Walkthrough: Removing Work from a User-Interface Thread"
-ms.date: "11/19/2018"
+ms.date: "08/19/2019"
 helpviewer_keywords: ["user-interface threads, removing work from [Concurrency Runtime]", "removing work from user-interface threads [Concurrency Runtime]"]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
 ---
@@ -24,9 +25,9 @@ Read the following topics before you start this walkthrough:
 
 - [Cancellation in the PPL](cancellation-in-the-ppl.md)
 
-We also recommend that you understand the basics of MFC application development and GDI+ before you start this walkthrough. For more information about MFC, see [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md). For more information about GDI+, see [GDI+](https://msdn.microsoft.com/library/windows/desktop/ms533798).
+We also recommend that you understand the basics of MFC application development and GDI+ before you start this walkthrough. For more information about MFC, see [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md). For more information about GDI+, see [GDI+](/windows/win32/gdiplus/-gdiplus-gdi-start).
 
-##  <a name="top"></a> Sections
+## <a name="top"></a> Sections
 
 This walkthrough contains the following sections:
 
@@ -40,15 +41,15 @@ This walkthrough contains the following sections:
 
 - [Adding Support for Cancellation](#cancellation)
 
-##  <a name="application"></a> Creating the MFC Application
+## <a name="application"></a> Creating the MFC Application
 
 This section describes how to create the basic MFC application.
 
 ### To create a Visual C++ MFC application
 
-1. On the **File** menu, click **New**, and then click **Project**.
+1. Use the **MFC Application Wizard** to create an MFC application with all the default settings. See [Walkthrough: Using the New MFC Shell Controls](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) for instructions on how to open the wizard for your version of Visual Studio.
 
-1. In the **New Project** dialog box, in the **Installed Templates** pane, select **Visual C++**, and then, in the **Templates** pane, select **MFC Application**. Type a name for the project, for example, `Mandelbrot`, and then click **OK** to display the **MFC Application Wizard**.
+1. Type a name for the project, for example, `Mandelbrot`, and then click **OK** to display the **MFC Application Wizard**.
 
 1. In the **Application Type** pane, select **Single document**. Ensure that the **Document/View architecture support** check box is cleared.
 
@@ -56,13 +57,13 @@ This section describes how to create the basic MFC application.
 
    Verify that the application was created successfully by building and running it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run the application by clicking **Start Debugging** on the **Debug** menu.
 
-##  <a name="serial"></a> Implementing the Serial Version of the Mandelbrot Application
+## <a name="serial"></a> Implementing the Serial Version of the Mandelbrot Application
 
-This section describes how to draw the Mandelbrot fractal. This version draws the Mandelbrot fractal to a GDI+ [Bitmap](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap) object and then copies the contents of that bitmap to the client window.
+This section describes how to draw the Mandelbrot fractal. This version draws the Mandelbrot fractal to a GDI+ [Bitmap](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) object and then copies the contents of that bitmap to the client window.
 
 #### To implement the serial version of the Mandelbrot application
 
-1. In stdafx.h, add the following `#include` directive:
+1. In *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier), add the following `#include` directive:
 
    [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
 
@@ -70,7 +71,7 @@ This section describes how to draw the Mandelbrot fractal. This version draws th
 
    [!code-cpp[concrt-mandelbrot#2](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_2.h)]
 
-1. In ChildView.h, add the following code to the `protected` section of the `CChildView` class:
+1. In ChildView.h, add the following code to the **`protected`** section of the `CChildView` class:
 
    [!code-cpp[concrt-mandelbrot#3](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_3.h)]
 
@@ -80,7 +81,7 @@ This section describes how to draw the Mandelbrot fractal. This version draws th
 
    In Debug builds, this step prevents the application from using the `DEBUG_NEW` allocator, which is incompatible with GDI+.
 
-1. In ChildView.cpp, add a `using` directive to the `Gdiplus` namespace.
+1. In ChildView.cpp, add a **`using`** directive to the `Gdiplus` namespace.
 
    [!code-cpp[concrt-mandelbrot#5](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_5.cpp)]
 
@@ -100,13 +101,13 @@ This section describes how to draw the Mandelbrot fractal. This version draws th
 
 The following illustration shows the results of the Mandelbrot application.
 
-![The Mandelbrot Application](../../parallel/concrt/media/mandelbrot.png "The Mandelbrot Application")
+![The Mandelbrot Application.](../../parallel/concrt/media/mandelbrot.png "The Mandelbrot Application")
 
 Because the computation for each pixel is computationally expensive, the UI thread cannot process additional messages until the overall computation finishes. This could decrease responsiveness in the application. However, you can relieve this problem by removing work from the UI thread.
 
 [[Top](#top)]
 
-##  <a name="removing-work"></a> Removing Work from the UI Thread
+## <a name="removing-work"></a> Removing Work from the UI Thread
 
 This section shows how to remove the drawing work from the UI thread in the Mandelbrot application. By moving drawing work from the UI thread to a worker thread, the UI thread can process messages as the worker thread generates the image in the background.
 
@@ -116,15 +117,15 @@ This example also uses a [concurrency::unbounded_buffer](reference/unbounded-buf
 
 #### To remove the drawing work from the UI thread
 
-1. In stdafx.h, add the following `#include` directives:
+1. In *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier), add the following `#include` directives:
 
    [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
 
-1. In ChildView.h, add `task_group` and `unbounded_buffer` member variables to the `protected` section of the `CChildView` class. The `task_group` object holds the tasks that perform drawing; the `unbounded_buffer` object holds the completed Mandelbrot image.
+1. In ChildView.h, add `task_group` and `unbounded_buffer` member variables to the **`protected`** section of the `CChildView` class. The `task_group` object holds the tasks that perform drawing; the `unbounded_buffer` object holds the completed Mandelbrot image.
 
    [!code-cpp[concrt-mandelbrot#102](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_10.h)]
 
-1. In ChildView.cpp, add a `using` directive to the `concurrency` namespace.
+1. In ChildView.cpp, add a **`using`** directive to the `concurrency` namespace.
 
    [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]
 
@@ -144,9 +145,9 @@ The UI is now more responsive because the drawing work is performed in the backg
 
 [[Top](#top)]
 
-##  <a name="performance"></a> Improving Drawing Performance
+## <a name="performance"></a> Improving Drawing Performance
 
-The generation of the Mandelbrot fractal is a good candidate for parallelization because the computation of each pixel is independent of all other computations. To parallelize the drawing procedure, convert the outer `for` loop in the `CChildView::DrawMandelbrot` method to a call to the [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithm, as follows.
+The generation of the Mandelbrot fractal is a good candidate for parallelization because the computation of each pixel is independent of all other computations. To parallelize the drawing procedure, convert the outer **`for`** loop in the `CChildView::DrawMandelbrot` method to a call to the [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithm, as follows.
 
 [!code-cpp[concrt-mandelbrot#301](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_14.cpp)]
 
@@ -154,7 +155,7 @@ Because the computation of each bitmap element is independent, you do not have t
 
 [[Top](#top)]
 
-##  <a name="cancellation"></a> Adding Support for Cancellation
+## <a name="cancellation"></a> Adding Support for Cancellation
 
 This section describes how to handle window resizing and how to cancel any active drawing tasks when the window is destroyed.
 
@@ -174,7 +175,7 @@ The `CChildView::DrawMandelbrot` method, which performs the drawing task, must r
 
 ##### To add support for cancellation in the Mandelbrot application
 
-1. In ChildView.h, in the `protected` section of the `CChildView` class, add declarations for the `OnSize`, `OnSizing`, and `OnDestroy` message map functions.
+1. In ChildView.h, in the **`protected`** section of the `CChildView` class, add declarations for the `OnSize`, `OnSizing`, and `OnDestroy` message map functions.
 
    [!code-cpp[concrt-mandelbrot#201](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_15.h)]
 
@@ -208,13 +209,13 @@ The `CChildView::DrawMandelbrot` method, which performs the drawing task, must r
 
    [!code-cpp[concrt-mandelbrot#208](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_22.cpp)]
 
-9. Verify that the application was updated successfully by building and running it.
+1. Verify that the application was updated successfully by building and running it.
 
 When you resize the window, drawing work is performed only for the final window size. Any active drawing tasks are also canceled when the window is destroyed.
 
 [[Top](#top)]
 
-## See Also
+## See also
 
 [Concurrency Runtime Walkthroughs](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Task Parallelism](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>

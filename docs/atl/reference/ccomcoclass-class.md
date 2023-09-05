@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComCoClass Class"
 title: "CComCoClass Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComCoClass", "ATLCOM/ATL::CComCoClass", "ATLCOM/ATL::CComCoClass::CreateInstance", "ATLCOM/ATL::CComCoClass::Error", "ATLCOM/ATL::CComCoClass::GetObjectCLSID", "ATLCOM/ATL::CComCoClass::GetObjectDescription"]
@@ -53,7 +54,7 @@ You can override either of these defaults by specifying another macro in your cl
 
 **Header:** atlcom.h
 
-##  <a name="createinstance"></a>  CComCoClass::CreateInstance
+## <a name="createinstance"></a> CComCoClass::CreateInstance
 
 Use these `CreateInstance` functions to create an instance of a COM object and retrieve an interface pointer without using the COM API.
 
@@ -78,7 +79,7 @@ The COM interface that should be returned via *pp*.
 
 ### Return Value
 
-A standard HRESULT value. See [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) in the Windows SDK for a description of possible return values.
+A standard HRESULT value. See [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) in the Windows SDK for a description of possible return values.
 
 ### Remarks
 
@@ -92,11 +93,11 @@ Note that the interface *Q* must have an IID associated with it that can be retr
 
 ### Example
 
-In the following example, `CDocument` is a wizard-generated ATL class derived from `CComCoClass` that implements the `IDocument` interface. The class is registered in the object map with the OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO macro so clients can't create instances of the document using [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication` is a CoClass that provides a method on one of its own COM interfaces to create instances of the document class. The code below shows how easy it to create instances of the document class using the `CreateInstance` member inherited from the `CComCoClass` base class.
+In the following example, `CDocument` is a wizard-generated ATL class derived from `CComCoClass` that implements the `IDocument` interface. The class is registered in the object map with the OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO macro so clients can't create instances of the document using [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication` is a CoClass that provides a method on one of its own COM interfaces to create instances of the document class. The code below shows how easy it to create instances of the document class using the `CreateInstance` member inherited from the `CComCoClass` base class.
 
 [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]
 
-##  <a name="error"></a>  CComCoClass::Error
+## <a name="error"></a> CComCoClass::Error
 
 This static function sets up the `IErrorInfo` interface to provide error information to the client.
 
@@ -173,7 +174,7 @@ To call `Error`, your object must implement the `ISupportErrorInfo Interface` in
 
 If the *hRes* parameter is nonzero, then `Error` returns the value of *hRes*. If *hRes* is zero, then the first four versions of `Error` return DISP_E_EXCEPTION. The last two versions return the result of the macro **MAKE_HRESULT( 1, FACILITY_ITF,** *nID* **)**.
 
-##  <a name="getobjectclsid"></a>  CComCoClass::GetObjectCLSID
+## <a name="getobjectclsid"></a> CComCoClass::GetObjectCLSID
 
 Provides a consistent way of retrieving the object's CLSID.
 
@@ -185,7 +186,7 @@ static const CLSID& WINAPI GetObjectCLSID();
 
 The object's class identifier.
 
-##  <a name="getobjectdescription"></a>  CComCoClass::GetObjectDescription
+## <a name="getobjectdescription"></a> CComCoClass::GetObjectDescription
 
 This static function retrieves the text description for your class object.
 
@@ -207,6 +208,6 @@ The default implementation returns NULL. You can override this method with the [
 
 For more information about the ATL Project Wizard, see the article [Creating an ATL Project](../../atl/reference/creating-an-atl-project.md).
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

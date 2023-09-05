@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComEnum Class"
 title: "CComEnum Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComEnum", "atlcom/ATL::CComEnum"]
@@ -23,7 +24,7 @@ public CComObjectRootEx<ThreadModel>
 #### Parameters
 
 *Base*<br/>
-A COM enumerator interface. See [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) for an example.
+A COM enumerator interface. See [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) for an example.
 
 *piid*<br/>
 A pointer to the interface ID of the enumerator interface.
@@ -43,9 +44,9 @@ The threading model of the class. This parameter defaults to the global object t
 
 ## To use this class:
 
-- **typedef** a specialization of this class.
+- **`typedef`** a specialization of this class.
 
-- Use the **typedef** as the template argument in a specialization of `CComObject`.
+- Use the **`typedef`** as the template argument in a specialization of `CComObject`.
 
 - Create an instance of the `CComObject` specialization.
 
@@ -75,13 +76,13 @@ The code shown below provides a reusable function for creating and initializing 
 
 [!code-cpp[NVC_ATL_COM#32](../../atl/codesnippet/cpp/ccomenum-class_1.h)]
 
-This template function can be used to implement the `_NewEnum` property of a collection interface as shown below:
+This function template can be used to implement the `_NewEnum` property of a collection interface as shown below:
 
 [!code-cpp[NVC_ATL_COM#33](../../atl/codesnippet/cpp/ccomenum-class_2.h)]
 
-This code creates a **typedef** for `CComEnum` that exposes a vector of VARIANTs through the `IEnumVariant` interface. The `CVariantArrayCollection` class simply specializes `CreateEnumerator` to work with enumerator objects of this type and passes the necessary arguments.
+This code creates a **`typedef`** for `CComEnum` that exposes a vector of VARIANTs through the `IEnumVariant` interface. The `CVariantArrayCollection` class simply specializes `CreateEnumerator` to work with enumerator objects of this type and passes the necessary arguments.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)<br/>
 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>

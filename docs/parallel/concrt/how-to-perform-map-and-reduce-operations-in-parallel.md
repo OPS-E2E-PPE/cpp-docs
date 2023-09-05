@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Perform Map and Reduce Operations in Parallel"
 title: "How to: Perform Map and Reduce Operations in Parallel"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["parallel_transform function, example", "parallel map and reduce, example", "parallel_reduce function, example"]
@@ -20,7 +21,7 @@ The following example counts the occurrences of words in files. It uses [std::ve
 
 To compile the code, copy it and then paste it in a Visual Studio project, or paste it in a file that is named `parallel-map-reduce.cpp` and then run the following command in a Visual Studio Command Prompt window.
 
-**cl.exe /EHsc parallel-map-reduce.cpp**
+> **cl.exe /EHsc parallel-map-reduce.cpp**
 
 ## Robust Programming
 
@@ -30,7 +31,7 @@ In this example, you can use the `concurrent_unordered_map` class—which is def
 
 Typically, you parallelize only the outer or the inner loop. Parallelize the inner loop if you have relatively few files and each file contains many words. Parallelize the outer loop if you have relatively many files and each file contains few words.
 
-## See Also
+## See also
 
 [Parallel Algorithms](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_transform Function](reference/concurrency-namespace-functions.md#parallel_transform)<br/>

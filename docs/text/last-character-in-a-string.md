@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Last Character in a String"
 title: "Last Character in a String"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["last character in string", "MBCS [C++], last character in string"]
@@ -30,7 +31,7 @@ Use the following tips:
 
    This code uses the MBCS functions `_mbsrchr` and `_mbsinc`. Because these functions are MBCS-aware, they can distinguish between a '\\' character and a trail byte '\\'. The code performs some action if the last character in the string is a null ('\0').
 
-## See Also
+## See also
 
 [MBCS Programming Tips](../text/mbcs-programming-tips.md)<br/>
 [Character Assignment](../text/character-assignment.md)

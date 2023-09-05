@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2313"
 title: "Compiler Error C2313"
 ms.date: "11/04/2016"
 f1_keywords: ["C2313"]
@@ -13,7 +14,7 @@ The exception type has two handlers. The type for the second catch is a referenc
 
 The following sample generates C2313:
 
-```
+```cpp
 // C2313.cpp
 // compile with: /EHsc
 #include <eh.h>

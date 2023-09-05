@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4905"
 title: "Compiler Warning (level 1) C4905"
 ms.date: "11/04/2016"
 f1_keywords: ["C4905"]
@@ -17,7 +18,7 @@ This warning is off by default. See [Compiler Warnings That Are Off by Default](
 
 The following sample generates C4905.
 
-```
+```cpp
 // C4905.cpp
 // compile with: /W1
 #pragma warning(default : 4905)

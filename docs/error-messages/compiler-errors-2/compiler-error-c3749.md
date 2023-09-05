@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3749"
 title: "Compiler Error C3749"
 ms.date: "11/04/2016"
 f1_keywords: ["C3749"]
@@ -15,7 +16,7 @@ A custom attribute cannot be used inside a function. For more information on cus
 
 The following sample generates C3749:
 
-```
+```cpp
 // C3749a.cpp
 // compile with: /clr /c
 using namespace System;

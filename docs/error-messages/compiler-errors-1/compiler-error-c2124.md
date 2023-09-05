@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2124"
 title: "Compiler Error C2124"
 ms.date: "11/04/2016"
 f1_keywords: ["C2124"]
@@ -13,7 +14,7 @@ A constant expression has a zero denominator. To resolve the error, do not divid
 
 The following sample generates C2124:
 
-```
+```cpp
 // C2124.cpp
 int main() {
   int i = 1 / 0;   // C2124  do not divide by zero

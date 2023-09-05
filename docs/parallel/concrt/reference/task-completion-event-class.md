@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: task_completion_event Class"
 title: "task_completion_event Class"
 ms.date: "11/04/2016"
 f1_keywords: ["task_completion_event", "PPLTASKS/concurrency::task_completion_event", "PPLTASKS/concurrency::task_completion_event::task_completion_event", "PPLTASKS/concurrency::task_completion_event::set", "PPLTASKS/concurrency::task_completion_event::set_exception"]
@@ -11,7 +12,7 @@ The `task_completion_event` class allows you to delay the execution of a task un
 
 ## Syntax
 
-```
+```cpp
 template<typename _ResultType>
 class task_completion_event;
 
@@ -19,7 +20,7 @@ template<>
 class task_completion_event<void>;
 ```
 
-#### Parameters
+### Parameters
 
 *_ResultType*<br/>
 The result type of this `task_completion_event` class.
@@ -57,11 +58,11 @@ If the task completion event is never signaled, any tasks created from it will b
 
 **Namespace:** concurrency
 
-##  <a name="set"></a> set
+## <a name="set"></a> set
 
 Sets the task completion event.
 
-```
+```cpp
 bool set(_ResultType _Result) const ;
 
 bool set() const ;
@@ -74,17 +75,17 @@ The result to set this event with.
 
 ### Return Value
 
-The method returns **true** if it was successful in setting the event. It returns **false** if the event is already set.
+The method returns **`true`** if it was successful in setting the event. It returns **`false`** if the event is already set.
 
 ### Remarks
 
-In the presence of multiple or concurrent calls to `set`, only the first call will succeed and its result (if any) will be stored in the task completion event. The remaining sets are ignored and the method will return false. When you set a task completion event, all the tasks created from that event will immediately complete, and its continuations, if any, will be scheduled. Task completion objects that have a `_ResultType` other than **void** will pass the value to their continuations.
+In the presence of multiple or concurrent calls to `set`, only the first call will succeed and its result (if any) will be stored in the task completion event. The remaining sets are ignored and the method will return false. When you set a task completion event, all the tasks created from that event will immediately complete, and its continuations, if any, will be scheduled. Task completion objects that have a `_ResultType` other than **`void`** will pass the value to their continuations.
 
-##  <a name="set_exception"></a> set_exception
+## <a name="set_exception"></a> set_exception
 
 Propagates an exception to all tasks associated with this event.
 
-```
+```cpp
 template<typename _E>
 __declspec(noinline) bool set_exception(_E _Except) const;
 
@@ -104,14 +105,14 @@ The exception pointer to set.
 
 ### Return Value
 
-##  <a name="ctor"></a> task_completion_event
+## <a name="ctor"></a> task_completion_event
 
 Constructs a `task_completion_event` object.
 
-```
+```cpp
 task_completion_event();
 ```
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: satype"
 title: "satype (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.satype"]
@@ -22,9 +23,7 @@ The data type for the `SAFEARRAY` data structure that is being passed as a param
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface parameter, interface method|
 |**Repeatable**|No|
@@ -51,7 +50,7 @@ __interface A {
 };
 ```
 
-## See Also
+## See also
 
 [Compiler Attributes](compiler-attributes.md)<br/>
 [Parameter Attributes](parameter-attributes.md)<br/>

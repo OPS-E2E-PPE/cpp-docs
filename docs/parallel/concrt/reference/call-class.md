@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: call Class"
 title: "call Class"
 ms.date: "11/04/2016"
 f1_keywords: ["call", "AGENTS/concurrency::call", "AGENTS/concurrency::call::call", "AGENTS/concurrency::call::process_input_messages", "AGENTS/concurrency::call::process_message", "AGENTS/concurrency::call::propagate_message", "AGENTS/concurrency::call::send_message", "AGENTS/concurrency::call::supports_anonymous_source"]
@@ -11,12 +12,12 @@ A `call` messaging block is a multi-source, ordered `target_block` that invokes 
 
 ## Syntax
 
-```
+```cpp
 template<class T, class _FunctorType = std::function<void(T const&)>>
 class call : public target_block<multi_link_registry<ISource<T>>>;
 ```
 
-#### Parameters
+### Parameters
 
 *T*<br/>
 The payload type of the messages propagated to this block.
@@ -61,11 +62,11 @@ For more information, see [Asynchronous Message Blocks](../../../parallel/concrt
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> call
+## <a name="ctor"></a> call
 
 Constructs a `call` messaging block.
 
-```
+```cpp
 call(
     _Call_method const& _Func);
 
@@ -114,19 +115,19 @@ The type `_Call_method` is a functor with signature `void (T const &)` which is 
 
 The type `filter_method` is a functor with signature `bool (T const &)` which is invoked by this `call` messaging block to determine whether or not it should accept an offered message.
 
-##  <a name="dtor"></a> ~call
+## <a name="dtor"></a> ~call
 
 Destroys the `call` messaging block.
 
-```
+```cpp
 ~call();
 ```
 
-##  <a name="process_input_messages"></a> process_input_messages
+## <a name="process_input_messages"></a> process_input_messages
 
 Executes the call function on the input messages.
 
-```
+```cpp
 virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ```
 
@@ -135,11 +136,11 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 A pointer to the message that is to be handled.
 
-##  <a name="process_message"></a> process_message
+## <a name="process_message"></a> process_message
 
 Processes a message that was accepted by this `call` messaging block.
 
-```
+```cpp
 virtual void process_message(_Inout_ message<T>* _PMessage);
 ```
 
@@ -148,11 +149,11 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 A pointer to the message that is to be handled.
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a> propagate_message
 
 Asynchronously passes a message from an `ISource` block to this `call` messaging block. It is invoked by the `propagate` method, when called by a source block.
 
-```
+```cpp
 virtual message_status propagate_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -170,11 +171,11 @@ A pointer to the source block offering the message.
 
 A [message_status](concurrency-namespace-enums.md) indication of what the target decided to do with the message.
 
-##  <a name="send_message"></a> send_message
+## <a name="send_message"></a> send_message
 
 Synchronously passes a message from an `ISource` block to this `call` messaging block. It is invoked by the `send` method, when called by a source block.
 
-```
+```cpp
 virtual message_status send_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -192,19 +193,19 @@ A pointer to the source block offering the message.
 
 A [message_status](concurrency-namespace-enums.md) indication of what the target decided to do with the message.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source
+## <a name="supports_anonymous_source"></a> supports_anonymous_source
 
 Overrides the `supports_anonymous_source` method to indicate that this block can accept messages offered to it by a source that is not linked.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### Return Value
 
-**true** because the block does not postpone offered messages.
+**`true`** because the block does not postpone offered messages.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [transformer Class](transformer-class.md)

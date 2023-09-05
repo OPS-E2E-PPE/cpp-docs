@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2658"
 title: "Compiler Error C2658"
 ms.date: "11/04/2016"
 f1_keywords: ["C2658"]
@@ -13,7 +14,7 @@ Two anonymous structures or unions contained member declarations with the same i
 
 The following sample generates C2658:
 
-```
+```cpp
 // C2658.cpp
 // compile with: /c
 struct X {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: STL/CLR Containers"
 title: "STL/CLR Containers"
 ms.date: "09/18/2018"
 ms.topic: "reference"
@@ -29,13 +30,13 @@ You cannot insert boxed value types into any of the STL/CLR containers.
 
 ### Handles to Reference Types
 
-You can insert a handle to a reference type into an STL/CLR container. A handle in C++ that targets the CLR is analogous to a pointer in native C++. For more information, see [Handle to Object Operator (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md).
+You can insert a handle to a reference type into an STL/CLR container. A handle in C++ that targets the CLR is analogous to a pointer in native C++. For more information, see [Handle to Object Operator (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### Example
 
 The following example shows how to insert a handle to an Employee object into a [cliext::set](../dotnet/set-stl-clr.md).
 
-```
+```cpp
 // cliext_container_valid_reference_handle.cpp
 // compile with: /clr
 
@@ -130,7 +131,7 @@ It is also possible to insert a reference type (rather than a handle to a refere
 
 The following example shows how to insert an Employee object into a `cliext::set`.
 
-```
+```cpp
 // cliext_container_valid_reference.cpp
 // compile with: /clr
 
@@ -221,13 +222,13 @@ int main()
 
 You can also insert an unboxed value type into an STL/CLR container. An unboxed value type is a value type that has not been *boxed* into a reference type.
 
-A value type element can be one of the standard value types, such as an `int`, or it can be a user-defined value type, such as a `value class`. For more information, see [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+A value type element can be one of the standard value types, such as an **`int`**, or it can be a user-defined value type, such as a **`value class`**. For more information, see [Classes and Structs](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### Example
 
 The following example modifies the first example by making the Employee class a value type. This value type is then inserted into a `cliext::set` just as in the first example.
 
-```
+```cpp
 // cliext_container_valid_valuetype.cpp
 // compile with: /clr
 
@@ -302,6 +303,6 @@ Containers in STL/CLR work on value semantics. Every time you insert an element 
 
 When you call the clear or erase method of a container of handle objects, the objects that the handles refer to are not freed from memory. You must either explicitly delete the object, or, because these objects reside on the managed heap, allow the garbage collector to free the memory once it determines that the object is no longer being used.
 
-## See Also
+## See also
 
 [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

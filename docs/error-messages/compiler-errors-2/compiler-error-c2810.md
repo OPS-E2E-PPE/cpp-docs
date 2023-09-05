@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2810"
 title: "Compiler Error C2810"
 ms.date: "11/04/2016"
 f1_keywords: ["C2810"]
@@ -13,7 +14,7 @@ An [interface](../../cpp/interface.md) may only inherit from another interface a
 
 The following sample generates C2810:
 
-```
+```cpp
 // C2810.cpp
 #include <unknwn.h>
 class CBase1 {

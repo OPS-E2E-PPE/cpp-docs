@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Convert from a STL/CLR Container to a .NET Collection"
 title: "How to: Convert from a STL/CLR Container to a .NET Collection"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["STL/CLR Containers [STL/CLR]", "STL/CLR, converting to .NET collections"]
@@ -12,15 +13,15 @@ This topic shows how to convert STL/CLR containers to their equivalent .NET coll
 
 1. Use one of the following methods:
 
-   - To convert part of a container, call the [make_collection](../dotnet/make-collection-stl-clr.md) function, and pass the begin iterator and end iterator of the STL/CLR container to be copied into the .NET collection. This template function takes an STL/CLR iterator as a template argument. The first example demonstrates this method.
+   - To convert part of a container, call the [make_collection](./adapter-stl-clr.md#make_collection) function, and pass the begin iterator and end iterator of the STL/CLR container to be copied into the .NET collection. This function template takes an STL/CLR iterator as a template argument. The first example demonstrates this method.
 
    - To convert an entire container, cast the container to an appropriate .NET collection interface or interface collection. The second example demonstrates this method.
 
-## Example
+## Examples
 
 In this example, we create a STL/CLR `vector` and add 5 elements to it. Then, we create a .NET collection by calling the `make_collection` function. Finally, we display the contents of the newly created collection.
 
-```
+```cpp
 // cliext_convert_vector_to_icollection.cpp
 // compile with: /clr
 
@@ -60,11 +61,9 @@ The contents of the System::Collections::Generic::ICollection are:
 7
 ```
 
-## Example
-
 In this example, we create a STL/CLR `map` and add 5 elements to it. Then, we create a .NET <xref:System.Collections.Generic.IDictionary%602> and assign the `map` directly to it. Finally, we display the contents of the newly created collection.
 
-```
+```cpp
 // cliext_convert_map_to_idictionary.cpp
 // compile with: /clr
 
@@ -103,8 +102,8 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## See Also
+## See also
 
 [STL/CLR Library Reference](../dotnet/stl-clr-library-reference.md)<br/>
 [How to: Convert from a .NET Collection to a STL/CLR Container](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>
-[range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)
+[range_adapter (STL/CLR)](./adapter-stl-clr.md#range_adapter)

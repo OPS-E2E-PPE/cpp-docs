@@ -1,10 +1,14 @@
 ---
+description: "Learn more about: Recordset: Creating and Closing Recordsets (ODBC)"
 title: "Recordset: Creating and Closing Recordsets (ODBC)"
-ms.date: "11/04/2016"
+ms.date: "05/09/2019"
 helpviewer_keywords: ["ODBC recordsets, creating", "recordsets, creating", "recordsets, opening", "recordsets, closing", "ODBC recordsets, closing", "ODBC recordsets, opening"]
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
 ---
 # Recordset: Creating and Closing Recordsets (ODBC)
+
+> [!NOTE]
+> The MFC ODBC Consumer wizard is not available in Visual Studio 2019 and later. You can still create a consumer manually.
 
 This topic applies to the MFC ODBC classes.
 
@@ -18,7 +22,7 @@ This topic explains:
 
 - [When and how to close a recordset object](#_core_closing_a_recordset).
 
-##  <a name="_core_creating_recordsets_at_run_time"></a> Creating Recordsets at Run Time
+## <a name="_core_creating_recordsets_at_run_time"></a> Creating Recordsets at Run Time
 
 Before you can create recordset objects in your program, you typically write application-specific recordset classes. For more information about this preliminary step, see [Adding an MFC ODBC Consumer](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
 
@@ -62,9 +66,9 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 After you call `Open`, use the member functions and data members of the object to work with the records. In some cases, you might want to requery or refresh the recordset to include changes that have occurred on the data source. For more information, see [Recordset: Requerying a Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
->  The connect string you use during development might not be the same connect string that your eventual users need. For ideas about generalizing your application in this regard, see [Data Source: Managing Connections (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+> The connect string you use during development might not be the same connect string that your eventual users need. For ideas about generalizing your application in this regard, see [Data Source: Managing Connections (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
-##  <a name="_core_setting_recordset_options"></a> Setting Recordset Options
+## <a name="_core_setting_recordset_options"></a> Setting Recordset Options
 
 After you construct your recordset object but before you call `Open` to select records, you might want to set some options to control the recordset's behavior. For all recordsets, you can:
 
@@ -79,9 +83,9 @@ You can also set the following option if conditions are right:
 - If the recordset is updateable and supports locking options, specify the [locking](../../data/odbc/recordset-locking-records-odbc.md) method used for updates.
 
 > [!NOTE]
->  To affect record selection, you must set these options before you call the `Open` member function.
+> To affect record selection, you must set these options before you call the `Open` member function.
 
-##  <a name="_core_closing_a_recordset"></a> Closing a Recordset
+## <a name="_core_closing_a_recordset"></a> Closing a Recordset
 
 When you finish with your recordset, you must dispose of it and deallocate its memory.
 
@@ -91,11 +95,11 @@ When you finish with your recordset, you must dispose of it and deallocate its m
 
 1. Destroy the recordset object.
 
-   If you declared it on the stack frame of a function, the object is destroyed automatically when the object goes out of scope. Otherwise, use the **delete** operator.
+   If you declared it on the stack frame of a function, the object is destroyed automatically when the object goes out of scope. Otherwise, use the **`delete`** operator.
 
 `Close` frees the recordset's `HSTMT` handle. It does not destroy the C++ object.
 
-## See Also
+## See also
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>

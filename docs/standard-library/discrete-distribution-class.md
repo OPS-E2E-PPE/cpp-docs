@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: discrete_distribution Class"
 title: "discrete_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::discrete_distribution", "random/std::discrete_distribution::reset", "random/std::discrete_distribution::probabilities", "random/std::discrete_distribution::param", "random/std::discrete_distribution::min", "random/std::discrete_distribution::max", "random/std::discrete_distribution::operator()", "random/std::discrete_distribution::param_type", "random/std::discrete_distribution::param_type::probabilities", "random/std::discrete_distribution::param_type::operator==", "random/std::discrete_distribution::param_type::operator!="]
@@ -47,8 +48,8 @@ public:
 
 ### Parameters
 
-*IntType*<br/>
-The integer result type, defaults to **int**. For possible types, see [\<random>](../standard-library/random.md).
+*IntType*\
+The integer result type, defaults to **`int`**. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
@@ -56,10 +57,8 @@ This sampling distribution has uniform-width intervals with uniform probability 
 
 The following table links to articles about individual members:
 
-|||
-|-|-|
-|[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|
-|`discrete_distribution::operator()`|[param_type](#param_type)|
+[discrete_distribution](#discrete_distribution)\
+[param_type](#param_type)
 
 The property function `vector<double> probabilities()` returns the individual probabilities for each integer generated.
 
@@ -150,7 +149,7 @@ Distribution for 100 samples:
 
 **Namespace:** std
 
-## <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution
+## <a name="discrete_distribution"></a> discrete_distribution::discrete_distribution
 
 Constructs the distribution.
 
@@ -175,28 +174,28 @@ explicit discrete_distribution(const param_type& parm);
 
 ### Parameters
 
-*firstW*<br/>
+*firstW*\
 The first iterator in the list from which to construct the distribution.
 
-*lastW*<br/>
+*lastW*\
 The last iterator in the list from which to construct the distribution (non-inclusive because iterators use an empty element for the end).
 
-*weightlist*<br/>
+*weightlist*\
 The [initializer_list](../cpp/initializers.md) from which to construct the distribution.
 
-*count*<br/>
+*count*\
 The number of elements in the distribution range. If `count==0`, equivalent to the default constructor (always generates zero).
 
-*low*<br/>
+*low*\
 The lowest value in the distribution range.
 
-*high*<br/>
+*high*\
 The highest value in the distribution range.
 
-*weightfunc*<br/>
-The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to **double**.
+*weightfunc*\
+The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to **`double`**.
 
-*parm*<br/>
+*parm*\
 The `param_type` structure used to construct the distribution.
 
 ### Remarks
@@ -214,7 +213,7 @@ The constructor that has *count*, *low*, *high*, and *weightfunc* parameters con
 
 The constructor that has a `param_type` parameter *parm* constructs a distribution object using *parm* as the stored parameter structure.
 
-## <a name="param_type"></a>  discrete_distribution::param_type
+## <a name="param_type"></a> discrete_distribution::param_type
 
 Stores all the parameters of the distribution.
 
@@ -243,28 +242,28 @@ struct param_type {
 
 ### Parameters
 
-*firstW*<br/>
+*firstW*\
 The first iterator in the list from which to construct the distribution.
 
-*lastW*<br/>
+*lastW*\
 The last iterator in the list from which to construct the distribution (non-inclusive because iterators use an empty element for the end).
 
-*weightlist*<br/>
+*weightlist*\
 The [initializer_list](../cpp/initializers.md) from which to construct the distribution.
 
-*count*<br/>
+*count*\
 The number of elements in the distribution range. If *count* is 0, this is equivalent to the default constructor (always generates zero).
 
-*low*<br/>
+*low*\
 The lowest value in the distribution range.
 
-*high*<br/>
+*high*\
 The highest value in the distribution range.
 
-*weightfunc*<br/>
-The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to **double**.
+*weightfunc*\
+The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to **`double`**.
 
-*right*<br/>
+*right*\
 The `param_type` object to compare to this.
 
 ### Remarks
@@ -273,4 +272,4 @@ This parameter package can be passed to `operator()` to generate the return valu
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

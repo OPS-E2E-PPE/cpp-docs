@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: TN025: Document, View, and Frame Creation"
 title: "TN025: Document, View, and Frame Creation"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.creation"]
@@ -8,7 +9,7 @@ ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
 # TN025: Document, View, and Frame Creation
 
 > [!NOTE]
->  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.
+> The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.
 
 This note describes the creation and ownership issues for WinApps, DocTemplates, Documents, Frames and Views.
 
@@ -58,8 +59,7 @@ The `CFrameWnd` is responsible for creating windows in the client area of the fr
 
 For an MDI-Frame window, the client area is filled with the MDICLIENT control which is in turn the parent of all the MDI-Child frame windows. For an SDI-Frame window or an MDI-Child frame window, the client area is usually filled with a `CView`-derived window object. In the case of `CSplitterWnd`, the client area of the view is filled with the `CSplitterWnd` window object, and the `CView`-derived window objects (one per split pane) are created as child windows of the `CSplitterWnd`.
 
-## See Also
+## See also
 
 [Technical Notes by Number](../mfc/technical-notes-by-number.md)<br/>
 [Technical Notes by Category](../mfc/technical-notes-by-category.md)
-

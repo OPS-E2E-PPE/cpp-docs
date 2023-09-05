@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3481"
 title: "Compiler Error C3481"
 ms.date: "11/04/2016"
 f1_keywords: ["C3481"]
@@ -19,7 +20,7 @@ The compiler could not find the definition of a variable that you passed to the 
 
 The following example generates C3481 because the variable `n` is not defined:
 
-```
+```cpp
 // C3481.cpp
 
 int main()
@@ -28,6 +29,6 @@ int main()
 }
 ```
 
-## See Also
+## See also
 
 [Lambda Expressions](../../cpp/lambda-expressions-in-cpp.md)

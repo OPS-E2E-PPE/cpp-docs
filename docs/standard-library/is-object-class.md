@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_object Class"
 title: "is_object Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_object"]
@@ -18,7 +19,7 @@ struct is_object;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
 ## Remarks
@@ -76,5 +77,5 @@ is_object<void> == false
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_function Class](../standard-library/is-function-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_function Class](../standard-library/is-function-class.md)

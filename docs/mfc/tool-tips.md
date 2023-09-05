@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Tool Tips"
 title: "Tool Tips"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["CFrameWnd class [MFC], tool tips", "Help [MFC], tool tips for controls", "tool tips [MFC], CFrameWnd", "controls [MFC], tool tips", "buttons [MFC], tool tips"]
@@ -16,6 +17,6 @@ Tool tips for controls in a window that is:
 
 - [Tooltips in Windows not derived from CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 
-## See Also
+## See also
 
 [User Interface Elements](../mfc/user-interface-elements-mfc.md)

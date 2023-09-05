@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Tree Control Item Position"
 title: "Tree Control Item Position"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["CTreeCtrl class [MFC], item position", "item position in tree controls", "tree controls [MFC], item position", "position, CTreeCtrl items"]
@@ -14,8 +15,7 @@ You can put a parent item's list of child items into alphabetical order by calli
 
 The [SortChildrenCB](../mfc/reference/ctreectrl-class.md#sortchildrencb) member function allows you to sort child items based on criteria that you define. When you call this function, you specify an application-defined callback function that the tree control can call whenever the relative order of two child items needs to be decided. The callback function receives two 32-bit application-defined values for the items being compared and a third 32-bit value that you specify when calling `SortChildrenCB`.
 
-## See Also
+## See also
 
 [Using CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

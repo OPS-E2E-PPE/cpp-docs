@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: C Runtime Error R6028"
 title: "C Runtime Error R6028"
 ms.date: "11/04/2016"
 f1_keywords: ["R6028"]
@@ -24,4 +25,4 @@ unable to initialize heap
 
 This error occurs when the operating system failed to create the memory pool for the application. Specifically, the C Runtime (CRT) called the Win32 function `HeapCreate`, which returned NULL indicating failure.
 
-If this error occurs during app startup, the system may be unable to satisfy heap requests because defective drivers are loaded. Check Windows Update or your hardware vendor’s web site for updated drivers.
+If this error occurs during app startup, the system may be unable to satisfy heap requests because defective drivers are loaded. Check Windows Update or your hardware vendor's web site for updated drivers.

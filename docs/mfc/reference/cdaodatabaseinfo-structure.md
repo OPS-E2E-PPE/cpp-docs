@@ -1,13 +1,14 @@
 ---
+description: "Learn more about: CDaoDatabaseInfo Structure"
 title: "CDaoDatabaseInfo Structure"
-ms.date: "11/04/2016"
+ms.date: "09/17/2019"
 f1_keywords: ["CDaoDatabaseInfo"]
 helpviewer_keywords: ["CDaoDatabaseInfo structure [MFC]", "DAO (Data Access Objects), Databases collection"]
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
 ---
 # CDaoDatabaseInfo Structure
 
-The `CDaoDatabaseInfo` structure contains information about a database object defined for data access objects (DAO).
+The `CDaoDatabaseInfo` structure contains information about a database object defined for data access objects (DAO). DAO 3.6 is the final version, and it is considered obsolete.
 
 ## Syntax
 
@@ -95,7 +96,7 @@ Information retrieved by the [CDaoWorkspace::GetDatabaseInfo](../../mfc/referenc
 
 **Header:** afxdao.h
 
-## See Also
+## See also
 
 [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)<br/>

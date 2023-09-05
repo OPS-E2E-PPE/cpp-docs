@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_final Class"
 title: "is_final Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_final"]
@@ -18,7 +19,7 @@ struct is_final;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to query.
 
 ## Remarks
@@ -33,5 +34,5 @@ An instance of the type predicate holds true if the type *T* is a class type mar
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[final Specifier](../cpp/final-specifier.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[final Specifier](../cpp/final-specifier.md)

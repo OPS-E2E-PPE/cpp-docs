@@ -1,20 +1,21 @@
 ---
+description: "Learn more about: Walkthrough: Updating the MFC Scribble Application (Part 1)"
 title: "Walkthrough: Updating the MFC Scribble Application (Part 1)"
-ms.date: "09/20/2018"
+ms.date: "09/09/2019"
 helpviewer_keywords: ["examples [MFC], update existing application", "ribbon UI, porting to", "Office Fluent UI, porting to", "samples [MFC], update existing application", "MFC Feature Pack, update existing application", "walkthroughs [MFC], update existing application"]
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
 ---
 # Walkthrough: Updating the MFC Scribble Application (Part 1)
 
-This walkthrough demonstrates how to modify an existing MFC application to use the Ribbon user interface. Visual Studio supports both the Office 2007 Ribbon and the Windows 7 Scenic Ribbon. For more information about the Ribbon user interface, see [Ribbons](/windows/desktop/uxguide/cmd-ribbons).
+This walkthrough demonstrates how to modify an existing MFC application to use the Ribbon user interface. Visual Studio supports both the Office 2007 Ribbon and the Windows 7 Scenic Ribbon. For more information about the Ribbon user interface, see [Ribbons](/windows/win32/uxguide/cmd-ribbons).
 
 This walkthrough modifies the classic Scribble 1.0 MFC sample that lets you use the mouse to create line drawings. This part of the walkthrough shows how to modify the Scribble sample so that it displays a ribbon bar. [Part 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) adds more buttons to the ribbon bar.
 
 ## Prerequisites
 
-The [Scribble 1.0 MFC sample](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). For help on converting to Visual Studio 2017, see [Porting Guide: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
+The [Scribble 1.0 MFC sample](https://github.com/microsoft/VCSamples/tree/master/VC2010Samples/MFC/general/Scribble). For help on converting to Visual Studio 2017 or later, see [Porting Guide: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
 
-##  <a name="top"></a> Sections
+## <a name="top"></a> Sections
 
 This part of the walkthrough has the following sections:
 
@@ -30,7 +31,7 @@ This part of the walkthrough has the following sections:
 
 - [Setting the Look of the Application](#setlook)
 
-##  <a name="replaceclass"></a> Replacing the Base Classes
+## <a name="replaceclass"></a> Replacing the Base Classes
 
 To convert an application that supports a menu to an application that supports a ribbon, you must derive the application, frame window, and toolbar classes from updated base classes. (We suggest that you don't modify the original Scribble sample. Instead, clean the Scribble project, copy it to another directory, and then modify the copy.)
 
@@ -38,7 +39,7 @@ To convert an application that supports a menu to an application that supports a
 
 1. In scribble.cpp, verify that `CScribbleApp::InitInstance` includes a call to [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).
 
-1. Add the following code to the stdafx.h file.
+1. Add the following code to the *pch.h* file (*stdafx.h* in Visual Studio 2017 and earlier):
 
     ```cpp
     #include <afxcontrolbars.h>
@@ -91,11 +92,11 @@ To convert an application that supports a menu to an application that supports a
 
 1. Save the changes and then build and run the application.
 
-##  <a name="addbitmap"></a> Adding Bitmaps to the Project
+## <a name="addbitmap"></a> Adding Bitmaps to the Project
 
 The next four steps of this walkthrough require bitmap resources. You can get the appropriate bitmaps in various ways:
 
-- Use the [Resource Editors](../windows/resource-editors.md) to invent your own bitmaps. Or use the resource editors to assemble bitmaps from the portable network graphics (.png) images that are included with Visual Studio and can be downloaded from the [Visual Studio image library](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Use the [Resource Editors](../windows/resource-editors.md) to invent your own bitmaps. Or use the resource editors to assemble bitmaps from the portable network graphics (.png) images that are included with Visual Studio and can be downloaded from the [Visual Studio image library](/visualstudio/designers/the-visual-studio-image-library).
 
     However, the **Ribbon** user interface requires that certain bitmaps support transparent images. Transparent bitmaps use 32-bit pixels, where 24 bits specify the red, green, and blue components of the color, and 8 bits define an *alpha channel* that specifies the transparency of the color. The current resource editors can view, but not modify bitmaps with 32-bit pixels. Consequently, use an external image editor instead of the resource editors to manipulate transparent bitmaps.
 
@@ -141,7 +142,7 @@ This walkthrough copies resource files from the example created in [Walkthrough:
    > [!NOTE]
    > Because we need only the first four 16x16 images (16x64), you may optionally crop the right-side width of this bitmap from 128 to 64.
 
-##  <a name="addribbon"></a> Adding a Ribbon Resource to the Project
+## <a name="addribbon"></a> Adding a Ribbon Resource to the Project
 
 When you convert an application that uses menus to an application that uses a ribbon, you don't have to remove or disable the existing menus. Just create a ribbon resource, add ribbon buttons, and then associate the new buttons with the existing menu items. Although the menus are no longer visible, messages from the ribbon bar are routed through the menus and menu shortcuts continue to work.
 
@@ -187,13 +188,14 @@ A ribbon consists of the **Application** button, which is the large button on th
 
 1. The following modification creates an exit button that appears at the bottom of the **Application** button menu.
 
+   1. Choose the **Resource View** tab in **Solution Explorer**.
    1. In the **Properties** window, click the ellipsis (**...**) next to **Button** to open the **Items Editor**.
 
    1. With the **Item** type **Button** selected, click **Add** to add a button. Change **Caption** to `E&xit`, **ID** to `ID_APP_EXIT`, **Image** to `8`.
 
    1. You've modified the **Buttons**. Click **Close** to exit the **Items Editor**.
 
-##  <a name="createinstance"></a> Creating an Instance of the Ribbon Bar
+## <a name="createinstance"></a> Creating an Instance of the Ribbon Bar
 
 The following steps show how to create an instance of the ribbon bar when your application starts. To add a ribbon bar to an application, declare the ribbon bar in the mainfrm.h file. Then, in the mainfrm.cpp file, write code to load the ribbon resource.
 
@@ -206,7 +208,7 @@ The following steps show how to create an instance of the ribbon bar when your a
     CMFCRibbonBar m_wndRibbonBar;
     ```
 
-2. In the mainfrm.cpp file, add the following code before the final `return` statement at the end of the `CMainFrame::OnCreate` function. It creates an instance of the ribbon bar.
+2. In the mainfrm.cpp file, add the following code before the final **`return`** statement at the end of the `CMainFrame::OnCreate` function. It creates an instance of the ribbon bar.
 
     ```cpp
     // Create the ribbon bar
@@ -217,7 +219,7 @@ The following steps show how to create an instance of the ribbon bar when your a
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
     ```
 
-##  <a name="addcategory"></a> Customizing the Ribbon Resource
+## <a name="addcategory"></a> Customizing the Ribbon Resource
 
 Now that you've created the **Application** button, you can add elements to the ribbon.
 
@@ -234,7 +236,7 @@ Now that you've created the **Application** button, you can add elements to the 
 
 1. Save the changes, and then build and run the application. The Scribble application should be displayed, and it should have a ribbon bar at the top of the window instead of a menu bar. The ribbon bar should have one category, **Home**, and **Home** should have one panel, **Edit**. The ribbon buttons that you added should be associated with the existing event handlers, and the **Open**, **Close**, **Save**, **Print**, and **Clear All** buttons should work as expected.
 
-##  <a name="setlook"></a> Setting the Look of the Application
+## <a name="setlook"></a> Setting the Look of the Application
 
 A *visual manager* is a global object that controls all drawing for an application. Because the original Scribble application uses the Office 2000 user interface (UI) style, the application may look old-fashioned. You can reset the application to use the Office 2007 visual manager so that it resembles an Office 2007 application.
 
@@ -254,7 +256,7 @@ A *visual manager* is a global object that controls all drawing for an applicati
 
 You've modified the classic Scribble 1.0 MFC sample to use the **Ribbon Designer**. Now go to [Part 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
 
-## See Also
+## See also
 
 [Walkthroughs](../mfc/walkthroughs-mfc.md)<br/>
 [Walkthrough: Updating the MFC Scribble Application (Part 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

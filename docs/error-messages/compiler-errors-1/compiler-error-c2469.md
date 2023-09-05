@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2469"
 title: "Compiler Error C2469"
 ms.date: "11/04/2016"
 f1_keywords: ["C2469"]
@@ -13,7 +14,7 @@ An operator was passed an invalid type.
 
 The following sample generates C2469:
 
-```
+```cpp
 // C2469.cpp
 int main() {
    int *i = new void;   // C2469

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAutoVectorPtrElementTraits Class"
 title: "CAutoVectorPtrElementTraits Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAutoVectorPtrElementTraits", "ATLCOLL/ATL::CAutoVectorPtrElementTraits", "ATLCOLL/ATL::CAutoVectorPtrElementTraits::INARGTYPE", "ATLCOLL/ATL::CAutoVectorPtrElementTraits::OUTARGTYPE"]
@@ -10,7 +11,7 @@ ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
 This class provides methods, static functions, and typedefs useful when creating collections of smart pointers using vector new and delete operators.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -54,7 +55,7 @@ This class provides methods, static functions, and typedefs for aiding the creat
 
 **Header:** atlcoll.h
 
-##  <a name="inargtype"></a>  CAutoVectorPtrElementTraits::INARGTYPE
+## <a name="inargtype"></a> CAutoVectorPtrElementTraits::INARGTYPE
 
 The data type to use for adding elements to the collection class object.
 
@@ -62,7 +63,7 @@ The data type to use for adding elements to the collection class object.
 typedef CAutoVectorPtr<T>& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CAutoVectorPtrElementTraits::OUTARGTYPE
+## <a name="outargtype"></a> CAutoVectorPtrElementTraits::OUTARGTYPE
 
 The data type to use for retrieving elements from the collection class object.
 
@@ -70,7 +71,7 @@ The data type to use for retrieving elements from the collection class object.
 typedef T*& OUTARGTYPE;
 ```
 
-## See Also
+## See also
 
 [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [CAutoVectorPtr Class](../../atl/reference/cautovectorptr-class.md)<br/>

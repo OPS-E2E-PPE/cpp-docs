@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4395"
 title: "Compiler Warning (level 1) C4395"
 ms.date: "11/04/2016"
 f1_keywords: ["C4395"]
@@ -13,7 +14,7 @@ A member function was called on an [initonly (C++/CLI)](../../dotnet/initonly-cp
 
 The following sample generates C4395:
 
-```
+```cpp
 // C4395.cpp
 // compile with: /W1 /clr
 public value class V {

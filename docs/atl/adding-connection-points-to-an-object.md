@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Adding Connection Points to an Object"
 title: "Adding Connection Points to an Object"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["connection points [C++], adding to ATL objects", "Implement Connection Point ATL wizard"]
@@ -28,7 +29,7 @@ In either case, the Implement Connection Point Wizard uses a type library to do 
 
    [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
 
-   See the .idl file in the [Circ](../visual-cpp-samples.md) ATL sample for an example.
+   See the .idl file in the [Circ](../overview/visual-cpp-samples.md) ATL sample for an example.
 
 3. Use Class View to add methods and properties to the event interface. Right-click the class in Class View, point to **Add** on the shortcut menu, and click **Add Connection Point**.
 
@@ -52,7 +53,6 @@ In either case, the Implement Connection Point Wizard uses a type library to do 
 
    - Use the **importlib** instruction on that type library.
 
-## See Also
+## See also
 
 [Connection Point](../atl/atl-connection-points.md)
-

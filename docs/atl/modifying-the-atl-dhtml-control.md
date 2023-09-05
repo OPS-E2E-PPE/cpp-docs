@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Modifying the ATL DHTML Control"
 title: "Modifying the ATL DHTML Control"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["HTML controls, modifying", "DHTML controls", "DHTML controls, modifying"]
@@ -26,7 +27,7 @@ The ATL Control Wizard provides starter code so you can build and run the contro
 
    [!code-cpp[NVC_ATL_COM#6](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_2.cpp)]
 
-1. Add a third method, `GoToURL`, to the interface that does not end in "UI." Implement this method by calling [IWebBrowser2::Navigate](https://msdn.microsoft.com/library/aa752133.aspx), as follows:
+1. Add a third method, `GoToURL`, to the interface that does not end in "UI." Implement this method by calling [IWebBrowser2::Navigate](/previous-versions//aa752133\(v=vs.85\)), as follows:
 
    [!code-cpp[NVC_ATL_COM#7](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_3.cpp)]
 
@@ -62,6 +63,6 @@ Next, modify the HTML resource to invoke the methods you created. You will add t
 
 You can now build and [test the modified DHTML control](../atl/testing-the-modified-atl-dhtml-control.md).
 
-## See Also
+## See also
 
 [Support for DHTML Control](../atl/atl-support-for-dhtml-controls.md)

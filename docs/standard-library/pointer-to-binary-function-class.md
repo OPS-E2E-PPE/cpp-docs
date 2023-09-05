@@ -1,13 +1,14 @@
 ---
+description: "Learn more about: pointer_to_binary_function Class"
 title: "pointer_to_binary_function Class"
-ms.date: "11/04/2016"
-f1_keywords: ["xfunctional/std::pointer_to_binary"]
+ms.date: "02/21/2019"
+f1_keywords: ["functional/std::pointer_to_binary"]
 helpviewer_keywords: ["pointer_to_binary_function function", "pointer_to_binary_function class"]
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
 ---
 # pointer_to_binary_function Class
 
-Converts a binary function pointer into an adaptable binary function.
+Converts a binary function pointer into an adaptable binary function. Deprecated in C++11, removed in C++17.
 
 ## Syntax
 
@@ -16,7 +17,6 @@ template <class Arg1, class Arg2, class Result>
 class pointer_to_binary_function
     : public binary_function <Arg1, Arg2, Result>
 {
-public:
     explicit pointer_to_binary_function(
         Result(*pfunc)(Arg1, Arg2));
     Result operator()(Arg1 left, Arg2 right) const;
@@ -25,18 +25,18 @@ public:
 
 ### Parameters
 
-*pfunc*<br/>
+*pfunc*\
 The binary function to be converted.
 
-*left*<br/>
+*left*\
 The left object that the *\*pfunc* is called on.
 
-*right*<br/>
+*right*\
 The right object that the *\*pfunc* is called on.
 
 ## Return Value
 
-The template class stores a copy of `pfunc`. It defines its member function `operator()` as returning `(* pfunc)(Left, right)`.
+The class template stores a copy of `pfunc`. It defines its member function `operator()` as returning `(* pfunc)(Left, right)`.
 
 ## Remarks
 
@@ -45,13 +45,3 @@ A binary function pointer is a function object and may be passed to any C++ Stan
 ## Example
 
 The constructor of `pointer_to_binary_function` is rarely used directly. See the helper function [ptr_fun](../standard-library/functional-functions.md#ptr_fun) for an example of how to declare and use the `pointer_to_binary_function` adaptor predicate.
-
-## Requirements
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## See also
-
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: wire_marshal"
 title: "wire_marshal (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.wire_marshal"]
@@ -17,7 +18,7 @@ Specifies a data type that will be used for transmission instead of an applicati
 
 ## Remarks
 
-The **wire_marshal** C++ attribute has the same functionality as the [wire_marshal](/windows/desktop/Midl/wire-marshal) MIDL attribute.
+The **wire_marshal** C++ attribute has the same functionality as the [wire_marshal](/windows/win32/Midl/wire-marshal) MIDL attribute.
 
 ## Example
 
@@ -41,18 +42,16 @@ The following code shows a use of **wire_marshal**:
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**typedef**|
+|**Applies to**|**`typedef`**|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Typedef, Enum, Union, and Struct Attributes](typedef-enum-union-and-struct-attributes.md)

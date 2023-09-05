@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3366"
 title: "Compiler Error C3366"
 ms.date: "11/04/2016"
 f1_keywords: ["C3366"]
@@ -15,7 +16,7 @@ The compiler needs to know the full definition of the class (to emit the meta-da
 
 For example, the following example generates C3366 and shows how to fix it:
 
-```
+```cpp
 // C3366.cpp
 // compile with: /clr /c
 ref class X {

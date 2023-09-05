@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3273"
 title: "Compiler Error C3273"
 ms.date: "11/04/2016"
 f1_keywords: ["C3273"]
@@ -11,7 +12,7 @@ __finally cannot be used on an exception block in unmanaged code.
 
 The following sample generates C3273:
 
-```
+```cpp
 // C3273.cpp
 // compile with: /GX
 int main()

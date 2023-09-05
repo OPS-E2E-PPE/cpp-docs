@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCPropertyGridFontProperty Class"
 title: "CMFCPropertyGridFontProperty Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCPropertyGridFontProperty", "AFXPROPERTYGRIDCTRL/CMFCPropertyGridFontProperty", "AFXPROPERTYGRIDCTRL/CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty", "AFXPROPERTYGRIDCTRL/CMFCPropertyGridFontProperty::GetColor", "AFXPROPERTYGRIDCTRL/CMFCPropertyGridFontProperty::GetLogFont"]
@@ -48,7 +49,7 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 
 **Header:** afxpropertygridctrl.h
 
-##  <a name="cmfcpropertygridfontproperty"></a>  CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty
+## <a name="cmfcpropertygridfontproperty"></a> CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty
 
 Constructs a `CMFCPropertyGridFontProperty` object.
 
@@ -71,7 +72,7 @@ CMFCPropertyGridFontProperty(
 [in] A logical font structure that specifies the attributes of the font.
 
 *dwFontDialogFlags*<br/>
-[in] Styles that are applied to the font dialog box that is displayed when you click the property value drop-down button. The default value is the bitwise combination (OR) of CF_EFFECTS and CF_SCREENFONTS. For more information, see the *Flags* parameter of the [CHOOSEFONT Structure](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).
+[in] Styles that are applied to the font dialog box that is displayed when you click the property value drop-down button. The default value is the bitwise combination (OR) of CF_EFFECTS and CF_SCREENFONTS. For more information, see the *Flags* parameter of the [CHOOSEFONT Structure](/windows/win32/api/commdlg/ns-commdlg-choosefontw).
 
 *lpszDescr*<br/>
 [in] Description of the font property. The default value is NULL.
@@ -88,11 +89,11 @@ A `CMFCPropertyGridFontProperty` object represents a font property in a property
 
 ### Example
 
-The following example demonstrates how construct an object of the `CMFCPropertyGridFontProperty` class. This example is part of the [New Controls sample](../../visual-cpp-samples.md).
+The following example demonstrates how construct an object of the `CMFCPropertyGridFontProperty` class. This example is part of the [New Controls sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]
 
-##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor
+## <a name="getcolor"></a> CMFCPropertyGridFontProperty::GetColor
 
 Retrieves the font color that the user selects from the font dialog box.
 
@@ -106,7 +107,7 @@ An RGB color value that represents the selected font color.
 
 ### Remarks
 
-##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont
+## <a name="getlogfont"></a> CMFCPropertyGridFontProperty::GetLogFont
 
 Retrieves the font that the user selects from the font dialog box.
 
@@ -116,11 +117,11 @@ LPLOGFONT GetLogFont();
 
 ### Return Value
 
-A pointer to a [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure that describes the selected font.
+A pointer to a [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) structure that describes the selected font.
 
 ### Remarks
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4460"
 title: "Compiler Warning (level 4) C4460"
 ms.date: "11/04/2016"
 f1_keywords: ["C4460"]
@@ -15,7 +16,7 @@ You passed a value by reference to a user-defined Windows Runtime or CLR operato
 
 The following sample generates C4460 and shows how to fix it.
 
-```
+```cpp
 // C4460.cpp
 // compile with: /W4 /clr
 #include <stdio.h>

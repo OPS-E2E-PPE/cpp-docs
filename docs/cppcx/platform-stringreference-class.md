@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::StringReference Class"
 title: "Platform::StringReference Class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -51,7 +52,7 @@ class StringReference
 
 **Header:** vccorlib.h
 
-## <a name="data"></a>  StringReference::Data Method
+## <a name="data"></a> StringReference::Data Method
 
 Returns the contents of this `StringReference` as an array of char16 values.
 
@@ -65,7 +66,7 @@ const ::default::char16 * Data() const;
 
 An array of char16 UNICODE text characters.
 
-## <a name="gethstring"></a>  StringReference::GetHSTRING Method
+## <a name="gethstring"></a> StringReference::GetHSTRING Method
 
 Returns the contents of the string as an `__abi_HSTRING`.
 
@@ -81,7 +82,7 @@ An `__abi_HSTRING` that contains the string data.
 
 ### Remarks
 
-## <a name="getstring"></a>  StringReference::GetString Method
+## <a name="getstring"></a> StringReference::GetString Method
 
 Returns the contents of the string as a `Platform::String^`.
 
@@ -96,7 +97,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 A `Platform::String^` that contains the string data.
 
-## <a name="length"></a>  StringReference::Length Method
+## <a name="length"></a> StringReference::Length Method
 
 Returns the number of characters in the string.
 
@@ -112,7 +113,7 @@ An unsigned integer that specifies the number of characters in the string.
 
 ### Remarks
 
-## <a name="operator-assign"></a>  StringReference::operator= Operator
+## <a name="operator-assign"></a> StringReference::operator= Operator
 
 Assigns the specified object to the current `StringReference` object.
 
@@ -139,7 +140,7 @@ A reference to an object of type `StringReference`.
 
 Because `StringReference` is a standard C++ class and not a ref class, it does not appear in the **Object Browser**.
 
-## <a name="operator-call"></a>  StringReference::operator()  Operator
+## <a name="operator-call"></a> StringReference::operator()  Operator
 
 Converts a `StringReference` object to a `Platform::String^` object.
 
@@ -154,7 +155,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 A handle to an object of type `Platform::String`.
 
-## <a name="ctor"></a>  StringReference::StringReference Constructor
+## <a name="ctor"></a> StringReference::StringReference Constructor
 
 Initializes a new instance of the `StringReference` class.
 
@@ -182,6 +183,6 @@ The number of elements in `__strArg`.
 
 The first version of this constructor is the default constructor. The second version initializes a new `StringReference` instance class from the object that's specified by the `__fstrArg` parameter. The third and fourth overloads initialize a new `StringReference` instance from an array of char16 values. char16 represents a 16-bit UNICODE text character.
 
-## See Also
+## See also
 
 [Platform::StringReference Class](../cppcx/platform-stringreference-class.md)

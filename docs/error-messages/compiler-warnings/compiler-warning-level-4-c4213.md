@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4213"
 title: "Compiler Warning (level 4) C4213"
 ms.date: "11/04/2016"
 f1_keywords: ["C4213"]
@@ -13,7 +14,7 @@ With the default Microsoft extensions (/Ze), you can use casts on the left side 
 
 ## Example
 
-```
+```c
 // C4213.c
 // compile with: /W4
 void *a;

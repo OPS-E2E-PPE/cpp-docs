@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: bad_weak_ptr Class"
 title: "bad_weak_ptr Class"
 ms.date: "11/04/2016"
 f1_keywords: ["memory/std::bad_weak_ptr"]
@@ -14,7 +15,6 @@ Reports bad weak_ptr exception.
 ```cpp
 class bad_weak_ptr : public std::exception
 {
-public:
     bad_weak_ptr();
     const char *what() throw();
 };
@@ -62,12 +62,6 @@ int main()
 bad weak pointer
 ```
 
-## Requirements
-
-**Header:** \<memory>
-
-**Namespace:** std
-
 ## See also
 
-[weak_ptr Class](../standard-library/weak-ptr-class.md)<br/>
+[weak_ptr Class](../standard-library/weak-ptr-class.md)

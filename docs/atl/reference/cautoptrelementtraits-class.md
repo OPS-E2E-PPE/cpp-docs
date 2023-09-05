@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAutoPtrElementTraits Class"
 title: "CAutoPtrElementTraits Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAutoPtrElementTraits", "ATLCOLL/ATL::CAutoPtrElementTraits", "ATLCOLL/ATL::CAutoPtrElementTraits::INARGTYPE", "ATLCOLL/ATL::CAutoPtrElementTraits::OUTARGTYPE"]
@@ -10,7 +11,7 @@ ms.assetid: 777c1b14-6ab7-491f-b9a5-be149e71d4a2
 This class provides methods, static functions, and typedefs useful when creating collections of smart pointers.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -54,7 +55,7 @@ This class provides methods, static functions, and typedefs for aiding the creat
 
 **Header:** atlcoll.h
 
-##  <a name="inargtype"></a>  CAutoPtrElementTraits::INARGTYPE
+## <a name="inargtype"></a> CAutoPtrElementTraits::INARGTYPE
 
 The data type to use for adding elements to the collection class object.
 
@@ -62,7 +63,7 @@ The data type to use for adding elements to the collection class object.
 typedef CAutoPtr<T>& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CAutoPtrElementTraits::OUTARGTYPE
+## <a name="outargtype"></a> CAutoPtrElementTraits::OUTARGTYPE
 
 The data type to use for retrieving elements from the collection class object.
 
@@ -70,7 +71,7 @@ The data type to use for retrieving elements from the collection class object.
 typedef T *& OUTARGTYPE;
 ```
 
-## See Also
+## See also
 
 [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

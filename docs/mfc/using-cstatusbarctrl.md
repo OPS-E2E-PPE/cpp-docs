@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Using CStatusBarCtrl"
 title: "Using CStatusBarCtrl"
 ms.date: "11/04/2016"
-f1_keywords: ["CStatusBarCtrl"]
 helpviewer_keywords: ["CStatusBarCtrl class [MFC], using", "status bar controls [MFC], about status bar controls"]
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
 ---
@@ -23,7 +23,6 @@ You can use the status bar control ([CStatusBarCtrl](../mfc/reference/cstatusbar
 
 - [Using Tooltips in a CStatusBarCtrl Object](../mfc/using-tooltips-in-a-cstatusbarctrl-object.md)
 
-## See Also
+## See also
 
 [Controls](../mfc/controls-mfc.md)
-

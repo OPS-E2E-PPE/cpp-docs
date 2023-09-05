@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Byte Indices"
 title: "Byte Indices"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["MBCS [C++], byte indices", "byte indices [C++]"]
@@ -26,7 +27,7 @@ Use the following tips:
 
    This correctly indexes to a lead byte, hence to a `character`. The `_mbclen` function determines the size of a character (1 or 2 bytes).
 
-## See Also
+## See also
 
 [MBCS Programming Tips](../text/mbcs-programming-tips.md)<br/>
 [Last Character in a String](../text/last-character-in-a-string.md)

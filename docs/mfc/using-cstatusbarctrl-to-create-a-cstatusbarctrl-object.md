@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Using CStatusBarCtrl to Create a CStatusBarCtrl Object"
 title: "Using CStatusBarCtrl to Create a CStatusBarCtrl Object"
 ms.date: "11/04/2016"
-f1_keywords: ["CStatusBarCtrl"]
 helpviewer_keywords: ["status bar controls [MFC], creating", "CStatusBarCtrl class [MFC], creating"]
 ms.assetid: 365c2b65-12de-49e6-9a2e-416c6ee10d60
 ---
@@ -23,8 +23,7 @@ Here is an example of a typical use of [CStatusBarCtrl](../mfc/reference/cstatus
 
 In some cases, the status bar only needs to display a line of text. In this case, make a call to [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple). This puts the status bar control into "simple" mode, which displays a single line of text.
 
-## See Also
+## See also
 
 [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

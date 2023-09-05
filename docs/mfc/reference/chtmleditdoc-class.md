@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CHtmlEditDoc Class"
 title: "CHtmlEditDoc Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CHtmlEditDoc", "AFXHTML/CHtmlEditDoc", "AFXHTML/CHtmlEditDoc::CHtmlEditDoc", "AFXHTML/CHtmlEditDoc::GetView", "AFXHTML/CHtmlEditDoc::IsModified", "AFXHTML/CHtmlEditDoc::OpenURL"]
@@ -45,7 +46,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 **Header:** afxhtml.h
 
-##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc
+## <a name="chtmleditdoc"></a> CHtmlEditDoc::CHtmlEditDoc
 
 Constructs a `CHtmlEditDoc` object.
 
@@ -53,7 +54,7 @@ Constructs a `CHtmlEditDoc` object.
 CHtmlEditDoc();
 ```
 
-##  <a name="getview"></a>  CHtmlEditDoc::GetView
+## <a name="getview"></a> CHtmlEditDoc::GetView
 
 Retrieves the [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) object attached to this document.
 
@@ -65,7 +66,7 @@ virtual CHtmlEditView* GetView() const;
 
 Returns a pointer to the document's `CHtmlEditView` object.
 
-##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified
+## <a name="ismodified"></a> CHtmlEditDoc::IsModified
 
 Returns whether the associated view's WebBrowser control contains a document that has been modified by the user.
 
@@ -73,7 +74,7 @@ Returns whether the associated view's WebBrowser control contains a document tha
 virtual BOOL IsModified();
 ```
 
-##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL
+## <a name="openurl"></a> CHtmlEditDoc::OpenURL
 
 Opens a URL.
 
@@ -90,8 +91,7 @@ The URL to open.
 
 Returns TRUE on success, FALSE on failure.
 
-## See Also
+## See also
 
-[HTMLEdit Sample](../../visual-cpp-samples.md)<br/>
+[HTMLEdit Sample](../../overview/visual-cpp-samples.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

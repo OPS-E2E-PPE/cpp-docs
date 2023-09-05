@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Project Build Error PRJ0016"
 title: "Project Build Error PRJ0016"
 ms.date: "11/04/2016"
 f1_keywords: ["PRJ0016"]
@@ -19,4 +20,4 @@ To resolve this error, delete the RestrictRun key. If this registry key is neede
 
 Another cause for this error is that your Policy Setting does not include VCSpawn.exe under the registry key HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun as an allowed Window program for this user account.
 
-For additional information, see [Adhering to System Policy Settings](https://msdn.microsoft.com/library/aa372139), in the section on "Run only allowed Windows applications".
+For additional information, see [Adhering to System Policy Settings](/previous-versions/windows/desktop/Policy/adhering-to-system-policy-settings), in the section on "Run only allowed Windows applications".

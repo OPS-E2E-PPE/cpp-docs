@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2268"
 title: "Compiler Error C2268"
 ms.date: "11/04/2016"
 f1_keywords: ["C2268"]
@@ -13,7 +14,7 @@ A function defined in your source code has the same name as an internal compiler
 
 The following sample generates C2268:
 
-```
+```c
 // C2268.c
 // compile with: /c
 // processor: x86
@@ -33,7 +34,7 @@ void* mainCRTStartup(void* p) {
 
 and then:
 
-```
+```c
 // C2268b.c
 // compile with: C2268.c /EHsc /GL /Ob0 /O2 /Fa /GS- /link /nodefaultlib
 // processor: x86

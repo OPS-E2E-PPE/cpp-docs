@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3066"
 title: "Compiler Error C3066"
 ms.date: "03/28/2017"
 f1_keywords: ["C3066"]
@@ -13,7 +14,7 @@ The compiler detected an ambiguous function call involving surrogates.
 
 The following sample generates C3066:
 
-```
+```cpp
 // C3066.cpp
 template <class T, class U> void func(T*, U*){}
 

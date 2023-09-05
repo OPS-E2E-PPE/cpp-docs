@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3209"
 title: "Compiler Error C3209"
 ms.date: "11/04/2016"
 f1_keywords: ["C3209"]
@@ -13,7 +14,7 @@ A generic class must be a managed class or a Windows Runtime class.
 
 The following sample generates C3209 and shows how to fix it:
 
-```
+```cpp
 // C3209.cpp
 // compile with: /clr
 generic <class T>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: time_base Class"
 title: "time_base Class"
 ms.date: "11/04/2016"
 f1_keywords: ["locale/std::time_base"]
@@ -7,7 +8,7 @@ ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
 ---
 # time_base Class
 
-The class serves as a base class for facets of template class time_get, defining just the enumerated type `dateorder` and several constants of this type.
+The class serves as a base class for facets of class template time_get, defining just the enumerated type `dateorder` and several constants of this type.
 
 ## Syntax
 
@@ -48,4 +49,4 @@ Each constant characterizes a different way to order the components of a date. T
 
 ## See also
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

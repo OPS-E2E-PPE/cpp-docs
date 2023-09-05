@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: regex_constants namespace"
 title: "regex_constants Class"
 ms.date: "09/10/2018"
 f1_keywords: ["regex/std::regex_constants", "regex/std::regex_constants::error_collate", "regex/std::regex_constants::error_ctype", "regex/std::regex_constants::error_escape", "regex/std::regex_constants::error_backref", "regex/std::regex_constants::error_brack", "regex/std::regex_constants::error_paren", "regex/std::regex_constants::error_brace", "regex/std::regex_constants::error_badbrace", "regex/std::regex_constants::error_range", "regex/std::regex_constants::error_space", "regex/std::regex_constants::error_badrepeat", "regex/std::regex_constants::error_complexity", "regex/std::regex_constants::error_stack", "regex/std::regex_constants::error_parse", "regex/std::regex_constants::error_syntax", "regex/std::regex_constants::match_default", "regex/std::regex_constants::match_not_bol", "regex/std::regex_constants::match_not_eol", "regex/std::regex_constants::match_not_bow", "regex/std::regex_constants::match_not_eow", "regex/std::regex_constants::match_any", "regex/std::regex_constants::match_not_null", "regex/std::regex_constants::match_continuous", "regex/std::regex_constants::match_prev_avail", "regex/std::regex_constants::format_default", "regex/std::regex_constants::format_sed", "regex/std::regex_constants::format_no_copy", "regex/std::regex_constants::format_first_only", "regex/std::regex_constants::ECMAScript", "regex/std::regex_constants::basic", "regex/std::regex_constants::extended", "regex/std::regex_constants::awk", "regex/std::regex_constants::grep", "regex/std::regex_constants::egrep", "regex/std::regex_constants::icase", "regex/std::regex_constants::nosubs", "regex/std::regex_constants::optimize", "regex/std::regex_constants::collate"]
@@ -23,7 +24,7 @@ namespace regex_constants {
 
 The namespace `regex_constants` encapsulates several flag types and their associated flag values.
 
-|||
+|Name|Description|
 |-|-|
 |[error_type](#error_type)|Flags for reporting regular expression syntax errors.|
 |[match_flag_type](#match_flag_type)|Flags for regular expression matching options.|
@@ -35,7 +36,7 @@ The namespace `regex_constants` encapsulates several flag types and their associ
 
 **Namespace:** std
 
-## <a name="error_type"></a>  regex_constants::error_type
+## <a name="error_type"></a> regex_constants::error_type
 
 Flags for reporting regular expression syntax errors.
 
@@ -96,7 +97,7 @@ The type is an enumerated type that describes an object that can hold error flag
 
 `error_backref` -- the expression contained an invalid back reference
 
-## <a name="match_flag_type"></a>  regex_constants::match_flag_type
+## <a name="match_flag_type"></a> regex_constants::match_flag_type
 
 Flags for regular expression matching options.
 
@@ -126,7 +127,7 @@ The type is a bitmask type that describes options to be used when matching a tex
 
 The match options are:
 
-*match_default*<br/>
+`match_default`
 
 `match_not_bol` -- do not treat the first position in the target sequence as the beginning of a line
 
@@ -154,7 +155,7 @@ The format flags are:
 
 `format_first_only` -- do not search for matches after the first one
 
-## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
+## <a name="syntax_option_type"></a> regex_constants::syntax_option_type
 
 Flags for selecting syntax options.
 
@@ -206,11 +207,11 @@ The syntax modifiers are:
 
 ## See also
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_error Class](../standard-library/regex-error-class.md)<br/>
-[\<regex> functions](../standard-library/regex-functions.md)<br/>
-[regex_iterator Class](../standard-library/regex-iterator-class.md)<br/>
-[\<regex> operators](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits Class](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_error Class](../standard-library/regex-error-class.md)\
+[\<regex> functions](../standard-library/regex-functions.md)\
+[regex_iterator Class](../standard-library/regex-iterator-class.md)\
+[\<regex> operators](../standard-library/regex-operators.md)\
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)\
+[regex_traits Class](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

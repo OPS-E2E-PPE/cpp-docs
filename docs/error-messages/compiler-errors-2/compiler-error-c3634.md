@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3634"
 title: "Compiler Error C3634"
 ms.date: "11/04/2016"
 f1_keywords: ["C3634"]
@@ -15,7 +16,7 @@ An abstract method can be declared in a managed or WinRT class, but it cannot be
 
 The following sample generates C3634:
 
-```
+```cpp
 // C3634.cpp
 // compile with: /clr
 ref class C {

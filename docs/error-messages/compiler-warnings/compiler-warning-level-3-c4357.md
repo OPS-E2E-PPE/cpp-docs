@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4357"
 title: "Compiler Warning (level 3) C4357"
 ms.date: "11/04/2016"
 f1_keywords: ["C4357"]
@@ -13,7 +14,7 @@ The `ParamArray` attribute was ignored, and `function` cannot be called with var
 
 The following sample generates C4357:
 
-```
+```cpp
 // C4357.cpp
 // compile with: /clr /W3 /c
 using namespace System;

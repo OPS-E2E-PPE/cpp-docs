@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_placeholder Class"
 title: "is_placeholder Class"
 ms.date: "11/04/2016"
 f1_keywords: ["functional/std::is_placeholder"]
@@ -13,7 +14,7 @@ Tests if type is a placeholder.
 
 struct is_placeholder {
    static const int value;
-   };
+};
 
 ## Remarks
 
@@ -48,13 +49,3 @@ int main()
 0
 3
 ```
-
-## Requirements
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## See also
-
-[_1 Object](../standard-library/1-object.md)<br/>

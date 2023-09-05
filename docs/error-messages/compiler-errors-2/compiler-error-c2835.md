@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2835"
 title: "Compiler Error C2835"
 ms.date: "11/04/2016"
 f1_keywords: ["C2835"]
@@ -13,7 +14,7 @@ User-defined type conversions cannot take formal parameters.
 
 The following sample generates C2835:
 
-```
+```cpp
 // C2835.cpp
 class A {
 public:

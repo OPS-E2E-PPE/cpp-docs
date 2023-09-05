@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: max_variable_size Class"
 title: "max_variable_size Class"
 ms.date: "11/04/2016"
 f1_keywords: ["allocators/stdext::max_variable_size", "allocators/stdext::max_variable_size::allocated", "allocators/stdext::max_variable_size::deallocated", "allocators/stdext::max_variable_size::full", "allocators/stdext::max_variable_size::released", "allocators/stdext::max_variable_size::saved"]
@@ -37,7 +38,7 @@ class max_variable_size
 
 **Namespace:** stdext
 
-## <a name="allocated"></a>  max_variable_size::allocated
+## <a name="allocated"></a> max_variable_size::allocated
 
 Increments the count of allocated memory blocks.
 
@@ -47,15 +48,14 @@ void allocated(std::size_t _Nx = 1);
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*_Nx*|The increment value.|
+*_Nx*\
+The increment value.
 
 ### Remarks
 
-This member function adds *_Nx* to the stored value `_Nallocs`. This member function is called after each successful call by `cache_freelist::allocate` to operator **new**. The argument *_Nx* is the number of memory blocks in the chunk allocated by operator **new**.
+This member function adds *_Nx* to the stored value `_Nallocs`. This member function is called after each successful call by `cache_freelist::allocate` to operator **`new`**. The argument *_Nx* is the number of memory blocks in the chunk allocated by operator **`new`**.
 
-## <a name="deallocated"></a>  max_variable_size::deallocated
+## <a name="deallocated"></a> max_variable_size::deallocated
 
 Decrements the count of allocated memory blocks.
 
@@ -65,15 +65,14 @@ void deallocated(std::size_t _Nx = 1);
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*_Nx*|The increment value.|
+*_Nx*\
+The increment value.
 
 ### Remarks
 
-The member function subtracts *_Nx* from the stored value `_Nallocs`. This member function is called after each call by `cache_freelist::deallocate` to operator **delete**. The argument *_Nx* is the number of memory blocks in the chunk deallocated by operator **delete**.
+The member function subtracts *_Nx* from the stored value `_Nallocs`. This member function is called after each call by `cache_freelist::deallocate` to operator **`delete`**. The argument *_Nx* is the number of memory blocks in the chunk deallocated by operator **`delete`**.
 
-## <a name="full"></a>  max_variable_size::full
+## <a name="full"></a> max_variable_size::full
 
 Returns a value that specifies whether more memory blocks should be added to the free list.
 
@@ -83,13 +82,13 @@ bool full();
 
 ### Return Value
 
-**true** if `_Nallocs / 16 + 16 <= _Nblocks`.
+**`true`** if `_Nallocs / 16 + 16 <= _Nblocks`.
 
 ### Remarks
 
-This member function is called by `cache_freelist::deallocate`. If the call returns **true**, `deallocate` puts the memory block on the free list; if it returns false, `deallocate` calls operator **delete** to deallocate the block.
+This member function is called by `cache_freelist::deallocate`. If the call returns **`true`**, `deallocate` puts the memory block on the free list; if it returns false, `deallocate` calls operator **`delete`** to deallocate the block.
 
-## <a name="max_variable_size"></a>  max_variable_size::max_variable_size
+## <a name="max_variable_size"></a> max_variable_size::max_variable_size
 
 Constructs an object of type `max_variable_size`.
 
@@ -101,7 +100,7 @@ max_variable_size();
 
 The constructor initializes the stored values `_Nblocks` and `_Nallocs` to zero.
 
-## <a name="released"></a>  max_variable_size::released
+## <a name="released"></a> max_variable_size::released
 
 Decrements the count of memory blocks on the free list.
 
@@ -113,7 +112,7 @@ void released();
 
 This member function decrements the stored value `_Nblocks`. The `released` member function of the current max class is called by `cache_freelist::allocate` whenever it removes a memory block from the free list.
 
-## <a name="saved"></a>  max_variable_size::saved
+## <a name="saved"></a> max_variable_size::saved
 
 Increments the count of memory blocks on the free list.
 
@@ -127,4 +126,4 @@ This member function increments the stored value `_Nblocks`. This member functio
 
 ## See also
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

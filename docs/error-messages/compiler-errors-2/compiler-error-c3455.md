@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3455"
 title: "Compiler Error C3455"
 ms.date: "11/04/2016"
 f1_keywords: ["C3455"]
@@ -15,7 +16,7 @@ An invalid value was used to declare an attribute.  See [attribute](../../window
 
 The following sample generates C3455.
 
-```
+```cpp
 // C3455.cpp
 // compile with: /clr /c
 using namespace System;

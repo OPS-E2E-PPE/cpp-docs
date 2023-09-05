@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Schema Rowsets"
 title: "Schema Rowsets"
 ms.date: "10/22/2018"
 helpviewer_keywords: ["schema rowsets, defined"]
@@ -10,6 +11,6 @@ Schema (or metadata) is any information about a database's structure or organiza
 
 For information about how to use schema rowsets, see [Obtaining Metadata with Schema Rowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
 
-## See Also
+## See also
 
 [OLE DB Consumer Templates](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3509"
 title: "Compiler Error C3509"
 ms.date: "11/04/2016"
 f1_keywords: ["C3509"]
@@ -13,7 +14,7 @@ A method in a COM interface must return either void or an HRESULT.
 
 The following sample generates C3509:
 
-```
+```cpp
 // C3509.cpp
 #define _ATL_DEBUG_QI
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Creating an ATL DHTML Control"
 title: "Creating an ATL DHTML Control"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["HTML controls, creating", "DHTML controls", "DHTML controls, creating"]
@@ -16,6 +17,6 @@ The ATL Control Wizard automates the process of creating a DHTML control. It gen
 
 You can now [test the default control](../atl/testing-the-atl-dhtml-control.md).
 
-## See Also
+## See also
 
 [Support for DHTML Control](../atl/atl-support-for-dhtml-controls.md)

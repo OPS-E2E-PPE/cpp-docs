@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2365"
 title: "Compiler Error C2365"
 ms.date: "11/04/2016"
 f1_keywords: ["C2365"]
@@ -13,7 +14,7 @@ You attempted to redefine a class member.
 
 The following sample generates C2365.
 
-```
+```cpp
 // C2365.cpp
 // compile with: /c
 class C1 {

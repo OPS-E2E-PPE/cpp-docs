@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2496"
 title: "Compiler Error C2496"
 ms.date: "11/04/2016"
 f1_keywords: ["C2496"]
@@ -13,7 +14,7 @@ The [selectany](../../cpp/selectany.md) attribute can be applied only to externa
 
 The following sample generates C2496:
 
-```
+```cpp
 // C2496.cpp
 // compile with: /c
 __declspec(selectany) int x1 = 1;

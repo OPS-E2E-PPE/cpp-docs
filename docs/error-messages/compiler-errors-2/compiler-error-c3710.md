@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3710"
 title: "Compiler Error C3710"
 ms.date: "11/04/2016"
 f1_keywords: ["C3710"]
@@ -15,7 +16,7 @@ When you specify an event handler with [__hook](../../cpp/hook.md) or [__unhook]
 
 The following sample generates C3710
 
-```
+```cpp
 // C3710.cpp
 // compile with: /link /opt:noref
 #include <atlbase.h>

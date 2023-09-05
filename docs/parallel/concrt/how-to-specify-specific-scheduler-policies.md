@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Specify Specific Scheduler Policies"
 title: "How to: Specify Specific Scheduler Policies"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["specifying scheduler policies [Concurrency Runtime]", "scheduler policies, specifying [Concurrency Runtime]"]
@@ -39,11 +40,10 @@ Although both sets of tasks produce the same result, the version that uses a cus
 
 Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `scheduler-policy.cpp` and then run the following command in a Visual Studio Command Prompt window.
 
-**cl.exe /EHsc scheduler-policy.cpp**
+> **cl.exe /EHsc scheduler-policy.cpp**
 
-## See Also
+## See also
 
 [Scheduler Policies](../../parallel/concrt/scheduler-policies.md)<br/>
 [How to: Manage a Scheduler Instance](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
 [How to: Create Agents that Use Specific Scheduler Policies](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-

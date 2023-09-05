@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3197"
 title: "Compiler Error C3197"
 ms.date: "11/04/2016"
 f1_keywords: ["C3197"]
@@ -13,7 +14,7 @@ A keyword was used in a declaration but is only valid in a definition.
 
 The following sample generates C3197:
 
-```
+```cpp
 // C3197.cpp
 // compile with: /clr /c
 ref struct R abstract;   // C3197

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3893"
 title: "Compiler Error C3893"
 ms.date: "11/04/2016"
 f1_keywords: ["C3893"]
@@ -15,7 +16,7 @@ Instance (non-static) initonly data members can only have their address taken in
 
 The following sample generates C3893:
 
-```
+```cpp
 // C3893.cpp
 // compile with: /clr
 ref struct Y1 {

@@ -1,10 +1,14 @@
 ---
+description: "Learn more about: Adding an ATL Property Page"
 title: "Adding an ATL Property Page"
-ms.date: "11/04/2016"
+ms.date: "05/09/2019"
 helpviewer_keywords: ["property pages, adding", "ATL projects, adding property pages", "controls [ATL], property pages"]
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
 ---
 # Adding an ATL Property Page
+
+> [!NOTE]
+> The ATL Property Page wizard is not available in Visual Studio 2019 and later.
 
 To add an Active Template Library (ATL) property page to your project, your project must have been created as an ATL application or as an MFC application that contains ATL support. You can use the [ATL Project Wizard](../../atl/reference/atl-project-wizard.md) to create an ATL application or [add an ATL object to your MFC application](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) to implement ATL support for an MFC application.
 
@@ -19,11 +23,11 @@ If you are adding a property page for a control, your control must support the [
 
 1. From the shortcut menu, click **Add** and then click **Add Class**.
 
-1. In the [Add Class](../../ide/add-class-dialog-box.md) dialog box, in the **Templates** pane, click **ATL Property Page** and then click **Open** to display the [ATL Property Page Wizard](../../atl/reference/atl-property-page-wizard.md).
+1. In the [Add Class](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) dialog box, in the **Templates** pane, click **ATL Property Page** and then click **Open** to display the [ATL Property Page Wizard](../../atl/reference/atl-property-page-wizard.md).
 
 Once you create a property page for a control, you must provide the [PROP_PAGE](property-map-macros.md#prop_page) entry in the property map for the control.
 
-## See Also
+## See also
 
 [Property Pages](../../atl/atl-com-property-pages.md)<br/>
 [Fundamentals of ATL COM Objects](../../atl/fundamentals-of-atl-com-objects.md)<br/>

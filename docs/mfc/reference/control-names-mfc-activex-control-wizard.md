@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Control Names, MFC ActiveX Control Wizard"
 title: "Control Names, MFC ActiveX Control Wizard"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.appwiz.mfc.ctl.names"]
@@ -73,10 +74,9 @@ Specify the names for the control class and property page class, the type names,
 
    *ProjectName.NewShortName*PropPage.1
 
-## See Also
+## See also
 
 [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [Application Settings, MFC ActiveX Control Wizard](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [Control Settings, MFC ActiveX Control Wizard](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)<br/>
-[File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md)
-
+[File Types Created for Visual Studio C++ projects](../../build/reference/file-types-created-for-visual-cpp-projects.md)

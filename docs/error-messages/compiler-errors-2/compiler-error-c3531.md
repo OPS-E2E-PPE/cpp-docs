@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3531"
 title: "Compiler Error C3531"
 ms.date: "11/04/2016"
 f1_keywords: ["C3531"]
@@ -19,7 +20,7 @@ The specified variable does not have an initializer expression.
 
 The following example yields C3531 because variables `x1`, `y1, y2, y3`, and `z2` are not initialized.
 
-```
+```cpp
 // C3531.cpp
 // Compile with /Zc:auto
 int main()
@@ -31,6 +32,6 @@ int main()
 }
 ```
 
-## See Also
+## See also
 
-[auto Keyword](../../cpp/auto-keyword.md)
+[auto Keyword](../../cpp/auto-cpp.md)

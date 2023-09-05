@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3732"
 title: "Compiler Error C3732"
 ms.date: "11/04/2016"
 f1_keywords: ["C3732"]
@@ -13,7 +14,7 @@ An interface that supports COM events cannot inherit from `IDispatch`. For more 
 
 The following error generates C3732:
 
-```
+```cpp
 // C3732.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"

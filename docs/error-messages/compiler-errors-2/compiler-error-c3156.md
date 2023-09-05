@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3156"
 title: "Compiler Error C3156"
 ms.date: "11/04/2016"
 f1_keywords: ["C3156"]
@@ -15,7 +16,7 @@ A function cannot contain the definition, or declaration, of a managed or WinRT 
 
 The following sample generates C3156.
 
-```
+```cpp
 // C3156.cpp
 // compile with: /clr /c
 void f() {

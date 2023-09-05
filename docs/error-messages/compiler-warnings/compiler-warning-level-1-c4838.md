@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4838"
 title: "Compiler Warning (level 1) C4838"
 ms.date: "11/04/2016"
 f1_keywords: ["C4838"]
@@ -17,7 +18,7 @@ A narrowing conversion can be okay when you know the possible range of converted
 
 The following sample generates C4838 and shows one way to fix it:
 
-```
+```cpp
 // C4838.cpp -- C++ narrowing conversion diagnostics
 // Compile by using: cl /EHsc C4838.cpp
 

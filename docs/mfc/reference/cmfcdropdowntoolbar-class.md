@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCDropDownToolBar Class"
 title: "CMFCDropDownToolBar Class"
 ms.date: "11/19/2018"
 f1_keywords: ["CMFCDropDownToolBar", "AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar", "AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::AllowShowOnPaneMenu", "AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::LoadBitmap", "AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::LoadToolBar", "AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::OnLButtonUp", "AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::OnMouseMove", "AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::OnSendCommand", "AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar::OnUpdateCmdUI"]
@@ -9,7 +10,8 @@ ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
 
 A toolbar that appears when the user presses and holds a top-level toolbar button.
 
-   For more detail see the source code located in the **VC\\atlmfc\\src\\mfc** folder of your Visual Studio installation.
+For more detail see the source code located in the **VC\\atlmfc\\src\\mfc** folder of your Visual Studio installation.
+
 ## Syntax
 
 ```
@@ -38,7 +40,7 @@ A drop-down toolbar cannot be customized or docked, and it does not have a tear-
 
 The following illustration shows a `CMFCDropDownToolBar` object:
 
-![Example of CMFCDropDownToolbar](../../mfc/reference/media/cmfcdropdown.png "Example of CMFCDropDownToolbar")
+![Example of CMFCDropDownToolbar.](../../mfc/reference/media/cmfcdropdown.png "Example of CMFCDropDownToolbar")
 
 You create a `CMFCDropDownToolBar` object the same way you create an ordinary toolbar (see [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)).
 
@@ -54,7 +56,7 @@ For more information about toolbar buttons, see [Walkthrough: Putting Controls O
 
 ## Example
 
-The following example demonstrates how to use the `Create` method in the `CMFCDropDownToolBar` class. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).
+The following example demonstrates how to use the `Create` method in the `CMFCDropDownToolBar` class. This code snippet is part of the [Visual Studio Demo sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]
@@ -81,7 +83,7 @@ The following example demonstrates how to use the `Create` method in the `CMFCDr
 
 **Header:** afxdropdowntoolbar.h
 
-##  <a name="allowshowonpanemenu"></a>  CMFCDropDownToolBar::AllowShowOnPaneMenu
+## <a name="allowshowonpanemenu"></a> CMFCDropDownToolBar::AllowShowOnPaneMenu
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -91,7 +93,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### Remarks
 
-##  <a name="loadbitmap"></a>  CMFCDropDownToolBar::LoadBitmap
+## <a name="loadbitmap"></a> CMFCDropDownToolBar::LoadBitmap
 
 Loads toolbar images from application resources.
 
@@ -135,7 +137,7 @@ The [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadto
 
 Call the `LoadBitmapEx` method to load additional images after you create the toolbar.
 
-##  <a name="loadtoolbar"></a>  CMFCDropDownToolBar::LoadToolBar
+## <a name="loadtoolbar"></a> CMFCDropDownToolBar::LoadToolBar
 
 ```
 virtual BOOL LoadToolBar(
@@ -168,7 +170,7 @@ virtual BOOL LoadToolBar(
 
 ### Remarks
 
-##  <a name="onlbuttonup"></a>  CMFCDropDownToolBar::OnLButtonUp
+## <a name="onlbuttonup"></a> CMFCDropDownToolBar::OnLButtonUp
 
 ```
 afx_msg void OnLButtonUp(
@@ -184,7 +186,7 @@ afx_msg void OnLButtonUp(
 
 ### Remarks
 
-##  <a name="onmousemove"></a>  CMFCDropDownToolBar::OnMouseMove
+## <a name="onmousemove"></a> CMFCDropDownToolBar::OnMouseMove
 
 ```
 afx_msg void OnMouseMove(
@@ -200,7 +202,7 @@ afx_msg void OnMouseMove(
 
 ### Remarks
 
-##  <a name="onsendcommand"></a>  CMFCDropDownToolBar::OnSendCommand
+## <a name="onsendcommand"></a> CMFCDropDownToolBar::OnSendCommand
 
 ```
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
@@ -214,7 +216,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 
 ### Remarks
 
-##  <a name="onupdatecmdui"></a>  CMFCDropDownToolBar::OnUpdateCmdUI
+## <a name="onupdatecmdui"></a> CMFCDropDownToolBar::OnUpdateCmdUI
 
 ```
 virtual void OnUpdateCmdUI(
@@ -230,7 +232,7 @@ virtual void OnUpdateCmdUI(
 
 ### Remarks
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
@@ -239,4 +241,3 @@ virtual void OnUpdateCmdUI(
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [CMFCDropDownToolbarButton Class](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
 [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-

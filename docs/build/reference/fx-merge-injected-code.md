@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: /Fx (Merge Injected Code)"
 title: "/Fx (Merge Injected Code)"
 ms.date: "11/04/2016"
 f1_keywords: ["VC.Project.VCCLWCECompilerTool.ExpandAttributedSource", "/Fx", "VC.Project.VCCLCompilerTool.ExpandAttributedSource"]
@@ -38,7 +39,7 @@ In an .mrg file, code that was injected because of an attribute will be delimite
 //--- End Injected Code
 ```
 
-The [no_injected_text](../../windows/no-injected-text.md) attribute is embedded in an .mrg file, which allows for the compilation of the .mrg file without text being reinjected.
+The [no_injected_text](../../windows/attributes/no-injected-text.md) attribute is embedded in an .mrg file, which allows for the compilation of the .mrg file without text being reinjected.
 
 You should be aware that the .mrg source file is intended to be a representation of the source code injected by the compiler. The .mrg file may not compile or run exactly as the original source file.
 
@@ -48,11 +49,9 @@ If your program includes a header file that uses injected code, **/Fx** generate
 
 ### To set this compiler option in the Visual Studio development environment
 
-1. Open the project's **Property Pages** dialog box. For details, see [Working with Project Properties](../../ide/working-with-project-properties.md).
+1. Open the project's **Property Pages** dialog box. For details, see [Set C++ compiler and build properties in Visual Studio](../working-with-project-properties.md).
 
-1. Click the **C/C++** folder.
-
-1. Click the **Output Files** property page.
+1. Select the **Configuration Properties** > **C/C++** > **Output Files** property page.
 
 1. Modify the **Expand Attributed Source** property.
 
@@ -60,8 +59,8 @@ If your program includes a header file that uses injected code, **/Fx** generate
 
 - See <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ExpandAttributedSource%2A>.
 
-## See Also
+## See also
 
-[Output-File (/F) Options](../../build/reference/output-file-f-options.md)<br/>
-[Compiler Options](../../build/reference/compiler-options.md)<br/>
-[Setting Compiler Options](../../build/reference/setting-compiler-options.md)
+[Output-File (/F) Options](output-file-f-options.md)<br/>
+[MSVC Compiler Options](compiler-options.md)<br/>
+[MSVC Compiler Command-Line Syntax](compiler-command-line-syntax.md)

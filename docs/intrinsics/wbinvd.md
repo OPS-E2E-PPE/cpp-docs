@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: __wbinvd"
 title: "__wbinvd"
-ms.date: "11/04/2016"
+ms.date: "09/02/2019"
 f1_keywords: ["__wbinvd"]
 helpviewer_keywords: ["__wbinvd intrinsic", "wbinvd instruction"]
 ms.assetid: 628d0981-39e5-49e1-bd43-706d123af121
@@ -13,7 +14,7 @@ Generates the Write Back and Invalidate Cache (`wbinvd`) instruction.
 
 ## Syntax
 
-```
+```C
 void __wbinvd(void);
 ```
 
@@ -31,6 +32,6 @@ This function is only available in kernel mode with a privilege level (CPL) of 0
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
-[Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)
+[Compiler intrinsics](../intrinsics/compiler-intrinsics.md)

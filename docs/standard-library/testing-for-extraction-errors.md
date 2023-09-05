@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Testing for Extraction Errors"
 title: "Testing for Extraction Errors"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["extraction errors"]
@@ -16,4 +17,4 @@ If `n` is a signed integer, a value greater than 32,767 (the maximum allowed val
 
 ## See also
 
-[Input Streams](../standard-library/input-streams.md)<br/>
+[Input Streams](../standard-library/input-streams.md)

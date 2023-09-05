@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2755"
 title: "Compiler Error C2755"
 ms.date: "11/04/2016"
 f1_keywords: ["C2755"]
@@ -13,7 +14,7 @@ The non-type parameter needs to be a simple identifier, something the compiler c
 
 The following sample generates C2755:
 
-```
+```cpp
 // C2755.cpp
 template<int I, int J>
 struct A {};

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComAutoCriticalSection Class"
 title: "CComAutoCriticalSection Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComAutoCriticalSection", "ATLCORE/ATL::CComAutoCriticalSection", "ATLCORE/ATL::CComAutoCriticalSection::CComAutoCriticalSection"]
@@ -28,7 +29,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 `CComAutoCriticalSection` is similar to class [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), except `CComAutoCriticalSection` automatically initializes the critical section object in the constructor.
 
-Typically, you use `CComAutoCriticalSection` through the `typedef` name [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). This name references `CComAutoCriticalSection` when [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) is being used.
+Typically, you use `CComAutoCriticalSection` through the **`typedef`** name [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). This name references `CComAutoCriticalSection` when [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) is being used.
 
 The `Init` and `Term` methods from [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) are not available when using this class.
 
@@ -42,7 +43,7 @@ The `Init` and `Term` methods from [CComCriticalSection](../../atl/reference/cco
 
 **Header:** atlcore.h
 
-##  <a name="ccomautocriticalsection"></a>  CComAutoCriticalSection::CComAutoCriticalSection
+## <a name="ccomautocriticalsection"></a> CComAutoCriticalSection::CComAutoCriticalSection
 
 The constructor.
 
@@ -52,9 +53,9 @@ CComAutoCriticalSection();
 
 ### Remarks
 
-Calls the Win32 function [InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection), which initializes the critical section object.
+Calls the Win32 function [InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), which initializes the critical section object.
 
-##  <a name="dtor"></a>  CComAutoCriticalSection::~CComAutoCriticalSection
+## <a name="dtor"></a> CComAutoCriticalSection::~CComAutoCriticalSection
 
 The destructor.
 
@@ -64,9 +65,9 @@ The destructor.
 
 ### Remarks
 
-The destructor calls [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection), which releases all system resources used by the critical section object.
+The destructor calls [DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), which releases all system resources used by the critical section object.
 
-## See Also
+## See also
 
 [CComFakeCriticalSection Class](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)<br/>

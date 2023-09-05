@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Menu Sample List"
 title: "Menu Sample List"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["sample applications [MFC], menus"]
@@ -10,13 +11,12 @@ See the following sample programs that illustrate creating, editing, and updatin
 
 *MDI Sample: Enable and Disable Menu Items*
 
-- [SCRIBBLE](../visual-cpp-samples.md)
+- [SCRIBBLE](../overview/visual-cpp-samples.md)
 
 *Dynamically Change Menus*
 
-- [DYNAMENU](../visual-cpp-samples.md)
+- [DYNAMENU](../overview/visual-cpp-samples.md)
 
-## See Also
+## See also
 
-[Menus](../mfc/menus-mfc.md)
-
+[Menus](menus-mfc.md)

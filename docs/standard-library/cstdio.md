@@ -1,11 +1,12 @@
 ---
-title: "&lt;cstdio&gt;"
+description: "Learn more about: <cstdio>"
+title: "<cstdio>"
 ms.date: "11/04/2016"
 f1_keywords: ["<cstdio>"]
 helpviewer_keywords: ["cstdio header"]
 ms.assetid: 838ca50b-dea5-4ee3-a39c-e7c23a6ee016
 ---
-# &lt;cstdio&gt;
+# `<cstdio>`
 
 Includes the Standard C library header \<stdio.h> and adds the associated names to the `std` namespace.
 
@@ -21,6 +22,6 @@ Including this header ensures that the names declared using external linkage in 
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

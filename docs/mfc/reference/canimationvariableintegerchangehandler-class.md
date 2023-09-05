@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAnimationVariableIntegerChangeHandler Class"
 title: "CAnimationVariableIntegerChangeHandler Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAnimationVariableIntegerChangeHandler", "AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler", "AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler", "AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::CreateInstance", "AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged", "AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::SetAnimationController"]
@@ -49,7 +50,7 @@ This event handler is created and passed to IUIAnimationVariable::SetVariableInt
 
 **Header:** afxanimationcontroller.h
 
-##  <a name="canimationvariableintegerchangehandler"></a>  CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler
+## <a name="canimationvariableintegerchangehandler"></a> CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler
 
 Constructs a CAnimationVariableIntegerChangeHandler object.
 
@@ -57,7 +58,7 @@ Constructs a CAnimationVariableIntegerChangeHandler object.
 CAnimationVariableIntegerChangeHandler ();
 ```
 
-##  <a name="createinstance"></a>  CAnimationVariableIntegerChangeHandler::CreateInstance
+## <a name="createinstance"></a> CAnimationVariableIntegerChangeHandler::CreateInstance
 
 Creates an instance of CAnimationVariableIntegerChangeHandler callback.
 
@@ -78,7 +79,7 @@ A pointer to animation controller, which will receive events.
 
 If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.
 
-##  <a name="onintegervaluechanged"></a>  CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged
+## <a name="onintegervaluechanged"></a> CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged
 
 Called when a value of an animation variable has changed.
 
@@ -108,11 +109,11 @@ The previous rounded value.
 
 S_OK if the method succeeds; otherwise E_FAIL.
 
-##  <a name="setanimationcontroller"></a>  CAnimationVariableIntegerChangeHandler::SetAnimationController
+## <a name="setanimationcontroller"></a> CAnimationVariableIntegerChangeHandler::SetAnimationController
 
 Stores a pointer to animation controller to route events.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
@@ -121,6 +122,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *pAnimationController*<br/>
 A pointer to animation controller, which will receive events.
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

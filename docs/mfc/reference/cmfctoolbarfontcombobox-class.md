@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCToolBarFontComboBox Class"
 title: "CMFCToolBarFontComboBox Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCToolBarFontComboBox", "AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox", "AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::CMFCToolBarFontComboBox", "AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::GetFontDesc", "AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::SetFont"]
@@ -49,7 +50,7 @@ To add a font combo box button to a toolbar, follow these steps:
 
 To synchronize the document's font with the font selected in the combo box, use the [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) method to retrieve the attributes of the selected font, and use those attributes to create a [CFont Class](../../mfc/reference/cfont-class.md) object.
 
-The font combo box button calls the Win32 function [EnumFontFamiliesEx](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesexa) to determine the screen and printer fonts available to the system.
+The font combo box button calls the Win32 function [EnumFontFamiliesEx](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesexw) to determine the screen and printer fonts available to the system.
 
 ## Inheritance Hierarchy
 
@@ -65,7 +66,7 @@ The font combo box button calls the Win32 function [EnumFontFamiliesEx](/windows
 
 **Header:** afxtoolbarfontcombobox.h
 
-##  <a name="cmfctoolbarfontcombobox"></a>  CMFCToolBarFontComboBox::CMFCToolBarFontComboBox
+## <a name="cmfctoolbarfontcombobox"></a> CMFCToolBarFontComboBox::CMFCToolBarFontComboBox
 
 Constructs a [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) object.
 
@@ -108,7 +109,7 @@ RASTER_FONTTYPE
 TRUETYPE_FONTTYPE
 
 *nCharSet*<br/>
-[in] If set to DEFAULT_CHARSET, the combo box contains all uniquely-named fonts in all character sets. (If there are two fonts with the same name, the combo box contains one of them.) If set to a valid character set value, the combo box contains only fonts in the specified character set. See [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) for a listing of possible character sets.
+[in] If set to DEFAULT_CHARSET, the combo box contains all uniquely-named fonts in all character sets. (If there are two fonts with the same name, the combo box contains one of them.) If set to a valid character set value, the combo box contains only fonts in the specified character set. See [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) for a listing of possible character sets.
 
 *dwStyle*<br/>
 [in] The style of the combo box. (see [Combo-Box Styles](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))
@@ -128,11 +129,11 @@ Usually, `CMFCToolBarFontComboBox` objects store the list of available fonts in 
 
 ### Example
 
-The following example demonstrates how to construct a `CMFCToolBarFontComboBox` object. This code snippet is part of the [Word Pad sample](../../visual-cpp-samples.md).
+The following example demonstrates how to construct a `CMFCToolBarFontComboBox` object. This code snippet is part of the [Word Pad sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]
 
-##  <a name="getfontdesc"></a>  CMFCToolBarFontComboBox::GetFontDesc
+## <a name="getfontdesc"></a> CMFCToolBarFontComboBox::GetFontDesc
 
 Returns a pointer to the `CMFCFontInfo` object for a specified index in the combo box.
 
@@ -149,7 +150,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 
 A pointer to a `CMFCFontInfo` object. If *iIndex* does not specify a valid item index, the return value is NULL.
 
-##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight
+## <a name="m_nfontheight"></a> CMFCToolBarFontComboBox::m_nFontHeight
 
 Specifies the height, in pixels, of characters in the font combo box if the combo box has owner draw style.
 
@@ -161,7 +162,7 @@ static int m_nFontHeight
 
 If the `m_nFontHeight` variable is 0, the height is calculated automatically according to the default font of the combo box. The height includes both the ascent of characters above the baseline and the descent of characters underneath the baseline.
 
-##  <a name="setfont"></a>  CMFCToolBarFontComboBox::SetFont
+## <a name="setfont"></a> CMFCToolBarFontComboBox::SetFont
 
 Selects the font in the font combo box according to the font name and character set that are specified in the parameters.
 
@@ -191,7 +192,7 @@ Nonzero if the font was selected successfully; otherwise 0.
 
 If *bExact* is TRUE, this method selects a font that exactly matches the name that you specified as *lpszName*. If *bExact* is FALSE, this method selects a font that starts with the text specified as *lpszName* and that uses the character set that you specified as *nCharSet*. If *nCharSet* is set to DEFAULT_CHARSET, the character set will be ignored and only *lpszName* will be used to select a font.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
@@ -201,4 +202,3 @@ If *bExact* is TRUE, this method selects a font that exactly matches the name th
 [CMFCFontInfo Class](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-

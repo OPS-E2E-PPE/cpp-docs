@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2805"
 title: "Compiler Error C2805"
 ms.date: "11/04/2016"
 f1_keywords: ["C2805"]
@@ -13,7 +14,7 @@ The binary operator has no parameters.
 
 The following sample generates C2805:
 
-```
+```cpp
 // C2805.cpp
 // compile with: /c
 class X {

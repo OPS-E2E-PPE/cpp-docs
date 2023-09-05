@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Operator overloading"
 title: "Operator Overloading"
 ms.date: "11/04/2016"
 f1_keywords: ["operator_cpp", "operator"]
@@ -7,17 +8,17 @@ ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
 ---
 # Operator overloading
 
-The **operator** keyword declares a function specifying what *operator-symbol* means when applied to instances of a class. This gives the operator more than one meaning, or "overloads" it. The compiler distinguishes between the different meanings of an operator by examining the types of its operands.
+The **`operator`** keyword declares a function specifying what *operator-symbol* means when applied to instances of a class. This gives the operator more than one meaning, or "overloads" it. The compiler distinguishes between the different meanings of an operator by examining the types of its operands.
 
 ## Syntax
 
-> *type* **operator** *operator-symbol* **(** *parameter-list* **)**
+> *type* **`operator`** *operator-symbol* **(** *parameter-list* **)**
 
 ## Remarks
 
 You can redefine the function of most built-in operators globally or on a class-by-class basis. Overloaded operators are implemented as functions.
 
-The name of an overloaded operator is **operator** *x*, where *x* is the operator as it appears in the following table. For example, to overload the addition operator, you define a function called **operator+**. Similarly, to overload the addition/assignment operator, **+=**, define a function called **operator+=**.
+The name of an overloaded operator is **`operator`** *x*, where *x* is the operator as it appears in the following table. For example, to overload the addition operator, you define a function called **operator+**. Similarly, to overload the addition/assignment operator, **+=**, define a function called **operator+=**.
 
 ### Redefinable Operators
 
@@ -34,9 +35,9 @@ The name of an overloaded operator is **operator** *x*, where *x* is the operato
 |**&=**|Bitwise AND assignment|Binary|
 |**( )**|Function call|—|
 |**( )**|Cast Operator|Unary|
-|**&#42;**|Multiplication|Binary|
-|**&#42;**|Pointer dereference|Unary|
-|**&#42;=**|Multiplication assignment|Binary|
+|**`*`**|Multiplication|Binary|
+|**`*`**|Pointer dereference|Unary|
+|**`*=`**|Multiplication assignment|Binary|
 |**+**|Addition|Binary|
 |**+**|Unary Plus|Unary|
 |**++**|Increment <sup>1</sup>|Unary|
@@ -46,7 +47,7 @@ The name of an overloaded operator is **operator** *x*, where *x* is the operato
 |**--**|Decrement <sup>1</sup>|Unary|
 |**-=**|Subtraction assignment|Binary|
 |**->**|Member selection|Binary|
-|**->&#42;**|Pointer-to-member selection|Binary|
+|**`->*`**|Pointer-to-member selection|Binary|
 |**/**|Division|Binary|
 |**/=**|Division assignment|Binary|
 |**\<**|Less than|Binary|
@@ -62,12 +63,12 @@ The name of an overloaded operator is **operator** *x*, where *x* is the operato
 |**[ ]**|Array subscript|—|
 |**^**|Exclusive OR|Binary|
 |**^=**|Exclusive OR assignment|Binary|
-|**&#124;**|Bitwise inclusive OR|Binary|
-|**&#124;=**|Bitwise inclusive OR assignment|Binary|
-|**&#124;&#124;**|Logical OR|Binary|
+|**\|**|Bitwise inclusive OR|Binary|
+|**\|=**|Bitwise inclusive OR assignment|Binary|
+|**\|\|**|Logical OR|Binary|
 |**~**|One's complement|Unary|
-|**delete**|Delete|—|
-|**new**|New|—|
+|**`delete`**|Delete|—|
+|**`new`**|New|—|
 |conversion operators|conversion operators|Unary|
 
 <sup>1</sup> Two versions of the unary increment and decrement operators exist: preincrement and postincrement.
@@ -97,7 +98,7 @@ The operators shown in the following table cannot be overloaded. The table inclu
 |Operator|Name|
 |-|-|
 |**.**|Member selection|
-|**.&#42;**|Pointer-to-member selection|
+|**`.*`**|Pointer-to-member selection|
 |**::**|Scope resolution|
 |**? :**|Conditional|
 |**#**|Preprocessor convert to string|

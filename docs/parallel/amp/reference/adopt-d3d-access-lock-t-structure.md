@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: adopt_d3d_access_lock_t Structure"
 title: "adopt_d3d_access_lock_t Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["amprt/concurrency::direct3d::adopt_d3d_access_lock_t"]
@@ -10,7 +11,7 @@ Tag type to indicate the D3D access lock should be adopted rather than acquired.
 
 ## Syntax
 
-```
+```cpp
 struct adopt_d3d_access_lock_t;
 ```
 
@@ -26,6 +27,6 @@ struct adopt_d3d_access_lock_t;
 
 **Namespace:** concurrency::direct3d
 
-## See Also
+## See also
 
 [Concurrency::direct3d Namespace](concurrency-direct3d-namespace.md)

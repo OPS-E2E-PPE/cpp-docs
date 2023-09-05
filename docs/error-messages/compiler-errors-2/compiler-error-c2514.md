@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2514"
 title: "Compiler Error C2514"
 ms.date: "11/04/2016"
 f1_keywords: ["C2514"]
@@ -15,7 +16,7 @@ A class must be fully declared before it can be instantiated.
 
 The following sample generates C2514:
 
-```
+```cpp
 // C2514.cpp
 // compile with: /c
 class f;

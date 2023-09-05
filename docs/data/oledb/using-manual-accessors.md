@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using Manual Accessors"
 title: "Using Manual Accessors"
 ms.date: "10/24/2018"
 helpviewer_keywords: ["command handling, OLE DB Templates", "manual accessors", "accessors [C++], manual"]
@@ -28,14 +29,14 @@ To do these things with the OLE DB Consumer Templates, use the `CManualAccessor`
 
 1. For each parameter, call `AddParameterEntry` to add the parameters and set them.
 
-1. Open the rowset but set the bind parameter to **false**.
+1. Open the rowset but set the bind parameter to **`false`**.
 
 1. Call `GetColumnInfo` to retrieve the output columns. Use `AddBindEntry` to add the output column to the binding.
 
 1. Call `GetNextResult` to determine if more rowsets are available. Repeat steps 2 through 5.
 
-For an example of a manual accessor, see `CDBListView::CallProcedure` in the [DBVIEWER](https://github.com/Microsoft/VCSamples) sample.
+For an example of a manual accessor, see `CDBListView::CallProcedure` in the [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) sample.
 
-## See Also
+## See also
 
 [Using Accessors](../../data/oledb/using-accessors.md)

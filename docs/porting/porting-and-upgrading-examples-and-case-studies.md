@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Porting and Upgrading: Examples and Case Studies"
 title: "Porting and Upgrading: Examples and Case Studies"
 ms.date: "11/04/2016"
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
@@ -17,6 +18,6 @@ Here, you can read about what it took to migrate some modest samples and tools t
 
 - [Spy++](../porting/porting-guide-spy-increment.md) is an application that inspects and provides information about UI elements in running applications.
 
-## See Also
+## See also
 
 [Visual C++ Porting and Upgrading Guide](../porting/visual-cpp-porting-and-upgrading-guide.md)

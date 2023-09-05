@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3866"
 title: "Compiler Error C3866"
 ms.date: "11/04/2016"
 f1_keywords: ["C3866"]
@@ -13,7 +14,7 @@ Inside a nonstatic member function, a destructor or finalizer call did not have 
 
 The following sample generates C3866:
 
-```
+```cpp
 // C3866.cpp
 // compile with: /c
 class C {

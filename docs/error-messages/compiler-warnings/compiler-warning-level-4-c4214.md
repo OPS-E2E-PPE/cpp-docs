@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4214"
 title: "Compiler Warning (level 4) C4214"
 ms.date: "11/04/2016"
 f1_keywords: ["C4214"]
@@ -13,7 +14,7 @@ With the default Microsoft extensions (/Ze), bitfield structure members can be o
 
 ## Example
 
-```
+```c
 // C4214.c
 // compile with: /W4
 struct bitfields

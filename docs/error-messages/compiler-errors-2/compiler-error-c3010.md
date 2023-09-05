@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3010"
 title: "Compiler Error C3010"
 ms.date: "11/04/2016"
 f1_keywords: ["C3010"]
@@ -13,7 +14,7 @@ Code cannot jump into or out of an OpenMP block.
 
 The following sample generates C3010:
 
-```
+```c
 // C3010.c
 // compile with: /openmp
 int main() {

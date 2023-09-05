@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: /ALLOWBIND"
 title: "/ALLOWBIND"
 ms.date: "11/04/2016"
-f1_keywords: ["/allowbind"]
+f1_keywords: ["/allowbind_bind"]
 helpviewer_keywords: ["ALLOWBIND editbin option", "/ALLOWBIND editbin option", "-ALLOWBIND editbin option"]
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
 ---
@@ -10,7 +11,6 @@ ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
 Specifies whether a DLL can be bound.
 
 ```
-
 /ALLOWBIND[:NO]
 ```
 
@@ -20,8 +20,8 @@ The **/ALLOWBIND** option sets a bit in a DLL's header that indicates to Bind.ex
 
 Use **/ALLOWBIND:NO** to prevent Bind.exe from binding the DLL.
 
-For more information, see the [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) linker option.
+For more information, see the [/ALLOWBIND](allowbind-prevent-dll-binding.md) linker option.
 
-## See Also
+## See also
 
-[EDITBIN Options](../../build/reference/editbin-options.md)
+[EDITBIN Options](editbin-options.md)

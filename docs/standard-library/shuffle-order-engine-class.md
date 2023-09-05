@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: shuffle_order_engine Class"
 title: "shuffle_order_engine Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::shuffle_order_engine", "random/std::shuffle_order_engine::base", "random/std::shuffle_order_engine::discard", "random/std::shuffle_order_engine::operator()", "random/std::shuffle_order_engine::base_type", "random/std::shuffle_order_engine::seed"]
@@ -18,24 +19,26 @@ class shuffle_order_engine;
 
 ### Parameters
 
-*Engine*<br/>
+*Engine*\
 The base engine type.
 
-*K*<br/>
+*K*\
 **Table size**. Number of elements in the buffer (table). **Precondition**: `0 < K`
 
 ## Members
 
-||||
-|-|-|-|
-|`shuffle_order_engine::shuffle_order_engine`|`shuffle_order_engine::base`|`shuffle_order_engine::discard`|
-|`shuffle_order_engine::operator()`|`shuffle_order_engine::base_type`|`shuffle_order_engine::seed`|
+`shuffle_order_engine::shuffle_order_engine`\
+`shuffle_order_engine::base`\
+`shuffle_order_engine::base_type`\
+`shuffle_order_engine::discard`\
+`shuffle_order_engine::operator()`\
+`shuffle_order_engine::seed`
 
 For more information about engine members, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-This template class describes an *engine adaptor* that produces values by reordering the values returned by its base engine. Each constructor fills the internal table with *K* values returned by the base engine, and a random element is selected from the table when a value is requested.
+This class template describes an *engine adaptor* that produces values by reordering the values returned by its base engine. Each constructor fills the internal table with *K* values returned by the base engine, and a random element is selected from the table when a value is requested.
 
 ## Requirements
 
@@ -45,4 +48,4 @@ This template class describes an *engine adaptor* that produces values by reorde
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

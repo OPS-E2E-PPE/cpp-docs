@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2333"
 title: "Compiler Error C2333"
 ms.date: "11/04/2016"
 f1_keywords: ["C2333"]
@@ -13,7 +14,7 @@ This error occurs after another error, for member functions defined inside their
 
 The following sample generates C2333:
 
-```
+```cpp
 // C2333.cpp
 struct s1 {
    s1(s1) {}   // C2333

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: scheduler_resource_allocation_error Class"
 title: "scheduler_resource_allocation_error Class"
 ms.date: "11/04/2016"
 f1_keywords: ["scheduler_resource_allocation_error", "CONCRT/concurrency::scheduler_resource_allocation_error", "CONCRT/concurrency::scheduler_resource_allocation_error::scheduler_resource_allocation_error", "CONCRT/concurrency::scheduler_resource_allocation_error::get_error_code"]
@@ -11,7 +12,7 @@ This class describes an exception thrown because of a failure to acquire a criti
 
 ## Syntax
 
-```
+```cpp
 class scheduler_resource_allocation_error : public std::exception;
 ```
 
@@ -45,11 +46,11 @@ This exception is typically thrown when a call to the operating system from with
 
 **Namespace:** concurrency
 
-##  <a name="get_error_code"></a> get_error_code
+## <a name="get_error_code"></a> get_error_code
 
 Returns the error code that caused the exception.
 
-```
+```cpp
 HRESULT get_error_code() const throw();
 ```
 
@@ -57,11 +58,11 @@ HRESULT get_error_code() const throw();
 
 The `HRESULT` value of the error that caused the exception.
 
-##  <a name="ctor"></a> scheduler_resource_allocation_error
+## <a name="ctor"></a> scheduler_resource_allocation_error
 
 Constructs a `scheduler_resource_allocation_error` object.
 
-```
+```cpp
 scheduler_resource_allocation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -78,6 +79,6 @@ A descriptive message of the error.
 *_Hresult*<br/>
 The `HRESULT` value of the error that caused the exception.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

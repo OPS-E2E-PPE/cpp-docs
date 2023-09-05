@@ -1,5 +1,6 @@
 ---
-title: "hash Structure (C++ Standard Library)| Microsoft Docs"
+description: "Learn more about: hash Structure (C++ Standard Library)"
+title: hash Structure (C++ Standard Library)
 ms.date: "11/04/2016"
 f1_keywords: ["thread/std::hash"]
 ms.assetid: 4a8bf5bc-4334-4070-936b-98585f8a073b
@@ -28,6 +29,6 @@ struct hash<thread::id> :
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<thread>](../standard-library/thread.md)<br/>
-[unary_function Struct](../standard-library/unary-function-struct.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\
+[\<thread>](../standard-library/thread.md)\
+[unary_function Struct](../standard-library/unary-function-struct.md)

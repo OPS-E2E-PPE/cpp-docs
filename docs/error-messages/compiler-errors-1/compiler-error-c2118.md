@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2118"
 title: "Compiler Error C2118"
 ms.date: "11/04/2016"
 f1_keywords: ["C2118"]
@@ -13,7 +14,7 @@ The value defining the array size is larger than the maximum array size or small
 
 The following sample generates C2118:
 
-```
+```cpp
 // C2118.cpp
 int main() {
    int array1[-1];   // C2118

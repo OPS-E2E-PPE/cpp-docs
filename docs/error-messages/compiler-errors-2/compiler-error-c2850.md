@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2850"
 title: "Compiler Error C2850"
 ms.date: "11/04/2016"
 f1_keywords: ["C2850"]
@@ -13,7 +14,7 @@ Constructs, such as some pragmas, can only appear at global scope.
 
 The following sample generates C2850:
 
-```
+```cpp
 // C2850.cpp
 // compile with: /c /Yc
 // try the following line instead

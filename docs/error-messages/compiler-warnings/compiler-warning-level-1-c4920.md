@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4920"
 title: "Compiler Warning (level 1) C4920"
 ms.date: "11/04/2016"
 f1_keywords: ["C4920"]
@@ -28,7 +29,7 @@ library MyLib
 
 the following samples generates C4920,
 
-```
+```cpp
 // C4920.cpp
 // compile with: /W1
 #import "t4920.tlb"   // C4920

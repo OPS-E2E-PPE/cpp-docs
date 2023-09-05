@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ostrstream Class"
 title: "ostrstream Class"
 ms.date: "11/04/2016"
 f1_keywords: ["strstream/std::ostrstream::freeze", "strstream/std::ostrstream::pcount", "strstream/std::ostrstream::rdbuf", "strstream/std::ostrstream::str"]
@@ -43,7 +44,7 @@ The object stores an object of class `strstreambuf`.
 
 **Namespace:** std
 
-## <a name="freeze"></a>  ostrstream::freeze
+## <a name="freeze"></a> ostrstream::freeze
 
 Causes a stream buffer to be unavailable through stream buffer operations.
 
@@ -53,8 +54,8 @@ void freeze(bool _Freezeit = true);
 
 ### Parameters
 
-*_Freezeit*<br/>
-A **bool** indicating whether you want the stream to be frozen.
+*_Freezeit*\
+A **`bool`** indicating whether you want the stream to be frozen.
 
 ### Remarks
 
@@ -64,7 +65,7 @@ The member function calls [rdbuf](#rdbuf) -> [freeze](../standard-library/strstr
 
 See [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) for an example that uses `freeze`.
 
-## <a name="ostrstream"></a>  ostrstream::ostrstream
+## <a name="ostrstream"></a> ostrstream::ostrstream
 
 Constructs an object of type `ostrstream`.
 
@@ -78,13 +79,13 @@ ostrstream(char* ptr,
 
 ### Parameters
 
-*ptr*<br/>
+*ptr*\
 The buffer.
 
-*count*<br/>
+*count*\
 The size of the buffer in bytes.
 
-*_Mode*<br/>
+*_Mode*\
 The input and output mode of the buffer. See [ios_base::openmode](../standard-library/ios-base-class.md#openmode) for more information.
 
 ### Remarks
@@ -95,7 +96,7 @@ Both constructors initialize the base class by calling [ostream](../standard-lib
 
 - Otherwise, `ptr` must designate the first element of an array of count elements that contains a C string whose first element is designated by `ptr`, and the constructor calls `strstreambuf`(`ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
 
-## <a name="pcount"></a>  ostrstream::pcount
+## <a name="pcount"></a> ostrstream::pcount
 
 Returns a count of the number of elements written to the controlled sequence.
 
@@ -115,7 +116,7 @@ The member function returns [rdbuf](#rdbuf) -> [pcount](../standard-library/strs
 
 See [strstream::pcount](../standard-library/strstreambuf-class.md#pcount) for a sample that uses `pcount`.
 
-## <a name="rdbuf"></a>  ostrstream::rdbuf
+## <a name="rdbuf"></a> ostrstream::rdbuf
 
 Returns a pointer to the stream's associated strstreambuf object.
 
@@ -135,7 +136,7 @@ The member function returns the address of the stored stream buffer of type `poi
 
 See [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) for a sample that uses `rdbuf`.
 
-## <a name="str"></a>  ostrstream::str
+## <a name="str"></a> ostrstream::str
 
 Calls [freeze](../standard-library/strstreambuf-class.md#freeze), and then returns a pointer to the beginning of the controlled sequence.
 
@@ -157,7 +158,7 @@ See [strstream::str](../standard-library/strstreambuf-class.md#str) for a sample
 
 ## See also
 
-[ostream](../standard-library/ostream-typedefs.md#ostream)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream Programming](../standard-library/iostream-programming.md)<br/>
-[iostreams Conventions](../standard-library/iostreams-conventions.md)<br/>
+[ostream](../standard-library/ostream-typedefs.md#ostream)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream Programming](../standard-library/iostream-programming.md)\
+[iostreams Conventions](../standard-library/iostreams-conventions.md)

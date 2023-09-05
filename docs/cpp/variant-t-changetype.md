@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: _variant_t::ChangeType"
 title: "_variant_t::ChangeType"
 ms.date: "11/04/2016"
 f1_keywords: ["_variant_t::ChangeType", "_variant_t.ChangeType"]
@@ -13,7 +14,7 @@ Changes the type of the `_variant_t` object to the indicated `VARTYPE`.
 
 ## Syntax
 
-```
+```cpp
 void ChangeType(
    VARTYPE vartype,
    const _variant_t* pSrc = NULL

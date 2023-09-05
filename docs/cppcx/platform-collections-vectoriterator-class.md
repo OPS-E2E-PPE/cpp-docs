@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Platform::Collections::VectorIterator Class"
 title: "Platform::Collections::VectorIterator Class"
-ms.date: "12/30/2016"
+ms.date: "03/27/2019"
 ms.topic: "reference"
 f1_keywords: ["COLLECTION/Platform::Collections::VectorIterator::VectorIterator"]
 helpviewer_keywords: ["VectorIterator Class"]
@@ -56,11 +57,11 @@ The typename of the VectorIterator template class.
 |[VectorIterator::operator+= Operator](#operator-plus-assign)|Increments the current VectorIterator by the specified displacement.|
 |[VectorIterator::operator< Operator](#operator-less-than)|Indicates whether the current VectorIterator is less than a specified VectorIterator.|
 |[VectorIterator::operator\<= Operator](#operator-less-than-or-equals)|Indicates whether the current VectorIterator is less than or equal to a specified VectorIterator.|
-|[VectorIterator::operator-= Operator](#operator-subtract-assign)|Decrements the current VectorIterator by the specified displacement.|
+|[VectorIterator::operator-= Operator](#operator-minus-equals)|Decrements the current VectorIterator by the specified displacement.|
 |[VectorIterator::operator== Operator](#operator-equality)|Indicates whether the current VectorIterator is equal to a specified VectorIterator.|
 |[VectorIterator::operator> Operator](#operator-greater-than)|Indicates whether the current VectorIterator is greater than a specified VectorIterator.|
 |[VectorIterator::operator-> Operator](#operator-arrow)|Retrieves the address of the element referenced by the current VectorIterator.|
-|[VectorIterator::operator>= Operator](#operator-greater-than-or-equal)|Indicates whether the current VectorIterator is greater than or equal to a specified VectorIterator.|
+|[VectorIterator::operator>= Operator](#operator-greater-than-or-equals)|Indicates whether the current VectorIterator is greater than or equal to a specified VectorIterator.|
 
 ## Inheritance Hierarchy
 
@@ -72,7 +73,7 @@ The typename of the VectorIterator template class.
 
 **Namespace:** Platform::Collections
 
-## <a name="operator-arrow"></a>  VectorIterator::operator-&gt; Operator
+## <a name="operator-arrow"></a> `VectorIterator::operator->` Operator
 
 Retrieves the address of the element referenced by the current VectorIterator.
 
@@ -88,14 +89,13 @@ The value of the element that is referenced by the current VectorIterator.
 
 The type of the return value is an unspecified internal type that is required for the implementation of this operator.
 
-## <a name="operator-decrement"></a>  VectorIterator::operator-- Operator
+## <a name="operator-decrement"></a> VectorIterator::operator-- Operator
 
 Decrements the current VectorIterator.
 
 ### Syntax
 
 ```
-
 VectorIterator& operator--();
 VectorIterator operator--(int);
 ```
@@ -108,9 +108,9 @@ The first syntax decrements and then returns the current VectorIterator. The sec
 
 The first VectorIterator syntax pre-decrements the current VectorIterator.
 
-The second syntax post-decrements the current VectorIterator. The `int` type in the second syntax indicates a post-decrement operation, not an actual integer operand.
+The second syntax post-decrements the current VectorIterator. The **`int`** type in the second syntax indicates a post-decrement operation, not an actual integer operand.
 
-## <a name="operator-dereference"></a>  VectorIterator::operator\* Operator
+## <a name="operator-dereference"></a> VectorIterator::operator\* Operator
 
 Retrieves the address of the element specified by the current VectorIterator.
 
@@ -124,7 +124,7 @@ reference operator*() const;
 
 The element specified by the current VectorIterator.
 
-## <a name="operator-equality"></a>  VectorIterator::operator== Operator
+## <a name="operator-equality"></a> VectorIterator::operator== Operator
 
 Indicates whether the current VectorIterator is equal to a specified VectorIterator.
 
@@ -141,9 +141,9 @@ Another VectorIterator.
 
 ### Return Value
 
-**true** if the current VectorIterator is equal to *other*; otherwise, **false**.
+**`true`** if the current VectorIterator is equal to *other*; otherwise, **`false`**.
 
-## <a name="operator-greater-than"></a>  VectorIterator::operator&gt; Operator
+## <a name="operator-greater-than"></a> `VectorIterator::operator>` Operator
 
 Indicates whether the current VectorIterator is greater than a specified VectorIterator.
 
@@ -160,9 +160,9 @@ Another VectorIterator.
 
 ### Return Value
 
-**true** if the current VectorIterator is greater than *other*; otherwise, **false**.
+**`true`** if the current VectorIterator is greater than *other*; otherwise, **`false`**.
 
-## <a name="operator-greater-than-or-equals"></a>  VectorIterator::operator&gt;= Operator
+## <a name="operator-greater-than-or-equals"></a> `VectorIterator::operator>=` Operator
 
 Indicates whether the current VectorIterator is greater than or equal to the specified VectorIterator.
 
@@ -179,9 +179,9 @@ Another VectorIterator.
 
 ### Return Value
 
-**true** if the current VectorIterator is greater than or equal to *other*; otherwise, **false**.
+**`true`** if the current VectorIterator is greater than or equal to *other*; otherwise, **`false`**.
 
-## <a name="operator-increment"></a>  VectorIterator::operator++ Operator
+## <a name="operator-increment"></a> VectorIterator::operator++ Operator
 
 Increments the current VectorIterator.
 
@@ -200,9 +200,9 @@ The first syntax increments and then returns the current VectorIterator. The sec
 
 The first VectorIterator syntax pre-increments the current VectorIterator.
 
-The second syntax post-increments the current VectorIterator. The `int` type in the second syntax indicates a post-increment operation, not an actual integer operand.
+The second syntax post-increments the current VectorIterator. The **`int`** type in the second syntax indicates a post-increment operation, not an actual integer operand.
 
-## <a name="operator-inequality"></a>  VectorIterator::operator!= Operator
+## <a name="operator-inequality"></a> VectorIterator::operator!= Operator
 
 Indicates whether the current VectorIterator is not equal to a specified VectorIterator.
 
@@ -219,9 +219,9 @@ Another VectorIterator.
 
 ### Return Value
 
-**true** if the current VectorIterator is not equal to *other*; otherwise, **false**.
+**`true`** if the current VectorIterator is not equal to *other*; otherwise, **`false`**.
 
-## <a name="operator-less-than"></a>  VectorIterator::operator&lt; Operator
+## <a name="operator-less-than"></a> `VectorIterator::operator<` Operator
 
 Indicates whether the current VectorIterator is less than a specified VectorIterator.
 
@@ -238,9 +238,9 @@ Another VectorIterator.
 
 ### Return Value
 
-**true** if the current VectorIterator is less than *other*; otherwise, **false**.
+**`true`** if the current VectorIterator is less than *other*; otherwise, **`false`**.
 
-## <a name="operator-less-than-or-equals"></a>  VectorIterator::operator&lt;= Operator
+## <a name="operator-less-than-or-equals"></a> `VectorIterator::operator<=` Operator
 
 Indicates whether the current VectorIterator is less than or equal to a specified VectorIterator.
 
@@ -257,16 +257,15 @@ Another VectorIterator.
 
 ### Return Value
 
-**true** if the current VectorIterator is less than or equal to *other*; otherwise, **false**.
+**`true`** if the current VectorIterator is less than or equal to *other*; otherwise, **`false`**.
 
-## <a name="operator-minus"></a>  VectorIterator::operator- Operator
+## <a name="operator-minus"></a> VectorIterator::operator- Operator
 
 Subtracts either a specified number of elements from the current iterator yielding a new iterator, or a specified iterator from the current iterator yielding the number of elements between the iterators.
 
 ### Syntax
 
 ```
-
 VectorIterator operator-(difference_type n) const;
 
 difference_type operator-(const VectorIterator& other) const;
@@ -284,7 +283,7 @@ Another VectorIterator.
 
 The first operator syntax returns a VectorIterator object that is `n` elements less than the current VectorIterator. The second operator syntax returns the number of elements between the current and the `other` VectorIterator.
 
-## <a name="operator-plus-assign"></a>  VectorIterator::operator+= Operator
+## <a name="operator-plus-assign"></a> VectorIterator::operator+= Operator
 
 Increments the current VectorIterator by the specified displacement.
 
@@ -303,14 +302,13 @@ A integer displacement.
 
 The updated VectorIterator.
 
-## <a name="operator-plus"></a>  VectorIterator::operator+ Operator
+## <a name="operator-plus"></a> VectorIterator::operator+ Operator
 
 Returns a VectorIterator that references the element at the specified displacement from the specified VectorIterator.
 
 ### Syntax
 
 ```
-
 VectorIterator operator+(difference_type n);
 
 template <typename T>
@@ -340,7 +338,7 @@ In the second syntax, a VectorIterator that references the element at the specif
 
 The first syntax example
 
-## <a name="operator-minus-equals"></a>  VectorIterator::operator-= Operator
+## <a name="operator-minus-equals"></a> VectorIterator::operator-= Operator
 
 Decrements the current VectorIterator by the specified displacement.
 
@@ -359,7 +357,7 @@ An integer displacement.
 
 The updated VectorIterator.
 
-## <a name="operator-at"></a>  VectorIterator::operator\[\]
+## <a name="operator-at"></a> VectorIterator::operator\[\]
 
 Retrieves a reference to the element that is a specified displacement from the current VectorIterator.
 
@@ -378,7 +376,7 @@ An integer displacement.
 
 The element that is displaced by `n` elements from the current VectorIterator.
 
-## <a name="ctor"></a>  VectorIterator::VectorIterator Constructor
+## <a name="ctor"></a> VectorIterator::VectorIterator Constructor
 
 Initializes a new instance of the VectorIterator class.
 
@@ -400,6 +398,6 @@ An IVector\<T> object.
 
 The first syntax example is the default constructor. The second syntax example is an explicit constructor that is used to construct a VectorIterator from an IVector\<T> object.
 
-## See Also
+## See also
 
 [Platform Namespace](platform-namespace-c-cx.md)

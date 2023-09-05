@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDockablePaneAdapter Class"
 title: "CDockablePaneAdapter Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CDockablePaneAdapter", "AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter", "AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::GetWrappedWnd", "AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::LoadState", "AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::SaveState", "AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::SetWrappedWnd"]
@@ -34,17 +35,19 @@ If you want to customize the `CDockablePaneAdapter` behavior, just derive a new 
 
 ## Inheritance Hierarchy
 
-[CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
-
-[CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)
-
-[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&emsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&emsp;&emsp;└&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
+&emsp;&emsp;&emsp;└&nbsp;[CPane](../../mfc/reference/cpane-class.md)\
+&emsp;&emsp;&emsp;&emsp;└&nbsp;[CDockablePane](../../mfc/reference/cdockablepane-class.md)\
+&emsp;&emsp;&emsp;&emsp;&emsp;└&nbsp;[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
 
 ## Requirements
 
 **Header:** afxDockablePaneAdapter.h
 
-##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd
+## <a name="getwrappedwnd"></a> CDockablePaneAdapter::GetWrappedWnd
 
 Returns the underlying window for the dockable pane adapter.
 
@@ -60,7 +63,7 @@ A pointer to the wrapped window.
 
 Use this function to access the wrapped window.
 
-##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState
+## <a name="loadstate"></a> CDockablePaneAdapter::LoadState
 
 Loads the state of the pane from the registry.
 
@@ -86,7 +89,7 @@ virtual BOOL LoadState(
 
 ### Remarks
 
-##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState
+## <a name="savestate"></a> CDockablePaneAdapter::SaveState
 
 Saves the state of the pane to the registry.
 
@@ -112,7 +115,7 @@ virtual BOOL SaveState(
 
 ### Remarks
 
-##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd
+## <a name="setwrappedwnd"></a> CDockablePaneAdapter::SetWrappedWnd
 
 Sets the underlying window for the dockable pane adapter.
 
@@ -129,7 +132,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 
 ### Remarks
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

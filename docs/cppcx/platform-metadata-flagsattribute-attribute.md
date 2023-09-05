@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Metadata::FlagsAttribute Attribute"
 title: "Platform::Metadata::FlagsAttribute Attribute"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -34,6 +35,6 @@ public ref class Flags abstract : Attribute
 
 **Metadata:** platform.winmd
 
-## See Also
+## See also
 
 [Platform::Metadata Namespace](../cppcx/platform-metadata-namespace.md)

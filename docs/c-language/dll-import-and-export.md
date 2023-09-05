@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: DLL Import and Export"
 title: "DLL Import and Export"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["dllimport attribute [C++], storage-class attribute", "dllexport attribute [C++]", "dllexport attribute [C++], storage-class attribute"]
@@ -12,6 +13,6 @@ The dllimport and dllexport storage-class modifiers are Microsoft-specific exten
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
 [C Extended Storage-Class Attributes](../c-language/c-extended-storage-class-attributes.md)

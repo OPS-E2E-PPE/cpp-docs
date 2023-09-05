@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2957"
 title: "Compiler Error C2957"
 ms.date: "11/04/2016"
 f1_keywords: ["C2957"]
@@ -13,7 +14,7 @@ A generic class was ill formed.
 
 The following sample generates C2957:
 
-```
+```cpp
 // C2957.cpp
 // compile with: /clr /LD
 generic << class T>   // C2957

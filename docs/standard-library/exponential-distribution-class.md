@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: exponential_distribution Class"
 title: "exponential_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::exponential_distribution", "random/std::exponential_distribution::reset", "random/std::exponential_distribution::lambda", "random/std::exponential_distribution::param", "random/std::exponential_distribution::min", "random/std::exponential_distribution::max", "random/std::exponential_distribution::operator()", "random/std::exponential_distribution::param_type", "random/std::exponential_distribution::param_type::lambda", "random/std::exponential_distribution::param_type::operator==", "random/std::exponential_distribution::param_type::operator!="]
@@ -42,20 +43,18 @@ public:
 
 ### Parameters
 
-*RealType*<br/>
-The floating-point result type, defaults to **double**. For possible types, see [\<random>](../standard-library/random.md).
+*RealType*\
+The floating-point result type, defaults to **`double`**. For possible types, see [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
+*URNG*\
 The random number generator engine. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes a distribution that produces values of a user-specified integral type, or type **double** if none is provided, distributed according to the Exponential Distribution. The following table links to articles about individual members.
+The class template describes a distribution that produces values of a user-specified integral type, or type **`double`** if none is provided, distributed according to the Exponential Distribution. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|
-|`exponential_distribution::operator()`||[param_type](#param_type)|
+[exponential_distribution](#exponential_distribution)\
+[param_type](#param_type)
 
 The property member function `lambda()` returns the value for the stored distribution parameter `lambda`.
 
@@ -63,7 +62,7 @@ The property member function `param()` sets or returns the `param_type` stored d
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the exponential distribution, see the Wolfram MathWorld article [Exponential Distribution](http://go.microsoft.com/fwlink/p/?linkid=401098).
+For detailed information about the exponential distribution, see the Wolfram MathWorld article [Exponential Distribution](https://go.microsoft.com/fwlink/p/?linkid=401098).
 
 ## Example
 
@@ -146,7 +145,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="exponential_distribution"></a>  exponential_distribution::exponential_distribution
+## <a name="exponential_distribution"></a> exponential_distribution::exponential_distribution
 
 Constructs the distribution.
 
@@ -157,10 +156,10 @@ explicit exponential_distribution(const param_type& parm);
 
 ### Parameters
 
-*lambda*<br/>
+*lambda*\
 The `lambda` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The parameter package used to construct the distribution.
 
 ### Remarks
@@ -171,7 +170,7 @@ The first constructor constructs an object whose stored `lambda` value holds the
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  exponential_distribution::param_type
+## <a name="param_type"></a> exponential_distribution::param_type
 
 Stores the parameters of the distribution.
 
@@ -188,10 +187,10 @@ struct param_type {
 
 ### Parameters
 
-*lambda*<br/>
+*lambda*\
 The `lambda` distribution parameter.
 
-*right*<br/>
+*right*\
 The `param_type` object to compare to this.
 
 ### Remarks
@@ -202,4 +201,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

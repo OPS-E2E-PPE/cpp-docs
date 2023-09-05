@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: numpunct_byname Class"
 title: "numpunct_byname Class"
 ms.date: "11/04/2016"
 f1_keywords: ["xlocnum/std::numpunct_byname"]
@@ -7,7 +8,7 @@ ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
 ---
 # numpunct_byname Class
 
-The derived template class describes an object that can serve as a `numpunct` facet of a given locale enabling the formatting and punctuation of numeric and Boolean expressions.
+The derived class template describes an object that can serve as a `numpunct` facet of a given locale enabling the formatting and punctuation of numeric and Boolean expressions.
 
 ## Syntax
 
@@ -41,4 +42,4 @@ Its behavior is determined by the [named](../standard-library/locale-class.md#na
 
 ## See also
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

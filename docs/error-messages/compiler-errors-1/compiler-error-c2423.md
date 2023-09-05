@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2423"
 title: "Compiler Error C2423"
 ms.date: "11/04/2016"
 f1_keywords: ["C2423"]
@@ -13,7 +14,7 @@ Inline assembly code uses a number other than 1, 2, 4, or 8 to scale a register.
 
 The following sample generates C2423:
 
-```
+```cpp
 // C2423.cpp
 // processor: x86
 int main() {

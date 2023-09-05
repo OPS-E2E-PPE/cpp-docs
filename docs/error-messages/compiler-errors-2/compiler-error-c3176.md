@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3176"
 title: "Compiler Error C3176"
 ms.date: "11/04/2016"
 f1_keywords: ["C3176"]
@@ -15,7 +16,7 @@ A class can only be declared as a value type at global scope.
 
 The following sample generates C3176.
 
-```
+```cpp
 // C3176.cpp
 // compile with: /clr
 int main () {

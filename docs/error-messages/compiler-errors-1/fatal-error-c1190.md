@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Fatal Error C1190"
 title: "Fatal Error C1190"
 ms.date: "11/04/2016"
 f1_keywords: ["C1190"]
@@ -15,7 +16,7 @@ For more information, see [/clr (Common Language Runtime Compilation)](../../bui
 
 The following sample generates C1190:
 
-```
+```cpp
 // C1190.cpp
 // compile with: /c
 __gc class A {};   // C1190

@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: uninitialized_object Class"
 title: "uninitialized_object Class"
-ms.date: "11/04/2016"
+ms.date: "03/27/2019"
 f1_keywords: ["uninitialized_object", "AMPRT/uninitialized_object", "AMPRT/Concurrency::uninitialized_object"]
 helpviewer_keywords: ["uninitialized_object class"]
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
@@ -11,7 +12,7 @@ The exception that is thrown when an uninitialized object is used.
 
 ## Syntax
 
-```
+```cpp
 class uninitialized_object : public runtime_exception;
 ```
 
@@ -21,7 +22,7 @@ class uninitialized_object : public runtime_exception;
 
 |Name|Description|
 |----------|-----------------|
-|[uninitialized_object Constructor](#ctor)|Initializes a new instance of the `uninitialized_object` class.|
+|[uninitialized_object Constructor](#uninitialized_object)|Initializes a new instance of the `uninitialized_object` class.|
 
 ## Inheritance Hierarchy
 
@@ -36,17 +37,18 @@ class uninitialized_object : public runtime_exception;
 **Header:** amprt.h
 
 **Namespace:** Concurrency
-## <a name="uninitialized_object__ctor"></a> unsupported_feature
 
-Constructs a new instance of the unsupported_feature exception.
+## <a name="uninitialized_object"></a> uninitialized_object
+
+Constructs a new instance of the `uninitialized_object` exception.
 
 ### Syntax
 
-```
-explicit unsupported_feature(
+```cpp
+explicit uninitialized_object(
     const char * _Message ) throw();
 
-unsupported_feature() throw();
+uninitialized_object() throw();
 ```
 
 ### Parameters
@@ -56,8 +58,8 @@ A description of the error.
 
 ### Return Value
 
-The `unsupported_feature` object.
+The `uninitialized_object` exception object.
 
-## See Also
+## See also
 
 [Concurrency Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)

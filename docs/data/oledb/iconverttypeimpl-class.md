@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IConvertTypeImpl Class"
 title: "IConvertTypeImpl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["ATL.IConvertTypeImpl<T>", "IConvertTypeImpl", "ATL.IConvertTypeImpl", "ATL::IConvertTypeImpl", "ATL::IConvertTypeImpl<T>", "IConvertTypeImpl.CanConvert", "CanConvert", "IConvertTypeImpl::CanConvert"]
@@ -7,7 +8,7 @@ ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
 ---
 # IConvertTypeImpl Class
 
-Provides an implementation of the [IConvertType](https://docs.microsoft.com/previous-versions/windows/desktop/ms715926(v=vs.85)) interface.
+Provides an implementation of the [IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85)) interface.
 
 ## Syntax
 
@@ -30,7 +31,7 @@ Your class, derived from `IConvertTypeImpl`.
 
 ### Interface Methods
 
-|||
+| Name | Description |
 |-|-|
 |[CanConvert](#canconvert)|Gives information on the availability of type conversions on a command or on a rowset.|
 
@@ -52,13 +53,13 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 
 #### Parameters
 
-See [IConvertType::CanConvert](https://docs.microsoft.com/previous-versions/windows/desktop/ms711224(v=vs.85)) in the *OLE DB Programmer's Reference*.
+See [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ### Remarks
 
 Uses OLE DB data conversion in `MSADC.DLL`.
 
-## See Also
+## See also
 
 [OLE DB Provider Templates](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB Provider Template Architecture](../../data/oledb/ole-db-provider-template-architecture.md)

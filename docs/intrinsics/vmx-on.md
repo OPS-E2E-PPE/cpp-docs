@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: __vmx_on"
 title: "__vmx_on"
-ms.date: "11/04/2016"
+ms.date: 05/16/2022
 f1_keywords: ["__vmx_on"]
 helpviewer_keywords: ["VMXON instruction", "__vmx_on intrinsic"]
 ms.assetid: 16804991-6a75-4adf-8ec2-bc95acfa4801
@@ -13,18 +14,18 @@ Activates virtual machine extensions (VMX) operation in the processor.
 
 ## Syntax
 
-```
+```C
 unsigned char __vmx_on(
-   unsigned __int64 *VmsSupportPhysicalAddress
+   unsigned __int64 *VmxonRegionPhysicalAddress
 );
 ```
 
-#### Parameters
+### Parameters
 
-*VmsSupportPhysicalAddress*<br/>
-[in] A pointer to a 64-bit physical address that points to a virtual-machine control structure (VMCS).
+*`VmxonRegionPhysicalAddress`*\
+[in] A pointer to a 64-bit, 4KB-aligned physical address that points to a VMXON region.
 
-## Return Value
+## Return value
 
 |Value|Meaning|
 |-----------|-------------|
@@ -34,7 +35,7 @@ unsigned char __vmx_on(
 
 ## Remarks
 
-The `__vmx_on` function corresponds to the `VMXON` machine instruction. This function supports the interaction of a host's virtual machine monitor with a guest operating system and its applications. For more information, search for the document, "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," document number C97063-002, at the [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+The `__vmx_on` function corresponds to the `VMXON` machine instruction. This function supports the interaction of a host's virtual machine monitor with a guest operating system and its applications. For more information, see "Intel 64 and IA-32 Architectures Software Developer's Manual, Volume 3C: System Programming Guide, Part 3" in the [Intel 64 and IA-32 Architecture Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html).
 
 ## Requirements
 
@@ -46,6 +47,6 @@ The `__vmx_on` function corresponds to the `VMXON` machine instruction. This fun
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
-[Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)
+[Compiler intrinsics](../intrinsics/compiler-intrinsics.md)

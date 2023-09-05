@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: scheduler_not_attached Class"
 title: "scheduler_not_attached Class"
 ms.date: "11/04/2016"
 f1_keywords: ["scheduler_not_attached", "CONCRT/concurrency::scheduler_not_attached", "CONCRT/concurrency::scheduler_not_attached::scheduler_not_attached"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when an operation is performed which re
 
 ## Syntax
 
-```
+```cpp
 class scheduler_not_attached : public std::exception;
 ```
 
@@ -35,11 +36,11 @@ class scheduler_not_attached : public std::exception;
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> scheduler_not_attached
+## <a name="ctor"></a> scheduler_not_attached
 
 Constructs a `scheduler_not_attached` object.
 
-```
+```cpp
 explicit _CRTIMP scheduler_not_attached(_In_z_ const char* _Message) throw();
 
 scheduler_not_attached() throw();
@@ -50,7 +51,7 @@ scheduler_not_attached() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [Scheduler Class](scheduler-class.md)

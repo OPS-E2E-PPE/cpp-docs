@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2298"
 title: "Compiler Error C2298"
 ms.date: "11/04/2016"
 f1_keywords: ["C2298"]
@@ -11,11 +12,11 @@ ms.assetid: eb0120ad-c850-4bdd-911d-0361229cc859
 
 A pointer to member-function expression must call the member function.
 
-## Example
+## Examples
 
 The following sample generates C2298.
 
-```
+```cpp
 // C2298.cpp
 #include <stdio.h>
 
@@ -47,11 +48,9 @@ int main() {
 }
 ```
 
-## Example
-
 The following sample generates C2298.
 
-```
+```cpp
 // C2298_b.cpp
 // compile with: /c
 void F() {}

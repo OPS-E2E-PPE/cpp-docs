@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Slider Notification Messages"
 title: "Slider Notification Messages"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["CSliderCtrl class [MFC], notifications", "slider controls [MFC], notification messages", "messages, notification", "notifications [MFC], CSliderCtrl"]
@@ -24,8 +25,7 @@ The following table lists the slider control notification messages and the event
 |TB_THUMBTRACK|Slider movement (the user dragged the slider)|
 |TB_TOP|VK_HOME|
 
-## See Also
+## See also
 
 [Using CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

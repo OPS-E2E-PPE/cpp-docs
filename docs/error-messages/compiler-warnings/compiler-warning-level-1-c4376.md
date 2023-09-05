@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4376"
 title: "Compiler Warning (level 1) C4376"
 ms.date: "11/04/2016"
 f1_keywords: ["C4376"]
@@ -15,7 +16,7 @@ For more information on specifying type and member accessibility in metadata, se
 
 The following sample generates C4376.
 
-```
+```cpp
 // C4376.cpp
 // compile with: /clr /W1 /c
 public ref class G {

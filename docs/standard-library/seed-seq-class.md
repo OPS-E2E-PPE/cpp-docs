@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: seed_seq Class"
 title: "seed_seq Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::seed_seq", "random/std::seed_seq::result_type", "random/std::seed_seq::generate", "random/std::seed_seq::size", "random/std::seed_seq::param"]
@@ -181,4 +182,4 @@ Member functions of this class do not throw exceptions.
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

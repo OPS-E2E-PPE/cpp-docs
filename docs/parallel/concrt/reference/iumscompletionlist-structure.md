@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IUMSCompletionList Structure"
 title: "IUMSCompletionList Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["IUMSCompletionList", "CONCRTRM/concurrency::IUMSCompletionList", "CONCRTRM/concurrency::IUMSCompletionList::IUMSCompletionList::GetUnblockNotifications"]
@@ -11,7 +12,7 @@ Represents a UMS completion list. When a UMS thread blocks, the scheduler's desi
 
 ## Syntax
 
-```
+```cpp
 struct IUMSCompletionList;
 ```
 
@@ -37,11 +38,11 @@ A scheduler must be extraordinarily careful about what actions are performed aft
 
 **Namespace:** concurrency
 
-##  <a name="getunblocknotifications"></a>  IUMSCompletionList::GetUnblockNotifications Method
+## <a name="getunblocknotifications"></a> IUMSCompletionList::GetUnblockNotifications Method
 
 Retrieves a chain of `IUMSUnblockNotification` interfaces representing execution contexts whose associated thread proxies have unblocked since the last time this method was invoked.
 
-```
+```cpp
 virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 ```
 
@@ -53,7 +54,7 @@ A chain of `IUMSUnblockNotification` interfaces.
 
 The returned notifications are invalid once the execution contexts are rescheduled.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [IUMSScheduler Structure](iumsscheduler-structure.md)<br/>

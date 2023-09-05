@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Obtain a Pointer to Byte Array"
 title: "How to: Obtain a Pointer to Byte Array"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -11,7 +12,7 @@ You can obtain a pointer to the array block in a <xref:System.Byte> array by tak
 
 ## Example
 
-```
+```cpp
 // pointer_to_Byte_array.cpp
 // compile with: /clr
 using namespace System;
@@ -24,6 +25,6 @@ int main() {
 }
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

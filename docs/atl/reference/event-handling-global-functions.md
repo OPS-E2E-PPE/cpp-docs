@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Event Handling Global Functions"
 title: "Event Handling Global Functions"
 ms.date: "11/04/2016"
 f1_keywords: ["atlbase/ATL::AtlWaitWithMessageLoop"]
@@ -10,9 +11,9 @@ ms.assetid: fd674470-3def-47c3-be1c-894fa85f13e8
 This function provides an event handler.
 
 > [!IMPORTANT]
->  The function listed in the following table cannot be used in applications that execute in the Windows Runtime.
+> The function listed in the following table cannot be used in applications that execute in the Windows Runtime.
 
-|||
+|Name|Description|
 |-|-|
 |[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Waits for an object to be signaled, meanwhile dispatching window messages as needed.|
 
@@ -20,12 +21,12 @@ This function provides an event handler.
 
 **Header:** atlbase.h
 
-##  <a name="atlwaitwithmessageloop"></a>  AtlWaitWithMessageLoop
+## <a name="atlwaitwithmessageloop"></a> AtlWaitWithMessageLoop
 
 Waits for the object to be signaled, meanwhile dispatching window messages as needed.
 
 > [!IMPORTANT]
->  This function cannot be used in applications that execute in the Windows Runtime.
+> This function cannot be used in applications that execute in the Windows Runtime.
 
 ```
 BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
@@ -44,6 +45,6 @@ Returns TRUE if the object has been signaled.
 
 This is useful if you want to wait for an object's event to happen and be notified of it happening, but allow window messages to be dispatched while waiting.
 
-## See Also
+## See also
 
 [Functions](../../atl/reference/atl-functions.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAccelerateDecelerateTransition Class"
 title: "CAccelerateDecelerateTransition Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAccelerateDecelerateTransition", "afxanimationcontroller/CAccelerateDecelerateTransition"]
@@ -54,7 +55,7 @@ During an accelerate-decelerate transition, the animation variable speeds up and
 
 **Header:** afxanimationcontroller.h
 
-##  <a name="cacceleratedeceleratetransition"></a>  CAccelerateDecelerateTransition::CAccelerateDecelerateTransition
+## <a name="cacceleratedeceleratetransition"></a> CAccelerateDecelerateTransition::CAccelerateDecelerateTransition
 
 Constructs a transition object.
 
@@ -80,7 +81,7 @@ The ratio of the time spent accelerating to the duration.
 *decelerationRatio*<br/>
 The ratio of the time spent decelerating to the duration.
 
-##  <a name="create"></a>  CAccelerateDecelerateTransition::Create
+## <a name="create"></a> CAccelerateDecelerateTransition::Create
 
 Calls the transition library to create encapsulated transition COM object.
 
@@ -93,13 +94,13 @@ virtual BOOL Create(
 ### Parameters
 
 *pLibrary*<br/>
-A pointer to an [IUIAnimationTransitionLibrary interface](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), which defines a library of standard transitions.
+A pointer to an [IUIAnimationTransitionLibrary interface](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), which defines a library of standard transitions.
 
 ### Return Value
 
 TRUE if transition is created successfully; otherwise FALSE.
 
-##  <a name="m_accelerationratio"></a>  CAccelerateDecelerateTransition::m_accelerationRatio
+## <a name="m_accelerationratio"></a> CAccelerateDecelerateTransition::m_accelerationRatio
 
 The ratio of the time spent accelerating to the duration.
 
@@ -107,7 +108,7 @@ The ratio of the time spent accelerating to the duration.
 DOUBLE m_accelerationRatio;
 ```
 
-##  <a name="m_decelerationratio"></a>  CAccelerateDecelerateTransition::m_decelerationRatio
+## <a name="m_decelerationratio"></a> CAccelerateDecelerateTransition::m_decelerationRatio
 
 The ratio of the time spent decelerating to the duration.
 
@@ -115,7 +116,7 @@ The ratio of the time spent decelerating to the duration.
 DOUBLE m_decelerationRatio;
 ```
 
-##  <a name="m_duration"></a>  CAccelerateDecelerateTransition::m_duration
+## <a name="m_duration"></a> CAccelerateDecelerateTransition::m_duration
 
 The duration of the transition.
 
@@ -123,7 +124,7 @@ The duration of the transition.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_finalvalue"></a>  CAccelerateDecelerateTransition::m_finalValue
+## <a name="m_finalvalue"></a> CAccelerateDecelerateTransition::m_finalValue
 
 The value of the animation variable at the end of the transition.
 
@@ -131,6 +132,6 @@ The value of the animation variable at the end of the transition.
 DOUBLE m_finalValue;
 ```
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 2) C4056"
 title: "Compiler Warning (level 2) C4056"
 ms.date: "11/04/2016"
 f1_keywords: ["C4056"]
@@ -15,7 +16,7 @@ This warning can be caused by compiler optimizations performed during constant a
 
 The following sample generates C4056:
 
-```
+```cpp
 // C4056.cpp
 // compile with: /W2 /LD
 #pragma warning (default : 4056)

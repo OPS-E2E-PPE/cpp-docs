@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 2) C4756"
 title: "Compiler Warning (level 2) C4756"
 ms.date: "11/04/2016"
 f1_keywords: ["C4756"]
@@ -13,7 +14,7 @@ The compiler generated an exception while doing constant arithmetic during compi
 
 The following sample generates C4756:
 
-```
+```cpp
 // C4756.cpp
 // compile with: /W2 /Od
 int main()

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using an Image List"
 title: "Using an Image List"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["lists [MFC], image", "CImageList class [MFC], using", "image lists [MFC]"]
@@ -17,10 +18,9 @@ Typical usage of an image list follows the pattern below:
 - Perhaps allow the user to drag an image, using the image list's built-in support for dragging.
 
 > [!NOTE]
->  If the image list was created with the **new** operator, you must destroy the `CImageList` object when you are done with it.
+> If the image list was created with the **`new`** operator, you must destroy the `CImageList` object when you are done with it.
 
-## See Also
+## See also
 
 [Using CImageList](../mfc/using-cimagelist.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

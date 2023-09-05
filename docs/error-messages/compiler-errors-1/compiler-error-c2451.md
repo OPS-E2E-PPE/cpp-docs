@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2451"
 title: "Compiler Error C2451"
 ms.date: "11/04/2016"
 f1_keywords: ["C2451"]
@@ -13,7 +14,7 @@ The conditional expression evaluates to an integer type.
 
 The following sample generates C2451:
 
-```
+```cpp
 // C2451.cpp
 class B {};
 

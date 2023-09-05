@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3767"
 title: "Compiler Error C3767"
 ms.date: "11/04/2016"
 f1_keywords: ["C3767"]
@@ -17,7 +18,7 @@ C3767 may also be caused by a breaking change: native types are now private by d
 
 The following sample generates C3767:
 
-```
+```cpp
 // C3767a.cpp
 // compile with: /clr
 using namespace System;
@@ -48,7 +49,7 @@ int main() {
 
 The following sample generates C3767:
 
-```
+```cpp
 // C3767c.cpp
 // compile with: /clr /c
 
@@ -67,4 +68,3 @@ ref class Der : public Base {
    }
 };
 ```
-

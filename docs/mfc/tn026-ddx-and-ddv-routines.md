@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: TN026: DDX and DDV Routines"
 title: "TN026: DDX and DDV Routines"
 ms.date: "06/28/2018"
 f1_keywords: ["DDX", "DDV"]
@@ -112,7 +113,7 @@ There are several ways to extend the default DDX/DDV mechanism. You can:
     > [!NOTE]
     > Such arbitrary expressions cannot be edited by ClassWizard and therefore should be moved outside of the special format comments (//{{AFX_DATA_MAP(CMyClass)).
 
-Have the `DoDialogExchange` member function include conditionals or any other valid C++ statements with intermixed exchange and validation function calls.
+Have the `DoDataExchange` member function include conditionals or any other valid C++ statements with intermixed exchange and validation function calls.
 
 ```cpp
 //{{AFX_DATA_MAP(CMyClass)
@@ -201,11 +202,11 @@ Each field is delimited by a ';' character. The fields and their purpose are des
 
   *arg* is followed by 1 or 2 DDV args:
 
-   - *promptN*
+  - *promptN*
 
       String to place above the edit item (with & for accelerator).
 
-   - *fmtN*
+  - *fmtN*
 
       Format character for the arg type, one of:
 

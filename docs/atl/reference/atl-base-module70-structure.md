@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: _ATL_BASE_MODULE70 Structure"
 title: "_ATL_BASE_MODULE70 Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["ATL::_ATL_BASE_MODULE70", "ATL._ATL_BASE_MODULE70", "_ATL_BASE_MODULE70"]
@@ -11,7 +12,7 @@ Used by any project that uses ATL.
 
 ## Syntax
 
-```
+```cpp
 struct _ATL_BASE_MODULE70 {
     UINT cbSize;
     HINSTANCE m_hInst;
@@ -58,7 +59,6 @@ Array used to search for resources in all the resource instances of which ATL is
 
 **Header:** atlcore.h
 
-## See Also
+## See also
 
 [Classes and structs](../../atl/reference/atl-classes.md)
-

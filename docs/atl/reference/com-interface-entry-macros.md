@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COM_INTERFACE_ENTRY Macros"
 title: "COM Interface Entry Macros"
 ms.date: "03/28/2017"
 f1_keywords: ["atlcom/ATL::COM_INTERFACE_ENTRY", "atlcom/ATL::COM_INTERFACE_ENTRY_IID", "atlcom/ATL::COM_INTERFACE_ENTRY_AGGREGATE", "atlcom/ATL::COM_INTERFACE_ENTRY_AGGREGATE_BLIND", "atlcom/ATL::COM_INTERFACE_ENTRY_AUTOAGGREGATE", "atlcom/ATL::COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND", "atlcom/ATL::COM_INTERFACE_ENTRY_BREAK", "atlcom/ATL::COM_INTERFACE_ENTRY_CACHED_TEAR_OFF", "atlcom/ATL::COM_INTERFACE_ENTRY_TEAR_OFF", "atlcom/ATL::COM_INTERFACE_ENTRY_CHAIN", "atlcom/ATL::COM_INTERFACE_ENTRY_FUNC", "atlcom/ATL::COM_INTERFACE_ENTRY_FUNC_BLIND", "atlcom/ATL::COM_INTERFACE_ENTRY_NOINTERFACE"]
@@ -9,7 +10,7 @@ ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
 
 These macros enter an object's interfaces into its COM map so that they can be accessed by `QueryInterface`. The order of entries in the COM map is the order interfaces will be checked for a matching IID during `QueryInterface`.
 
-|||
+|Macro|Description|
 |-|-|
 |[COM_INTERFACE_ENTRY](#com_interface_entry)|Enters interfaces into the COM interface map.|
 |[COM_INTERFACE_ENTRY2](#com_interface_entry2)|Use this macro to disambiguate two branches of inheritance.|
@@ -19,7 +20,7 @@ These macros enter an object's interfaces into its COM map so that they can be a
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Same as [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), except that querying for any IID results in forwarding the query to *punk*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Same as [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), except if *punk* is NULL, it automatically creates the aggregate described by the *clsid*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Same as [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), except that querying for any IID results in forwarding the query to *punk*, and if *punk* is NULL, automatically creating the aggregate described by the *clsid*.|
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Causes your program to call [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) when the specified interface is queried for.|
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Causes your program to call [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) when the specified interface is queried for.|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Saves the interface-specific data for every instance.|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Exposes your tear-off interfaces.|
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Processes the COM map of the base class when the processing reaches this entry in the COM map.|
@@ -64,7 +65,7 @@ END_COM_MAP()
 
 **Header:** atlcom.h
 
-##  <a name="com_interface_entry2"></a>  COM_INTERFACE_ENTRY2
+## <a name="com_interface_entry2"></a> COM_INTERFACE_ENTRY2
 
 Use this macro to disambiguate two branches of inheritance.
 
@@ -88,7 +89,7 @@ For example, if you derive your class object from two dual interfaces, you expos
 
 [!code-cpp[NVC_ATL_Windowing#118](../../atl/codesnippet/cpp/com-map-macros_2.h)]
 
-##  <a name="com_interface_entry_iid"></a>  COM_INTERFACE_ENTRY_IID
+## <a name="com_interface_entry_iid"></a> COM_INTERFACE_ENTRY_IID
 
 Use this macro to enter the interface into the COM map and specify its IID.
 
@@ -108,7 +109,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 [!code-cpp[NVC_ATL_Windowing#117](../../atl/codesnippet/cpp/com-map-macros_3.h)]
 
-##  <a name="com_interface_entry2_iid"></a>  COM_INTERFACE_ENTRY2_IID
+## <a name="com_interface_entry2_iid"></a> COM_INTERFACE_ENTRY2_IID
 
 Same as [COM_INTERFACE_ENTRY2](#com_interface_entry2), except you can specify a different IID.
 
@@ -127,7 +128,7 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 *x2*<br/>
 [in] The name of a second interface that your class object derives from directly.
 
-##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE
+## <a name="com_interface_entry_aggregate"></a> COM_INTERFACE_ENTRY_AGGREGATE
 
 When the interface identified by *iid* is queried for, COM_INTERFACE_ENTRY_AGGREGATE forwards to *punk*.
 
@@ -151,7 +152,7 @@ The *punk* parameter is assumed to point to the inner unknown of an aggregate or
 
 [!code-cpp[NVC_ATL_Windowing#112](../../atl/codesnippet/cpp/com-map-macros_4.h)]
 
-##  <a name="com_interface_entry_aggregate_blind"></a>  COM_INTERFACE_ENTRY_AGGREGATE_BLIND
+## <a name="com_interface_entry_aggregate_blind"></a> COM_INTERFACE_ENTRY_AGGREGATE_BLIND
 
 Same as [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), except that querying for any IID results in forwarding the query to *punk*.
 
@@ -172,7 +173,7 @@ If the interface query fails, processing of the COM map continues.
 
 [!code-cpp[NVC_ATL_Windowing#113](../../atl/codesnippet/cpp/com-map-macros_5.h)]
 
-##  <a name="com_interface_entry_autoaggregate"></a>  COM_INTERFACE_ENTRY_AUTOAGGREGATE
+## <a name="com_interface_entry_autoaggregate"></a> COM_INTERFACE_ENTRY_AUTOAGGREGATE
 
 Same as [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), except if *punk* is NULL, it automatically creates the aggregate described by the *clsid*.
 
@@ -197,7 +198,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 [!code-cpp[NVC_ATL_Windowing#114](../../atl/codesnippet/cpp/com-map-macros_6.h)]
 
-##  <a name="com_interface_entry_autoaggregate_blind"></a>  COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND
+## <a name="com_interface_entry_autoaggregate_blind"></a> COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND
 
 Same as [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), except that querying for any IID results in forwarding the query to *punk*, and if *punk* is NULL, automatically creating the aggregate described by the *clsid*.
 
@@ -221,9 +222,9 @@ If the interface query fails, processing of the COM map continues.
 
 [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]
 
-##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK
+## <a name="com_interface_entry_break"></a> COM_INTERFACE_ENTRY_BREAK
 
-Causes your program to call [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) when the specified interface is queried for.
+Causes your program to call [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) when the specified interface is queried for.
 
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -238,7 +239,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
 
 The interface IID will be constructed by appending *x* to `IID_`. For example, if *x* is `IPersistStorage`, the IID will be `IID_IPersistStorage`.
 
-##  <a name="com_interface_entry_cached_tear_off"></a>  COM_INTERFACE_ENTRY_CACHED_TEAR_OFF
+## <a name="com_interface_entry_cached_tear_off"></a> COM_INTERFACE_ENTRY_CACHED_TEAR_OFF
 
 Saves the interface-specific data for every instance.
 
@@ -265,7 +266,7 @@ If the interface is not used, this lowers the overall instance size of your obje
 
 [!code-cpp[NVC_ATL_COM#54](../../atl/codesnippet/cpp/com-map-macros_8.h)]
 
-##  <a name="com_interface_entry_tear_off"></a>  COM_INTERFACE_ENTRY_TEAR_OFF
+## <a name="com_interface_entry_tear_off"></a> COM_INTERFACE_ENTRY_TEAR_OFF
 
 Exposes your tear-off interfaces.
 
@@ -289,7 +290,7 @@ A tear-off interface is implemented as a separate object that is instantiated ev
 
 [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]
 
-##  <a name="com_interface_entry_chain"></a>  COM_INTERFACE_ENTRY_CHAIN
+## <a name="com_interface_entry_chain"></a> COM_INTERFACE_ENTRY_CHAIN
 
 Processes the COM map of the base class when the processing reaches this entry in the COM map.
 
@@ -312,7 +313,7 @@ Note that the first entry in the COM map must be an interface on the object cont
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 
-##  <a name="com_interface_entry_func"></a>  COM_INTERFACE_ENTRY_FUNC
+## <a name="com_interface_entry_func"></a> COM_INTERFACE_ENTRY_FUNC
 
 A general mechanism for hooking into ATL's `QueryInterface` logic.
 
@@ -339,7 +340,7 @@ If *iid* matches the IID of the interface queried for, then the function specifi
 
 When your function is called, `pv` points to your class object. The *riid* parameter refers to the interface being queried for, `ppv` is the pointer to the location where the function should store the pointer to the interface, and *dw* is the parameter you specified in the entry. The function should set \* `ppv` to NULL and return E_NOINTERFACE or S_FALSE if it chooses not to return an interface. With E_NOINTERFACE, COM map processing terminates. With S_FALSE, COM map processing continues, even though no interface pointer was returned. If the function returns an interface pointer, it should return S_OK.
 
-##  <a name="com_interface_entry_func_blind"></a>  COM_INTERFACE_ENTRY_FUNC_BLIND
+## <a name="com_interface_entry_func_blind"></a> COM_INTERFACE_ENTRY_FUNC_BLIND
 
 Same as [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), except that querying for any IID results in a call to *func*.
 
@@ -359,7 +360,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 Any failure will cause processing to continue on the COM map. If the function returns an interface pointer, it should return S_OK.
 
-##  <a name="com_interface_entry_nointerface"></a>  COM_INTERFACE_ENTRY_NOINTERFACE
+## <a name="com_interface_entry_nointerface"></a> COM_INTERFACE_ENTRY_NOINTERFACE
 
 Returns E_NOINTERFACE and terminates COM map processing when the specified interface is queried for.
 
@@ -377,4 +378,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 You can use this macro to prevent an interface from being used in a particular case. For example, you can insert this macro into your COM map right before COM_INTERFACE_ENTRY_AGGREGATE_BLIND to prevent a query for the interface from being forwarded to the aggregate's inner unknown.
 
 The interface IID will be constructed by appending *x* to `IID_`. For example, if *x* is `IPersistStorage`, the IID will be `IID_IPersistStorage`.
-

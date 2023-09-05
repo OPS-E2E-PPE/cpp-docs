@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Build Isolated Applications to Consume COM Components"
 title: "How to: Build Isolated Applications to Consume COM Components"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["isolated applications [C++]"]
@@ -30,7 +31,7 @@ Isolated applications are applications that have manifests built into the progra
 
 1. Build the solution.
 
-## See Also
+## See also
 
-[Isolated Applications](/windows/desktop/SbsCs/isolated-applications)<br/>
-[About Side-by-Side Assemblies](/windows/desktop/SbsCs/about-side-by-side-assemblies-)
+[Isolated Applications](/windows/win32/SbsCs/isolated-applications)<br/>
+[About Side-by-Side Assemblies](/windows/win32/SbsCs/about-side-by-side-assemblies-)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_class Class"
 title: "is_class Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_class"]
@@ -18,12 +19,12 @@ struct is_class;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
 ## Remarks
 
-An instance of the type predicate holds true if the type *Ty* is a type defined as a **class** or a **struct**, or a `cv-qualified` form of one of them, otherwise it holds false.
+An instance of the type predicate holds true if the type *Ty* is a type defined as a **`class`** or a **`struct`**, or a `cv-qualified` form of one of them, otherwise it holds false.
 
 ## Example
 
@@ -62,6 +63,6 @@ is_class<int> == false
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound Class](../standard-library/is-compound-class.md)<br/>
-[is_union Class](../standard-library/is-union-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_compound Class](../standard-library/is-compound-class.md)\
+[is_union Class](../standard-library/is-union-class.md)

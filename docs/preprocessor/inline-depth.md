@@ -1,37 +1,37 @@
 ---
-title: "inline_depth"
-ms.date: "11/04/2016"
+description: "Learn more about the inline_depth pragma directive in Microsoft C/C++"
+title: "inline_depth pragma"
+ms.date: 01/22/2021
 f1_keywords: ["inline_depth_CPP", "vc-pragma.inline_depth"]
-helpviewer_keywords: ["pragmas, inline_depth", "inline_depth pragma"]
-ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
+helpviewer_keywords: ["pragma, inline_depth", "inline_depth pragma"]
+no-loc: ["pragma"]
 ---
-# inline_depth
-Specifies the inline heuristic search depth, such that, no function will be inlined if it is at a depth (in the call graph) greater than *n*.
+# `inline_depth` pragma
+
+Specifies the inline heuristic search depth. Functions at a depth in the call graph greater than the specified value aren't inlined.
 
 ## Syntax
 
-```
-#pragma inline_depth( [n] )
-```
+> **`#pragma inline_depth(`** [ *n* ] **`)`**
 
 ## Remarks
 
-This pragma controls the inlining of functions marked [inline](../cpp/inline-functions-cpp.md) and [__inline](../cpp/inline-functions-cpp.md) or inlined automatically under the `/Ob2` option.
+This pragma controls the inlining of functions marked [`inline`](../cpp/inline-functions-cpp.md) and [`__inline`](../cpp/inline-functions-cpp.md), or inlined automatically under the **`/Ob`** compiler option. For more information, see [`/Ob` (Inline function expansion)](../build/reference/ob-inline-function-expansion.md).
 
-*n* can be a value between 0 and 255, where 255 means unlimited depth in the call graph, and zero inhibits inline expansion.  When *n* is not specified, the default (254) is used.
+*n* can be a value between 0 and 255, where 255 means unlimited depth in the call graph. A value of 0 inhibits inline expansion. When *n* isn't specified, the default value 254 is used.
 
-The **inline_depth** pragma controls the number of times a series of function calls can be expanded. For example, if the inline depth is four, and if A calls B and B then calls C, all three calls will be expanded inline. However, if the closest inline expansion is two, only A and B are expanded, and C remains as a function call.
+The **`inline_depth`** pragma controls the number of times a series of function calls can be expanded. For example, assume the inline depth is 4. If A calls B, and B then calls C, all three calls are expanded inline. However, if the closest inline depth expansion is 2, only A and B are expanded, and C remains as a function call.
 
-To use this pragma, you must set the `/Ob` compiler option to 1 or 2. The depth set using this pragma takes effect at the first function call after the pragma.
+To use this pragma, you must set the **`/Ob`** compiler option to 1 or higher. The depth set using this pragma takes effect at the first function call after the pragma.
 
-The inline depth can be decreased during expansion but not increased. If the inline depth is six and during expansion the preprocessor encounters an **inline_depth** pragma with a value of eight, the depth remains six.
+The inline depth can be decreased during expansion, but not increased. If the inline depth is 6, and during expansion the preprocessor encounters an **`inline_depth`** pragma with a value of 8, the depth remains 6.
 
-The **inline_depth** pragma has no effect on functions marked with `__forceinline`.
+The **`inline_depth`** pragma has no effect on functions marked with **`__forceinline`**.
 
 > [!NOTE]
 > Recursive functions can be substituted inline to a maximum depth of 16 calls.
 
-## See Also
+## See also
 
-[Pragma Directives and the __Pragma Keyword](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[inline_recursion](../preprocessor/inline-recursion.md)
+[Pragma directives and the `__pragma` and `_Pragma` keywords](./pragma-directives-and-the-pragma-keyword.md)\
+[`inline_recursion`](../preprocessor/inline-recursion.md)

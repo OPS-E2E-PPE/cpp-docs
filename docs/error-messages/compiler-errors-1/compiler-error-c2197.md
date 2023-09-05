@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2197"
 title: "Compiler Error C2197"
 ms.date: "11/04/2016"
 f1_keywords: ["C2197"]
@@ -13,7 +14,7 @@ The compiler detected too many parameters for a call to the function, or an inco
 
 The following sample generates C2197:
 
-```
+```c
 // C2197.c
 // compile with: /Za /c
 void func( int );

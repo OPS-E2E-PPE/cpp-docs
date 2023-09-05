@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: __ull_rshift"
 title: "__ull_rshift"
-ms.date: "11/04/2016"
+ms.date: "09/02/2019"
 f1_keywords: ["__ull_rshift"]
 helpviewer_keywords: ["ull_rshift intrinsic", "__ull_rshift intrinsic"]
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
@@ -13,22 +14,22 @@ on x64, shifts a 64-bit value specified by the first parameter to the right by a
 
 ## Syntax
 
-```
+```C
 unsigned __int64 __ull_rshift(
-   unsigned __int64 mask, 
+   unsigned __int64 mask,
    int nBit
 );
 ```
 
-#### Parameters
+### Parameters
 
-*mask*<br/>
+*mask*\
 [in] The 64-bit integer value to shift right.
 
-*nBit*<br/>
+*nBit*\
 [in] The number of bits to shift, modulo 32 on x86, and modulo 64 on x64.
 
-## Return Value
+## Return value
 
 The mask shifted by `nBit` bits.
 
@@ -46,7 +47,7 @@ If the second parameter is greater than 31 on x86 (63 on x64), that number is ta
 
 ## Example
 
-```
+```cpp
 // ull_rshift.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -65,16 +66,14 @@ int main()
 }
 ```
 
-## Output
-
-```
+```Output
 1
 ```
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
-[__ll_lshift](../intrinsics/ll-lshift.md)<br/>
-[__ll_rshift](../intrinsics/ll-rshift.md)<br/>
-[Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)
+[__ll_lshift](../intrinsics/ll-lshift.md)\
+[__ll_rshift](../intrinsics/ll-rshift.md)\
+[Compiler intrinsics](../intrinsics/compiler-intrinsics.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Details::HeapAllocationTrackingLevel Enumeration"
 title: "Platform::Details::HeapAllocationTrackingLevel Enumeration"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -30,6 +31,6 @@ This enumeration is provided solely for completeness because it can be inspected
 
 **Namespace:** Platform::Details
 
-## See Also
+## See also
 
 [Platform Namespace](platform-namespace-c-cx.md)

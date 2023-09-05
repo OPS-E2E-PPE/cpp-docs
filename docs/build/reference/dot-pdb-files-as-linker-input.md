@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: .Pdb Files as Linker Input"
 title: ".Pdb Files as Linker Input"
 ms.date: "11/04/2016"
 helpviewer_keywords: [".pdb files, as linker input", "PDB files, as linker input"]
@@ -10,7 +11,7 @@ Object (.obj) files compiled using the /Zi option contain the name of a program 
 
 LINK also uses a PDB to hold debugging information for the .exe file or the .dll file. The program's PDB is both an output file and an input file, because LINK updates the PDB when it rebuilds the program.
 
-## See Also
+## See also
 
-[LINK Input Files](../../build/reference/link-input-files.md)<br/>
-[Linker Options](../../build/reference/linker-options.md)
+[LINK Input Files](link-input-files.md)<br/>
+[MSVC Linker Options](linker-options.md)

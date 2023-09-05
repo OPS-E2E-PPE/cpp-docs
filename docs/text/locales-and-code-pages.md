@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Locales and Code Pages"
 title: "Locales and Code Pages"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["locales [C++], about locales", "locale IDs [C++]", "locales [C++]", "code pages [C++]", "code pages [C++], dynamically changing", "character sets [C++], code pages", "multibyte code pages [C++]", "character sets [C++], locales", "localization [C++], code pages", "localization [C++], locales", "code pages [C++], locales", "conventions [C++], international character support"]
@@ -12,7 +13,7 @@ The language determines the text and data formatting conventions, while the coun
 
 Different languages might use different code pages. For example, the ANSI code page 1252 is used for English and most European languages, and the ANSI code page 932 is used for Japanese Kanji. Virtually all code pages share the ASCII character set for the lowest 128 characters (0x00 to 0x7F).
 
-Any single-byte code page can be represented in a table (with 256 entries) as a mapping of byte values to characters (including numbers and punctuation marks), or glyphs. Any multibyte code page can also be represented as a very large table (with 64K entries) of double-byte values to characters. In practice, however, it are usually represented as a table for the first 256 (single-byte) characters and as ranges for the double-byte values.
+Any single-byte code page can be represented in a table (with 256 entries) as a mapping of byte values to characters (including numbers and punctuation marks), or glyphs. Any multibyte code page can also be represented as a very large table (with 64K entries) of double-byte values to characters. In practice, however, it is usually represented as a table for the first 256 (single-byte) characters and as ranges for the double-byte values.
 
 For more information about code pages, see [Code Pages](../c-runtime-library/code-pages.md).
 
@@ -24,7 +25,7 @@ Similarly, when the multibyte code page changes, the behavior of the multibyte f
 
 The C run-time function `setlocale` sets, changes, or queries some or all of the current program's locale information. The [_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) routine is a wide-character version of `setlocale`; the arguments and return values of `_wsetlocale` are wide-character strings.
 
-## See Also
+## See also
 
 [Unicode and MBCS](../text/unicode-and-mbcs.md)<br/>
 [Benefits of Character Set Portability](../text/benefits-of-character-set-portability.md)

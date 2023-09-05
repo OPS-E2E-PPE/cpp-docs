@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3240"
 title: "Compiler Error C3240"
 ms.date: "11/04/2016"
 f1_keywords: ["C3240"]
@@ -15,7 +16,7 @@ A base type contained a function that was defined. Function must be virtual.
 
 The following sample generates C3240.
 
-```
+```cpp
 // C3240.cpp
 // compile with: /c
 __interface I {

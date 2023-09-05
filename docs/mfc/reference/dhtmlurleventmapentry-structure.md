@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: DHtmlUrlEventMapEntry Structure"
 title: "DHtmlUrlEventMapEntry Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["DHtmlUrlEventMapEntry"]
@@ -31,7 +32,6 @@ The event map associated with the URL.
 
 **Header:** afxdhtml.h
 
-## See Also
+## See also
 
 [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-

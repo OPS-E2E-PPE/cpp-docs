@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4632"
 title: "Compiler Warning (level 1) C4632"
 ms.date: "11/04/2016"
 f1_keywords: ["C4632"]
@@ -13,7 +14,7 @@ The path to .xdc file (`file`) was not valid, and no .xdc file created.
 
 The following sample generates C4632:
 
-```
+```cpp
 // C4632.cpp
 // compile with: /clr /docv:\\falsedir /LD /W1
 // C4632 expected

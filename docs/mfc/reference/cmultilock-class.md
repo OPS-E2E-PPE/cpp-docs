@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMultiLock Class"
 title: "CMultiLock Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMultiLock", "AFXMT/CMultiLock", "AFXMT/CMultiLock::CMultiLock", "AFXMT/CMultiLock::IsLocked", "AFXMT/CMultiLock::Lock", "AFXMT/CMultiLock::Unlock"]
@@ -51,7 +52,7 @@ For more information on how to use `CMultiLock` objects, see the article [Multit
 
 **Header:** afxmt.h
 
-##  <a name="cmultilock"></a>  CMultiLock::CMultiLock
+## <a name="cmultilock"></a> CMultiLock::CMultiLock
 
 Constructs a `CMultiLock` object.
 
@@ -77,7 +78,7 @@ Specifies whether to initially attempt to access any of the supplied objects.
 
 This function is called after creating the array of synchronization objects to be waited on. It is usually called from within the thread that must wait for one of the synchronization objects to become available.
 
-##  <a name="islocked"></a>  CMultiLock::IsLocked
+## <a name="islocked"></a> CMultiLock::IsLocked
 
 Determines if the specified object is nonsignaled (unavailable).
 
@@ -94,7 +95,7 @@ The index in the array of objects corresponding to the object whose state is bei
 
 Nonzero if the specified object is locked; otherwise 0.
 
-##  <a name="lock"></a>  CMultiLock::Lock
+## <a name="lock"></a> CMultiLock::Lock
 
 Call this function to gain access to one or more of the resources controlled by the synchronization objects supplied to the `CMultiLock` constructor.
 
@@ -114,7 +115,7 @@ Specifies the amount of time to wait for the synchronization object to be availa
 Specifies whether all objects waited on must become signaled at the same time before returning. If FALSE, `Lock` will return when any one of the objects waited on is signaled.
 
 *dwWakeMask*<br/>
-Specifies other conditions that are allowed to abort the wait. For a full list of the available options for this parameter, see [MsgWaitForMultipleObjects](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) in the Windows SDK.
+Specifies other conditions that are allowed to abort the wait. For a full list of the available options for this parameter, see [MsgWaitForMultipleObjects](/windows/win32/api/winuser/nf-winuser-msgwaitformultipleobjects) in the Windows SDK.
 
 ### Return Value
 
@@ -142,7 +143,7 @@ If *bWaitForAll* is TRUE, `Lock` will return successfully as soon as all the syn
 
 If `Lock` is not able to return immediately, it will wait for no more than the number of milliseconds specified in the *dwTimeOut* parameter before returning. If *dwTimeOut* is INFINITE, `Lock` will not return until access to an object is gained or a condition specified in *dwWakeMask* was met. Otherwise, if `Lock` was able to acquire a synchronization object, it will return successfully; if not, it will return failure.
 
-##  <a name="unlock"></a>  CMultiLock::Unlock
+## <a name="unlock"></a> CMultiLock::Unlock
 
 Releases the synchronization object owned by `CMultiLock`.
 
@@ -172,7 +173,6 @@ This function is called by `CMultiLock`'s destructor.
 
 The first form of `Unlock` tries to unlock the synchronization object managed by `CMultiLock`. The second form of `Unlock` tries to unlock the `CSemaphore` objects owned by `CMultiLock`. If `CMultiLock` does not own any locked `CSemaphore` object, the function returns FALSE; otherwise, it returns TRUE. *lCount* and *lpPrevCount* are exactly the same as the parameters of [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock). The second form of `Unlock` is rarely applicable to multilock situations.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

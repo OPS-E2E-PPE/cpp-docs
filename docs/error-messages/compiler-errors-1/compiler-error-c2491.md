@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2491"
 title: "Compiler Error C2491"
 ms.date: "11/04/2016"
 f1_keywords: ["C2491"]
@@ -15,7 +16,7 @@ To fix this issue, remove the `__declspec(dllimport)` specifier from the definit
 
 The following sample generates C2491:
 
-```
+```cpp
 // C2491.cpp
 // compile with: /c
 // function definition

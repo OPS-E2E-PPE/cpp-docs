@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4313"
 title: "Compiler Warning (level 1) C4313"
 ms.date: "11/04/2016"
 f1_keywords: ["C4313"]
@@ -15,7 +16,7 @@ There is a conflict between the format specified and the value that you are pass
 
 The following code sample generates C4313 when it is compiled for a 64-bit target.
 
-```
+```cpp
 // C4313.cpp
 // Compile by using: cl /W1 C4313.cpp
 #include <stdio.h>

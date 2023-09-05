@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3748"
 title: "Compiler Error C3748"
 ms.date: "11/04/2016"
 f1_keywords: ["C3748"]
@@ -13,7 +14,7 @@ The [__event](../../cpp/event.md) keyword cannot appear inside an interface.
 
 The following sample generates C3748:
 
-```
+```cpp
 // C3748.cpp
 __interface I {
 // try the following line instead

@@ -1,16 +1,18 @@
 ---
+description: "Learn more about: setbuf"
 title: "setbuf"
-ms.date: "11/04/2016"
-apiname: ["setbuf"]
-apilocation: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ucrtbase.dll", "api-ms-win-crt-stdio-l1-1-0.dll"]
-apitype: "DLLExport"
+ms.date: "4/2/2020"
+api_name: ["setbuf", "_o_setbuf"]
+api_location: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ucrtbase.dll", "api-ms-win-crt-stdio-l1-1-0.dll"]
+api_type: ["DLLExport"]
+topic_type: ["apiref"]
 f1_keywords: ["setbuf"]
 helpviewer_keywords: ["setbuf function", "stream buffering"]
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
 ---
-# setbuf
+# `setbuf`
 
-Controls stream buffering. This function is deprecated; use [setvbuf](setvbuf.md) instead.
+Controls stream buffering. This function is deprecated; use [`setvbuf`](setvbuf.md) instead.
 
 ## Syntax
 
@@ -23,25 +25,27 @@ void setbuf(
 
 ### Parameters
 
-*stream*<br/>
-Pointer to **FILE** structure.
+*`stream`*\
+Pointer to `FILE` structure.
 
-*buffer*<br/>
+*`buffer`*\
 User-allocated buffer.
 
 ## Remarks
 
-The **setbuf** function controls buffering for *stream*. The *stream* argument must refer to an open file that has not been read or written. If the *buffer* argument is **NULL**, the stream is un-buffered. If not, the buffer must point to a character array of length **BUFSIZ**, where **BUFSIZ** is the buffer size as defined in STDIO.H. The user-specified buffer, instead of the default system-allocated buffer for the given stream, is used for I/O buffering. The **stderr** stream is un-buffered by default, but you can use **setbuf** to assign buffers to **stderr**.
+The **`setbuf`** function controls buffering for *`stream`*. The *`stream`* argument must refer to an open file that hasn't been read or written. If the *`buffer`* argument is `NULL`, the stream is unbuffered. If not, the buffer must point to a character array of length `BUFSIZ`, where `BUFSIZ` is the buffer size as defined in STDIO.H. The user-specified buffer, instead of the default system-allocated buffer for the given stream, is used for I/O buffering. The `stderr` stream is unbuffered by default, but you can use **`setbuf`** to assign buffers to `stderr`.
 
-**setbuf** has been replaced by [setvbuf](setvbuf.md), which is the preferred routine for new code. **setbuf** is retained for compatibility with existing code.
+**`setbuf`** has been replaced by [`setvbuf`](setvbuf.md), which is the preferred routine for new code. Unlike `setvbuf`, **`setbuf`** has no way of reporting errors. `setvbuf` also lets you control both the buffering mode and the buffer size. **`setbuf`** exists for compatibility with existing code.
+
+By default, this function's global state is scoped to the application. To change this behavior, see [Global state in the CRT](../global-state.md).
 
 ## Requirements
 
-|Routine|Required header|
-|-------------|---------------------|
-|**setbuf**|\<stdio.h>|
+| Routine | Required header |
+|---|---|
+| **`setbuf`** | \<stdio.h> |
 
-For additional compatibility information, see [Compatibility](../../c-runtime-library/compatibility.md).
+For more compatibility information, see [Compatibility](../compatibility.md).
 
 ## Example
 
@@ -84,8 +88,8 @@ stream2 buffering disabled
 
 ## See also
 
-[Stream I/O](../../c-runtime-library/stream-i-o.md)<br/>
-[fclose, _fcloseall](fclose-fcloseall.md)<br/>
-[fflush](fflush.md)<br/>
-[fopen, _wfopen](fopen-wfopen.md)<br/>
-[setvbuf](setvbuf.md)<br/>
+[Stream I/O](../stream-i-o.md)\
+[`fclose`, `_fcloseall`](fclose-fcloseall.md)\
+[`fflush`](fflush.md)\
+[`fopen`, `_wfopen`](fopen-wfopen.md)\
+[`setvbuf`](setvbuf.md)

@@ -1,13 +1,14 @@
 ---
+description: "Learn more about: binary_negate Class"
 title: "binary_negate Class"
-ms.date: "11/04/2016"
-f1_keywords: ["xfunctional/std::binary_negate"]
+ms.date: "02/21/2019"
+f1_keywords: ["functional/std::binary_negate"]
 helpviewer_keywords: ["binary_negate class"]
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
 ---
 # binary_negate Class
 
-A template class providing a member function that negates the return value of a specified binary function.
+A class template providing a member function that negates the return value of a specified binary function. Deprecated in C++17 in favor of [not_fn](functional-functions.md#not_fn).
 
 ## Syntax
 
@@ -17,7 +18,6 @@ class binary_negate
     : public binaryFunction <typename Operation::first_argument_type,
                               typename Operation::second_argument_type, bool>
 {
-public:
     explicit binary_negate(const Operation& Func);
     bool operator()(const typename Operation::first_argument_type& left,
                     const typename Operation::second_argument_type& right) const;
@@ -26,13 +26,13 @@ public:
 
 ### Parameters
 
-*Func*<br/>
+*Func*\
 The binary function to be negated.
 
-*left*<br/>
+*left*\
 The left operand of the binary function to be negated.
 
-*right*<br/>
+*right*\
 The right operand of the binary function to be negated.
 
 ## Return Value
@@ -41,7 +41,7 @@ The negation of the binary function.
 
 ## Remarks
 
-The template class stores a copy of a binary function object *Func*. It defines its member function `operator()` as returning `!Func(left, right)`.
+The class template stores a copy of a binary function object *Func*. It defines its member function `operator()` as returning `!Func(left, right)`.
 
 The constructor of `binary_negate` is rarely used directly. The helper function [not2](../standard-library/functional-functions.md#not2) is usually preferred to declare and use the **binary_negator** adaptor predicate.
 
@@ -101,20 +101,10 @@ int main( )
       cout << *Iter1 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 Original vector v1 = ( 6262 6262 2233879413 2621500314 580942933 3715465425 3739828298 )
 Sorted vector v1 = ( 6262 6262 580942933 2233879413 2621500314 3715465425 3739828298 )
 Resorted vector v1 = ( 3739828298 3715465425 2621500314 2233879413 580942933 6262 6262 )
-*/
 ```
-
-## Requirements
-
-**Header:** \<functional>
-
-std
-
-## See also
-
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>

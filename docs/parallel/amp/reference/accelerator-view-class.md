@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: accelerator_view Class"
 title: "accelerator_view Class"
-ms.date: "11/04/2016"
-f1_keywords: ["accelerator_view", "AMPRT/accelerator_view", "AMPRT/Concurrency::accelerator_view:accelerator_view", "AMPRT/Concurrency::accelerator_view:create_marker", "AMPRT/Concurrency::accelerator_view:flush", "AMPRT/Concurrency::accelerator_view:get_accelerator", "AMPRT/Concurrency::accelerator_view:get_is_auto_selection", "AMPRT/Concurrency::accelerator_view:get_is_debug", "AMPRT/Concurrency::accelerator_view:get_queuing_mode", "AMPRT/Concurrency::accelerator_view:get_version", "AMPRT/Concurrency::accelerator_view:wait", "AMPRT/Concurrency::accelerator_view:accelerator", "AMPRT/Concurrency::accelerator_view:is_auto_selection", "AMPRT/Concurrency::accelerator_view:is_debug", "AMPRT/Concurrency::accelerator_view:queuing_mode", "AMPRT/Concurrency::accelerator_view:version"]
+ms.date: "03/27/2019"
+f1_keywords: ["accelerator_view", "AMPRT/accelerator_view", "AMPRT/Concurrency::accelerator_view::accelerator_view", "AMPRT/Concurrency::accelerator_view::create_marker", "AMPRT/Concurrency::accelerator_view::flush", "AMPRT/Concurrency::accelerator_view::get_accelerator", "AMPRT/Concurrency::accelerator_view::get_is_auto_selection", "AMPRT/Concurrency::accelerator_view::get_is_debug", "AMPRT/Concurrency::accelerator_view::get_queuing_mode", "AMPRT/Concurrency::accelerator_view::get_version", "AMPRT/Concurrency::accelerator_view::wait", "AMPRT/Concurrency::accelerator_view::accelerator", "AMPRT/Concurrency::accelerator_view::is_auto_selection", "AMPRT/Concurrency::accelerator_view::is_debug", "AMPRT/Concurrency::accelerator_view::queuing_mode", "AMPRT/Concurrency::accelerator_view::version"]
 helpviewer_keywords: ["accelerator_view class"]
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
 ---
@@ -9,9 +10,9 @@ ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
 
 Represents a virtual device abstraction on a C++ AMP data-parallel accelerator.
 
-### Syntax
+## Syntax
 
-```
+```cpp
 class accelerator_view;
 ```
 
@@ -41,9 +42,9 @@ class accelerator_view;
 
 |Name|Description|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Compares this `accelerator_view` object with another and returns **false** if they are the same; otherwise, returns **true**.|
+|[operator!=](#operator_neq)|Compares this `accelerator_view` object with another and returns **`false`** if they are the same; otherwise, returns **`true`**.|
 |[operator=](#operator_eq)|Copies the contents of the specified `accelerator_view` object into this one.|
-|[operator==](#operator_eq_eq)|Compares this `accelerator_view` object with another and returns **true** if they are the same; otherwise, returns **false**.|
+|[operator==](#operator_eq_eq)|Compares this `accelerator_view` object with another and returns **`true`** if they are the same; otherwise, returns **`false`**.|
 
 ### Public Data Members
 
@@ -79,7 +80,7 @@ Gets the accelerator object for the accelerator_view object.
 
 ### Syntax
 
-```
+```cpp
 __declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;
 ```
 
@@ -89,22 +90,22 @@ Initializes a new instance of the accelerator_view class by copying an existing 
 
 ### Syntax
 
-```
-accelerator_view( const accelerator_view & _Other );
+```cpp
+accelerator_view( const accelerator_view & other );
 ```
 
 ### Parameters
 
-*_Other*<br/>
+*other*<br/>
 The `accelerator_view` object to copy.
 
-## <a name="accelerator_view__create_marker"></a> create_marker
+## <a name="create_marker"></a> create_marker
 
 Returns a future to track the completion of all commands submitted so far to this `accelerator_view` object.
 
 ### Syntax
 
-```
+```cpp
 concurrency::completion_future create_marker();
 ```
 
@@ -112,26 +113,27 @@ concurrency::completion_future create_marker();
 
 A future to track the completion of all commands submitted so far to this `accelerator_view` object.
 
-## <a name="flush"></a> flush
+## flush
 
 Submits all pending commands queued to the accelerator_view object to the accelerator for execution.
 
 ### Syntax
 
-```
+```cpp
 void flush();
 ```
 
 ### Return Value
 
-Returns `void`.
+Returns **`void`**.
 
-## <a name="accelerator_view__get_accelerator"></a> get_accelerator
+## <a name="get_accelerator"></a> get_accelerator
 
 Returns the accelerator object for the accelerator_view object.
+
 ### Syntax
 
-```
+```cpp
 accelerator get_accelerator() const;
 ```
 
@@ -139,27 +141,27 @@ accelerator get_accelerator() const;
 
 The accelerator object for the accelerator_view object.
 
-## <a name="accelerator_view__get_is_auto_selection"></a> get_is_auto_selection
+## <a name="get_is_auto_selection"></a> get_is_auto_selection
 
 Returns a Boolean value that indicates whether the runtime will automatically select an appropriate accelerator when the accelerator_view is passed to a [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).
 
 ### Syntax
 
-```
+```cpp
 bool get_is_auto_selection() const;
 ```
 
 ### Return Value
 
-**true** if the runtime will automatically select an appropriate accelerator; otherwise, **false**.
+**`true`** if the runtime will automatically select an appropriate accelerator; otherwise, **`false`**.
 
-## <a name="accelerator_view__get_is_debug"></a> get_is_debug
+## <a name="get_is_debug"></a> get_is_debug
 
 Returns a Boolean value that indicates whether the accelerator_view object has the DEBUG layer enabled for extensive error reporting.
 
 ### Syntax
 
-```
+```cpp
 bool get_is_debug() const;
 ```
 
@@ -167,13 +169,13 @@ bool get_is_debug() const;
 
 A Boolean value that indicates whether the `accelerator_view` object has the DEBUG layer enabled for extensive error reporting.
 
-## <a name="accelerator_view__get_queuing_mode"></a> get_queuing_mode
+## <a name="get_queuing_mode"></a> get_queuing_mode
 
 Returns the queuing mode for the accelerator_view object.
 
 ### Syntax
 
-```
+```cpp
 queuing_mode get_queuing_mode() const;
 ```
 
@@ -181,13 +183,13 @@ queuing_mode get_queuing_mode() const;
 
 The queuing mode for the `accelerator_view` object.
 
-## <a name="accelerator_view__get_version"></a> get_version
+## <a name="get_version"></a> get_version
 
 Returns the version of the accelerator_view.
 
 ### Syntax
 
-```
+```cpp
 unsigned int get_version() const;
 ```
 
@@ -195,133 +197,131 @@ unsigned int get_version() const;
 
 The version of the `accelerator_view`.
 
-## <a name="accelerator_view__is_auto_selection"></a> is_auto_selection
+## <a name="is_auto_selection"></a> is_auto_selection
 
 Gets a Boolean value that indicates whether the runtime will automatically select an appropriate accelerator when the accelerator_view is passed to a [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).
 
 ### Syntax
 
-```
+```cpp
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 ```
 
-## <a name="accelerator_view__is_debug"></a> is_debug
+## <a name="is_debug"></a> is_debug
 
 Gets a Boolean value that indicates whether the accelerator_view object has the  DEBUG layer enabled for extensive error reporting.
 
 ### Syntax
 
-```
+```cpp
 __declspec(property(get= get_is_debug)) bool is_debug;
 ```
 
-## <a name="accelerator_view__operator_neq"></a> operator!=
+## <a name="operator_neq"></a> operator!=
 
-Compares this accelerator_view object with another and returns **false** if they are the same; otherwise, returns **true**.
+Compares this accelerator_view object with another and returns **`false`** if they are the same; otherwise, returns **`true`**.
 
 ### Syntax
 
-```
-bool operator!= (    const accelerator_view & _Other ) const;
+```cpp
+bool operator!= ( const accelerator_view & other ) const;
 ```
 
 ### Parameters
 
-*_Other*<br/>
+*other*<br/>
 The `accelerator_view` object to compare with this one.
 
 ### Return Value
 
-**false** if the two objects are the same; otherwise, **true**.
+**`false`** if the two objects are the same; otherwise, **`true`**.
 
-## <a name="accelerator_view__operator_eq"></a> operator=
+## <a name="operator_eq"></a> operator=
 
 Copies the contents of the specified accelerator_view object into this one.
 
 ### Syntax
 
-```
-accelerator_view & operator= (    const accelerator_view & _Other );
+```cpp
+accelerator_view & operator= ( const accelerator_view & other );
 ```
 
 ### Parameters
 
-*_Other*<br/>
+*other*<br/>
 The `accelerator_view` object to copy from.
 
 ### Return Value
 
 A reference to the modified `accelerator_view` object.
 
-## <a name="accelerator_view__operator_eq_eq"></a> operator==
+## <a name="operator_eq_eq"></a> operator==
 
-Compares this accelerator_view object with another and returns **true** if they are the same; otherwise, returns **false**.
+Compares this accelerator_view object with another and returns **`true`** if they are the same; otherwise, returns **`false`**.
 
 ### Syntax
 
-```
-bool operator= = (    const accelerator_view & _Other ) const;
+```cpp
+bool operator== ( const accelerator_view & other ) const;
 ```
 
 ### Parameters
 
-*_Other*<br/>
+*other*<br/>
 The `accelerator_view` object to compare with this one.
 
 ### Return Value
 
-**true** if the two objects are the same; otherwise, **false**.
+**`true`** if the two objects are the same; otherwise, **`false`**.
 
-## <a name="accelerator_view__queuing_mode"></a> queuing_mode
+## <a name="queuing_mode"></a> queuing_mode
 
 Gets the queuing mode for the accelerator_view object.
 
 ### Syntax
 
-```
+```cpp
 __declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;
 ```
 
-## <a name="accelerator_view__version"></a> version
+## version
 
 Gets the version of the accelerator_view.
 
 ### Syntax
 
-```
+```cpp
 __declspec(property(get= get_version)) unsigned int version;
 ```
 
-## <a name="accelerator_view__wait"></a> wait
+## wait
 
 Waits for all commands submitted to the accelerator_view object to finish.
 
 ### Syntax
 
-```
+```cpp
 void wait();
-```
-
-#### Return Value
-
-Returns `void`.
-
-#### Remarks
-
-If the [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) is `immediate`, this method returns immediately without blocking.
-
-##  <a name="dtor"></a> ~accelerator_view
-
-Destroys the accelerator_view object.
-
-#### Syntax
-
-```
-~accelerator_view();
 ```
 
 ### Return Value
 
-## See Also
+Returns **`void`**.
+
+### Remarks
+
+If the [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) is `immediate`, this method returns immediately without blocking.
+
+## <a name="dtor"></a> ~accelerator_view
+
+Destroys the accelerator_view object.
+
+### Syntax
+
+```cpp
+~accelerator_view();
+```
+
+## See also
 
 [Concurrency Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)

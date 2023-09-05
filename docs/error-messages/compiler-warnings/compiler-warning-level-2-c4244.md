@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 2) C4244"
 title: "Compiler Warning (level 2) C4244"
 ms.date: "11/04/2016"
 f1_keywords: ["C4244"]
@@ -19,7 +20,7 @@ C4244 can also fire at level 3, and 4; see [Compiler Warning (levels 3 and 4) C4
 
 The following sample generates C4244:
 
-```
+```cpp
 // C4244_level2.cpp
 // compile with: /W2
 

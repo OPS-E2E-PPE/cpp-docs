@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3002"
 title: "Compiler Error C3002"
 ms.date: "11/04/2016"
 f1_keywords: ["C3002"]
@@ -13,7 +14,7 @@ Multiple directive names are not allowed.
 
 The following sample generates C3002:
 
-```
+```c
 // C3002.c
 // compile with: /openmp
 int main()

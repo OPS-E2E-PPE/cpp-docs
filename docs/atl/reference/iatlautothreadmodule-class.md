@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IAtlAutoThreadModule Class"
 title: "IAtlAutoThreadModule Class"
 ms.date: "11/04/2016"
 f1_keywords: ["IAtlAutoThreadModule", "atlbase/ATL::IAtlAutoThreadModule"]
@@ -10,7 +11,7 @@ ms.assetid: fcb58cf9-a427-4be9-89eb-04e1ab5cc3a1
 This class represents an interface to a `CreateInstance` method.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -26,6 +27,6 @@ The class [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-clas
 
 **Header:** atlbase.h
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

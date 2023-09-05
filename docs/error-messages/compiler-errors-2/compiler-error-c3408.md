@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3408"
 title: "Compiler Error C3408"
 ms.date: "11/04/2016"
 f1_keywords: ["C3408"]
@@ -15,7 +16,7 @@ Attributes cannot be applied to template definitions.
 
 The following sample generates C3408.
 
-```
+```cpp
 // C3408.cpp
 // compile with: /c
 template <class T> struct PTS {

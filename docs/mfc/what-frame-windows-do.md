@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: What Frame Windows Do"
 title: "What Frame Windows Do"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["frame windows [MFC], about frame windows", "frame windows [MFC], tasks", "MFC, frame windows"]
@@ -26,7 +27,6 @@ The frame window also forwards commands to its views and can respond to notifica
 
 - [Controls](../mfc/controls-mfc.md)
 
-## See Also
+## See also
 
 [Frame Windows](../mfc/frame-windows.md)
-

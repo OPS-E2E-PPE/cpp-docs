@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4220"
 title: "Compiler Warning (level 4) C4220"
 ms.date: "11/04/2016"
 f1_keywords: ["C4220"]
@@ -13,7 +14,7 @@ Under the default Microsoft extensions (/Ze), a pointer to a function matches a 
 
 ## Example
 
-```
+```c
 // C4220.c
 // compile with: /W4
 

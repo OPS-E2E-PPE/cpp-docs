@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCRibbonLabel Class"
 title: "CMFCRibbonLabel Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCRibbonLabel", "AFXRIBBONLABEL/CMFCRibbonLabel", "AFXRIBBONLABEL/CMFCRibbonLabel::CMFCRibbonLabel", "AFXRIBBONLABEL/CMFCRibbonLabel::SetACCData"]
@@ -52,7 +53,7 @@ You cannot add a ribbon label to the Quick Access Toolbar.
 
 **Header:** afxRibbonLabel.h
 
-##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel
+## <a name="cmfcribbonlabel"></a> CMFCRibbonLabel::CMFCRibbonLabel
 
 Constructs and initializes a [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) object that displays the specified text string.
 
@@ -70,7 +71,7 @@ CMFCRibbonLabel(
 *bIsMultiLine*<br/>
 [in] TRUE to specify that the label is a multi-line label; otherwise, FALSE.
 
-##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData
+## <a name="setaccdata"></a> CMFCRibbonLabel::SetACCData
 
 Determines the accessibility data for the current ribbon label element.
 
@@ -92,7 +93,7 @@ virtual BOOL SetACCData(
 
 TRUE if the *data* parameter was successfully populated with the accessibility data of the current ribbon label; otherwise, FALSE.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

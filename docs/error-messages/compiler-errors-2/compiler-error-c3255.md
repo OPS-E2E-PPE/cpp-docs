@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3255"
 title: "Compiler Error C3255"
 ms.date: "11/04/2016"
 f1_keywords: ["C3255"]
@@ -9,11 +10,11 @@ ms.assetid: 877ffca2-fd92-44b6-9060-6091b928b1c1
 
 'value type' : cannot dynamically allocate this value type object on native heap
 
-Instances of a value type (see [Classes and Structs](../../windows/classes-and-structs-cpp-component-extensions.md)) that contain managed members can be created on the stack but not on the heap.
+Instances of a value type (see [Classes and Structs](../../extensions/classes-and-structs-cpp-component-extensions.md)) that contain managed members can be created on the stack but not on the heap.
 
 The following sample generates C3255:
 
-```
+```cpp
 // C3255.cpp
 // compile with: /clr
 using namespace System;

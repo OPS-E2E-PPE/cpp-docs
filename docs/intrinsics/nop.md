@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: __nop"
 title: "__nop"
-ms.date: "11/04/2016"
+ms.date: "09/02/2019"
 f1_keywords: ["__nop"]
 helpviewer_keywords: ["nop instruction", "__nop intrinsic"]
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
@@ -13,7 +14,7 @@ Generates platform-specific machine code that performs no operation.
 
 ## Syntax
 
-```
+```C
 void __nop();
 ```
 
@@ -31,7 +32,7 @@ void __nop();
 
 The `__nop` function is equivalent to the `NOP` machine instruction. For more information on x86 and x64, search for the document, "Intel Architecture Software Developer's Manual, Volume 2: Instruction Set Reference," at the [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
-## See Also
+## See also
 
-[Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)<br/>
+[Compiler intrinsics](../intrinsics/compiler-intrinsics.md)\
 [__noop](../intrinsics/noop.md)

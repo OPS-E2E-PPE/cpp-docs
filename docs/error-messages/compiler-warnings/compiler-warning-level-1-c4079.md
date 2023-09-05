@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4079"
 title: "Compiler Warning (level 1) C4079"
 ms.date: "11/04/2016"
 f1_keywords: ["C4079"]
@@ -13,7 +14,7 @@ An unexpected separator token occurs in a pragma argument list. The remainder of
 
 The following sample generates C4079:
 
-```
+```cpp
 // C4079.cpp
 // compile with: /W1
 #pragma warning(disable : 4081)

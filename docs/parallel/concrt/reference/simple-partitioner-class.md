@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: simple_partitioner Class"
 title: "simple_partitioner Class"
 ms.date: "11/04/2016"
 f1_keywords: ["simple_partitioner", "PPL/concurrency::simple_partitioner", "PPL/concurrency::simple_partitioner::simple_partitioner"]
@@ -11,7 +12,7 @@ The `simple_partitioner` class represents a static partitioning of the range ite
 
 ## Syntax
 
-```
+```cpp
 class simple_partitioner;
 ```
 
@@ -34,19 +35,19 @@ class simple_partitioner;
 
 **Namespace:** concurrency
 
-##  <a name="dtor"></a> ~simple_partitioner
+## <a name="dtor"></a> ~simple_partitioner
 
 Destroys a `simple_partitioner` object.
 
-```
+```cpp
 ~simple_partitioner();
 ```
 
-##  <a name="ctor"></a> simple_partitioner
+## <a name="ctor"></a> simple_partitioner
 
 Constructs a `simple_partitioner` object.
 
-```
+```cpp
 explicit simple_partitioner(_Size_type _Chunk_size);
 ```
 
@@ -55,6 +56,6 @@ explicit simple_partitioner(_Size_type _Chunk_size);
 *_Chunk_size*<br/>
 The minimum partition size.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

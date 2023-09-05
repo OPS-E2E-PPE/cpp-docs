@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2383"
 title: "Compiler Error C2383"
 ms.date: "11/04/2016"
 f1_keywords: ["C2383"]
@@ -11,7 +12,7 @@ ms.assetid: 6696221d-879c-477a-a0f3-a6edc15fd3d7
 
 The C++ compiler does not allow default arguments on pointers to functions.
 
-This code was accepted by the Visual C++ compiler in versions before Visual Studio 2005, but now gives an error. For code that works in all versions of Visual C++, do not assign a default value to a pointer-to-function argument.
+This code was accepted by the Microsoft C++ compiler in versions before Visual Studio 2005, but now gives an error. For code that works in all versions of Visual C++, do not assign a default value to a pointer-to-function argument.
 
 ## Example
 

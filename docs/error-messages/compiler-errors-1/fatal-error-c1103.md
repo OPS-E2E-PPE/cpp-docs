@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Fatal Error C1103"
 title: "Fatal Error C1103"
 ms.date: "11/04/2016"
 f1_keywords: ["C1103"]
@@ -15,7 +16,7 @@ For more information, see [#import Directive](../../preprocessor/hash-import-dir
 
 The following sample will generate C1103:
 
-```
+```cpp
 // C1103.cpp
 #import "progid:a.b.id.1.5" no_registry auto_search   // C1103
 ```

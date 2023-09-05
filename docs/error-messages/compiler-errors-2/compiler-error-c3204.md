@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3204"
 title: "Compiler Error C3204"
 ms.date: "11/04/2016"
 f1_keywords: ["C3204"]
@@ -15,7 +16,7 @@ This error occurs when you use a call to [_alloca](../../c-runtime-library/refer
 
 The following sample generates C3204:
 
-```
+```cpp
 // C3204.cpp
 // compile with: /EHsc
 #include <malloc.h>

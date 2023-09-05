@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: marshal_as"
 title: "marshal_as"
-ms.date: "11/04/2016"
+ms.date: "07/12/2019"
 ms.topic: "reference"
 f1_keywords: ["marshal_as", "msclr.interop.marshal_as", "msclr::interop::marshal_as"]
 helpviewer_keywords: ["marshal_as template [C++]"]
@@ -35,11 +36,13 @@ If you try to marshal a pair of data types that are not supported, `marshal_as` 
 
 The marshaling library consists of several header files. Any conversion requires only one file, but you can include additional files if you need to for other conversions. To see which conversions are associated with which files, look in the table in `Marshaling Overview`. Regardless of what conversion you want to do, the namespace requirement is always in effect.
 
+Throws `System::ArgumentNullException(_EXCEPTION_NULLPTR)` if the input parameter is null.
+
 ## Example
 
 This example marshals from a `const char*` to a `System::String` variable type.
 
-```
+```cpp
 // marshal_as_test.cpp
 // compile with: /clr
 #include <stdlib.h>
@@ -63,7 +66,7 @@ int main() {
 
 **Namespace:** msclr::interop
 
-## See Also
+## See also
 
 [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md)<br/>
 [marshal_context Class](../dotnet/marshal-context-class.md)

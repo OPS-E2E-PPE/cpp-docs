@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IDL Attributes"
 title: "IDL Attributes (C++ COM)"
 ms.date: "10/02/2018"
 helpviewer_keywords: ["attributes [C++/CLI], reference topics", "IDL attributes", ".idl files [C++], attributes", "IDL files [C++], attributes", ".idl files [C++]"]
@@ -16,7 +17,7 @@ Now, you can modify the .idl file from within a source code file using Visual C+
 
 When not used with [COM attributes](com-attributes.md), IDL attributes let you define interfaces. When the source code is compiled, the attributes are used to define the generated .idl file. When used with COM attributes in an ATL project, some IDL attributes, such as `coclass`, cause code to be injected into the project.
 
-Note that [idl_quote](idl-quote.md) lets you use MIDL constructs that are not supported in the current version of Visual C++. This and other attributes such as [importlib](importlib.md) and [includelib](includelib-cpp.md) help you to use existing .idl files in your current Visual C++ project.
+Note that [idl_quote](idl-quote.md) lets you use MIDL constructs that are not supported in the current version of Visual C++. This and other attributes such as [importlib](importlib.md) and [includelib](includelib-cpp.md) help you to use existing .idl files in your current Visual Studio C++ project.
 
 |Attribute|Description|
 |---------------|-----------------|
@@ -88,7 +89,7 @@ Note that [idl_quote](idl-quote.md) lets you use MIDL constructs that are not su
 |[retval](retval.md)|Designates the parameter that receives the return value of the member.|
 |[size_is](size-is.md)|Specifies the size of memory allocated for sized pointers, sized pointers to sized pointers, and single- or multidimensional arrays.|
 |[source](source-cpp.md)|Indicates that a member of a class, property, or method is a source of events.|
-|[string](string-cpp.md)|Indicates that the one-dimensional **char**, **wchar_t**, `byte`, or equivalent array or the pointer to such an array must be treated as a string.|
+|[string](string-cpp.md)|Indicates that the one-dimensional **`char`**, **`wchar_t`**, `byte`, or equivalent array or the pointer to such an array must be treated as a string.|
 |[switch_is](switch-is.md)|Specifies the expression or identifier acting as the union discriminant that selects the union member.|
 |[switch_type](switch-type.md)|Identifies the type of the variable used as the union discriminant.|
 |[transmit_as](transmit-as.md)|Instructs the compiler to associate a presented type, which client and server applications manipulate, with a transmitted type.|
@@ -101,6 +102,6 @@ Note that [idl_quote](idl-quote.md) lets you use MIDL constructs that are not su
 |[vi_progid](vi-progid.md)|Specifies a version-independent form of the ProgID.|
 |[wire_marshal](wire-marshal.md)|Specifies a data type that will be used for transmission instead of an application-specific data type.|
 
-## See Also
+## See also
 
 [Attributes by Group](attributes-by-group.md)

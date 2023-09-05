@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAsyncMonikerFile Class"
 title: "CAsyncMonikerFile Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAsyncMonikerFile", "AFXOLE/CAsyncMonikerFile", "AFXOLE/CAsyncMonikerFile::CAsyncMonikerFile", "AFXOLE/CAsyncMonikerFile::Close", "AFXOLE/CAsyncMonikerFile::GetBinding", "AFXOLE/CAsyncMonikerFile::GetFormatEtc", "AFXOLE/CAsyncMonikerFile::Open", "AFXOLE/CAsyncMonikerFile::CreateBindStatusCallback", "AFXOLE/CAsyncMonikerFile::GetBindInfo", "AFXOLE/CAsyncMonikerFile::GetPriority", "AFXOLE/CAsyncMonikerFile::OnDataAvailable", "AFXOLE/CAsyncMonikerFile::OnLowResource", "AFXOLE/CAsyncMonikerFile::OnProgress", "AFXOLE/CAsyncMonikerFile::OnStartBinding", "AFXOLE/CAsyncMonikerFile::OnStopBinding"]
@@ -47,7 +48,7 @@ class CAsyncMonikerFile : public CMonikerFile
 
 ## Remarks
 
-Derived from [CMonikerFile](../../mfc/reference/cmonikerfile-class.md), which in turn is derived from [COleStreamFile](../../mfc/reference/colestreamfile-class.md), `CAsyncMonikerFile` uses the [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker) interface to access any data stream asynchronously, including loading files asynchronously from a URL. The files can be datapath properties of ActiveX controls.
+Derived from [CMonikerFile](../../mfc/reference/cmonikerfile-class.md), which in turn is derived from [COleStreamFile](../../mfc/reference/colestreamfile-class.md), `CAsyncMonikerFile` uses the [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker) interface to access any data stream asynchronously, including loading files asynchronously from a URL. The files can be datapath properties of ActiveX controls.
 
 Asynchronous monikers are used primarily in Internet-enabled applications and ActiveX controls to provide a responsive user-interface during file transfers. A prime example of this is the use of [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) to provide asynchronous properties for ActiveX controls. The `CDataPathProperty` object will repeatedly get a callback to indicate availability of new data during a lengthy property exchange process.
 
@@ -73,7 +74,7 @@ For more information about how to use asynchronous monikers and ActiveX controls
 
 **Header:** afxole.h
 
-##  <a name="casyncmonikerfile"></a>  CAsyncMonikerFile::CAsyncMonikerFile
+## <a name="casyncmonikerfile"></a> CAsyncMonikerFile::CAsyncMonikerFile
 
 Constructs a `CAsyncMonikerFile` object.
 
@@ -87,7 +88,7 @@ It does not create the `IBindHost` interface. `IBindHost` is used only if you pr
 
 For a description of the `IBindHost` interface, see the Windows SDK.
 
-##  <a name="close"></a>  CAsyncMonikerFile::Close
+## <a name="close"></a> CAsyncMonikerFile::Close
 
 Call this function to close and release all resources.
 
@@ -99,7 +100,7 @@ virtual void Close();
 
 Can be called on unopened or already closed files.
 
-##  <a name="createbindstatuscallback"></a>  CAsyncMonikerFile::CreateBindStatusCallback
+## <a name="createbindstatuscallback"></a> CAsyncMonikerFile::CreateBindStatusCallback
 
 Creates a COM object that implements `IBindStatusCallback`.
 
@@ -124,9 +125,9 @@ Alternately, your COM object can delegate to MFC's implementation by calling `Cr
 
 [CAsyncMonikerFile::Open](#open) calls `CreateBindStatusCallback`.
 
-For more information about asynchronous monikers and asynchronous binding, see the [IBindStatusCallback](https://msdn.microsoft.com/library/ie/ms775060) interface and [How Asynchronous Binding and Storage Work](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work). For a discussion of aggregation, see [Aggregation](/windows/desktop/com/aggregation). All three topics are in the Windows SDK.
+For more information about asynchronous monikers and asynchronous binding, see the [IBindStatusCallback](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060\(v=vs.85\)) interface and [How Asynchronous Binding and Storage Work](/windows/win32/Stg/how-asynchronous-binding-and-storage-work). For a discussion of aggregation, see [Aggregation](/windows/win32/com/aggregation). All three topics are in the Windows SDK.
 
-##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo
+## <a name="getbindinfo"></a> CAsyncMonikerFile::GetBindInfo
 
 Called from the client of an asynchronous moniker to tell the asynchronous moniker how it wants to bind.
 
@@ -144,7 +145,7 @@ The default implementation sets the binding to be asynchronous, to use a storage
 
 One reason for doing this would be to bind using the data-pull model instead of the data-push model. In a data-pull model, the client drives the bind operation, and the moniker only provides data to the client when it is read. In a data-push model, the moniker drives the asynchronous bind operation and continuously notifies the client whenever new data is available.
 
-##  <a name="getbinding"></a>  CAsyncMonikerFile::GetBinding
+## <a name="getbinding"></a> CAsyncMonikerFile::GetBinding
 
 Call this function to retrieve a pointer to the asynchronous transfer binding.
 
@@ -162,7 +163,7 @@ This allows you to control the data transfer process through the `IBinding` inte
 
 For a description of the `IBinding` interface, see the Windows SDK.
 
-##  <a name="getformatetc"></a>  CAsyncMonikerFile::GetFormatEtc
+## <a name="getformatetc"></a> CAsyncMonikerFile::GetFormatEtc
 
 Call this function to retrieve the format of the data in the stream.
 
@@ -172,9 +173,9 @@ FORMATETC* GetFormatEtc() const;
 
 ### Return Value
 
-A pointer to the Windows structure [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) for the currently opened stream. Returns NULL if the moniker has not been bound, if it is not asynchronous, or if the asynchronous operation has not begun.
+A pointer to the Windows structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) for the currently opened stream. Returns NULL if the moniker has not been bound, if it is not asynchronous, or if the asynchronous operation has not begun.
 
-##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority
+## <a name="getpriority"></a> CAsyncMonikerFile::GetPriority
 
 Called from the client of an asynchronous moniker as the binding process starts to receive the priority given to the thread for the binding operation.
 
@@ -184,13 +185,13 @@ virtual LONG GetPriority() const;
 
 ### Return Value
 
-The priority at which the asynchronous transfer will take place. One of the standard thread priority flags: THREAD_PRIORITY_ABOVE_NORMAL, THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, THREAD_PRIORITY_LOWEST, THREAD_PRIORITY_NORMAL, and THREAD_PRIORITY_TIME_CRITICAL. See the Windows function [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) for a description of these values.
+The priority at which the asynchronous transfer will take place. One of the standard thread priority flags: THREAD_PRIORITY_ABOVE_NORMAL, THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, THREAD_PRIORITY_LOWEST, THREAD_PRIORITY_NORMAL, and THREAD_PRIORITY_TIME_CRITICAL. See the Windows function [SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) for a description of these values.
 
 ### Remarks
 
 `GetPriority` should not be called directly. THREAD_PRIORITY_NORMAL is returned by the default implementation.
 
-##  <a name="ondataavailable"></a>  CAsyncMonikerFile::OnDataAvailable
+## <a name="ondataavailable"></a> CAsyncMonikerFile::OnDataAvailable
 
 An asynchronous moniker calls `OnDataAvailable` to provide data to the client as it becomes available, during asynchronous bind operations.
 
@@ -220,7 +221,7 @@ The default implementation of this function does nothing. See the following exam
 
 [!code-cpp[NVC_MFCWinInet#5](../../mfc/codesnippet/cpp/casyncmonikerfile-class_1.cpp)]
 
-##  <a name="onlowresource"></a>  CAsyncMonikerFile::OnLowResource
+## <a name="onlowresource"></a> CAsyncMonikerFile::OnLowResource
 
 Called by the moniker when resources are low.
 
@@ -232,7 +233,7 @@ virtual void OnLowResource();
 
 The default implementation calls `GetBinding( )-> Abort( )`.
 
-##  <a name="onprogress"></a>  CAsyncMonikerFile::OnProgress
+## <a name="onprogress"></a> CAsyncMonikerFile::OnProgress
 
 Called by the moniker repeatedly to indicate the current progress of this bind operation, typically at reasonable intervals during a lengthy operation.
 
@@ -262,19 +263,19 @@ Information about the current progress, depending on the value of *ulStatusCode*
 
 Possible values for *ulStatusCode* (and the *szStatusText* for each value) are:
 
-|||
-|-|-|
-|BINDSTATUS_FINDINGRESOURCE  |The bind operation is finding the resource that holds the object or storage being bound to. The *szStatusText* provides the display name of the resource being searched for (for example, "www.microsoft.com").  |
-|BINDSTATUS_CONNECTING  |The bind operation is connecting to the resource that holds the object or storage being bound to. The *szStatusText* provides the display name of the resource being connected to (for example, an IP address).  |
-|BINDSTATUS_SENDINGREQUEST|The bind operation is requesting the object or storage being bound to. The *szStatusText* provides the display name of the object (for example, a file name).|
-|BINDSTATUS_REDIRECTING  |The bind operation has been redirected to a different data location. The *szStatusText* provides the display name of the new data location.  |
-|BINDSTATUS_USINGCACHEDCOPY  |The bind operation is retrieving the requested object or storage from a cached copy. The *szStatusText* is NULL.  |
-|BINDSTATUS_BEGINDOWNLOADDATA  |The bind operation has begun receiving the object or storage being bound to. The *szStatusText* provides the display name of the data location.|
-|BINDSTATUS_DOWNLOADINGDATA  |The bind operation continues to receive the object or storage being bound to. The *szStatusText* provides the display name of the data location.  |
-|BINDSTATUS_ENDDOWNLOADDATA  |The bind operation has finished receiving the object or storage being bound to. The *szStatusText* provides the display name of the data location.  |
-|BINDSTATUS_CLASSIDAVAILABLE  |An instance of the object being bound to is just about to be created. The *szStatusText* provides the CLSID of the new object in string format, allowing the client an opportunity to cancel the bind operation, if desired.  |
+| Value | Description |
+|--|--|
+| BINDSTATUS_FINDINGRESOURCE | The bind operation is finding the resource that holds the object or storage being bound to. The *szStatusText* provides the display name of the resource being searched for (for example, "www.microsoft.com"). |
+| BINDSTATUS_CONNECTING | The bind operation is connecting to the resource that holds the object or storage being bound to. The *szStatusText* provides the display name of the resource being connected to (for example, an IP address). |
+| BINDSTATUS_SENDINGREQUEST | The bind operation is requesting the object or storage being bound to. The *szStatusText* provides the display name of the object (for example, a file name). |
+| BINDSTATUS_REDIRECTING | The bind operation has been redirected to a different data location. The *szStatusText* provides the display name of the new data location. |
+| BINDSTATUS_USINGCACHEDCOPY | The bind operation is retrieving the requested object or storage from a cached copy. The *szStatusText* is NULL. |
+| BINDSTATUS_BEGINDOWNLOADDATA | The bind operation has begun receiving the object or storage being bound to. The *szStatusText* provides the display name of the data location. |
+| BINDSTATUS_DOWNLOADINGDATA | The bind operation continues to receive the object or storage being bound to. The *szStatusText* provides the display name of the data location. |
+| BINDSTATUS_ENDDOWNLOADDATA | The bind operation has finished receiving the object or storage being bound to. The *szStatusText* provides the display name of the data location. |
+| BINDSTATUS_CLASSIDAVAILABLE | An instance of the object being bound to is just about to be created. The *szStatusText* provides the CLSID of the new object in string format, allowing the client an opportunity to cancel the bind operation, if desired. |
 
-##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding
+## <a name="onstartbinding"></a> CAsyncMonikerFile::OnStartBinding
 
 Override this function in your derived classes to perform actions when binding is starting up.
 
@@ -286,7 +287,7 @@ virtual void OnStartBinding();
 
 This function is called back by the moniker. The default implementation does nothing.
 
-##  <a name="onstopbinding"></a>  CAsyncMonikerFile::OnStopBinding
+## <a name="onstopbinding"></a> CAsyncMonikerFile::OnStopBinding
 
 Called by the moniker at the end of the bind operation.
 
@@ -308,7 +309,7 @@ Override this function to perform actions when the transfer is stopped. By defau
 
 For a description of the `IBinding` interface, see the Windows SDK.
 
-##  <a name="open"></a>  CAsyncMonikerFile::Open
+## <a name="open"></a> CAsyncMonikerFile::Open
 
 Call this member function to open a file asynchronously.
 
@@ -388,7 +389,7 @@ You can use a URL or a filename for the *lpszURL* parameter. For example:
 
 [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/casyncmonikerfile-class_3.cpp)]
 
-## See Also
+## See also
 
 [CMonikerFile Class](../../mfc/reference/cmonikerfile-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

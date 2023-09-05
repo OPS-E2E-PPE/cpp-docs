@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3100"
 title: "Compiler Error C3100"
 ms.date: "11/04/2016"
 f1_keywords: ["C3100"]
@@ -11,13 +12,13 @@ ms.assetid: 7a9c9eaf-08ef-442d-94a0-e457beee8549
 
 An invalid attribute target was specified.
 
-For more information, see [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+For more information, see [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## Example
 
 The following sample generates C3100.
 
-```
+```cpp
 // C3100.cpp
 // compile with: /clr /c
 using namespace System;

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Exported DLL Function Entry Points"
 title: "Exported DLL Function Entry Points"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["exporting DLLs [MFC], functions", "MFC, managing state data", "state management [MFC], exported DLLs"]
@@ -14,7 +15,7 @@ This switching is achieved by constructing an instance of an `AFX_MODULE_STATE` 
 
 If you have an exported function, such as one that launches a dialog box in your DLL, you need to add the following code to the beginning of the function:
 
-[!code-cpp[NVC_MFCConnectionPoints#6](../mfc/codesnippet/cpp/exported-dll-function-entry-points_1.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#6](codesnippet/cpp/exported-dll-function-entry-points_1.cpp)]
 
 This swaps the current module state with the state returned from [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate) until the end of the current scope.
 
@@ -22,7 +23,6 @@ Problems with resources in DLLs will occur if the `AFX_MANAGE_STATE` macro is no
 
 `AFX_MANAGE_STATE` does not need to be put into every function in the DLL. For example, `InitInstance` can be called by the MFC code in the application without `AFX_MANAGE_STATE` because MFC automatically shifts the module state before `InitInstance` and then switches it back after `InitInstance` returns. The same is true for all message-map handlers. Regular MFC DLLs actually have a special master window procedure that automatically switches the module state before routing any message.
 
-## See Also
+## See also
 
-[Managing the State Data of MFC Modules](../mfc/managing-the-state-data-of-mfc-modules.md)
-
+[Managing the State Data of MFC Modules](managing-the-state-data-of-mfc-modules.md)

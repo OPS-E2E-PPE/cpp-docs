@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2057"
 title: "Compiler Error C2057"
 ms.date: "11/04/2016"
 f1_keywords: ["C2057"]
@@ -13,11 +14,11 @@ The context requires a constant expression, an expression whose value is known a
 
 The compiler must know the size of a type at compile time in order to allocate space for an instance of that type.
 
-## Example
+## Examples
 
 The following sample generates C2057 and shows how to fix it:
 
-```
+```cpp
 // C2057.cpp
 int i;
 int b[i];   // C2057 - value of i is unknown at compile time
@@ -27,11 +28,9 @@ int main() {
 }
 ```
 
-## Example
-
 C has more restrictive rules for constant expressions.  The following sample generates C2057 and shows how to fix it:
 
-```
+```c
 // C2057b.c
 #define ArraySize1 10
 int main() {

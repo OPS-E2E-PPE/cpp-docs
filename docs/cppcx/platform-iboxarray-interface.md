@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Platform::IBoxArray Interface"
 title: "Platform::IBoxArray Interface"
 ms.date: "12/30/2016"
 ms.topic: "reference"
-f1_keywords: ["VCCORLIB/Namespace not found::Platform", "VCCORLIB/Namespace not found::Platform::Value"]
+f1_keywords: ["VCCORLIB/Platform::IBoxArray", "VCCORLIB/Platform::IBoxArray::Value"]
 helpviewer_keywords: ["Platform::IBoxArray"]
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
 ---
@@ -57,6 +58,6 @@ Returns the value that was originally stored in this object.
 
 For an example, see [Boxing](../cppcx/boxing-c-cx.md).
 
-## See Also
+## See also
 
 [Array and WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

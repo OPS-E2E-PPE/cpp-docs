@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Hosting a Windows Forms User Control as an MFC View"
 title: "Hosting a Windows Forms User Control as an MFC View"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["MFC [C++], Windows Forms support", "Windows Forms controls [C++], hosting as an MFC view", "hosting Windows Forms control [C++]"]
@@ -12,8 +13,6 @@ The end result resembles the model used by the [CFormView Class](../mfc/referenc
 
 Because MFC Windows Forms views are ActiveX controls, they do not have the same `hwnd` as MFC views. Also they cannot be passed as a pointer to a [CView](../mfc/reference/cview-class.md) view. In general, use .NET Framework methods to work with Windows Forms views and rely less on Win32.
 
-For a sample application that shows Windows Forms used with MFC, see [MFC and Windows Forms Integration](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
-
 ## In This Section
 
 [How to: Create the User Control and Host MDI View](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)
@@ -22,7 +21,7 @@ For a sample application that shows Windows Forms used with MFC, see [MFC and Wi
 
 [How to: Call Properties and Methods of the Windows Forms Control](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)
 
-## See Also
+## See also
 
 [Using a Windows Form User Control in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
 [How to: Author Composite Controls](/dotnet/framework/winforms/controls/how-to-author-composite-controls)

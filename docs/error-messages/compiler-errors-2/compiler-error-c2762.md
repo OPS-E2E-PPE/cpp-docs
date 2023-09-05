@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2762"
 title: "Compiler Error C2762"
 ms.date: "11/04/2016"
 f1_keywords: ["C2762"]
@@ -13,7 +14,7 @@ When using [/Za](../../build/reference/za-ze-disable-language-extensions.md), th
 
 The following sample generates C2762:
 
-```
+```cpp
 // C2762.cpp
 // compile with: /Za
 template<typename T, T *pT>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IRowsetNotifyCP Class"
 title: "IRowsetNotifyCP Class"
 ms.date: "11/04/2016"
 f1_keywords: ["IRowsetNotifyCP", "Fire_OnFieldChange", "ATL::IRowsetNotifyCP::Fire_OnFieldChange", "ATL.IRowsetNotifyCP.Fire_OnFieldChange", "IRowsetNotifyCP.Fire_OnFieldChange", "IRowsetNotifyCP::Fire_OnFieldChange", "IRowsetNotifyCP.Fire_OnRowChange", "ATL.IRowsetNotifyCP.Fire_OnRowChange", "Fire_OnRowChange", "ATL::IRowsetNotifyCP::Fire_OnRowChange", "IRowsetNotifyCP::Fire_OnRowChange", "Fire_OnRowsetChange", "IRowsetNotifyCP::Fire_OnRowsetChange", "IRowsetNotifyCP.Fire_OnRowsetChange", "ATL::IRowsetNotifyCP::Fire_OnRowsetChange", "ATL.IRowsetNotifyCP.Fire_OnRowsetChange"]
@@ -7,7 +8,7 @@ ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
 ---
 # IRowsetNotifyCP Class
 
-Implements the provider site for the connection point interface [IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85)).
+Implements the provider site for the connection point interface [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)).
 
 ## Syntax
 
@@ -43,7 +44,7 @@ An array of type [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-c
 
 ### Methods
 
-|||
+| Name | Description |
 |-|-|
 |[Fire_OnFieldChange](#onfieldchange)|Notifies the consumer of a change to the value of a column.|
 |[Fire_OnRowChange](#onrowchange)|Notifies the consumer of a change affecting the rows.|
@@ -59,7 +60,7 @@ For detailed information on implementing notifications, see "Supporting Notifica
 
 ## <a name="onfieldchange"></a> IRowsetNotifyCP::Fire_OnFieldChange
 
-Broadcasts an [OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85)) event to notify consumers of a change to the value of a column.
+Broadcasts an [OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) event to notify consumers of a change to the value of a column.
 
 ### Syntax
 
@@ -75,11 +76,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 
 #### Parameters
 
-See [IRowsetNotify::OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85)) in the *OLE DB Programmer's Reference*.
+See [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ## <a name="onrowchange"></a> IRowsetNotifyCP::Fire_OnRowChange
 
-Broadcasts an [OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85)) event to all listeners on the connection point `IID_IRowsetNotify` to notify consumers of a change affecting the rows.
+Broadcasts an [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) event to all listeners on the connection point `IID_IRowsetNotify` to notify consumers of a change affecting the rows.
 
 ### Syntax
 
@@ -94,11 +95,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 
 #### Parameters
 
-See [IRowsetNotify::OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85)) in the *OLE DB Programmer's Reference*.
+See [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyCP::Fire_OnRowsetChange
 
-Broadcasts an [OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85)) event to all listeners on the connection point `IID_IRowsetNotify` to notify consumers of a change affecting the entire rowset.
+Broadcasts an [OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) event to all listeners on the connection point `IID_IRowsetNotify` to notify consumers of a change affecting the entire rowset.
 
 ### Syntax
 
@@ -111,13 +112,13 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 
 #### Parameters
 
-See [IRowsetNotify::OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85)) in the *OLE DB Programmer's Reference*.
+See [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
-## See Also
+## See also
 
 [OLE DB Provider Templates](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB Provider Template Architecture](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[Notifications (COM)](/windows/desktop/com/notifications)<br/>
+[Notifications (COM)](/windows/win32/com/notifications)<br/>
 [BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)<br/>
 [END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)<br/>
 [CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)<br/>

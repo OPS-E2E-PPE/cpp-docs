@@ -1,16 +1,18 @@
 ---
-title: "&lt;unordered_map&gt; operators"
+description: "Learn more about: <unordered_map> operators"
+title: "<unordered_map> operators"
 ms.date: "11/04/2016"
 f1_keywords: ["unordered_map/std::operator!=", "unordered_map/std::operator=="]
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
 ---
-# &lt;unordered_map&gt; operators
+# `<unordered_map>` operators
 
-|||||
-|-|-|-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|
+[unordered_map::operator!=](#op_neq)\
+[unordered_map::operator==](#op_eq_eq)\
+[unordered_multimap::operator!=](#op_neq_multimap)\
+[unordered_multimap::operator==](#op_eq_eq_multimap)
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 Tests whether the [unordered_map](../standard-library/unordered-map-class.md) object on the left side of the operator is not equal to the unordered_map object on the right side.
 
@@ -20,15 +22,15 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `unordered_map`.
 
-*right*<br/>
+*right*\
 An object of type `unordered_map`.
 
 ### Return Value
 
-**true** if the unordered_maps are not equal; **false** if they are equal.
+**`true`** if the unordered_maps are not equal; **`false`** if they are equal.
 
 ### Remarks
 
@@ -64,17 +66,15 @@ int main( )
    cout << "um1 != um3: " << (um1 != um3) << endl;
    cout << "um2 != um3: " << (um2 != um3) << endl;
 }
+
+/* Output:
+um1 != um2: true
+um1 != um3: false
+um2 != um3: true
+*/
 ```
 
-**Output:**
-
-`um1 != um2: true`
-
-`um1 != um3: false`
-
-`um2 != um3: true`
-
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Tests whether the [unordered_map](../standard-library/unordered-map-class.md) object on the left side of the operator is equal to the unordered_map object on the right side.
 
@@ -84,15 +84,15 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `unordered_map`.
 
-*right*<br/>
+*right*\
 An object of type `unordered_map`.
 
 ### Return Value
 
-**true** if the unordered_maps are equal; **false** if they are not equal.
+**`true`** if the unordered_maps are equal; **`false`** if they are not equal.
 
 ### Remarks
 
@@ -128,17 +128,15 @@ int main( )
    cout << "um1 == um3: " << (um1 == um3) << endl;
    cout << "um2 == um3: " << (um2 == um3) << endl;
 }
+
+/* Output:
+um1 == um2: false
+um1 == um3: true
+um2 == um3: false
+*/
 ```
 
-**Output:**
-
-`um1 == um2: false`
-
-`um1 == um3: true`
-
-`um2 == um3: false`
-
-## <a name="op_neq_multimap"></a>  operator!=
+## <a name="op_neq_multimap"></a> operator!= (multimap)
 
 Tests whether the [unordered_multimap](../standard-library/unordered-multimap-class.md) object on the left side of the operator is not equal to the unordered_multimap object on the right side.
 
@@ -148,15 +146,15 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `unordered_multimap`.
 
-*right*<br/>
+*right*\
 An object of type `unordered_multimap`.
 
 ### Return Value
 
-**true** if the unordered_multimaps are not equal; **false** if they are equal.
+**`true`** if the unordered_multimaps are not equal; **`false`** if they are equal.
 
 ### Remarks
 
@@ -193,17 +191,15 @@ int main( )
    cout << "um1 != um3: " << (um1 != um3) << endl;
    cout << "um2 != um3: " << (um2 != um3) << endl;
 }
+
+/* Output:
+um1 != um2: true
+um1 != um3: false
+um2 != um3: true
+*/
 ```
 
-**Output:**
-
-`um1 != um2: true`
-
-`um1 != um3: false`
-
-`um2 != um3: true`
-
-## <a name="op_eq_eq_multimap"></a>  operator==
+## <a name="op_eq_eq_multimap"></a> operator== (multimap)
 
 Tests whether the [unordered_multimap](../standard-library/unordered-multimap-class.md) object on the left side of the operator is equal to the unordered_multimap object on the right side.
 
@@ -213,15 +209,15 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `unordered_multimap`.
 
-*right*<br/>
+*right*\
 An object of type `unordered_multimap`.
 
 ### Return Value
 
-**true** if the unordered_multimaps are equal; **false** if they are not equal.
+**`true`** if the unordered_multimaps are equal; **`false`** if they are not equal.
 
 ### Remarks
 
@@ -258,16 +254,14 @@ int main( )
    cout << "um1 == um3: " << (um1 == um3) << endl;
    cout << "um2 == um3: " << (um2 == um3) << endl;
 }
+
+/* Output:
+um1 == um2: false
+um1 == um3: true
+um2 == um3: false
+*/
 ```
-
-**Output:**
-
-`um1 == um2: false`
-
-`um1 == um3: true`
-
-`um2 == um3: false`
 
 ## See also
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)

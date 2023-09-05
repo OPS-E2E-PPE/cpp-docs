@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3268"
 title: "Compiler Error C3268"
 ms.date: "11/04/2016"
 f1_keywords: ["C3268"]
@@ -13,7 +14,7 @@ ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
 
 The **/clr:pure** and **/clr:safe** compiler options are deprecated in Visual Studio 2015 and unsupported in Visual Studio 2017.
 
-See [Generics](../../windows/generics-cpp-component-extensions.md) for more information.
+See [Generics](../../extensions/generics-cpp-component-extensions.md) for more information.
 
 ## Example
 

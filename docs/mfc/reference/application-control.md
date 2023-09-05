@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Application Control"
 title: "Application Control"
 ms.date: "11/04/2016"
-f1_keywords: ["vc.mfc.macros"]
 helpviewer_keywords: ["application control [MFC]"]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
 ---
@@ -11,7 +11,7 @@ OLE requires substantial control over applications and their objects. The OLE sy
 
 ### Application Control
 
-|||
+| Name | Description |
 |-|-|
 |[AfxOleCanExitApp](#afxolecanexitapp)|Indicates whether the application can terminate.|
 |[AfxOleGetMessageFilter](#afxolegetmessagefilter)|Retrieves the application's current message filter.|
@@ -24,7 +24,7 @@ OLE requires substantial control over applications and their objects. The OLE sy
 |[AfxOleRegisterServerClass](#afxoleregisterserverclass)|Registers a server in the OLE system registry.|
 |[AfxOleSetEditMenu](#afxoleseteditmenu)|Implements the user interface for the *typename* Object command.|
 
-##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp
+## <a name="afxolecanexitapp"></a> AfxOleCanExitApp
 
 Indicates whether the application can terminate.
 
@@ -48,7 +48,7 @@ An application should not terminate if there are outstanding references to its o
 
 **Header**: afxdisp.h
 
-##  <a name="afxolegetmessagefilter"></a>  AfxOleGetMessageFilter
+## <a name="afxolegetmessagefilter"></a> AfxOleGetMessageFilter
 
 Retrieves the application's current message filter.
 
@@ -67,14 +67,14 @@ Call this function to access the current `COleMessageFilter`-derived object, jus
 ### Example
 
 [!code-cpp[NVC_MFCAutomation#3](../../mfc/codesnippet/cpp/application-control_2.cpp)]
-
+&nbsp;
 [!code-cpp[NVC_MFCAutomation#4](../../mfc/codesnippet/cpp/application-control_3.cpp)]
 
 ### Requirements
 
 **Header**: afxwin.h
 
-##  <a name="afxolegetuserctrl"></a>  AfxOleGetUserCtrl
+## <a name="afxolegetuserctrl"></a> AfxOleGetUserCtrl
 
 Retrieves the current user-control flag.
 
@@ -94,11 +94,11 @@ The user is in control of the application when the user has explicitly opened or
 
 **Header**: afxdisp.h
 
-##  <a name="afxolesetuserctrl"></a>  AfxOleSetUserCtrl
+## <a name="afxolesetuserctrl"></a> AfxOleSetUserCtrl
 
 Sets or clears the user-control flag, which is explained in the reference for `AfxOleGetUserCtrl`.
 
-```
+```cpp
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ```
 
@@ -117,11 +117,11 @@ Call this function if other actions in your application should put the user in c
 
 **Header**: afxdisp.h
 
-##  <a name="afxolelockapp"></a>  AfxOleLockApp
+## <a name="afxolelockapp"></a> AfxOleLockApp
 
 Increments the framework's global count of the number of active objects in the application.
 
-```
+```cpp
 void AFXAPI AfxOleLockApp();
 ```
 
@@ -141,11 +141,11 @@ Call `AfxOleLockApp` from any object that exposes OLE interfaces, if it would be
 
 **Header**: afxdisp.h
 
-##  <a name="afxoleunlockapp"></a>  AfxOleUnlockApp
+## <a name="afxoleunlockapp"></a> AfxOleUnlockApp
 
 Decrements the framework's count of active objects in the application.
 
-```
+```cpp
 void AFXAPI AfxOleUnlockApp();
 ```
 
@@ -204,12 +204,7 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 
 **Header:** afxwin.h
 
-### See Also
-
-[Macros and Globals](mfc-macros-and-globals.md)<br/>
-[AfxOleUnlockControl](#afxoleunlockcontrol)
-
-##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass
+## <a name="afxoleregisterserverclass"></a> AfxOleRegisterServerClass
 
 This function allows you to register your server in the OLE system registry.
 
@@ -279,11 +274,11 @@ The symbols are filled in as follows:
 
 **Header**: afxdisp.h
 
-##  <a name="afxoleseteditmenu"></a>  AfxOleSetEditMenu
+## <a name="afxoleseteditmenu"></a> AfxOleSetEditMenu
 
 Implements the user interface for the *typename* Object command.
 
-```
+```cpp
 void AFXAPI AfxOleSetEditMenu(
     COleClientItem* pClient,
     CMenu* pMenu,
@@ -325,10 +320,6 @@ You must have the following statement in your client's application resource scri
 
 **Header**: afxole.h
 
-## See Also
-
-[Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
-
 ## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
 
 Unlocks the class factory of the specified control.
@@ -368,8 +359,6 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 **Header:** afxwin.h
 
-### See Also
+## See also
 
 [Macros and Globals](mfc-macros-and-globals.md)<br/>
-[AfxOleLockControl](#afxolelockcontrol)
-

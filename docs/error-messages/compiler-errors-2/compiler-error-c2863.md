@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2863"
 title: "Compiler Error C2863"
 ms.date: "11/04/2016"
 f1_keywords: ["C2863"]
@@ -13,7 +14,7 @@ Declaring friends on an interface is not allowed.
 
 The following sample generates C2863:
 
-```
+```cpp
 // C2863.cpp
 // compile with: /c
 #include <unknwn.h>

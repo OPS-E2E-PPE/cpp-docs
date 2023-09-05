@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3262"
 title: "Compiler Error C3262"
 ms.date: "11/04/2016"
 f1_keywords: ["C3262"]
@@ -13,7 +14,7 @@ An array was improperly subscripted. The number of indices may not match the num
 
 The following sample generates C3262:
 
-```
+```cpp
 // C3262.cpp
 // compile with: /clr
 #using <mscorlib.dll>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Working with the Toolbar Control"
 title: "Working with the Toolbar Control"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["GetToolBarCtrl method [MFC]", "toolbars [MFC], accessing common control", "CToolBarCtrl class [MFC], accessing toolbar", "toolbar controls [MFC], accessing"]
@@ -17,7 +18,7 @@ This article explains how you can access the [CToolBarCtrl](../mfc/reference/cto
 `GetToolBarCtrl` returns a reference to a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) object. You can use the reference to call member functions of the toolbar control class.
 
 > [!CAUTION]
->  While calling `CToolBarCtrl` **Get** functions is safe, use caution if you call the **Set** functions. This is an advanced topic. Normally you shouldn't need to access the underlying toolbar control.
+> While calling `CToolBarCtrl` **Get** functions is safe, use caution if you call the **Set** functions. This is an advanced topic. Normally you shouldn't need to access the underlying toolbar control.
 
 ### What do you want to know more about
 
@@ -45,9 +46,8 @@ This article explains how you can access the [CToolBarCtrl](../mfc/reference/cto
 
 - [Control bars](../mfc/control-bars.md)
 
-For general information about using Windows common controls, see [Common Controls](/windows/desktop/Controls/common-controls-intro).
+For general information about using Windows common controls, see [Common Controls](/windows/win32/Controls/common-controls-intro).
 
-## See Also
+## See also
 
 [MFC Toolbar Implementation](../mfc/mfc-toolbar-implementation.md)
-

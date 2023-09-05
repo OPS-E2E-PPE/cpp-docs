@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: __sidt"
 title: "__sidt"
-ms.date: "11/04/2016"
+ms.date: "09/02/2019"
 f1_keywords: ["__sidt"]
 helpviewer_keywords: ["sidt instruction", "__sidt intrinsic"]
 ms.assetid: 01e83d14-6e63-4dea-8f64-5a0339d69641
@@ -13,15 +14,14 @@ Stores the value of the interrupt descriptor table register (IDTR) in the specif
 
 ## Syntax
 
-```
+```C
 void __sidt(void * Destination);
 ```
 
-#### Parameters
+### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*Destination*|[in] A pointer to the memory location where the IDTR is stored.|
+*Destination*\
+[in] A pointer to the memory location where the IDTR is stored.
 
 ## Requirements
 
@@ -37,7 +37,7 @@ The `__sidt` function is equivalent to the `SIDT` machine instruction. For more 
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
-[Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)<br/>
+[Compiler intrinsics](../intrinsics/compiler-intrinsics.md)\
 [__lidt](../intrinsics/lidt.md)

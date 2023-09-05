@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::WriteOnlyArray Class"
 title: "Platform::WriteOnlyArray Class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -29,7 +30,7 @@ These methods have internal accessibility—that is, they are only accessible wi
 |[WriteOnlyArray::begin](#begin)|An iterator that points to the first element of the array.|
 |[WriteOnlyArray::Data](#data)|A pointer to the data buffer.|
 |[WriteOnlyArray::end](#end)|An iterator that points to one past the last element in the array.|
-|[WriteOnlyArray::FastPass](#fastpass)|Indicates whether the array can use the FastPass mechanism, which is an optimization transparently performed by the system. Don’t use this in your code|
+|[WriteOnlyArray::FastPass](#fastpass)|Indicates whether the array can use the FastPass mechanism, which is an optimization transparently performed by the system. Don't use this in your code|
 |[WriteOnlyArray::Length](#length)|Returns the number of elements in the array.|
 |[WriteOnlyArray::set](#set)|Sets the specified element to the specified value.|
 
@@ -45,7 +46,7 @@ Compiler option: **/ZW**
 
 **Namespace:** Platform
 
-## <a name="begin"></a>  WriteOnlyArray::begin Method
+## <a name="begin"></a> WriteOnlyArray::begin Method
 
 Returns a pointer to the first element in the array.
 
@@ -63,7 +64,7 @@ A pointer to the first element in the array.
 
 This iterator can be used with STL algorithms such as `std::sort` to operate on elements in the array.
 
-## <a name="data"></a>  WriteOnlyArray::Data Property
+## <a name="data"></a> WriteOnlyArray::Data Property
 
 Pointer to the data buffer.
 
@@ -79,7 +80,7 @@ property T* Data{
 
 A pointer to the raw array bytes.
 
-## <a name="end"></a>  WriteOnlyArray::end Method
+## <a name="end"></a> WriteOnlyArray::end Method
 
 Returns a pointer to one past the last element in the array.
 
@@ -97,7 +98,7 @@ A pointer iterator to one past the last element in the array.
 
 This iterator can be used with STL algorithms to perform operations such as `std::sort` on the array elements.
 
-## <a name="fastpass"></a>  WriteOnlyArray::FastPass Property
+## <a name="fastpass"></a> WriteOnlyArray::FastPass Property
 
 Indicates whether the internal FastPass optimization can be performed. Not intended for use by user code.
 
@@ -113,7 +114,7 @@ property bool FastPass{
 
 Boolean value that indicates whether the array is FastPass.
 
-## <a name="get"></a>  WriteOnlyArray::get Method
+## <a name="get"></a> WriteOnlyArray::get Method
 
 Returns the element at the specified index.
 
@@ -130,7 +131,7 @@ The index to use.
 
 ### Return Value
 
-## <a name="length"></a>  WriteOnlyArray::Length Property
+## <a name="length"></a> WriteOnlyArray::Length Property
 
 Returns the number of elements in the caller-allocated array.
 
@@ -146,7 +147,7 @@ property unsigned int Length{
 
 The number of elements in the array.
 
-## <a name="set"></a>  WriteOnlyArray::set Function
+## <a name="set"></a> WriteOnlyArray::set Function
 
 Sets the specified value at the specified index in the array.
 
@@ -172,9 +173,9 @@ A reference to the element that was just set.
 
 ### Remarks
 
-For more information about how to interpret the HRESULT value, see [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes).
+For more information about how to interpret the HRESULT value, see [Structure of COM Error Codes](/windows/win32/com/structure-of-com-error-codes).
 
-## See Also
+## See also
 
 [Platform Namespace](platform-namespace-c-cx.md)<br/>
 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

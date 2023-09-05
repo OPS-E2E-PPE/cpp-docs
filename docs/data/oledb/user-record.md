@@ -1,10 +1,16 @@
 ---
+description: "Learn more about: User Record"
 title: "User Record"
-ms.date: "11/04/2016"
+ms.date: 06/21/2022
 helpviewer_keywords: ["records, user", "OLE DB providers, user record", "user records", "user records, described", "rowsets, user record"]
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
+ms.custom: devdivchpfy22
 ---
+
 # User Record
+
+> [!NOTE]
+> The ATL OLE DB Provider wizard is not available in Visual Studio 2019 and later.
 
 The user record provides the code and data structure that represents the column data for a rowset. A user record can be created at compile time or at run time. When you create a provider using the **ATL OLE DB Provider Wizard**, the wizard creates a default user record that looks like this (assuming you specified a provider name [short name] of *MyProvider*):
 
@@ -29,7 +35,7 @@ The OLE DB provider templates handle all OLE DB specifics on interactions with t
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
 ```
 
 This equates to:
@@ -49,12 +55,12 @@ The PROVIDER_COLUMN_MAP macros aid in creating a `GetColumnInfo` function:
 
 - END_PROVIDER_COLUMN_MAP closes the array and the function. It also places the array element count into the *pcCols* parameter.
 
-When a user record is created at run time, `GetColumnInfo` uses the *pThis* parameter to receive a pointer to a rowset or command instance. Commands and rowsets must support the `IColumnsInfo` interface, so column information can be taken from this pointer.
+When a user record is created at run time, `GetColumnInfo` uses the *`pThis`* parameter to receive a pointer to a rowset or command instance. Commands and rowsets must support the `IColumnsInfo` interface, so column information can be taken from this pointer.
 
 `CommandClass` and `RowsetClass` are the command and rowset that use the user record.
 
 For a more detailed example of how to override `GetColumnInfo` in a user record, see [Dynamically Determining Columns Returned to the Consumer](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
 
-## See Also
+## See also
 
 [OLE DB Provider Template Architecture](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

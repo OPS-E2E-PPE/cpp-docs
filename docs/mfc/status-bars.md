@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Status Bars"
 title: "Status Bars"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["status bars", "control bars [MFC], status bar"]
@@ -22,6 +23,6 @@ Create a status bar in your program by selecting the **Initial Status Bar** opti
 
 - [Display command information in the status bar](../mfc/how-to-display-command-information-in-the-status-bar.md)
 
-## See Also
+## See also
 
 [User Interface Elements](../mfc/user-interface-elements-mfc.md)

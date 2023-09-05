@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4620"
 title: "Compiler Warning (level 1) C4620"
 ms.date: "11/04/2016"
 f1_keywords: ["C4620"]
@@ -13,7 +14,7 @@ There is no postfix increment operator defined for the given type. The compiler 
 
 This warning can be avoided by defining a postfix `++` operator. Create a two-argument version of the `++` operator as shown here:
 
-```
+```cpp
 // C4620.cpp
 // compile with: /W1
 class A

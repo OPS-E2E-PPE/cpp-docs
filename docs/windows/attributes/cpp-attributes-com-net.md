@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: C++ Attributes for COM and .NET"
 title: "C++ Attributes for COM and .NET"
 ms.custom: "index-page"
 ms.date: "11/19/2018"
@@ -10,7 +11,7 @@ ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 
 Microsoft defines a set of C++ attributes that simplify COM programming and .NET Framework common language runtime development. When you include attributes in your source files, the compiler works with provider DLLs to insert code or modify the code in the generated object files. These attributes aid in the creation of .idl files, interfaces, type libraries, and other COM elements. In the integrated development environment (IDE), attributes are supported by the wizards and by the Properties window.
 
-While attributes eliminate some of the detailed coding needed to write COM objects, you need a background in [COM fundamentals](/windows/desktop/com/the-component-object-model) to best use them.
+While attributes eliminate some of the detailed coding needed to write COM objects, you need a background in [COM fundamentals](/windows/win32/com/the-component-object-model) to best use them.
 
 > [!NOTE]
 > If you are looking for C++ standard attributes, see [Attributes](../../cpp/attributes.md).
@@ -27,7 +28,7 @@ Attributes extend C++ in directions not currently possible without breaking the 
 
 - Replaces the large amount of IDL code required by a COM component with a few concise attributes.
 
-For example, to implement a simple event sink for a generic ATL class, you could apply the [event_receiver](event-receiver.md) attribute to a specific class such as `CMyReceiver`. The `event_receiver` attribute is then compiled by the Visual C++ compiler, which inserts the proper code into the object file.
+For example, to implement a simple event sink for a generic ATL class, you could apply the [event_receiver](event-receiver.md) attribute to a specific class such as `CMyReceiver`. The `event_receiver` attribute is then compiled by the Microsoft C++ compiler, which inserts the proper code into the object file.
 
 ```cpp
 [event_receiver(com)]
@@ -42,22 +43,22 @@ You can then set up the `CMyReceiver` methods `handler1` and `handler2` to handl
 
 ## Basic Mechanics of Attributes
 
-There are three ways to insert attributes into your project. First, you can insert them manually into your source code. Second, you can insert them using the property grid of an object in your project. Finally, you can insert them using the various wizards. For more information on using the **Properties** window and the various wizards, see [Creating and Managing Visual C++ Projects](../../ide/creating-and-managing-visual-cpp-projects.md).
+There are three ways to insert attributes into your project. First, you can insert them manually into your source code. Second, you can insert them using the property grid of an object in your project. Finally, you can insert them using the various wizards. For more information on using the **Properties** window and the various wizards, see [Visual Studio Projects - C++](../../build/creating-and-managing-visual-cpp-projects.md).
 
 As before, when the project is built, the compiler parses each C++ source file, producing an object file. However, when the compiler encounters an attribute, it is parsed and syntactically verified. The compiler then dynamically calls an attribute provider to insert code or make other modifications at compile time. The implementation of the provider differs depending on the type of attribute. For example, ATL-related attributes are implemented by Atlprov.dll.
 
 The following figure demonstrates the relationship between the compiler and the attribute provider.
 
-![Component attribute communication](../media/vccompattrcomm.gif "Component attribute communication")
+![Diagram showing component attribute communication.](../media/vccompattrcomm.gif "Component attribute communication")
 
 > [!NOTE]
-> Attribute usage does not alter the contents of the source file. The only time the generated attribute code is visible is during debugging sessions. In addition, for each source file in the project, you can generate a text file that displays the results of the attribute substitution. For more information on this procedure, see [/Fx (Merge Injected Code)](../../build/reference/fx-merge-injected-code.md) and [Debugging Injected Code](/visualstudio/debugger/how-to-debug-injected-code).
+> Attribute usage does not alter the contents of the source file. The only time the generated attribute code is visible is during debugging sessions. In addition, for each source file in the project, you can generate a text file that displays the results of the attribute substitution. For more information on this procedure, see [`/Fx` (Merge Injected Code)](../../build/reference/fx-merge-injected-code.md) and [Debug injected code](#debug-injected-code).
 
 Like most C++ constructs, attributes have a set of characteristics that defines their proper usage. This is referred to as the context of the attribute and is addressed in the attribute context table for each attribute reference topic. For example, the [coclass](coclass.md) attribute can only be applied to an existing class or structure, as opposed to the [cpp_quote](cpp-quote.md) attribute, which can be inserted anywhere within a C++ source file.
 
 ## Building an Attributed Program
 
-After you put Visual C++ attributes into your source code, you may want the Visual C++ compiler to produce a type library and .idl file for you. The following linker options help you build .tlb and .idl files:
+After you put Visual C++ attributes into your source code, you may want the Microsoft C++ compiler to produce a type library and .idl file for you. The following linker options help you build .tlb and .idl files:
 
 - [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 
@@ -93,9 +94,41 @@ This field lists other attributes that need to be present (that is, applied to t
 
 This field lists other attributes that are incompatible with the specified attribute. It is uncommon for an attribute to have any entries for this field.
 
+## Debug injected code
+
+Using attributes can greatly simplify C++ programming. For more information, see [Concepts](/cpp/windows/attributed-programming-concepts). Some attributes are interpreted directly by the compiler. Other attributes inject code into the program source, which the compiler then compiles. This injected code makes programming easier by reducing the amount of code you have to write. Sometimes, however, a bug may cause your application to fail while it is executing injected code. When this happens, you will probably want to look at the injected code. Visual Studio provides two ways for you to see injected code:
+
+- You can view injected code in the **Disassembly** window.
+
+- Using [/Fx](/cpp/build/reference/fx-merge-injected-code), you can create a merged source file that contains original and injected code.
+
+The **Disassembly** window shows assembly-language instructions that correspond to the source code and the code injected by attributes. In addition, the **Disassembly** window can show the source-code annotation.
+
+### To turn on Source Annotation
+
+- Right-click the **Disassembly** window, and choose **Show Source Code** from the shortcut menu.
+
+     If you know the location of an attribute in a source window, you can use the shortcut menu to find the injected code in the **Disassembly** window.
+
+### To view injected code
+
+1. The debugger must be in break mode.
+
+2. In a source code window, place the cursor in front of the attribute whose injected code you want to view.
+
+3. Right-click, and select **Go To Disassembly** from the shortcut menu.
+
+     If the attribute location is near the current execution point, you can select the **Disassembly** window from the **Debug** menu.
+
+### To view the disassembly code at the current execution point
+
+1. The debugger must be in break mode.
+
+2. From the **Debug** menu, choose **Windows**, and click **Disassembly**.
+
 ## In This Section
 
-[Attribute Programming FAQ](attribute-programming-faq.md)<br/>
+[Attribute Programming FAQ](attribute-programming-faq.yml)<br/>
 [Attributes by Group](attributes-by-group.md)<br/>
 [Attributes by Usage](attributes-by-usage.md)<br/>
 [Attributes Alphabetical Reference](attributes-alphabetical-reference.md)

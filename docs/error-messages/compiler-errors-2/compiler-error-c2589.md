@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2589"
 title: "Compiler Error C2589"
 ms.date: "11/04/2016"
 f1_keywords: ["C2589"]
@@ -15,7 +16,7 @@ The scope-resolution operator cannot be overloaded.
 
 The following sample generates C2589:
 
-```
+```cpp
 // C2589.cpp
 void Test(){}
 class A {};

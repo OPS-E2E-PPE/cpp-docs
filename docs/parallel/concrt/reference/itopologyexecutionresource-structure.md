@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ITopologyExecutionResource Structure"
 title: "ITopologyExecutionResource Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["ITopologyExecutionResource", "CONCRTRM/concurrency::ITopologyExecutionResource", "CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetId", "CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetNext"]
@@ -11,7 +12,7 @@ An interface to an execution resource as defined by the Resource Manager.
 
 ## Syntax
 
-```
+```cpp
 struct ITopologyExecutionResource;
 ```
 
@@ -38,11 +39,11 @@ This interface is typically utilized to walk the topology of the system as obser
 
 **Namespace:** concurrency
 
-##  <a name="getid"></a>  ITopologyExecutionResource::GetId Method
+## <a name="getid"></a> ITopologyExecutionResource::GetId Method
 
 Returns the Resource Manager's unique identifier for this execution resource.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
@@ -50,11 +51,11 @@ virtual unsigned int GetId() const = 0;
 
 The Resource Manager's unique identifier for this execution resource.
 
-##  <a name="getnext"></a>  ITopologyExecutionResource::GetNext Method
+## <a name="getnext"></a> ITopologyExecutionResource::GetNext Method
 
 Returns an interface to the next execution resource in enumeration order.
 
-```
+```cpp
 virtual ITopologyExecutionResource *GetNext() const = 0;
 ```
 
@@ -62,6 +63,6 @@ virtual ITopologyExecutionResource *GetNext() const = 0;
 
 An interface to the next execution resource in enumeration order. If there are no more nodes in enumeration order of the node to which this execution resource belongs, this method will return the value `NULL`.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

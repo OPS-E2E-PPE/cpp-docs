@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3155"
 title: "Compiler Error C3155"
 ms.date: "11/04/2016"
 f1_keywords: ["C3155"]
@@ -15,7 +16,7 @@ An indexed property was declared incorrectly. For more information, see [How to:
 
 The following sample generates C3155.
 
-```
+```cpp
 // C3155.cpp
 // compile with: /clr /c
 using namespace System;

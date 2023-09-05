@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4087"
 title: "Compiler Warning (level 1) C4087"
 ms.date: "11/04/2016"
 f1_keywords: ["C4087"]
@@ -15,7 +16,7 @@ This warning is for the C compiler.
 
 ## Example
 
-```
+```c
 // C4087.c
 // compile with: /W1
 int f1( void ) {

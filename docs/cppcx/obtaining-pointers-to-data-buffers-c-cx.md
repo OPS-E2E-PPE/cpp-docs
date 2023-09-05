@@ -1,19 +1,20 @@
 ---
+description: "Learn more about: Obtaining pointers to data buffers (C++/CX)"
 title: "Obtaining pointers to data buffers (C++/CX)"
 ms.date: "11/19/2018"
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
 ---
 # Obtaining pointers to data buffers (C++/CX)
 
-In the Windows Runtime the [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) interface provides a language-neutral, stream-based means to access data buffers. In C++ you can get a raw pointer to the underlying byte array by using the Windows Runtime Library IBufferByteAccess interface that is defined in robuffer.h. By using this approach you can modify the byte array in-place without making any unnecessary copies of the data.
+In the Windows Runtime the [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) interface provides a language-neutral, stream-based means to access data buffers. In C++ you can get a raw pointer to the underlying byte array by using the Windows Runtime Library IBufferByteAccess interface that is defined in robuffer.h. By using this approach you can modify the byte array in-place without making any unnecessary copies of the data.
 
-The following diagram shows a XAML image element, whose source is a [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). A client app that's written in any language can pass a reference to the `WriteableBitmap` to C++ code and then C++ can use the reference to get at the underlying buffer. In a Universal Windows Platform app that's written in C++, you can use the function in the following example directly in the source code without packaging it in a Windows Runtime component.
+The following diagram shows a XAML image element, whose source is a [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap). A client app that's written in any language can pass a reference to the `WriteableBitmap` to C++ code and then C++ can use the reference to get at the underlying buffer. In a Universal Windows Platform app that's written in C++, you can use the function in the following example directly in the source code without packaging it in a Windows Runtime component.
 
-![C&#43;&#43; code that accesses pixel data directly](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43;&#43; code that accesses pixel data directly")
+![Diagram showing a code component that accesses pixel data directly.](../cppcx/media/ibufferbyteaccessdiagram.png)
 
 ## GetPointerToPixelData
 
-The following method accepts an [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) and returns a raw pointer to the underlying byte array. To call the function, pass in a [WriteableBitmap::PixelBuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) property.
+The following method accepts an [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) and returns a raw pointer to the underlying byte array. To call the function, pass in a [WriteableBitmap::PixelBuffer](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer) property.
 
 ```cpp
 #include <wrl.h>
@@ -127,7 +128,7 @@ The following steps show how to create a C# Universal Windows Platform app that 
 
 1. In Class1.h
 
-   1. Add this `typedef` at the second line, just after `#pragma once`:
+   1. Add this **`typedef`** at the second line, just after `#pragma once`:
 
         ```cpp
         typedef uint8 byte;

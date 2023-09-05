@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Connection Point Macros"
 title: "Connection Point Macros"
 ms.date: "11/04/2016"
-f1_keywords: ["atlcom/ATL::BEGIN_CONNECTION_POINT_MAP", "atlcom/ATL::END_CONNECTION_POINT_MAP"]
+f1_keywords: ["atlcom/ATL::BEGIN_CONNECTION_POINT_MAP", "atlcom/ATL::END_CONNECTION_POINT_MAP", "ATLCOM/BEGIN_CONNECTION_POINT_MAP", "ATLCOM/END_CONNECTION_POINT_MAP", "ATLCOM/CONNECTION_POINT_ENTRY", "ATLCOM/CONNECTION_POINT_ENTRY_P", "BEGIN_CONNECTION_POINT_MAP", "END_CONNECTION_POINT_MAP", "CONNECTION_POINT_ENTRY", "CONNECTION_POINT_ENTRY_P"]
 helpviewer_keywords: ["connection points [C++], macros"]
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
 ---
@@ -9,7 +10,7 @@ ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
 
 These macros define connection point maps and entries.
 
-|||
+|Macro|Description|
 |-|-|
 |[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|Marks the beginning of the connection point map entries.|
 |[CONNECTION_POINT_ENTRY](#connection_point_entry)|Enters connection points into the map.|
@@ -20,7 +21,7 @@ These macros define connection point maps and entries.
 
 **Header:** atlcom.h
 
-##  <a name="begin_connection_point_map"></a>  BEGIN_CONNECTION_POINT_MAP
+## <a name="begin_connection_point_map"></a> BEGIN_CONNECTION_POINT_MAP
 
 Marks the beginning of the connection point map entries.
 
@@ -43,7 +44,7 @@ For more information about connection points in ATL, see the article [Connection
 
 [!code-cpp[NVC_ATL_Windowing#101](../../atl/codesnippet/cpp/connection-point-macros_1.h)]
 
-##  <a name="connection_point_entry"></a>  CONNECTION_POINT_ENTRY and CONNECTION_POINT_ENTRY_P
+## <a name="connection_point_entry"></a> CONNECTION_POINT_ENTRY and CONNECTION_POINT_ENTRY_P
 
 Enters a connection point for the specified interface into the connection point map so that it can be accessed.
 
@@ -72,7 +73,7 @@ For more information about connection points in ATL, see the article [Connection
 
 [!code-cpp[NVC_ATL_Windowing#120](../../atl/codesnippet/cpp/connection-point-macros_2.h)]
 
-##  <a name="end_connection_point_map"></a>  END_CONNECTION_POINT_MAP
+## <a name="end_connection_point_map"></a> END_CONNECTION_POINT_MAP
 
 Marks the end of the connection point map entries.
 
@@ -90,7 +91,7 @@ For more information about connection points in ATL, see the article [Connection
 
 [!code-cpp[NVC_ATL_Windowing#128](../../atl/codesnippet/cpp/connection-point-macros_3.h)]
 
-## See Also
+## See also
 
 [Macros](../../atl/reference/atl-macros.md)<br/>
 [Connection Point Global Functions](../../atl/reference/connection-point-global-functions.md)

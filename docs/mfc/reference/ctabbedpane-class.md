@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CTabbedPane Class"
 title: "CTabbedPane Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CTabbedPane", "AFXTABBEDPANE/CTabbedPane", "AFXTABBEDPANE/CTabbedPane::DetachPane", "AFXTABBEDPANE/CTabbedPane::EnableTabAutoColor", "AFXTABBEDPANE/CTabbedPane::FloatTab", "AFXTABBEDPANE/CTabbedPane::GetTabArea", "AFXTABBEDPANE/CTabbedPane::GetTabWnd", "AFXTABBEDPANE/CTabbedPane::HasAutoHideMode", "AFXTABBEDPANE/CTabbedPane::IsTabLocationBottom", "AFXTABBEDPANE/CTabbedPane::ResetTabs", "AFXTABBEDPANE/CTabbedPane::SetTabAutoColors", "AFXTABBEDPANE/CTabbedPane::m_bTabsAlwaysTop", "AFXTABBEDPANE/CTabbedPane::m_pTabWndRTC"]
@@ -54,7 +55,7 @@ To specify regular tabs instead of Outlook-style tabs, pass the AFX_CBRS_REGULAR
 
 If you create a tabbed pane with detachable tabs, the pane may be destroyed automatically by the framework, so you should not store the pointer. To get a pointer to the tabbed pane, call the `CBasePane::GetParentTabbedPane` method.
 
-## Example
+## Examples
 
 In this example we create a `CTabbedPane` object. Next, we use [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) to attach additional tabs.
 
@@ -86,8 +87,6 @@ pTabbededBar->EnableDocking(CBRS_ALIGN_ANY);
 
 DockPane(pTabbededBar);
 ```
-
-## Example
 
 Another way to create a tabbed control bar object is to use [CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). The `AttachToTabWnd` method dynamically creates a tabbed pane object using runtime class information set by [CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).
 
@@ -133,7 +132,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 
 **Header:** afxTabbedPane.h
 
-##  <a name="detachpane"></a>  CTabbedPane::DetachPane
+## <a name="detachpane"></a> CTabbedPane::DetachPane
 
 ```
 virtual BOOL DetachPane(
@@ -151,7 +150,7 @@ virtual BOOL DetachPane(
 
 ### Remarks
 
-##  <a name="enabletabautocolor"></a>  CTabbedPane::EnableTabAutoColor
+## <a name="enabletabautocolor"></a> CTabbedPane::EnableTabAutoColor
 
 Enables or disables automatic coloring of tabs.
 
@@ -172,7 +171,7 @@ You can specify the list of colors that will be used for tabs by calling [CTabbe
 
 By default, this option is disabled.
 
-##  <a name="floattab"></a>  CTabbedPane::FloatTab
+## <a name="floattab"></a> CTabbedPane::FloatTab
 
 ```
 virtual BOOL FloatTab(
@@ -193,7 +192,7 @@ virtual BOOL FloatTab(
 
 ### Remarks
 
-##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea
+## <a name="gettabarea"></a> CTabbedPane::GetTabArea
 
 Returns the size and position of the tab area in the tabbed window.
 
@@ -217,7 +216,7 @@ The framework calls this method to determine how to dock a pane that a user is d
 
 Override this method in a `CTabbedPane`-derived class to change this behavior.
 
-##  <a name="gettabwnd"></a>  CTabbedPane::GetTabWnd
+## <a name="gettabwnd"></a> CTabbedPane::GetTabWnd
 
 ```
 CMFCTabCtrl* GetTabWnd() const;
@@ -227,7 +226,7 @@ CMFCTabCtrl* GetTabWnd() const;
 
 ### Remarks
 
-##  <a name="hasautohidemode"></a>  CTabbedPane::HasAutoHideMode
+## <a name="hasautohidemode"></a> CTabbedPane::HasAutoHideMode
 
 ```
 virtual BOOL HasAutoHideMode() const;
@@ -237,7 +236,7 @@ virtual BOOL HasAutoHideMode() const;
 
 ### Remarks
 
-##  <a name="istablocationbottom"></a>  CTabbedPane::IsTabLocationBottom
+## <a name="istablocationbottom"></a> CTabbedPane::IsTabLocationBottom
 
 Determines whether the tabs are located at the bottom of the window.
 
@@ -251,7 +250,7 @@ TRUE if the tab area is located at the bottom of the tabbed window; otherwise, F
 
 ### Remarks
 
-##  <a name="m_btabsalwaystop"></a>  CTabbedPane::m_bTabsAlwaysTop
+## <a name="m_btabsalwaystop"></a> CTabbedPane::m_bTabsAlwaysTop
 
 The default location for tabs in the application.
 
@@ -267,7 +266,7 @@ You must set this value before a tabbed pane has been created.
 
 The default value is FALSE.
 
-##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC
+## <a name="m_ptabwndrtc"></a> CTabbedPane::m_pTabWndRTC
 
 Runtime class information for a custom `CMFCTabCtrl`-derived object.
 
@@ -279,7 +278,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 
 Set this static member variable to a pointer to the runtime class information of a `CMFCTabCtrl`-derived object if you are using a custom tabbed window inside a tabbed pane.
 
-##  <a name="resettabs"></a>  CTabbedPane::ResetTabs
+## <a name="resettabs"></a> CTabbedPane::ResetTabs
 
 Resets all tabbed panes to the default state.
 
@@ -291,7 +290,7 @@ static void ResetTabs();
 
 Call this method to revert all tabbed panes to their default state. When called, this method resets the border sizes and auto color state of all tabbed panes.
 
-##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors
+## <a name="settabautocolors"></a> CTabbedPane::SetTabAutoColors
 
 Sets a list of custom colors that are used when the auto color feature is enabled.
 
@@ -310,7 +309,7 @@ Use this method to customize the list of colors that are used when the auto colo
 
 Use [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) to enable or disable the auto color feature.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

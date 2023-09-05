@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: geometric_distribution Class"
 title: "geometric_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::geometric_distribution", "random/std::geometric_distribution::reset", "random/std::geometric_distribution::p", "random/std::geometric_distribution::param", "random/std::geometric_distribution::min", "random/std::geometric_distribution::max", "random/std::geometric_distribution::operator()", "random/std::geometric_distribution::param_type", "random/std::geometric_distribution::param_type::p", "random/std::geometric_distribution::param_type::operator==", "random/std::geometric_distribution::param_type::operator!="]
@@ -41,20 +42,18 @@ public:
 
 ### Parameters
 
-*IntType*<br/>
-The integer result type, defaults to **int**. For possible types, see [\<random>](../standard-library/random.md).
+*IntType*\
+The integer result type, defaults to **`int`**. For possible types, see [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
+*URNG*\
 The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes a distribution that produces values of a user-specified integral type with a geometric distribution. The following table links to articles about individual members.
+The class template describes a distribution that produces values of a user-specified integral type with a geometric distribution. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[geometric_distribution](#geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|
-|`geometric_distribution::operator()`||[param_type](#param_type)|
+[geometric_distribution](#geometric_distribution)\
+[param_type](#param_type)
 
 The property function `p()` returns the value for stored distribution parameter `p`.
 
@@ -68,7 +67,7 @@ The `operator()` member functions return the next generated value based on the U
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the chi-squared distribution, see the Wolfram MathWorld article [Geometric Distribution](http://go.microsoft.com/fwlink/p/?linkid=400529).
+For detailed information about the chi-squared distribution, see the Wolfram MathWorld article [Geometric Distribution](https://go.microsoft.com/fwlink/p/?linkid=400529).
 
 ## Example
 
@@ -184,7 +183,7 @@ Distribution for 100 samples:
 
 **Namespace:** std
 
-## <a name="geometric_distribution"></a>  geometric_distribution::geometric_distribution
+## <a name="geometric_distribution"></a> geometric_distribution::geometric_distribution
 
 Constructs the distribution.
 
@@ -195,10 +194,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### Parameters
 
-*p*<br/>
+*p*\
 The `p` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The parameter structure used to construct the distribution.
 
 ### Remarks
@@ -209,7 +208,7 @@ The first constructor constructs an object whose stored `p` value holds the valu
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  geometric_distribution::param_type
+## <a name="param_type"></a> geometric_distribution::param_type
 
 Stores the parameters of the distribution.
 
@@ -226,10 +225,10 @@ struct param_type {
 
 ### Parameters
 
-*p*<br/>
+*p*\
 The `p` distribution parameter.
 
-*right*<br/>
+*right*\
 The `param_type` instance to compare this to.
 
 ### Remarks
@@ -240,4 +239,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

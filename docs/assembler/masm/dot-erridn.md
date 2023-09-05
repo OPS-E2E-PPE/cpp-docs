@@ -1,22 +1,25 @@
 ---
-title: ".ERRIDN]"
-ms.date: "08/30/2018"
-f1_keywords: [".ERRIDN[[I]]"]
-helpviewer_keywords: [".ERRIDN[[I]] directive"]
+description: "Learn more about: `.ERRIDN`, `.ERRIDNI`"
+title: "'.ERRIDN', '.ERRIDNI'"
+ms.date: "05/23/2019"
+f1_keywords: [".ERRIDN", ".ERRIDNI"]
+helpviewer_keywords: [".ERRIDN directive", ".ERRIDNI directive"]
 ms.assetid: 89507db3-7d40-4a5e-a378-24d30feda9d1
 ---
-# .ERRIDN]
+# `.ERRIDN`, `.ERRIDNI`
 
 Generates an error if the text items are identical.
 
 ## Syntax
 
-> .ERRIDN[[I]] *textitem1*, *textitem2* [[, *message*]]
+> **`.ERRIDN`** *textitem1*__,__ *textitem2* ⟦__,__ *message*⟧\
+> **`.ERRIDNI`** *textitem1*__,__ *textitem2* ⟦__,__ *message*⟧
 
 ## Remarks
 
-If **I** is given, the comparison is case insensitive.
+If **`.ERRIDNI`** is given, the comparison is case insensitive.
 
 ## See also
 
-[Directives Reference](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CSimpleArrayEqualHelperFalse Class"
 title: "CSimpleArrayEqualHelperFalse Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CSimpleArrayEqualHelperFalse", "ATLSIMPCOLL/ATL::CSimpleArrayEqualHelperFalse", "ATLSIMPCOLL/ATL::CSimpleArrayEqualHelperFalse::IsEqual"]
@@ -37,7 +38,7 @@ This traits class is a complement to the `CSimpleArray` class. It always returns
 
 **Header:** atlsimpcoll.h
 
-##  <a name="isequal"></a>  CSimpleArrayEqualHelperFalse::IsEqual
+## <a name="isequal"></a> CSimpleArrayEqualHelperFalse::IsEqual
 
 Returns false.
 
@@ -53,7 +54,7 @@ Returns false.
 
 This method always returns false, and will call `ATLASSERT` with an argument of false if referenced. The purpose of `CSimpleArrayEqualHelperFalse::IsEqual` is to force methods using comparisons to fail in a well-defined manner when equality tests have not been adequately defined.
 
-## See Also
+## See also
 
 [CSimpleArrayEqualHelper Class](../../atl/reference/csimplearrayequalhelper-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

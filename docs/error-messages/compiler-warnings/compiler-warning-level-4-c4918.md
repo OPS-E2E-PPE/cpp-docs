@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4918"
 title: "Compiler Warning (level 4) C4918"
 ms.date: "11/04/2016"
 f1_keywords: ["C4918"]
@@ -13,7 +14,7 @@ An unknown character was found in the optimization list of an [optimize](../../p
 
 For example, the following statement generates C4918:
 
-```
+```cpp
 // C4918.cpp
 // compile with: /W4
 #pragma optimize("X", on) // C4918 expected

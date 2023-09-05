@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCPopupMenuBar Class"
 title: "CMFCPopupMenuBar Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCPopupMenuBar", "AFXPOPUPMENUBAR/CMFCPopupMenuBar", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::AdjustSizeImmediate", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::BuildOrigItems", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::CloseDelayedSubMenu", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::ExportToMenu", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::FindDestintationToolBar", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::GetCurrentMenuImageSize", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::GetDefaultMenuId", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::GetLastCommandIndex", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::GetOffset", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::ImportFromMenu", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::IsDropDownListMode", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::IsPaletteMode", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::IsRibbonPanel", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::IsRibbonPanelInRegularMode", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::LoadFromHash", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::RestoreDelayedSubMenu", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::SetButtonStyle", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::SetOffset", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::StartPopupMenuTimer", "AFXPOPUPMENUBAR/CMFCPopupMenuBar::m_bDisableSideBarInXPMode"]
@@ -53,7 +54,7 @@ The `CMFCPopupMenuBar` is created at the same time as a [CMFCPopupMenu Class](..
 
 ## Example
 
-The following example demonstrates how to initialize a `CMFCPopupMenuBar` object from a `CMFCPopupMenu` object. This code snippet is part of the [Draw Client sample](../../visual-cpp-samples.md).
+The following example demonstrates how to initialize a `CMFCPopupMenuBar` object from a `CMFCPopupMenu` object. This code snippet is part of the [Draw Client sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#7](../../mfc/reference/codesnippet/cpp/cmfcpopupmenubar-class_1.cpp)]
 
@@ -79,7 +80,7 @@ The following example demonstrates how to initialize a `CMFCPopupMenuBar` object
 
 **Header:** afxpopupmenubar.h
 
-##  <a name="adjustsizeimmediate"></a>  CMFCPopupMenuBar::AdjustSizeImmediate
+## <a name="adjustsizeimmediate"></a> CMFCPopupMenuBar::AdjustSizeImmediate
 
 Immediately recalculates the layout of the popup menu bar pane. (Overrides [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).
 
@@ -94,7 +95,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 
 ### Remarks
 
-##  <a name="buildorigitems"></a>  CMFCPopupMenuBar::BuildOrigItems
+## <a name="buildorigitems"></a> CMFCPopupMenuBar::BuildOrigItems
 
 Loads popup menu items from a specified menu resource.
 
@@ -113,7 +114,7 @@ Returns TRUE if successful or FALSE if not.
 
 ### Remarks
 
-##  <a name="closedelayedsubmenu"></a>  CMFCPopupMenuBar::CloseDelayedSubMenu
+## <a name="closedelayedsubmenu"></a> CMFCPopupMenuBar::CloseDelayedSubMenu
 
 Closes a popup menu button that has been delayed.
 
@@ -123,7 +124,7 @@ virtual void CloseDelayedSubMenu();
 
 ### Remarks
 
-##  <a name="exporttomenu"></a>  CMFCPopupMenuBar::ExportToMenu
+## <a name="exporttomenu"></a> CMFCPopupMenuBar::ExportToMenu
 
 Builds a menu from the popup menu buttons.
 
@@ -137,7 +138,7 @@ Returns a handle to the new menu.
 
 ### Remarks
 
-##  <a name="finddestintationtoolbar"></a>  CMFCPopupMenuBar::FindDestintationToolBar
+## <a name="finddestintationtoolbar"></a> CMFCPopupMenuBar::FindDestintationToolBar
 
 Locates the toolbar where a specified point lies.
 
@@ -156,7 +157,7 @@ Returns a handle to the toolbar where the point lies, if there is one, or NULL i
 
 ### Remarks
 
-##  <a name="getcurrentmenuimagesize"></a>  CMFCPopupMenuBar::GetCurrentMenuImageSize
+## <a name="getcurrentmenuimagesize"></a> CMFCPopupMenuBar::GetCurrentMenuImageSize
 
 Indicates the size of menu-button images.
 
@@ -170,7 +171,7 @@ Returns the size of menu-button images in the toolbar.
 
 ### Remarks
 
-##  <a name="getdefaultmenuid"></a>  CMFCPopupMenuBar::GetDefaultMenuId
+## <a name="getdefaultmenuid"></a> CMFCPopupMenuBar::GetDefaultMenuId
 
 Returns the identifier of the default menu item.
 
@@ -184,7 +185,7 @@ Returns the identifier of the default menu item in the popup menu bar.
 
 ### Remarks
 
-##  <a name="getlastcommandindex"></a>  CMFCPopupMenuBar::GetLastCommandIndex
+## <a name="getlastcommandindex"></a> CMFCPopupMenuBar::GetLastCommandIndex
 
 Gets the index of the most recently invoked menu command.
 
@@ -198,7 +199,7 @@ Returns the index of the last menu command that has been invoked.
 
 ### Remarks
 
-##  <a name="getoffset"></a>  CMFCPopupMenuBar::GetOffset
+## <a name="getoffset"></a> CMFCPopupMenuBar::GetOffset
 
 Gets the row offset of the popup menu bar.
 
@@ -214,7 +215,7 @@ Returns the row offset of the popup menu bar.
 
 This value is set using [CMFCPopupMenuBar::SetOffset](#setoffset).
 
-##  <a name="importfrommenu"></a>  CMFCPopupMenuBar::ImportFromMenu
+## <a name="importfrommenu"></a> CMFCPopupMenuBar::ImportFromMenu
 
 Imports popup menu buttons from a specified menu.
 
@@ -238,7 +239,7 @@ Returns TRUE if the menu buttons were successfully imported from the menu, or FA
 
 ### Remarks
 
-##  <a name="isdropdownlistmode"></a>  CMFCPopupMenuBar::IsDropDownListMode
+## <a name="isdropdownlistmode"></a> CMFCPopupMenuBar::IsDropDownListMode
 
 Indicates whether the popup menu bar is in drop-down-list mode.
 
@@ -252,7 +253,7 @@ Returns TRUE if the popup menu bar is in drop-down-list mode, or FALSE if not.
 
 ### Remarks
 
-##  <a name="ispalettemode"></a>  CMFCPopupMenuBar::IsPaletteMode
+## <a name="ispalettemode"></a> CMFCPopupMenuBar::IsPaletteMode
 
 Indicates whether the popup menu bar is in palette mode.
 
@@ -268,7 +269,7 @@ Returns TRUE if palette mode is enabled, or FALSE if not.
 
 When the menu bar is set to palette mode, menu items appear in multiple columns and a limited number of rows.
 
-##  <a name="isribbonpanel"></a>  CMFCPopupMenuBar::IsRibbonPanel
+## <a name="isribbonpanel"></a> CMFCPopupMenuBar::IsRibbonPanel
 
 Indicates whether this is a ribbon panel (FALSE by default).
 
@@ -282,7 +283,7 @@ Returns FALSE by default, indicating that this is not a ribbon panel.
 
 ### Remarks
 
-##  <a name="isribbonpanelinregularmode"></a>  CMFCPopupMenuBar::IsRibbonPanelInRegularMode
+## <a name="isribbonpanelinregularmode"></a> CMFCPopupMenuBar::IsRibbonPanelInRegularMode
 
 Indicates whether this is a ribbon panel in regular mode (FALSE by default).
 
@@ -296,7 +297,7 @@ Returns FALSE by default, indicating that this is not a ribbon panel in regular 
 
 ### Remarks
 
-##  <a name="loadfromhash"></a>  CMFCPopupMenuBar::LoadFromHash
+## <a name="loadfromhash"></a> CMFCPopupMenuBar::LoadFromHash
 
 Loads an archived menu.
 
@@ -315,7 +316,7 @@ Returns TRUE if the menu is loaded successfully, or FALSE if not.
 
 ### Remarks
 
-##  <a name="m_bdisablesidebarinxpmode"></a>  CMFCPopupMenuBar::m_bDisableSideBarInXPMode
+## <a name="m_bdisablesidebarinxpmode"></a> CMFCPopupMenuBar::m_bDisableSideBarInXPMode
 
 A Boolean parameter that indicates whether your application has a gray sidebar when it has a Windows XP appearance.
 
@@ -329,7 +330,7 @@ If this member variable is set to FALSE and your application has a Windows XP ap
 
 The default value is FALSE.
 
-##  <a name="restoredelayedsubmenu"></a>  CMFCPopupMenuBar::RestoreDelayedSubMenu
+## <a name="restoredelayedsubmenu"></a> CMFCPopupMenuBar::RestoreDelayedSubMenu
 
 Restores a delayed menu button for closing the popup menu bar.
 
@@ -339,7 +340,7 @@ virtual void RestoreDelayedSubMenu();
 
 ### Remarks
 
-##  <a name="setbuttonstyle"></a>  CMFCPopupMenuBar::SetButtonStyle
+## <a name="setbuttonstyle"></a> CMFCPopupMenuBar::SetButtonStyle
 
 Sets the style of the toolbar button at the given index. (Overrides [CMFCToolBar::SetButtonStyle](../../mfc/reference/cmfctoolbar-class.md#setbuttonstyle).)
 
@@ -359,11 +360,11 @@ virtual void SetButtonStyle(
 
 ### Remarks
 
-##  <a name="setoffset"></a>  CMFCPopupMenuBar::SetOffset
+## <a name="setoffset"></a> CMFCPopupMenuBar::SetOffset
 
 Sets the row offset of the popup menu bar.
 
-```
+```cpp
 void SetOffset(int iOffset);
 ```
 
@@ -374,11 +375,11 @@ void SetOffset(int iOffset);
 
 ### Remarks
 
-##  <a name="startpopupmenutimer"></a>  CMFCPopupMenuBar::StartPopupMenuTimer
+## <a name="startpopupmenutimer"></a> CMFCPopupMenuBar::StartPopupMenuTimer
 
 Starts the timer for a specified delayed popup menu button.
 
-```
+```cpp
 void StartPopupMenuTimer(
     CMFCToolBarMenuButton* pMenuButton,
     int nDelayFactor = 1);
@@ -394,7 +395,7 @@ void StartPopupMenuTimer(
 
 ### Remarks
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

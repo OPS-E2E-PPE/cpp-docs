@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2208"
 title: "Compiler Error C2208"
 ms.date: "11/04/2016"
 f1_keywords: ["C2208"]
@@ -13,7 +14,7 @@ An identifier resolving to a type name is in an aggregate declaration, but the c
 
 The following sample generates C2208:
 
-```
+```cpp
 // C2208.cpp
 class C {
    C;   // C2208

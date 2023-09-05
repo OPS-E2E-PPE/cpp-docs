@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2724"
 title: "Compiler Error C2724"
 ms.date: "11/04/2016"
 f1_keywords: ["C2724"]
@@ -13,7 +14,7 @@ Static member functions should be declared with external linkage.
 
 The following sample generates C2724:
 
-```
+```cpp
 // C2724.cpp
 class C {
    static void func();

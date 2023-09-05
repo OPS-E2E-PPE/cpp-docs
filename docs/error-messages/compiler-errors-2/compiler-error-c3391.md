@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3391"
 title: "Compiler Error C3391"
 ms.date: "11/04/2016"
 f1_keywords: ["C3391"]
@@ -9,13 +10,13 @@ ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
 
 'type_arg' : invalid type argument for generic parameter 'param' of generic 'generic_type', must be a non-nullable value type
 
-A generic type was instantiated incorrectly. Check the type definition. For more information, see <xref:System.Nullable> and [Generics](../../windows/generics-cpp-component-extensions.md).
+A generic type was instantiated incorrectly. Check the type definition. For more information, see <xref:System.Nullable> and [Generics](../../extensions/generics-cpp-component-extensions.md).
 
 ## Example
 
 The following sample uses C# to create a component that contains a generic type that has certain constraints that are not supported when authoring generic types in C++/CLI. For more information, see [Constraints on Type Parameters](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
-```cs
+```csharp
 // C3391.cs
 // Compile by using: csc /target:library C3391.cs
 // a C# program

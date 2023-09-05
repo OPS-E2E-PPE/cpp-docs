@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4624"
 title: "Compiler Warning (level 1) C4624"
 ms.date: "11/04/2016"
 f1_keywords: ["C4624"]
@@ -13,7 +14,7 @@ A destructor was not accessible or deleted in a base class and was therefore not
 
 The following sample generates C4624 and shows how to fix it:
 
-```
+```cpp
 // C4624.cpp
 // compile with: /W1 /c
 class B {

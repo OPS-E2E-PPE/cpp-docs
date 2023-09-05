@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: VERSION (C/C++)"
 title: "VERSION (C/C++)"
 ms.date: "11/04/2016"
 f1_keywords: ["VERSION"]
@@ -17,8 +18,8 @@ VERSION major[.minor]
 
 The *major* and *minor* arguments are decimal numbers in the range 0 through 65,535. The default is version 0.0.
 
-An equivalent way to specify a version number is with the [Version Information](../../build/reference/version-version-information.md) (/VERSION) option.
+An equivalent way to specify a version number is with the [Version Information](version-version-information.md) (/VERSION) option.
 
-## See Also
+## See also
 
-[Rules for Module-Definition Statements](../../build/reference/rules-for-module-definition-statements.md)
+[Rules for Module-Definition Statements](rules-for-module-definition-statements.md)

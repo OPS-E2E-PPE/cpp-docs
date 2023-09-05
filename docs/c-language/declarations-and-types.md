@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Declarations and Types"
 title: "Declarations and Types"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["data types [C]", "types [C]", "declarations [C++], C", "declarations [C++], types"]
@@ -30,6 +31,6 @@ This section describes the declaration and initialization of variables, function
 
 - [Extended storage-class attributes](../c-language/c-extended-storage-class-attributes.md)
 
-## See Also
+## See also
 
 [C Language Reference](../c-language/c-language-reference.md)

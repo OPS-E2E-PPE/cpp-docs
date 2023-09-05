@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Using CToolBarCtrl"
 title: "Using CToolBarCtrl"
 ms.date: "11/04/2016"
-f1_keywords: ["CToolBarCtrl"]
 helpviewer_keywords: ["CToolBarCtrl class [MFC]", "toolbar controls [MFC], creating"]
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
 ---
@@ -23,7 +23,6 @@ You can use the toolbar control ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-cl
 
 - [Customizing the Appearance of a Toolbar Control](../mfc/customizing-the-appearance-of-a-toolbar-control.md)
 
-## See Also
+## See also
 
 [Controls](../mfc/controls-mfc.md)
-

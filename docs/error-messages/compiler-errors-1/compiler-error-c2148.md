@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2148"
 title: "Compiler Error C2148"
 ms.date: "11/04/2016"
 f1_keywords: ["C2148"]
@@ -15,7 +16,7 @@ An array exceeds the limit. Reduce the size of the array.
 
 The following sample generates C2148:
 
-```
+```cpp
 // C2148.cpp
 #include <stdio.h>
 #include <stdlib.h>

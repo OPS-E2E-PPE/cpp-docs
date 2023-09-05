@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Collections::Details Namespace"
 title: "Platform::Collections::Details Namespace"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -29,6 +30,6 @@ Members of this namespace are defined in collection.h and are not displayed in O
 
 **Namespace:** Platform::Collection::Details
 
-## See Also
+## See also
 
 [Platform Namespace](platform-namespace-c-cx.md)

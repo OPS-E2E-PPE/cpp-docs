@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: binomial_distribution Class"
 title: "binomial_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::binomial_distribution", "random/std::binomial_distribution::reset", "random/std::binomial_distribution::p", "random/std::binomial_distribution::t", "random/std::binomial_distribution::param", "random/std::binomial_distribution::min", "random/std::binomial_distribution::max", "random/std::binomial_distribution::operator()", "random/std::binomial_distribution::param_type", "random/std::binomial_distribution::param_type::p", "random/std::binomial_distribution::param_type::t", "random/std::binomial_distribution::param_type::operator==", "random/std::binomial_distribution::param_type::operator!="]
@@ -43,20 +44,18 @@ public:
 
 ### Parameters
 
-*IntType*<br/>
-The integer result type, defaults to **int**. For possible types, see [\<random>](../standard-library/random.md).
+*IntType*\
+The integer result type, defaults to **`int`**. For possible types, see [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
+*URNG*\
 The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes a distribution that produces values of a user-specified integral type, or type **int** if none is provided, distributed according to the Binomial Distribution discrete probability function. The following table links to articles about individual members.
+The class template describes a distribution that produces values of a user-specified integral type, or type **`int`** if none is provided, distributed according to the Binomial Distribution discrete probability function. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
-|`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
+[binomial_distribution](#binomial_distribution)\
+[param_type](#param_type)
 
 The property members `t()` and `p()` return the currently stored distribution parameter values *t* and *p* respectively.
 
@@ -70,7 +69,7 @@ The `operator()` member functions return the next generated value based on the U
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the binomial distribution discrete probability function, see the Wolfram MathWorld article [Binomial Distribution](http://go.microsoft.com/fwlink/p/?linkid=398469).
+For detailed information about the binomial distribution discrete probability function, see the Wolfram MathWorld article [Binomial Distribution](https://go.microsoft.com/fwlink/p/?linkid=398469).
 
 ## Example
 
@@ -203,7 +202,7 @@ Histogram for 100 samples:
 
 **Namespace:** std
 
-## <a name="binomial_distribution"></a>  binomial_distribution::binomial_distribution
+## <a name="binomial_distribution"></a> binomial_distribution::binomial_distribution
 
 Constructs the distribution.
 
@@ -214,13 +213,13 @@ explicit binomial_distribution(const param_type& parm);
 
 ### Parameters
 
-*t*<br/>
+*t*\
 The `t` distribution parameter.
 
-*p*<br/>
+*p*\
 The `p` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The `param_type` structure used to construct the distribution.
 
 ### Remarks
@@ -231,7 +230,7 @@ The first constructor constructs an object whose stored *p* value holds the valu
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  binomial_distribution::param_type
+## <a name="param_type"></a> binomial_distribution::param_type
 
 Stores all the parameters of the distribution.
 
@@ -249,13 +248,13 @@ struct param_type {
 
 ### Parameters
 
-*t*<br/>
+*t*\
 The `t` distribution parameter.
 
-*p*<br/>
+*p*\
 The `p` distribution parameter.
 
-*right*<br/>
+*right*\
 The `param_type` object to compare to this.
 
 ### Remarks
@@ -266,4 +265,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

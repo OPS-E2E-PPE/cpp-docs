@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: defaultvtable"
 title: "defaultvtable (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.defaultvtable"]
@@ -22,7 +23,7 @@ The designated interface that you want to have the default vtable for the COM ob
 
 ## Remarks
 
-The **defaultvtable** C++ attribute has the same functionality as the [defaultvtable](/windows/desktop/Midl/defaultvtable) MIDL attribute.
+The **defaultvtable** C++ attribute has the same functionality as the [defaultvtable](/windows/win32/Midl/defaultvtable) MIDL attribute.
 
 ## Example
 
@@ -56,18 +57,16 @@ class CMyC3 : public IMyI3 {};
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**class**, **struct**|
+|**Applies to**|**`class`**, **`struct`**|
 |**Repeatable**|No|
 |**Required attributes**|**coclass**|
 |**Invalid attributes**|None|
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Class Attributes](class-attributes.md)

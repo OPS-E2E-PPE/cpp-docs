@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4102"
 title: "Compiler Warning (level 3) C4102"
 ms.date: "11/04/2016"
 f1_keywords: ["C4102"]
@@ -13,7 +14,7 @@ The label is defined but never referenced. The compiler ignores the label.
 
 The following sample generates C4102:
 
-```
+```cpp
 // C4102.cpp
 // compile with: /W3
 int main() {

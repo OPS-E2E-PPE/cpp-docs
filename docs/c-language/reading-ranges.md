@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Reading Ranges"
 title: "Reading Ranges"
 ms.date: "11/04/2016"
 ms.assetid: 99de29ce-ab14-46f4-97e1-2081fd996b53
@@ -15,6 +16,6 @@ fscanf( fileptr, "%[A-Z]", strptr);
 
 reads any number of characters in the range A-Z into the string to which `strptr` points.
 
-## See Also
+## See also
 
 [Library Functions](../c-language/library-functions.md)

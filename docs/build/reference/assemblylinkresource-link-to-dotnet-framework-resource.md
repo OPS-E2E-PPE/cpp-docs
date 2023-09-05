@@ -1,64 +1,65 @@
 ---
-title: "/ASSEMBLYLINKRESOURCE (Link to .NET Framework Resource)"
-ms.date: "11/04/2016"
+description: "Learn more about: /ASSEMBLYLINKRESOURCE (Link to .NET Framework resource)"
+title: "/ASSEMBLYLINKRESOURCE (Link to .NET Framework resource)"
+ms.date: 05/11/2022
 f1_keywords: ["/ASSEMBLYLINKRESOURCE", "VC.Project.VCLinkerTool.AssemblyLinkResource"]
 helpviewer_keywords: ["-ASSEMBLYLINKRESOURCE linker option", "ASSEMBLYLINKRESOURCE linker option", "/ASSEMBLYLINKRESOURCE linker option"]
 ms.assetid: 8b6ad184-1b33-47a4-8513-4803cf915b64
 ---
-# /ASSEMBLYLINKRESOURCE (Link to .NET Framework Resource)
+# `/ASSEMBLYLINKRESOURCE` (Link to .NET Framework resource)
 
-```
-/ASSEMBLYLINKRESOURCE:filename
-```
+Create a link to a .NET Framework resource in the output file.
+
+## Syntax
+
+> **`/ASSEMBLYLINKRESOURCE:`*`filename`***
 
 ## Arguments
 
-*filename*<br/>
-The .NET Framework resource file to which you want to link from the assembly.
+*`filename`*
+The .NET Framework resource file to link from the assembly.
 
 ## Remarks
 
-The /ASSEMBLYLINKRESOURCE option creates a link to a .NET Framework resource in the output file; the resource file is not placed in the output file. [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) embeds a resource file in the output file.
+The **`/ASSEMBLYLINKRESOURCE`** linker option creates a link to a .NET Framework resource in the output file. The resource file isn't placed in the output file. Use the [`/ASSEMBLYRESOURCE`](assemblyresource-embed-a-managed-resource.md) option to embed a resource file in the output file.
 
 Linked resources are public in the assembly when created with the linker.
 
-/ASSEMBLYLINKRESOURCE requires that the compilation include [/clr](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) or [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) is not allowed with /ASSEMBLYLINKRESOURCE.
+**`/ASSEMBLYLINKRESOURCE`** requires the [`/clr`](clr-common-language-runtime-compilation.md) compiler option. The [`/LN`](ln-create-msil-module.md) or [`/NOASSEMBLY`](noassembly-create-a-msil-module.md) options aren't allowed with **`/ASSEMBLYLINKRESOURCE`**.
 
-If *filename* is a .NET Framework resource file created, for example, by [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) or in the development environment, it can be accessed with members in the **System.Resources** namespace. For more information, see [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). For all other resources, use the **GetManifestResource**\* methods in the **System.Reflection.Assembly** class to access the resource at run time.
+If *`filename`* is a .NET Framework resource file that's created, for example, by [`Resgen.exe`](/dotnet/framework/tools/resgen-exe-resource-file-generator) or in the development environment, it can be accessed with members in the `System.Resources` namespace. For more information, see [`System.Resources.ResourceManager`](/dotnet/api/system.resources.resourcemanager). For all other resources, use the `GetManifestResource*` methods in the `System.Reflection.Assembly` class to access the resource at run time.
 
-*filename* can be any file format. For example, you may want to make a native DLL part of the assembly, so it can be installed into the Global Assembly Cache and accessed from managed code in the assembly.
+*`filename`* can have any file format. For example, you may want to make a native DLL part of the assembly. Then it can be installed into the Global Assembly Cache and accessed from managed code in the assembly.
 
 Other linker options that affect assembly generation are:
 
-- [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)
+- [`/ASSEMBLYDEBUG`](assemblydebug-add-debuggableattribute.md)
 
-- [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)
+- [`/ASSEMBLYMODULE`](assemblymodule-add-a-msil-module-to-the-assembly.md)
 
-- [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+- [`/ASSEMBLYRESOURCE`](assemblyresource-embed-a-managed-resource.md)
 
-- [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)
+- [`/DELAYSIGN`](delaysign-partially-sign-an-assembly.md)
 
-- [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+- [`/KEYCONTAINER`](keycontainer-specify-a-key-container-to-sign-an-assembly.md)
 
-- [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+- [`/KEYFILE`](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
 
-- [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
+- [`/NOASSEMBLY`](noassembly-create-a-msil-module.md)
 
 ### To set this linker option in the Visual Studio development environment
 
-1. Open the project's **Property Pages** dialog box. For details, see [Setting Visual C++ Project Properties](../../ide/working-with-project-properties.md).
+1. Open the project's **Property Pages** dialog box. For details, see [Set C++ compiler and build properties in Visual Studio](../working-with-project-properties.md).
 
-1. Click the **Linker** folder.
+1. Select the **Configuration Properties** > **Linker** > **Command Line** property page.
 
-1. Click the **Command Line** property page.
-
-1. Type the option into the **Additional Options** box.
+1. Enter the option in **Additional Options**. Choose **OK** or **Apply** to apply the change.
 
 ### To set this linker option programmatically
 
 - See <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## See Also
+## See also
 
-[Setting Linker Options](../../build/reference/setting-linker-options.md)<br/>
-[Linker Options](../../build/reference/linker-options.md)
+[MSVC linker reference](linking.md)\
+[MSVC linker options](linker-options.md)

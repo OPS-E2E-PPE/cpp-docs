@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: WM_ Messages: T - Z"
 title: "WM_ Messages: T - Z"
 ms.date: "11/04/2016"
 f1_keywords: ["ON_WM_TCARD", "ON_WM_WININICHANGE", "ON_WM_VSCROLLCLIPBOARD", "ON_WM_VSCROLL", "ON_WM_WINDOWPOSCHANGED", "ON_WM_TIMECHANGE", "ON_WM_TIMER", "ON_WM_VKEYTOITEM", "ON_WM_WINDOWPOSCHANGING"]
@@ -28,8 +29,7 @@ The following map entries correspond to the function prototypes:
 |ON_WM_XBUTTONDOWN()|afx_msg void [OnXButtonDown](../../mfc/reference/cwnd-class.md#onxbuttondown)( UINT, UINT, CPoint );|
 |ON_WM_XBUTTONUP()|afx_msg void [OnXButtonUp](../../mfc/reference/cwnd-class.md#onxbuttonup)( UINT, UINT, CPoint );|
 
-## See Also
+## See also
 
 [Message Maps](../../mfc/reference/message-maps-mfc.md)<br/>
 [Handlers for WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
-

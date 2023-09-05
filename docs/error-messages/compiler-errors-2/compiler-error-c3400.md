@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3400"
 title: "Compiler Error C3400"
 ms.date: "11/04/2016"
 f1_keywords: ["C3400"]
@@ -11,13 +12,13 @@ circular constraint dependency involving 'constraint_1' and 'constraint_2'
 
 The compiler detected circular constraints.
 
-For more information, see [Constraints on Generic Type Parameters (C++/CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+For more information, see [Constraints on Generic Type Parameters (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## Example
 
 The following sample generates C3400.
 
-```
+```cpp
 // C3400.cpp
 // compile with: /clr /c
 generic<class T, class U>

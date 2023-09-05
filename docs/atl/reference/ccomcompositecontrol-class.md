@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComCompositeControl Class"
 title: "CComCompositeControl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComCompositeControl", "ATLCTL/ATL::CComCompositeControl", "ATLCTL/ATL::CComCompositeControl::CComCompositeControl", "ATLCTL/ATL::CComCompositeControl::AdviseSinkMap", "ATLCTL/ATL::CComCompositeControl::CalcExtent", "ATLCTL/ATL::CComCompositeControl::Create", "ATLCTL/ATL::CComCompositeControl::CreateControlWindow", "ATLCTL/ATL::CComCompositeControl::SetBackgroundColorFromAmbient", "ATLCTL/ATL::CComCompositeControl::m_hbrBackground", "ATLCTL/ATL::CComCompositeControl::m_hWndFocus"]
@@ -10,7 +11,7 @@ ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
 This class provides the methods required to implement a composite control.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -59,12 +60,12 @@ Classes derived from class `CComCompositeControl` inherit the functionality of a
 [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]
 
 > [!NOTE]
->  Composite controls are always windowed controls, although they can contain windowless controls.
+> Composite controls are always windowed controls, although they can contain windowless controls.
 
 A control implemented by a `CComCompositeControl`-derived class has default tabbing behavior built in. When the control receives focus by being tabbed to in a containing application, successively pressing the TAB key will cause the focus to be cycled through all of the composite control's contained controls, then out of the composite control and on to the next item in the tab order of the container. The tab order of the hosted controls is determined by the dialog resource and determines the order in which tabbing will occur.
 
 > [!NOTE]
->  In order for accelerators to work properly with a `CComCompositeControl`, it is necessary to load an accelerator table as the control is created, pass the handle and number of accelerators back into [IOleControlImpl::GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo), and finally destroy the table when the control is released.
+> In order for accelerators to work properly with a `CComCompositeControl`, it is necessary to load an accelerator table as the control is created, pass the handle and number of accelerators back into [IOleControlImpl::GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo), and finally destroy the table when the control is released.
 
 ## Example
 
@@ -84,7 +85,7 @@ A control implemented by a `CComCompositeControl`-derived class has default tabb
 
 **Header:** atlctl.h
 
-##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap
+## <a name="advisesinkmap"></a> CComCompositeControl::AdviseSinkMap
 
 Call this method to advise or unadvise all controls hosted by the composite control.
 
@@ -99,20 +100,20 @@ True if all controls are to be advised; otherwise false.
 
 ### Return Value
 
-|||
-|-|-|
-|S_OK  |All controls in the event sink map were connected or disconnected from their event source successfully.|
-|E_FAIL  |Not all controls in the event sink map could be connected or disconnected from their event source successfully.|
-|E_POINTER  |This error usually indicates a problem with an entry in the control's event sink map or a problem with a template argument used in an `IDispEventImpl` or `IDispEventSimpleImpl` base class.|
-|CONNECT_E_ADVISELIMIT  |The connection point has already reached its limit of connections and cannot accept any more.|
-|CONNECT_E_CANNOTCONNECT  |The sink does not support the interface required by this connection point.|
-|CONNECT_E_NOCONNECTION  |The cookie value does not represent a valid connection. This error usually indicates a problem with an entry in the control's event sink map or a problem with a template argument used in an `IDispEventImpl` or `IDispEventSimpleImpl` base class.|
+| Value | Description |
+|--|--|
+| `S_OK` | All controls in the event sink map were connected or disconnected from their event source successfully. |
+| `E_FAIL` | Not all controls in the event sink map could be connected or disconnected from their event source successfully. |
+| `E_POINTER` | This error usually indicates a problem with an entry in the control's event sink map or a problem with a template argument used in an `IDispEventImpl` or `IDispEventSimpleImpl` base class. |
+| `CONNECT_E_ADVISELIMIT` | The connection point has already reached its limit of connections and cannot accept any more. |
+| `CONNECT_E_CANNOTCONNECT` | The sink does not support the interface required by this connection point. |
+| `CONNECT_E_NOCONNECTION` | The cookie value does not represent a valid connection. This error usually indicates a problem with an entry in the control's event sink map or a problem with a template argument used in an `IDispEventImpl` or `IDispEventSimpleImpl` base class. |
 
 ### Remarks
 
 The base implementation of this method searches through the entries in the event sink map. It then advises or unadvises the connection points to the COM objects described by the event sink map's sink entries. This member method also relies on the fact that the derived class inherits from one instance of `IDispEventImpl` for every control in the sink map that is to be advised or unadvised.
 
-##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent
+## <a name="calcextent"></a> CComCompositeControl::CalcExtent
 
 Call this method to calculate the size in HIMETRIC units of the dialog resource used to host the composite control.
 
@@ -133,7 +134,7 @@ TRUE if the control is hosted by a dialog box; otherwise FALSE.
 
 The size is returned in the *size* parameter.
 
-##  <a name="create"></a>  CComCompositeControl::Create
+## <a name="create"></a> CComCompositeControl::Create
 
 This method is called to create the control window for the composite control.
 
@@ -153,7 +154,7 @@ A handle to the parent window of the control.
 Reserved.
 
 *dwInitParam*<br/>
-Data to be passed to the control during control creation. The data passed as *dwInitParam* will show up as the LPARAM parameter of the [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) message, which will be sent to the composite control when it gets created.
+Data to be passed to the control during control creation. The data passed as *dwInitParam* will show up as the LPARAM parameter of the [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) message, which will be sent to the composite control when it gets created.
 
 ### Return Value
 
@@ -163,7 +164,7 @@ A handle to the newly created composite control dialog box.
 
 This method is usually called during in-place activation of the control.
 
-##  <a name="ccomcompositecontrol"></a>  CComCompositeControl::CComCompositeControl
+## <a name="ccomcompositecontrol"></a> CComCompositeControl::CComCompositeControl
 
 The constructor.
 
@@ -175,7 +176,7 @@ CComCompositeControl();
 
 Initializes the [CComCompositeControl::m_hbrBackground](#m_hbrbackground) and [CComCompositeControl::m_hWndFocus](#m_hwndfocus) data members to NULL.
 
-##  <a name="dtor"></a>  CComCompositeControl::~CComCompositeControl
+## <a name="dtor"></a> CComCompositeControl::~CComCompositeControl
 
 The destructor.
 
@@ -187,7 +188,7 @@ The destructor.
 
 Deletes the background object, if it exists.
 
-##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow
+## <a name="createcontrolwindow"></a> CComCompositeControl::CreateControlWindow
 
 Call this method to create the control window and advise any hosted controls.
 
@@ -213,7 +214,7 @@ Returns a handle to the newly created composite control dialog box.
 
 This method calls [CComCompositeControl::Create](#create) and [CComCompositeControl::AdviseSinkMap](#advisesinkmap).
 
-##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground
+## <a name="m_hbrbackground"></a> CComCompositeControl::m_hbrBackground
 
 The background brush.
 
@@ -221,7 +222,7 @@ The background brush.
 HBRUSH m_hbrBackground;
 ```
 
-##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus
+## <a name="m_hwndfocus"></a> CComCompositeControl::m_hWndFocus
 
 The handle of the window that currently has focus.
 
@@ -229,7 +230,7 @@ The handle of the window that currently has focus.
 HWND m_hWndFocus;
 ```
 
-##  <a name="setbackgroundcolorfromambient"></a>  CComCompositeControl::SetBackgroundColorFromAmbient
+## <a name="setbackgroundcolorfromambient"></a> CComCompositeControl::SetBackgroundColorFromAmbient
 
 Call this method to set the background color of the composite control using the container's background color.
 
@@ -241,7 +242,7 @@ HRESULT SetBackgroundColorFromAmbient();
 
 Returns S_OK on success, or an error HRESULT on failure.
 
-## See Also
+## See also
 
 [CComControl Class](../../atl/reference/ccomcontrol-class.md)<br/>
 [Composite Control Fundamentals](../../atl/atl-composite-control-fundamentals.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Concurrency::graphics namespace functions"
 title: "Concurrency::graphics namespace functions"
 ms.date: "11/04/2016"
 f1_keywords: ["amp_graphics/Concurrency::fast_math::copy_async", "amp_graphics/Concurrency::fast_math::copy"]
@@ -6,15 +7,14 @@ ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
 ---
 # Concurrency::graphics namespace functions
 
-|||
-|-|-|
-|[copy](#copy)|[copy_async](#copy_async)|
+[copy](#copy)\
+[copy_async](#copy_async)
 
-##  <a name="copy"></a>  copy Function (Concurrency::graphics Namespace)
+## <a name="copy"></a> copy Function (Concurrency::graphics Namespace)
 
 Copies a source texture into a destination buffer, or copies a source buffer into a destination buffer. The general form of this function is `copy(src, dest)`.
 
-```
+```cpp
 template <
     typename _Src_type,
     typename = typename std::enable_if<details::texture_traits<_Src_type>::is_texture, void>::type>
@@ -126,7 +126,7 @@ The type of the destination object.
 The offset into the destination at which to begin copying.
 
 *InputIterator*<br/>
-The type of the input interator.
+The type of the input iterator.
 
 *OutputIterator*<br/>
 The type of the output iterator.
@@ -149,11 +149,11 @@ A beginning iterator into the source container.
 *last*<br/>
 An ending iterator into the source container.
 
-##  <a name="copy_async"></a>  copy_async Function (Concurrency::graphics Namespace)
+## <a name="copy_async"></a> copy_async Function (Concurrency::graphics Namespace)
 
 Asynchronously copies a source texture into a destination buffer, or copies a source buffer into a destination buffer, and then returns a [completion_future](completion-future-class.md) object that can be waited on. Data can't be copied when code is running on an accelerator. The general form of this function is `copy(src, dest)`.
 
-```
+```cpp
 template<
     typename _Src_type,
     typename = typename std::enable_if<details::texture_traits<_Src_type>::is_texture, void>::type
@@ -261,7 +261,7 @@ The type of the destination object.
 The offset into the destination at which to begin copying.
 
 *InputIterator*<br/>
-The type of the input interator.
+The type of the input iterator.
 
 *OutputIterator*<br/>
 The type of the output iterator.
@@ -290,6 +290,6 @@ An ending iterator into the source container.
 
 **Namespace:** Concurrency::graphics
 
-## See Also
+## See also
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

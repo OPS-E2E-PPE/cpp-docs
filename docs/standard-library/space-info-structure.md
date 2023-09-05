@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: space_info Structure"
 title: "space_info Structure"
 ms.date: "09/10/2018"
 f1_keywords: ["filesystem/std::tr2::sys::space_info"]
@@ -37,6 +38,6 @@ struct space_info
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
-[File System Navigation (C++)](../standard-library/file-system-navigation.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)\
+[File System Navigation (C++)](../standard-library/file-system-navigation.md)

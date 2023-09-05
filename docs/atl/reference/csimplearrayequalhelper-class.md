@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CSimpleArrayEqualHelper Class"
 title: "CSimpleArrayEqualHelper Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CSimpleArrayEqualHelper", "ATLSIMPCOLL/ATL::CSimpleArrayEqualHelper", "ATLSIMPCOLL/ATL::CSimpleArrayEqualHelper::IsEqual"]
@@ -37,7 +38,7 @@ This traits class is a supplement to the `CSimpleArray` class. It provides a met
 
 **Header:** atlsimpcoll.h
 
-##  <a name="isequal"></a>  CSimpleArrayEqualHelper::IsEqual
+## <a name="isequal"></a> CSimpleArrayEqualHelper::IsEqual
 
 Tests two `CSimpleArray` object elements for equality.
 
@@ -59,7 +60,7 @@ An object of type T.
 
 Returns true if the elements are equal, false otherwise.
 
-## See Also
+## See also
 
 [CSimpleArray Class](../../atl/reference/csimplearray-class.md)<br/>
 [CSimpleArrayEqualHelperFalse Class](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>

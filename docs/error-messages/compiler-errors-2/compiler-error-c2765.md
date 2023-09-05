@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2765"
 title: "Compiler Error C2765"
 ms.date: "11/04/2016"
 f1_keywords: ["C2765"]
@@ -13,7 +14,7 @@ Default arguments are not allowed on an explicit specialization of a function te
 
 The following sample generates C2765:
 
-```
+```cpp
 // C2765.cpp
 template<class T> void f(T t) {};
 

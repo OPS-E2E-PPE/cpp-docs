@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ATL_URL_SCHEME"
 title: "ATL_URL_SCHEME enumeration"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ATLUTIL/ATL::ATL_URL_SCHEME"]
@@ -10,7 +11,7 @@ The members of this enumeration provide constants for the schemes understood by 
 
 ## Syntax
 
-```
+```cpp
 enum ATL_URL_SCHEME{
    ATL_URL_SCHEME_UNKNOWN = -1,
    ATL_URL_SCHEME_FTP     = 0,
@@ -28,7 +29,7 @@ enum ATL_URL_SCHEME{
 
 **Header:** atlutil.h
 
-## See Also
+## See also
 
 [Concepts](../active-template-library-atl-concepts.md)<br/>
 [CUrl::SetScheme](curl-class.md#setscheme)<br/>

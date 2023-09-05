@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4566"
 title: "Compiler Warning (level 1) C4566"
 ms.date: "11/04/2016"
 f1_keywords: ["C4566"]
@@ -15,7 +16,7 @@ Narrow strings (one-byte characters) are converted to multi-byte characters wher
 
 The following sample generates C4566:
 
-```
+```cpp
 // C4566.cpp
 // compile with: /W1
 int main() {

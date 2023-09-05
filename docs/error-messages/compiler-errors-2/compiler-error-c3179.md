@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3179"
 title: "Compiler Error C3179"
 ms.date: "11/04/2016"
 f1_keywords: ["C3179"]
@@ -13,7 +14,7 @@ All CLR and WinRT classes and structs must have names.
 
 The following sample generates C3179 and shows how to fix it:
 
-```
+```cpp
 // C3179a.cpp
 // compile with: /clr /c
 typedef value struct { // C3179

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2153"
 title: "Compiler Error C2153"
 ms.date: "11/04/2016"
 f1_keywords: ["C2153"]
@@ -13,7 +14,7 @@ Hexadecimal constants 0x, 0X, and \x are not valid. At least one hex digit must 
 
 The following sample generates C2153:
 
-```
+```cpp
 // C2153.cpp
 int main() {
    int a= 0x;    // C2153

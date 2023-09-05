@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: reference_wrapper Class"
 title: "reference_wrapper Class"
 ms.date: "11/04/2016"
 f1_keywords: ["functional/std::reference_wrapper", "type_traits/std::reference_wrapper", "xrefwrap/std::reference_wrapper", "type_traits/std::reference_wrapper::get", "type_traits/std::reference_wrapper::operator()", "functional/std::reference_wrapper::result_type", "functional/std::reference_wrapper::type", "functional/std::reference_wrapper::get", "functional/std::reference_wrapper::operator()"]
@@ -15,7 +16,6 @@ Wraps a reference.
 template <class Ty>
 class reference_wrapper
 {
-public:
     typedef Ty type;
 
     reference_wrapper(Ty&) noexcept;
@@ -25,9 +25,6 @@ public:
     template <class... Types>
     auto operator()(Types&&... args) const ->
         decltype(std::invoke(get(), std::forward<Types>(args)...));
-
-private:
-    Ty *ptr; // exposition only
 };
 ```
 
@@ -39,39 +36,35 @@ The type `Ty` must be an object type or a function type, or a static assert fail
 
 The helper functions [std::ref](functional-functions.md#ref) and [std::cref](functional-functions.md#cref) can be used to create `reference_wrapper` objects.
 
+## Members
+
 ### Constructors
 
-|Constructor|Description|
+|Name|Description|
 |-|-|
 |[reference_wrapper](#reference_wrapper)|Constructs a `reference_wrapper`.|
 
 ### Typedefs
 
-|Type name|Description|
+|Name|Description|
 |-|-|
 |[result_type](#result_type)|The weak result type of the wrapped reference.|
 |[type](#type)|The type of the wrapped reference.|
 
-### Member functions
+### Functions
 
-|Member function|Description|
+|Name|Description|
 |-|-|
 |[get](#get)|Obtains the wrapped reference.|
 
 ### Operators
 
-|Operator|Description|
+|Name|Description|
 |-|-|
-|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Gets a pointer to the wrapped reference.|
-|[reference_wrapper::operator()](#op_call)|Calls the wrapped reference.|
+|[`operator Ty&`](#op_ty_amp)|Gets a pointer to the wrapped reference.|
+|[operator()](#op_call)|Calls the wrapped reference.|
 
-## Requirements
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## <a name="get"></a>  reference_wrapper::get
+## <a name="get"></a> get
 
 Obtains the wrapped reference.
 
@@ -110,7 +103,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a>  reference_wrapper::operator Ty&amp;
+## <a name="op_ty_amp"></a> operator Ty&
 
 Gets the wrapped reference.
 
@@ -146,7 +139,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a>  reference_wrapper::operator()
+## <a name="op_call"></a> operator()
 
 Calls the wrapped reference.
 
@@ -157,10 +150,10 @@ auto operator()(Types&&... args);
 
 ### Parameters
 
-*Types*<br/>
+*Types*\
 The argument list types.
 
-*args*<br/>
+*args*\
 The argument list.
 
 ### Remarks
@@ -192,7 +185,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper
+## <a name="reference_wrapper"></a> reference_wrapper
 
 Constructs a `reference_wrapper`.
 
@@ -202,10 +195,10 @@ reference_wrapper(Ty& val) noexcept;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to wrap.
 
-*val*<br/>
+*val*\
 The value to wrap.
 
 ### Remarks
@@ -243,7 +236,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a>  reference_wrapper::result_type
+## <a name="result_type"></a> result_type
 
 The weak result type of the wrapped reference.
 
@@ -282,7 +275,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a>  reference_wrapper::type
+## <a name="type"></a> type
 
 The type of the wrapped reference.
 
@@ -323,8 +316,3 @@ int main() {
 i = 1
 rwi = 1
 ```
-
-## See also
-
-[cref](../standard-library/functional-functions.md#cref)<br/>
-[ref](../standard-library/functional-functions.md#ref)<br/>

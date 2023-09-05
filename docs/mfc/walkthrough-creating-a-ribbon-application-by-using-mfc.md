@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Walkthrough: Creating a Ribbon Application By Using MFC"
 title: "Walkthrough: Creating a Ribbon Application By Using MFC"
-ms.date: "11/04/2016"
-helpviewer_keywords: ["ribbon application, creating (MFC)", "creating a ribbon aplication (MFC)"]
+ms.date: "09/09/2019"
+helpviewer_keywords: ["ribbon application, creating (MFC)", "creating a ribbon application (MFC)"]
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 ---
 # Walkthrough: Creating a Ribbon Application By Using MFC
@@ -14,9 +15,7 @@ This walkthrough assumes that you have set Visual Studio to use **General Develo
 
 ### To create an MFC application that has a ribbon
 
-1. Use the **MFC Application Wizard** to create an MFC application that has a ribbon. To run the wizard, on the **File** menu, point to **New**, and then click **Project**.
-
-1. In the **New Project** dialog box, expand the **Visual C++** node under **Installed Templates**, select **MFC**, and then select **MFC Application**. Type a name for the project, for example, *MFCRibbonApp*, and then click **OK**.
+1. Use the **MFC Application Wizard** to create an MFC application that has a ribbon. See [Walkthrough: Using the New MFC Shell Controls](walkthrough-using-the-new-mfc-shell-controls.md) for instructions on how to open the wizard for your version of Visual Studio.
 
 1. Set the following options in the **MFC Application Wizard**:
 
@@ -26,7 +25,7 @@ This walkthrough assumes that you have set Visual Studio to use **General Develo
 
     1. In the **Document Template Properties** section, in the **File extension** box, type a file name extension for documents that this application creates, for example, *mfcrbnapp*.
 
-    1. In the **Database Support** section, make sure that **None** is selected.
+    1. In the **Database Support** section (Visual Studio 2015 only), make sure that **None** is selected.
 
     1. In the **User Interface Features** section, make sure that **Use a ribbon** is selected.
 
@@ -46,7 +45,7 @@ This walkthrough assumes that you have set Visual Studio to use **General Develo
 
     A category that has the caption **Category1** is created. By default, the category contains one panel.
 
-    Right-click **Category1** and then click **Properties**. In the **Properties** window, change **Caption** to *Custom*.
+    Right-click **Category1** and then click **Properties**. In **Properties** window, change **Caption** to *Custom*.
 
     The **Large Images** and **Small Images** properties specify the bitmaps that are used as icons for the ribbon elements in this category. Because creating custom bitmaps is beyond the scope of this walkthrough, just reuse the bitmaps that were created by the wizard. Small bitmaps are 16 pixels by 16 pixels. For small images, use the bitmaps that are accessed by the `IDB_FILESMALL` resource ID. Large bitmaps are 32 pixels by 32 pixels. For large images, use the bitmaps that are accessed by the `IDB_FILELARGE` resource ID.
 
@@ -67,7 +66,7 @@ This walkthrough assumes that you have set Visual Studio to use **General Develo
 
     To create the **Print** button, drag a Button tool to the panel.
 
-    In the **Properties** window, change the **ID** property to **ID_FILE_PRINT**, which should already be defined. Change **Caption** to *Print*. Change **Image Index** to *4*.
+    In **Properties** window, change the **ID** property to **ID_FILE_PRINT**, which should already be defined. Change **Caption** to *Print*. Change **Image Index** to *4*.
 
     To create the **Quick Print** button, click the property value column next to **Menu Items**, and then click the ellipsis (**...**). In the **Items Editor**, click the unlabeled **Add** button to create a menu item. In the **Properties** window, change **Caption** to *Quick Print*, **ID** to *ID_FILE_PRINT_DIRECT*, and **Image** to *5*. The image property specifies the **Quick Print** icon in the `IDB_FILESMALL` bitmap resource.
 
@@ -79,9 +78,9 @@ This walkthrough assumes that you have set Visual Studio to use **General Develo
 
 [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)
 
-For end-to-end samples, see [Samples (MFC Feature Pack)](../visual-cpp-samples.md).
+For end-to-end samples, see [Samples (MFC Feature Pack)](../overview/visual-cpp-samples.md).
 
-## See Also
+## See also
 
 [Walkthroughs](../mfc/walkthroughs-mfc.md)<br/>
-[Samples (MFC Feature Pack)](../visual-cpp-samples.md)
+[Samples (MFC Feature Pack)](../overview/visual-cpp-samples.md)

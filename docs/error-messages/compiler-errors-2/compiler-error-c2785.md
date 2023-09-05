@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2785"
 title: "Compiler Error C2785"
 ms.date: "11/04/2016"
 f1_keywords: ["C2785"]
@@ -19,7 +20,7 @@ The return type of function template specialization differs from the return type
 
 The following sample generates C2785:
 
-```
+```cpp
 // C2785.cpp
 // compile with: /c
 template<class T> void f(T);

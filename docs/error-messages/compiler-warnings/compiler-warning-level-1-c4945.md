@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4945"
 title: "Compiler Warning (level 1) C4945"
 ms.date: "11/04/2016"
 f1_keywords: ["C4945"]
@@ -13,7 +14,7 @@ A symbol was imported from a referenced assembly but that symbol was already imp
 
 The following samples generate C4945.
 
-```
+```csharp
 // C4945a.cs
 // compile with: /target:library
 // C# source code to create a dll
@@ -24,7 +25,7 @@ public class ClassA {
 
 and then,
 
-```
+```csharp
 // C4945b.cs
 // compile with: /target:library
 // C# source code to create a dll
@@ -35,7 +36,7 @@ public class ClassA {
 
 and then,
 
-```
+```cpp
 // C4945c.cpp
 // compile with: /clr /LD /W1
 #using "C4945a.dll"

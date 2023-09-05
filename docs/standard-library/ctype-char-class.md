@@ -1,13 +1,14 @@
 ---
-title: "ctype&lt;char&gt; Class"
+description: "Learn more about: ctype<char> Class"
+title: "ctype<char> Class"
 ms.date: "11/04/2016"
 f1_keywords: ["ctype<char>", "locale/std::ctype<char>"]
 helpviewer_keywords: ["ctype<char> class"]
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
 ---
-# ctype&lt;char&gt; Class
+# `ctype<char>` Class
 
-The class is an explicit specialization of template class `ctype\<CharType>` to type **char**, describing an object that can serve as a locale facet to characterize various properties of a character of type **char**.
+The class is an explicit specialization of class template `ctype\<CharType>` to type **`char`**, describing an object that can serve as a locale facet to characterize various properties of a character of type **`char`**.
 
 ## Syntax
 
@@ -97,11 +98,11 @@ protected:
 
 ## Remarks
 
-The explicit specialization differs from the template class in several ways:
+The explicit specialization differs from the class template in several ways:
 
-- An object of class ctype< `char`> stores a pointer to the first element of a ctype mask table, an array of UCHAR_MAX + 1 elements of type `ctype_base::mask`. It also stores a Boolean object that indicates whether the array should be deleted (using `operator delete[]`) when the ctype\< **Elem**> object is destroyed.
+- An object of class `ctype<char>` stores a pointer to the first element of a ctype mask table, an array of UCHAR_MAX + 1 elements of type `ctype_base::mask`. It also stores a Boolean object that indicates whether the array should be deleted (using `operator delete[]`) when the ctype\< **Elem**> object is destroyed.
 
-- Its sole public constructor lets you specify `tab`, the ctype mask table, and `del`, the Boolean object that is true if the array should be deleted when the ctype< `char`> object is destroyed, as well as the reference-count parameter refs.
+- Its sole public constructor lets you specify `tab`, the ctype mask table, and `del`, the Boolean object that is true if the array should be deleted when the `ctype<char>` object is destroyed, as well as the reference-count parameter refs.
 
 - The protected member function `table` returns the stored ctype mask table.
 
@@ -121,6 +122,6 @@ The member functions [do_narrow](../standard-library/ctype-class.md#do_narrow) a
 
 ## See also
 
-[facet Class](locale-class.md#facet_class)<br/>
-[ctype_base Class](../standard-library/ctype-base-class.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[facet Class](locale-class.md#facet_class)\
+[ctype_base Class](../standard-library/ctype-base-class.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

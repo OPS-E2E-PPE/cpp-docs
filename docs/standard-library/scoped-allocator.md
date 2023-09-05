@@ -1,13 +1,14 @@
 ---
-title: "&lt;scoped_allocator&gt;"
+description: "Learn more about: <scoped_allocator>"
+title: "<scoped_allocator>"
 ms.date: "11/04/2016"
 f1_keywords: ["<scoped_allocator>"]
 helpviewer_keywords: ["scoped_allocator Header"]
 ms.assetid: d20175b8-96be-4896-8141-3faba45e0005
 ---
-# &lt;scoped_allocator&gt;
+# `<scoped_allocator>`
 
-Defines the container template class scoped_allocator.
+Defines the container class template scoped_allocator.
 
 ## Syntax
 
@@ -26,10 +27,10 @@ Defines the container template class scoped_allocator.
 
 |Class|Description|
 |-|-|
-|[scoped_allocator_adaptor Class](../standard-library/scoped-allocator-adaptor-class.md)|A template class that encapsulates a nest of one or more allocators.|
+|[scoped_allocator_adaptor Class](../standard-library/scoped-allocator-adaptor-class.md)|A class template that encapsulates a nest of one or more allocators.|
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

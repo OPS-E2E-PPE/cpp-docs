@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3421"
 title: "Compiler Error C3421"
 ms.date: "11/04/2016"
 f1_keywords: ["C3421"]
@@ -17,7 +18,7 @@ For more information, see [Destructors and finalizers in How to: Define and cons
 
 The following sample generates C3421.
 
-```
+```cpp
 // C3421.cpp
 // compile with: /clr
 ref class A {};

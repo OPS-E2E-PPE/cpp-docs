@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Floating Limits"
 title: "Floating Limits"
 ms.date: "08/03/2018"
 helpviewer_keywords: ["ranges, floating-point constants", "floating-point constants, limits", "float.h header file", "limits, floating-point constants", "floating-point numbers [C++]", "floating limits"]
@@ -29,7 +30,7 @@ The following table lists the limits on the values of floating-point constants. 
 |`FLT_ROUNDS`<br/>`_DBL_ROUNDS`<br/>`_LDBL_ROUNDS`|Rounding mode for  floating-point addition.|1 (near)<br/>1 (near)<br/>1 (near)|
 
 > [!NOTE]
->  The information in the table may differ in future versions of the product.
+> The information in the table may differ in future versions of the product.
 
 **END Microsoft Specific**
 

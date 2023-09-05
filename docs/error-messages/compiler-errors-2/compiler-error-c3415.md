@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3415"
 title: "Compiler Error C3415"
 ms.date: "11/04/2016"
 f1_keywords: ["C3415"]
@@ -34,7 +35,7 @@ Conflicting values were specified in [section](../../preprocessor/section.md) pr
 
 The following sample generates C3415:
 
-```
+```cpp
 // C3415.cpp
 #pragma section("mysec1",write)
 #pragma section("mysec1",read)   // C3415

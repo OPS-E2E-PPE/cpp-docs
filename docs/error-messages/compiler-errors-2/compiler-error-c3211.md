@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3211"
 title: "Compiler Error C3211"
 ms.date: "11/04/2016"
 f1_keywords: ["C3211"]
@@ -13,7 +14,7 @@ An explicit specialization was ill formed.
 
 The following sample generates C3211:
 
-```
+```cpp
 // C3211.cpp
 // compile with: /LD
 template<class T>

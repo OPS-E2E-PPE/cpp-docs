@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4794"
 title: "Compiler Warning (level 1) C4794"
 ms.date: "11/04/2016"
 f1_keywords: ["C4794"]
@@ -17,7 +18,7 @@ The .tls$*x* section will exist in the object file where [__declspec(thread)](..
 
 The following sample generates C4794:
 
-```
+```cpp
 // C4794.cpp
 // compile with: /W1 /c
 #pragma data_seg(".someseg")

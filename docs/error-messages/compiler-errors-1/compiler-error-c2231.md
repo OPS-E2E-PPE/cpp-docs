@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2231"
 title: "Compiler Error C2231"
 ms.date: "11/04/2016"
 f1_keywords: ["C2231"]
@@ -13,7 +14,7 @@ The operand to the left of the member-selection operation (.) is a pointer inste
 
 The following sample generates C2231:
 
-```
+```c
 // C2231.c
 struct S {
    int member;

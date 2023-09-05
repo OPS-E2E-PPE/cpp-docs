@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3161"
 title: "Compiler Error C3161"
 ms.date: "11/04/2016"
 f1_keywords: ["C3161"]
@@ -15,7 +16,7 @@ An [__interface](../../cpp/interface.md) can only appear at global scope or with
 
 The following sample generates C3161.
 
-```
+```cpp
 // C3161.cpp
 // compile with: /c
 __interface X {

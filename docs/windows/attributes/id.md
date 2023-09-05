@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: id"
 title: "id (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.id"]
@@ -22,7 +23,7 @@ The dispatch ID for the interface method.
 
 ## Remarks
 
-The **id** C++ attribute has the same functionality as the [id](/windows/desktop/Midl/id) MIDL attribute.
+The **id** C++ attribute has the same functionality as the [id](/windows/win32/Midl/id) MIDL attribute.
 
 ## Example
 
@@ -30,9 +31,7 @@ See the example for [bindable](bindable.md) for an example of how to use **id**.
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface method|
 |**Repeatable**|No|
@@ -41,7 +40,7 @@ See the example for [bindable](bindable.md) for an example of how to use **id**.
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Method Attributes](method-attributes.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: invalid_scheduler_policy_key Class"
 title: "invalid_scheduler_policy_key Class"
 ms.date: "11/04/2016"
 f1_keywords: ["invalid_scheduler_policy_key", "CONCRT/concurrency::invalid_scheduler_policy_key", "CONCRT/concurrency::invalid_scheduler_policy_key::invalid_scheduler_policy_key"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when an invalid or unknown key is passe
 
 ## Syntax
 
-```
+```cpp
 class invalid_scheduler_policy_key : public std::exception;
 ```
 
@@ -35,11 +36,11 @@ class invalid_scheduler_policy_key : public std::exception;
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> invalid_scheduler_policy_key
+## <a name="ctor"></a> invalid_scheduler_policy_key
 
 Constructs an `invalid_scheduler_policy_key` object.
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_key(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_key() throw();
@@ -50,7 +51,7 @@ invalid_scheduler_policy_key() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [SchedulerPolicy Class](schedulerpolicy-class.md)

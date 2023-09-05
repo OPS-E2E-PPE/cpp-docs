@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3293"
 title: "Compiler Error C3293"
 ms.date: "07/21/2017"
 f1_keywords: ["C3293"]
@@ -17,7 +18,7 @@ An indexed property was accessed incorrectly.  See [How to: Use Properties in C+
 
 The following sample generates C3293 in Visual Studio 2015 and earlier.
 
-```
+```cpp
 // C3293.cpp
 // compile with: /clr /c
 using namespace System;

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2309"
 title: "Compiler Error C2309"
 ms.date: "11/04/2016"
 f1_keywords: ["C2309"]
@@ -13,7 +14,7 @@ A catch handler has no parenthesized type.
 
 The following sample generates C2309:
 
-```
+```cpp
 // C2309.cpp
 // compile with: /EHsc
 #include <eh.h>

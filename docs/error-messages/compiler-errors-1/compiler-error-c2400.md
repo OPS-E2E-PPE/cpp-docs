@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2400"
 title: "Compiler Error C2400"
 ms.date: "11/04/2016"
 f1_keywords: ["C2400"]
@@ -13,7 +14,7 @@ The token caused a syntax error in the specified context.
 
 The following sample generates C2400:
 
-```
+```cpp
 // C2400.cpp
 // processor: x86
 int main() {

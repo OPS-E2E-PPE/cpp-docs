@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Retrieving Data from the Dialog Object"
 title: "Retrieving Data from the Dialog Object"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["dialog boxes [MFC], retrieving user data", "dialog box data [MFC]", "data [MFC], retrieving", "GetDlgItemText method [MFC]", "SetDlgItemText method [MFC]", "SetWindowText method [MFC]", "dialog box data [MFC], retrieving", "retrieving data [MFC]", "user input [MFC], retrieving from MFC dialog boxes", "capturing user input [MFC]", "dialog box controls [MFC], initializing values", "DDX (dialog data exchange) [MFC]", "MFC dialog boxes [MFC], retrieving user input", "data retrieval [MFC], dialog boxes", "data [MFC], dialog boxes", "DDX (dialog data exchange) [MFC], about DDX", "DDX (dialog data exchange) [MFC], retrieving data from Dialog object", "GetWindowText method [MFC]"]
@@ -16,7 +17,6 @@ DDX and DDV are explained in more detail in [Dialog Data Exchange and Validation
 
 For a modal dialog box, you can retrieve any data the user entered when `DoModal` returns IDOK but before the dialog object is destroyed. For a modeless dialog box, you can retrieve data from the dialog object at any time by calling `UpdateData` with the argument **TRUE** and then accessing dialog class member variables. This subject is discussed in more detail in [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md).
 
-## See Also
+## See also
 
-[Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
-
+[Working with Dialog Boxes in MFC](../mfc/life-cycle-of-a-dialog-box.md)

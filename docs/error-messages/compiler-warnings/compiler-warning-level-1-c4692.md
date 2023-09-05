@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4692"
 title: "Compiler Warning (level 1) C4692"
 ms.date: "11/04/2016"
 f1_keywords: ["C4692"]
@@ -19,7 +20,7 @@ This warning is off by default. For more information, see [Compiler Warnings Tha
 
 The following sample generates C4692.
 
-```
+```cpp
 // C4692.cpp
 // compile with: /W1 /c /clr
 #pragma warning(default:4692)

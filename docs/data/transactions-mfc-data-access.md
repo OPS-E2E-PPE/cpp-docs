@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Transactions  (MFC Data Access)"
 title: "Transactions  (MFC Data Access)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["transactions [C++], support for", "transactions [C++]", "databases [C++], transactions"]
@@ -26,6 +27,6 @@ You can support transactions in OLE DB (see [Supporting Transactions in OLE DB](
 
 A distributed transaction is a transaction that updates distributed data, that is, data on more than one networked computer system. If you want to support transactions over a distributed system, you should use ADO.NET rather than the OLE DB transaction support.
 
-## See Also
+## See also
 
 [Data Access Programming (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CStringRefElementTraits Class"
 title: "CStringRefElementTraits Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CStringRefElementTraits", "ATLCOLL/ATL::CStringRefElementTraits", "ATLCOLL/ATL::CStringRefElementTraits::CompareElements", "ATLCOLL/ATL::CStringRefElementTraits::CompareElementsOrdered", "ATLCOLL/ATL::CStringRefElementTraits::Hash"]
@@ -33,7 +34,7 @@ The type of data to be stored in the collection.
 
 ## Remarks
 
-This class provides static functions for comparing strings and for creating a hash value. These functions are useful when using a collection class to store string-based data. Unlike [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) and [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md), `CStringRefElementTraits` causes the `CString` arguments to be passed as **const** `CString&` references.
+This class provides static functions for comparing strings and for creating a hash value. These functions are useful when using a collection class to store string-based data. Unlike [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) and [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md), `CStringRefElementTraits` causes the `CString` arguments to be passed as **`const`** `CString&` references.
 
 For more information, see [ATL Collection Classes](../../atl/atl-collection-classes.md).
 
@@ -47,7 +48,7 @@ For more information, see [ATL Collection Classes](../../atl/atl-collection-clas
 
 **Header:** atlcoll.h
 
-##  <a name="compareelements"></a>  CStringRefElementTraits::CompareElements
+## <a name="compareelements"></a> CStringRefElementTraits::CompareElements
 
 Call this static function to compare two string elements for equality.
 
@@ -67,7 +68,7 @@ The second string element.
 
 Returns true if the elements are equal, false otherwise.
 
-##  <a name="compareelementsordered"></a>  CStringRefElementTraits::CompareElementsOrdered
+## <a name="compareelementsordered"></a> CStringRefElementTraits::CompareElementsOrdered
 
 Call this static function to compare two string elements.
 
@@ -87,7 +88,7 @@ The second string element.
 
 Zero if the strings are identical, < 0 if *str1* is less than *str2*, or > 0 if *str1* is greater than *str2*. The [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) method is used to perform the comparisons.
 
-##  <a name="hash"></a>  CStringRefElementTraits::Hash
+## <a name="hash"></a> CStringRefElementTraits::Hash
 
 Call this static function to calculate a hash value for the given string element.
 
@@ -104,7 +105,7 @@ The string element.
 
 Returns a hash value, calculated using the string's contents.
 
-## See Also
+## See also
 
 [CElementTraitsBase Class](../../atl/reference/celementtraitsbase-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

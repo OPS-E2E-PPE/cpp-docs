@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3668"
 title: "Compiler Error C3668"
 ms.date: "11/04/2016"
 f1_keywords: ["C3668"]
@@ -11,13 +12,13 @@ ms.assetid: 53a96698-bde4-4447-95b5-b5108291f60c
 
 A function attempted to override a non-existent function.
 
-For more information, see [Explicit Overrides](../../windows/explicit-overrides-cpp-component-extensions.md).
+For more information, see [Explicit Overrides](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## Example
 
 The following sample generates C3668.
 
-```
+```cpp
 // C3668.cpp
 // compile with: /c
 __interface I {

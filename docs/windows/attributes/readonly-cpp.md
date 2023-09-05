@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: readonly (C++)"
 title: "readonly  (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.readonly"]
@@ -17,7 +18,7 @@ Prohibits assignment to a data member.
 
 ## Remarks
 
-The **readonly** C++ attribute has the same functionality as the [readonly](/windows/desktop/Midl/readonly) MIDL attribute.
+The **readonly** C++ attribute has the same functionality as the [readonly](/windows/win32/Midl/readonly) MIDL attribute.
 
 If you want to prohibit modification of a method parameter, then use the [in](in-cpp.md) attribute.
 
@@ -41,9 +42,7 @@ __interface IFireTabCtrl
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface method|
 |**Repeatable**|No|
@@ -52,7 +51,7 @@ __interface IFireTabCtrl
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Data Member Attributes](data-member-attributes.md)

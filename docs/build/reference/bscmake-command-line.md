@@ -1,10 +1,14 @@
 ---
+description: "Learn more about: BSCMAKE Command Line"
 title: "BSCMAKE Command Line"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["BSCMAKE, command line"]
 ms.assetid: 8006e8cf-8bfe-4c23-868a-b0a25e6bbf0f
 ---
 # BSCMAKE Command Line
+
+> [!WARNING]
+> Although BSCMAKE is still installed with Visual Studio, it is no longer used by the IDE. Since Visual Studio 2008, browse and symbol information is stored automatically in a SQL Server .sdf file in the solution folder.
 
 To run BSCMAKE, use the following command line syntax:
 
@@ -26,8 +30,8 @@ The following command runs BSCMAKE to build a file called MAIN.bsc from three .s
 BSCMAKE main.sbr file1.sbr file2.sbr
 ```
 
-For related information, see [BSCMAKE Command File](../../build/reference/bscmake-command-file-response-file.md) and [BSCMAKE Options](../../build/reference/bscmake-options.md).
+For related information, see [BSCMAKE Command File](bscmake-command-file-response-file.md) and [BSCMAKE Options](bscmake-options.md).
 
-## See Also
+## See also
 
-[BSCMAKE Reference](../../build/reference/bscmake-reference.md)
+[BSCMAKE Reference](bscmake-reference.md)

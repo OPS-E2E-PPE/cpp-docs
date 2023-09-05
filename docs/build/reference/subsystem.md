@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: /SUBSYSTEM"
 title: "/SUBSYSTEM"
 ms.date: "11/04/2016"
-f1_keywords: ["/subsystem"]
+f1_keywords: ["/subsystem_editbin"]
 helpviewer_keywords: ["/SUBSYSTEM editbin option", "-SUBSYSTEM editbin option", "SUBSYSTEM editbin option"]
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
 ---
@@ -33,7 +34,7 @@ A Windows character-mode application. The operating system provides a console fo
 **EFI_RUNTIME_DRIVER**<br/>
 Extensible Firmware Interface (EFI) Image
 
-The EFI subsystem options describe executable images that run in the Extensible Firmware Interface environment. This environment is typically provided with the hardware and executes before the operating system is loaded. The major differences between EFI image types are the memory location that the image is loaded into and the action that's taken when the call to the image returns. An EFI_APPLICATION image is unloaded when control returns. An EFI_BOOT_SERVICE_DRIVER or EFI_RUNTIME_DRIVER is unloaded only if control returns with an error code. An EFI_ROM image is executed from ROM. For more information, see the specifications on the [Unified EFI Forum](http://www.uefi.org/) website.
+The EFI subsystem options describe executable images that run in the Extensible Firmware Interface environment. This environment is typically provided with the hardware and executes before the operating system is loaded. The major differences between EFI image types are the memory location that the image is loaded into and the action that's taken when the call to the image returns. An EFI_APPLICATION image is unloaded when control returns. An EFI_BOOT_SERVICE_DRIVER or EFI_RUNTIME_DRIVER is unloaded only if control returns with an error code. An EFI_ROM image is executed from ROM. For more information, see the specifications on the [Unified EFI Forum](https://www.uefi.org/) website.
 
 **NATIVE**<br/>
 Code that runs without a subsystem environment—for example, kernel mode device drivers and native system processes. This option is usually reserved for Windows system features.
@@ -55,10 +56,10 @@ The optional `major` and `minor` values specify the minimum required version of 
 
 - The values of `major` and `minor` must be from 0 through 65,535.
 
-The choice of subsystem affects the default starting address for the program. For more information, see [/ENTRY (Entry-Point Symbol)](../../build/reference/entry-entry-point-symbol.md), the linker /ENTRY:*function* option.
+The choice of subsystem affects the default starting address for the program. For more information, see [/ENTRY (Entry-Point Symbol)](entry-entry-point-symbol.md), the linker /ENTRY:*function* option.
 
-For more information, including the minimum and default values for the major and minor version numbers for each subsystem, see the [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) linker option.
+For more information, including the minimum and default values for the major and minor version numbers for each subsystem, see the [/SUBSYSTEM](subsystem-specify-subsystem.md) linker option.
 
-## See Also
+## See also
 
-[EDITBIN Options](../../build/reference/editbin-options.md)
+[EDITBIN Options](editbin-options.md)

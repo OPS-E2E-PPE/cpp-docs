@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4558"
 title: "Compiler Warning (level 1) C4558"
 ms.date: "11/04/2016"
 f1_keywords: ["C4558"]
@@ -13,7 +14,7 @@ The value passed to an assembly language instruction is out of the range specifi
 
 The following sample generates C4558:
 
-```
+```cpp
 // C4558.cpp
 // compile with: /W1
 // processor: x86

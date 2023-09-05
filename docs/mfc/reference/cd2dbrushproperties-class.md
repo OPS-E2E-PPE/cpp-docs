@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CD2DBrushProperties Class"
 title: "CD2DBrushProperties Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CD2DBrushProperties", "AFXRENDERTARGET/CD2DBrushProperties", "AFXRENDERTARGET/CD2DBrushProperties::CD2DBrushProperties", "AFXRENDERTARGET/CD2DBrushProperties::CommonInit"]
@@ -39,7 +40,7 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 **Header:** afxrendertarget.h
 
-##  <a name="cd2dbrushproperties"></a>  CD2DBrushProperties::CD2DBrushProperties
+## <a name="cd2dbrushproperties"></a> CD2DBrushProperties::CD2DBrushProperties
 
 Creates a CD2D_BRUSH_PROPERTIES structure
 
@@ -60,14 +61,14 @@ The base opacity of the brush. The default value is 1.0.
 *_transform*<br/>
 The transformation to apply to the brush
 
-##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit
+## <a name="commoninit"></a> CD2DBrushProperties::CommonInit
 
 Initializes the object
 
-```
+```cpp
 void CommonInit();
 ```
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

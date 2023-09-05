@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2929"
 title: "Compiler Error C2929"
 ms.date: "11/04/2016"
 f1_keywords: ["C2929"]
@@ -13,7 +14,7 @@ You cannot explicitly instantiate an identifier while preventing it from being i
 
 The following sample generates C2929:
 
-```
+```cpp
 // C2929.cpp
 // compile with: /c
 template<typename T>

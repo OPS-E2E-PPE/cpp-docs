@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3160"
 title: "Compiler Error C3160"
 ms.date: "11/04/2016"
 f1_keywords: ["C3160"]
@@ -13,7 +14,7 @@ Interior garbage collection pointers may point to the interior of a managed or W
 
 The following sample generates C3160:
 
-```
+```cpp
 // C3160.cpp
 // compile with: /clr
 ref struct A {

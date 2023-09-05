@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3350"
 title: "Compiler Error C3350"
 ms.date: "11/04/2016"
 f1_keywords: ["C3350"]
@@ -13,7 +14,7 @@ When you create an instance of a delegate, you must pass two arguments, an insta
 
 The following sample generates C3350:
 
-```
+```cpp
 // C3350.cpp
 // compile with: /clr
 delegate void SumDelegate();

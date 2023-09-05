@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3027"
 title: "Compiler Error C3027"
 ms.date: "11/04/2016"
 f1_keywords: ["C3027"]
@@ -15,7 +16,7 @@ A clause that requires an arithmetic or pointer expression was passed another ki
 
 The following sample generates C3027:
 
-```
+```cpp
 // C3027.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

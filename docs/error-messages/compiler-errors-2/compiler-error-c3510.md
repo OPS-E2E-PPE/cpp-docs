@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3510"
 title: "Compiler Error C3510"
 ms.date: "11/04/2016"
 f1_keywords: ["C3510"]
@@ -48,7 +49,7 @@ library C3510bLib
 
 And then the client code:
 
-```
+```cpp
 // C3510.cpp
 #import "c3510b.tlb" no_registry auto_search   // C3510
 int main() {

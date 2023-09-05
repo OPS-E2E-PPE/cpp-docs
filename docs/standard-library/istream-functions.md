@@ -1,16 +1,16 @@
 ---
-title: "&lt;istream&gt; functions"
+description: "Learn more about: <istream> functions"
+title: "<istream> functions"
 ms.date: "11/04/2016"
 f1_keywords: ["istream/std::swap", "istream/std::ws"]
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
 ---
-# &lt;istream&gt; functions
+# `<istream>` functions
 
-|||
-|-|-|
-|[swap](#istream_swap)|[ws](#ws)|
+[swap](#istream_swap)\
+[ws](#ws)
 
-## <a name="istream_swap"></a>  swap
+## <a name="istream_swap"></a> swap
 
 Exchanges the elements of two stream objects.
 
@@ -28,13 +28,13 @@ void swap(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 A stream.
 
-*right*<br/>
+*right*\
 A stream.
 
-## <a name="ws"></a>  ws
+## <a name="ws"></a> ws
 
 Skips white space in the stream.
 
@@ -44,7 +44,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### Parameters
 
-*_Istr*<br/>
+*_Istr*\
 A stream.
 
 ### Return Value
@@ -63,4 +63,4 @@ See [operator>>](../standard-library/istream-operators.md#op_gt_gt) for an examp
 
 ## See also
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)

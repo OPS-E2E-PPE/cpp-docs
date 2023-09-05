@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: divides Struct"
 title: "divides Struct"
 ms.date: "11/04/2016"
-f1_keywords: ["xfunctional/std::divides"]
+f1_keywords: ["functional/std::divides"]
 helpviewer_keywords: ["divides struct", "divides class"]
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
 ---
@@ -30,13 +31,13 @@ struct divides<void>
 
 ### Parameters
 
-*Type*, *T*, *U*
+*Type*, *T*, *U*\
 A type that supports an `operator/` that takes operands of the specified or inferred types.
 
-*Left*<br/>
+*Left*\
 The left operand of the division operation. The unspecialized template takes an lvalue reference argument of type *Type*. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type *T*.
 
-*Right*<br/>
+*Right*\
 The right operand of the division operation. The unspecialized template takes an lvalue reference argument of type *Type*. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type *U*.
 
 ## Return Value
@@ -91,21 +92,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
+```
 
-/* Output:
+```Output
 The vector v1 = ( 0 7 14 21 28 35 )
 The vector v2 = ( 2 4 6 8 10 12 )
 The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )
-*/
 ```
-
-## Requirements
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## See also
-
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>

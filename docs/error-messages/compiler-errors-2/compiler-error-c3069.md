@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3069"
 title: "Compiler Error C3069"
 ms.date: "11/04/2016"
 f1_keywords: ["C3069"]
@@ -15,7 +16,7 @@ An operator is not supported for CLR enumerations.  For more information, see [H
 
 The following sample generates C3069:
 
-```
+```cpp
 // C3069.cpp
 // compile with: /clr
 enum struct E { e1 };

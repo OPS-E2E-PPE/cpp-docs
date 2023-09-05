@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4343"
 title: "Compiler Warning (level 4) C4343"
 ms.date: "11/04/2016"
 f1_keywords: ["C4343"]
@@ -13,7 +14,7 @@ This warning, only valid in the Itanium Processor Family (IPF) compiler, reports
 
 The following sample generates C4343:
 
-```
+```cpp
 // C4343.cpp
 // compile with: /Og /W4 /LD
 // processor: IPF

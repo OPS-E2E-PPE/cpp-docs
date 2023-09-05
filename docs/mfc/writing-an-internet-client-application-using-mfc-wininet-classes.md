@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Writing an Internet Client Application Using MFC WinInet Classes"
 title: "Writing an Internet Client Application Using MFC WinInet Classes"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["Internet client applications [MFC]", "WinInet classes [MFC], programming", "Internet client applications [MFC], writing", "Internet applications [MFC], WinInet", "Internet applications [MFC], client applications", "MFC, Internet applications"]
@@ -38,7 +39,7 @@ The steps in implementing an Internet client application vary depending on wheth
 
 - [How do I write an HTTP client application](../mfc/steps-in-a-typical-http-client-application.md)
 
-## See Also
+## See also
 
 [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [MFC Classes for Creating Internet Client Applications](../mfc/mfc-classes-for-creating-internet-client-applications.md)<br/>

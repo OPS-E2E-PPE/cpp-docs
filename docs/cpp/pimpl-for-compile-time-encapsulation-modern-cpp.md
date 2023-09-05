@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Pimpl For Compile-Time Encapsulation (Modern C++)"
 title: "Pimpl For Compile-Time Encapsulation (Modern C++)"
 ms.date: "11/04/2016"
 ms.topic: "conceptual"
@@ -53,6 +54,6 @@ Consider whether to add support for non-throwing swap specialization.
 
 ## See also
 
-[Welcome Back to C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ Language Reference](../cpp/cpp-language-reference.md)<br/>
 [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)

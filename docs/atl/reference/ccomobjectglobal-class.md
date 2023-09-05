@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComObjectGlobal Class"
 title: "CComObjectGlobal Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComObjectGlobal", "ATLCOM/ATL::CComObjectGlobal", "ATLCOM/ATL::CComObjectGlobal::CComObjectGlobal", "ATLCOM/ATL::CComObjectGlobal::AddRef", "ATLCOM/ATL::CComObjectGlobal::QueryInterface", "ATLCOM/ATL::CComObjectGlobal::Release", "ATLCOM/ATL::CComObjectGlobal::m_hResFinalConstruct"]
@@ -60,7 +61,7 @@ For example, using `CComObjectGlobal`, a class factory can hold a common global 
 
 **Header:** atlcom.h
 
-##  <a name="addref"></a>  CComObjectGlobal::AddRef
+## <a name="addref"></a> CComObjectGlobal::AddRef
 
 Increments the reference count of the object by 1.
 
@@ -76,7 +77,7 @@ A value that may be useful for diagnostics and testing.
 
 By default, `AddRef` calls `_Module::Lock`, where `_Module` is the global instance of [CComModule](../../atl/reference/ccommodule-class.md) or a class derived from it.
 
-##  <a name="ccomobjectglobal"></a>  CComObjectGlobal::CComObjectGlobal
+## <a name="ccomobjectglobal"></a> CComObjectGlobal::CComObjectGlobal
 
 The constructor. Calls `FinalConstruct` and then sets [m_hResFinalConstruct](#m_hresfinalconstruct) to the `HRESULT` returned by `FinalConstruct`.
 
@@ -88,7 +89,7 @@ CComObjectGlobal(void* = NULL));
 
 If you have not derived your base class from [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), you must supply your own `FinalConstruct` method. The destructor calls `FinalRelease`.
 
-##  <a name="dtor"></a>  CComObjectGlobal::~CComObjectGlobal
+## <a name="dtor"></a> CComObjectGlobal::~CComObjectGlobal
 
 The destructor.
 
@@ -100,7 +101,7 @@ CComObjectGlobal();
 
 Frees all allocated resources and calls [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
-##  <a name="m_hresfinalconstruct"></a>  CComObjectGlobal::m_hResFinalConstruct
+## <a name="m_hresfinalconstruct"></a> CComObjectGlobal::m_hResFinalConstruct
 
 Contains the HRESULT from calling `FinalConstruct` during construction of the `CComObjectGlobal` object.
 
@@ -108,7 +109,7 @@ Contains the HRESULT from calling `FinalConstruct` during construction of the `C
 HRESULT m_hResFinalConstruct;
 ```
 
-##  <a name="queryinterface"></a>  CComObjectGlobal::QueryInterface
+## <a name="queryinterface"></a> CComObjectGlobal::QueryInterface
 
 Retrieves a pointer to the requested interface pointer.
 
@@ -132,7 +133,7 @@ A standard HRESULT value.
 
 `QueryInterface` only handles interfaces in the COM map table.
 
-##  <a name="release"></a>  CComObjectGlobal::Release
+## <a name="release"></a> CComObjectGlobal::Release
 
 Decrements the reference count of the object by 1.
 
@@ -148,7 +149,7 @@ In debug builds, `Release` returns a value that may be useful for diagnostics an
 
 By default, `Release` calls `_Module::Unlock`, where `_Module` is the global instance of [CComModule](../../atl/reference/ccommodule-class.md) or a class derived from it.
 
-## See Also
+## See also
 
 [CComObjectStack Class](../../atl/reference/ccomobjectstack-class.md)<br/>
 [CComAggObject Class](../../atl/reference/ccomaggobject-class.md)<br/>

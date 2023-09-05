@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Multiple Dual Interfaces"
 title: "Multiple Dual Interfaces"
 ms.date: "11/04/2016"
 ms.topic: "reference"
@@ -25,7 +26,6 @@ ATL does not provide any support for combining multiple dual interfaces into a s
 
 These approaches have problems with potential namespace collisions, as well as code complexity and maintainability. It is not recommended that you create multiple dual interfaces.
 
-## See Also
+## See also
 
 [Dual Interfaces and ATL](../atl/dual-interfaces-and-atl.md)
-

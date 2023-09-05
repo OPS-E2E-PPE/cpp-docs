@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Functions (C)"
 title: "Functions (C)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["functions [C]", "Visual C, functions"]
@@ -28,6 +29,6 @@ The function is the fundamental modular unit in C. A function is usually designe
 
 - [Parameters](../c-language/parameters.md)
 
-## See Also
+## See also
 
 [C Language Reference](../c-language/c-language-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: in (C++)"
 title: "in  (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.in"]
@@ -17,7 +18,7 @@ Indicates that a parameter is to be passed from the calling procedure to the cal
 
 ## Remarks
 
-The **in** C++ attribute has the same functionality as the [in](/windows/desktop/Midl/in) MIDL attribute.
+The **in** C++ attribute has the same functionality as the [in](/windows/win32/Midl/in) MIDL attribute.
 
 ## Example
 
@@ -25,9 +26,7 @@ See [bindable](bindable.md) for an example of how to use **in**.
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface parameter, interface method|
 |**Repeatable**|No|
@@ -36,7 +35,7 @@ See [bindable](bindable.md) for an example of how to use **in**.
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Parameter Attributes](parameter-attributes.md)<br/>

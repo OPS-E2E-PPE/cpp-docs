@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: money_get Class"
 title: "money_get Class"
 ms.date: "11/04/2016"
 f1_keywords: ["xlocmon/std::money_get", "xlocmon/std::money_get::char_type", "xlocmon/std::money_get::iter_type", "xlocmon/std::money_get::string_type", "xlocmon/std::money_get::do_get", "xlocmon/std::money_get::get"]
@@ -7,7 +8,7 @@ ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 ---
 # money_get Class
 
-The template class describes an object that can serve as a locale facet to control conversions of sequences of type `CharType` to monetary values.
+The class template describes an object that can serve as a locale facet to control conversions of sequences of type `CharType` to monetary values.
 
 ## Syntax
 
@@ -18,10 +19,10 @@ class money_get : public locale::facet;
 
 ### Parameters
 
-*CharType*<br/>
+*CharType*\
 The type used within a program to encode characters in a locale.
 
-*InputIterator*<br/>
+*InputIterator*\
 The type of iterator from which the get functions read their input.
 
 ## Remarks
@@ -55,7 +56,7 @@ As with any locale facet, the static object ID has an initial stored value of ze
 
 **Namespace:** std
 
-## <a name="char_type"></a>  money_get::char_type
+## <a name="char_type"></a> money_get::char_type
 
 A type that is used to describe a character used by a locale.
 
@@ -67,7 +68,7 @@ typedef CharType char_type;
 
 The type is a synonym for the template parameter *CharType*.
 
-## <a name="do_get"></a>  money_get::do_get
+## <a name="do_get"></a> money_get::do_get
 
 Virtual function called to extracts a numerical value from a character sequence that represents a monetary value.
 
@@ -87,22 +88,22 @@ virtual iter_type do_get(iter_type first,
 
 ### Parameters
 
-*first*<br/>
+*first*\
 Input iterator addressing the beginning of the sequence to be converted.
 
-*last*<br/>
+*last*\
 Input iterator addressing the end of the sequence to be converted.
 
-*Intl*<br/>
-A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.
+*Intl*\
+A Boolean value indicating the type of currency symbol expected in the sequence: **`true`** if international, **`false`** if domestic.
 
-*Iosbase*<br/>
+*Iosbase*\
 A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.
 
-*State*<br/>
+*State*\
 Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded or not.
 
-*val*<br/>
+*val*\
 A string storing the converted sequence.
 
 ### Return Value
@@ -113,7 +114,7 @@ An input iterator addressing the first element beyond the monetary input field.
 
 The first virtual protected member function tries to match sequential elements beginning at first in the sequence [ `first`, `last`) until it has recognized a complete, nonempty monetary input field. If successful, it converts this field to a sequence of one or more decimal digits, optionally preceded by a minus sign ( `-`), to represent the amount and stores the result in the [string_type](#string_type) object *val*. It returns an iterator designating the first element beyond the monetary input field. Otherwise, the function stores an empty sequence in *val* and sets `ios_base::failbit` in *State*. It returns an iterator designating the first element beyond any prefix of a valid monetary input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in `State`.
 
-The second virtual protected member function behaves the same as the first, except that if successful it converts the optionally signed digit sequence to a value of type **long double** and stores that value in *val*.
+The second virtual protected member function behaves the same as the first, except that if successful it converts the optionally signed digit sequence to a value of type **`long double`** and stores that value in *val*.
 
 The format of a monetary input field is determined by the [locale facet](../standard-library/locale-class.md#facet_class)**fac** returned by the effective call [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
@@ -141,13 +142,13 @@ If **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase
 
 If no instances of **fac**. `thousands_sep` occur in the value portion of the monetary input field (where the element equal to **money_base::value** appears in the format pattern), no grouping constraint is imposed. Otherwise, any grouping constraints imposed by **fac**. **grouping** is enforced. Note that the resulting digit sequence represents an integer whose low-order **fac**. `frac_digits` decimal digits are considered to the right of the decimal point.
 
-Arbitrary white space is matched where the element equal to **money_base::space** appears in the format pattern, if it appears other than at the end of the format pattern. Otherwise, no internal white space is matched. An element *ch* is considered white space if [use_facet](../standard-library/locale-functions.md#use_facet) < [ctype](../standard-library/ctype-class.md)\< **CharType**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). [is](../standard-library/ctype-class.md#is)( **ctype_base::space**, *ch*) is **true**.
+Arbitrary white space is matched where the element equal to **money_base::space** appears in the format pattern, if it appears other than at the end of the format pattern. Otherwise, no internal white space is matched. An element *ch* is considered white space if [use_facet](../standard-library/locale-functions.md#use_facet) < [ctype](../standard-library/ctype-class.md)\< **CharType**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). [is](../standard-library/ctype-class.md#is)( **ctype_base::space**, *ch*) is **`true`**.
 
 ### Example
 
 See the example for [get](#get), which calls `do_get`.
 
-## <a name="get"></a>  money_get::get
+## <a name="get"></a> money_get::get
 
 Extracts a numerical value from a character sequence that represents a monetary value.
 
@@ -169,22 +170,22 @@ iter_type get(iter_type first,
 
 ### Parameters
 
-*first*<br/>
+*first*\
 Input iterator addressing the beginning of the sequence to be converted.
 
-*last*<br/>
+*last*\
 Input iterator addressing the end of the sequence to be converted.
 
-*Intl*<br/>
-A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.
+*Intl*\
+A Boolean value indicating the type of currency symbol expected in the sequence: **`true`** if international, **`false`** if domestic.
 
-*Iosbase*<br/>
+*Iosbase*\
 A format flag which when set indicates that the currency symbol is optional; otherwise, it is required
 
-*State*<br/>
+*State*\
 Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.
 
-*val*<br/>
+*val*\
 A string storing the converted sequence.
 
 ### Return Value
@@ -244,7 +245,7 @@ int main( )
 };
 ```
 
-## <a name="iter_type"></a>  money_get::iter_type
+## <a name="iter_type"></a> money_get::iter_type
 
 A type that describes an input iterator.
 
@@ -256,7 +257,7 @@ typedef InputIterator iter_type;
 
 The type is a synonym for the template parameter **InputIterator**.
 
-## <a name="money_get"></a>  money_get::money_get
+## <a name="money_get"></a> money_get::money_get
 
 The constructor for objects of type `money_get` that are used to extract numerical values from sequences representing monetary values.
 
@@ -266,7 +267,7 @@ explicit money_get(size_t _Refs = 0);
 
 ### Parameters
 
-*_Refs*<br/>
+*_Refs*\
 Integer value used to specify the type of memory management for the object.
 
 ### Remarks
@@ -283,7 +284,7 @@ No direct examples are possible, because the destructor is protected.
 
 The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
-## <a name="string_type"></a>  money_get::string_type
+## <a name="string_type"></a> money_get::string_type
 
 A type that describes a string containing characters of type **CharType**.
 
@@ -293,10 +294,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### Remarks
 
-The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md).
+The type describes a specialization of class template [basic_string](../standard-library/basic-string-class.md).
 
 ## See also
 
-[\<locale>](../standard-library/locale.md)<br/>
-[facet Class](../standard-library/locale-class.md#facet_class)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet Class](../standard-library/locale-class.md#facet_class)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

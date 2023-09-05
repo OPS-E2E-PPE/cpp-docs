@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4358"
 title: "Compiler Warning (level 1) C4358"
 ms.date: "11/04/2016"
 f1_keywords: ["C4358"]
@@ -13,7 +14,7 @@ Two delegates were combined and the return value is not void. If two delegates w
 
 The following sample generates C4358:
 
-```
+```cpp
 // C4358.cpp
 // compile with: /clr /W1
 delegate int D();

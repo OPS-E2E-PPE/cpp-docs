@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3538"
 title: "Compiler Error C3538"
 ms.date: "11/04/2016"
 f1_keywords: ["C3538"]
@@ -13,13 +14,13 @@ All the declared variables in a declaration list do not resolve to the same type
 
 ### To correct this error
 
-1. Ensure that all `auto` declarations in the list deduce to the same type.
+1. Ensure that all **`auto`** declarations in the list deduce to the same type.
 
 ## Example
 
-The following statements yield C3538. Each statement declares multiple variables, but each use of the `auto` keyword does not deduce to the same type.
+The following statements yield C3538. Each statement declares multiple variables, but each use of the **`auto`** keyword does not deduce to the same type.
 
-```
+```cpp
 // C3538.cpp
 // Compile with /Zc:auto
 // C3538 expected
@@ -37,6 +38,6 @@ int main()
 }
 ```
 
-## See Also
+## See also
 
-[auto Keyword](../../cpp/auto-keyword.md)
+[auto Keyword](../../cpp/auto-cpp.md)

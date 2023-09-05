@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: missing_wait Class"
 title: "missing_wait Class"
 ms.date: "11/04/2016"
 f1_keywords: ["missing_wait", "CONCRT/concurrency::missing_wait", "CONCRT/concurrency::missing_wait::missing_wait"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when there are tasks still scheduled to
 
 ## Syntax
 
-```
+```cpp
 class missing_wait : public std::exception;
 ```
 
@@ -39,11 +40,11 @@ Absent exception flow, you are responsible for calling either the `wait` or `run
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> missing_wait
+## <a name="ctor"></a> missing_wait
 
 Constructs a `missing_wait` object.
 
-```
+```cpp
 explicit _CRTIMP missing_wait(_In_z_ const char* _Message) throw();
 
 missing_wait() throw();
@@ -54,7 +55,7 @@ missing_wait() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [task_group Class](task-group-class.md)<br/>

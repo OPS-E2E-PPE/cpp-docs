@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: WM_ Message Handlers: F - K"
 title: "WM_ Message Handlers: F - K"
 ms.date: "11/27/2018"
 f1_keywords: ["ON_WM_FONTCHANGE", "ON_WM_ICONERASEBKGND", "ON_WM_KEYDOWN", "ON_WM_GETMINMAXINFO", "ON_WM_KEYUP", "ON_WM_HSCROLL", "ON_WM_KILLFOCUS", "ON_WM_HSCROLLCLIPBOARD", "ON_WM_GETDLGCODE", "ON_WM_HELPINFO", "ON_WM_INITMENUPOPUP", "ON_WM_INITMENU"]
@@ -29,8 +30,7 @@ The following map entries on the left correspond to the function prototypes on t
 |ON_WM_KEYUP()|afx_msg void [OnKeyUp](../../mfc/reference/cwnd-class.md#onkeyup)(UINT, UINT, UINT);|
 |ON_WM_KILLFOCUS()|afx_msg void [OnKillFocus](../../mfc/reference/cwnd-class.md#onkillfocus)(CWnd*);|
 
-## See Also
+## See also
 
 [Message Maps](../../mfc/reference/message-maps-mfc.md)<br/>
 [Handlers for WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
-

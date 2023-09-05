@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Message Handlers"
 title: "Message Handlers"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["message handlers [MFC]", "command handling [MFC], message handlers", "handlers [MFC]", "message handling [MFC], message handler functions", "handlers [MFC], command", "handlers [MFC], message"]
@@ -10,11 +11,10 @@ In MFC, a dedicated *handler* function processes each separate message. Message-
 
 Writing message handlers accounts for a large proportion of your work in writing a framework application. This article family describes how the message-processing mechanism works.
 
-What does the handler for a message do It does whatever you want done in response to that message. You can create the handlers by using the Properties window of the class, and then fill in the handler's code using the source code editor.
+What does the handler for a message do It does whatever you want done in response to that message. You can create the handlers by using the [Class Wizard](reference/mfc-class-wizard.md) of the class, and then fill in the handler's code using the source code editor.
 
-You can use all of the facilities of Microsoft Visual C++ and MFC to write your handlers. For a list of all classes, see [Class Library Overview](../mfc/class-library-overview.md) in the *MFC Reference*.
+You can use all of the facilities of Microsoft Visual C++ and MFC to write your handlers. For a list of all classes, see [Class Library Overview](class-library-overview.md) in the *MFC Reference*.
 
-## See Also
+## See also
 
-[Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md)
-
+[Messages and Commands in the Framework](messages-and-commands-in-the-framework.md)

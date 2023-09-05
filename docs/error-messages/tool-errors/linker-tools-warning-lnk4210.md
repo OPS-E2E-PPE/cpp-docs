@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Linker Tools Warning LNK4210"
 title: "Linker Tools Warning LNK4210"
 ms.date: "11/04/2016"
 f1_keywords: ["LNK4210"]
@@ -33,4 +34,4 @@ The [/GS](../../build/reference/gs-buffer-security-check.md) compiler option req
 
 ## See also
 
-- [Setting Linker Options](../../build/reference/setting-linker-options.md)
+- [Setting Linker Options](../../build/reference/linking.md)

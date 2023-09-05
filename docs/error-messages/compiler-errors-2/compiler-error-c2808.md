@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2808"
 title: "Compiler Error C2808"
 ms.date: "11/04/2016"
 f1_keywords: ["C2808"]
@@ -13,7 +14,7 @@ The unary operator has a nonvoid parameter list.
 
 The following sample generates C2808:
 
-```
+```cpp
 // C2808.cpp
 // compile with: /c
 class X {

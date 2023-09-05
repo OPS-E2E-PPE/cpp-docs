@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CHtmlEditCtrl Class"
 title: "CHtmlEditCtrl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CHtmlEditCtrl", "AFXHTML/CHtmlEditCtrl", "AFXHTML/CHtmlEditCtrl::CHtmlEditCtrl", "AFXHTML/CHtmlEditCtrl::Create", "AFXHTML/CHtmlEditCtrl::GetDHtmlDocument", "AFXHTML/CHtmlEditCtrl::GetStartDocument"]
@@ -29,7 +30,7 @@ class CHtmlEditCtrl: public CWnd,
 |Name|Description|
 |----------|-----------------|
 |[CHtmlEditCtrl::Create](#create)|Creates a WebBrowser ActiveX control and attaches it to the `CHtmlEditCtrl` object. This function automatically puts the WebBrowser ActiveX control into edit mode.|
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Retrieves the [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface on the document currently loaded in the contained WebBrowser control.|
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Retrieves the [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interface on the document currently loaded in the contained WebBrowser control.|
 |[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Retrieves the URL to a default document to load in the contained WebBrowser control.|
 
 ## Remarks
@@ -52,7 +53,7 @@ The hosted WebBrowser control is automatically put into edit mode after it is cr
 
 **Header:** afxhtml.h
 
-##  <a name="chtmleditctrl"></a>  CHtmlEditCtrl::CHtmlEditCtrl
+## <a name="chtmleditctrl"></a> CHtmlEditCtrl::CHtmlEditCtrl
 
 Constructs a `CHtmlEditCtrl` object.
 
@@ -60,7 +61,7 @@ Constructs a `CHtmlEditCtrl` object.
 CHtmlEditCtrl();
 ```
 
-##  <a name="create"></a>  CHtmlEditCtrl::Create
+## <a name="create"></a> CHtmlEditCtrl::Create
 
 Creates a WebBrowser ActiveX control and attaches it to the `CHtmlEditCtrl` object. The WebBrowser ActiveX control automatically navigates to a default document and then is placed in edit mode by this function.
 
@@ -98,9 +99,9 @@ This parameter is unused.
 
 Returns TRUE on success, FALSE on failure.
 
-##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument
+## <a name="getdhtmldocument"></a> CHtmlEditCtrl::GetDHtmlDocument
 
-Retrieves the [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface on the document currently loaded in the contained WebBrowser control
+Retrieves the [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interface on the document currently loaded in the contained WebBrowser control
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
@@ -111,7 +112,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 *ppDocument*<br/>
 The document interface.
 
-##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument
+## <a name="getstartdocument"></a> CHtmlEditCtrl::GetStartDocument
 
 Retrieves the URL to a default document to load in the contained WebBrowser control.
 
@@ -119,7 +120,6 @@ Retrieves the URL to a default document to load in the contained WebBrowser cont
 virtual LPCTSTR GetStartDocument();
 ```
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

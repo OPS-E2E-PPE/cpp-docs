@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3633"
 title: "Compiler Error C3633"
 ms.date: "11/04/2016"
 f1_keywords: ["C3633"]
@@ -15,7 +16,7 @@ CLR reference class data members cannot be of a non-POD C++ type.  You can only 
 
 The following sample generates C3633.
 
-```
+```cpp
 // C3633.cpp
 // compile with: /clr /c
 #pragma warning( disable : 4368 )

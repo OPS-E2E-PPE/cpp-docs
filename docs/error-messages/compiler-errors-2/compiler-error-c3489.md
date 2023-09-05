@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3489"
 title: "Compiler Error C3489"
 ms.date: "11/04/2016"
 f1_keywords: ["C3489"]
@@ -21,11 +22,11 @@ When you specify that the default capture mode for a lambda expression is by-val
 
 - Pass the variable by reference to the capture clause. (This might change the behavior of the lambda expression.)
 
-## Example
+## Examples
 
 The following example generates C3489 variable `n` appears by value in the capture clause of a lambda expression whose default mode is by-value:
 
-```
+```cpp
 // C3489a.cpp
 
 int main()
@@ -35,11 +36,9 @@ int main()
 }
 ```
 
-## Example
-
 The following example shows four possible resolutions to C3489:
 
-```
+```cpp
 // C3489b.cpp
 
 int main()
@@ -64,6 +63,6 @@ int main()
 }
 ```
 
-## See Also
+## See also
 
 [Lambda Expressions](../../cpp/lambda-expressions-in-cpp.md)

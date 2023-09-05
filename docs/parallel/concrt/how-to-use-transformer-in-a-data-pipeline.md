@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Use transformer in a Data Pipeline"
 title: "How to: Use transformer in a Data Pipeline"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["transformer class, example", "data pipelines, using transformer [Concurrency Runtime]", "using transformer in data pipelines [Concurrency Runtime]"]
@@ -34,20 +35,19 @@ This example produces the following output:
 The result is -42.
 ```
 
-It is common for a stage in a data pipeline to output a value whose type differs from its input value. In this example, the second stage takes a value of type `int` as its input and produces the square root of that value (a `double`) as its output.
+It is common for a stage in a data pipeline to output a value whose type differs from its input value. In this example, the second stage takes a value of type **`int`** as its input and produces the square root of that value (a **`double`**) as its output.
 
 > [!NOTE]
->  The data pipeline in this example is for illustration. Because each transformation operation performs little work, the overhead that is required to perform message-passing can outweigh the benefits of using a data pipeline.
+> The data pipeline in this example is for illustration. Because each transformation operation performs little work, the overhead that is required to perform message-passing can outweigh the benefits of using a data pipeline.
 
 ## Compiling the Code
 
 Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `data-pipeline.cpp` and then run the following command in a Visual Studio Command Prompt window.
 
-**cl.exe /EHsc data-pipeline.cpp**
+> **cl.exe /EHsc data-pipeline.cpp**
 
-## See Also
+## See also
 
 [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Asynchronous Message Blocks](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Walkthrough: Creating an Image-Processing Network](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
-

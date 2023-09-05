@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2101"
 title: "Compiler Error C2101"
 ms.date: "11/04/2016"
 f1_keywords: ["C2101"]
@@ -13,7 +14,7 @@ The address-of operator ( `&` ) must have an l-value as operand.
 
 The following sample generates C2101:
 
-```
+```cpp
 // C2101.cpp
 int main() {
    char test;

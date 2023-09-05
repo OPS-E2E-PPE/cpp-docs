@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4535"
 title: "Compiler Warning (level 3) C4535"
 ms.date: "11/04/2016"
 f1_keywords: ["C4535"]
@@ -15,7 +16,7 @@ The use of [_set_se_translator](../../c-runtime-library/reference/set-se-transla
 
 The following sample generates C4535.
 
-```
+```cpp
 // C4535.cpp
 // compile with: /W3 /EHsc /c
 // C4535 expected

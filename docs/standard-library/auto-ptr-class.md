@@ -1,9 +1,11 @@
 ---
+description: "Learn more about: auto_ptr Class"
 title: "auto_ptr Class"
-ms.date: "11/04/2016"
+ms.date: 06/07/2022
 f1_keywords: ["memory/std::auto_ptr", "memory/std::auto_ptr::element_type", "memory/std::auto_ptr::get", "memory/std::auto_ptr::release", "memory/std::auto_ptr::reset"]
 helpviewer_keywords: ["std::auto_ptr [C++]", "std::auto_ptr [C++], element_type", "std::auto_ptr [C++], get", "std::auto_ptr [C++], release", "std::auto_ptr [C++], reset"]
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
+ms.custom: devdivchpfy22
 ---
 # auto_ptr Class
 
@@ -17,7 +19,6 @@ For more information about `throw()` and exception handling, see [Exception Spec
 
 ```cpp
 class auto_ptr {
-public:
     typedef Type element_type;
     explicit auto_ptr(Type* ptr = 0) throw();
     auto_ptr(auto_ptr<Type>& right) throw()
@@ -40,35 +41,35 @@ public:
 
 ### Parameters
 
-*right*<br/>
+*right*\
 The `auto_ptr` from which to get an existing resource.
 
-*ptr*<br/>
+*ptr*\
 The pointer specified to replace the stored pointer.
 
 ## Remarks
 
-The template class describes a smart pointer, called an `auto_ptr`, to an allocated object. The pointer must be either null or designate an object allocated by **new**. The `auto_ptr` transfers ownership if its stored value is assigned to another object. (It replaces the stored value after a transfer with a null pointer.) The destructor for `auto_ptr<Type>` deletes the allocated object. The `auto_ptr<Type>` ensures that an allocated object is automatically deleted when control leaves a block, even through a thrown exception. You should not construct two `auto_ptr<Type>` objects that own the same object.
+The class template describes a smart pointer, called an `auto_ptr`, to an allocated object. The pointer must be either null or designate an object allocated by **`new`**. The `auto_ptr` transfers ownership if its stored value is assigned to another object. (It replaces the stored value after a transfer with a null pointer.) The destructor for `auto_ptr<Type>` deletes the allocated object. The `auto_ptr<Type>` ensures that an allocated object is automatically deleted when control leaves a block, even through a thrown exception. You shouldn't construct two `auto_ptr<Type>` objects that own the same object.
 
-You can pass an `auto_ptr<Type>` object by value as an argument to a function call. An `auto_ptr` cannot be an element of any Standard Library container. You cannot reliably manage a sequence of `auto_ptr<Type>` objects with a C++ Standard Library container.
+You can pass an `auto_ptr<Type>` object by value as an argument to a function call. An `auto_ptr` can't be an element of any Standard Library container. You can't reliably manage a sequence of `auto_ptr<Type>` objects with a C++ Standard Library container.
 
 ## Members
 
 ### Constructors
 
-|Constructor|Description|
+|Name|Description|
 |-|-|
 |[auto_ptr](#auto_ptr)|The constructor for objects of type `auto_ptr`.|
 
 ### Typedefs
 
-|Type name|Description|
+|Name|Description|
 |-|-|
 |[element_type](#element_type)|The type is a synonym for the template parameter `Type`.|
 
-### Member functions
+### Functions
 
-|Member function|Description|
+|Name|Description|
 |-|-|
 |[get](#get)|The member function returns the stored pointer `myptr`.|
 |[release](#release)|The member replaces the stored pointer `myptr` with a null pointer and returns the previously stored pointer.|
@@ -76,7 +77,7 @@ You can pass an `auto_ptr<Type>` object by value as an argument to a function ca
 
 ### Operators
 
-|Operator|Description|
+|Name|Description|
 |-|-|
 |[operator=](#op_eq)|An assignment operator that transfers ownership from one `auto_ptr` object to another.|
 |[operator*](#op_star)|The dereferencing operator for objects of type `auto_ptr`.|
@@ -84,13 +85,7 @@ You can pass an `auto_ptr<Type>` object by value as an argument to a function ca
 |[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|Casts from one kind of `auto_ptr` to another kind of `auto_ptr`.|
 |[operator auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|Casts from an `auto_ptr` to an `auto_ptr_ref`.|
 
-## Requirements
-
-**Header:** \<memory>
-
-**Namespace:** std
-
-## <a name="auto_ptr"></a>  auto_ptr::auto_ptr
+### <a name="auto_ptr"></a> auto_ptr
 
 The constructor for objects of type `auto_ptr`.
 
@@ -105,23 +100,23 @@ template <class Other>
 auto _ptr(auto _ptr<Other>& right) throw();
 ```
 
-### Parameters
+#### Parameters
 
-*ptr*<br/>
+*ptr*\
 The pointer to the object that `auto_ptr` encapsulates.
 
-*right*<br/>
+*right*\
 The `auto_ptr` object to be copied by the constructor.
 
-### Remarks
+#### Remarks
 
 The first constructor stores *ptr* in `myptr`, the stored pointer to the allocated object. The second constructor transfers ownership of the pointer stored in *right*, by storing *right*. [release](#release) in `myptr`.
 
 The third constructor behaves the same as the second, except that it stores `right`. `ref`. `release` in `myptr`, where `ref` is the reference stored in `right`.
 
-The template constructor behaves the same as the second constructor, provided that a pointer to `Other` can be implicitly converted to a pointer to `Type`.
+The template constructor behaves the same as the second constructor, if a pointer to `Other` can be implicitly converted to a pointer to `Type`.
 
-### Example
+#### Example
 
 ```cpp
 // auto_ptr_auto_ptr.cpp
@@ -180,16 +175,15 @@ Constructing 00311AF8
 Destructing 00311AF8
 ```
 
-## <a name="element_type"></a>  auto_ptr::element_type
+### <a name="element_type"></a> element_type
 
 The type is a synonym for the template parameter `Type`.
 
 ```cpp
-
 typedef Type element  _type;
 ```
 
-## <a name="get"></a>  auto_ptr::get
+### <a name="get"></a> get
 
 The member function returns the stored pointer `myptr`.
 
@@ -197,11 +191,11 @@ The member function returns the stored pointer `myptr`.
 Type *get() const throw();
 ```
 
-### Return Value
+#### Return Value
 
 The stored pointer `myptr`.
 
-### Example
+#### Example
 
 ```cpp
 // auto_ptr_get.cpp
@@ -248,35 +242,35 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-## <a name="op_eq"></a>  auto_ptr::operator=
+### <a name="op_eq"></a> operator=
 
 An assignment operator that transfers ownership from one `auto_ptr` object to another.
 
 ```cpp
 template <class Other>
-auto_ptr<Type>& operator=(auto_ptr<Other>& right) throw();
+    auto_ptr<Type>& operator=(auto_ptr<Other>& right) throw();
 auto_ptr<Type>& operator=(auto_ptr<Type>& right) throw();
 auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 ```
 
-### Parameters
+#### Parameters
 
-*right*<br/>
+*right*\
 An object of type `auto_ptr`.
 
-### Return Value
+#### Return Value
 
 A reference to an object of type `auto_ptr<Type>`.
 
-### Remarks
+#### Remarks
 
-The assignment evaluates the expression `delete myptr`, but only if the stored pointer `myptr` changes as a result of the assignment. It then transfers ownership of the pointer stored in *right*, by storing *right*.[release](#release) in `myptr`. The function returns __\*this__.
+The assignment evaluates the expression `delete myptr`, but only if the stored pointer `myptr` changes as a result of the assignment. It then transfers ownership of the pointer stored in *right*, by storing *right*.[release](#release) in `myptr`. The function returns `*this`.
 
-### Example
+#### Example
 
-For an example of the use of the member operator, see [auto_ptr::auto_ptr](#auto_ptr).
+For an example of the use of the member operator, see [auto_ptr](#auto_ptr).
 
-## <a name="op_star"></a>  auto_ptr::operator*
+### <a name="op_star"></a> operator*
 
 The dereferencing operator for objects of type `auto_ptr`.
 
@@ -284,19 +278,19 @@ The dereferencing operator for objects of type `auto_ptr`.
 Type& operator*() const throw();
 ```
 
-### Return Value
+#### Return Value
 
 A reference to an object of type `Type` that the pointer owns.
 
-### Remarks
+#### Remarks
 
 The indirection operator returns `*`[get](#get). Hence, the stored pointer must not be null.
 
-### Example
+#### Example
 
-For an example of how to use the member function, see [auto_ptr::auto_ptr](#auto_ptr).
+For an example of how to use the member function, see [auto_ptr](#auto_ptr).
 
-## <a name="op_arrow"></a>  auto_ptr::operator-&gt;
+### <a name="op_arrow"></a> `operator->`
 
 The operator for allowing member access.
 
@@ -304,19 +298,19 @@ The operator for allowing member access.
 Type * operator->() const throw();
 ```
 
-### Return Value
+#### Return Value
 
 A member of the object that `auto_ptr` owns.
 
-### Remarks
+#### Remarks
 
 The selection operator returns [get](#get)`( )`, so that the expression *ap*-> **member** behaves the same as ( *ap*. **get**( ) )-> **member**, where *ap* is an object of class `auto_ptr`\< **Type**>. Hence, the stored pointer must not be null, and `Type` must be a class, struct, or union type with a `member` member.
 
-### Example
+#### Example
 
-For an example of how to use the member function, see [auto_ptr::auto_ptr](#auto_ptr).
+For an example of how to use the member function, see [auto_ptr](#auto_ptr).
 
-## <a name="op_auto_ptr_lt_other_gt"></a>  auto_ptr::operator auto_ptr&lt;Other&gt;
+### <a name="op_auto_ptr_lt_other_gt"></a> `operator auto_ptr<Other>`
 
 Casts from one kind of `auto_ptr` to another kind of `auto_ptr`.
 
@@ -325,11 +319,11 @@ template <class Other>
 operator auto _ptr<Other>() throw();
 ```
 
-### Return Value
+#### Return Value
 
-The type cast operator returns `auto_ptr` \< **Other**>( **\*this**).
+The type cast operator returns `auto_ptr` \< **Other**>( `*this`).
 
-### Example
+#### Example
 
 ```cpp
 // auto_ptr_op_auto_ptr.cpp
@@ -346,7 +340,7 @@ int main()
 }
 ```
 
-## <a name="op_auto_ptr_ref_lt_other_gt"></a>  auto_ptr::operator auto_ptr_ref&lt;Other&gt;
+### <a name="op_auto_ptr_ref_lt_other_gt"></a> `operator auto_ptr_ref<Other>`
 
 Casts from an `auto_ptr` to an `auto_ptr_ref`.
 
@@ -355,11 +349,11 @@ template <class Other>
 operator auto _ptr  _ref<Other>() throw();
 ```
 
-### Return Value
+#### Return Value
 
-The type cast operator returns **auto_ptr_ref**\< **Other**>( **\*this**).
+The type cast operator returns **auto_ptr_ref**\< **Other**>( `*this`).
 
-### Example
+#### Example
 
 ```cpp
 // auto_ptr_op_auto_ptr_ref.cpp
@@ -407,7 +401,7 @@ main exiting
 ~C:  1
 ```
 
-## <a name="release"></a>  auto_ptr::release
+### <a name="release"></a> release
 
 The member replaces the stored pointer `myptr` with a null pointer and returns the previously stored pointer.
 
@@ -415,15 +409,15 @@ The member replaces the stored pointer `myptr` with a null pointer and returns t
 Type *release() throw();
 ```
 
-### Return Value
+#### Return Value
 
 The previously stored pointer.
 
-### Remarks
+#### Remarks
 
 The member replaces the stored pointer `myptr` with a null pointer and returns the previously stored pointer.
 
-### Example
+#### Example
 
 ```cpp
 // auto_ptr_release.cpp
@@ -469,7 +463,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-## <a name="reset"></a>  auto_ptr::reset
+### <a name="reset"></a> reset
 
 The member function evaluates the expression `delete myptr`, but only if the stored pointer value `myptr` changes as a result of a function call. It then replaces the stored pointer with `ptr`.
 
@@ -477,12 +471,12 @@ The member function evaluates the expression `delete myptr`, but only if the sto
 void reset(Type* ptr = 0);
 ```
 
-### Parameters
+#### Parameters
 
-*ptr*<br/>
+*ptr*\
 The pointer specified to replace the stored pointer `myptr`.
 
-### Example
+#### Example
 
 ```cpp
 // auto_ptr_reset.cpp
@@ -531,5 +525,4 @@ Destructing 00311B88 Value: 6
 
 ## See also
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[unique_ptr Class](../standard-library/unique-ptr-class.md)<br/>
+[unique_ptr Class](../standard-library/unique-ptr-class.md)

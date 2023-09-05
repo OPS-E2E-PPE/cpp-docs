@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CTreeView Class"
 title: "CTreeView Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CTreeView", "AFXCVIEW/CTreeView", "AFXCVIEW/CTreeView::CTreeView", "AFXCVIEW/CTreeView::GetTreeCtrl"]
@@ -51,7 +52,7 @@ For more information on this architecture, see the overview for the [CView](../.
 
 **Header:** afxcview.h
 
-##  <a name="ctreeview"></a>  CTreeView::CTreeView
+## <a name="ctreeview"></a> CTreeView::CTreeView
 
 Constructs a `CTreeView` object.
 
@@ -59,7 +60,7 @@ Constructs a `CTreeView` object.
 CTreeView();
 ```
 
-##  <a name="gettreectrl"></a>  CTreeView::GetTreeCtrl
+## <a name="gettreectrl"></a> CTreeView::GetTreeCtrl
 
 Returns a reference to the tree control associated with the view.
 
@@ -67,7 +68,7 @@ Returns a reference to the tree control associated with the view.
 CTreeCtrl& GetTreeCtrl() const;
 ```
 
-## See Also
+## See also
 
 [CCtrlView Class](../../mfc/reference/cctrlview-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2775"
 title: "Compiler Error C2775"
 ms.date: "11/04/2016"
 f1_keywords: ["C2775"]
@@ -13,7 +14,7 @@ A data member declared with the [property](../../cpp/property-cpp.md) extended a
 
 The following sample generates C2775:
 
-```
+```cpp
 // C2775.cpp
 struct A {
    __declspec(property(put=PutProp2, get=GetProp2)) int prop2;

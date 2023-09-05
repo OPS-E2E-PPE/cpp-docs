@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3459"
 title: "Compiler Error C3459"
 ms.date: "11/04/2016"
 f1_keywords: ["C3459"]
@@ -17,7 +18,7 @@ For more information, see [How to: Use Properties in C++/CLI](../../dotnet/how-t
 
 The following sample generates C3459.
 
-```
+```cpp
 // C3459.cpp
 // compile with: /clr /c
 public ref class MyString {

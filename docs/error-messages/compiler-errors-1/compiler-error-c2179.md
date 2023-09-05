@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2179"
 title: "Compiler Error C2179"
 ms.date: "11/04/2016"
 f1_keywords: ["C2179"]
@@ -15,7 +16,7 @@ A generic type parameter is resolved at runtime. However, an attribute parameter
 
 The following sample generates C2179.
 
-```
+```cpp
 // C2179.cpp
 // compile with: /clr
 using namespace System;

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Hold Object Reference in Unmanaged Memory"
 title: "How to: Hold Object Reference in Unmanaged Memory"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -9,9 +10,9 @@ ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
 
 You can use gcroot.h, which wraps <xref:System.Runtime.InteropServices.GCHandle>, to hold a CLR object reference in unmanaged memory. Alternatively, you can use `GCHandle` directly.
 
-## Example
+## Examples
 
-```
+```cpp
 // hold_object_reference.cpp
 // compile with: /clr
 #include "gcroot.h"
@@ -45,11 +46,9 @@ int main() {
 StringWrapper::x == ManagedString
 ```
 
-## Example
-
 `GCHandle` gives you a means to hold a managed object reference in unmanaged memory.  You use the <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> method to create an opaque handle to a managed object and <xref:System.Runtime.InteropServices.GCHandle.Free%2A> to release it. Also, the <xref:System.Runtime.InteropServices.GCHandle.Target%2A> method allows you to obtain the object reference back from the handle in managed code.
 
-```
+```cpp
 // hold_object_reference_2.cpp
 // compile with: /clr
 using namespace System;
@@ -84,6 +83,6 @@ int main() {
 StringWrapper::m_handle == ManagedString
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

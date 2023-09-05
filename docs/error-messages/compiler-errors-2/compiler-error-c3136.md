@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3136"
 title: "Compiler Error C3136"
 ms.date: "10/03/2018"
 f1_keywords: ["C3136"]
@@ -13,7 +14,7 @@ An interface to which you applied an [interface attribute](../../windows/attribu
 
 The following example generates C3136:
 
-```
+```cpp
 // C3136.cpp
 #include "unknwn.h"
 

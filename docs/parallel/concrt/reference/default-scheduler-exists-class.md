@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: default_scheduler_exists Class"
 title: "default_scheduler_exists Class"
 ms.date: "11/04/2016"
 f1_keywords: ["default_scheduler_exists", "CONCRT/concurrency::default_scheduler_exists", "CONCRT/concurrency::default_scheduler_exists::default_scheduler_exists"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when the `Scheduler::SetDefaultSchedule
 
 ## Syntax
 
-```
+```cpp
 class default_scheduler_exists : public std::exception;
 ```
 
@@ -35,11 +36,11 @@ class default_scheduler_exists : public std::exception;
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> default_scheduler_exists
+## <a name="ctor"></a> default_scheduler_exists
 
 Constructs a `default_scheduler_exists` object.
 
-```
+```cpp
 explicit _CRTIMP default_scheduler_exists(_In_z_ const char* _Message) throw();
 
 default_scheduler_exists() throw();
@@ -50,6 +51,6 @@ default_scheduler_exists() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Security Classes"
 title: "Security Classes (ATL)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
@@ -29,8 +30,7 @@ These classes are wrappers for common Win32 security classes and objects.
 
 - [CTokenPrivileges](../atl/reference/ctokenprivileges-class.md) This class is a wrapper for the `TOKEN_PRIVILEGES` structure.
 
-## See Also
+## See also
 
 [Class Overview](../atl/atl-class-overview.md)<br/>
 [Security Global Functions](../atl/reference/security-global-functions.md)
-

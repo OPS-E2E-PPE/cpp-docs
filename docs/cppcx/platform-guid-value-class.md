@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Guid value class"
 title: "Platform::Guid value class"
 ms.date: "01/15/2019"
 ms.topic: "reference"
@@ -8,7 +9,7 @@ ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
 ---
 # Platform::Guid value class
 
-Represents a [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) type in the Windows Runtime type system.
+Represents a [GUID](/windows/win32/api/guiddef/ns-guiddef-guid type in the Windows Runtime type system.
 
 ## Syntax
 
@@ -25,12 +26,12 @@ public value struct Guid
 |[Guid](#ctor)|Initializes a new instance of a `Platform::Guid`.|
 |[operator==](#operator-equality)|Equals operator.|
 |[operator!=](#operator-inequality)|Not equals operator.|
-|[operator&lt;](#operator-less)|Less than operator.|
+|[`operator<`](#operator-less)|Less than operator.|
 |[operator()](#operator-call)|Converts a `Platform::Guid` to a `GUID`.|
 
 ### Remarks
 
-For an example of how to generate a new `Platform::Guid` using the Windows function [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), see [WinRT component: How to generate a GUID?](https://www.eternalcoding.com/?p=383)
+To generate a new `Platform::Guid`, use the [Windows::Foundation::GuidHelper::CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid) static method.
 
 ### Requirements
 
@@ -107,7 +108,7 @@ The next byte of the `GUID`.
 The next byte of the `GUID`.
 
 *m*<br/>
-A `GUID` in the form a [GUID structure](https://msdn.microsoft.com/library/windows/desktop/aa373931).
+A `GUID` in the form a [GUID structure](/windows/win32/api/guiddef/ns-guiddef-guid).
 
 *n*<br/>
 The remaining 8 bytes of the `GUID`.
@@ -134,6 +135,11 @@ The second `Platform::Guid` to compare.
 
 True if the two `Platform::Guid` instances are equal.
 
+### Remarks
+
+Prefer using the `==` operator instead of the
+[Windows::Foundation::GuidHelper::Equals](/uwp/api/windows.foundation.guidhelper.equals) static method.
+
 ## <a name="operator-inequality"></a> Guid::operator!= Operator
 
 Compares two `Platform::Guid` instances for inequality.
@@ -156,7 +162,7 @@ The second `Platform::Guid` to compare.
 
 True if the two `Platform::Guid` instances are not equal.
 
-## <a name="operator-less"></a> Guid::operator&lt; Operator
+## <a name="operator-less"></a> `Guid::operator<` Operator
 
 Compares two `Platform::Guid` instances for ordering.
 
@@ -182,7 +188,7 @@ This operator is provided so that `Guid` objects can be more easily consumed by 
 
 ## <a name="operator-call"></a> Guid::operator() Operator
 
-Implicitly converts a `Platform::Guid` to a [GUID structure](https://msdn.microsoft.com/library/windows/desktop/aa373931).
+Implicitly converts a `Platform::Guid` to a [GUID structure](/windows/win32/api/guiddef/ns-guiddef-guid).
 
 ### Syntax
 
@@ -192,8 +198,8 @@ const GUID& Platform::Guid::operator();
 
 ### Return Value
 
-A [GUID structure](https://msdn.microsoft.com/library/windows/desktop/aa373931).
+A [GUID structure](/windows/win32/api/guiddef/ns-guiddef-guid).
 
-## See Also
+## See also
 
 [Platform namespace](../cppcx/platform-namespace-c-cx.md)

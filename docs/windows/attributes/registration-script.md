@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: registration_script"
 title: "registration_script (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.registration_script"]
@@ -51,18 +52,16 @@ class CMyClass:public IFace {};
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**class**, **struct**|
+|**Applies to**|**`class`**, **`struct`**|
 |**Repeatable**|No|
 |**Required attributes**|One or more of the following: `coclass`, `progid`, or `vi_progid`.|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [COM Attributes](com-attributes.md)<br/>
 [Class Attributes](class-attributes.md)<br/>

@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Walkthrough: Creating an Image-Processing Network"
 title: "Walkthrough: Creating an Image-Processing Network"
-ms.date: "11/19/2018"
+ms.date: "04/25/2019"
 helpviewer_keywords: ["image-processing networks, creating [Concurrency Runtime]", "creating image-processing networks [Concurrency Runtime]"]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 ---
@@ -24,7 +25,7 @@ Read the following documents before you start this walkthrough:
 
 We also recommend that you understand the basics of GDI+ before you start this walkthrough.
 
-##  <a name="top"></a> Sections
+## <a name="top"></a> Sections
 
 This walkthrough contains the following sections:
 
@@ -34,7 +35,7 @@ This walkthrough contains the following sections:
 
 - [The Complete Example](#complete)
 
-##  <a name="functionality"></a> Defining Image Processing Functionality
+## <a name="functionality"></a> Defining Image Processing Functionality
 
 This section shows the support functions that the image processing network uses to work with images that are read from disk.
 
@@ -42,7 +43,7 @@ The following functions, `GetRGB` and `MakeColor`, extract and combine the indiv
 
 [!code-cpp[concrt-image-processing-filter#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_1.cpp)]
 
-The following function, `ProcessImage`, calls the given [std::function](../../standard-library/function-class.md) object to transform the color value of each pixel in a GDI+ [Bitmap](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap) object. The `ProcessImage` function uses the [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithm to process each row of the bitmap in parallel.
+The following function, `ProcessImage`, calls the given [std::function](../../standard-library/function-class.md) object to transform the color value of each pixel in a GDI+ [Bitmap](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) object. The `ProcessImage` function uses the [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithm to process each row of the bitmap in parallel.
 
 [!code-cpp[concrt-image-processing-filter#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_2.cpp)]
 
@@ -60,7 +61,7 @@ The following function, `GetEncoderClsid`, retrieves the class identifier for th
 
 [[Top](#top)]
 
-##  <a name="network"></a> Creating the Image Processing Network
+## <a name="network"></a> Creating the Image Processing Network
 
 This section describes how to create a network of asynchronous message blocks that perform image processing on every JPEG (.jpg) image in a given directory. The network performs the following image-processing operations:
 
@@ -126,7 +127,7 @@ If your application requires that multiple message blocks process the message, i
 
 The following illustration shows the image processing network:
 
-![Image processing network](../../parallel/concrt/media/concrt_imageproc.png "Image processing network")
+![Image processing network.](../../parallel/concrt/media/concrt_imageproc.png "Image processing network")
 
 The `countdown_event` object in this example enables the image processing network to inform the main application when all images have been processed. The `countdown_event` class uses a [concurrency::event](../../parallel/concrt/reference/event-class.md) object to signal when a counter value reaches zero. The main application increments the counter every time that it sends a file name to the network. The terminal node of the network decrements the counter after each image has been processed. After the main application traverses the specified directory, it waits for the `countdown_event` object to signal that its counter has reached zero.
 
@@ -136,7 +137,7 @@ The following example shows the `countdown_event` class:
 
 [[Top](#top)]
 
-##  <a name="complete"></a> The Complete Example
+## <a name="complete"></a> The Complete Example
 
 The following code shows the complete example. The `wmain` function manages the GDI+ library and calls the `ProcessImages` function to process the JPEG files in the `Sample Pictures` directory.
 
@@ -144,7 +145,7 @@ The following code shows the complete example. The `wmain` function manages the 
 
 The following illustration shows sample output. Each source image is above its corresponding modified image.
 
-![Sample output for the example](../../parallel/concrt/media/concrt_imageout.png "Sample output for the example")
+![Sample output for the example.](../../parallel/concrt/media/concrt_imageout.png "Sample output for the example")
 
 `Lighthouse` is authored by Tom Alphin and therefore is converted to grayscale. `Chrysanthemum`, `Desert`, `Koala`, and `Tulips` have red as the dominant color and therefore have the blue and green color components removed and are darkened. `Hydrangeas`, `Jellyfish`, and `Penguins` match the default criteria and therefore are sepia toned.
 
@@ -156,6 +157,6 @@ Copy the example code and paste it in a Visual Studio project, or paste it in a 
 
 **cl.exe /DUNICODE /EHsc image-processing-network.cpp /link gdiplus.lib**
 
-## See Also
+## See also
 
 [Concurrency Runtime Walkthroughs](../../parallel/concrt/concurrency-runtime-walkthroughs.md)

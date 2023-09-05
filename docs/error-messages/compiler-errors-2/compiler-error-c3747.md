@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3747"
 title: "Compiler Error C3747"
 ms.date: "11/04/2016"
 f1_keywords: ["C3747"]
@@ -13,7 +14,7 @@ Generic or template parameters with default values cannot be followed in the par
 
 The following sample generates C3747:
 
-```
+```cpp
 // C3747.cpp
 template <class T1 = int, class T2>   // C3747
 struct MyStruct {};
@@ -21,7 +22,7 @@ struct MyStruct {};
 
 Possible resolution:
 
-```
+```cpp
 // C3747b.cpp
 // compile with: /c
 template <class T1, class T2 = int>

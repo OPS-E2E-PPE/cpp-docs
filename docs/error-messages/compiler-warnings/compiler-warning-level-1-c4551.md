@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4551"
 title: "Compiler Warning (level 1) C4551"
 ms.date: "11/04/2016"
 f1_keywords: ["C4551"]
@@ -13,7 +14,7 @@ A function call must include the open and close parentheses after the function n
 
 The following sample generates C4551:
 
-```
+```cpp
 // C4551.cpp
 // compile with: /W1
 void function1() {

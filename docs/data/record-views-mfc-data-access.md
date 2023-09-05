@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Record Views  (MFC Data Access)"
 title: "Record Views  (MFC Data Access)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["MFC [C++], record views", "ODBC recordsets [C++], record views", "databases [C++], record views", "record views [C++]", "forms [C++], data access tasks"]
@@ -36,7 +37,7 @@ Topics include:
 
 - [Using a Record View](../data/using-a-record-view-mfc-data-access.md)
 
-## See Also
+## See also
 
 [Data Access Programming (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [ODBC Driver List](../data/odbc/odbc-driver-list.md)

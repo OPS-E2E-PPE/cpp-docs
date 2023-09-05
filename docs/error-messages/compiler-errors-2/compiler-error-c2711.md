@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2711"
 title: "Compiler Error C2711"
 ms.date: "11/04/2016"
 f1_keywords: ["C2711"]
@@ -13,7 +14,7 @@ Some instructions will prevent the compiler from generating MSIL for the enclosi
 
 The following sample generates C2711:
 
-```
+```cpp
 // C2711.cpp
 // compile with: /clr
 // processor: x86

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: _ATL_COM_MODULE70 Structure"
 title: "_ATL_COM_MODULE70 Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["ATL::_ATL_COM_MODULE70", "ATL._ATL_COM_MODULE70", "_ATL_COM_MODULE70"]
@@ -11,7 +12,7 @@ Used by COM-related code in ATL.
 
 ## Syntax
 
-```
+```cpp
 struct _ATL_COM_MODULE70 {
     UINT cbSize;
     HINSTANCE m_hInstTypeLib;
@@ -46,7 +47,6 @@ Critical section to serialize access to the object map entries. Used internally 
 
 **Header:** atlbase.h
 
-## See Also
+## See also
 
 [Classes and structs](../../atl/reference/atl-classes.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: db_source"
 title: "db_source (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.db_source"]
@@ -18,7 +19,7 @@ Creates a connection to a data source.
 ### Parameters
 
 *db_source*<br/>
-The connection string used to connect to the data source. For the format of the connection string, see [Connection Strings and Data Links](/previous-versions/windows/desktop/ms718376) in the Microsoft Data Access Components (MDAC) SDK.
+The connection string used to connect to the data source. For the format of the connection string, see [Connection Strings and Data Links](/previous-versions/windows/desktop/ms718376(v=vs.85)) in the Microsoft Data Access Components (MDAC) SDK.
 
 *name*<br/>
 (Optional) When you use **db_source** on a class, *name* is an instance of a data source object that has the **db_source** attribute applied to it (see example 1). When you use **db_source** inline in a method implementation, *name* is a variable (local to the method) that can be used to access the data source (see example 2). You pass this *name* to the *source_name* parameter of `db_command` to associate the data source with a command.
@@ -38,7 +39,7 @@ When you use **db_source** in a method, the injected code will be executed withi
 
 When the consumer attribute provider applies this attribute to a class, the compiler will rename the class to \_*YourClassName*Accessor, where *YourClassName* is the name you gave the class, and the compiler will also create a class called *YourClassName*, which derives from \_*YourClassName*Accessor.  In Class View, you will see both classes.
 
-For an example of this attribute used in an application, see the samples [AtlAgent](https://github.com/Microsoft/VCSamples) and [MultiRead](https://github.com/Microsoft/VCSamples).
+For an example of this attribute used in an application, see [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
 ## Example
 
@@ -60,17 +61,15 @@ class CMyCommand {};
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**class**, **struct**, member, method, local|
+|**Applies to**|**`class`**, **`struct`**, member, method, local|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [OLE DB Consumer Attributes](ole-db-consumer-attributes.md)

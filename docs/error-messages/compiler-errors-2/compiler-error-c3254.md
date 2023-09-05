@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3254"
 title: "Compiler Error C3254"
 ms.date: "11/04/2016"
 f1_keywords: ["C3254"]
@@ -13,7 +14,7 @@ When you [explicitly override](../../cpp/explicit-overrides-cpp.md) a method, th
 
 The following sample generates C3254:
 
-```
+```cpp
 // C3254.cpp
 __interface I
 {

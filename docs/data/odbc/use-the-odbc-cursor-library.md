@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Use the ODBC Cursor Library"
 title: "Use the ODBC Cursor Library"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["cursor library [ODBC], disabling", "ODBC cursor library [ODBC], disabling"]
@@ -12,6 +13,6 @@ ODBC manages scrolling through recordsets through the Cursor Library. These topi
 
 - [Use the ODBC Cursor Library](../../data/odbc/odbc-the-odbc-cursor-library.md)
 
-## See Also
+## See also
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDragListBox Class"
 title: "CDragListBox Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CDragListBox", "AFXCMN/CDragListBox", "AFXCMN/CDragListBox::CDragListBox", "AFXCMN/CDragListBox::BeginDrag", "AFXCMN/CDragListBox::CancelDrag", "AFXCMN/CDragListBox::Dragging", "AFXCMN/CDragListBox::DrawInsert", "AFXCMN/CDragListBox::Dropped", "AFXCMN/CDragListBox::ItemFromPt"]
@@ -42,7 +43,7 @@ The list box control associated with the `CDragListBox` class must not have the 
 
 To use a drag list box in an existing dialog box of your application, add a list box control to your dialog template using the dialog editor and then assign a member variable (of Category `Control` and Variable Type `CDragListBox`) corresponding to the list box control in your dialog template.
 
-For more information on assigning controls to member variables, see [Shortcut for Defining Member Variables for Dialog Controls](../../windows/defining-member-variables-for-dialog-controls.md).
+For more information on assigning controls to member variables, see [Shortcut for Defining Member Variables for Dialog Controls](../../windows/adding-editing-or-deleting-controls.md).
 
 ## Inheritance Hierarchy
 
@@ -60,7 +61,7 @@ For more information on assigning controls to member variables, see [Shortcut fo
 
 **Header:** afxcmn.h
 
-##  <a name="begindrag"></a>  CDragListBox::BeginDrag
+## <a name="begindrag"></a> CDragListBox::BeginDrag
 
 Called by the framework when an event occurs that could begin a drag operation, such as pressing the left mouse button.
 
@@ -81,7 +82,7 @@ Nonzero if dragging is allowed, otherwise 0.
 
 Override this function if you want to control what happens when a drag operation begins. The default implementation captures the mouse and stays in drag mode until the user clicks the left or right mouse button or presses ESC, at which time the drag operation is canceled.
 
-##  <a name="canceldrag"></a>  CDragListBox::CancelDrag
+## <a name="canceldrag"></a> CDragListBox::CancelDrag
 
 Called by the framework when a drag operation has been canceled.
 
@@ -98,7 +99,7 @@ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that contains 
 
 Override this function to handle any special processing for your list box control.
 
-##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox
+## <a name="cdraglistbox"></a> CDragListBox::CDragListBox
 
 Constructs a `CDragListBox` object.
 
@@ -106,7 +107,7 @@ Constructs a `CDragListBox` object.
 CDragListBox();
 ```
 
-##  <a name="dragging"></a>  CDragListBox::Dragging
+## <a name="dragging"></a> CDragListBox::Dragging
 
 Called by the framework when a list box item is being dragged within the `CDragListBox` object.
 
@@ -133,7 +134,7 @@ The resource ID of the cursor to be displayed. The following values are possible
 
 The default behavior returns DL_MOVECURSOR. Override this function if you want to provide additional functionality.
 
-##  <a name="drawinsert"></a>  CDragListBox::DrawInsert
+## <a name="drawinsert"></a> CDragListBox::DrawInsert
 
 Called by the framework to draw the insertion guide before the item with the indicated index.
 
@@ -150,7 +151,7 @@ Zero-based index of the insertion point.
 
 A value of - 1 clears the insertion guide. Override this function to modify the appearance or behavior of the insertion guide.
 
-##  <a name="dropped"></a>  CDragListBox::Dropped
+## <a name="dropped"></a> CDragListBox::Dropped
 
 Called by the framework when an item is dropped within a `CDragListBox` object.
 
@@ -172,7 +173,7 @@ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that contains 
 
 The default behavior copies the list box item and its data to the new location and then deletes the original item. Override this function to customize the default behavior, such as enabling copies of list box items to be dragged to other locations within the list.
 
-##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt
+## <a name="itemfrompt"></a> CDragListBox::ItemFromPt
 
 Call this function to retrieve the zero-based index of the list box item located at *pt*.
 
@@ -194,9 +195,9 @@ Nonzero if scrolling is allowed, otherwise 0.
 
 Zero-based index of the drag list box item.
 
-## See Also
+## See also
 
-[MFC Sample TSTCON](../../visual-cpp-samples.md)<br/>
+[MFC Sample TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [CListBox Class](../../mfc/reference/clistbox-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CListBox Class](../../mfc/reference/clistbox-class.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3519"
 title: "Compiler Error C3519"
 ms.date: "11/04/2016"
 f1_keywords: ["C3519"]
@@ -15,7 +16,7 @@ The only parameters that are allowed for `embedded_idl` are `emitidl` and `no_em
 
 The following sample generates C3519:
 
-```
+```cpp
 // C3519.cpp
 // compile with: /LD
 [module(name="MyLib2")];

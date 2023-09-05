@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Maximum String Length"
 title: "Maximum String Length"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["lengths, strings", "string length, maximum", "maximum string length", "strings [C++], length"]
@@ -16,6 +17,6 @@ While an individual quoted string cannot be longer than 2048 bytes, a string lit
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
 [C String Literals](../c-language/c-string-literals.md)

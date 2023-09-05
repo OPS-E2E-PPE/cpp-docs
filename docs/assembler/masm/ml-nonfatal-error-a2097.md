@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: ML Nonfatal Error A2097"
 title: "ML Nonfatal Error A2097"
-ms.date: "08/30/2018"
-ms.topic: "error-reference"
+ms.date: "12/17/2019"
+ms.topic: error-reference
 f1_keywords: ["A2097"]
 helpviewer_keywords: ["A2097"]
 ms.assetid: 52f6f1f8-4eb4-4264-8619-7b9ccb20c0c7
@@ -10,8 +11,8 @@ ms.assetid: 52f6f1f8-4eb4-4264-8619-7b9ccb20c0c7
 
 **segment expected : identifier**
 
-The [GROUP](../../assembler/masm/group.md) directive was given an identifier that was not a defined segment.
+The [GROUP](group.md) directive was given an identifier that was not a defined segment.
 
 ## See also
 
-[ML Error Messages](../../assembler/masm/ml-error-messages.md)<br/>
+[ML Error Messages](ml-error-messages.md)

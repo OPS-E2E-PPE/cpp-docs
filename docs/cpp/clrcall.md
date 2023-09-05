@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: __clrcall"
 title: "__clrcall"
 ms.date: "11/04/2016"
 f1_keywords: ["__clrcall_cpp"]
@@ -7,9 +8,7 @@ ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
 ---
 # __clrcall
 
-**Microsoft Specific**
-
-Specifies that a function can only be called from managed code.  Use **__clrcall** for all virtual functions that will only be called from managed code. However this calling convention cannot be used for functions that will be called from native code.
+Specifies that a function can only be called from managed code.  Use **__clrcall** for all virtual functions that will only be called from managed code. However this calling convention cannot be used for functions that will be called from native code. The **__clrcall** modifier is Microsoft-specific.
 
 Use **__clrcall** to improve performance when calling from a managed function to a virtual managed function or from managed function to managed function through pointer.
 
@@ -25,7 +24,7 @@ You can directly call **__clrcall** functions from existing C++ code that was co
 
 **__clrcall** function pointers are only meant to be used in the application domain in which they were created.  Instead of passing **__clrcall** function pointers across application domains, use <xref:System.CrossAppDomainDelegate>. For more information, see [Application Domains and Visual C++](../dotnet/application-domains-and-visual-cpp.md).
 
-## Example
+## Examples
 
 Note that when a function is declared with **__clrcall**, code will be generated when needed; for example, when function is called.
 
@@ -63,8 +62,6 @@ in Func1
 in Func1
 in Func1
 ```
-
-## Example
 
 The following sample shows that you can define a function pointer, such that, you declare that the function pointer will only be invoked from managed code. This allows the compiler to directly call the managed function and avoid the native entry point (double thunk issue).
 

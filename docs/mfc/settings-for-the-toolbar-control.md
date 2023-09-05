@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Settings for the Toolbar Control"
 title: "Settings for the Toolbar Control"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["toolbar controls [MFC], about toolbar controls", "CToolBarCtrl class [MFC], settings"]
@@ -10,8 +11,7 @@ The buttons on a toolbar can display a bitmap, a string, or both. By default, th
 
 A toolbar can have built-in customization features, including a system-defined customization dialog box, that allow the user to insert, delete, or rearrange toolbar buttons. An application determines whether the customization features are available to the user and controls the extent to which the user can customize the toolbar. For more information about customizing the toolbar, see class [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) in the *MFC Reference*.
 
-## See Also
+## See also
 
 [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

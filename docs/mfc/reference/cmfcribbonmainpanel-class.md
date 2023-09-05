@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCRibbonMainPanel Class"
 title: "CMFCRibbonMainPanel Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCRibbonMainPanel", "AFXRIBBONMAINPANEL/CMFCRibbonMainPanel", "AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::Add", "AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::AddRecentFilesList", "AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::AddToBottom", "AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::AddToRight", "AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::GetCommandsFrame"]
@@ -58,7 +59,7 @@ The framework displays the `CMFCRibbonMainPanel` when you open the application p
 
 **Header:** afxRibbonMainPanel.h
 
-##  <a name="add"></a>  CMFCRibbonMainPanel::Add
+## <a name="add"></a> CMFCRibbonMainPanel::Add
 
 Adds a ribbon element to the left pane of the application button panel.
 
@@ -75,11 +76,11 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 Adds a ribbon element to the panel. Elements added using this method will be located in the left column of the main panel.
 
-##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList
+## <a name="addrecentfileslist"></a> CMFCRibbonMainPanel::AddRecentFilesList
 
 Adds a text string to the recent files list menu.
 
-```
+```cpp
 void AddRecentFilesList(
     LPCTSTR lpszLabel,
     int nWidth = 300);
@@ -95,11 +96,11 @@ Specifies the width, in pixels, of the recent files list panel.
 
 ### Remarks
 
-##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom
+## <a name="addtobottom"></a> CMFCRibbonMainPanel::AddToBottom
 
 Adds a ribbon element to the bottom pane of the ribbon application panel.
 
-```
+```cpp
 void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```
 
@@ -110,11 +111,11 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 ### Remarks
 
-##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight
+## <a name="addtoright"></a> CMFCRibbonMainPanel::AddToRight
 
 Adds a ribbon element to the right pane of the application button panel.
 
-```
+```cpp
 void AddToRight(
     CMFCRibbonBaseElement* pElem,
     int nWidth = 300);
@@ -132,7 +133,7 @@ Specifies the width, in pixels, of the right panel.
 
 Use this function to add a ribbon element to the right panel. The right panel typically displays the recent files list, but you can add any other ribbon element here.
 
-##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame
+## <a name="getcommandsframe"></a> CMFCRibbonMainPanel::GetCommandsFrame
 
 Returns a rectangle that represents the area of the ribbon main panel.
 
@@ -144,7 +145,7 @@ CRect GetCommandsFrame() const;
 
 A rectangle that represents the area of the ribbon main panel.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

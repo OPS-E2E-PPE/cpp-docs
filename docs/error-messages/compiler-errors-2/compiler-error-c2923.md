@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2923"
 title: "Compiler Error C2923"
 ms.date: "11/04/2016"
 f1_keywords: ["C2923"]
@@ -13,7 +14,7 @@ The argument list is missing a type needed to instantiate the template or generi
 
 The following sample generates C2923:
 
-```
+```cpp
 // C2923.cpp
 template <class T> struct TC {};
 int x;
@@ -25,7 +26,7 @@ int main() {
 
 C2923 can also occur when using generics:
 
-```
+```cpp
 // C2923b.cpp
 // compile with: /clr /c
 generic <class T> ref struct GC {};

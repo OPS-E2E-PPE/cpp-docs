@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2495"
 title: "Compiler Error C2495"
 ms.date: "11/04/2016"
 f1_keywords: ["C2495"]
@@ -13,7 +14,7 @@ The [nothrow](../../cpp/nothrow-cpp.md) extended attribute can be applied to fun
 
 The following sample generates C2495:
 
-```
+```cpp
 // C2495.cpp
 // compile with: /c
 __declspec(nothrow) class X {   // C2495

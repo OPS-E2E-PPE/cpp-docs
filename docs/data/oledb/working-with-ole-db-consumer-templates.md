@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Working with OLE DB Consumer Templates"
 title: "Working with OLE DB Consumer Templates"
 ms.date: "10/24/2018"
 helpviewer_keywords: ["sample applications [C++], OLE DB Templates", "OLE DB consumer templates, about consumer templates"]
@@ -44,12 +45,12 @@ For an example of creating and implementing an OLE DB Consumer, see [Creating a 
 
 You can also find examples of how to use the OLE DB Consumer Templates in the following samples:
 
-- [CatDB](https://github.com/Microsoft/VCSamples)
+- [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [DBViewer](https://github.com/Microsoft/VCSamples)
+- [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [MultiRead](https://github.com/Microsoft/VCSamples)
+- [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-## See Also
+## See also
 
 [OLE DB Consumer Templates](../../data/oledb/ole-db-consumer-templates-cpp.md)

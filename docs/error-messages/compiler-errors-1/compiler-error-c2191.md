@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2191"
 title: "Compiler Error C2191"
 ms.date: "11/04/2016"
 f1_keywords: ["C2191"]
@@ -15,7 +16,7 @@ A C function was declared a second time with a longer parameter list. C does not
 
 The following sample generates C2191:
 
-```
+```c
 // C2191.c
 // compile with: /Za /c
 void func( int );

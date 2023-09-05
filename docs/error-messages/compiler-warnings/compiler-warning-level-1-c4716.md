@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4716"
 title: "Compiler Warning (level 1) C4716"
 ms.date: "11/04/2016"
 f1_keywords: ["C4716"]
@@ -19,7 +20,7 @@ This warning is automatically promoted to an error. If you wish to modify this b
 
 The following sample generates C4716:
 
-```
+```cpp
 // C4716.cpp
 // compile with: /c /W1
 // C4716 expected

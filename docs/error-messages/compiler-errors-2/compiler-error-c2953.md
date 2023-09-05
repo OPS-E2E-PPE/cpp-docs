@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2953"
 title: "Compiler Error C2953"
 ms.date: "11/04/2016"
 f1_keywords: ["C2953"]
@@ -13,7 +14,7 @@ Check the source file and include files for other definitions.
 
 The following sample generates C2953:
 
-```
+```cpp
 // C2953.cpp
 // compile with: /c
 template <class T>  class A {};

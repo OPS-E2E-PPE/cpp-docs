@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3834"
 title: "Compiler Error C3834"
 ms.date: "11/04/2016"
 f1_keywords: ["C3834"]
@@ -15,7 +16,7 @@ Explicit casts to a pinned pointer are not allowed.
 
 The following sample generates C3834.
 
-```
+```cpp
 // C3834.cpp
 // compile with: /clr
 int main() {

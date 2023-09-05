@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CGopherConnection Class"
 title: "CGopherConnection Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CGopherConnection", "AFXINET/CGopherConnection", "AFXINET/CGopherConnection::CGopherConnection", "AFXINET/CGopherConnection::CreateLocator", "AFXINET/CGopherConnection::GetAttribute", "AFXINET/CGopherConnection::OpenFile"]
@@ -10,7 +11,7 @@ ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
 Manages your connection to a gopher Internet server.
 
 > [!NOTE]
->  The classes `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` and their members have been deprecated because they do not work on the Windows XP platform, but they will continue to work on earlier platforms.
+> The classes `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` and their members have been deprecated because they do not work on the Windows XP platform, but they will continue to work on earlier platforms.
 
 ## Syntax
 
@@ -56,7 +57,7 @@ To learn more about how `CGopherConnection` works with the other MFC Internet cl
 
 **Header:** afxinet.h
 
-##  <a name="cgopherconnection"></a>  CGopherConnection::CGopherConnection
+## <a name="cgopherconnection"></a> CGopherConnection::CGopherConnection
 
 This member function is called to construct a `CGopherConnection` object.
 
@@ -110,7 +111,7 @@ A number that identifies the TCP/IP port to use on the server.
 
 You never create a `CGopherConnection` directly. Rather, call [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), which creates a `CGopherConnection` object and returns a pointer to it.
 
-##  <a name="createlocator"></a>  CGopherConnection::CreateLocator
+## <a name="createlocator"></a> CGopherConnection::CreateLocator
 
 Call this member function to create a gopher locator to find or identify a file on a gopher server.
 
@@ -139,7 +140,7 @@ A pointer to a string containing the name of the gopher document or directory to
 A pointer to the selector string to be sent to the gopher server in order to retrieve an item. *pstrSelectorString* can be NULL.
 
 *dwGopherType*<br/>
-This specifies whether *pstrSelectorString* refers to a directory or document, and whether the request is gopher or gopher+. See the attributes for the structure [GOPHER_FIND_DATA](/windows/desktop/api/wininet/ns-wininet-gopher_find_dataa) in the Windows SDK.
+This specifies whether *pstrSelectorString* refers to a directory or document, and whether the request is gopher or gopher+. See the attributes for the structure [GOPHER_FIND_DATA](/windows/win32/api/wininet/ns-wininet-gopher_find_dataw) in the Windows SDK.
 
 *pstrLocator*<br/>
 A pointer to a string identifying the file to open. Generally, this string is returned from a call to [CGopherFileFind::GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator).
@@ -160,7 +161,7 @@ The static version of the member function requires you to specify a server, whil
 
 In order to retrieve information from a gopher server, an application must first get a gopher locator. The application must then treat the locator as an opaque token (that is, the application can use the locator but not directly manipulate or compare it). Normally, the application uses the locator for calls to the [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) member function to retrieve a specific piece of information.
 
-##  <a name="getattribute"></a>  CGopherConnection::GetAttribute
+## <a name="getattribute"></a> CGopherConnection::GetAttribute
 
 Call this member function to retrieve specific attribute information about an item from the gopher server.
 
@@ -183,9 +184,9 @@ A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) tha
 
 ### Return Value
 
-Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.
+Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) may be called to determine the cause of the error.
 
-##  <a name="openfile"></a>  CGopherConnection::OpenFile
+## <a name="openfile"></a> CGopherConnection::OpenFile
 
 Call this member function to open a file on a gopher server.
 
@@ -219,7 +220,7 @@ A pointer to the [CGopherFile](../../mfc/reference/cgopherfile-class.md) object 
 
 Override the *dwContext* default to set the context identifier to a value of your choosing. The context identifier is associated with this specific operation of the `CGopherConnection` object created by its [CInternetSession](../../mfc/reference/cinternetsession-class.md) object. The value is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the operation with which it is identified. See the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.
 
-## See Also
+## See also
 
 [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

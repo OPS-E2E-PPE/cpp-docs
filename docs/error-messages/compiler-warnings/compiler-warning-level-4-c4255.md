@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4255"
 title: "Compiler Warning (level 4) C4255"
 ms.date: "11/04/2016"
 f1_keywords: ["C4255"]
@@ -15,7 +16,7 @@ This warning is off by default. See [Compiler Warnings That Are Off by Default](
 
 The following sample generates C4255:
 
-```
+```c
 // C4255.c
 // compile with: /W4 /WX
 #pragma warning (default : 4255)

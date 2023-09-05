@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: remove_cv Class"
 title: "remove_cv Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::remove_cv"]
@@ -21,7 +22,7 @@ using remove_cv_t = typename remove_cv<T>::type;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to modify.
 
 ## Remarks
@@ -58,6 +59,6 @@ remove_cv_t<const volatile int> == int
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_const Class](../standard-library/remove-const-class.md)<br/>
-[remove_volatile Class](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_const Class](../standard-library/remove-const-class.md)\
+[remove_volatile Class](../standard-library/remove-volatile-class.md)

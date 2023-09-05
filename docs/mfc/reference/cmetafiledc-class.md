@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMetaFileDC Class"
 title: "CMetaFileDC Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMetaFileDC", "AFXEXT/CMetaFileDC", "AFXEXT/CMetaFileDC::CMetaFileDC", "AFXEXT/CMetaFileDC::Close", "AFXEXT/CMetaFileDC::CloseEnhanced", "AFXEXT/CMetaFileDC::Create", "AFXEXT/CMetaFileDC::CreateEnhanced"]
@@ -40,9 +41,9 @@ Next send the `CMetaFileDC` object the sequence of CDC GDI commands that you int
 
 After you have sent the desired commands to the metafile, call the `Close` member function, which closes the metafile device contexts and returns a metafile handle. Then dispose of the `CMetaFileDC` object.
 
-[CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) can then use the metafile handle to play the metafile repeatedly. The metafile can also be manipulated by Windows functions such as [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea), which copies a metafile to disk.
+[CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) can then use the metafile handle to play the metafile repeatedly. The metafile can also be manipulated by Windows functions such as [CopyMetaFile](/windows/win32/api/wingdi/nf-wingdi-copymetafilew), which copies a metafile to disk.
 
-When the metafile is no longer needed, delete it from memory with the [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) Windows function.
+When the metafile is no longer needed, delete it from memory with the [DeleteMetaFile](/windows/win32/api/wingdi/nf-wingdi-deletemetafile) Windows function.
 
 You can also implement the `CMetaFileDC` object so that it can handle both output calls and attribute GDI calls such as `GetTextExtent`. Such a metafile is more flexible and can more easily reuse general GDI code, which often consists of a mix of output and attribute calls. The `CMetaFileDC` class inherits two device contexts, `m_hDC` and `m_hAttribDC`, from CDC. The `m_hDC` device context handles all [CDC](../../mfc/reference/cdc-class.md) GDI output calls and the `m_hAttribDC` device context handles all CDC GDI attribute calls. Normally, these two device contexts refer to the same device. In the case of `CMetaFileDC`, the attribute DC is set to NULL by default.
 
@@ -62,7 +63,7 @@ For more information on `CMetaFileDC`, see [Device Contexts](../../mfc/device-co
 
 **Header:** afxext.h
 
-##  <a name="close"></a>  CMetaFileDC::Close
+## <a name="close"></a> CMetaFileDC::Close
 
 Closes the metafile device context and creates a Windows metafile handle that can be used to play the metafile by using the [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) member function.
 
@@ -76,11 +77,11 @@ A valid HMETAFILE if the function is successful; otherwise NULL.
 
 ### Remarks
 
-The Windows metafile handle can also be used to manipulate the metafile with Windows functions such as [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea).
+The Windows metafile handle can also be used to manipulate the metafile with Windows functions such as [CopyMetaFile](/windows/win32/api/wingdi/nf-wingdi-copymetafilew).
 
-Delete the metafile after use by calling the Windows [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) function.
+Delete the metafile after use by calling the Windows [DeleteMetaFile](/windows/win32/api/wingdi/nf-wingdi-deletemetafile) function.
 
-##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced
+## <a name="closeenhanced"></a> CMetaFileDC::CloseEnhanced
 
 Closes an enhanced-metafile device context and returns a handle that identifies an enhanced-format metafile.
 
@@ -114,7 +115,7 @@ An application can use the enhanced-metafile handle returned by this function to
 
 When the application no longer needs the enhanced metafile handle, it should release the handle by calling the Win32 `DeleteEnhMetaFile` function.
 
-##  <a name="cmetafiledc"></a>  CMetaFileDC::CMetaFileDC
+## <a name="cmetafiledc"></a> CMetaFileDC::CMetaFileDC
 
 Construct a `CMetaFileDC` object in two steps.
 
@@ -126,7 +127,7 @@ CMetaFileDC();
 
 First, call `CMetaFileDC`, then call `Create`, which creates the Windows metafile device context and attaches it to the `CMetaFileDC` object.
 
-##  <a name="create"></a>  CMetaFileDC::Create
+## <a name="create"></a> CMetaFileDC::Create
 
 Construct a `CMetaFileDC` object in two steps.
 
@@ -147,7 +148,7 @@ Nonzero if the function is successful; otherwise 0.
 
 First, call the constructor `CMetaFileDC`, then call `Create`, which creates the Windows metafile device context and attaches it to the `CMetaFileDC` object.
 
-##  <a name="createenhanced"></a>  CMetaFileDC::CreateEnhanced
+## <a name="createenhanced"></a> CMetaFileDC::CreateEnhanced
 
 Creates a device context for an enhanced-format metafile.
 
@@ -168,7 +169,7 @@ Identifies a reference device for the enhanced metafile.
 Points to a null-terminated character string. Specifies the filename for the enhanced metafile to be created. If this parameter is NULL, the enhanced metafile is memory based and its contents lost when the object is destroyed or when the Win32 `DeleteEnhMetaFile` function is called.
 
 *lpBounds*<br/>
-Points to a [RECT](/windows/desktop/api/windef/ns-windef-tagrect) data structure or a [CRect](../../atl-mfc-shared/reference/crect-class.md) object that specifies the dimensions in HIMETRIC units (in .01-millimeter increments) of the picture to be stored in the enhanced metafile.
+Points to a [RECT](/windows/win32/api/windef/ns-windef-rect) data structure or a [CRect](../../atl-mfc-shared/reference/crect-class.md) object that specifies the dimensions in HIMETRIC units (in .01-millimeter increments) of the picture to be stored in the enhanced metafile.
 
 *lpszDescription*<br/>
 Points to a zero-terminated string that specifies the name of the application that created the picture, as well as the picture's title.
@@ -195,8 +196,7 @@ Applications must use the Win32 `GetWinMetaFileBits` function to convert an enha
 
 The filename for the enhanced metafile should use the .EMF extension.
 
-## See Also
+## See also
 
 [CDC Class](../../mfc/reference/cdc-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

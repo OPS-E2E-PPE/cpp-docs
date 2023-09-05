@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ODBC Administrator"
 title: "ODBC Administrator"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["installing ODBC", "ODBC data sources [C++], ODBC Administrator", "ODBC drivers [C++], installing", "ODBC [C++], ODBC Administrator", "Administrator in ODBC", "administration ODBC Administrator", "ODBC Administrator [C++]", "drivers [C++], ODBC"]
@@ -36,7 +37,7 @@ If you want to install ODBC drivers that do not ship with Visual C++, you must r
 
 When the drivers are installed, you can configure the data source using the ODBC Administrator. You will find the ODBC icon in Control Panel.
 
-## See Also
+## See also
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Data Source (ODBC)](../../data/odbc/data-source-odbc.md)

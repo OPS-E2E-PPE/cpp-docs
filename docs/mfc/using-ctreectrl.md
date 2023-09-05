@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Using CTreeCtrl"
 title: "Using CTreeCtrl"
 ms.date: "11/04/2016"
-f1_keywords: ["CTreeCtrl"]
 helpviewer_keywords: ["CTreeCtrl class [MFC], about CTreeCtrl", "tree controls [MFC], using"]
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
 ---
@@ -39,7 +39,6 @@ A tree control, represented by the class [CTreeCtrl](../mfc/reference/ctreectrl-
 
 - [Tree Control Notification Messages](../mfc/tree-control-notification-messages.md)
 
-## See Also
+## See also
 
 [Controls](../mfc/controls-mfc.md)
-

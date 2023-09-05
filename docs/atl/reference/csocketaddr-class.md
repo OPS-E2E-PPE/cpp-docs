@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CSocketAddr Class"
 title: "CSocketAddr Class"
 ms.date: "10/22/2018"
 f1_keywords: ["CSocketAddr", "ATLSOCKET/ATL::CSocketAddr", "ATLSOCKET/ATL::CSocketAddr::CSocketAddr", "ATLSOCKET/ATL::CSocketAddr::FindAddr", "ATLSOCKET/ATL::CSocketAddr::FindINET4Addr", "ATLSOCKET/ATL::CSocketAddr::FindINET6Addr", "ATLSOCKET/ATL::CSocketAddr::GetAddrInfo", "ATLSOCKET/ATL::CSocketAddr::GetAddrInfoList"]
@@ -37,7 +38,7 @@ class CSocketAddr
 
 This class provides an IP version agnostic approach for looking up network addresses for use with Windows sockets API functions and socket wrappers in libraries.
 
-The members of this class that are used to look up network addresses use the Win32 API function [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo). The ANSI or UNICODE version of the function is called depending on whether your code is compiled for ANSI or UNICODE.
+The members of this class that are used to look up network addresses use the Win32 API function [getaddrinfo](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo). The ANSI or UNICODE version of the function is called depending on whether your code is compiled for ANSI or UNICODE.
 
 This class supports both IPv4 andIPv6 network addresses.
 
@@ -45,7 +46,7 @@ This class supports both IPv4 andIPv6 network addresses.
 
 **Header:** atlsocket.h
 
-##  <a name="csocketaddr"></a>  CSocketAddr::CSocketAddr
+## <a name="csocketaddr"></a> CSocketAddr::CSocketAddr
 
 The constructor.
 
@@ -57,7 +58,7 @@ CSocketAddr();
 
 Creates a new `CSocketAddr` object and initializes the linked list containing response information about the host.
 
-##  <a name="findaddr"></a>  CSocketAddr::FindAddr
+## <a name="findaddr"></a> CSocketAddr::FindAddr
 
 Call this method to convert the provided host name to the host address.
 
@@ -108,9 +109,9 @@ Returns zero if the address is calculated successfully. Returns a nonzero Window
 
 ### Remarks
 
-The host name parameter may be in either IPv4 or IPv6 format. This method calls the Win32 API function [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) to perform the conversion.
+The host name parameter may be in either IPv4 or IPv6 format. This method calls the Win32 API function [getaddrinfo](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) to perform the conversion.
 
-##  <a name="findinet4addr"></a>  CSocketAddr::FindINET4Addr
+## <a name="findinet4addr"></a> CSocketAddr::FindINET4Addr
 
 Call this method to convert the IPv4 host name to the host address.
 
@@ -142,9 +143,9 @@ Returns zero if the address is calculated successfully. Returns a nonzero Window
 
 ### Remarks
 
-This method calls the Win32 API function [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) to perform the conversion.
+This method calls the Win32 API function [getaddrinfo](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) to perform the conversion.
 
-##  <a name="findinet6addr"></a>  CSocketAddr::FindINET6Addr
+## <a name="findinet6addr"></a> CSocketAddr::FindINET6Addr
 
 Call this method to convert the IPv6 host name to the host address.
 
@@ -176,9 +177,9 @@ Returns zero if the address is calculated successfully. Returns a nonzero Window
 
 ### Remarks
 
-This method calls the Win32 API function [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) to perform the conversion.
+This method calls the Win32 API function [getaddrinfo](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) to perform the conversion.
 
-##  <a name="getaddrinfo"></a>  CSocketAddr::GetAddrInfo
+## <a name="getaddrinfo"></a> CSocketAddr::GetAddrInfo
 
 Call this method to return a pointer to a specific element in the `addrinfo` list.
 
@@ -189,13 +190,13 @@ addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ### Parameters
 
 *nIndex*<br/>
-A reference to a specific element in the [addrinfo](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa) list.
+A reference to a specific element in the [addrinfo](/windows/win32/api/ws2def/ns-ws2def-addrinfow) list.
 
 ### Return Value
 
 Returns a pointer to the `addrinfo` structure referenced by *nIndex* in the linked list containing response information about the host.
 
-##  <a name="getaddrinfolist"></a>  CSocketAddr::GetAddrInfoList
+## <a name="getaddrinfolist"></a> CSocketAddr::GetAddrInfoList
 
 Call this method to return a pointer to the `addrinfo` list.
 
@@ -205,8 +206,8 @@ addrinfo* const GetAddrInfoList() const;
 
 ### Return Value
 
-Pointer to a linked list of one or more `addrinfo` structures containing response information about the host. For more information, see [addrinfo structure](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa).
+Pointer to a linked list of one or more `addrinfo` structures containing response information about the host. For more information, see [addrinfo structure](/windows/win32/api/ws2def/ns-ws2def-addrinfow).
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

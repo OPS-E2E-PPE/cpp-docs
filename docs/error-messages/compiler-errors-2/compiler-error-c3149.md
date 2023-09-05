@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3149"
 title: "Compiler Error C3149"
 ms.date: "11/04/2016"
 f1_keywords: ["C3149"]
@@ -17,7 +18,7 @@ To resolve this error, declare variables of CLR types inside a function or type 
 
 The following sample generates C3149:
 
-```
+```cpp
 // C3149.cpp
 // compile with: /clr
 using namespace System;
@@ -30,7 +31,7 @@ int main() {
 
 The following sample generates C3149:
 
-```
+```cpp
 // C3149b.cpp
 // compile with: /clr /c
 delegate int MyDelegate(const int, int);

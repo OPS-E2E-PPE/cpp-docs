@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3704"
 title: "Compiler Error C3704"
 ms.date: "11/04/2016"
 f1_keywords: ["C3704"]
@@ -13,7 +14,7 @@ You attempted to use [__event](../../cpp/event.md) on a vararg method. To fix th
 
 The following sample generates C3704:
 
-```
+```cpp
 // C3704.cpp
 [ event_source(native) ]
 class CEventSrc {

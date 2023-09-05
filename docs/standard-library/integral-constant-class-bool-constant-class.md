@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: integral_constant Class, bool_constant Class"
 title: "integral_constant Class, bool_constant Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::integral_constant", "XTR1COMMON/std::integral_constant", "type_traits/std::bool_constant", "XTR1COMMON/std::bool_constant"]
@@ -24,17 +25,17 @@ struct integral_constant {
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type of the constant.
 
-*v*<br/>
+*v*\
 The value of the constant.
 
 ## Remarks
 
-The `integral_constant` template class, when specialized with an integral type *T* and a value *v* of that type, represents an object that holds a constant of that integral type with the specified value. The member named `type` is an alias for the generated template specialization type, and the `value` member holds the value *v* used to create the specialization.
+The `integral_constant` class template, when specialized with an integral type *T* and a value *v* of that type, represents an object that holds a constant of that integral type with the specified value. The member named `type` is an alias for the generated template specialization type, and the `value` member holds the value *v* used to create the specialization.
 
-The `bool_constant` template class is an explicit partial specialization of `integral_constant` that uses **bool** as the *T* argument.
+The `bool_constant` class template is an explicit partial specialization of `integral_constant` that uses **`bool`** as the *T* argument.
 
 ## Example
 
@@ -68,6 +69,6 @@ integral_constant<bool, false> == false
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[false_type](../standard-library/type-traits-typedefs.md#false_type)<br/>
-[true_type](../standard-library/type-traits-typedefs.md#true_type)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[false_type](../standard-library/type-traits-typedefs.md#false_type)\
+[true_type](../standard-library/type-traits-typedefs.md#true_type)

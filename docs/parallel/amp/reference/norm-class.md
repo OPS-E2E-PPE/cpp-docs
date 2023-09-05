@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: norm Class"
 title: "norm Class"
 ms.date: "11/04/2016"
-f1_keywords: ["norm", "AMP_SHORT_VECTORS/norm", "AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor"]
+f1_keywords: ["AMP_SHORT_VECTORS/norm", "AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor"]
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
 ---
 # norm Class
@@ -10,7 +11,7 @@ Represent a norm number. Each element is a floating point number in the range of
 
 ## Syntax
 
-```
+```cpp
 class norm;
 ```
 
@@ -46,11 +47,11 @@ class norm;
 
 **Namespace:** Concurrency::graphics
 
-##  <a name="ctor"></a> norm
+## <a name="ctor"></a> norm
 
 Default constructor. Initialize to 0.0f.
 
-```
+```cpp
 norm(
     void) restrict(amp,
     cpu);
@@ -88,6 +89,6 @@ The value used to initialize.
 *_Other*<br/>
 The object used to initialize.
 
-## See Also
+## See also
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

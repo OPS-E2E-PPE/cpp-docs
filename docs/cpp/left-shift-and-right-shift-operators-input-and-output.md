@@ -1,27 +1,30 @@
 ---
-title: "Left Shift and Right Shift Operators (&gt;&gt; and &lt;&lt;)"
-ms.date: "08/13/2018"
+description: "Learn more about: Left shift and right shift operators ('<<' and '>>')"
+title: "Left shift and right shift operators ('<<' and '>>')"
+ms.date: 12/09/2021
 f1_keywords: ["<<", ">>"]
 helpviewer_keywords: ["<< operator [C++], with specific objects", "left shift operators [C++]", "right shift operators [C++]", "bitwise-shift operators [C++]", ">> operator", "shift operators [C++]", "operators [C++], shift"]
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
 ---
-# Left Shift and Right Shift Operators (&gt;&gt; and &lt;&lt;)
+# Left shift and right shift operators (`<<` and `>>`)
 
-The bitwise shift operators are the right-shift operator (**&gt;&gt;**), which moves the bits of *shift-expression* to the right, and the left-shift operator (**&lt;&lt;**), which moves the bits of *shift-expression* to the left. <sup>1</sup>
+The bitwise shift operators are the right-shift operator (**`>>`**), which moves the bits of an integer or enumeration type expression to the right, and the left-shift operator (**`<<`**), which moves the bits to the left. <sup>1</sup>
 
 ## Syntax
 
-> *shift-expression* `<<` *additive-expression*
-> *shift-expression* `>>` *additive-expression*
+*`shift-expression`*:\
+&emsp;*`additive-expression`*\
+&emsp;*`shift-expression`* **`<<`** *`additive-expression`*\
+&emsp;*`shift-expression`* **`>>`** *`additive-expression`*
 
 ## Remarks
 
 > [!IMPORTANT]
-> The following descriptions and examples are valid on Windows for x86 and x64 architectures. The implementation of left-shift and right-shift operators is significantly different on Windows for ARM devices. For more information, see the "Shift Operators" section of the [Hello ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) blog post.
+> The following descriptions and examples are valid on Windows for x86 and x64 architectures. The implementation of left-shift and right-shift operators is significantly different on Windows for ARM devices. For more information, see the "Shift Operators" section of the [Hello ARM](https://devblogs.microsoft.com/cppblog/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c/) blog post.
 
 ## Left Shifts
 
-The left-shift operator causes the bits in *shift-expression* to be shifted to the left by the number of positions specified by *additive-expression*. The bit positions that have been vacated by the shift operation are zero-filled. A left shift is a logical shift (the bits that are shifted off the end are discarded, including the sign bit). For more information about the kinds of bitwise shifts, see [Bitwise shifts](https://en.wikipedia.org/wiki/Bitwise_shift).
+The left-shift operator causes the bits in *`shift-expression`* to be shifted to the left by the number of positions specified by *`additive-expression`*. The bit positions that have been vacated by the shift operation are zero-filled. A left shift is a logical shift (the bits that are shifted off the end are discarded, including the sign bit). For more information about the kinds of bitwise shifts, see [Bitwise shifts](https://en.wikipedia.org/wiki/Bitwise_shift).
 
 The following example shows left-shift operations using unsigned numbers. The example shows what is happening to the bits by representing the value as a bitset. For more information, see [bitset Class](../standard-library/bitset-class.md).
 
@@ -46,7 +49,7 @@ int main() {
 }
 ```
 
-If you left-shift a signed number so that the sign bit is affected, the result is undefined. The following example shows what happens in Visual C++ when a 1 bit is left-shifted into the sign bit position.
+If you left-shift a signed number so that the sign bit is affected, the result is undefined. The following example shows what happens when a 1 bit is left-shifted into the sign bit position.
 
 ```cpp
 #include <iostream>
@@ -71,10 +74,10 @@ int main() {
 
 ## Right Shifts
 
-The right-shift operator causes the bit pattern in *shift-expression* to be shifted to the right by the number of positions specified by *additive-expression*. For unsigned numbers, the bit positions that have been vacated by the shift operation are zero-filled. For signed numbers, the sign bit is used to fill the vacated bit positions. In other words, if the number is positive, 0 is used, and if the number is negative, 1 is used.
+The right-shift operator causes the bit pattern in *`shift-expression`* to be shifted to the right by the number of positions specified by *`additive-expression`*. For unsigned numbers, the bit positions that have been vacated by the shift operation are zero-filled. For signed numbers, the sign bit is used to fill the vacated bit positions. In other words, if the number is positive, 0 is used, and if the number is negative, 1 is used.
 
 > [!IMPORTANT]
-> The result of a right-shift of a signed negative number is implementation-dependent. Although Visual C++ uses the sign bit to fill vacated bit positions, there is no guarantee that other implementations also do so.
+> The result of a right-shift of a signed negative number is implementation-dependent. Although the Microsoft C++ compiler uses the sign bit to fill vacated bit positions, there is no guarantee that other implementations also do so.
 
 This example shows right-shift operations using unsigned numbers:
 
@@ -157,11 +160,11 @@ int main() {
 }
 ```
 
-## Shifts and Promotions
+## Shifts and promotions
 
-The expressions on both sides of a shift operator must be integral types. Integral promotions are performed according to the rules described in [Standard Conversions](standard-conversions.md). The type of the result is the same as the type of the promoted *shift-expression*.
+The expressions on both sides of a shift operator must be integral types. Integral promotions are performed according to the rules described in [Standard Conversions](standard-conversions.md). The type of the result is the same as the type of the promoted *`shift-expression`*.
 
-In the following example, a variable of type **char** is promoted to an **int**.
+In the following example, a variable of type **`char`** is promoted to an **`int`**.
 
 ```cpp
 #include <iostream>
@@ -180,9 +183,9 @@ int main() {
 }
 ```
 
-## Additional Details
+## Details
 
-The result of a shift operation is undefined if *additive-expression* is negative or if *additive-expression* is greater than or equal to the number of bits in the (promoted) *shift-expression*. No shift operation is performed if *additive-expression* is 0.
+The result of a shift operation is undefined if *`additive-expression`* is negative or if *`additive-expression`* is greater than or equal to the number of bits in the (promoted) *`shift-expression`*. No shift operation takes place if *`additive-expression`* is 0.
 
 ```cpp
 #include <iostream>
@@ -215,5 +218,5 @@ The value of `E1 >> E2` is `E1` right-shifted `E2` bit positions. If `E1` has an
 
 ## See also
 
-[Expressions with Binary Operators](../cpp/expressions-with-binary-operators.md)<br/>
-[C++ Built-in Operators, Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+[Expressions with binary operators](../cpp/expressions-with-binary-operators.md)<br/>
+[C++ built-in operators, precedence, and associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

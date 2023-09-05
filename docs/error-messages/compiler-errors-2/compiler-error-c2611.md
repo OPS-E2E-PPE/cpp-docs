@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2611"
 title: "Compiler Error C2611"
 ms.date: "11/04/2016"
 f1_keywords: ["C2611"]
@@ -13,7 +14,7 @@ The token is not an identifier.
 
 The following sample generates C2611:
 
-```
+```cpp
 // C2611.cpp
 // compile with: /c
 class C {

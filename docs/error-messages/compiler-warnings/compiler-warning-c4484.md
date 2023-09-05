@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning C4484"
 title: "Compiler Warning C4484"
 ms.date: "11/04/2016"
 f1_keywords: ["C4484"]
@@ -15,9 +16,9 @@ For more information, see:
 
 - [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [override](../../windows/override-cpp-component-extensions.md)
+- [override](../../extensions/override-cpp-component-extensions.md)
 
-- [new (new slot in vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+- [new (new slot in vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 C4484 is always issued as an error. Use the [warning](../../preprocessor/warning.md) pragma to suppress C4484.
 
@@ -25,7 +26,7 @@ C4484 is always issued as an error. Use the [warning](../../preprocessor/warning
 
 The following sample generates C4484.
 
-```
+```cpp
 // C4484.cpp
 // compile with: /clr
 ref struct A {

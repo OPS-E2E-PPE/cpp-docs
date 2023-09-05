@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4602"
 title: "Compiler Warning (level 1) C4602"
 ms.date: "11/04/2016"
 f1_keywords: ["C4602"]
@@ -11,7 +12,7 @@ ms.assetid: c1f0300f-e2a2-4c9e-a7c3-4c7318d10509
 
 If you use [pop_macro](../../preprocessor/pop-macro.md) for a particular macro, you must first have passed that macro name to [push_macro](../../preprocessor/push-macro.md). For example, the following sample generates C4602:
 
-```
+```cpp
 // C4602.cpp
 // compile with: /W1
 int main()

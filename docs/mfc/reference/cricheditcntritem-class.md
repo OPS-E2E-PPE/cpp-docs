@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CRichEditCntrItem Class"
 title: "CRichEditCntrItem Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CRichEditCntrItem", "AFXRICH/CRichEditCntrItem", "AFXRICH/CRichEditCntrItem::CRichEditCntrItem", "AFXRICH/CRichEditCntrItem::SyncToRichEditObject"]
@@ -37,7 +38,7 @@ A "rich edit control" is a window in which the user can enter and edit text. The
 
 This Windows Common control (and therefore the [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) and related classes) is available only to programs running under Windows 95/98 and Windows NT versions 3.51 and later.
 
-For an example of using rich edit container items in an MFC application, see the [WORDPAD](../../visual-cpp-samples.md) sample application.
+For an example of using rich edit container items in an MFC application, see the [WORDPAD](../../overview/visual-cpp-samples.md) sample application.
 
 ## Inheritance Hierarchy
 
@@ -55,7 +56,7 @@ For an example of using rich edit container items in an MFC application, see the
 
 **Header:** afxrich.h
 
-##  <a name="cricheditcntritem"></a>  CRichEditCntrItem::CRichEditCntrItem
+## <a name="cricheditcntritem"></a> CRichEditCntrItem::CRichEditCntrItem
 
 Call this function to create a `CRichEditCntrItem` object and add it to the container document.
 
@@ -68,7 +69,7 @@ CRichEditCntrItem(
 ### Parameters
 
 *preo*<br/>
-Pointer to an [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) structure which describes an OLE item. The new `CRichEditCntrItem` object is constructed around this OLE item. If *preo* is NULL, the client item is empty.
+Pointer to an [REOBJECT](/windows/win32/api/richole/ns-richole-reobject) structure which describes an OLE item. The new `CRichEditCntrItem` object is constructed around this OLE item. If *preo* is NULL, the client item is empty.
 
 *pContainer*<br/>
 Pointer to the container document that will contain this item. If *pContainer* is NULL, you must explicitly call [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) to add this client item to a document.
@@ -77,28 +78,28 @@ Pointer to the container document that will contain this item. If *pContainer* i
 
 This function does not perform any OLE initialization.
 
-For more information, see the [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) structure in the Windows SDK.
+For more information, see the [REOBJECT](/windows/win32/api/richole/ns-richole-reobject) structure in the Windows SDK.
 
-##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject
+## <a name="synctoricheditobject"></a> CRichEditCntrItem::SyncToRichEditObject
 
-Call this function to synchronize the device aspect, [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect), of this `CRichEditCntrltem` to that specified by *reo*.
+Call this function to synchronize the device aspect, [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect), of this `CRichEditCntrltem` to that specified by *reo*.
 
-```
+```cpp
 void SyncToRichEditObject(REOBJECT& reo);
 ```
 
 ### Parameters
 
 *reo*<br/>
-Reference to an [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) structure which describes an OLE item.
+Reference to an [REOBJECT](/windows/win32/api/richole/ns-richole-reobject) structure which describes an OLE item.
 
 ### Remarks
 
-For more information, see [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) in the Windows SDK.
+For more information, see [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) in the Windows SDK.
 
-## See Also
+## See also
 
-[MFC Sample WORDPAD](../../visual-cpp-samples.md)<br/>
+[MFC Sample WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem Class](../../mfc/reference/coleclientitem-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc Class](../../mfc/reference/cricheditdoc-class.md)<br/>

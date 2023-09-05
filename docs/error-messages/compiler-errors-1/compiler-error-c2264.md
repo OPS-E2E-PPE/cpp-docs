@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2264"
 title: "Compiler Error C2264"
 ms.date: "11/04/2016"
 f1_keywords: ["C2264"]
@@ -13,7 +14,7 @@ The function cannot be called due to an incorrect definition or declaration.
 
 The following sample generates C2264:
 
-```
+```cpp
 // C2264.cpp
 struct C {
    // Delete the following line to resolve.

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: TN022: Standard Commands Implementation"
 title: "TN022: Standard Commands Implementation"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.commands"]
@@ -8,7 +9,7 @@ ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
 # TN022: Standard Commands Implementation
 
 > [!NOTE]
->  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.
+> The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.
 
 This note describes the standard command implementations provided by MFC 2.0. Read [Technical Note 21](../mfc/tn021-command-and-message-routing.md) first because it describes the mechanisms used to implement many of the standard commands.
 
@@ -160,7 +161,7 @@ For each command ID, there is a standard message line prompt string that can be 
 
    Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class.
 
-   If you choose to implement this command, we recommend you use this command ID. See the MFC Tutorial sample [SCRIBBLE](../visual-cpp-samples.md) for an example implementation.
+   If you choose to implement this command, we recommend you use this command ID. See the MFC Tutorial sample [SCRIBBLE](../overview/visual-cpp-samples.md) for an example implementation.
 
 - ID_EDIT_COPY   Copies the current selection to the Clipboard.
 
@@ -377,7 +378,7 @@ For each command ID, there is a standard message line prompt string that can be 
 
    All OLE client applications should implement this command. AppWizard, with the OLE option, will create a skeleton implementation of `OnInsertObject` in your view class that you will have to complete.
 
-   See the MFC OLE sample [OCLIENT](../visual-cpp-samples.md) example for a complete implementation of this command.
+   See the MFC OLE sample [OCLIENT](../overview/visual-cpp-samples.md) example for a complete implementation of this command.
 
 - ID_OLE_EDIT_LINKS   Edits OLE links
 
@@ -429,8 +430,7 @@ Currently there is no standard implementation for these indicators.
 
 If you choose to implement these indicators, we recommend you use these indicator IDs and maintaining the ordering of the indicators in your status bar (that is, in this order: EXT, CAP, NUM, SCRL, OVR, REC).
 
-## See Also
+## See also
 
 [Technical Notes by Number](../mfc/technical-notes-by-number.md)<br/>
 [Technical Notes by Category](../mfc/technical-notes-by-category.md)
-

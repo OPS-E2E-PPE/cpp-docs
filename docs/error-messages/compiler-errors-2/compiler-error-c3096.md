@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3096"
 title: "Compiler Error C3096"
 ms.date: "11/04/2016"
 f1_keywords: ["C3096"]
@@ -11,4 +12,4 @@ ms.assetid: 56353c9a-800c-474f-b428-3e5d2a7afc9a
 
 An attribute was applied incorrectly.
 
-For more information, see [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+For more information, see [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).

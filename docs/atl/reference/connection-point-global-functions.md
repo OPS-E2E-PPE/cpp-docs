@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Connection Point Global Functions"
 title: "Connection Point Global Functions"
 ms.date: "11/04/2016"
 f1_keywords: ["atlbase/ATL::AtlAdvise", "atlbase/ATL::AtlUnadvise", "atlbase/ATL::AtlAdviseSinkMap"]
@@ -10,9 +11,9 @@ ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
 These functions provide support for connection points and sink maps.
 
 > [!IMPORTANT]
->  The functions listed in the following table cannot be used in applications that execute in the Windows Runtime.
+> The functions listed in the following table cannot be used in applications that execute in the Windows Runtime.
 
-|||
+|Function|Description|
 |-|-|
 |[AtlAdvise](#atladvise)|Creates a connection between an object's connection point and a client's sink.|
 |[AtlUnadvise](#atlunadvise)|Terminates the connection established through `AtlAdvise`.|
@@ -22,12 +23,12 @@ These functions provide support for connection points and sink maps.
 
 **Header:** atlbase.h
 
-##  <a name="atladvise"></a>  AtlAdvise
+## <a name="atladvise"></a> AtlAdvise
 
 Creates a connection between an object's connection point and a client's sink.
 
 > [!IMPORTANT]
->  This function cannot be used in applications that execute in the Windows Runtime.
+> This function cannot be used in applications that execute in the Windows Runtime.
 
 ```
 HRESULT    AtlAdvise(
@@ -63,12 +64,12 @@ The sink implements the outgoing interface supported by the connection point. Th
 
 [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]
 
-##  <a name="atlunadvise"></a>  AtlUnadvise
+## <a name="atlunadvise"></a> AtlUnadvise
 
 Terminates the connection established through [AtlAdvise](#atladvise).
 
 > [!IMPORTANT]
->  This function cannot be used in applications that execute in the Windows Runtime.
+> This function cannot be used in applications that execute in the Windows Runtime.
 
 ```
 HRESULT    AtlUnadvise(
@@ -96,12 +97,12 @@ A standard HRESULT value.
 
 [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]
 
-##  <a name="atladvisesinkmap"></a>  AtlAdviseSinkMap
+## <a name="atladvisesinkmap"></a> AtlAdviseSinkMap
 
 Call this function to advise or unadvise all entries in the object's sink event map.
 
 > [!IMPORTANT]
->  This function cannot be used in applications that execute in the Windows Runtime.
+> This function cannot be used in applications that execute in the Windows Runtime.
 
 ```
 HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
@@ -123,7 +124,7 @@ A standard HRESULT value.
 
 [!code-cpp[NVC_ATL_Windowing#92](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]
 
-## See Also
+## See also
 
 [Functions](../../atl/reference/atl-functions.md)<br/>
 [Connection Point Macros](../../atl/reference/connection-point-macros.md)

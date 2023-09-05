@@ -1,65 +1,72 @@
 ---
-title: "DUMPBIN Options"
-ms.date: "11/04/2016"
-f1_keywords: ["dumpbin"]
+title: "DUMPBIN options"
+description: "Reference guide to the Microsoft DUMPBIN utility command-line options."
+ms.date: "02/09/2020"
 helpviewer_keywords: ["DUMPBIN program, options"]
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
 ---
-# DUMPBIN Options
+# DUMPBIN options
 
-An option consists of an option specifier, which is either a dash ( - ) or a forward slash (/), followed by the name of the option. Option names cannot be abbreviated. Some options take arguments, specified after a colon (:). No spaces or tabs are allowed within an option specification. Use one or more spaces or tabs to separate option specifications on the command line. Option names and their keyword or file name arguments are not case sensitive. Most options apply to all binary files; a few apply only to certain types of files. By default, DUMPBIN sends information to standard output. Use the [/OUT](../../build/reference/out-dumpbin.md) option to send output to a file.
+An option consists of an *option specifier*, which is either a dash (`-`) or a forward slash (`/`), followed by the name of the option. Option names can't be abbreviated. Some options take arguments, specified after a colon (`:`). No spaces or tabs are allowed within an option specification. Use one or more spaces or tabs to separate option specifications on the command line. Option names and their keyword or file name arguments aren't case-sensitive. Most options apply to all binary files, but a few apply only to certain types of files. By default, DUMPBIN sends information to standard output. Use the [/OUT](out-dumpbin.md) option to send output to a file.
+
+## Options list
 
 DUMPBIN has the following options:
 
-- [/ALL](../../build/reference/all.md)
+- [/ALL](all.md)
 
-- [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md)
+- [/ARCHIVEMEMBERS](archivemembers.md)
 
-- [/CLRHEADER](../../build/reference/clrheader.md)
+- [/CLRHEADER](clrheader.md)
 
-- [/DEPENDENTS](../../build/reference/dependents.md)
+- [/DEPENDENTS](dependents.md)
 
-- [/DIRECTIVES](../../build/reference/directives.md)
+- [/DIRECTIVES](directives.md)
 
-- [/DISASM](../../build/reference/disasm.md)
+- [/DISASM\[:{BYTES\|NOBYTES}\]](disasm.md)
 
-- [/ERRORREPORT (dumpbin.exe)](../../build/reference/errorreport-dumpbin-exe.md)
+- [/ERRORREPORT:{NONE|PROMPT|QUEUE|SEND}](errorreport-dumpbin-exe.md) (Deprecated)
 
-- [/EXPORTS](../../build/reference/dash-exports.md)
+- [/EXPORTS](dash-exports.md)
 
-- [/FPO](../../build/reference/fpo.md)
+- [/FPO](fpo.md)
 
-- [/HEADERS](../../build/reference/headers.md)
+- [/HEADERS](headers.md)
 
-- [/IMPORTS](../../build/reference/imports-dumpbin.md)
+- [/IMPORTS\[:filename\]](imports-dumpbin.md)
 
-- [/LINENUMBERS](../../build/reference/linenumbers.md)
+- [/LINENUMBERS](linenumbers.md)
 
-- [/LINKERMEMBER](../../build/reference/linkermember.md)
+- [/LINKERMEMBER\[:{1|2}\]](linkermember.md)
 
-- [/LOADCONFIG](../../build/reference/loadconfig.md)
+- [/LOADCONFIG](loadconfig.md)
 
-- [/OUT](../../build/reference/out-dumpbin.md)
+- [/NOPDB](nopdb.md)
 
-- [/PDATA](../../build/reference/pdata.md)
+- [/OUT:filename](out-dumpbin.md)
 
-- [/PDBPATH](../../build/reference/pdbpath.md)
+- [/PDATA](pdata.md)
 
-- [/RANGE](../../build/reference/range.md)
+- [/PDBPATH\[:VERBOSE\]](pdbpath.md)
 
-- [/RAWDATA](../../build/reference/rawdata.md)
+- [/RANGEE:vaMin\[,vaMax\]](range.md)
 
-- [/RELOCATIONS](../../build/reference/relocations.md)
+- [/RAWDATA\[:{NONE\|1\|2\|4\|8}\[,#\]\]](rawdata.md)
 
-- [/SECTION](../../build/reference/section-dumpbin.md)
+- [/RELOCATIONS](relocations.md)
 
-- [/SUMMARY](../../build/reference/summary.md)
+- [/SECTION:name](section-dumpbin.md)
 
-- [/SYMBOLS](../../build/reference/symbols.md)
+- [/SUMMARY](summary.md)
 
-- [/TLS](../../build/reference/tls.md)
+- [/SYMBOLS](symbols.md)
 
-## See Also
+- [/TLS](tls.md)
 
-[C/C++ Build Tools](../../build/reference/c-cpp-build-tools.md)<br/>
-[DUMPBIN Reference](../../build/reference/dumpbin-reference.md)
+To list the options supported by DUMPBIN on the command line, use the **/?** option.
+
+## See also
+
+[Additional MSVC build tools](c-cpp-build-tools.md)\
+[DUMPBIN command line](dumpbin-command-line.md)\
+[DUMPBIN reference](dumpbin-reference.md)

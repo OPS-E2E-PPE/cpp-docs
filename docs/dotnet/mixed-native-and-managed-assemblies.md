@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Mixed (native and managed) assemblies"
 title: "Mixed (Native and Managed) Assemblies"
 ms.date: "09/18/2018"
 helpviewer_keywords: ["interop [C++], mixed assemblies", "/clr compiler option [C++], mixed assemblies", "managed code [C++], interoperability", "interoperability [C++], mixed assemblies", "mixed DLL loading [C++]", "mixed assemblies [C++], about mixed assemblies", "assemblies [C++], mixed", "mixed assemblies [C++]", "native code [C++], .NET interoperatibility"]
@@ -12,7 +13,7 @@ For example, an existing library consisting entirely of native C++ code can be b
 
 Visual C++ only supports the generation of mixed managed assemblies by using the **/clr** compiler option. The **/clr:pure** and **/clr:safe** compiler options are deprecated in Visual Studio 2015 and unsupported in Visual Studio 2017. If you require pure or verifiable managed assemblies, we recommend you create them by using C#.
 
-Earlier versions of the Visual C++ compiler toolset supported the generation of three distinct types of managed assemblies: mixed, pure, and verifiable. The latter two are discussed in [Pure and Verifiable Code (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Earlier versions of the Microsoft C++ compiler toolset supported the generation of three distinct types of managed assemblies: mixed, pure, and verifiable. The latter two are discussed in [Pure and Verifiable Code (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 ## In this section
 
@@ -43,7 +44,7 @@ Discusses how to ensure proper shutdown of a managed application that consumes a
 [How to: Create a Partially Trusted Application by Removing Dependency on the CRT Library DLL](../dotnet/create-a-partially-trusted-application.md)<br/>
 Discusses how to create a partially trusted Common Language Runtime application using Visual C++ by removing dependency on msvcm90.dll.
 
-For more information about coding guidelines for mixed assemblies, see the MSDN article [An Overview of Managed/Unmanaged Code Interoperability](https://msdn.microsoft.com/library/ms973872.aspx).
+For more information about coding guidelines for mixed assemblies, see [An Overview of Managed/Unmanaged Code Interoperability](/previous-versions/dotnet/articles/ms973872(v=msdn.10)).
 
 ## See also
 

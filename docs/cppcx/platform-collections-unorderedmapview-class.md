@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Collections::UnorderedMapView Class"
 title: "Platform::Collections::UnorderedMapView Class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -32,7 +33,7 @@ A type that provides a function object that can compare two key values for equal
 
 ### Remarks
 
-UnorderedMapView is a concrete C++ implementation of the [Windows::Foundation::Collections::IMapView\<K,V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interface that is passed across the application binary interface (ABI). For more information, see [Collections (C++/CX)](../cppcx/collections-c-cx.md).
+UnorderedMapView is a concrete C++ implementation of the [Windows::Foundation::Collections::IMapView\<K,V>](/uwp/api/windows.foundation.collections.imapview-2) interface that is passed across the application binary interface (ABI). For more information, see [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### Members
 
@@ -62,9 +63,9 @@ UnorderedMapView is a concrete C++ implementation of the [Windows::Foundation::C
 
 **Namespace:** Platform::Collections
 
-## <a name="first"></a>  UnorderedMapView::First Method
+## <a name="first"></a> UnorderedMapView::First Method
 
-Returns an iterator that specifies the first [Windows::Foundation::Collections::IKeyValuePair\<K,V>](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) element in the unordered map.
+Returns an iterator that specifies the first [Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) element in the unordered map.
 
 ### Syntax
 
@@ -80,9 +81,9 @@ An iterator that specifies the first element in the map view.
 
 ### Remarks
 
-A convenient way to hold the iterator returned by First() is to assign the return value to a variable that is declared with the **auto** type deduction keyword. For example, `auto x = myMapView->First();`.
+A convenient way to hold the iterator returned by First() is to assign the return value to a variable that is declared with the **`auto`** type deduction keyword. For example, `auto x = myMapView->First();`.
 
-## <a name="haskey"></a>  UnorderedMapView::HasKey Method
+## <a name="haskey"></a> UnorderedMapView::HasKey Method
 
 Determines whether the current UnorderedMap contains the specified key.
 
@@ -99,9 +100,9 @@ The key used to locate the element. The type of `key` is typename *K*.
 
 ### Return Value
 
-**true** if the key is found; otherwise, **false**.
+**`true`** if the key is found; otherwise, **`false`**.
 
-## <a name="lookup"></a>  UnorderedMapView::Lookup Method
+## <a name="lookup"></a> UnorderedMapView::Lookup Method
 
 Retrieves the value of type V that is associated with the specified key of type K.
 
@@ -120,9 +121,9 @@ The key used to locate an element in the UnorderedMapView. The type of `key` is 
 
 The value that is paired with the `key`. The type of the return value is typename *V*.
 
-## <a name="size"></a>  UnorderedMapView::Size Method
+## <a name="size"></a> UnorderedMapView::Size Method
 
-Returns the number of [Windows::Foundation::Collections::IKeyValuePair\<K,V>](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elements in the UnorderedMapView.
+Returns the number of [Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) elements in the UnorderedMapView.
 
 ### Syntax
 
@@ -134,7 +135,7 @@ virtual property unsigned int Size;
 
 The number of elements in the Unordered MapView.
 
-## <a name="split"></a>  UnorderedMapView::Split Method
+## <a name="split"></a> UnorderedMapView::Split Method
 
 Divides the current UnorderedMapView object into two UnorderedMapView objects. This method is non-operational.
 
@@ -160,7 +161,7 @@ The second part of the original UnorderedMapView object.
 
 This method is not operational; it does nothing.
 
-## <a name="ctor"></a>  UnorderedMapView::UnorderedMapView Constructor
+## <a name="ctor"></a> UnorderedMapView::UnorderedMapView Constructor
 
 Initializes a new instance of the UnorderedMapView class.
 
@@ -232,7 +233,7 @@ The input iterator of the first element in a range of elements used to initializ
 *last*<br/>
 The input iterator of the first element after a range of elements used to initialize the UnorderedMapView.
 
-## See Also
+## See also
 
 [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md)<br/>
-[Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)
+[Windows::Foundation::IMapView](/uwp/api/windows.foundation.collections.imapview-2)

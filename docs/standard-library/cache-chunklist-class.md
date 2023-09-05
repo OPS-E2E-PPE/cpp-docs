@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: cache_chunklist Class"
 title: "cache_chunklist Class"
 ms.date: "11/04/2016"
 f1_keywords: ["allocators/stdext::cache_chunklist", "allocators/stdext::cache_chunklist::allocate", "allocators/stdext::cache_chunklist::deallocate"]
@@ -18,13 +19,12 @@ class cache_chunklist
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*Sz*|The number of elements in the array to be allocated.|
+*Sz*\
+The number of elements in the array to be allocated.
 
 ## Remarks
 
-This template class uses **operator new** to allocate chunks of raw memory, suballocating blocks to allocate storage for a memory block when needed; it stores deallocated memory blocks in a separate free list for each chunk, and uses **operator delete** to deallocate a chunk when none of its memory blocks is in use.
+This class template uses **operator new** to allocate chunks of raw memory, suballocating blocks to allocate storage for a memory block when needed; it stores deallocated memory blocks in a separate free list for each chunk, and uses **operator delete** to deallocate a chunk when none of its memory blocks is in use.
 
 Each memory block holds *Sz* bytes of usable memory and a pointer to the chunk that it belongs to. Each chunk holds `Nelts` memory blocks, three pointers, an int and the data that **operator new** and **operator delete** require.
 
@@ -47,7 +47,7 @@ Each memory block holds *Sz* bytes of usable memory and a pointer to the chunk t
 
 **Namespace:** stdext
 
-## <a name="allocate"></a>  cache_chunklist::allocate
+## <a name="allocate"></a> cache_chunklist::allocate
 
 Allocates a block of memory.
 
@@ -57,9 +57,8 @@ void *allocate(std::size_t count);
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*count*|The number of elements in the array to be allocated.|
+*count*\
+The number of elements in the array to be allocated.
 
 ### Return Value
 
@@ -67,7 +66,7 @@ A pointer to the allocated object.
 
 ### Remarks
 
-## <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist
+## <a name="cache_chunklist"></a> cache_chunklist::cache_chunklist
 
 Constructs an object of type `cache_chunklist`.
 
@@ -77,7 +76,7 @@ cache_chunklist();
 
 ### Remarks
 
-## <a name="deallocate"></a>  cache_chunklist::deallocate
+## <a name="deallocate"></a> cache_chunklist::deallocate
 
 Frees a specified number of objects from storage beginning at a specified position.
 
@@ -87,13 +86,14 @@ void deallocate(void* ptr, std::size_t count);
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*ptr*|A pointer to the first object to be deallocated from storage.|
-|*count*|The number of objects to be deallocated from storage.|
+*ptr*\
+A pointer to the first object to be deallocated from storage.
+
+*count*\
+The number of objects to be deallocated from storage.
 
 ### Remarks
 
 ## See also
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

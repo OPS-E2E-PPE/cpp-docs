@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CSimpleMapEqualHelperFalse Class"
 title: "CSimpleMapEqualHelperFalse Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CSimpleMapEqualHelperFalse", "ATLSIMPCOLL/ATL::CSimpleMapEqualHelperFalse", "ATLSIMPCOLL/ATL::CSimpleMapEqualHelperFalse::IsEqualKey", "ATLSIMPCOLL/ATL::CSimpleMapEqualHelperFalse::IsEqualValue"]
@@ -35,7 +36,7 @@ The value comparison will always return false, and in addition, will call `ATLAS
 
 **Header:** atlsimpcoll.h
 
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelperFalse::IsEqualKey
+## <a name="isequalkey"></a> CSimpleMapEqualHelperFalse::IsEqualKey
 
 Tests two keys for equality.
 
@@ -59,7 +60,7 @@ Returns true if the keys are equal, false otherwise.
 
 This method calls [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md).
 
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelperFalse::IsEqualValue
+## <a name="isequalvalue"></a> CSimpleMapEqualHelperFalse::IsEqualValue
 
 Returns false.
 
@@ -75,7 +76,7 @@ Returns false.
 
 This method always returns false, and will call `ATLASSERT` with an argument of false if it is ever referenced. The purpose of `CSimpleMapEqualHelperFalse::IsEqualValue` is to force methods using comparisons to fail in a well-defined manner when equality tests have not been adequately defined.
 
-## See Also
+## See also
 
 [CSimpleMapEqualHelper Class](../../atl/reference/csimplemapequalhelper-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

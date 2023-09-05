@@ -1,8 +1,8 @@
 ---
+description: "Learn more about: Type and Variable Sizes in Inline Assembly"
 title: "Type and Variable Sizes in Inline Assembly"
 ms.date: "08/30/2018"
 ms.topic: "reference"
-f1_keywords: ["length", "Type"]
 helpviewer_keywords: ["variables, length", "size, getting in inline assembly", "size", "LENGTH operator", "TYPE operator", "SIZE operator", "inline assembly, operators", "variables, type", "variables, size"]
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
 ---
@@ -18,7 +18,7 @@ The **LENGTH**, **SIZE**, and **TYPE** operators have a limited meaning in inlin
 
 - The **TYPE** operator can return the size of a C or C++ type or variable. If the variable is an array, **TYPE** returns the size of a single element of the array.
 
-For example, if your program has an 8-element **int** array,
+For example, if your program has an 8-element **`int`** array,
 
 ```cpp
 int arr[8];
@@ -28,9 +28,9 @@ the following C and assembly expressions yield the size of `arr` and its element
 
 |__asm|C|Size|
 |-------------|-------|----------|
-|**LENGTH** arr|`sizeof`(arr)/`sizeof`(arr[0])|8|
-|**SIZE** arr|`sizeof`(arr)|32|
-|**TYPE** arr|`sizeof`(arr[0])|4|
+|**LENGTH** arr|`sizeof(arr)/sizeof(arr[0])`|8|
+|**SIZE** arr|`sizeof(arr)`|32|
+|**TYPE** arr|`sizeof(arr[0])`|4|
 
 **END Microsoft Specific**
 

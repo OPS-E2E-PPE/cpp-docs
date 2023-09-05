@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2422"
 title: "Compiler Error C2422"
 ms.date: "11/04/2016"
 f1_keywords: ["C2422"]
@@ -21,7 +22,7 @@ Inline assembly code incorrectly uses a segment override operator (colon) on an 
 
 The following sample generates C2422:
 
-```
+```cpp
 // C2422.cpp
 // processor: x86
 int main() {

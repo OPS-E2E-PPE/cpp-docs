@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4378"
 title: "Compiler Warning (level 1) C4378"
 ms.date: "11/04/2016"
 f1_keywords: ["C4378"]
@@ -11,11 +12,11 @@ Must obtain function pointers to run initializers; consider System::ModuleHandle
 
 Under **/clr**, initializer symbols contain function tokens, not functions pointers.  You need to convert tokens to pointers using <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
 
-## Example
+## Examples
 
 The following sample generates C4378.
 
-```
+```cpp
 // C4378.cpp
 // compile with: /W1 /clr /c
 typedef void (__cdecl *PF)(void);
@@ -55,11 +56,9 @@ int main () {
 }
 ```
 
-## Example
-
 The following sample shows how to resolve C4378.
 
-```
+```cpp
 // C4378_b.cpp
 // compile with: /clr
 #pragma warning(disable:4378)

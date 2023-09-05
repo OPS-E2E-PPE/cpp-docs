@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: _variant_t::Clear"
 title: "_variant_t::Clear"
 ms.date: "11/04/2016"
 f1_keywords: ["_variant_t::Clear", "_variant_t.Clear"]
@@ -13,7 +14,7 @@ Clears the encapsulated `VARIANT` object.
 
 ## Syntax
 
-```
+```cpp
 void Clear( );
 ```
 

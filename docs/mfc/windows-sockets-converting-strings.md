@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Windows Sockets: Converting Strings"
 title: "Windows Sockets: Converting Strings"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["Windows Sockets [MFC], multibyte character string conversion", "sockets [MFC], multibyte character string conversion issues", "string conversion, multibyte character strings"]
@@ -26,7 +27,6 @@ For more information, see:
 
 - [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)
 
-## See Also
+## See also
 
 [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2893"
 title: "Compiler Error C2893"
 ms.date: "11/04/2016"
 f1_keywords: ["C2893"]
@@ -17,7 +18,7 @@ In general, the way to resolve a C2893 error is to review the function's signatu
 
 C2893 occurs because `f`'s template parameter `T` is deduced to be `std::map<int,int>`, but `std::map<int,int>` has no member `data_type` (`T::data_type` can not be instantiated with `T = std::map<int,int>`.). The following sample generates C2893.
 
-```
+```cpp
 // C2893.cpp
 // compile with: /c /EHsc
 #include<map>

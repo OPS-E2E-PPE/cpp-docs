@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CWndClassInfo Class"
 title: "CWndClassInfo Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CWndClassInfo", "ATLWIN/ATL::CWndClassInfo", "ATLWIN/ATL::Register", "ATLWIN/ATL::m_atom", "ATLWIN/ATL::m_bSystemCursor", "ATLWIN/ATL::m_lpszCursorID", "ATLWIN/ATL::m_lpszOrigName", "ATLWIN/ATL::m_szAutoName", "ATLWIN/ATL::m_wc", "ATLWIN/ATL::pWndProc"]
@@ -10,7 +11,7 @@ ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
 This class provides methods for registering information for a window class.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -22,13 +23,13 @@ class CWndClassInfo
 
 ### Public Methods
 
-|||
+|Name|Description|
 |-|-|
 |[Register](#register)|Registers the window class.|
 
 ### Data Members
 
-|||
+|Name|Description|
 |-|-|
 |[m_atom](#m_atom)|Uniquely identifies the registered window class.|
 |[m_bSystemCursor](#m_bsystemcursor)|Specifies whether the cursor resource refers to a system cursor or to a cursor contained in a module resource.|
@@ -54,7 +55,7 @@ If you want to create a window based on an existing window class, derive your cl
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]
 
-For more information about window classes, see [Window Classes](/windows/desktop/winmsg/window-classes) in the Windows SDK.
+For more information about window classes, see [Window Classes](/windows/win32/winmsg/window-classes) in the Windows SDK.
 
 For more information about using windows in ATL, see the article [ATL Window Classes](../../atl/atl-window-classes.md).
 
@@ -62,7 +63,7 @@ For more information about using windows in ATL, see the article [ATL Window Cla
 
 **Header:** atlwin.h
 
-##  <a name="m_atom"></a>  CWndClassInfo::m_atom
+## <a name="m_atom"></a> CWndClassInfo::m_atom
 
 Contains the unique identifier for the registered window class.
 
@@ -70,7 +71,7 @@ Contains the unique identifier for the registered window class.
 ATOM m_atom;
 ```
 
-##  <a name="m_bsystemcursor"></a>  CWndClassInfo::m_bSystemCursor
+## <a name="m_bsystemcursor"></a> CWndClassInfo::m_bSystemCursor
 
 If TRUE, the system cursor resource will be loaded when the window class is registered.
 
@@ -84,7 +85,7 @@ Otherwise, the cursor resource contained in your module will be loaded.
 
 `CWndClassInfo` uses `m_bSystemCursor` only when the [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (the default in [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) or the [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) macro is specified. In this case, `m_bSystemCursor` is initialized to TRUE. For more information, see the [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) overview.
 
-##  <a name="m_lpszcursorid"></a>  CWndClassInfo::m_lpszCursorID
+## <a name="m_lpszcursorid"></a> CWndClassInfo::m_lpszCursorID
 
 Specifies either the name of the cursor resource or the resource identifier in the low-order word and zero in the high-order word.
 
@@ -98,7 +99,7 @@ When the window class is registered, the handle to the cursor identified by `m_l
 
 `CWndClassInfo` uses `m_lpszCursorID` only when the [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (the default in [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) or the [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) macro is specified. In this case, `m_lpszCursorID` is initialized to IDC_ARROW. For more information, see the [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) overview.
 
-##  <a name="m_lpszorigname"></a>  CWndClassInfo::m_lpszOrigName
+## <a name="m_lpszorigname"></a> CWndClassInfo::m_lpszOrigName
 
 Contains the name of an existing window class.
 
@@ -110,7 +111,7 @@ LPCTSTR m_lpszOrigName;
 
 `CWndClassInfo` uses `m_lpszOrigName` only when you include the [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro in your class definition. In this case, `CWndClassInfo` registers a window class based on the class named by `m_lpszOrigName`. For more information, see the [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) overview.
 
-##  <a name="m_szautoname"></a>  CWndClassInfo::m_szAutoName
+## <a name="m_szautoname"></a> CWndClassInfo::m_szAutoName
 
 Holds the name of the window class.
 
@@ -122,9 +123,9 @@ TCHAR m_szAutoName[13];
 
 `CWndClassInfo` uses `m_szAutoName` only if NULL is passed for the `WndClassName` parameter to [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), the [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) or [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ATL will construct a name when the window class is registered.
 
-##  <a name="m_wc"></a>  CWndClassInfo::m_wc
+## <a name="m_wc"></a> CWndClassInfo::m_wc
 
-Maintains the window class information in a [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa) structure.
+Maintains the window class information in a [WNDCLASSEX](/windows/win32/api/winuser/ns-winuser-wndclassexw) structure.
 
 ```
 WNDCLASSEX m_wc;
@@ -136,7 +137,7 @@ If you have specified the [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd
 
 If you have specified the [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro, `m_wc` contains information about a superclass — a window class that is based on an existing class but uses a different window procedure. [m_lpszOrigName](#m_lpszorigname) and [pWndProc](#pwndproc) save the existing window class's name and window procedure, respectively.
 
-##  <a name="pwndproc"></a>  CWndClassInfo::pWndProc
+## <a name="pwndproc"></a> CWndClassInfo::pWndProc
 
 Points to the window procedure of an existing window class.
 
@@ -148,7 +149,7 @@ WNDPROC pWndProc;
 
 `CWndClassInfo` uses `pWndProc` only when you include the [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro in your class definition. In this case, `CWndClassInfo` registers a window class that is based on an existing class but uses a different window procedure. The existing window class's window procedure is saved in `pWndProc`. For more information, see the [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) overview.
 
-##  <a name="register"></a>  CWndClassInfo::Register
+## <a name="register"></a> CWndClassInfo::Register
 
 Called by [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create) to register the window class if it has not yet been registered.
 
@@ -171,7 +172,7 @@ If you have specified the [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd
 
 If you have specified the [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro, `Register` registers a superclass — a window class that is based on an existing class but uses a different window procedure. The existing window class's window procedure is returned in *pProc*.
 
-## See Also
+## See also
 
 [CComControl Class](../../atl/reference/ccomcontrol-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2160"
 title: "Compiler Error C2160"
 ms.date: "11/04/2016"
 f1_keywords: ["C2160"]
@@ -13,7 +14,7 @@ A macro definition began with a token-pasting operator (##).
 
 The following sample generates C2160:
 
-```
+```cpp
 // C2160.cpp
 // compile with: /c
 #define mac(a,b) #a   // OK

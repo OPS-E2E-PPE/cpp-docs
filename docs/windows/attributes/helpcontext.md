@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: helpcontext"
 title: "helpcontext (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.helpcontext"]
@@ -22,7 +23,7 @@ The context ID of the help topic. See [HTML Help: Context-Sensitive Help for You
 
 ## Remarks
 
-The **helpcontext** C++ attribute has the same functionality as the [helpcontext](/windows/desktop/Midl/helpcontext) MIDL attribute.
+The **helpcontext** C++ attribute has the same functionality as the [helpcontext](/windows/win32/Midl/helpcontext) MIDL attribute.
 
 ## Example
 
@@ -30,18 +31,16 @@ See the example for [defaultvalue](defaultvalue.md) for an example of how to use
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**interface**, **typedef**, **class**, method, property|
+|**Applies to**|**interface**, **`typedef`**, **`class`**, method, property|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Interface Attributes](interface-attributes.md)<br/>

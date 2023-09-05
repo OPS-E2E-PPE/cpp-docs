@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Access to ODBC and SQL"
 title: "Access to ODBC and SQL"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["API calls [C++], calling DAO or ODBC directly", "Windows API [C++], calling from MFC", "ODBC API functions [C++]", "ODBC API functions [C++], calling from MFC", "SQL [C++], calling ODBC API functions", "ODBC [C++], API functions"]
@@ -12,6 +13,6 @@ Similarly, the database classes shield you from having to work much with [SQL](.
 
 For more information, see [ODBC: Calling ODBC API Functions Directly](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) and [SQL: Making Direct SQL Calls (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
 
-## See Also
+## See also
 
 [ODBC and MFC](../../data/odbc/odbc-and-mfc.md)

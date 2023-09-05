@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using CStringT"
 title: "Using CStringT"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["CStringT class, using"]
@@ -21,7 +22,6 @@ Explains how to export your own string class from a DLL using the CStringT<> tem
 [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md).<br/>
 Provides reference information about the shared `CStringT` class.
 
-## See Also
+## See also
 
 [Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: vararg"
 title: "vararg (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.vararg"]
@@ -17,7 +18,7 @@ Specifies that the function takes a variable number of arguments.
 
 ## Remarks
 
-The **vararg** C++ attribute has the same functionality as the [vararg](/windows/desktop/Midl/vararg) MIDL attribute.
+The **vararg** C++ attribute has the same functionality as the [vararg](/windows/win32/Midl/vararg) MIDL attribute.
 
 ## Example
 
@@ -39,9 +40,7 @@ __interface X : public IUnknown
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface method|
 |**Repeatable**|No|
@@ -50,7 +49,7 @@ __interface X : public IUnknown
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Method Attributes](method-attributes.md)

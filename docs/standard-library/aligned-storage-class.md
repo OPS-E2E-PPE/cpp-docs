@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: aligned_storage Class"
 title: "aligned_storage Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::aligned_storage"]
@@ -21,10 +22,10 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### Parameters
 
-*Len*<br/>
+*Len*\
 The object size.
 
-*Align*<br/>
+*Align*\
 The object alignment.
 
 ## Remarks
@@ -63,5 +64,5 @@ aligned to double == 8
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[alignment_of Class](../standard-library/alignment-of-class.md)<br/>
+[<type_traits>](type-traits.md)\
+[alignment_of Class](alignment-of-class.md)

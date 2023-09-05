@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4553"
 title: "Compiler Warning (level 1) C4553"
 ms.date: "11/04/2016"
 f1_keywords: ["C4553"]
@@ -13,7 +14,7 @@ If an expression statement has an operator with no side effect as the top of the
 
 The following sample generates C4553:
 
-```
+```cpp
 // C4553.cpp
 // compile with: /W1
 int func()

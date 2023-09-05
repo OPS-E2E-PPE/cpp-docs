@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Input Stream Manipulators"
 title: "Input Stream Manipulators"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["input streams, manipulators", "input stream objects"]
@@ -12,4 +13,4 @@ On extraction, the `hex` manipulator enables processing of various input formats
 
 ## See also
 
-[Input Streams](../standard-library/input-streams.md)<br/>
+[Input Streams](../standard-library/input-streams.md)

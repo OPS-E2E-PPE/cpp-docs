@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3048"
 title: "Compiler Error C3048"
 ms.date: "11/04/2016"
 f1_keywords: ["C3048"]
@@ -13,7 +14,7 @@ An atomic directive was incorrectly specified.
 
 The following sample generates C3048:
 
-```
+```cpp
 // C3048.cpp
 // compile with: /openmp vcomps.lib
 #include "omp.h"

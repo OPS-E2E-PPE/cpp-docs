@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2159"
 title: "Compiler Error C2159"
 ms.date: "11/04/2016"
 f1_keywords: ["C2159"]
@@ -13,7 +14,7 @@ A declaration contains more than one storage class.
 
 The following sample generates C2159:
 
-```
+```cpp
 // C2159.cpp
 // compile with: /c
 static int i;   // OK

@@ -1,27 +1,32 @@
 ---
+description: "Learn more about: _iob"
 title: "_iob"
-ms.date: "11/04/2016"
-apiname: ["_iob"]
-apilocation: ["msvcrt.dll"]
-apitype: "DLLExport"
-f1_keywords: ["_iob", "iob"]
+ms.date: 07/10/2023
+api_name: ["_iob"]
+api_location: ["msvcrt.dll"]
+api_type: ["DLLExport"]
+topic_type: ["apiref"]
+f1_keywords: ["_iob", "_IOB_ENTRIES", "STDIO/_IOB_ENTRIES"]
 helpviewer_keywords: ["_iob global variable", "iob global variable"]
-ms.assetid: 008ed376-8078-4bbd-bc6c-0677c63d0ff1
 ---
-# _iob
+# `_iob`
 
-The array of stdio control structures.
+The array of `stdio` control structures.
 
 ## Syntax
 
-```
+```C
 FILE _iob[_IOB_ENTRIES];
 ```
 
 ## Remarks
 
-`IOB_ENTRIES` is defined as 20 in stdio.h.
+Starting with Visual Studio 2015, `_IOB_ENTRIES` is defined as 3 with the introduction of the Universal CRT.
+It was previously defined as 20.
 
-## See Also
+Defined in `stdio.h`.
 
-[Global Variables](../c-runtime-library/global-variables.md)
+## See also
+
+[Global variables](./global-variables.md)\
+[Introducing the Universal CRT](https://devblogs.microsoft.com/cppblog/introducing-the-universal-crt/)

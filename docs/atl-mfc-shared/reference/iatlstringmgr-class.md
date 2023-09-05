@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IAtlStringMgr Class"
 title: "IAtlStringMgr Class"
 ms.date: "10/18/2018"
 f1_keywords: ["IAtlStringMgr", "ATLSIMPSTR/ATL::IAtlStringMgr", "ATLSIMPSTR/ATL::Allocate", "ATLSIMPSTR/ATL::Clone", "ATLSIMPSTR/ATL::Free", "ATLSIMPSTR/ATL::GetNilString", "ATLSIMPSTR/ATL::Reallocate"]
@@ -11,7 +12,7 @@ This class represents the interface to a `CStringT` memory manager.
 
 ## Syntax
 
-```
+```cpp
 __interface IAtlStringMgr
 ```
 
@@ -19,7 +20,7 @@ __interface IAtlStringMgr
 
 ### Methods
 
-|||
+|Name|Description|
 |-|-|
 |[Allocate](#allocate)|Call this method to allocate a new string data structure.|
 |[Clone](#clone)|Call this method to return a pointer to a new string manager for use with another instance of `CSimpleStringT`.|
@@ -37,11 +38,11 @@ You can also use this class to implement a custom memory manager for your custom
 
 **Header:** atlsimpstr.h
 
-##  <a name="allocate"></a>  IAtlStringMgr::Allocate
+## <a name="allocate"></a> IAtlStringMgr::Allocate
 
 Allocates a new string data structure.
 
-```
+```cpp
 CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 ```
 
@@ -58,20 +59,20 @@ The size (in bytes) of the character type used by the string manager.
 Returns a pointer to the newly allocated memory block.
 
 > [!NOTE]
->  Do not signal a failed allocation by throwing an exception. Instead, a failed allocation should be signaled by returning NULL.
+> Do not signal a failed allocation by throwing an exception. Instead, a failed allocation should be signaled by returning NULL.
 
 ### Remarks
 
 Call [IAtlStringMgr::Free](#free) or [IAtlStringMgr::ReAllocate](#reallocate) to free the memory allocated by this method.
 
 > [!NOTE]
->  For usage examples, see [Memory Management and CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+> For usage examples, see [Memory Management and CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-##  <a name="clone"></a>  IAtlStringMgr::Clone
+## <a name="clone"></a> IAtlStringMgr::Clone
 
 Returns a pointer to a new string manager for use with another instance of `CSimpleStringT`.
 
-```
+```cpp
 IAtlStringMgr* Clone() throw();
 ```
 
@@ -81,18 +82,18 @@ Returns a copy of the `IAtlStringMgr` object.
 
 ### Remarks
 
-Commonly called by the framework when a string manager is needed for a new string. In most cases, the **this** pointer is returned.
+Commonly called by the framework when a string manager is needed for a new string. In most cases, the **`this`** pointer is returned.
 
 However, if the memory manager does not support being used by multiple instances of `CSimpleStringT`, a pointer to a sharable string manager should be returned.
 
 > [!NOTE]
->  For usage examples, see [Memory Management and CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+> For usage examples, see [Memory Management and CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-##  <a name="free"></a>  IAtlStringMgr::Free
+## <a name="free"></a> IAtlStringMgr::Free
 
 Frees a string data structure.
 
-```
+```cpp
 void Free(CStringData* pData) throw();
 ```
 
@@ -106,13 +107,13 @@ A pointer to the memory block to be freed.
 Frees the specified memory block previously allocated by [Allocate](#allocate) or [Reallocate](../../atl/reference/iatlmemmgr-class.md#reallocate).
 
 > [!NOTE]
->  For usage examples, see [Memory Management and CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+> For usage examples, see [Memory Management and CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-##  <a name="getnilstring"></a>  IAtlStringMgr::GetNilString
+## <a name="getnilstring"></a> IAtlStringMgr::GetNilString
 
 Returns a pointer to a string data structure for an empty string.
 
-```
+```cpp
 CStringData* GetNilString() throw();
 ```
 
@@ -130,11 +131,11 @@ Call this function to return a representation of an empty string.
 > [!NOTE]
 > For usage examples, see [Memory Management and CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="reallocate"></a>  IAtlStringMgr::Reallocate
+## <a name="reallocate"></a> IAtlStringMgr::Reallocate
 
 Reallocates a string data structure.
 
-```
+```cpp
 CStringData* Reallocate(
     CStringData* pData,
     int nAllocLength,
@@ -165,7 +166,7 @@ Call [IAtlStringMgr::Free](#free) to free the memory allocated by this method.
 > [!NOTE]
 > For usage examples, see [Memory Management and CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC Shared Classes](../../atl-mfc-shared/atl-mfc-shared-classes.md)

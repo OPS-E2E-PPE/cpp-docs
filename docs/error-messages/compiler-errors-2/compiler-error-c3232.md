@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3232"
 title: "Compiler Error C3232"
 ms.date: "11/04/2016"
 f1_keywords: ["C3232"]
@@ -13,7 +14,7 @@ A generic type parameter was used incorrectly.
 
 The following sample generates C3232:
 
-```
+```cpp
 // C3232.cpp
 // compile with: /clr
 generic <class T>

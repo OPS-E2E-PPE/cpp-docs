@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Fatal Error C1128"
 title: "Fatal Error C1128"
 ms.date: "11/04/2016"
 f1_keywords: ["C1128"]
@@ -21,4 +22,4 @@ If possible, compile without debugging information.
 
 You may also need to have specific instantiations of templates in separate source code files, rather than having the compiler emit them.
 
-When porting code, C1128 will likely appear first when using the x64 compiler, and much later with the x86 compiler. x64 will have at least 4 sections associated with each function compiled **/Gy** or inlined from templates or class-inline: code, pdata, and debug info, and possibly xdata.  X86 won’t have the pdata.
+When porting code, C1128 will likely appear first when using the x64 compiler, and much later with the x86 compiler. x64 will have at least 4 sections associated with each function compiled **/Gy** or inlined from templates or class-inline: code, pdata, and debug info, and possibly xdata.  X86 won't have the pdata.

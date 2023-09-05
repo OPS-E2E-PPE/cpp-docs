@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: When to Initialize CWnd Objects"
 title: "When to Initialize CWnd Objects"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["window objects [MFC], when to initialize CWnd", "initializing CWnd objects [MFC]", "initializing objects [MFC], CWnd", "CWnd objects [MFC], when HWND is attached", "HWND, when attached to CWnd object", "CWnd objects [MFC], when to initialize"]
@@ -14,7 +15,6 @@ You cannot create your own child windows or call any Windows API functions in th
 
 - [Document/view creation](../mfc/document-view-creation.md)
 
-## See Also
+## See also
 
 [Using Frame Windows](../mfc/using-frame-windows.md)
-

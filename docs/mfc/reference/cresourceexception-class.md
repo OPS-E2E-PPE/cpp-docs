@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CResourceException Class"
 title: "CResourceException Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CResourceException", "AFXWIN/CResourceException", "AFXWIN/CResourceException::CResourceException"]
@@ -43,7 +44,7 @@ For more information on using `CResourceException`, see the article [Exception H
 
 **Header:** afxwin.h
 
-##  <a name="cresourceexception"></a>  CResourceException::CResourceException
+## <a name="cresourceexception"></a> CResourceException::CResourceException
 
 Constructs a `CResourceException` object.
 
@@ -55,8 +56,7 @@ CResourceException();
 
 Do not use this constructor directly, but rather call the global function [AfxThrowResourceException](exception-processing.md#afxthrowresourceexception). for more information about exceptions, see the article [Exception Handling in MFC](../exception-handling-in-mfc.md).
 
-## See Also
+## See also
 
 [CException Class](cexception-class.md)<br/>
 [Hierarchy Chart](../hierarchy-chart.md)
-

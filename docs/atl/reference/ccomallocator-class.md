@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComAllocator Class"
 title: "CComAllocator Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComAllocator", "ATLBASE/ATL::CComAllocator", "ATLBASE/ATL::CComAllocator::Allocate", "ATLBASE/ATL::CComAllocator::Free", "ATLBASE/ATL::CComAllocator::Reallocate"]
@@ -33,7 +34,7 @@ This class is used by [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) to
 
 **Header:** atlbase.h
 
-##  <a name="allocate"></a>  CComAllocator::Allocate
+## <a name="allocate"></a> CComAllocator::Allocate
 
 Call this static function to allocate memory.
 
@@ -52,9 +53,9 @@ Returns a void pointer to the allocated space, or NULL if there is insufficient 
 
 ### Remarks
 
-Allocates memory. See [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) for more details.
+Allocates memory. See [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc) for more details.
 
-##  <a name="free"></a>  CComAllocator::Free
+## <a name="free"></a> CComAllocator::Free
 
 Call this static function to free allocated memory.
 
@@ -69,9 +70,9 @@ Pointer to the allocated memory.
 
 ### Remarks
 
-Frees the allocated memory. See [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) for more details.
+Frees the allocated memory. See [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) for more details.
 
-##  <a name="reallocate"></a>  CComAllocator::Reallocate
+## <a name="reallocate"></a> CComAllocator::Reallocate
 
 Call this static function to reallocate memory.
 
@@ -93,9 +94,9 @@ Returns a void pointer to the allocated space, or NULL if there is insufficient 
 
 ### Remarks
 
-Resizes the amount of allocated memory. See [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc) for more details.
+Resizes the amount of allocated memory. See [CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc) for more details.
 
-## See Also
+## See also
 
 [CComHeapPtr Class](../../atl/reference/ccomheapptr-class.md)<br/>
 [CCRTAllocator Class](../../atl/reference/ccrtallocator-class.md)<br/>

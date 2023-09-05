@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: random_device Class"
 title: "random_device Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::random_device", "random/std::random_device::min", "random/std::random_device::max", "random/std::random_device::entropy", "random/std::random_device::operator()"]
@@ -35,10 +36,9 @@ public:
 
 ## Members
 
-|||
-|-|-|
-|[random_device](#random_device)|[entropy](#entropy)|
-|[random_device::operator()](#op_call)||
+[random_device](#random_device)\
+[entropy](#entropy)\
+[random_device::operator()](#op_call)
 
 ## Remarks
 
@@ -92,7 +92,7 @@ This example is simplistic and not representative of the general use-case for th
 
 **Namespace:** std
 
-## <a name="random_device"></a>  random_device::random_device
+## <a name="random_device"></a> random_device::random_device
 
 Constructs the generator.
 
@@ -104,7 +104,7 @@ random_device(const std::string& = "");
 
 The constructor initializes the generator as needed, ignoring the string parameter. Throws a value of an implementation-defined type derived from [exception](../standard-library/exception-class.md) if the `random_device` could not be initialized.
 
-## <a name="entropy"></a>  random_device::entropy
+## <a name="entropy"></a> random_device::entropy
 
 Estimates the randomness of the source.
 
@@ -116,7 +116,7 @@ double entropy() const noexcept;
 
 The member function returns an estimate of the randomness of the source, as measured in bits.
 
-## <a name="op_call"></a>  random_device::operator()
+## <a name="op_call"></a> random_device::operator()
 
 Returns a random value.
 
@@ -130,4 +130,4 @@ Returns values uniformly distributed in the closed interval [ `min, max`] as det
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4176"
 title: "Compiler Warning (level 1) C4176"
 ms.date: "11/04/2016"
 f1_keywords: ["C4176"]
@@ -13,7 +14,7 @@ The **component** pragma contains an invalid subcomponent. To exclude references
 
 ## Example
 
-```
+```cpp
 // C4176.cpp
 // compile with: /W1 /LD
 #pragma component(browser, off, i)  // C4176

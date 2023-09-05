@@ -1,13 +1,16 @@
 ---
+description: "Learn more about: front_insert_iterator Class"
 title: "front_insert_iterator Class"
-ms.date: "11/04/2016"
+ms.date: 06/15/2022
 f1_keywords: ["iterator/std::front_insert_iterator", "iterator/std::front_insert_iterator::container_type", "iterator/std::front_insert_iterator::reference"]
 helpviewer_keywords: ["std::front_insert_iterator [C++]", "std::front_insert_iterator [C++], container_type", "std::front_insert_iterator [C++], reference"]
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
+ms.custom: devdivchpfy22
 ---
+
 # front_insert_iterator Class
 
-Describes an iterator adaptor that satisfies the requirements of an output iterator. It inserts, rather than overwrites, elements into the front of a sequence and thus provides semantics that are different from the overwrite semantics provided by the iterators of the C++ sequence containers. The `front_insert_iterator` class is templatized on the type of container.
+Describes an iterator adaptor that satisfies the requirements of an output iterator. It inserts, rather than overwrites, elements into the front of a sequence. Thus it provides semantics that are different from the overwrite semantics provided by the iterators of the C++ sequence containers. The `front_insert_iterator` class is templatized on the type of container.
 
 ## Syntax
 
@@ -18,12 +21,12 @@ class front_insert_iterator;
 
 ### Parameters
 
-*Container*<br/>
+*Container*\
 The type of container into the front of which elements are to be inserted by a `front_insert_iterator`.
 
 ## Remarks
 
-The container must satisfy the requirements for a front insertion sequence where is it possible to insert elements at the beginning of the sequence in amortized constant time. The C++ Standard Library sequence containers defined by the [deque Class](../standard-library/deque-class.md) and [list Class](../standard-library/list-class.md) provide the needed `push_front` member function and satisfy these requirements. By contrast, sequence containers defined by the [vector Class](../standard-library/vector-class.md) do not satisfy these requirements and cannot be adapted to use with `front_insert_iterator`s. A `front_insert_iterator` must always be initialized with its container.
+The container must satisfy the requirements for a front insertion sequence where is it possible to insert elements at the beginning of the sequence in amortized constant time. The C++ Standard Library sequence containers defined by the [deque Class](../standard-library/deque-class.md) and [list Class](../standard-library/list-class.md) provide the needed `push_front` member function and satisfy these requirements. By contrast, sequence containers defined by the [vector Class](../standard-library/vector-class.md) don't satisfy these requirements and can't be adapted to use with `front_insert_iterator`s. A `front_insert_iterator` must always be initialized with its container.
 
 ### Constructors
 
@@ -52,7 +55,7 @@ The container must satisfy the requirements for a front insertion sequence where
 
 **Namespace:** std
 
-## <a name="container_type"></a>  front_insert_iterator::container_type
+## <a name="container_type"></a> front_insert_iterator::container_type
 
 A type that represents the container into which a front insertion is to be made.
 
@@ -94,7 +97,7 @@ The list L2 is: ( 40 10 20 ).
 */
 ```
 
-## <a name="front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator
+## <a name="front_insert_iterator"></a> front_insert_iterator::front_insert_iterator
 
 Creates an iterator that can insert elements at the front of a specified container object.
 
@@ -104,7 +107,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### Parameters
 
-*_Cont*<br/>
+*_Cont*\
 The container object into which the `front_insert_iterator` is to insert elements.
 
 ### Return Value
@@ -157,7 +160,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>  front_insert_iterator::operator\*
+## <a name="op_star"></a> front_insert_iterator::operator\*
 
 Dereferences the insert iterator returning the element it addresses.
 
@@ -171,7 +174,7 @@ The member function returns the value of the element addressed.
 
 ### Remarks
 
-Used to implement the output iterator expression **\*Iter** = **value**. If `Iter` is an iterator that addresses an element in a sequence, then **\*Iter** = **value** replaces that element with value and does not change the total number of elements in the sequence.
+Used to implement the output iterator expression **\*Iter** = **value**. If `Iter` is an iterator that addresses an element in a sequence, then **\*Iter** = **value** replaces that element with value and doesn't change the total number of elements in the sequence.
 
 ### Example
 
@@ -218,7 +221,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_add_add"></a>  front_insert_iterator::operator++
+## <a name="op_add_add"></a> front_insert_iterator::operator++
 
 Increments the `back_insert_iterator` to the next location into which a value may be stored.
 
@@ -269,7 +272,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="op_eq"></a>  front_insert_iterator::operator=
+## <a name="op_eq"></a> front_insert_iterator::operator=
 
 Appends (pushes) a value onto the front of the container.
 
@@ -281,7 +284,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### Parameters
 
-*val*<br/>
+*val*\
 The value to be assigned to the container.
 
 ### Return Value
@@ -290,13 +293,13 @@ A reference to the last element inserted at the front of the container.
 
 ### Remarks
 
-The first member operator evaluates `container.push_front( val)`, then returns `*this`.
+The first member operator evaluates `container.push_front( val)`, then returns **`*this`**.
 
 The second member operator evaluates
 
 `container->push_front((typename Container::value_type&&) val)`,
 
-then returns `*this`.
+then returns **`*this`**.
 
 ### Example
 
@@ -331,7 +334,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="reference"></a>  front_insert_iterator::reference
+## <a name="reference"></a> front_insert_iterator::reference
 
 A type that provides a reference to an element in a sequence controlled by the associated container.
 
@@ -377,6 +380,6 @@ The first element in the list L is: 30.
 
 ## See also
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

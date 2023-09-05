@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: library_block"
 title: "library_block (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.library_block"]
@@ -36,9 +37,7 @@ __interface IMyInterface {
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Anywhere|
 |**Repeatable**|No|
@@ -47,7 +46,7 @@ __interface IMyInterface {
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [Compiler Attributes](compiler-attributes.md)<br/>
 [Stand-Alone Attributes](stand-alone-attributes.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2500"
 title: "Compiler Error C2500"
 ms.date: "11/04/2016"
 f1_keywords: ["C2500"]
@@ -17,7 +18,7 @@ A class cannot be specified as a direct base class more than once. A class can b
 
 The following sample generates C2500:
 
-```
+```cpp
 // C2500.cpp
 // compile with: /c
 class A {};

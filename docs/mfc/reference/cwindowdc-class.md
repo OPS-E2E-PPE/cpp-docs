@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CWindowDC Class"
 title: "CWindowDC Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CWindowDC", "AFXWIN/CWindowDC", "AFXWIN/CWindowDC::CWindowDC", "AFXWIN/CWindowDC::m_hWnd"]
@@ -31,7 +32,7 @@ class CWindowDC : public CDC
 
 ## Remarks
 
-Calls the Windows function [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)at construction time and [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) at destruction time. This means that a `CWindowDC` object accesses the entire screen area of a [CWnd](../../mfc/reference/cwnd-class.md) (both client and nonclient areas).
+Calls the Windows function [GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc)at construction time and [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) at destruction time. This means that a `CWindowDC` object accesses the entire screen area of a [CWnd](../../mfc/reference/cwnd-class.md) (both client and nonclient areas).
 
 For more information on using `CWindowDC`, see [Device Contexts](../../mfc/device-contexts.md).
 
@@ -47,7 +48,7 @@ For more information on using `CWindowDC`, see [Device Contexts](../../mfc/devic
 
 Header: afxwin.h
 
-##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC
+## <a name="cwindowdc"></a> CWindowDC::CWindowDC
 
 Constructs a `CWindowDC` object that accesses the entire screen area (both client and nonclient) of the `CWnd` object pointed to by *pWnd*.
 
@@ -62,7 +63,7 @@ The window whose client area the device-context object will access.
 
 ### Remarks
 
-The constructor calls the Windows function [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc).
+The constructor calls the Windows function [GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc).
 
 An exception (of type `CResourceException`) is thrown if the Windows `GetWindowDC` call fails. A device context may not be available if Windows has already allocated all of its available device contexts. Your application competes for the five common display contexts available at any given time under Windows.
 
@@ -70,7 +71,7 @@ An exception (of type `CResourceException`) is thrown if the Windows `GetWindowD
 
 [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]
 
-##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd
+## <a name="m_hwnd"></a> CWindowDC::m_hWnd
 
 The HWND of the `CWnd` pointer is used to construct the `CWindowDC` object.
 
@@ -86,7 +87,7 @@ HWND m_hWnd;
 
   See the example for [CWindowDC::CWindowDC](#cwindowdc).
 
-## See Also
+## See also
 
 [CDC Class](../../mfc/reference/cdc-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Character Comparison"
 title: "Character Comparison"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["comparing characters", "MBCS [C++], character comparison", "characters [C++], comparing"]
@@ -22,7 +23,7 @@ Use the following tips:
 
    This ensures that both bytes of a double-byte character are compared for equality.
 
-## See Also
+## See also
 
 [MBCS Programming Tips](../text/mbcs-programming-tips.md)<br/>
 [Buffer Overflow](../text/buffer-overflow.md)

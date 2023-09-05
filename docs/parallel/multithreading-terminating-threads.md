@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Multithreading: Terminating Threads in MFC"
 title: "Multithreading: Terminating Threads in MFC"
 ms.date: "08/27/2018"
-f1_keywords: ["CREATE_SUSPENDED"]
 helpviewer_keywords: ["premature thread termination", "starting threads", "threading [MFC], terminating threads", "multithreading [C++], terminating threads", "threading [C++], stopping threads", "terminating threads", "stopping threads", "AfxEndThread method"]
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
 ---
@@ -15,21 +15,21 @@ Two normal situations cause a thread to terminate: the controlling function exit
 
 - [Retrieving the Exit Code of a Thread](#_core_retrieving_the_exit_code_of_a_thread)
 
-##  <a name="_core_normal_thread_termination"></a> Normal Thread Termination
+## <a name="_core_normal_thread_termination"></a> Normal Thread Termination
 
-For a worker thread, normal thread termination is simple: Exit the controlling function and return a value that signifies the reason for termination. You can use either the [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) function or a **return** statement. Typically, 0 signifies successful completion, but that is up to you.
+For a worker thread, normal thread termination is simple: Exit the controlling function and return a value that signifies the reason for termination. You can use either the [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) function or a **`return`** statement. Typically, 0 signifies successful completion, but that is up to you.
 
-For a user-interface thread, the process is just as simple: from within the user-interface thread, call [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) in the Windows SDK. The only parameter that `PostQuitMessage` takes is the exit code of the thread. As for worker threads, 0 typically signifies successful completion.
+For a user-interface thread, the process is just as simple: from within the user-interface thread, call [PostQuitMessage](/windows/win32/api/winuser/nf-winuser-postquitmessage) in the Windows SDK. The only parameter that `PostQuitMessage` takes is the exit code of the thread. As for worker threads, 0 typically signifies successful completion.
 
-##  <a name="_core_premature_thread_termination"></a> Premature Thread Termination
+## <a name="_core_premature_thread_termination"></a> Premature Thread Termination
 
 Terminating a thread prematurely is almost as simple: Call [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) from within the thread. Pass the desired exit code as the only parameter. This stops execution of the thread, deallocates the thread's stack, detaches all DLLs attached to the thread, and deletes the thread object from memory.
 
 `AfxEndThread` must be called from within the thread to be terminated. If you want to terminate a thread from another thread, you must set up a communication method between the two threads.
 
-##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Retrieving the Exit Code of a Thread
+## <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Retrieving the Exit Code of a Thread
 
-To get the exit code of either the worker or the user-interface thread, call the [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread) function. For information about this function, see the Windows SDK. This function takes the handle to the thread (stored in the `m_hThread` data member of `CWinThread` objects) and the address of a DWORD.
+To get the exit code of either the worker or the user-interface thread, call the [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread) function. For information about this function, see the Windows SDK. This function takes the handle to the thread (stored in the `m_hThread` data member of `CWinThread` objects) and the address of a DWORD.
 
 If the thread is still active, `GetExitCodeThread` places STILL_ACTIVE in the supplied DWORD address; otherwise, the exit code is placed in this address.
 
@@ -41,9 +41,9 @@ Retrieving the exit code of [CWinThread](../mfc/reference/cwinthread-class.md) o
 
 Either method allows you to determine why a `CWinThread` object terminated.
 
-## See Also
+## See also
 
 [Multithreading with C++ and MFC](multithreading-with-cpp-and-mfc.md)<br/>
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)<br/>
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)<br/>
-[ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread)
+[ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread)

@@ -1,8 +1,8 @@
 ---
+description: "Learn more about: Control Containment Classes"
 title: "Control Containment Classes (ATL)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
-f1_keywords: ["vc.atl.controls.containment"]
 helpviewer_keywords: ["control containment classes"]
 ms.assetid: e0812aee-c078-4ced-b967-247976552b9a
 ---
@@ -20,9 +20,8 @@ The following classes provide containment support for hosting controls:
 
 ## Related Articles
 
-[ATL Control Containment FAQ](../atl/atl-control-containment-faq.md)
+[ATL Control Containment FAQ](../atl/atl-control-containment-faq.yml)
 
-## See Also
+## See also
 
 [Class Overview](../atl/atl-class-overview.md)
-

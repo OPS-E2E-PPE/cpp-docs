@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2253"
 title: "Compiler Error C2253"
 ms.date: "11/04/2016"
 f1_keywords: ["C2253"]
@@ -9,11 +10,11 @@ ms.assetid: bd6445ae-b2c1-4669-9657-a8f4acf80b16
 
 'function' : pure specifier or abstract override specifier only allowed on virtual function
 
-A nonvirtual function is specified as pure `virtual`.
+A nonvirtual function is specified as pure **`virtual`**.
 
 The following sample generates C2253:
 
-```
+```cpp
 // C2253.cpp
 // compile with: /c
 class A {
@@ -25,7 +26,7 @@ public:
 
 The following sample generates C2253:
 
-```
+```cpp
 // C2253_2.cpp
 // compile with: /clr /c
 ref struct A {

@@ -1,11 +1,12 @@
 ---
-title: "vector&lt;bool&gt;::reference::operator="
+description: "Learn more about: vector<bool>::reference::operator="
+title: "vector<bool>::reference::operator="
 ms.date: "11/04/2016"
 f1_keywords: ["=", "operator=", "vector<bool>::reference::operator=", "std::vector<bool>::reference::operator="]
 helpviewer_keywords: ["= operator, with specific C++ Standard Library objects", "reference::operator="]
 ms.assetid: eed20d81-36b9-40b2-a3b6-340ed0bb4f34
 ---
-# vector&lt;bool&gt;::reference::operator=
+# `vector<bool>::reference::operator=`
 
 Assigns a Boolean value to a bit, or the value held by a referenced element to a bit.
 
@@ -19,10 +20,10 @@ reference& operator=(bool Val);
 
 ### Parameters
 
-*Right*<br/>
+*Right*\
 The element reference whose value is to be assigned to the bit.
 
-*Val*<br/>
+*Val*\
 The Boolean value to be assigned to the bit.
 
 ## Example
@@ -106,5 +107,5 @@ The original value of the 3rd element still stored in a bool: false
 
 ## See also
 
-[vector\<bool>::reference Class](../standard-library/vector-bool-reference-class.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[vector\<bool>::reference Class](../standard-library/vector-bool-reference-class.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

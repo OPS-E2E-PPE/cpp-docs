@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Introduction to COM and ATL"
 title: "Introduction to COM and ATL"
 ms.custom: "index-page"
 ms.date: "11/04/2016"
@@ -19,7 +20,7 @@ Discusses, briefly, what the Active Template Library (ATL) was designed for, tem
 
 ## Related Sections
 
-[The Component Object Model](/windows/desktop/com/the-component-object-model)<br/>
+[The Component Object Model](/windows/win32/com/the-component-object-model)<br/>
 The Windows SDK material on COM.
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
@@ -27,4 +28,3 @@ Provides links to conceptual topics on how to program using the Active Template 
 
 [ATL Class Overview](../atl/atl-class-overview.md)<br/>
 Provides reference information and links to the ATL classes.
-

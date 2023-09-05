@@ -1,54 +1,53 @@
 ---
-title: "&lt;numeric&gt; functions"
-ms.date: "11/04/2016"
-f1_keywords: ["numeric/std::accumulate", "numeric/std::adjacent_difference", "numeric/std::inner_product", "numeric/std::iota", "numeric/std::partial_sum"]
+title: "<numeric> functions"
+description: "Describes the function templates provided by the <numeric>header in the C++ Standard library."
+ms.date: "10/30/2019"
+f1_keywords: ["numeric/std::accumulate", "numeric/std::adjacent_difference", "numeric/std::exclusive_scan", "numeric/std::gcd", "numeric/std::inclusive_scan", "numeric/std::inner_product", "numeric/std::iota", "numeric/std::lcm", "numeric/std::partial_sum", "numeric/std::reduce", "numeric/std::transform_exclusive_scan", "numeric/std::transform_inclusive_scan", "numeric/std::transform_reduce"]
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
-helpviewer_keywords: ["std::accumulate [C++]", "std::adjacent_difference [C++]", "std::inner_product [C++]", "std::iota [C++]", "std::partial_sum [C++]"]
+helpviewer_keywords: ["std::accumulate [C++]", "std::adjacent_difference [C++]", "std::exclusive_scan [C++]", "std::gcd [C++]", "std::inclusive_scan [C++]", "std::inner_product [C++]", "std::iota [C++]", "std::lcm [C++]", "std::partial_sum [C++]", "std::reduce [C++]", "std::transform_exclusive_scan [C++]", "std::transform_inclusive_scan [C++]", "std::transform_reduce [C++]"]
 ---
-# &lt;numeric&gt; functions
+# `<numeric>` functions
 
-||||
-|-|-|-|
-|[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product](#inner_product)|
-|[iota](#iota)|[partial_sum](#partial_sum)|
+## <a name="accumulate"></a> accumulate
 
-## <a name="accumulate"></a>  accumulate
-
-Computes the sum of all the elements in a specified range including some initial value by computing successive partial sums or computes the result of successive partial results similarly obtained from using a specified binary operation other than the sum.
+Computes the sum of all the elements in a specified range, including some initial value, by computing successive partial sums. Or, computes the result of successive partial results of a specified binary operation.
 
 ```cpp
 template <class InputIterator, class Type>
-Type accumulate(InputIterator first, InputIterator last, Type val);
+Type accumulate(
+    InputIterator first,
+    InputIterator last,
+    Type init);
 
 template <class InputIterator, class Type, class BinaryOperation>
 Type accumulate(
     InputIterator first,
     InputIterator last,
-    Type val,
+    Type init,
     BinaryOperation binary_op);
 ```
 
 ### Parameters
 
-*first*<br/>
-An input iterator addressing the first element in the range to be summed or combined according to a specified binary operation.
+*first*\
+An input iterator addressing the first element in the range to either sum or combine by using *binary_op*.
 
-*last*<br/>
-An input iterator addressing the last element in the range to be summed or combined according to a specified binary operation that is one position beyond the final element actually included in the iterated accumulation.
+*last*\
+An input iterator addressing the last element in the range to either sum or combine by using *binary_op*, that's one position beyond the final element actually included in the iterated accumulation.
 
-*val*<br/>
-An initial value to which each element is in turn added or combined with according to a specified binary operation.
+*init*\
+An initial value to which each element is in turn added or combined by using *binary_op*.
 
-*binary_op*<br/>
-The binary operation that is to be applied to the each element in the specified range and the result of its previous applications.
+*binary_op*\
+The binary operation to apply to each element in the specified range and the result of its previous applications.
 
-### Return Value
+### Return value
 
-The sum of *val* and all the elements in the specified range for the first template function, or, for the second template function, the result of applying the binary operation specified, instead of the sum operation, to ( *PartialResult, \*Iter*), where *PartialResult* is the result of previous applications of the operation and `Iter` is an iterator pointing to an element in the range.
+The sum of *init* and all the elements in the specified range for the first template function, or, for the second template function, the result of applying the binary operation *binary_op* instead of the sum operation, to (*PartialResult, *in_iter*), where *PartialResult* is the result of previous applications of the operation and *in_iter* is an iterator pointing to the next element in the range.
 
 ### Remarks
 
-The initial value insures that there will be a well-defined result when the range is empty, in which case *val* is returned. The binary operation does not need to be associative or commutative. The result is initialized to the initial value *val* and then *result* = `binary_op` ( *result*, <strong>\*</strong>`Iter`) is calculated iteratively through the range, where `Iter` is an iterator pointing to successive element in the range. The range must be valid and the complexity is linear with the size of the range. The return type of the binary operator must be convertible to **Type** to ensure closure during the iteration.
+The initial value ensures that there's a well-defined result when the range is empty, in which case *init* is returned. The binary operation doesn't need to be associative or commutative. The result is initialized to the initial value *init* and then *result* = *binary_op*(*result*, *in_iter*) is calculated iteratively through the range, where *in_iter* is an iterator pointing to each successive element in the range. The range must be valid, and the complexity is linear with the size of the range. The return type of the binary operator must be convertible to **Type** to ensure closure during the iteration.
 
 ### Example
 
@@ -149,9 +148,9 @@ The vector of partial products is:
 ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
-## <a name="adjacent_difference"></a>  adjacent_difference
+## <a name="adjacent_difference"></a> adjacent_difference
 
-Computes the successive differences between each element and its predecessor in an input range and outputs the results to a destination range or computes the result of a generalized procedure where the difference operation is replaced by another, specified binary operation.
+Computes the successive differences between each element and its predecessor in an input range. Outputs the results to a destination range. Or, computes the result of a generalized procedure where the difference operation is replaced by another, specified binary operation.
 
 ```cpp
 template <class InputIterator, class OutIterator>
@@ -166,35 +165,54 @@ OutputIterator adjacent_difference(
     InputIterator last,
     OutputIterator result,
     BinaryOperation binary_op);
+
+template <class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 adjacent_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
+template <class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation>
+ForwardIterator2 adjacent_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op);
 ```
 
 ### Parameters
 
-*first*<br/>
+*exec*\
+An execution policy.
+
+*first*\
 An input iterator addressing the first element in the input range whose elements are to be differenced with their respective predecessors or where the pair of values is to be operated on by another specified binary operation.
 
-*last*<br/>
+*last*\
 An input iterator addressing the last element in the input range whose elements are to be differenced with their respective predecessors or where the pair of values is to be operated on by another specified binary operation.
 
-*result*<br/>
+*result*\
 An output iterator addressing the first element a destination range where the series of differences or the results of the specified operation is to be stored.
 
-*binary_op*<br/>
-The binary operation that is to be applied in the generalized operation replacing the operation of subtraction in the differencing procedure.
+*binary_op*\
+The binary operation to apply in the generalized operation, replacing the operation of subtraction in the differencing procedure.
 
-### Return Value
+### Return value
 
-An output iterator addressing the end of the destination range: `result` + ( `last` - `first`).
+An output iterator addressing the end of the destination range: `result` + (`last` - `first`).
 
 ### Remarks
 
-The output iterator _ *result* is allowed to be the same iterator as the input iterator * first,* so that `adjacent_difference`s may be computed in place.
+The output iterator *result* is allowed to be the same iterator as the input iterator *first*, so that `adjacent_difference` values may be computed in place.
 
-For a sequence of values *a*1, *a*2, *a*3, in an input range, the first template function stores successive `partial_difference`s *a*1, *a*2 - *a*1, a3 - *a*2, in the destination range.
+For a sequence of values *a*1, *a*2, *a*3, in an input range, the first template function stores successive `adjacent_difference` values *a*1, *a*2 - *a*1, a3 - *a*2, in the destination range.
 
-For a sequence of values *a*1, *a*2, *a*3, in an input range, the second template function stores successive `partial_difference`s *a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2, in the destination range.
+For a sequence of values *a*1, *a*2, *a*3, in an input range, the second template function stores successive `adjacent_difference` values *a*1, *a*2 *binary_op* *a*1, *a*3 *binary_op* *a*2, in the destination range.
 
-The binary operation `binary_op` is not required to be either associative or commutative, because the order of operations applies is completely specified.
+The binary operation *binary_op* isn't required to be either associative or commutative, because the order of operations applied is specified.
 
 ### Example
 
@@ -257,7 +275,164 @@ int main( )
 }
 ```
 
-## <a name="inner_product"></a>  inner_product
+## <a name="exclusive_scan"></a> exclusive_scan
+
+Computes an exclusive prefix sum operation by using either `std::plus<>()` or a specified binary operator over a range, given an initial value. Writes the results to the range beginning at the specified destination. An *exclusive prefix* sum means the *n*th input element isn't included in the *n*th sum. Overloads that include an execution policy argument execute according to the specified policy.
+
+```cpp
+template<class InputIterator, class OutputIterator, class Type>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init);
+
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op);
+```
+
+### Parameters
+
+*exec*\
+An execution policy.
+
+*first*\
+An input iterator addressing the first element in the range to either sum or combine by using *binary_op*.
+
+*last*\
+An input iterator addressing the last element in the range to either sum or combine by using *binary_op*, that's one position beyond the final element actually included in the iterated accumulation.
+
+*result*\
+An output iterator addressing the first element a destination range where the series of sums or the results of the specified operation is to be stored.
+
+*init*\
+An initial value to which each element is in turn added or combined by using *binary_op*.
+
+*binary_op*\
+The binary operation to apply to each element in the specified range and the result of its previous applications.
+
+### Return value
+
+An output iterator addressing the end of the destination range: *result* + (*last* - *first*).
+
+## <a name="gcd"></a> gcd
+
+Computes the greatest common divisor of the integers m and n.
+
+```cpp
+template <class M, class N>
+constexpr common_type_t<M,N> gcd(M m, N n);
+```
+
+### Parameters
+
+*m*, *n*\
+Values of integral type.
+
+### Return value
+
+Returns the greatest common divisor of the absolute values of *m* and *n*, or zero if both *m* and *n* are zero. The results are undefined if the absolute values of *m* or *n* aren't representable as values of type `common_type_t<M,N>`.
+
+## <a name="inclusive_scan"></a> inclusive_scan
+
+Computes an inclusive prefix sum operation by using either `std::plus<>()` or a specified binary operator over a range, given an initial value. Writes the results to the range beginning at the specified destination. An *inclusive prefix* sum means the *n*th input element is included in the *n*th sum. Overloads that include an execution policy argument execute according to the specified policy.
+
+```cpp
+template<class InputIterator, class OutputIterator>
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation>
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class Type>
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation>
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation, class Type>
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    Type init);
+```
+
+### Parameters
+
+*exec*\
+An execution policy.
+
+*first*\
+An input iterator addressing the first element in the range to either sum or combine by using *binary_op*.
+
+*last*\
+An input iterator addressing the last element in the range to either sum or combine by using *binary_op*, that's one position beyond the final element actually included in the iterated accumulation.
+
+*result*\
+An output iterator addressing the first element a destination range where the series of sums or the results of the specified operation is to be stored.
+
+*init*\
+An initial value to which each element is in turn added or combined by using *binary_op*.
+
+*binary_op*\
+The binary operation to apply to each element in the specified range and the result of its previous applications.
+
+### Return value
+
+An output iterator addressing the end of the destination range: *result* + (*last* - *first*).
+
+## <a name="inner_product"></a> inner_product
 
 Computes the sum of the element-wise product of two ranges and adds it to a specified initial value or computes the result of a generalized procedure where the sum and product binary operations are replaced by other specified binary operations.
 
@@ -267,55 +442,55 @@ Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val);
+    Type             init);
 
 template <class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
 Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val,
-    BinaryOperation1  binary_op1,
-    BinaryOperation2  binary_op2);
+    Type             init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
 ```
 
 ### Parameters
 
-*first1*<br/>
+*first1*\
 An input iterator addressing the first element in the first range whose inner product or generalized inner product with the second range is to be computed.
 
-*last1*<br/>
+*last1*\
 An input iterator addressing the last element in the first range whose inner product or generalized inner product with the second range is to be computed.
 
-*first2*<br/>
+*first2*\
 An input iterator addressing the first element in the second range whose inner product or generalized inner product with the first range is to be computed.
 
-*val*<br/>
+*init*\
 An initial value to which the inner product or generalized inner product between the ranges is to be added.
 
-*binary_op1*<br/>
+*binary_op1*\
 The binary operation that replaces the inner product operation of sum applied to the element-wise products in the generalization of the inner product.
 
-*binary_op2*<br/>
+*binary_op2*\
 The binary operation that replaces the inner product element-wise operation of multiply in the generalization of the inner product.
 
-### Return Value
+### Return value
 
 The first member function returns the sum of the element-wise products and adds to it the specified initial value. So for ranges of values *a*i and *b*i, it returns:
 
-`val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n )
+*init* + (*a*1 \* *b*1) + (*a*2 \* *b*2) + ... + (*a*n \* *b*n)
 
-by iteratively replacing *val* with `val` + ( *a*i \* *b*i ).
+by iteratively replacing *init* with *init* + (*a*i \* *b*i).
 
 The second member function returns:
 
-`val` *binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n )
+*init* *binary_op1* (*a*1 *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
 
-by iteratively replacing *val* with `val` *binary_op1* ( *a*i *binary_op2* *b*i ).
+by iteratively replacing *init* with *init* *binary_op1* (*a*i *binary_op2* *b*i).
 
 ### Remarks
 
-The initial value ensures that there will be a well-defined result when the range is empty, in which case *val* is returned. The binary operations do not need to be associative or commutative. The range must be valid and the complexity is linear with the size of the range. The return type of the binary operator must be convertible to **Type** to ensure closure during the iteration.
+The initial value ensures that there's a well-defined result when the range is empty. In that case, *init* is returned. The binary operations don't need to be associative or commutative. The range must be valid, and the complexity is linear with the size of the range. The return type of the binary operator must be convertible to **Type** to ensure closure during the iteration.
 
 ### Example
 
@@ -407,9 +582,9 @@ int main()
 }
 ```
 
-## <a name="iota"></a>  iota
+## <a name="iota"></a> iota
 
-Stores a starting value, beginning with the first element and filling with successive increments of that value (` value++`) in each of the elements in the interval `[ first,  last)`.
+Stores a starting value, beginning with the first element and filling with successive increments of that value (`value++`) in each of the elements in the interval `[first,  last)`.
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -418,16 +593,14 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### Parameters
 
-*first*<br/>
+*first*\
 An input iterator that addresses the first element in the range to be filled.
 
-*last*<br/>
+*last*\
 An input iterator that addresses the last element in the range to be filled.
 
-*value*<br/>
-The starting value to store in the first element and to successively increment for subsequent elements.
-
-### Remarks
+*value*\
+The starting value to store in the first element and to successively increment for later elements.
 
 ### Example
 
@@ -471,9 +644,16 @@ int main(void)
 }
 ```
 
-## <a name="partial_sum"></a>  partial_sum
+## <a name="lcm"></a> lcm
 
-Computes a series of sums in an input range from the first element through the *i*th element and stores the result of each such sum in the *i*th element of a destination range or computes the result of a generalized procedure where the sum operation is replaced by another specified binary operation.
+```cpp
+template <class M, class N>
+constexpr common_type_t<M,N> lcm(M m, N n);
+```
+
+## <a name="partial_sum"></a> partial_sum
+
+Computes a series of sums in an input range from the first element through the *n*th element and stores the result of each such sum in the *n*th element of a destination range. Or, computes the result of a generalized procedure where the sum operation is replaced by another specified binary operation.
 
 ```cpp
 template <class InputIterator, class OutIt>
@@ -492,31 +672,31 @@ OutputIterator partial_sum(
 
 ### Parameters
 
-*first*<br/>
+*first*\
 An input iterator addressing the first element in the range to be partially summed or combined according to a specified binary operation.
 
-*last*<br/>
+*last*\
 An input iterator addressing the last element in the range to be partially summed or combined according to a specified binary operation that is one position beyond the final element actually included in the iterated accumulation.
 
-*result*<br/>
-An output iterator addressing the first element a destination range where the series of partial sums or the results of the specified operation is to be stored.
+*result*\
+An output iterator addressing the first element of a destination range to store the series of partial sums, or the successive results of the specified binary operation.
 
-*binary_op*<br/>
-The binary operation that is to be applied in the generalized operation replacing the operation of sum in the partial sum procedure.
+*binary_op*\
+The binary operation to apply in the generalized operation, replacing the operation of sum in the partial sum procedure.
 
-### Return Value
+### Return value
 
-An output iterator addressing the end of the destination range: `result` + (`last` - `first`),
+An output iterator addressing the end of the destination range: *result* + (*last* - *first*).
 
 ### Remarks
 
 The output iterator *result* is allowed to be the same iterator as the input iterator *first*, so that partial sums may be computed in place.
 
-For a sequence of values *a*1, *a*2, *a*3,  in an input range, the first template function stores successive partial sums in the destination range, where the *i*th element is given by (  ( ( *a*1 + *a*2) + *a*3) *a*i).
+For a sequence of values *a*1, *a*2, ... *a*x, in an input range, the first template function stores successive partial sums in the destination range. The *n*th element is given by (*a*1 + *a*2 + *a*3 + ... + *a*n).
 
-For a sequence of values *a*1, *a*2, *a*3,  in an input range, the second template function stores successive partial sums in the destination range, where the ith element is given by (  ( ( *a*1 `binary_op` *a*2 ) `binary_op` *a*3 ) *a*i).
+For a sequence of values *a*1, *a*2, *a*3, in an input range, the second template function stores successive partial results in the destination range. The *n*th element is given by ((...((*a*1 *binary_op* *a*2) *binary_op* *a*3) *binary_op* ... ) *binary_op* *a*n).
 
-The binary operation *binary_op* is not required to be either associative or commutative, because the order of operations applies is completely specified.
+The binary operation *binary_op* isn't required to be either associative or commutative, because the order of operations applied is specified.
 
 ### Example
 
@@ -578,6 +758,278 @@ int main( )
 }
 ```
 
-## See also
+## <a name="reduce"></a> reduce
 
-[\<numeric>](../standard-library/numeric.md)<br/>
+Reduces all the elements in a specified range, possibly including some initial value, by computing sums in an arbitrary and possibly permuted order. Or, reduces by computing the results of a specified binary operation. Overloads that include an execution policy argument execute according to the specified policy.
+
+```cpp
+template<class InputIterator>
+typename iterator_traits<InputIterator>::value_type reduce(
+    InputIterator first,
+    InputIterator last);
+
+template<class InputIterator, class Type>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init);
+
+template<class InputIterator, class Type, class BinaryOperation>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op);
+
+template<class ExecutionPolicy, class ForwardIterator>
+typename iterator_traits<ForwardIterator>::value_type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op);
+```
+
+### Parameters
+
+*exec*\
+An execution policy.
+
+*first*\
+An input iterator addressing the first element in the range to either sum or combine by using *binary_op*.
+
+*last*\
+An input iterator addressing the last element in the range to either sum or combine by using *binary_op*, that's one position beyond the final element actually included in the iterated accumulation.
+
+*result*\
+An output iterator addressing the first element a destination range where the series of sums or the results of the specified operation is to be stored.
+
+*init*\
+An initial value to which each element is in turn added or combined by using *binary_op*.
+
+*binary_op*\
+The binary operation to apply to each element in the specified range and the result of its previous applications.
+
+### Return value
+
+The result of applying *binary_op* or `std::plus<>()` to *init* and all the elements in the specified range to (*PartialResult, *in_iter*), where *PartialResult* is the result of previous applications of the operation, and *in_iter* is an iterator pointing to some element in the range. In overloads that don't specify *init*, the *init* value used is equivalent to `typename iterator_traits<InputIterator>::value_type{}`.
+
+### Remarks
+
+`reduce` behavior is non-deterministic unless *binary_op* is associative and commutative. The behavior is undefined if *binary_op* modifies any element, or invalidates any iterator in the interval \[*first*, *last*], inclusive.
+
+## <a name="transform_exclusive_scan"></a> transform_exclusive_scan
+
+Transforms the elements of a range with a specified unary operator, then computes an exclusive prefix sum operation by using either `std::plus<>()` or a specified binary operator over the range, given an initial value. Writes the results to the range beginning at the specified destination. An *exclusive prefix* sum means the *n*th input element isn't included in the *n*th sum. Overloads that include an execution policy argument execute according to the specified policy. The summation may be performed in an arbitrary order.
+
+```cpp
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+```
+
+### Parameters
+
+*exec*\
+An execution policy.
+
+*first*\
+An input iterator addressing the first element in the range to either sum or combine by using *binary_op*.
+
+*last*\
+An input iterator addressing the last element in the range to either sum or combine by using *binary_op*, that's one position beyond the final element actually included in the iterated accumulation.
+
+*result*\
+An output iterator addressing the first element a destination range where the series of sums or the results of the specified operation is to be stored.
+
+*init*\
+An initial value to which each element is in turn added or combined by using *binary_op*.
+
+*binary_op*\
+The binary operation to apply to each element in the specified range and the result of its previous applications.
+
+*unary_op*\
+The unary operation to apply to each element in the specified range.
+
+## <a name="transform_inclusive_scan"></a> transform_inclusive_scan
+
+Transforms the elements of a range with a specified unary operator, then computes an inclusive prefix sum operation by using either `std::plus<>()` or a specified binary operator over the range, given an initial value. Writes the results to the range beginning at the specified destination. An *inclusive prefix* sum means the *n*th input element is included in the *n*th sum. Overloads that include an execution policy argument execute according to the specified policy. The summation may be performed in an arbitrary order.
+
+```cpp
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation, class Type>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation, class Type>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
+```
+
+### Parameters
+
+*exec*\
+An execution policy.
+
+*first*\
+An input iterator addressing the first element in the range to either sum or combine by using *binary_op*.
+
+*last*\
+An input iterator addressing the last element in the range to either sum or combine by using *binary_op*, that's one position beyond the final element actually included in the iterated accumulation.
+
+*result*\
+An output iterator addressing the first element a destination range where the series of sums or the results of the specified operation is to be stored.
+
+*binary_op*\
+The binary operation to apply to each element in the specified range and the result of its previous applications.
+
+*unary_op*\
+The unary operation to apply to each element in the specified range.
+
+*init*\
+An initial value to which each element is in turn added or combined by using *binary_op*.
+
+## <a name="transform_reduce"></a> transform_reduce
+
+Transforms a range of elements, then applies a functor that reduces the transformed elements in arbitrary order. Effectively, a `transform` followed by a `reduce`.
+
+```cpp
+template<class InputIterator1, class InputIterator2, class Type>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init);
+
+template<class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class InputIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+```
+
+### Parameters
+
+*exec*\
+An execution policy.
+
+*first*\
+An input iterator addressing the first element in the range to either sum or combine by using *binary_op*.
+
+*first1*\
+An input iterator addressing the first element in the range to either sum or combine by using *binary_op1*.
+
+*last*\
+An input iterator addressing the last element in the range to either sum or combine by using *binary_op*, that's one position beyond the final element actually included in the iterated accumulation.
+
+*last1*\
+An input iterator addressing the last element in the range to either sum or combine by using *binary_op1*, that's one position beyond the final element actually included in the iterated accumulation.
+
+*result*\
+An output iterator addressing the first element a destination range where the series of sums or the results of the specified operation is to be stored.
+
+*init*\
+An initial value to which each element is in turn added or combined by using *binary_op*.
+
+*binary_op*\
+The binary operation to apply to each element in the specified range and the result of its previous applications.
+
+*unary_op*\
+The unary operation to apply to each element in the specified range.
+
+### Return value
+
+The transformed then reduced result.

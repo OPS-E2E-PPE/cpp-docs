@@ -1,17 +1,18 @@
 ---
+description: "Learn more about: How to: Wrap Native Class for Use by C#"
 title: "How to: Wrap Native Class for Use by C#"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["native code [C++], Visual C# and", "classes [C++], Visual C# and"]
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
 ---
-# How to: Wrap Native Class for Use by C#
+# How to: Wrap Native Class for Use by C\#
 
 This sample shows how to wrap a native C++ class so it can be consumed by code authored in C#, or other .NET language.
 
 ## Example
 
-```
+```cpp
 // wrap_native_class_for_mgd_consumption.cpp
 // compile with: /clr /LD
 #include <windows.h>
@@ -59,6 +60,6 @@ private:
 };
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

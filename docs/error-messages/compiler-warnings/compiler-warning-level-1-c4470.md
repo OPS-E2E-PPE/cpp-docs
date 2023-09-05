@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4470"
 title: "Compiler Warning (level 1) C4470"
 ms.date: "11/04/2016"
 f1_keywords: ["C4470"]
@@ -21,7 +22,7 @@ have no effect under [/clr](../../build/reference/clr-common-language-runtime-co
 
 The following sample generates C4470:
 
-```
+```cpp
 // C4470.cpp
 // compile with: /clr /W1 /LD
 #pragma float_control(except, on)   // C4470

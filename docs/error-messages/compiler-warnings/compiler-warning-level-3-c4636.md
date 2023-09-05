@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4636"
 title: "Compiler Warning (level 3) C4636"
 ms.date: "11/04/2016"
 f1_keywords: ["C4636"]
@@ -15,7 +16,7 @@ A tag, such as `cref`, did not have a value.
 
 The following sample generates C4636.
 
-```
+```cpp
 // C4636.cpp
 // compile with: /clr /doc /W3 /c
 /// <see cref=''/>

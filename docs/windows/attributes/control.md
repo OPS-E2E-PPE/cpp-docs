@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: control"
 title: "control (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.control"]
@@ -17,7 +18,7 @@ Specifies that the user-defined type is a control.
 
 ## Remarks
 
-The **control** attribute implies the [coclass](coclass.md) attribute. The **control** C++ attribute has the same functionality as the [control](/windows/desktop/Midl/control) MIDL attribute.
+The **control** attribute implies the [coclass](coclass.md) attribute. The **control** C++ attribute has the same functionality as the [control](/windows/win32/Midl/control) MIDL attribute.
 
 ## Example
 
@@ -38,18 +39,16 @@ class CTest : public ICustom {};
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**class**, **struct**|
+|**Applies to**|**`class`**, **`struct`**|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Class Attributes](class-attributes.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleIPFrameWnd Class"
 title: "COleIPFrameWnd Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COleIPFrameWnd", "AFXOLE/COleIPFrameWnd", "AFXOLE/COleIPFrameWnd::COleIPFrameWnd", "AFXOLE/COleIPFrameWnd::OnCreateControlBars", "AFXOLE/COleIPFrameWnd::RepositionFrame"]
@@ -52,7 +53,7 @@ For more information on using `COleIPFrameWnd`, see the article [Activation](../
 
 **Header:** afxole.h
 
-##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd
+## <a name="coleipframewnd"></a> COleIPFrameWnd::COleIPFrameWnd
 
 Constructs a `COleIPFrameWnd` object and initializes its in-place state information, which is stored in a structure of type OLEINPLACEFRAMEINFO.
 
@@ -62,9 +63,9 @@ COleIPFrameWnd();
 
 ### Remarks
 
-For more information, see [OLEINPLACEFRAMEINFO](/windows/desktop/api/oleidl/ns-oleidl-tagoifi) in the Windows SDK.
+For more information, see [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oleinplaceframeinfo) in the Windows SDK.
 
-##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars
+## <a name="oncreatecontrolbars"></a> COleIPFrameWnd::OnCreateControlBars
 
 The framework calls the `OnCreateControlBars` function when an item is activated for in-place editing.
 
@@ -94,7 +95,7 @@ Nonzero on success; otherwise, 0.
 
 The default implementation does nothing. Override this function to perform any special processing required when control bars are created.
 
-##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame
+## <a name="repositionframe"></a> COleIPFrameWnd::RepositionFrame
 
 The framework calls the `RepositionFrame` member function to lay out control bars and reposition the in-place editing window so all of it is visible.
 
@@ -116,9 +117,9 @@ Pointer to a `RECT` structure or a `CRect` object containing the in-place frame 
 
 Layout of control bars in the container window differs from that performed by a non-OLE frame window. The non-OLE frame window calculates the positions of control bars and other objects from a given frame-window size, as in a call to [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout). The client area is what remains after space for control bars and other objects is subtracted. A `COleIPFrameWnd` window, on the other hand, positions toolbars in accordance with a given client area. In other words, `CFrameWnd::RecalcLayout` works "from the outside in," whereas `COleIPFrameWnd::RepositionFrame` works "from the inside out."
 
-## See Also
+## See also
 
-[MFC Sample HIERSVR](../../visual-cpp-samples.md)<br/>
+[MFC Sample HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)

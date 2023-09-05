@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3035"
 title: "Compiler Error C3035"
 ms.date: "11/04/2016"
 f1_keywords: ["C3035"]
@@ -13,7 +14,7 @@ An ordered clause was ill formed.
 
 The following sample generates C3035:
 
-```
+```cpp
 // C3035.cpp
 // compile with: /openmp /link vcomps.lib
 int main() {

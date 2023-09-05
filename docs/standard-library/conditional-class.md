@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: conditional Class"
 title: "conditional Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::conditional"]
@@ -21,18 +22,18 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### Parameters
 
-*B*<br/>
+*B*\
 The value that determines the selected type.
 
-*T1*<br/>
+*T1*\
 The type result when B is true.
 
-*T2*<br/>
+*T2*\
 The type result when B is false.
 
 ## Remarks
 
-The template member typedef `conditional<B, T1, T2>::type` evaluates to *T1* when *B* evaluates to **true**, and evaluates to *T2* when *B* evaluates to **false**.
+The template member typedef `conditional<B, T1, T2>::type` evaluates to *T1* when *B* evaluates to **`true`**, and evaluates to *T2* when *B* evaluates to **`false`**.
 
 ## Requirements
 
@@ -42,4 +43,4 @@ The template member typedef `conditional<B, T1, T2>::type` evaluates to *T1* whe
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

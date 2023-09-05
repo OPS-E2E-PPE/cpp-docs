@@ -1,8 +1,8 @@
 ---
+description: "Learn more about: Running Objects Classes"
 title: "Running Objects Classes (ATL)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
-f1_keywords: ["vc.atl.objects.running"]
 helpviewer_keywords: ["object classes, running", "objects [C++], running objects classes"]
 ms.assetid: b4d63c41-81fd-4000-96c5-ea0a011f4308
 ---
@@ -16,7 +16,6 @@ The following class provides support for running objects:
 
 [ATL Tutorial](../atl/active-template-library-atl-tutorial.md)
 
-## See Also
+## See also
 
 [Class Overview](../atl/atl-class-overview.md)
-

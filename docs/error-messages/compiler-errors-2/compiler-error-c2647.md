@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2647"
 title: "Compiler Error C2647"
 ms.date: "11/04/2016"
 f1_keywords: ["C2647"]
@@ -13,7 +14,7 @@ The left operand of a pointer-to-member operator ( `->*` or `.*` ) cannot be imp
 
 The following sample generates C2647:
 
-```
+```cpp
 // C2647.cpp
 class C {};
 class D {};

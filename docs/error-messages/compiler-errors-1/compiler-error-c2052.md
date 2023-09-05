@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2052"
 title: "Compiler Error C2052"
 ms.date: "11/04/2016"
 f1_keywords: ["C2052"]
@@ -13,7 +14,7 @@ Case expressions must be integer constants.
 
 The following sample generates C2052:
 
-```
+```cpp
 // C2052.cpp
 int main() {
    int index = 0;

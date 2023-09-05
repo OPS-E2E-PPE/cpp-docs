@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2142"
 title: "Compiler Error C2142"
 ms.date: "11/04/2016"
 f1_keywords: ["C2142"]
@@ -13,7 +14,7 @@ One declaration of the function contains a variable parameter list. Another decl
 
 The following sample generates C2142:
 
-```
+```c
 // C2142.c
 // compile with: /Za /c
 void func();

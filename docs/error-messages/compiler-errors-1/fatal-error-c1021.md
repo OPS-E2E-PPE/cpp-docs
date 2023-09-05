@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Fatal Error C1021"
 title: "Fatal Error C1021"
 ms.date: "11/04/2016"
 f1_keywords: ["C1021"]
@@ -13,7 +14,7 @@ invalid preprocessor command 'string'
 
 The following sample generates C1021:
 
-```
+```cpp
 // C1021.cpp
 #BadPreProcName    // C1021 delete line
 ```

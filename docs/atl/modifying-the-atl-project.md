@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Modifying the ATL Project"
 title: "Modifying the ATL Project"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["controls [ATL], adding to composite controls", "Dialog editor, working with composite controls", "composite controls, adding controls"]
@@ -12,8 +13,7 @@ To add additional ActiveX or Windows controls, add a new resource script and the
 
 To handle any necessary events from the ActiveX controls, see [Adding Functionality to the Composite Control](../atl/adding-functionality-to-the-composite-control.md).
 
-## See Also
+## See also
 
 [Composite Control Fundamentals](../atl/atl-composite-control-fundamentals.md)<br/>
 [How to: Create a Resource Script File](../windows/how-to-create-a-resource-script-file.md)
-

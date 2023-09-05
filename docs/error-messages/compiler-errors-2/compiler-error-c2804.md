@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2804"
 title: "Compiler Error C2804"
 ms.date: "11/04/2016"
 f1_keywords: ["C2804"]
@@ -11,11 +12,11 @@ binary 'operator operator' has too many parameters
 
 The overloaded binary operator member function is declared with more than one parameter. The first operand parameter of a binary operator member function, whose type is the operator's enclosing type, is implied.
 
-## Example
+## Examples
 
 The following sample generates C2804 and shows how to fix it.
 
-```
+```cpp
 // C2804.cpp
 // compile by using: cl /c /W4 C2804.cpp
 class X {
@@ -30,11 +31,9 @@ int main() {
 }
 ```
 
-## Example
-
 The following sample generates C2804 and shows how to fix it.
 
-```
+```cpp
 // C2804_2.cpp
 // compile with: /clr /c
 ref struct Y {

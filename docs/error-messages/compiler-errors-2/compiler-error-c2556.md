@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2556"
 title: "Compiler Error C2556"
 ms.date: "11/04/2016"
 f1_keywords: ["C2556"]
@@ -13,7 +14,7 @@ The overloaded functions have different return types but the same parameter list
 
 The following sample generates C2556:
 
-```
+```cpp
 // C2556.cpp
 // compile with: /c
 class C {

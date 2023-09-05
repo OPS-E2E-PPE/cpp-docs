@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: propget"
 title: "propget (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.propget"]
@@ -17,7 +18,7 @@ Specifies a property accessor function.
 
 ## Remarks
 
-The **propget** C++ attribute has the same functionality as the [propget](/windows/desktop/Midl/propget) MIDL attribute.
+The **propget** C++ attribute has the same functionality as the [propget](/windows/win32/Midl/propget) MIDL attribute.
 
 ## Example
 
@@ -25,9 +26,7 @@ See the example for [bindable](bindable.md) for a sample use of **propget**.
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Method|
 |**Repeatable**|No|
@@ -36,7 +35,7 @@ See the example for [bindable](bindable.md) for a sample use of **propget**.
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Method Attributes](method-attributes.md)<br/>

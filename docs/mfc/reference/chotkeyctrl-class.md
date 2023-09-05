@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CHotKeyCtrl Class"
 title: "CHotKeyCtrl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CHotKeyCtrl", "AFXCMN/CHotKeyCtrl", "AFXCMN/CHotKeyCtrl::CHotKeyCtrl", "AFXCMN/CHotKeyCtrl::Create", "AFXCMN/CHotKeyCtrl::CreateEx", "AFXCMN/CHotKeyCtrl::GetHotKey", "AFXCMN/CHotKeyCtrl::GetHotKeyName", "AFXCMN/CHotKeyCtrl::GetKeyName", "AFXCMN/CHotKeyCtrl::SetHotKey", "AFXCMN/CHotKeyCtrl::SetRules"]
@@ -43,7 +44,7 @@ This control (and therefore the `CHotKeyCtrl` class) is available only to progra
 
 When the user has chosen a key combination, the application can retrieve the specified key combination from the control and use the WM_SETHOTKEY message to set up the hot key in the system. Whenever the user presses the hot key thereafter, from any part of the system, the window specified in the WM_SETHOTKEY message receives a WM_SYSCOMMAND message specifying SC_HOTKEY. This message activates the window that receives it. The hot key remains valid until the application that called WM_SETHOTKEY exits.
 
-This mechanism is different from the hot key support that depends on the WM_HOTKEY message and the Windows [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) and [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) functions.
+This mechanism is different from the hot key support that depends on the WM_HOTKEY message and the Windows [RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey) and [UnregisterHotKey](/windows/win32/api/winuser/nf-winuser-unregisterhotkey) functions.
 
 For more information on using `CHotKeyCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 
@@ -61,7 +62,7 @@ For more information on using `CHotKeyCtrl`, see [Controls](../../mfc/controls-m
 
 **Header:** afxcmn.h
 
-##  <a name="chotkeyctrl"></a>  CHotKeyCtrl::CHotKeyCtrl
+## <a name="chotkeyctrl"></a> CHotKeyCtrl::CHotKeyCtrl
 
 Constructs a `CHotKeyCtrl` object.
 
@@ -69,7 +70,7 @@ Constructs a `CHotKeyCtrl` object.
 CHotKeyCtrl();
 ```
 
-##  <a name="create"></a>  CHotKeyCtrl::Create
+## <a name="create"></a> CHotKeyCtrl::Create
 
 Creates a hot key control and attaches it to a `CHotKeyCtrl` object.
 
@@ -84,10 +85,10 @@ virtual BOOL Create(
 ### Parameters
 
 *dwStyle*<br/>
-Specifies the hot key control's style. Apply any combination of control styles. See [Common Control Styles](/windows/desktop/Controls/common-control-styles) in the Windows SDK for more information.
+Specifies the hot key control's style. Apply any combination of control styles. See [Common Control Styles](/windows/win32/Controls/common-control-styles) in the Windows SDK for more information.
 
 *rect*<br/>
-Specifies the hot key control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT structure](/windows/desktop/api/windef/ns-windef-tagrect).
+Specifies the hot key control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT structure](/windows/win32/api/windef/ns-windef-rect).
 
 *pParentWnd*<br/>
 Specifies the hot key control's parent window, usually a [CDialog](../../mfc/reference/cdialog-class.md). It must not be NULL.
@@ -105,7 +106,7 @@ You construct a `CHotKeyCtrl` object in two steps. First, call the constructor a
 
 If you want to use extended windows styles with your control, call [CreateEx](#createex) instead of `Create`.
 
-##  <a name="createex"></a>  CHotKeyCtrl::CreateEx
+## <a name="createex"></a> CHotKeyCtrl::CreateEx
 
 Call this function to create a control (a child window) and associate it with the `CHotKeyCtrl` object.
 
@@ -121,13 +122,13 @@ virtual BOOL CreateEx(
 ### Parameters
 
 *dwExStyle*<br/>
-Specifies the extended style of the control being created. For a list of extended Windows styles, see the *dwExStyle* parameter for [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) in the Windows SDK.
+Specifies the extended style of the control being created. For a list of extended Windows styles, see the *dwExStyle* parameter for [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) in the Windows SDK.
 
 *dwStyle*<br/>
-Specifies the hot key control's style. Apply any combination of control styles. For more information, see [Common Control Styles](/windows/desktop/Controls/common-control-styles) in the Windows SDK.
+Specifies the hot key control's style. Apply any combination of control styles. For more information, see [Common Control Styles](/windows/win32/Controls/common-control-styles) in the Windows SDK.
 
 *rect*<br/>
-A reference to a [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of *pParentWnd*.
+A reference to a [RECT](/windows/win32/api/windef/ns-windef-rect) structure describing the size and position of the window to be created, in client coordinates of *pParentWnd*.
 
 *pParentWnd*<br/>
 A pointer to the window that is the control's parent.
@@ -143,7 +144,7 @@ Nonzero if successful; otherwise 0.
 
 Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.
 
-##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey
+## <a name="gethotkey"></a> CHotKeyCtrl::GetHotKey
 
 Retrieves the virtual key code and modifier flags of a keyboard shortcut from a hot key control.
 
@@ -180,7 +181,7 @@ In the first overloaded method, a DWORD that contains the virtual key code and m
 
 The virtual key code and the modifier keys together define the keyboard shortcut.
 
-##  <a name="gethotkeyname"></a>  CHotKeyCtrl::GetHotKeyName
+## <a name="gethotkeyname"></a> CHotKeyCtrl::GetHotKeyName
 
 Call this member function to get the localized name of the hot key.
 
@@ -196,7 +197,7 @@ The localized name of the currently selected hot key. If there is no selected ho
 
 The name that this member function returns comes from the keyboard driver. You can install a non-localized keyboard driver in a localized version of Windows, and vice versa.
 
-##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName
+## <a name="getkeyname"></a> CHotKeyCtrl::GetKeyName
 
 Call this member function to get the localized name of the key assigned to a specified virtual key code.
 
@@ -226,11 +227,11 @@ The key name that this function returns comes from the keyboard driver, so you c
 
 [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]
 
-##  <a name="sethotkey"></a>  CHotKeyCtrl::SetHotKey
+## <a name="sethotkey"></a> CHotKeyCtrl::SetHotKey
 
 Sets the keyboard shortcut for a hot key control.
 
-```
+```cpp
 void SetHotKey(
     WORD wVirtualKeyCode,
     WORD wModifiers);
@@ -257,11 +258,11 @@ The modifier flags are as follows:
 
 The virtual key code and the modifier keys together define the keyboard shortcut.
 
-##  <a name="setrules"></a>  CHotKeyCtrl::SetRules
+## <a name="setrules"></a> CHotKeyCtrl::SetRules
 
 Call this function to define the invalid combinations and the default modifier combination for a hot key control.
 
-```
+```cpp
 void SetRules(
     WORD wInvalidComb,
     WORD wModifiers);
@@ -295,8 +296,7 @@ Array of flags that specifies the key combination to use when the user enters an
 
 When a user enters an invalid key combination, as defined by flags specified in *wInvalidComb*, the system uses the OR operator to combine the keys entered by the user with the flags specified in *wModifiers*. The resulting key combination is converted into a string and then displayed in the hot key control.
 
-## See Also
+## See also
 
 [CWnd Class](../../mfc/reference/cwnd-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Add an event handler"
 title: "Add an event handler"
 ms.date: "11/12/2018"
-f1_keywords: ["vc.codewiz.eventhandler.overview", "vc.codewiz.eventhandler.overview"]
+f1_keywords: ["vc.codewiz.eventhandler.overview"]
 helpviewer_keywords: ["event handlers, adding", "properties [Visual Studio], MSBuild", "MSBuild, properties", "event handler wizard [C++]"]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
 ---
@@ -13,7 +14,7 @@ You can add an event to the class implementing the dialog box using the [Propert
 
 **To add an event handler to a dialog box control:**
 
-1. Double-click the dialog box resource in [Resource View](../windows/resource-view-window.md) to open the dialog box resource that contains the control in the [dialog editor](../windows/dialog-editor.md).
+1. Double-click the dialog box resource in [Resource View](../windows/how-to-create-a-resource-script-file.md#create-resources) to open the dialog box resource that contains the control in the [dialog editor](../windows/dialog-editor.md).
 
 1. Right-click the control for which you want to handle the notification event.
 
@@ -27,7 +28,7 @@ You can add an event to the class implementing the dialog box using the [Propert
 
    If the selected message type already has an event handler for the selected class, **Add and edit** is unavailable, and **Edit code** is available. Select **Edit code** to open the text editor at the existing function.
 
-Alternately, you can add event handlers from the [Properties window](/visualstudio/ide/reference/properties-window). For more information, see [Adding event handlers for dialog box controls](../windows/adding-event-handlers-for-dialog-box-controls.md).
+Alternately, you can add event handlers from the [Properties window](/visualstudio/ide/reference/properties-window). For more information, see [Adding event handlers for dialog box controls](../windows/adding-editing-or-deleting-controls.md).
 
 ## In this section
 
@@ -35,7 +36,7 @@ Alternately, you can add event handlers from the [Properties window](/visualstud
 
 ## Event handler wizard
 
-This wizard adds an event handler for a dialog box control to the class of your choice. If you add an event handler from the [Properties window](/visualstudio/ide/reference/properties-window), you can add it only to the class that implements the dialog box. For more information, see [Adding event handlers for dialog box controls](../windows/adding-event-handlers-for-dialog-box-controls.md).
+This wizard adds an event handler for a dialog box control to the class of your choice. If you add an event handler from the [Properties window](/visualstudio/ide/reference/properties-window), you can add it only to the class that implements the dialog box. For more information, see [Adding event handlers for dialog box controls](../windows/adding-editing-or-deleting-controls.md).
 
 - **Command name**
 

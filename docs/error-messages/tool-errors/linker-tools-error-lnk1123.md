@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Linker Tools Error LNK1123"
 title: "Linker Tools Error LNK1123"
 ms.date: "12/29/2017"
 f1_keywords: ["LNK1123"]
@@ -23,7 +24,7 @@ Input files must have the Common Object File Format (COFF) format. If an input f
 
 - Try turning off the Embed Manifest option. On the menu bar, choose **Project**, **Properties**. In the **Property Pages** dialog box, expand **Configuration Properties**, **Manifest Tool**, **Input and Output**. Change the value of **Embed Manifest** to **No**.
 
-- Make sure that the file type is valid. For example, make sure that an OMF object is 32-bit and not 16-bit. For more information, see [.Obj Files as Linker Input](../../build/reference/dot-obj-files-as-linker-input.md) and [PE Format](/windows/desktop/Debug/pe-format).
+- Make sure that the file type is valid. For example, make sure that an OMF object is 32-bit and not 16-bit. For more information, see [.Obj Files as Linker Input](../../build/reference/dot-obj-files-as-linker-input.md) and [PE Format](/windows/win32/Debug/pe-format).
 
 - Make sure that the file is not corrupt. Rebuild it, if necessary.
 

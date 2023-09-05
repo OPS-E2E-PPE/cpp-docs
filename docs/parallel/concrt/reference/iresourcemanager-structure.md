@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: IResourceManager Structure"
 title: "IResourceManager Structure"
-ms.date: "11/04/2016"
+ms.date: "03/27/2019"
 f1_keywords: ["IResourceManager", "CONCRTRM/concurrency::IResourceManager", "CONCRTRM/concurrency::IResourceManager::IResourceManager::OSVersion", "CONCRTRM/concurrency::IResourceManager::IResourceManager::CreateNodeTopology", "CONCRTRM/concurrency::IResourceManager::IResourceManager::GetAvailableNodeCount", "CONCRTRM/concurrency::IResourceManager::IResourceManager::GetFirstNode", "CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference", "CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler", "CONCRTRM/concurrency::IResourceManager::IResourceManager::Release"]
 helpviewer_keywords: ["IResourceManager structure"]
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
@@ -11,7 +12,7 @@ An interface to the Concurrency Runtime's Resource Manager. This is the interfac
 
 ## Syntax
 
-```
+```cpp
 struct IResourceManager;
 ```
 
@@ -48,11 +49,11 @@ Use the [CreateResourceManager](concurrency-namespace-functions.md) function to 
 
 **Namespace:** concurrency
 
-##  <a name="createnodetopology"></a>  IResourceManager::CreateNodeTopology Method
+## <a name="createnodetopology"></a> IResourceManager::CreateNodeTopology Method
 
 Present only in debug builds of the runtime, this method is a test hook designed to facilitate testing of the Resource Manager on varying hardware topologies, without requiring actual hardware matching the configuration. With retail builds of the runtime, this method will return without performing any action.
 
-```
+```cpp
 virtual void CreateNodeTopology(
     unsigned int nodeCount,
     _In_reads_(nodeCount) unsigned int* pCoreCount,
@@ -80,11 +81,11 @@ An array that specifies the processor group each node belongs to.
 
 [invalid_operation](invalid-operation-class.md) is thrown if this method is called while other schedulers exist in the process.
 
-##  <a name="getavailablenodecount"></a>  IResourceManager::GetAvailableNodeCount Method
+## <a name="getavailablenodecount"></a> IResourceManager::GetAvailableNodeCount Method
 
 Returns the number of nodes available to the Resource Manager.
 
-```
+```cpp
 virtual unsigned int GetAvailableNodeCount() const = 0;
 ```
 
@@ -92,11 +93,11 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 
 The number of nodes available to the Resource Manager.
 
-##  <a name="getfirstnode"></a>  IResourceManager::GetFirstNode Method
+## <a name="getfirstnode"></a> IResourceManager::GetFirstNode Method
 
 Returns the first node in enumeration order as defined by the Resource Manager.
 
-```
+```cpp
 virtual ITopologyNode* GetFirstNode() const = 0;
 ```
 
@@ -104,19 +105,19 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 
 The first node in enumeration order as defined by the Resource Manager.
 
-##  <a name="iresourcemanager__osversion"></a>  IResourceManager::OSVersion Enumeration
+## <a name="osversion"></a> IResourceManager::OSVersion Enumeration
 
 An enumerated type that represents the operating system version.
 
-```
+```cpp
 enum OSVersion;
 ```
 
-##  <a name="reference"></a>  IResourceManager::Reference Method
+## <a name="reference"></a> IResourceManager::Reference Method
 
 Increments the reference count on the Resource Manager instance.
 
-```
+```cpp
 virtual unsigned int Reference() = 0;
 ```
 
@@ -124,11 +125,11 @@ virtual unsigned int Reference() = 0;
 
 The resulting reference count.
 
-##  <a name="registerscheduler"></a>  IResourceManager::RegisterScheduler Method
+## <a name="registerscheduler"></a> IResourceManager::RegisterScheduler Method
 
 Registers a scheduler with the Resource Manager. Once the scheduler is registered, it should communicate with the Resource Manager using the `ISchedulerProxy` interface that is returned.
 
-```
+```cpp
 virtual ISchedulerProxy *RegisterScheduler(
     _Inout_ IScheduler* pScheduler,
     unsigned int version) = 0;
@@ -152,11 +153,11 @@ Use this method to initiate communication with the Resource Manager. The method 
 
 The method throws an `invalid_argument` exception if the parameter `pScheduler` has the value `NULL` or if the parameter `version` is not a valid version for the communication interface.
 
-##  <a name="release"></a>  IResourceManager::Release Method
+## <a name="release"></a> IResourceManager::Release Method
 
 Decrements the reference count on the Resource Manager instance. The Resource Manager is destroyed when its reference count goes to `0`.
 
-```
+```cpp
 virtual unsigned int Release() = 0;
 ```
 
@@ -164,7 +165,7 @@ virtual unsigned int Release() = 0;
 
 The resulting reference count.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [ISchedulerProxy Structure](ischedulerproxy-structure.md)<br/>

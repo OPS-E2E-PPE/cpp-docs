@@ -1,11 +1,12 @@
 ---
-title: "vector&lt;bool&gt;::reference::flip"
+description: "Learn more about: vector<bool>::reference::flip"
+title: "vector<bool>::reference::flip"
 ms.date: "11/04/2016"
 f1_keywords: ["vector/std::vector<bool>::reference::flip"]
 helpviewer_keywords: ["reference::flip method"]
 ms.assetid: ef940365-cbe4-4a87-a3e2-1f3cfa357e29
 ---
-# vector&lt;bool&gt;::reference::flip
+# `vector<bool>::reference::flip`
 
 Inverts the Boolean value of a referenced [vector\<bool>](../standard-library/vector-bool-class.md) element.
 
@@ -64,5 +65,5 @@ The vector with first element flipped is:
 
 ## See also
 
-[vector\<bool>::reference Class](../standard-library/vector-bool-reference-class.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[vector\<bool>::reference Class](../standard-library/vector-bool-reference-class.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Create Agents that Use Specific Scheduler Policies"
 title: "How to: Create Agents that Use Specific Scheduler Policies"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["scheduler policies, agents [Concurrency Runtime]", "creating agents that use specific policies [Concurrency Runtime]"]
@@ -42,10 +43,9 @@ Although both sets of tasks produce the same result, the version that uses a cus
 
 Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `permute-strings.cpp` and then run the following command in a Visual Studio Command Prompt window.
 
-**cl.exe /EHsc permute-strings.cpp**
+> **cl.exe /EHsc permute-strings.cpp**
 
-## See Also
+## See also
 
 [Scheduler Policies](../../parallel/concrt/scheduler-policies.md)<br/>
 [Asynchronous Agents](../../parallel/concrt/asynchronous-agents.md)
-

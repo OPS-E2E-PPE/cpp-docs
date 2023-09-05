@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4005"
 title: "Compiler Warning (level 1) C4005"
 ms.date: "11/04/2016"
 f1_keywords: ["C4005"]
@@ -25,7 +26,7 @@ The macro identifier is defined twice. The compiler uses the second macro defini
 
 The following sample generates C4005:
 
-```
+```cpp
 // C4005.cpp
 // compile with: /W1 /EHsc
 #include <iostream>

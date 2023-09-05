@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2788"
 title: "Compiler Error C2788"
 ms.date: "11/04/2016"
 f1_keywords: ["C2788"]
@@ -13,7 +14,7 @@ The [__uuidof](../../cpp/uuidof-operator.md) operator takes a user-defined type 
 
 The following sample generates C2788:
 
-```
+```cpp
 // C2788.cpp
 #include <windows.h>
 struct __declspec(uuid("00000001-0000-0000-0000-000000000000")) A {};

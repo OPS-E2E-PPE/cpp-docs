@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: nested_scheduler_missing_detach Class"
 title: "nested_scheduler_missing_detach Class"
 ms.date: "11/04/2016"
 f1_keywords: ["nested_scheduler_missing_detach", "CONCRT/concurrency::nested_scheduler_missing_detach", "CONCRT/concurrency::nested_scheduler_missing_detach::nested_scheduler_missing_detach"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when the Concurrency Runtime detects th
 
 ## Syntax
 
-```
+```cpp
 class nested_scheduler_missing_detach : public std::exception;
 ```
 
@@ -39,11 +40,11 @@ This exception is thrown only when you nest one scheduler inside another by call
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> nested_scheduler_missing_detach
+## <a name="ctor"></a> nested_scheduler_missing_detach
 
 Constructs a `nested_scheduler_missing_detach` object.
 
-```
+```cpp
 explicit _CRTIMP nested_scheduler_missing_detach(_In_z_ const char* _Message) throw();
 
 nested_scheduler_missing_detach() throw();
@@ -54,7 +55,7 @@ nested_scheduler_missing_detach() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [Scheduler Class](scheduler-class.md)

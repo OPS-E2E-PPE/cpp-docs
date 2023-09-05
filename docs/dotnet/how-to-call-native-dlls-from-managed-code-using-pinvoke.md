@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Call Native DLLs from Managed Code Using PInvoke"
 title: "How to: Call Native DLLs from Managed Code Using PInvoke"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -11,13 +12,13 @@ Functions that are implemented in unmanaged DLLs can be called from managed code
 
 ## Example
 
-The following code example uses the Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) function to retrieve the current resolution of the screen in pixels.
+The following code example uses the Win32 [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) function to retrieve the current resolution of the screen in pixels.
 
 For functions that use only intrinsic types as arguments and return values, no extra work is required. Other data types, such as function pointers, arrays, and structures, require additional attributes to ensure proper data marshaling.
 
 Although it is not required, it is good practice to make P/Invoke declarations static members of a value class so that they do not exist in the global namespace, as demonstrated in this example.
 
-```
+```cpp
 // pinvoke_basic.cpp
 // compile with: /clr
 using namespace System;
@@ -42,6 +43,6 @@ int main() {
 }
 ```
 
-## See Also
+## See also
 
 [Using Explicit PInvoke in C++ (DllImport Attribute)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

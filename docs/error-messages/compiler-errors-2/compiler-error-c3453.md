@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3453"
 title: "Compiler Error C3453"
 ms.date: "11/04/2016"
 f1_keywords: ["C3453"]
@@ -15,7 +16,7 @@ Assembly or module level attributes can only be specified as stand-alone instruc
 
 The following sample generates C3453.
 
-```
+```cpp
 // C3453.cpp
 // compile with: /clr /c
 [assembly:System::CLSCompliant(true)]   // C3453

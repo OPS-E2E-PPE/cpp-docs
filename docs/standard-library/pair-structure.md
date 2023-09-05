@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: pair Structure"
 title: "pair Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["utility/std::pair"]
@@ -19,6 +20,8 @@ struct pair
     T1 first;
     T2 second;
     constexpr pair();
+    pair(const pair&) = default;
+    pair(pair&&) = default;
     constexpr pair(
         const T1& Val1,
         const T2& Val2);
@@ -31,33 +34,46 @@ struct pair
 
     template <class Other1, class Other2>
     constexpr pair(Other1&& Val1, Other2&& Val2);
+
+    template <class... Args1, class... Args2>
+    pair(piecewise_construct_t, tuple<Args1...> first_args, tuple<Args2...> second_args);
+
+    pair& operator=(const pair& p);
+    template<class U1, class U2> pair& operator=(const pair<U1, U2>& p);
+    pair& operator=(pair&& p) noexcept(see below );
+    template<class U1, class U2> pair& operator=(pair<U1, U2>&& p);
+
+    void swap(pair& p) noexcept(see below );
 };
+
+template<class T1, class T2>
+    pair(T1, T2) -> pair<T1, T2>;
 ```
 
 ### Parameters
 
-*Val1*<br/>
+*Val1*\
 Value initializing the first element of `pair`.
 
-*Val2*<br/>
+*Val2*\
 Value initializing the second element of `pair`.
 
-*Right*<br/>
+*Right*\
 A pair whose values are to be used to initialize the elements of another pair.
 
 ## Return Value
 
-The first (default) constructor initializes first element of the pair to the default of type `T1` and second element to default of type `T2`.
+The first (default) constructor initializes the first element of the pair to the default of type `T1` and the second element to default of type `T2`.  It is defined if both types are default-constructible.
 
-The second constructor initializes first element of the pair to *Val1* and second to *Val2.*
+The second constructor initializes the first element of the pair to *Val1* and the second to *Val2.*  It is defined if both types are copy-constructible.
 
-The third (template) constructor initializes first element of the pair to `Right`. **first** and second to `Right`. **second**.
+The third (template) constructor initializes the first element of the pair to `Right`. **first** and the second to `Right`. **second**.  It is defined if both types of the pair are constructible from the value types provided.
 
-The fourth constructor initializes first element of the pair to *Val1* and second to *Val2* using [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+The fourth constructor initializes the first element of the pair to *Val1* and the second to *Val2* using [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  It is defined if both types of the pair are constructible from the value types provided.
 
 ## Remarks
 
-The template struct stores a pair of objects of type `T1` and `T2`, respectively. The type `first_type` is the same as the template parameter `T1` and the type `second_type` is the same as the template parameter `T2`. `T1` and `T2` each need supply only a default constructor, a single-argument constructor, and a destructor. All members of the type `pair` are public, because the type is declared as a `struct` rather than as a **class**. The two most common uses for a pair are as return types for functions that return two values and as elements for the associative container classes [map Class](../standard-library/map-class.md) and [multimap Class](../standard-library/multimap-class.md) that have both a key and a value type associated with each element. The latter satisfies the requirements for a pair associative container and has a value type of the form `pair`< **const**`key_type`, `mapped_type`>.
+The template struct stores a pair of objects of type `T1` and `T2`, respectively. The type `first_type` is the same as the template parameter `T1` and the type `second_type` is the same as the template parameter `T2`. `T1` and `T2` each need supply only a default constructor, a single-argument constructor, and a destructor. All members of the type `pair` are public, because the type is declared as a **`struct`** rather than as a **`class`**. The two most common uses for a pair are as return types for functions that return two values and as elements for the associative container classes [map Class](../standard-library/map-class.md) and [multimap Class](../standard-library/multimap-class.md) that have both a key and a value type associated with each element. The latter satisfies the requirements for a pair associative container and has a value type of the form `pair< const key_type, mapped_type >`.
 
 ## Example
 
@@ -136,7 +152,9 @@ int main( )
            << " is already in m1,\n so the insertion failed." << endl;
    }
 }
-/* Output:
+```
+
+```Output
 The pair p1 is: ( 10, 0.011 ).
 The pair p2 is: ( 10, 0.222 ).
 The pair p3 is: ( 10, 0.011 ).
@@ -145,15 +163,4 @@ The element (4,40) was inserted successfully in m1.
 The element with a key value of
 ( (pr2.first) -> first ) = 1 is already in m1,
 so the insertion failed.
-*/
 ```
-
-## Requirements
-
-**Header:** \<utility>
-
-**Namespace:** std
-
-## See also
-
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

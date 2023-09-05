@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CA2AEX Class"
 title: "CA2AEX Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CA2AEX", "ATLCONV/ATL::CA2AEX", "ATLCONV/ATL::CA2AEX::CA2AEX", "ATLCONV/ATL::CA2AEX::m_psz", "ATLCONV/ATL::CA2AEX::m_szBuffer"]
@@ -10,16 +11,16 @@ ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
 This class is used by the string conversion macros CA2TEX and CT2AEX, and the typedef CA2A.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
-```
+```cpp
 template <int t_nBufferLength = 128>
 class CA2AEX
 ```
 
-#### Parameters
+### Parameters
 
 *t_nBufferLength*<br/>
 The size of the buffer used in the translation process. The default length is 128 bytes.
@@ -76,11 +77,11 @@ See [ATL and MFC String Conversion Macros](string-conversion-macros.md) for an e
 
 **Header:** atlconv.h
 
-##  <a name="ca2aex"></a>  CA2AEX::CA2AEX
+## <a name="ca2aex"></a> CA2AEX::CA2AEX
 
 The constructor.
 
-```
+```cpp
 CA2AEX(LPCSTR psz, UINT nCodePage) throw(...);
 CA2AEX(LPCSTR psz) throw(...);
 ```
@@ -97,11 +98,11 @@ Unused in this class.
 
 Creates the buffer required for the translation.
 
-##  <a name="dtor"></a>  CA2AEX::~CA2AEX
+## <a name="dtor"></a> CA2AEX::~CA2AEX
 
 The destructor.
 
-```
+```cpp
 ~CA2AEX() throw();
 ```
 
@@ -109,27 +110,27 @@ The destructor.
 
 Frees the allocated buffer.
 
-##  <a name="m_psz"></a>  CA2AEX::m_psz
+## <a name="m_psz"></a> CA2AEX::m_psz
 
 The data member that stores the source string.
 
-```
+```cpp
 LPSTR m_psz;
 ```
 
-##  <a name="m_szbuffer"></a>  CA2AEX::m_szBuffer
+## <a name="m_szbuffer"></a> CA2AEX::m_szBuffer
 
 The static buffer, used to store the converted string.
 
-```
+```cpp
 char m_szBuffer[ t_nBufferLength];
 ```
 
-##  <a name="operator_lpstr"></a>  CA2AEX::operator LPSTR
+## <a name="operator_lpstr"></a> CA2AEX::operator LPSTR
 
 Conversion operator.
 
-```
+```cpp
 operator LPSTR() const throw();
 ```
 
@@ -137,7 +138,7 @@ operator LPSTR() const throw();
 
 Returns the text string as type LPSTR.
 
-## See Also
+## See also
 
 [CA2CAEX Class](../../atl/reference/ca2caex-class.md)<br/>
 [CA2WEX Class](../../atl/reference/ca2wex-class.md)<br/>

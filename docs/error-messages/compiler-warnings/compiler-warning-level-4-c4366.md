@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4366"
 title: "Compiler Warning (level 4) C4366"
 ms.date: "11/04/2016"
 f1_keywords: ["C4366"]
@@ -19,7 +20,7 @@ For more information, see __unaligned and [pack](../../preprocessor/pack.md).
 
 The following sample generates C4366.
 
-```
+```cpp
 // C4366.cpp
 // compile with: /W4 /c
 // processor: IPF x64

@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: CFtpConnection Class"
 title: "CFtpConnection Class"
-ms.date: "11/04/2016"
+ms.date: "08/29/2019"
 f1_keywords: ["CFtpConnection", "AFXINET/CFtpConnection", "AFXINET/CFtpConnection::CFtpConnection", "AFXINET/CFtpConnection::Command", "AFXINET/CFtpConnection::CreateDirectory", "AFXINET/CFtpConnection::GetCurrentDirectory", "AFXINET/CFtpConnection::GetCurrentDirectoryAsURL", "AFXINET/CFtpConnection::GetFile", "AFXINET/CFtpConnection::OpenFile", "AFXINET/CFtpConnection::PutFile", "AFXINET/CFtpConnection::Remove", "AFXINET/CFtpConnection::RemoveDirectory", "AFXINET/CFtpConnection::Rename", "AFXINET/CFtpConnection::SetCurrentDirectory"]
 helpviewer_keywords: ["CFtpConnection [MFC], CFtpConnection", "CFtpConnection [MFC], Command", "CFtpConnection [MFC], CreateDirectory", "CFtpConnection [MFC], GetCurrentDirectory", "CFtpConnection [MFC], GetCurrentDirectoryAsURL", "CFtpConnection [MFC], GetFile", "CFtpConnection [MFC], OpenFile", "CFtpConnection [MFC], PutFile", "CFtpConnection [MFC], Remove", "CFtpConnection [MFC], RemoveDirectory", "CFtpConnection [MFC], Rename", "CFtpConnection [MFC], SetCurrentDirectory"]
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
@@ -63,7 +64,7 @@ To learn more about how `CFtpConnection` works with the other MFC Internet class
 
 **Header:** afxinet.h
 
-##  <a name="cftpconnection"></a>  CFtpConnection::CFtpConnection
+## <a name="cftpconnection"></a> CFtpConnection::CFtpConnection
 
 This member function is called to construct a `CFtpConnection` object.
 
@@ -121,7 +122,7 @@ Specifies passive or active mode for this FTP session. If set to TRUE, it sets t
 
 You never create a `CFtpConnection` object directly. Instead, call [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), which creates the `CFptConnection` object.
 
-##  <a name="command"></a>  CFtpConnection::Command
+## <a name="command"></a> CFtpConnection::Command
 
 Sends a command directly to an FTP server.
 
@@ -139,14 +140,16 @@ CInternetFile* Command(
 A pointer to a string containing the command to be sent.
 
 *eResponse*<br/>
-Determines whether a response is expected from the FTP server. Can be one of the following values:
+Specifies whether a response is expected from the FTP server. Can be one of the following values:
 
 - `CmdRespNone` No response is expected.
-
 - `CmdRespRead` A response is expected.
+- `CmdRespWrite` Not used.
+
+The CmdResponseType is a member of CFtpConnection, defined in *afxinet.h*.
 
 *dwFlags*<br/>
-A value containing the flags that control this function. For a complete list, see [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda).
+A value containing the flags that control this function. For a complete list, see [FTPCommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw).
 
 *dwContext*<br/>
 A pointer to a value containing an application-defined value used to identify the application context in callbacks.
@@ -157,11 +160,11 @@ Nonzero if successful; otherwise 0.
 
 ### Remarks
 
-This member function emulates the functionality of the [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda) function, as described in the Windows SDK.
+This member function emulates the functionality of the [FTPCommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw) function, as described in the Windows SDK.
 
 If an error occurs, MFC throws an exception of type [CInternetException](../../mfc/reference/cinternetexception-class.md).
 
-##  <a name="createdirectory"></a>  CFtpConnection::CreateDirectory
+## <a name="createdirectory"></a> CFtpConnection::CreateDirectory
 
 Call this member function to create a directory on the connected server.
 
@@ -176,7 +179,7 @@ A pointer to a string containing the name of the directory to create.
 
 ### Return Value
 
-Nonzero if successful; otherwise 0. If the call fails, the Windows function [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.
+Nonzero if successful; otherwise 0. If the call fails, the Windows function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) may be called to determine the cause of the error.
 
 ### Remarks
 
@@ -184,7 +187,7 @@ Use `GetCurrentDirectory` to determine the current working directory for this co
 
 The `pstrDirName` parameter can be either a partially or a fully qualified filename relative to the current directory. A backslash (\\) or forward slash (/) can be used as the directory separator for either name. `CreateDirectory` translates the directory name separators to the appropriate characters before they are used.
 
-##  <a name="getcurrentdirectory"></a>  CFtpConnection::GetCurrentDirectory
+## <a name="getcurrentdirectory"></a> CFtpConnection::GetCurrentDirectory
 
 Call this member function to get the name of the current directory.
 
@@ -207,14 +210,13 @@ A pointer to a string that will receive the name of the directory.
 *lpdwLen*<br/>
 A pointer to a DWORD that contains the following information:
 
-|||
-|-|-|
-|On entry|The size of the buffer referenced by *pstrDirName*.|
-|On return|The number of characters stored to *pstrDirName*. If the member function fails and ERROR_INSUFFICIENT_BUFFER is returned, then *lpdwLen* contains the number of bytes that the application must allocate in order to receive the string.|
+On entry: The size of the buffer referenced by *pstrDirName*.
+
+On return: The number of characters stored to *pstrDirName*. If the member function fails and ERROR_INSUFFICIENT_BUFFER is returned, then *lpdwLen* contains the number of bytes that the application must allocate in order to receive the string.
 
 ### Return Value
 
-Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.
+Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) may be called to determine the cause of the error.
 
 ### Remarks
 
@@ -222,7 +224,7 @@ To get the directory name as a URL instead, call [GetCurrentDirectoryAsURL](#get
 
 The parameters *pstrDirName* or *strDirName* can be either partially qualified filenames relative to the current directory or fully qualified. A backslash (\\) or forward slash (/) can be used as the directory separator for either name. `GetCurrentDirectory` translates the directory name separators to the appropriate characters before they are used.
 
-##  <a name="getcurrentdirectoryasurl"></a>  CFtpConnection::GetCurrentDirectoryAsURL
+## <a name="getcurrentdirectoryasurl"></a> CFtpConnection::GetCurrentDirectoryAsURL
 
 Call this member function to get the current directory's name as a URL.
 
@@ -245,14 +247,13 @@ A pointer to a string that will receive the name of the directory.
 *lpdwLen*<br/>
 A pointer to a DWORD that contains the following information:
 
-|||
-|-|-|
-|On entry|The size of the buffer referenced by *pstrDirName*.|
-|On return|The number of characters stored to *pstrDirName*. If the member function fails and ERROR_INSUFFICIENT_BUFFER is returned, then *lpdwLen* contains the number of bytes that the application must allocate in order to receive the string.|
+On entry: The size of the buffer referenced by *pstrDirName*.
+
+On return: The number of characters stored to *pstrDirName*. If the member function fails and ERROR_INSUFFICIENT_BUFFER is returned, then *lpdwLen* contains the number of bytes that the application must allocate in order to receive the string.
 
 ### Return Value
 
-Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.
+Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) may be called to determine the cause of the error.
 
 ### Remarks
 
@@ -260,7 +261,7 @@ Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLa
 
 The parameter *strDirName* can be either partially qualified filenames relative to the current directory or fully qualified. A backslash (\\) or forward slash (/) can be used as the directory separator for either name. `GetCurrentDirectoryAsURL` translates the directory name separators to the appropriate characters before they are used.
 
-##  <a name="getfile"></a>  CFtpConnection::GetFile
+## <a name="getfile"></a> CFtpConnection::GetFile
 
 Call this member function to get a file from an FTP server and store it on the local machine.
 
@@ -305,14 +306,14 @@ Indicates the attributes of the file. This can be any combination of the followi
 - FILE_ATTRIBUTE_TEMPORARY   The file is being used for temporary storage. Applications should write to the file only if absolutely necessary. Most of the file's data remains in memory without being flushed to the media because the file will soon be deleted.
 
 *dwFlags*<br/>
-Specifies the conditions under which the transfer occurs. This parameter can be any of the *dwFlags* values described in [FtpGetFile](/windows/desktop/api/wininet/nf-wininet-ftpgetfilea) in the Windows SDK.
+Specifies the conditions under which the transfer occurs. This parameter can be any of the *dwFlags* values described in [FtpGetFile](/windows/win32/api/wininet/nf-wininet-ftpgetfilew) in the Windows SDK.
 
 *dwContext*<br/>
 The context identifier for the file retrieval. See **Remarks** for more information about *dwContext*.
 
 ### Return Value
 
-Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.
+Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) may be called to determine the cause of the error.
 
 ### Remarks
 
@@ -324,7 +325,7 @@ Both *pstrRemoteFile* and *pstrLocalFile* can be either partially qualified file
 
 Override the *dwContext* default to set the context identifier to a value of your choosing. The context identifier is associated with this specific operation of the `CFtpConnection` object created by its [CInternetSession](../../mfc/reference/cinternetsession-class.md) object. The value is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the operation with which it is identified. See the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.
 
-##  <a name="openfile"></a>  CFtpConnection::OpenFile
+## <a name="openfile"></a> CFtpConnection::OpenFile
 
 Call this member function to open a file located on an FTP server for reading or writing.
 
@@ -368,13 +369,13 @@ A pointer to a [CInternetFile](../../mfc/reference/cinternetfile-class.md) objec
 
 - An application needs a fine level of control over a file transfer. For example, the application may want to display a progress control indicate the progress of the file transfer status while downloading a file.
 
-After calling `OpenFile` and until calling `CInternetConnection::Close`, the application can only call [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read), [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write), `CInternetConnection::Close`, or [CFtpFileFind::FindFile](../../mfc/reference/cftpfilefind-class.md#findfile). Calls to other FTP functions for the same FTP session will fail and set the error code to FTP_ETRANSFER_IN_PROGRESS.
+After calling `OpenFile` and until calling `CInternetFile::Close`, the application can only call [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read), [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write), `CInternetConnection::Close`, or [CFtpFileFind::FindFile](../../mfc/reference/cftpfilefind-class.md#findfile). Calls to other FTP functions for the same FTP session will fail and set the error code to FTP_ETRANSFER_IN_PROGRESS.
 
 The *pstrFileName* parameter can be either a partially qualified filename relative to the current directory or fully qualified. A backslash (\\) or forward slash (/) can be used as the directory separator for either name. `OpenFile` translates the directory name separators to the appropriate characters before using it.
 
 Override the *dwContext* default to set the context identifier to a value of your choosing. The context identifier is associated with this specific operation of the `CFtpConnection` object created by its [CInternetSession](../../mfc/reference/cinternetsession-class.md) object. The value is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the operation with which it is identified. See the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.
 
-##  <a name="putfile"></a>  CFtpConnection::PutFile
+## <a name="putfile"></a> CFtpConnection::PutFile
 
 Call this member function to store a file on an FTP server.
 
@@ -402,7 +403,7 @@ The context identifier for placing the file. See **Remarks** for more informatio
 
 ### Return Value
 
-Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.
+Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) may be called to determine the cause of the error.
 
 ### Remarks
 
@@ -410,7 +411,7 @@ Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLa
 
 Override the `dwContext` default to set the context identifier to a value of your choosing. The context identifier is associated with this specific operation of the `CFtpConnection` object created by its [CInternetSession](../../mfc/reference/cinternetsession-class.md) object. The value is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the operation with which it is identified. See the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.
 
-##  <a name="remove"></a>  CFtpConnection::Remove
+## <a name="remove"></a> CFtpConnection::Remove
 
 Call this member function to delete the specified file from the connected server.
 
@@ -425,13 +426,13 @@ A pointer to a string containing the file name to remove.
 
 ### Return Value
 
-Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.
+Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) may be called to determine the cause of the error.
 
 ### Remarks
 
 The *pstrFileName* parameter can be either a partially qualified filename relative to the current directory or fully qualified. A backslash (\\) or forward slash (/) can be used as the directory separator for either name. The `Remove` function translates the directory name separators to the appropriate characters before they are used.
 
-##  <a name="removedirectory"></a>  CFtpConnection::RemoveDirectory
+## <a name="removedirectory"></a> CFtpConnection::RemoveDirectory
 
 Call this member function to remove the specified directory from the connected server.
 
@@ -446,7 +447,7 @@ A pointer to a string containing the directory to be removed.
 
 ### Return Value
 
-Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.
+Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) may be called to determine the cause of the error.
 
 ### Remarks
 
@@ -454,7 +455,7 @@ Use [GetCurrentDirectory](#getcurrentdirectory) to determine the server's curren
 
 The *pstrDirName* parameter can be either a partially or fully qualified filename relative to the current directory. A backslash (\\) or forward slash (/) can be used as the directory separator for either name. `RemoveDirectory` translates the directory name separators to the appropriate characters before they are used.
 
-##  <a name="rename"></a>  CFtpConnection::Rename
+## <a name="rename"></a> CFtpConnection::Rename
 
 Call this member function to rename the specified file on the connected server.
 
@@ -474,13 +475,13 @@ A pointer to a string containing the file's new name.
 
 ### Return Value
 
-Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.
+Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) may be called to determine the cause of the error.
 
 ### Remarks
 
 The *pstrExisting* and *pstrNew* parameters can be either a partially qualified filename relative to the current directory or fully qualified. A backslash (\\) or forward slash (/) can be used as the directory separator for either name. `Rename` translates the directory name separators to the appropriate characters before they are used.
 
-##  <a name="setcurrentdirectory"></a>  CFtpConnection::SetCurrentDirectory
+## <a name="setcurrentdirectory"></a> CFtpConnection::SetCurrentDirectory
 
 Call this member function to change to a different directory on the FTP server.
 
@@ -495,7 +496,7 @@ A pointer to a string containing the name of the directory.
 
 ### Return Value
 
-Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.
+Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) may be called to determine the cause of the error.
 
 ### Remarks
 
@@ -503,7 +504,7 @@ The *pstrDirName* parameter can be either a partially or fully qualified filenam
 
 Use [GetCurrentDirectory](#getcurrentdirectory) to determine an FTP server's current working directory. Do not assume that the remote system has connected you to the root directory.
 
-## See Also
+## See also
 
 [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

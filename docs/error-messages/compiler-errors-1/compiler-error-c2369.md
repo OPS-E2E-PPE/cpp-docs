@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2369"
 title: "Compiler Error C2369"
 ms.date: "11/04/2016"
 f1_keywords: ["C2369"]
@@ -13,7 +14,7 @@ The array is already declared with a different subscript.
 
 The following sample generates C2369:
 
-```
+```cpp
 // C2369.cpp
 // compile with: /c
 int a[10];

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMouseManager Class"
 title: "CMouseManager Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMouseManager", "AFXMOUSEMANAGER/CMouseManager", "AFXMOUSEMANAGER/CMouseManager::AddView", "AFXMOUSEMANAGER/CMouseManager::GetViewDblClickCommand", "AFXMOUSEMANAGER/CMouseManager::GetViewIconId", "AFXMOUSEMANAGER/CMouseManager::GetViewIdByName", "AFXMOUSEMANAGER/CMouseManager::GetViewNames", "AFXMOUSEMANAGER/CMouseManager::LoadState", "AFXMOUSEMANAGER/CMouseManager::SaveState", "AFXMOUSEMANAGER/CMouseManager::SetCommandForDblClk"]
@@ -46,7 +47,7 @@ You should not create a `CMouseManager` object manually. It will be created by t
 
 **Header:** afxmousemanager.h
 
-##  <a name="addview"></a>  CMouseManager::AddView
+## <a name="addview"></a> CMouseManager::AddView
 
 Registers a [CView](../../mfc/reference/cview-class.md) object with the [CMouseManager Class](../../mfc/reference/cmousemanager-class.md) to support custom mouse behavior.
 
@@ -93,11 +94,11 @@ For more information about how to provide custom mouse behavior, see [Keyboard a
 
 ### Example
 
-The following example demonstrates how to retrieve a pointer to a `CMouseManager` object by using the `CWinAppEx::GetMouseManager` method and the `AddView` method in the `CMouseManager` class. This code snippet is part of the [State Collection sample](../../visual-cpp-samples.md).
+The following example demonstrates how to retrieve a pointer to a `CMouseManager` object by using the `CWinAppEx::GetMouseManager` method and the `AddView` method in the `CMouseManager` class. This code snippet is part of the [State Collection sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]
 
-##  <a name="getviewdblclickcommand"></a>  CMouseManager::GetViewDblClickCommand
+## <a name="getviewdblclickcommand"></a> CMouseManager::GetViewDblClickCommand
 
 Returns the command that is executed when the user double-clicks inside the provided view.
 
@@ -114,7 +115,7 @@ UINT GetViewDblClickCommand(int iId) const;
 
 The command identifier if the view is associated with a command; otherwise 0.
 
-##  <a name="getviewiconid"></a>  CMouseManager::GetViewIconId
+## <a name="getviewiconid"></a> CMouseManager::GetViewIconId
 
 Retrieves the icon associated with a view ID.
 
@@ -135,7 +136,7 @@ An icon resource identifier if successful; otherwise 0.
 
 This method will fail if the view is not first registered by using [CMouseManager::AddView](#addview).
 
-##  <a name="getviewidbyname"></a>  CMouseManager::GetViewIdByName
+## <a name="getviewidbyname"></a> CMouseManager::GetViewIdByName
 
 Retrieves the view ID associated with a view name.
 
@@ -156,11 +157,11 @@ A view ID if successful; otherwise 0.
 
 This method searches through views registered by using [CMouseManager::AddView](#addview).
 
-##  <a name="getviewnames"></a>  CMouseManager::GetViewNames
+## <a name="getviewnames"></a> CMouseManager::GetViewNames
 
 Retrieves a list of all the registered view names.
 
-```
+```cpp
 void GetViewNames(CStringList& listOfNames) const;
 ```
 
@@ -173,7 +174,7 @@ void GetViewNames(CStringList& listOfNames) const;
 
 This method fills the parameter `listOfNames` with the names of all the views registered by using [CMouseManager::AddView](#addview).
 
-##  <a name="loadstate"></a>  CMouseManager::LoadState
+## <a name="loadstate"></a> CMouseManager::LoadState
 
 Loads the state of the [CMouseManager Class](../../mfc/reference/cmousemanager-class.md) from the registry.
 
@@ -196,7 +197,7 @@ The state information loaded from the registry includes the registered views, vi
 
 In most cases, you do not have to call this function directly. It is called as a part of the workspace initialization process. For more information about the workspace initialization process, see [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).
 
-##  <a name="savestate"></a>  CMouseManager::SaveState
+## <a name="savestate"></a> CMouseManager::SaveState
 
 Writes the state of the [CMouseManager Class](../../mfc/reference/cmousemanager-class.md) to the registry.
 
@@ -219,11 +220,11 @@ The state information written to the registry includes all registered views, vie
 
 In most cases, you do not have to call this function directly. It is called as a part of the workspace serialization process. For more information about the workspace serialization process, see [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).
 
-##  <a name="setcommandfordblclk"></a>  CMouseManager::SetCommandForDblClk
+## <a name="setcommandfordblclk"></a> CMouseManager::SetCommandForDblClk
 
 Associates a custom command with a view that is first registered with the mouse manager.
 
-```
+```cpp
 void SetCommandForDblClk(
     int iViewId,
     UINT uiCmd);
@@ -243,10 +244,9 @@ In order to associate a custom command with a view, you must first register the 
 
 If *uiCmd* is set to 0, the specified view is no longer associated with a command.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)<br/>
 [Keyboard and Mouse Customization](../../mfc/keyboard-and-mouse-customization.md)
-

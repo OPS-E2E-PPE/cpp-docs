@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3385"
 title: "Compiler Error C3385"
 ms.date: "11/04/2016"
 f1_keywords: ["C3385"]
@@ -13,7 +14,7 @@ A function defined as being in a .dll file specified with the `DllImport` attrib
 
 The following sample generates C3385:
 
-```
+```cpp
 // C3385.cpp
 // compile with: /clr /c
 using namespace System;

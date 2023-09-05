@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: time_put_byname Class"
 title: "time_put_byname Class"
 ms.date: "11/04/2016"
 f1_keywords: ["xloctime/std::time_put_byname"]
@@ -7,7 +8,7 @@ ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
 ---
 # time_put_byname Class
 
-The derived template class describes an object that can serve as a locale facet of type `time_put`\< CharType, OutputIterator >.
+The derived class template describes an object that can serve as a locale facet of type `time_put`\< CharType, OutputIterator >.
 
 ## Syntax
 
@@ -32,10 +33,10 @@ protected:
 
 ### Parameters
 
-*_Locname*<br/>
+*_Locname*\
 A locale name.
 
-*_Refs*<br/>
+*_Refs*\
 An initial reference count.
 
 ## Remarks
@@ -50,4 +51,4 @@ Its behavior is determined by the [named](../standard-library/locale-class.md#na
 
 ## See also
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

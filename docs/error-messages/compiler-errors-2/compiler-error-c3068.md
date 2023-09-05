@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3068"
 title: "Compiler Error C3068"
 ms.date: "11/04/2016"
 f1_keywords: ["C3068"]
@@ -27,7 +28,7 @@ When an exception is thrown, compiler generated code, called the prolog and epil
 
 The following sample generates C3068:
 
-```
+```cpp
 // C3068.cpp
 // compile with: /EHsc
 // processor: x86

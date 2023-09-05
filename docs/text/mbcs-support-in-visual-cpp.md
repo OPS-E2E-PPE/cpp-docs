@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: MBCS Support in Visual C++"
 title: "MBCS Support in Visual C++"
 ms.date: "11/04/2016"
-f1_keywords: ["_mbcs"]
 helpviewer_keywords: ["tools [C++], MBCS support", "Asian languages [C++]", "Code Editor [C++], MBCS support", "IME [C++]", "Chinese characters [C++]", "Input Method Editor [C++], MBCS", "resource editors [C++], MBCS support", "debugger [C++], MBCS support", "character sets [C++], multibyte", "Japanese characters [C++]", "multibyte characters [C++]", "Kanji character support [C++]", "NMAKE program, MBCS support", "double-byte character sets [C++]", "IME [C++], MBCS", "Input Method Editor [C++]", "MBCS [C++], enabling"]
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
 ---
@@ -13,7 +13,7 @@ The memory window does not interpret bytes of data as MBCS characters, even thou
 
 Visual C++ accepts double-byte characters wherever it is appropriate to do so. This includes path names and file names in dialog boxes and text entries in the Visual C++ resource editor (for example, static text in the dialog editor and static text entries in the icon editor). In addition, the preprocessor recognizes some double-byte directives — for example, file names in `#include` statements, and as arguments to the `code_seg` and `data_seg` pragmas. In the source code editor, double-byte characters in comments and string literals are accepted, although not in C/C++ language elements (such as variable names).
 
-##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> Support for the Input Method Editor (IME)
+## <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> Support for the Input Method Editor (IME)
 
 Applications written for East Asian markets that use MBCS (for example, Japan) normally support the Windows IME for entering both single- and double-byte characters. The Visual C++ development environment contains full support for the IME.
 
@@ -21,7 +21,7 @@ Japanese keyboards do not directly support Kanji characters. The IME converts a 
 
 The IME, activated by the ALT+\` key combination, appears as a set of buttons (an indicator) and a conversion window. The application positions the window at the text insertion point. The application must handle `WM_MOVE` and `WM_SIZE` messages by repositioning the conversion window to conform to the new location or size of the target window.
 
-If you want users of your application to have the ability to enter Kanji characters, the application must handle Windows IME messages. For more information about IME programming, see [Input Method Manager](/windows/desktop/intl/input-method-manager).
+If you want users of your application to have the ability to enter Kanji characters, the application must handle Windows IME messages. For more information about IME programming, see [Input Method Manager](/windows/win32/intl/input-method-manager).
 
 ## Visual C++ Debugger
 
@@ -37,7 +37,7 @@ To change the default locale at source code compile time, use [#pragma setlocale
 
 The Visual C++ Windows-based tools, such as Spy++ and the resource editing tools, fully support IME strings.
 
-## See Also
+## See also
 
 [Support for Multibyte Character Sets (MBCSs)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 [MBCS Programming Tips](../text/mbcs-programming-tips.md)

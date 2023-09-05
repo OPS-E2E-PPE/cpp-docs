@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Internet URL Parsing Globals and Helpers"
 title: "Internet URL Parsing Globals and Helpers"
 ms.date: "04/03/2017"
-f1_keywords: ["vc.mfc.macros.isapi"]
 helpviewer_keywords: ["parsing, URLs", "URLs, parsing"]
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
 ---
@@ -11,19 +11,19 @@ When a client sends a query to the Internet server, you can use one of the URL p
 
 ## Internet URL Parsing Globals
 
-|||
+|Name|Description|
 |-|-|
 |[AfxParseURL](#afxparseurl)|Parses a URL string and returns the type of service and its components.|
 |[AfxParseURLEx](#afxparseurlex)|Parses a URL string and returns the type of service and its components, as well as providing the user name and password.|
 
 ## Other Internet Helpers
 
-|||
+|Name|Description|
 |-|-|
 |[AfxThrowInternetException](#afxthrowinternetexception)|Throws an exception related to the internet connection.|
 |[AfxGetInternetHandleType](#afxgetinternethandletype)|Determines the type of an Internet handle.|
 
-##  <a name="afxparseurl"></a>  AfxParseURL
+## <a name="afxparseurl"></a> AfxParseURL
 
 This global is used in [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
@@ -102,13 +102,13 @@ For example, `AfxParseURL` parses URLs of the form *service://server/dir/dir/obj
 *dwServiceType* == #service
 
 > [!NOTE]
->  To call this function, your project must include AFXINET.H.
+> To call this function, your project must include AFXINET.H.
 
 ### Requirements
 
   **Header** afxinet.h
 
-##  <a name="afxparseurlex"></a>  AfxParseURLEx
+## <a name="afxparseurlex"></a> AfxParseURLEx
 
 This global function is the extended version of [AfxParseURL](#afxparseurl) and is used in [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
@@ -199,17 +199,13 @@ Nonzero if the URL was successfully parsed; otherwise, 0 if it is empty or does 
 It parses a URL string and returns the type of service and its components, as well as providing the user's name and password. The flags indicate how unsafe characters are handled.
 
 > [!NOTE]
->  To call this function, your project must include AFXINET.H.
+> To call this function, your project must include AFXINET.H.
 
 ### Requirements
 
   **Header** afxinet.h
 
-## See Also
-
-[Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
-
-## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
+## <a name="afxgetinternethandletype"></a> AfxGetInternetHandleType
 
 Use this global function to determine the type of an Internet handle.
 
@@ -259,18 +255,13 @@ The following list includes possible Internet types returned by `AfxGetInternetH
 - INTERNET_HANDLE_TYPE_HTTP_REQUEST
 
 > [!NOTE]
->  In order to call this function, your project must include AFXINET.H.
+> In order to call this function, your project must include AFXINET.H.
 
 ### Requirements
 
 **Header:** afxinet.h
 
-### See Also
-
-[Macros and Globals](mfc-macros-and-globals.md)<br/>
-[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
-
-## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
+## <a name="afxthrowinternetexception"></a> AfxThrowInternetException
 
 Throws an Internet exception.
 
@@ -293,15 +284,14 @@ The error that caused the exception.
 You are responsible for determining the cause based on the operating-system error code.
 
 > [!NOTE]
->  To call this function, your project must include AFXINET.H.
+> To call this function, your project must include AFXINET.H.
 
 ### Requirements
 
 **Header:** afxinet.h
 
-### See Also
+## See also
 
 [Macros and Globals](mfc-macros-and-globals.md)<br/>
 [CInternetException Class](cinternetexception-class.md)<br/>
-[THROW](#throw)
-
+[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)

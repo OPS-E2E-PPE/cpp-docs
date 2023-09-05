@@ -1,21 +1,34 @@
 ---
+description: "Learn more about: Concurrency namespace operators (AMP)"
 title: "Concurrency namespace operators (AMP)"
 ms.date: "11/04/2016"
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 ---
 # Concurrency namespace operators (AMP)
 
-||||
-|-|-|-|
-|[operator!=](#operator_neq)|[operator%](#operator_mod)|[operator*](#operator_star)|
-|[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|
-|[operator==](#operator_eq_eq)|
+:::row:::
+   :::column span="":::
+      [`operator==`](#operator_eq_eq)\
+      [`operator!=`](#operator_neq)
+   :::column-end:::
+   :::column span="":::
+      [`operator+`](#operator_add)\
+      [`operator-`](#operator-)
+   :::column-end:::
+   :::column span="":::
+      [`operator*`](#operator_star)\
+      [`operator/`](#operator_div)
+   :::column-end:::
+   :::column span="":::
+      [`operator%`](#operator_mod)
+   :::column-end:::
+:::row-end:::
 
-##  <a name="operator_eq_eq"></a>  operator==
+## <a name="operator_eq_eq"></a> operator==
 
 Determines whether the specified arguments are equal.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -38,13 +51,13 @@ One of the tuples to compare.
 
 ### Return Value
 
-**true** if the tuples are equal; otherwise, **false**.
+**`true`** if the tuples are equal; otherwise, **`false`**.
 
-##  <a name="operator_neq"></a>  operator!=
+## <a name="operator_neq"></a> operator!=
 
 Determines whether the specified arguments are not equal.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -67,13 +80,13 @@ One of the tuples to compare.
 
 ### Return Value
 
-**true** if the tuples are not equal; otherwise, **false**.
+**`true`** if the tuples are not equal; otherwise, **`false`**.
 
-##  <a name="operator_add"></a>  operator+
+## <a name="operator_add"></a> operator+
 
 Computes the component-wise sum of the specified arguments.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -114,11 +127,11 @@ One of the arguments to add.
 
 The component-wise sum of the specified arguments.
 
-##  <a name="operator-"></a>  operator-
+## <a name="operator-"></a> operator-
 
 Computes the component-wise difference between the specified arguments.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -159,11 +172,11 @@ The argument to subtract.
 
 The component-wise difference between the specified arguments.
 
-##  <a name="operator_star"></a>  operator*
+## <a name="operator_star"></a> operator*
 
 Computes the component-wise product of the specified arguments.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -196,11 +209,11 @@ One of the tuples to multiply.
 
 The component-wise product of the specified arguments.
 
-##  <a name="operator_div"></a>  operator/
+## <a name="operator_div"></a> operator/
 
 Computes the component-wise quotient of the specified arguments.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -233,11 +246,11 @@ The tuple to divide by.
 
 The component-wise quotient of the specified arguments.
 
-##  <a name="operator_mod"></a>  operator%
+## <a name="operator_mod"></a> operator%
 
 Computes the modulus of the first specified argument by the second specified argument.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -270,6 +283,6 @@ The tuple to modulo by.
 
 The result of the first specified argument modulus the second specified argument.
 
-## See Also
+## See also
 
-[Concurrency Namespace ](concurrency-namespace-cpp-amp.md)
+[Concurrency Namespace](concurrency-namespace-cpp-amp.md)

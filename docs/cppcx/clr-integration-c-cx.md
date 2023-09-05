@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CLR integration (C++/CX)"
 title: "CLR integration (C++/CX)"
 ms.date: "01/22/2017"
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
@@ -59,10 +60,10 @@ The following lists show value structs that support new constructors and helper 
 
 ## Mapping the CLR to C++/CX
 
-When the Visual C++ or C# compilers read a .winmd file, they automatically map certain types in the metadata file to appropriate C++/CX or CLR types. For example, in the CLR, the IVector\<T> interface is mapped to IList\<T>. But in C++/CX, the IVector\<T> interface is not mapped to another type.
+When the Microsoft C++ or C# compilers read a .winmd file, they automatically map certain types in the metadata file to appropriate C++/CX or CLR types. For example, in the CLR, the IVector\<T> interface is mapped to IList\<T>. But in C++/CX, the IVector\<T> interface is not mapped to another type.
 
 IReference\<T> in the Windows Runtime maps to Nullable\<T> in .NET.
 
-## See Also
+## See also
 
 [Interoperating with Other Languages](../cppcx/interoperating-with-other-languages-c-cx.md)

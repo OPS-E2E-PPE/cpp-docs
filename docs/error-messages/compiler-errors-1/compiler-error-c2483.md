@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2483"
 title: "Compiler Error C2483"
 ms.date: "09/15/2017"
 f1_keywords: ["C2483"]
@@ -26,6 +27,6 @@ __declspec(thread) struct A {
 __declspec(thread) struct B {} b;   // OK
 ```
 
-## See Also
+## See also
 
 [thread](../../cpp/thread.md)

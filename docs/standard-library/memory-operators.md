@@ -1,18 +1,13 @@
 ---
-title: "&lt;memory&gt; operators"
+description: "Learn more about: <memory> operators"
+title: "<memory> operators"
 ms.date: "11/04/2016"
 f1_keywords: ["memory/std::operator!=", "memory/std::operator>", "memory/std::operator>=", "memory/std::operator<", "memory/std::operator<=", "memory/std::operator<<", "memory/std::operator=="]
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 ---
-# &lt;memory&gt; operators
+# `<memory>` operators
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 Tests for inequality between objects.
 
@@ -35,21 +30,21 @@ bool operator!=(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 One of the objects to be tested for inequality.
 
-*right*<br/>
+*right*\
 One of the objects to be tested for inequality.
 
-*Ty1*<br/>
+*Ty1*\
 The type controlled by the left shared pointer.
 
-*Ty2*<br/>
+*Ty2*\
 The type controlled by the right shared pointer.
 
 ### Return Value
 
-**true** if the objects are not equal; **false** if objects are equal.
+**`true`** if the objects are not equal; **`false`** if objects are equal.
 
 ### Remarks
 
@@ -58,6 +53,8 @@ The first template operator returns false. (All default allocators are equal.)
 The second and third template operators return `!(left == right)`.
 
 ### Example
+
+The first code example shows the results of comparing allocator objects.
 
 ```cpp
 // memory_op_me.cpp
@@ -86,7 +83,7 @@ int main( )
 The allocator objects Alloc & v1Alloc are equal.
 ```
 
-### Example
+The next code example compares shared pointers to allocated objects:
 
 ```cpp
 // std__memory__operator_ne.cpp
@@ -113,7 +110,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Tests for equality between objects.
 
@@ -136,21 +133,21 @@ bool operator==(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 One of the objects to be tested for equality.
 
-*right*<br/>
+*right*\
 One of the objects to be tested for equality.
 
-*Ty1*<br/>
+*Ty1*\
 The type controlled by the left shared pointer.
 
-*Ty2*<br/>
+*Ty2*\
 The type controlled by the right shared pointer.
 
 ### Return Value
 
-**true** if the objects are equal, **false** if objects are not equal.
+**`true`** if the objects are equal, **`false`** if objects are not equal.
 
 ### Remarks
 
@@ -159,6 +156,8 @@ The first template operator returns true. (All default allocators are equal.)
 The second and third template operators return `left.get() ==  right.get()`.
 
 ### Example
+
+The first code example shows the results of comparing allocator objects constructed in different ways.
 
 ```cpp
 // memory_op_eq.cpp
@@ -198,7 +197,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.
 ```
 
-### Example
+The next code example compares shared pointers to allocated objects:
 
 ```cpp
 // std__memory__operator_eq.cpp
@@ -225,7 +224,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> `operator>=`
 
 Tests for one object being greater than or equal to a second object.
 
@@ -243,23 +242,23 @@ bool operator>=(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 One of the objects to be compared.
 
-*right*<br/>
+*right*\
 One of the objects to be compared.
 
-*Ty1*<br/>
+*Ty1*\
 The type controlled by the left shared pointer.
 
-*Ty2*<br/>
+*Ty2*\
 The type controlled by the right shared pointer.
 
 ### Remarks
 
 The template operators return `left.get() >= right.get()`.
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> `operator<`
 
 Tests for one object being less than a second object.
 
@@ -277,19 +276,19 @@ bool operator<(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 One of the objects to be compared.
 
-*right*<br/>
+*right*\
 One of the objects to be compared.
 
-*Ty1*<br/>
+*Ty1*\
 The type controlled by the left pointer.
 
-*Ty2*<br/>
+*Ty2*\
 The type controlled by the right pointer.
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> `operator<=`
 
 Tests for one object being less than or equal to a second object.
 
@@ -307,23 +306,23 @@ bool operator<=(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 One of the objects to be compared.
 
-*right*<br/>
+*right*\
 One of the objects to be compared.
 
-*Ty1*<br/>
+*Ty1*\
 The type controlled by the left shared pointer.
 
-*Ty2*<br/>
+*Ty2*\
 The type controlled by the right shared pointer.
 
 ### Remarks
 
 The template operators return `left.get() <= right.get()`
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> `operator>`
 
 Tests for one object being greater than a second object.
 
@@ -341,19 +340,19 @@ bool operator>(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 One of the objects to be compared.
 
-*right*<br/>
+*right*\
 One of the objects to be compared.
 
-*Ty1*<br/>
+*Ty1*\
 The type controlled by the left shared pointer.
 
-*Ty2*<br/>
+*Ty2*\
 The type controlled by the right shared pointer.
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="op_lt_lt"></a> `operator<<`
 
 Writes the shared pointer to the stream.
 
@@ -365,19 +364,19 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### Parameters
 
-*Elem*<br/>
+*Elem*\
 The type of the stream element.
 
-*Tr*<br/>
+*Tr*\
 The type the stream element traits.
 
-*Ty*<br/>
+*Ty*\
 The type controlled by the shared pointer.
 
-*out*<br/>
+*out*\
 The output stream.
 
-*sp*<br/>
+*sp*\
 The shared pointer.
 
 ### Remarks
@@ -405,7 +404,3 @@ int main()
 ```Output
 sp0 == 3f3040 (varies)
 ```
-
-## See also
-
-[\<memory>](../standard-library/memory.md)<br/>

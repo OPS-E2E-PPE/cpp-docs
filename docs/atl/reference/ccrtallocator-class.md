@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CCRTAllocator Class"
 title: "CCRTAllocator Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CCRTAllocator", "ATLCORE/ATL::CCRTAllocator", "ATLCORE/ATL::CCRTAllocator::Allocate", "ATLCORE/ATL::CCRTAllocator::Free", "ATLCORE/ATL::CCRTAllocator::Reallocate"]
@@ -33,7 +34,7 @@ This class is used by [CHeapPtr](../../atl/reference/cheapptr-class.md) to provi
 
 **Header:** atlcore.h
 
-##  <a name="allocate"></a>  CCRTAllocator::Allocate
+## <a name="allocate"></a> CCRTAllocator::Allocate
 
 Call this static function to allocate memory.
 
@@ -54,7 +55,7 @@ Returns a void pointer to the allocated space, or NULL if there is insufficient 
 
 Allocates memory. See [malloc](../../c-runtime-library/reference/malloc.md) for more details.
 
-##  <a name="free"></a>  CCRTAllocator::Free
+## <a name="free"></a> CCRTAllocator::Free
 
 Call this static function to free memory.
 
@@ -71,7 +72,7 @@ Pointer to the allocated memory.
 
 Frees the allocated memory. See [free](../../c-runtime-library/reference/free.md) for more details.
 
-##  <a name="reallocate"></a>  CCRTAllocator::Reallocate
+## <a name="reallocate"></a> CCRTAllocator::Reallocate
 
 Call this static function to reallocate memory.
 
@@ -95,7 +96,7 @@ Returns a void pointer to the allocated space, or NULL if there is insufficient 
 
 Resizes the amount of allocated memory. See [realloc](../../c-runtime-library/reference/realloc.md) for more details.
 
-## See Also
+## See also
 
 [CHeapPtr Class](../../atl/reference/cheapptr-class.md)<br/>
 [CComAllocator Class](../../atl/reference/ccomallocator-class.md)<br/>

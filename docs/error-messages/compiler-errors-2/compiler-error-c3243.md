@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3243"
 title: "Compiler Error C3243"
 ms.date: "11/04/2016"
 f1_keywords: ["C3243"]
@@ -13,7 +14,7 @@ You tried to [explicitly override](../../cpp/explicit-overrides-cpp.md) a member
 
 The following sample generates C3243:
 
-```
+```cpp
 // C3243.cpp
 #pragma warning(disable:4199)
 __interface IX14A {

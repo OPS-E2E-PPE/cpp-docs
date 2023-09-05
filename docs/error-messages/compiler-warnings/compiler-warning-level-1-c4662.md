@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4662"
 title: "Compiler Warning (level 1) C4662"
 ms.date: "11/04/2016"
 f1_keywords: ["C4662"]
@@ -13,7 +14,7 @@ The specified template-class was declared, but not defined.
 
 ## Example
 
-```
+```cpp
 // C4662.cpp
 // compile with: /W1 /LD
 template<class T, int i> class MyClass; // no definition

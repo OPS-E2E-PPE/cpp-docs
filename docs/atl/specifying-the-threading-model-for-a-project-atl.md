@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Specifying the Threading Model for a Project (ATL)"
 title: "Specifying the Threading Model for a Project (ATL)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["_ATL_FREE_THREADED macro", "_ATL_APARTMENT_THREADED macro", "ATL, multithreading", "threading [ATL], models", "_ATL_SINGLE_THREADED macro"]
@@ -26,7 +27,6 @@ The macros affect run-time performance as follows:
 
 See [Options, ATL Simple Object Wizard](../atl/reference/options-atl-simple-object-wizard.md) for a description of the threading models available for an ATL object.
 
-## See Also
+## See also
 
 [Concepts](../atl/active-template-library-atl-concepts.md)
-

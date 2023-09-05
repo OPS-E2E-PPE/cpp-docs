@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: LIB Input Files"
 title: "LIB Input Files"
 ms.date: "11/04/2016"
-f1_keywords: ["Lib"]
 helpviewer_keywords: ["input files, LIB"]
 ms.assetid: e1236f0d-cd90-446b-b900-f311f456085c
 ---
@@ -16,8 +16,8 @@ The input files expected by LIB depend on the mode in which it is being used, as
 |Building an export file and import library with /DEF|Module-definition (.def) file, COFF object (.obj) files, COFF libraries (.lib), 32-bit OMF object (.obj) files|
 
 > [!NOTE]
->  OMF libraries created by the 16-bit version of LIB cannot be used as input to the 32-bit version of LIB.
+> OMF libraries created by the 16-bit version of LIB cannot be used as input to the 32-bit version of LIB.
 
-## See Also
+## See also
 
-[Overview of LIB](../../build/reference/overview-of-lib.md)
+[Overview of LIB](overview-of-lib.md)

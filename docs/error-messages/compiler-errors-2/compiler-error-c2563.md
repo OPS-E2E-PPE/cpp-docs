@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2563"
 title: "Compiler Error C2563"
 ms.date: "11/04/2016"
 f1_keywords: ["C2563"]
@@ -13,7 +14,7 @@ The formal parameter list of a function (or a pointer to a function) does not ma
 
 The following sample generates C2563:
 
-```
+```cpp
 // C2563.cpp
 void func( int );
 void func( int, int );

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCColorDialog Class"
 title: "CMFCColorDialog Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCColorDialog", "AFXCOLORDIALOG/CMFCColorDialog", "AFXCOLORDIALOG/CMFCColorDialog::CMFCColorDialog", "AFXCOLORDIALOG/CMFCColorDialog::GetColor", "AFXCOLORDIALOG/CMFCColorDialog::GetPalette", "AFXCOLORDIALOG/CMFCColorDialog::RebuildPalette", "AFXCOLORDIALOG/CMFCColorDialog::SetCurrentColor", "AFXCOLORDIALOG/CMFCColorDialog::SetNewColor", "AFXCOLORDIALOG/CMFCColorDialog::SetPageOne", "AFXCOLORDIALOG/CMFCColorDialog::SetPageTwo"]
@@ -30,7 +31,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|
 |[CMFCColorDialog::GetColor](#getcolor)|Returns the current selected color.|
 |[CMFCColorDialog::GetPalette](#getpalette)|Returns the color's palette.|
-|`CMFCColorDialog::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) and [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows functions. For syntax and more information, see [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Overrides `CDialogEx::PreTranslateMessage`.)|
+|`CMFCColorDialog::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) and [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows functions. For syntax and more information, see [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Overrides `CDialogEx::PreTranslateMessage`.)|
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Derives a palette from the system palette.|
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Sets the current selected color.|
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|Sets the color most equivalent to a specified RGB value.|
@@ -76,7 +77,7 @@ You can construct a `CMFCColorDialog` object on the stack and then call `DoModal
 
 ## Example
 
-The following example demonstrates how to configure a color dialog by using various methods in the `CMFCColorDialog` class. The example shows how to set the current and the new colors of the dialog, and how to set the red, green, and blue components of a selected color on the two property pages of the color dialog. This example is part of the [New Controls sample](../../visual-cpp-samples.md).
+The following example demonstrates how to configure a color dialog by using various methods in the `CMFCColorDialog` class. The example shows how to set the current and the new colors of the dialog, and how to set the red, green, and blue components of a selected color on the two property pages of the color dialog. This example is part of the [New Controls sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]
 
@@ -84,7 +85,7 @@ The following example demonstrates how to configure a color dialog by using vari
 
 **Header:** afxcolordialog.h
 
-##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog
+## <a name="cmfccolordialog"></a> CMFCColorDialog::CMFCColorDialog
 
 Constructs a `CMFCColorDialog` object.
 
@@ -114,7 +115,7 @@ CMFCColorDialog(
 
 ### Remarks
 
-##  <a name="getcolor"></a>  CMFCColorDialog::GetColor
+## <a name="getcolor"></a> CMFCColorDialog::GetColor
 
 Retrieves the color that the user selects from the color dialog.
 
@@ -124,13 +125,13 @@ COLORREF GetColor() const;
 
 ### Return Value
 
-A [COLORREF](/windows/desktop/gdi/colorref) value that contains the RGB information for the color selected in the color dialog box.
+A [COLORREF](/windows/win32/gdi/colorref) value that contains the RGB information for the color selected in the color dialog box.
 
 ### Remarks
 
 Call this function after you call the `DoModal` method.
 
-##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette
+## <a name="getpalette"></a> CMFCColorDialog::GetPalette
 
 Retrieves the color palette that is available in the current color dialog.
 
@@ -146,19 +147,19 @@ A pointer to the `CPalette` object that was specified in the `CMFCColorDialog` c
 
 The color palette specifies the colors that the user can choose.
 
-##  <a name="rebuildpalette"></a>  CMFCColorDialog::RebuildPalette
+## <a name="rebuildpalette"></a> CMFCColorDialog::RebuildPalette
 
 Derives a palette from the system palette.
 
-```
+```cpp
 void RebuildPalette();
 ```
 
-##  <a name="setcurrentcolor"></a>  CMFCColorDialog::SetCurrentColor
+## <a name="setcurrentcolor"></a> CMFCColorDialog::SetCurrentColor
 
 Sets the current color of the dialog box.
 
-```
+```cpp
 void SetCurrentColor(COLORREF rgb);
 ```
 
@@ -169,26 +170,26 @@ void SetCurrentColor(COLORREF rgb);
 
 ### Remarks
 
-##  <a name="setnewcolor"></a>  CMFCColorDialog::SetNewColor
+## <a name="setnewcolor"></a> CMFCColorDialog::SetNewColor
 
 Sets the current color to the color in the current palette that is most similar.
 
-```
+```cpp
 void SetNewColor(COLORREF rgb);
 ```
 
 ### Parameters
 
 *rgb*<br/>
-[in] A [COLORREF](/windows/desktop/gdi/colorref) that specifies an RGB color.
+[in] A [COLORREF](/windows/win32/gdi/colorref) that specifies an RGB color.
 
 ### Remarks
 
-##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne
+## <a name="setpageone"></a> CMFCColorDialog::SetPageOne
 
 Explicitly specifies the red, green, and blue components of a selected color on the first property page of a color dialog.
 
-```
+```cpp
 void SetPageOne(
     BYTE R,
     BYTE G,
@@ -208,11 +209,11 @@ void SetPageOne(
 
 ### Remarks
 
-##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo
+## <a name="setpagetwo"></a> CMFCColorDialog::SetPageTwo
 
 Explicitly specifies the red, green, and blue components of a selected color on the second property page of a color dialog.
 
-```
+```cpp
 void SetPageTwo(
     BYTE R,
     BYTE G,
@@ -232,7 +233,7 @@ void SetPageTwo(
 
 ### Remarks
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

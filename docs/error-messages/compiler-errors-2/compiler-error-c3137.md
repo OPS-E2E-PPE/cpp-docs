@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3137"
 title: "Compiler Error C3137"
 ms.date: "11/04/2016"
 f1_keywords: ["C3137"]
@@ -13,7 +14,7 @@ A property cannot be initialized, for example, in a constructor's initialization
 
 The following example generates C3137:
 
-```
+```cpp
 // C3137.cpp
 // compile with: /clr /c
 ref class CMyClass {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2681"
 title: "Compiler Error C2681"
 ms.date: "11/04/2016"
 f1_keywords: ["C2681"]
@@ -13,7 +14,7 @@ A casting operator tried to convert from an invalid type. For example, if you us
 
 The following sample generates C2681:
 
-```
+```cpp
 // C2681.cpp
 class A { virtual void f(); };
 

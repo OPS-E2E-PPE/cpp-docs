@@ -1,10 +1,13 @@
 ---
+description: "Learn more about: basic_stringstream Class"
 title: "basic_stringstream Class"
-ms.date: "11/04/2016"
+ms.date: 06/10/2022
 f1_keywords: ["sstream/std::basic_stringstream", "sstream/std::basic_stringstream::allocator_type", "sstream/std::basic_stringstream::rdbuf", "sstream/std::basic_stringstream::str"]
 helpviewer_keywords: ["std::basic_stringstream [C++]", "std::basic_stringstream [C++], allocator_type", "std::basic_stringstream [C++], rdbuf", "std::basic_stringstream [C++], str"]
 ms.assetid: 49629814-ca37-45c5-931b-4ff894e6ebd2
+ms.custom: devdivchpfy22
 ---
+
 # basic_stringstream Class
 
 Describes an object that controls insertion and extraction of elements and encoded objects using a stream buffer of class [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.
@@ -18,18 +21,18 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### Parameters
 
-*Alloc*<br/>
+*Alloc*\
 The allocator class.
 
-*Elem*<br/>
+*Elem*\
 The type of the basic element of the string.
 
-*Tr*<br/>
+*Tr*\
 The character traits specialized on the basic element of the string.
 
 ## Remarks
 
-The template class describes an object that controls insertion and extraction of elements and encoded objects using a stream buffer of class [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>, with elements of type `Elem`, whose character traits are determined by the class `Tr`, and whose elements are allocated by an allocator of class `Alloc`. The object stores an object of class basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
+The class template describes an object that controls insertion and extraction of elements and encoded objects using a stream buffer of class [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>, with elements of type `Elem`, whose character traits are determined by the class `Tr`, and whose elements are allocated by an allocator of class `Alloc`. The object stores an object of class basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
 ### Constructors
 
@@ -56,7 +59,7 @@ The template class describes an object that controls insertion and extraction of
 
 **Namespace:** std
 
-## <a name="allocator_type"></a>  basic_stringstream::allocator_type
+## <a name="allocator_type"></a> basic_stringstream::allocator_type
 
 The type is a synonym for the template parameter `Alloc`.
 
@@ -64,7 +67,7 @@ The type is a synonym for the template parameter `Alloc`.
 typedef Alloc allocator_type;
 ```
 
-## <a name="basic_stringstream"></a>  basic_stringstream::basic_stringstream
+## <a name="basic_stringstream"></a> basic_stringstream::basic_stringstream
 
 Constructs an object of type `basic_stringstream`.
 
@@ -76,10 +79,10 @@ explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::
 
 ### Parameters
 
-*_Mode*<br/>
+*_Mode*\
 One of the enumerations in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*str*<br/>
+*str*\
 An object of type `basic_string`.
 
 ### Remarks
@@ -88,7 +91,7 @@ The first constructor initializes the base class by calling [basic_iostream](../
 
 The second constructor initializes the base class by calling basic_iostream( **sb**). It also initializes `sb` by calling basic_stringbuf< **Elem**, **Tr**, `Alloc`>(_ *Str*, `_Mode`).
 
-## <a name="rdbuf"></a>  basic_stringstream::rdbuf
+## <a name="rdbuf"></a> basic_stringstream::rdbuf
 
 Returns the address of the stored stream buffer of type **pointer** to [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.
 
@@ -104,7 +107,7 @@ The address of the stored stream buffer of type `pointer` to basic_stringbuf< **
 
 See [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) for an example that uses `rdbuf`.
 
-## <a name="str"></a>  basic_stringstream::str
+## <a name="str"></a> basic_stringstream::str
 
 Sets or gets the text in a string buffer without changing the write position.
 
@@ -117,12 +120,12 @@ void str(
 
 ### Parameters
 
-*_Newstr*<br/>
+*_Newstr*\
 The new string.
 
 ### Return Value
 
-Returns an object of class [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`>, whose controlled sequence is a copy of the sequence controlled by **\*this**.
+Returns an object of class [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`>, whose controlled sequence is a copy of the sequence controlled by `*this`.
 
 ### Remarks
 
@@ -134,6 +137,6 @@ See [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str) for
 
 ## See also
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream Programming](../standard-library/iostream-programming.md)<br/>
-[iostreams Conventions](../standard-library/iostreams-conventions.md)<br/>
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream Programming](../standard-library/iostream-programming.md)\
+[iostreams Conventions](../standard-library/iostreams-conventions.md)

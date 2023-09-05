@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3162"
 title: "Compiler Error C3162"
 ms.date: "11/04/2016"
 f1_keywords: ["C3162"]
@@ -23,7 +24,7 @@ For more information, see,
 
 The following sample generates C3162.
 
-```
+```cpp
 // C3162.cpp
 // compile with: /clr /c
 ref struct A {

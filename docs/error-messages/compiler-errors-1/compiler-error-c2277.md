@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2277"
 title: "Compiler Error C2277"
 ms.date: "11/04/2016"
 f1_keywords: ["C2277"]
@@ -13,7 +14,7 @@ You cannot take the address of a member function.
 
 The following sample generates C2277:
 
-```
+```cpp
 // C2277.cpp
 class A {
 public:

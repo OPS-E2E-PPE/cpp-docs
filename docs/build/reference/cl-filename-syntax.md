@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: CL Filename Syntax"
 title: "CL Filename Syntax"
 ms.date: "11/04/2016"
-f1_keywords: ["cl"]
 helpviewer_keywords: ["syntax, compiler filename", "paths, CL compiler filename syntax", "cl.exe compiler, filename syntax", "extensions, specifying to compiler", "file names [C++], CL compiler", "file names [C++]"]
 ms.assetid: 3ca72586-75be-4477-b323-a1be232e80d4
 ---
@@ -11,6 +11,6 @@ CL accepts files with names that follow FAT, HPFS, or NTFS naming conventions. A
 
 The filename extension determines how files are processed. C and C++ files, which have the extension .c, .cxx, or .cpp, are compiled. Other files, including .obj files, libraries (.lib), and module-definition (.def) files, are passed to the linker without being processed.
 
-## See Also
+## See also
 
-[Compiler Command-Line Syntax](../../build/reference/compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line Syntax](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4677"
 title: "Compiler Warning (level 1) C4677"
 ms.date: "11/04/2016"
 f1_keywords: ["C4677"]
@@ -15,7 +16,7 @@ A type that has public accessibility outside the assembly uses a type that has p
 
 The following sample generates C4677.
 
-```
+```cpp
 // C4677.cpp
 // compile with: /clr /c /W1
 delegate void TestDel();

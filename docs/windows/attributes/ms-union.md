@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ms_union"
 title: "ms_union (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.ms_union"]
@@ -17,7 +18,7 @@ Controls the network data representation alignment of nonencapsulated unions.
 
 ## Remarks
 
-The **ms_union** C++ attribute has the same functionality as the [ms_union](/windows/desktop/Midl/ms-union-attrib) MIDL attribute.
+The **ms_union** C++ attribute has the same functionality as the [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL attribute.
 
 ## Example
 
@@ -48,9 +49,7 @@ __interface IFireTabCtrl {
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Nonencapsulated unions|
 |**Repeatable**|No|
@@ -59,7 +58,7 @@ __interface IFireTabCtrl {
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Typedef, Enum, Union, and Struct Attributes](typedef-enum-union-and-struct-attributes.md)

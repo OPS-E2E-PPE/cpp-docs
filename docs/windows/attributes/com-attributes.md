@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COM Attributes"
 title: "COM Attributes"
 ms.date: "10/03/2018"
 helpviewer_keywords: ["attributes [C++/CLI], reference topics", "attributes [COM]", "COM, attributes"]
@@ -24,6 +25,6 @@ The COM attributes inject code to support numerous areas of COM development and 
 |[threading](threading-cpp.md)|Specifies the threading model for a COM object.|
 |[vi_progid](vi-progid.md)|Defines a version-independent ProgID for a control.|
 
-## See Also
+## See also
 
 [Attributes by Group](attributes-by-group.md)

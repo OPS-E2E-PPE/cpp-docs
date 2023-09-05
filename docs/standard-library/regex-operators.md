@@ -1,18 +1,21 @@
 ---
-title: "&lt;regex&gt; operators"
+description: "Learn more about: <regex> operators"
+title: "<regex> operators"
 ms.date: "11/04/2016"
 f1_keywords: ["regex/std::operator!=", "regex/std::operator>", "regex/std::operator>=", "regex/std::operator<", "regex/std::operator<=", "regex/std::operator==", "regex/std::operator<<"]
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
 ---
-# &lt;regex&gt; operators
+# `<regex>` operators
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
+[operator!=](#op_neq)\
+[`operator>`](#op_gt)\
+[`operator>=`](#op_gt_eq)\
+[`operator<`](#op_lt)\
+[`operator<<`](#op_lt_lt)\
+[`operator<=`](#op_lt_eq)\
+[operator==](#op_eq_eq)
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 Not equal comparison for various objects.
 
@@ -53,19 +56,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### Parameters
 
-*BidIt*<br/>
+*BidIt*\
 The iterator type.
 
-*IOtraits*<br/>
+*IOtraits*\
 The string traits class.
 
-*Alloc*<br/>
+*Alloc*\
 The allocator class.
 
-*left*<br/>
+*left*\
 The left object to compare.
 
-*right*<br/>
+*right*\
 The right object to compare.
 
 ### Remarks
@@ -131,7 +134,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> `operator<`
 
 Less than comparison for various objects.
 
@@ -168,19 +171,19 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### Parameters
 
-*BidIt*<br/>
+*BidIt*\
 The iterator type.
 
-*IOtraits*<br/>
+*IOtraits*\
 The string traits class.
 
-*Alloc*<br/>
+*Alloc*\
 The allocator class.
 
-*left*<br/>
+*left*\
 The left object to compare.
 
-*right*<br/>
+*right*\
 The right object to compare.
 
 ### Remarks
@@ -241,7 +244,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="op_lt_lt"></a> `operator<<`
 
 Inserts a sub_match in a stream.
 
@@ -253,22 +256,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### Parameters
 
-*Elem*<br/>
+*Elem*\
 The element type.
 
-*IOtraits*<br/>
+*IOtraits*\
 The string traits class.
 
-*Alloc*<br/>
+*Alloc*\
 The allocator class.
 
-*BidIt*<br/>
+*BidIt*\
 The iterator type.
 
-*os*<br/>
+*os*\
 The output stream.
 
-*right*<br/>
+*right*\
 The object to insert.
 
 ### Remarks
@@ -301,7 +304,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> `operator<=`
 
 Less than or equal comparison for various objects.
 
@@ -338,19 +341,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### Parameters
 
-*BidIt*<br/>
+*BidIt*\
 The iterator type.
 
-*IOtraits*<br/>
+*IOtraits*\
 The string traits class.
 
-*Alloc*<br/>
+*Alloc*\
 The allocator class.
 
-*left*<br/>
+*left*\
 The left object to compare.
 
-*right*<br/>
+*right*\
 The right object to compare.
 
 ### Remarks
@@ -411,7 +414,7 @@ sub <= "aab" == true
 sub <= 'a' == false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Equal comparison for various objects.
 
@@ -452,19 +455,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### Parameters
 
-*BidIt*<br/>
+*BidIt*\
 The iterator type.
 
-*IOtraits*<br/>
+*IOtraits*\
 The string traits class.
 
-*Alloc*<br/>
+*Alloc*\
 The allocator class.
 
-*left*<br/>
+*left*\
 The left object to compare.
 
-*right*<br/>
+*right*\
 The right object to compare.
 
 ### Remarks
@@ -473,11 +476,11 @@ Each template operator converts each of its arguments to a string type and retur
 
 When a template operator converts its arguments to a string type it uses the first of the following transformations that applies:
 
-arguments whose types are a specialization of template class `match_results` or `sub_match` are converted by calling the `str` member function;
+arguments whose types are a specialization of class template `match_results` or `sub_match` are converted by calling the `str` member function;
 
-arguments whose types are a specialization of the template class `basic_string` are unchanged;
+arguments whose types are a specialization of the class template `basic_string` are unchanged;
 
-all other argument types are converted by passing the argument value to the constructor for an appropriate specialization of the template class `basic_string`.
+all other argument types are converted by passing the argument value to the constructor for an appropriate specialization of the class template `basic_string`.
 
 ### Example
 
@@ -538,7 +541,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> `operator>`
 
 Greater than comparison for various objects.
 
@@ -575,19 +578,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### Parameters
 
-*BidIt*<br/>
+*BidIt*\
 The iterator type.
 
-*IOtraits*<br/>
+*IOtraits*\
 The string traits class.
 
-*Alloc*<br/>
+*Alloc*\
 The allocator class.
 
-*left*<br/>
+*left*\
 The left object to compare.
 
-*right*<br/>
+*right*\
 The right object to compare.
 
 ### Remarks
@@ -648,7 +651,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> `operator>=`
 
 Greater than or equal comparison for various objects.
 
@@ -685,19 +688,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### Parameters
 
-*BidIt*<br/>
+*BidIt*\
 The iterator type.
 
-*IOtraits*<br/>
+*IOtraits*\
 The string traits class.
 
-*Alloc*<br/>
+*Alloc*\
 The allocator class.
 
-*left*<br/>
+*left*\
 The left object to compare.
 
-*right*<br/>
+*right*\
 The right object to compare.
 
 ### Remarks
@@ -760,11 +763,11 @@ sub >= 'a' == true
 
 ## See also
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants Class](../standard-library/regex-constants-class.md)<br/>
-[regex_error Class](../standard-library/regex-error-class.md)<br/>
-[\<regex> functions](../standard-library/regex-functions.md)<br/>
-[regex_iterator Class](../standard-library/regex-iterator-class.md)<br/>
-[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits Class](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants Class](../standard-library/regex-constants-class.md)\
+[regex_error Class](../standard-library/regex-error-class.md)\
+[\<regex> functions](../standard-library/regex-functions.md)\
+[regex_iterator Class](../standard-library/regex-iterator-class.md)\
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)\
+[regex_traits Class](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

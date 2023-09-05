@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2460"
 title: "Compiler Error C2460"
 ms.date: "11/04/2016"
 f1_keywords: ["C2460"]
@@ -13,7 +14,7 @@ A class or structure (`identifier2`) is declared as a member of itself (`identif
 
 The following sample generates C2460:
 
-```
+```cpp
 // C2460.cpp
 class C {
    C aC;    // C2460
@@ -22,7 +23,7 @@ class C {
 
 Instead, use a pointer reference in the class.
 
-```
+```cpp
 // C2460.cpp
 class C {
    C * aC;    // OK

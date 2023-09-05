@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2665"
 title: "Compiler Error C2665"
 ms.date: "11/04/2016"
 f1_keywords: ["C2665"]
@@ -19,7 +20,7 @@ A parameter of the overloaded function cannot be converted to the required type.
 
 The following sample generates C2665.
 
-```
+```cpp
 // C2665.cpp
 void func(short, char*){}
 void func(char*, char*){}

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComCritSecLock Class"
 title: "CComCritSecLock Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComCritSecLock", "ATLBASE/ATL::CComCritSecLock", "ATLBASE/ATL::CComCritSecLock::CComCritSecLock", "ATLBASE/ATL::CComCritSecLock::Lock", "ATLBASE/ATL::CComCritSecLock::Unlock"]
@@ -44,7 +45,7 @@ Use this class to lock and unlock objects in a safer way than with the [CComCrit
 
 **Header:** atlbase.h
 
-##  <a name="ctor"></a>  CComCritSecLock::CComCritSecLock
+## <a name="ctor"></a> CComCritSecLock::CComCritSecLock
 
 The constructor.
 
@@ -58,13 +59,13 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 The critical section object.
 
 *bInitialLock*<br/>
-The initial lock state: **true** means locked.
+The initial lock state: **`true`** means locked.
 
 ### Remarks
 
 Initializes the critical section object.
 
-##  <a name="dtor"></a>  CComCritSecLock::~CComCritSecLock
+## <a name="dtor"></a> CComCritSecLock::~CComCritSecLock
 
 The destructor.
 
@@ -76,7 +77,7 @@ The destructor.
 
 Unlocks the critical section object.
 
-##  <a name="lock"></a>  CComCritSecLock::Lock
+## <a name="lock"></a> CComCritSecLock::Lock
 
 Call this method to lock the critical section object.
 
@@ -92,11 +93,11 @@ Returns S_OK if the object has successfully been locked, or an error HRESULT on 
 
 If the object is already locked, an ASSERT error will occur in debug builds.
 
-##  <a name="unlock"></a>  CComCritSecLock::Unlock
+## <a name="unlock"></a> CComCritSecLock::Unlock
 
 Call this method to unlock the critical section object.
 
-```
+```cpp
 void Unlock() throw();
 ```
 
@@ -104,7 +105,7 @@ void Unlock() throw();
 
 If the object is already unlocked, an ASSERT error will occur in debug builds.
 
-## See Also
+## See also
 
 [CComCriticalSection Class](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [CComAutoCriticalSection Class](../../atl/reference/ccomautocriticalsection-class.md)

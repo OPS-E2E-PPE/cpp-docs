@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: propputref"
 title: "propputref (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.propputref"]
@@ -17,7 +18,7 @@ Specifies a property setting function that uses a reference instead of a value.
 
 ## Remarks
 
-The **propputref** C++ attribute has the same functionality as the [propputref](/windows/desktop/Midl/propputref) MIDL attribute.
+The **propputref** C++ attribute has the same functionality as the [propputref](/windows/win32/Midl/propputref) MIDL attribute.
 
 ## Example
 
@@ -25,9 +26,7 @@ See the example for [bindable](bindable.md) for a sample use of **propputref**.
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Method|
 |**Repeatable**|No|
@@ -36,7 +35,7 @@ See the example for [bindable](bindable.md) for a sample use of **propputref**.
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Method Attributes](method-attributes.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComClassFactorySingleton Class"
 title: "CComClassFactorySingleton Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComClassFactorySingleton", "ATLCOM/ATL::CComClassFactorySingleton", "ATLCOM/ATL::CComClassFactorySingleton::CreateInstance", "ATLCOM/ATL::CComClassFactorySingleton::m_spObj"]
@@ -10,7 +11,7 @@ ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 This class derives from [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) and uses [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) to construct a single object.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -62,7 +63,7 @@ ATL objects normally acquire a class factory by deriving from [CComCoClass](../.
 
 **Header:** atlcom.h
 
-##  <a name="createinstance"></a>  CComClassFactorySingleton::CreateInstance
+## <a name="createinstance"></a> CComClassFactorySingleton::CreateInstance
 
 Calls `QueryInterface` through [m_spObj](#m_spobj) to retrieve an interface pointer.
 
@@ -85,7 +86,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 A standard HRESULT value.
 
-##  <a name="m_spobj"></a>  CComClassFactorySingleton::m_spObj
+## <a name="m_spobj"></a> CComClassFactorySingleton::m_spObj
 
 The [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) object constructed by `CComClassFactorySingleton`.
 
@@ -97,11 +98,11 @@ CComPtr<IUnknown> m_spObj;
 
 Each call to the [CreateInstance](#createinstance) method simply queries this object for an interface pointer.
 
-Note that the current form of `m_spObj` presents a breaking change from the way that `CComClassFactorySingleton` worked in previous versions of ATL. In previous versions the `CComClassFactorySingleton` object was created at the same time as the class factory, during server initialization. In Visual C++.NET 2003, the object is created lazily, on the first request. This change could cause errors in programs that rely on early initialization.
+Note that the current form of `m_spObj` presents a breaking change from the way that `CComClassFactorySingleton` worked in previous versions of ATL. In previous versions the `CComClassFactorySingleton` object was created at the same time as the class factory, during server initialization. In Visual C++.NET 2003 and later, the object is created lazily, on the first request. This change could cause errors in programs that rely on early initialization.
 
-## See Also
+## See also
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
 [CComClassFactory2 Class](../../atl/reference/ccomclassfactory2-class.md)<br/>
 [CComClassFactoryAutoThread Class](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
 [CComObjectRootEx Class](../../atl/reference/ccomobjectrootex-class.md)<br/>

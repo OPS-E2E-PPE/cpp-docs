@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Interface Attributes"
 title: "Interface Attributes (C++ COM)"
 ms.date: "10/02/2018"
 helpviewer_keywords: ["attributes [C++/CLI], reference topics", "interface attributes"]
@@ -42,6 +43,6 @@ You must observe these rules for defining an interface:
 
 When not specifying the [uuid](uuid-cpp-attributes.md) attribute and using the same interface name in different attribute projects, the same GUID is generated.
 
-## See Also
+## See also
 
 [Attributes by Usage](attributes-by-usage.md)

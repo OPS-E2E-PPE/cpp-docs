@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2861"
 title: "Compiler Error C2861"
 ms.date: "11/04/2016"
 f1_keywords: ["C2861"]
@@ -15,7 +16,7 @@ The compiler encountered the interface keyword or deduced a struct as an interfa
 
 The following sample generates C2861:
 
-```
+```cpp
 // C2861.cpp
 // compile with: /c
 #include <objbase.h>   // required for IUnknown definition

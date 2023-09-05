@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: uint_3 Class"
 title: "uint_3 Class"
 ms.date: "11/04/2016"
 f1_keywords: ["amp_short_vectors/Concurrency::graphics::uint_3::get_xz", "amp_short_vectors/Concurrency::graphics::uint_3::set_yzx", "amp_short_vectors/Concurrency::graphics::uint_3::get_y", "amp_short_vectors/Concurrency::graphics::uint_3::get_yzx", "amp_short_vectors/Concurrency::graphics::uint_3::get_yz", "amp_short_vectors/Concurrency::graphics::uint_3::yzx", "amp_short_vectors/Concurrency::graphics::uint_3::get_z", "amp_short_vectors/Concurrency::graphics::uint_3::z", "amp_short_vectors/Concurrency::graphics::uint_3::xy", "amp_short_vectors/Concurrency::graphics::uint_3::gr", "amp_short_vectors/Concurrency::graphics::uint_3::operator=", "amp_short_vectors/Concurrency::graphics::uint_3::x", "amp_short_vectors/Concurrency::graphics::uint_3::gbr", "amp_short_vectors/Concurrency::graphics::uint_3::set_xy", "amp_short_vectors/Concurrency::graphics::uint_3::g", "amp_short_vectors/Concurrency::graphics::uint_3::set_yz", "amp_short_vectors/Concurrency::graphics::uint_3::br", "amp_short_vectors/Concurrency::graphics::uint_3::get_xyz", "amp_short_vectors/Concurrency::graphics::uint_3::b", "amp_short_vectors/Concurrency::graphics::uint_3::get_yxz", "amp_short_vectors/Concurrency::graphics::uint_3::set_zyx", "amp_short_vectors/Concurrency::graphics::uint_3::get_x", "amp_short_vectors/Concurrency::graphics::uint_3::rgb", "amp_short_vectors/Concurrency::graphics::uint_3::set_zy", "amp_short_vectors/Concurrency::graphics::uint_3::brg", "amp_short_vectors/Concurrency::graphics::uint_3::set_xyz", "amp_short_vectors/Concurrency::graphics::uint_3::xyz", "amp_short_vectors/Concurrency::graphics::uint_3::set_zxy", "amp_short_vectors/Concurrency::graphics::uint_3", "amp_short_vectors/Concurrency::graphics::uint_3::get_xy", "amp_short_vectors/Concurrency::graphics::uint_3::set_yx", "amp_short_vectors/Concurrency::graphics::uint_3::get_zyx", "amp_short_vectors/Concurrency::graphics::uint_3::get_zxy", "amp_short_vectors/Concurrency::graphics::uint_3::set_y", "amp_short_vectors/Concurrency::graphics::uint_3::yx", "amp_short_vectors/Concurrency::graphics::uint_3::grb", "amp_short_vectors/Concurrency::graphics::uint_3::operator+=", "amp_short_vectors/Concurrency::graphics::uint_3::set_x", "amp_short_vectors/Concurrency::graphics::uint_3::operator/=", "amp_short_vectors/Concurrency::graphics::uint_3::rbg", "amp_short_vectors/Concurrency::graphics::uint_3::set_zx", "amp_short_vectors/Concurrency::graphics::uint_3::set_z", "amp_short_vectors/Concurrency::graphics::uint_3::get_zx", "amp_short_vectors/Concurrency::graphics::uint_3::bgr", "amp_short_vectors/Concurrency::graphics::uint_3::get_xzy", "amp_short_vectors/Concurrency::graphics::uint_3::get_yx", "amp_short_vectors/Concurrency::graphics::uint_3::bg", "amp_short_vectors/Concurrency::graphics::uint_3::r", "amp_short_vectors/Concurrency::graphics::uint_3::xzy", "amp_short_vectors/Concurrency::graphics::uint_3::zyx", "amp_short_vectors/Concurrency::graphics::uint_3::set_xz", "amp_short_vectors/Concurrency::graphics::uint_3::rg", "amp_short_vectors/Concurrency::graphics::uint_3::zxy", "amp_short_vectors/Concurrency::graphics::uint_3::zy", "amp_short_vectors/Concurrency::graphics::uint_3::yz", "amp_short_vectors/Concurrency::graphics::uint_3::zx", "amp_short_vectors/Concurrency::graphics::uint_3::gb", "amp_short_vectors/Concurrency::graphics::uint_3::operator--", "amp_short_vectors/Concurrency::graphics::uint_3::set_yxz", "amp_short_vectors/Concurrency::graphics::uint_3::get_zy", "amp_short_vectors/Concurrency::graphics::uint_3::operator++", "amp_short_vectors/Concurrency::graphics::uint_3::operator-", "amp_short_vectors/Concurrency::graphics::uint_3::y", "amp_short_vectors/Concurrency::graphics::uint_3::xz", "amp_short_vectors/Concurrency::graphics::uint_3::rb", "amp_short_vectors/Concurrency::graphics::uint_3::operator*=", "amp_short_vectors/Concurrency::graphics::uint_3::yxz", "amp_short_vectors/Concurrency::graphics::uint_3::set_xzy", "amp_short_vectors/Concurrency::graphics::uint_3::operator-="]
@@ -10,7 +11,7 @@ Represents a short vector of three unsigned integers.
 
 ## Syntax
 
-```
+```cpp
 class uint_3;
 ```
 
@@ -79,7 +80,7 @@ class uint_3;
 |uint_3::operator*=||
 |uint_3::operator/=||
 |uint_3::operator^=||
-|uint_3::operator&#124;=||
+|uint_3::operator\|=||
 |uint_3::operator~||
 |uint_3::operator++||
 |uint_3::operator+=||
@@ -139,11 +140,11 @@ class uint_3;
 
 **Namespace:** Concurrency::graphics
 
-##  <a name="ctor"></a> uint_3
+## <a name="ctor"></a> uint_3
 
 Default constructor, initializes all elements with 0.
 
-```
+```cpp
 uint_3() restrict(amp,
     cpu);
 
@@ -199,12 +200,12 @@ The value for initialization.
 *_Other*<br/>
 The object used to initialize.
 
-##  <a name="uint_3__size"></a> size
+## <a name="uint_3__size"></a> size
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## See Also
+## See also
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

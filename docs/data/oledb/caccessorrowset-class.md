@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: CAccessorRowset Class"
 title: "CAccessorRowset Class"
 ms.date: "11/04/2016"
-f1_keywords: ["CAccessorRowset", "ATL.CAccessorRowset", "ATL::CAccessorRowset", "CAccessorRowset.Bind", "CAccessorRowset::Bind", "CAccessorRowset::CAccessorRowset", "CAccessorRowset.CAccessorRowset", "CAccessorRowset", "ATL.CAccessorRowset.CAccessorRowset", "ATL::CAccessorRowset::CAccessorRowset", "CAccessorRowset.Close", "CAccessorRowset::Close", "CAccessorRowset::FreeRecordMemory", "CAccessorRowset.FreeRecordMemory", "FreeRecordMemory", "GetColumnInfo", "CAccessorRowset.GetColumnInfo", "CAccessorRowset::GetColumnInfo"]
+f1_keywords: ["CAccessorRowset", "ATL.CAccessorRowset", "ATL::CAccessorRowset", "CAccessorRowset.Bind", "CAccessorRowset::Bind", "CAccessorRowset::CAccessorRowset", "CAccessorRowset.CAccessorRowset", "ATL.CAccessorRowset.CAccessorRowset", "ATL::CAccessorRowset::CAccessorRowset", "CAccessorRowset.Close", "CAccessorRowset::Close", "CAccessorRowset::FreeRecordMemory", "CAccessorRowset.FreeRecordMemory", "CAccessorRowset.GetColumnInfo", "CAccessorRowset::GetColumnInfo"]
 helpviewer_keywords: ["CAccessorRowset class", "CAccessorRowset class, methods", "CAccessorRowset class, members", "Bind method", "CAccessorRowset class, constructor", "Close method", "FreeRecordMemory method", "GetColumnInfo method"]
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
 ---
@@ -33,13 +34,13 @@ A rowset class.
 
 ### Methods
 
-|||
-|-|-|
-|[Bind](#bind)|Creates bindings (used when `bBind` is specified as **false** in [CCommand::Open](../../data/oledb/ccommand-open.md)).|
-|[CAccessorRowset](#caccessorrowset)|Constructor.|
-|[Close](#close)|Closes the rowset and any accessors.|
-|[FreeRecordMemory](#freerecordmemory)|Frees any columns in the current record that need to be freed.|
-|[GetColumnInfo](#getcolumninfo)|Implements [IColumnsInfo::GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)).|
+| Name | Description |
+|--|--|
+| [Bind](#bind) | Creates bindings (used when `bBind` is specified as **`false`** in [CCommand::Open](./ccommand-class.md#open)). |
+| [CAccessorRowset](#caccessorrowset) | Constructor. |
+| [Close](#close) | Closes the rowset and any accessors. |
+| [FreeRecordMemory](#freerecordmemory) | Frees any columns in the current record that need to be freed. |
+| [GetColumnInfo](#getcolumninfo) | Implements [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)). |
 
 ## Remarks
 
@@ -47,7 +48,7 @@ Class `TAccessor` manages the accessor. Class *TRowset* manages the rowset.
 
 ## <a name="bind"></a> CAccessorRowset::Bind
 
-Creates the bindings if you specified `bBind` as **false** in [CCommand::Open](../../data/oledb/ccommand-open.md).
+Creates the bindings if you specified `bBind` as **`false`** in [CCommand::Open](./ccommand-class.md#open).
 
 ### Syntax
 
@@ -110,7 +111,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### Parameters
 
-See [IColumnsInfo::GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) in the *OLE DB Programmer's Reference*.
+See [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in the *OLE DB Programmer's Reference*.
 
 ### Return Value
 
@@ -120,9 +121,9 @@ A standard HRESULT.
 
 The user must free the returned column information and string buffer. Use the second version of this method when you use [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) and need to override the bindings.
 
-For more information, see [IColumnsInfo::GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) in the *OLE DB Programmer's Reference*.
+For more information, see [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in the *OLE DB Programmer's Reference*.
 
-## See Also
+## See also
 
 [OLE DB Consumer Templates](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB Consumer Templates Reference](../../data/oledb/ole-db-consumer-templates-reference.md)

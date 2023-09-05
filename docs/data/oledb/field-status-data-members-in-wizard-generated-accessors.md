@@ -1,10 +1,19 @@
 ---
+description: "Learn more about: Field Status Data Members in Wizard-Generated Accessors"
 title: "Field Status Data Members in Wizard-Generated Accessors"
-ms.date: "10/24/2018"
+ms.date: "05/09/2019"
 helpviewer_keywords: ["OLE DB consumer templates, field status", "field status in OLE DB templates"]
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
 ---
 # Field Status Data Members in Wizard-Generated Accessors
+
+::: moniker range=">=msvc-160"
+
+The ATL OLE DB Consumer wizard is not available in Visual Studio 2019 and later. You can still add the functionality manually. For more information, see [Creating a Consumer Without Using a Wizard](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="<=msvc-150"
 
 When you use the **ATL OLE DB Consumer Wizard** to create a consumer, the wizard generates a data member in the user record class for each field that you specify in your column map. Each data member is of type `DWORD` and contains a status value corresponding to its respective field.
 
@@ -28,18 +37,18 @@ public:
    DBLENGTH m_dwAuthorLength;
    DBLENGTH m_dwYearBornLength;
 
-    DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
-	SELECT \
-		AuID, \
-		Author, \
-		YearBorn \
-		FROM dbo.Authors")
+   DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
+   SELECT \
+      AuID, \
+      Author, \
+      YearBorn \
+      FROM dbo.Authors")
 
-    BEGIN_COLUMN_MAP(CAuthorsAccessor)
-       COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
-    END_COLUMN_MAP()
+   BEGIN_COLUMN_MAP(CAuthorsAccessor)
+      COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
+   END_COLUMN_MAP()
 ...
 ```
 
@@ -96,6 +105,8 @@ You can retrieve the length of a variable-length column or the status of a colum
 
 When you use `CDynamicAccessor`, the length and status are bound for you automatically. To retrieve the length and status values, use the `GetLength` and `GetStatus` member functions.
 
-## See Also
+::: moniker-end
+
+## See also
 
 [Working with OLE DB Consumer Templates](../../data/oledb/working-with-ole-db-consumer-templates.md)

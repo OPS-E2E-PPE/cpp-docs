@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: helpfile"
 title: "helpfile (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.helpfile"]
@@ -22,7 +23,7 @@ The name of the file that contains the help topics.
 
 ## Remarks
 
-The **helpfile** C++ attribute has the same functionality as the [helpfile](/windows/desktop/Midl/helpfile) MIDL attribute.
+The **helpfile** C++ attribute has the same functionality as the [helpfile](/windows/win32/Midl/helpfile) MIDL attribute.
 
 ## Example
 
@@ -30,18 +31,16 @@ See the example for [module](module-cpp.md) for an example of how to use **helpf
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**interface**, **typedef**, **class**, method, **property**|
+|**Applies to**|**interface**, **`typedef`**, **`class`**, method, **`property`**|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Interface Attributes](interface-attributes.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: WM_ Messages: P - R"
 title: "WM_ Messages: P - R"
 ms.date: "11/04/2016"
 f1_keywords: ["ON_WM_RBUTTONUP", "ON_WM_PALETTECHANGED", "ON_WM_RBUTTONDBLCLK", "ON_WM_QUERYENDSESSION", "ON_WM_PARENTNOTIFY", "ON_WM_PALETTEISCHANGING", "ON_WM_QUERYOPEN", "ON_WM_PAINT", "ON_WM_QUERYNEWPALETTE", "ON_WM_RBUTTONDOWN", "ON_WM_RENDERALLFORMATS", "ON_WM_PAINTCLIPBOARD", "ON_WM_RENDERFORMAT", "ON_WM_QUERYDRAGICON"]
@@ -27,8 +28,7 @@ The following map entries correspond to the function prototypes:
 |ON_WM_RENDERALLFORMATS()|afx_msg void [OnRenderAllFormats](../../mfc/reference/cwnd-class.md#onrenderallformats)();|
 |ON_WM_RENDERFORMAT()|afx_msg void [OnRenderFormat](../../mfc/reference/cwnd-class.md#onrenderformat)( UINT );|
 
-## See Also
+## See also
 
 [Message Maps](../../mfc/reference/message-maps-mfc.md)<br/>
 [Handlers for WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
-

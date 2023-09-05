@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: out (C++)"
 title: "out  (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.out"]
@@ -17,7 +18,7 @@ Identifies pointer parameters that are returned from the called procedure to the
 
 ## Remarks
 
-The **out** C++ attribute has the same functionality as the [out](/windows/desktop/Midl/out-idl) MIDL attribute.
+The **out** C++ attribute has the same functionality as the [out](/windows/win32/Midl/out-idl) MIDL attribute.
 
 ## Example
 
@@ -25,9 +26,7 @@ See the example for [bindable](bindable.md) for a sample use of **out**.
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface parameter|
 |**Repeatable**|No|
@@ -36,7 +35,7 @@ See the example for [bindable](bindable.md) for a sample use of **out**.
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Parameter Attributes](parameter-attributes.md)<br/>

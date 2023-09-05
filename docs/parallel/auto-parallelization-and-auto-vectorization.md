@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Auto-Parallelization and Auto-Vectorization"
 title: "Auto-Parallelization and Auto-Vectorization"
 ms.date: "11/04/2016"
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
@@ -18,7 +19,7 @@ void loop_test(int u) {
 }
 ```
 
-Because `u` could be a small value, the compiler won’t automatically parallelize this loop. However, you might still want it parallelized because you know that `u` will always be large. To enable the auto-parallelization, specify [#pragma loop(hint_parallel(n))](../preprocessor/loop.md), where `n` is the number of threads to parallelize across. In the following example, the compiler will attempt to parallelize the loop across 8 threads.
+Because `u` could be a small value, the compiler won't automatically parallelize this loop. However, you might still want it parallelized because you know that `u` will always be large. To enable the auto-parallelization, specify [#pragma loop(hint_parallel(n))](../preprocessor/loop.md), where `n` is the number of threads to parallelize across. In the following example, the compiler will attempt to parallelize the loop across 8 threads.
 
 ```cpp
 void loop_test(int u) {
@@ -30,7 +31,7 @@ void loop_test(int u) {
 
 As with all [pragma directives](../preprocessor/pragma-directives-and-the-pragma-keyword.md), the alternate pragma syntax `__pragma(loop(hint_parallel(n)))` is also supported.
 
-There are some loops that the compiler can’t parallelize even if you want it to. Here's an example:
+There are some loops that the compiler can't parallelize even if you want it to. Here's an example:
 
 ```cpp
 #pragma loop(hint_parallel(8))
@@ -38,7 +39,7 @@ for (int i=0; i<upper_bound(); ++i)
     A[i] = B[i] * C[i];
 ```
 
-The function `upper_bound()` might change every time it's called. Because the upper bound cannot be known, the compiler can emit a diagnostic message that explains why it can’t parallelize this loop. The following example demonstrates a loop that can be parallelized, a loop that cannot be parallelized, the compiler syntax to use at the command prompt, and the compiler output for each command line option:
+The function `upper_bound()` might change every time it's called. Because the upper bound cannot be known, the compiler can emit a diagnostic message that explains why it can't parallelize this loop. The following example demonstrates a loop that can be parallelized, a loop that cannot be parallelized, the compiler syntax to use at the command prompt, and the compiler output for each command line option:
 
 ```cpp
 int A[1000];
@@ -101,12 +102,12 @@ As with the Auto-Parallelizer, you can specify the [/Qvec-report (Auto-Vectorize
 
 For more information about reason codes and messages, see [Vectorizer and Parallelizer Messages](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
-For an example showing how the vectorizer works in practice, see [Project Austin Part 2 of 6: Page Curling](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
+For an example showing how the vectorizer works in practice, see [Project Austin Part 2 of 6: Page Curling](https://devblogs.microsoft.com/cppblog/project-austin-part-2-of-6-page-curling/)
 
-## See Also
+## See also
 
 [loop](../preprocessor/loop.md)<br/>
-[Parallel Programming in Native Code](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
+[Parallel Programming in Native Code](/archive/blogs/nativeconcurrency)<br/>
 [/Qpar (Auto-Parallelizer)](../build/reference/qpar-auto-parallelizer.md)<br/>
 [/Qpar-report (Auto-Parallelizer Reporting Level)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [/Qvec-report (Auto-Vectorizer Reporting Level)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>

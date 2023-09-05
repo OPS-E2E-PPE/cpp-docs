@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDocObjectServer Class"
 title: "CDocObjectServer Class"
 ms.date: "09/12/2018"
 f1_keywords: ["CDocObjectServer", "AFXDOCOB/CDocObjectServer", "AFXDOCOB/CDocObjectServer::CDocObjectServer", "AFXDOCOB/CDocObjectServer::ActivateDocObject", "AFXDOCOB/CDocObjectServer::OnActivateView", "AFXDOCOB/CDocObjectServer::OnApplyViewState", "AFXDOCOB/CDocObjectServer::OnSaveViewState"]
@@ -59,11 +60,11 @@ For further information on DocObjects, see [CDocObjectServerItem](../../mfc/refe
 
 **Header:** afxdocob.h
 
-##  <a name="activatedocobject"></a>  CDocObjectServer::ActivateDocObject
+## <a name="activatedocobject"></a> CDocObjectServer::ActivateDocObject
 
 Call this function to activate (but not show) the document object server.
 
-```
+```cpp
 void ActivateDocObject();
 ```
 
@@ -73,7 +74,7 @@ void ActivateDocObject();
 
 Together, `ActivateDocObject` and `OnActivateView` activate and display the DocObject view. DocObject activation differs from other kinds of OLE in-place activation. DocObject activation bypasses displaying in-place hatch borders and object adornments (such as sizing handles), ignores object extent functions, and draws scroll bars within the view rectangle as opposed to drawing them outside that rectangle (as in normal in-place activation).
 
-##  <a name="cdocobjectserver"></a>  CDocObjectServer::CDocObjectServer
+## <a name="cdocobjectserver"></a> CDocObjectServer::CDocObjectServer
 
 Constructs and initializes a `CDocObjectServer` object.
 
@@ -95,7 +96,7 @@ A pointer to the `IOleDocumentSite` interface implemented by the container.
 
 When a DocObject is active, the client site OLE interface ( `IOleDocumentSite`) is what allows the DocObject server to communicate with its client (the container). When a DocObject server is activated, it first checks that the container implements the `IOleDocumentSite` interface. If so, [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver) is called to see if the container supports DocObjects. By default, `GetDocObjectServer` returns NULL. You must override `COleServerDoc::GetDocObjectServer` to construct a new `CDocObjectServer` object or a derived object of your own, with pointers to the `COleServerDoc` container and its `IOleDocumentSite` interface as arguments to the constructor.
 
-##  <a name="onactivateview"></a>  CDocObjectServer::OnActivateView
+## <a name="onactivateview"></a> CDocObjectServer::OnActivateView
 
 Call this function to display the DocObject view.
 
@@ -111,7 +112,7 @@ Returns an error or warning value. By default, returns NOERROR if successful; ot
 
 This function creates an in-place frame window, draws scrollbars within the view, sets up the menus the server shares with its container, adds frame controls, sets the active object, then finally shows the in-place frame window and sets the focus.
 
-##  <a name="onapplyviewstate"></a>  CDocObjectServer::OnApplyViewState
+## <a name="onapplyviewstate"></a> CDocObjectServer::OnApplyViewState
 
 Override this function to restore the state of the DocObject view.
 
@@ -130,7 +131,7 @@ This function is called when the view is being displayed for the first time afte
 
 You can use `OnSaveViewState` to store persistent information specific to your view's state. If you override `OnSaveViewState` to store information, you will want to override `OnApplyViewState` to read that information and apply it to your view when it is newly activated.
 
-##  <a name="onsaveviewstate"></a>  CDocObjectServer::OnSaveViewState
+## <a name="onsaveviewstate"></a> CDocObjectServer::OnSaveViewState
 
 Override this function to save extra state information about your DocObject view.
 
@@ -149,7 +150,7 @@ Your state might include properties like the view type, zoom factor, insertion a
 
 You can use `OnSaveViewState` to store persistent information specific to your view's state. If you override `OnSaveViewState` to store information, you will want to override `OnApplyViewState` to read that information and apply it to your view when it is newly activated.
 
-## See Also
+## See also
 
 [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

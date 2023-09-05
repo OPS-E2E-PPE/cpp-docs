@@ -1,15 +1,17 @@
 ---
+description: "Learn more about: bitor"
 title: "bitor"
 ms.date: "11/04/2016"
-apilocation: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ucrtbase.dll"]
-apitype: "DLLExport"
-f1_keywords: ["bitor", "std.bitor", "std::bitor"]
+api_location: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ucrtbase.dll"]
+api_type: ["DLLExport"]
+topic_type: ["apiref"]
+f1_keywords: ["ISO646/bitor", "bitor", "std.bitor", "std::bitor"]
 helpviewer_keywords: ["bitor function"]
 ms.assetid: 3c0a3711-9c74-41f2-b400-2f7797da30d1
 ---
-# bitor
+# `bitor`
 
-An alternative to the &#124; operator.
+An alternative to the `|` operator.
 
 ## Syntax
 
@@ -20,7 +22,7 @@ An alternative to the &#124; operator.
 
 ## Remarks
 
-The macro yields the operator &#124;.
+The macro yields the operator `|`.
 
 ## Example
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2105"
 title: "Compiler Error C2105"
 ms.date: "11/04/2016"
 f1_keywords: ["C2105"]
@@ -13,7 +14,7 @@ The operator must have an l-value as operand.
 
 The following sample generates C2105:
 
-```
+```cpp
 // C2105.cpp
 int main() {
    unsigned char * p1 = 0;
@@ -30,7 +31,7 @@ int main() {
 
 The following sample generates C2105:
 
-```
+```cpp
 // C2105b.cpp
 int main() {
    int a[10] = {0};

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Project Build Error PRJ0021"
 title: "Project Build Error PRJ0021"
 ms.date: "08/27/2018"
 f1_keywords: ["PRJ0021"]
@@ -13,4 +14,4 @@ The file name specified in the property *property* for the tool *tool* was inval
 
 You may have used an unknown or invalid macro.
 
-See [Setting Visual C++ Project Properties](../../ide/working-with-project-properties.md) for information on how to access your project's properties.
+See [Setting Visual C++ Project Properties](../../build/working-with-project-properties.md) for information on how to access your project's properties.

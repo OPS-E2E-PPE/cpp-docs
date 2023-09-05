@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAxWindow2T Class"
 title: "CAxWindow2T Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAxWindow2T", "ATLWIN/ATL::CAxWindow2T", "ATLWIN/ATL::CAxWindow2T::CAxWindow2T", "ATLWIN/ATL::CAxWindow2T::Create", "ATLWIN/ATL::CAxWindow2T::CreateControlLic", "ATLWIN/ATL::CAxWindow2T::CreateControlLicEx", "ATLWIN/ATL::CAxWindow2T::GetWndClassName"]
@@ -10,7 +11,7 @@ ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
 This class provides methods for manipulating a window that hosts an ActiveX control, and also has support for hosting licensed ActiveX controls.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -59,7 +60,7 @@ Class `CAxWindow2` is implemented as a specialization of the `CAxWindow2T` class
 > [!NOTE]
 > `CAxWindowT` members are documented under [CAxWindow](../../atl/reference/caxwindow-class.md).
 
-See [Hosting ActiveX Controls Using ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) for a sample that uses the members of this class.
+See [Hosting ActiveX Controls Using ATL AXHost](../../atl/atl-control-containment-faq.yml#hosting-activex-controls-using-atl-axhost) for a sample that uses the members of this class.
 
 ## Inheritance Hierarchy
 
@@ -73,7 +74,7 @@ See [Hosting ActiveX Controls Using ATL AXHost](../../atl/hosting-activex-contro
 
 **Header:** atlwin.h
 
-##  <a name="caxwindow2t"></a>  CAxWindow2T::CAxWindow2T
+## <a name="caxwindow2t"></a> CAxWindow2T::CAxWindow2T
 
 Constructs a `CAxWindow2T` object.
 
@@ -86,7 +87,7 @@ CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
 *hWnd*<br/>
 A handle of an existing window.
 
-##  <a name="create"></a>  CAxWindow2T::Create
+## <a name="create"></a> CAxWindow2T::Create
 
 Creates a host window.
 
@@ -111,9 +112,9 @@ See `CWindow::Create` for a description of the parameters and return value.
 
 ### Example
 
-See [Hosting ActiveX Controls Using ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) for a sample that uses `CAxWindow2T::Create`.
+See [Hosting ActiveX Controls Using ATL AXHost](../../atl/atl-control-containment-faq.yml#hosting-activex-controls-using-atl-axhost) for a sample that uses `CAxWindow2T::Create`.
 
-##  <a name="createcontrollic"></a>  CAxWindow2T::CreateControlLic
+## <a name="createcontrollic"></a> CAxWindow2T::CreateControlLic
 
 Creates a licensed ActiveX control, initializes it, and hosts it in the specified window.
 
@@ -142,9 +143,9 @@ See [CAxWindow::CreateControl](../../atl/reference/caxwindow-class.md#createcont
 
 ### Example
 
-See [Hosting ActiveX Controls Using ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) for a sample that uses `CAxWindow2T::CreateControlLic`.
+See [Hosting ActiveX Controls Using ATL AXHost](../../atl/atl-control-containment-faq.yml#hosting-activex-controls-using-atl-axhost) for a sample that uses `CAxWindow2T::CreateControlLic`.
 
-##  <a name="createcontrollicex"></a>  CAxWindow2T::CreateControlLicEx
+## <a name="createcontrollicex"></a> CAxWindow2T::CreateControlLicEx
 
 Creates a licensed ActiveX control, initializes it, hosts it in the specified window, and retrieves an interface pointer (or pointers) from the control.
 
@@ -179,9 +180,9 @@ See [CAxWindow::CreateControlEx](../../atl/reference/caxwindow-class.md#createco
 
 ### Example
 
-See [Hosting ActiveX Controls Using ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) for a sample that uses `CAxWindow2T::CreateControlLicEx`.
+See [Hosting ActiveX Controls Using ATL AXHost](../../atl/atl-control-containment-faq.yml#hosting-activex-controls-using-atl-axhost) for a sample that uses `CAxWindow2T::CreateControlLicEx`.
 
-##  <a name="getwndclassname"></a>  CAxWindow2T::GetWndClassName
+## <a name="getwndclassname"></a> CAxWindow2T::GetWndClassName
 
 Retrieves the name of the window class.
 
@@ -193,7 +194,7 @@ static LPCTSTR GetWndClassName();
 
 A pointer to a string containing the name of the window class (`AtlAxWinLic80`) that can host licensed and nonlicensed ActiveX controls.
 
-##  <a name="operator_eq"></a>  CAxWindow2T::operator =
+## <a name="operator_eq"></a> CAxWindow2T::operator =
 
 Assigns an HWND to an existing `CAxWindow2T` object.
 
@@ -206,7 +207,7 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 *hWnd*<br/>
 A handle of an existing window.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)<br/>
-[Control Containment FAQ](../../atl/atl-control-containment-faq.md)
+[Control Containment FAQ](../../atl/atl-control-containment-faq.yml)

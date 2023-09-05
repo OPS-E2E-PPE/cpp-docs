@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IProvideClassInfo2Impl Class"
 title: "IProvideClassInfo2Impl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["IProvideClassInfo2Impl", "ATLCOM/ATL::IProvideClassInfo2Impl", "ATLCOM/ATL::IProvideClassInfo2Impl::IProvideClassInfo2Impl", "ATLCOM/ATL::IProvideClassInfo2Impl::GetClassInfo", "ATLCOM/ATL::IProvideClassInfo2Impl::GetGUID", "ATLCOM/ATL::IProvideClassInfo2Impl::_tih"]
@@ -7,7 +8,7 @@ ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
 ---
 # IProvideClassInfo2Impl Class
 
-This class provides a default implementation of the [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) and [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) methods.
+This class provides a default implementation of the [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo) and [IProvideClassInfo2](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2) methods.
 
 ## Syntax
 
@@ -63,7 +64,7 @@ The class used to manage the coclass' type information. The default value is `CC
 
 ## Remarks
 
-The [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) interface extends [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) by adding the `GetGUID` method. This method allows a client to retrieve an object's outgoing interface IID for its default event set. Class `IProvideClassInfo2Impl` provides a default implementation of the `IProvideClassInfo` and `IProvideClassInfo2` methods.
+The [IProvideClassInfo2](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2) interface extends [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo) by adding the `GetGUID` method. This method allows a client to retrieve an object's outgoing interface IID for its default event set. Class `IProvideClassInfo2Impl` provides a default implementation of the `IProvideClassInfo` and `IProvideClassInfo2` methods.
 
 `IProvideClassInfo2Impl` contains a static member of type `CComTypeInfoHolder` that manages the type information for the coclass.
 
@@ -77,7 +78,7 @@ The [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)
 
 **Header:** atlcom.h
 
-##  <a name="getclassinfo"></a>  IProvideClassInfo2Impl::GetClassInfo
+## <a name="getclassinfo"></a> IProvideClassInfo2Impl::GetClassInfo
 
 Retrieves an `ITypeInfo` pointer to the coclass' type information.
 
@@ -87,9 +88,9 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 
 ### Remarks
 
-See [IProvideClassInfo::GetClassInfo](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) in the Windows SDK.
+See [IProvideClassInfo::GetClassInfo](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) in the Windows SDK.
 
-##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID
+## <a name="getguid"></a> IProvideClassInfo2Impl::GetGUID
 
 Retrieves the GUID for the object's outgoing dispinterface.
 
@@ -101,9 +102,9 @@ STDMETHOD(GetGUID)(
 
 ### Remarks
 
-See [IProvideClassInfo2::GetGUID](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) in the Windows SDK.
+See [IProvideClassInfo2::GetGUID](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) in the Windows SDK.
 
-##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl
+## <a name="iprovideclassinfo2impl"></a> IProvideClassInfo2Impl::IProvideClassInfo2Impl
 
 The constructor.
 
@@ -115,7 +116,7 @@ IProvideClassInfo2Impl();
 
 Calls `AddRef` on the [_tih](#_tih) member. The destructor calls `Release`.
 
-##  <a name="_tih"></a>  IProvideClassInfo2Impl::_tih
+## <a name="_tih"></a> IProvideClassInfo2Impl::_tih
 
 This static data member is an instance of the class template parameter, *tihclass*, which by default is `CComTypeInfoHolder`.
 
@@ -128,6 +129,6 @@ static  tihclass
 
 `_tih` manages the type information for the coclass.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

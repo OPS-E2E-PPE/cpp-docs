@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2594"
 title: "Compiler Error C2594"
 ms.date: "11/04/2016"
 f1_keywords: ["C2594"]
@@ -13,7 +14,7 @@ No conversion from *type1* to *type2* was more direct than any other. We suggest
 
 The following sample generates C2594. The suggested resolution to the error is a sequence of conversions:
 
-```
+```cpp
 // C2594.cpp
 // compile with: /c
 struct A{};

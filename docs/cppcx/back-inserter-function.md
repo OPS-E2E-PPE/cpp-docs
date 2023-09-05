@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: back_inserter Function"
 title: "back_inserter Function"
 ms.date: "12/30/2016"
 f1_keywords: ["collection/Windows::Foundation::Collections::back_inserter"]
@@ -12,7 +13,6 @@ Returns an iterator that is used to insert elements at the end of the specified 
 ## Syntax
 
 ```
-
 template <typename T>
 Platform::BackInsertIterator<T>
     back_inserter(IVector<T>^ v);
@@ -40,6 +40,6 @@ An iterator.
 
 **Namespace:** Windows::Foundation::Collections
 
-## See Also
+## See also
 
 [Windows::Foundation::Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)

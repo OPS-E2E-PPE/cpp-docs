@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: student_t_distribution Class"
 title: "student_t_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::student_t_distribution", "random/std::student_t_distribution::result_type", "random/std::student_t_distribution::reset", "random/std::student_t_distribution::operator()", "random/std::student_t_distribution::n", "random/std::student_t_distribution::param", "random/std::student_t_distribution::min", "random/std::student_t_distribution::max", "random/std::student_t_distribution::param_type"]
@@ -41,23 +42,21 @@ public:
 
 ### Parameters
 
-*RealType*<br/>
-The floating-point result type, defaults to **double**. For possible types, see [\<random>](../standard-library/random.md).
+*RealType*\
+The floating-point result type, defaults to **`double`**. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes a distribution that produces values of a user-specified integral type, or type **double** if none is provided, distributed according to the Student's *t*-Distribution. The following table links to articles about individual members.
+The class template describes a distribution that produces values of a user-specified integral type, or type **`double`** if none is provided, distributed according to the Student's *t*-Distribution. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[student_t_distribution](#student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|
-|`student_t_distribution::operator()`||[param_type](#param_type)|
+[student_t_distribution](#student_t_distribution)\
+[param_type](#param_type)
 
 The property function `n()` returns the value for the stored distribution parameter `n`.
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the Student's *t*-distribution, see the Wolfram MathWorld article [Students t-Distribution](http://mathworld.wolfram.com/Studentst-Distribution.html).
+For detailed information about the Student's *t*-distribution, see the Wolfram MathWorld article [Students t-Distribution](https://mathworld.wolfram.com/Studentst-Distribution.html).
 
 ## Example
 
@@ -140,7 +139,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
+## <a name="student_t_distribution"></a> student_t_distribution::student_t_distribution
 
 Constructs the distribution.
 
@@ -151,10 +150,10 @@ explicit student_t_distribution(const param_type& parm);
 
 ### Parameters
 
-*n*<br/>
+*n*\
 The `n` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The parameter package used to construct the distribution.
 
 ### Remarks
@@ -165,7 +164,7 @@ The first constructor constructs an object whose stored `n` value holds the valu
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  student_t_distribution::param_type
+## <a name="param_type"></a> student_t_distribution::param_type
 
 Stores all the parameters of the distribution.
 
@@ -182,10 +181,10 @@ struct param_type {
 
 ### Parameters
 
-*n*<br/>
+*n*\
 The `n` distribution parameter.
 
-*right*<br/>
+*right*\
 The `param_type` object to compare to this.
 
 ### Remarks
@@ -196,4 +195,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

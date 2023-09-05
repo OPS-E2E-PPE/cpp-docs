@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Define and Install a Global Exception Handler"
 title: "How to: Define and Install a Global Exception Handler"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["handlers, global"]
@@ -12,7 +13,7 @@ This is accomplished by binding a delegate to the <xref:System.Windows.Forms.App
 
 ## Example
 
-```
+```cpp
 // global_exception_handler.cpp
 // compile with: /clr
 #using <system.dll>
@@ -64,6 +65,6 @@ int main()
 }
 ```
 
-## See Also
+## See also
 
-[Exception Handling](../windows/exception-handling-cpp-component-extensions.md)
+[Exception Handling](../extensions/exception-handling-cpp-component-extensions.md)

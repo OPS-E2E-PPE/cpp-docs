@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Dual Interfaces and ATL"
 title: "Dual Interfaces and ATL"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["COM, and ATL", "ATL, dual interfaces", "dual interfaces, about dual interfaces"]
@@ -27,7 +28,6 @@ Discusses design reasons for not making an event interface a dual interface.
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Provides links to conceptual topics on how to program using the Active Template Library.
 
-## See Also
+## See also
 
 [Concepts](../atl/active-template-library-atl-concepts.md)
-

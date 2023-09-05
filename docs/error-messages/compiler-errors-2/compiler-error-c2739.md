@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2739"
 title: "Compiler Error C2739"
 ms.date: "11/04/2016"
 f1_keywords: ["C2739"]
@@ -13,7 +14,7 @@ An array dimension was not between 1 and 32.
 
 The following sample generates C2739 and shows how to fix it:
 
-```
+```cpp
 // C2739.cpp
 // compile with: /clr
 int main() {

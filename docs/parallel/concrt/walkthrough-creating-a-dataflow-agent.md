@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Walkthrough: Creating a Dataflow Agent"
 title: "Walkthrough: Creating a Dataflow Agent"
-ms.date: "11/19/2018"
+ms.date: "04/25/2019"
 helpviewer_keywords: ["creating dataflow agents [Concurrency Runtime]", "dataflow agents, creating [Concurrency Runtime]"]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
 ---
@@ -22,7 +23,7 @@ Read the following documents before you start this walkthrough:
 
 - [How to: Use a Message Block Filter](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
-##  <a name="top"></a> Sections
+## <a name="top"></a> Sections
 
 This walkthrough contains the following sections:
 
@@ -32,7 +33,7 @@ This walkthrough contains the following sections:
 
 - [Creating a Message-Logging Agent](#logging)
 
-##  <a name="control-flow"></a> Creating a Basic Control-Flow Agent
+## <a name="control-flow"></a> Creating a Basic Control-Flow Agent
 
 Consider the following example that defines the `control_flow_agent` class. The `control_flow_agent` class acts on three message buffers: one input buffer and two output buffers. The `run` method reads from the source message buffer in a loop and uses a conditional statement to direct the flow of program execution. The agent increments one counter for non-zero, negative values and increments another counter for non-zero, positive values. After the agent receives the sentinel value of zero, it sends the values of the counters to the output message buffers. The `negatives` and `positives` methods enable the application to read the counts of negative and positive values from the agent.
 
@@ -42,7 +43,7 @@ Although this example makes basic use of control flow in an agent, it demonstrat
 
 [[Top](#top)]
 
-##  <a name="dataflow"></a> Creating a Basic Dataflow Agent
+## <a name="dataflow"></a> Creating a Basic Dataflow Agent
 
 This section shows how to convert the `control_flow_agent` class to use the dataflow model to perform the same task.
 
@@ -76,7 +77,7 @@ The dataflow agent works by creating a network of message buffers, each of which
 
 The following diagram shows the complete dataflow network for the `dataflow_agent` class:
 
-![The dataflow network](../../parallel/concrt/media/concrt_dataflow.png "The dataflow network")
+![The dataflow network.](../../parallel/concrt/media/concrt_dataflow.png "The dataflow network")
 
 The following table describes the members of the network.
 
@@ -114,7 +115,7 @@ Copy the example code and paste it in a Visual Studio project, or paste it in a 
 
 [[Top](#top)]
 
-##  <a name="logging"></a> Creating a Message-Logging Agent
+## <a name="logging"></a> Creating a Message-Logging Agent
 
 The following example shows the `log_agent` class, which resembles the `dataflow_agent` class. The `log_agent` class implements an asynchronous logging agent that writes log messages to a file and to the console. The `log_agent` class enables the application to categorize messages as informational, warning, or error. It also enables the application to specify whether each log category is written to a file, the console, or both. This example writes all log messages to a file and only error messages to the console.
 
@@ -143,7 +144,6 @@ Copy the example code and paste it in a Visual Studio project, or paste it in a 
 
 [[Top](#top)]
 
-## See Also
+## See also
 
 [Concurrency Runtime Walkthroughs](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
-

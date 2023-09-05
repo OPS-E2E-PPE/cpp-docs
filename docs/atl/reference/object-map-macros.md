@@ -1,14 +1,15 @@
 ---
+description: "Learn more about: Object Map Macros"
 title: "Object Map Macros"
 ms.date: "11/04/2016"
-f1_keywords: ["atlcom/ATL::DECLARE_OBJECT_DESCRIPTION", "atlcom/ATL::OBJECT_ENTRY_AUTO", "atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO"]
+f1_keywords: ["atlcom/ATL::DECLARE_OBJECT_DESCRIPTION", "atlcom/ATL::OBJECT_ENTRY_AUTO", "atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO", "ATLCOM/DECLARE_OBJECT_DESCRIPTION", "ATLCOM/OBJECT_ENTRY_AUTO", "ATLCOM/OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO"]
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
 ---
 # Object Map Macros
 
 These macros define object maps and entries.
 
-|||
+|Name|Description|
 |-|-|
 |[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|Allows you to specify a class object's text description, which will be entered into the object map.|
 |[OBJECT_ENTRY_AUTO](#object_entry_auto)|Enters an ATL object into the object map, updates the registry, and creates an instance of the object.|
@@ -18,7 +19,7 @@ These macros define object maps and entries.
 
 **Header:** atlcom.h
 
-##  <a name="declare_object_description"></a>  DECLARE_OBJECT_DESCRIPTION
+## <a name="declare_object_description"></a> DECLARE_OBJECT_DESCRIPTION
 
 Allows you to specify a text description for your class object.
 
@@ -45,7 +46,7 @@ For more information about the ATL Project Wizard, see the article [Creating an 
 
 [!code-cpp[NVC_ATL_Windowing#123](../../atl/codesnippet/cpp/object-map-macros_1.h)]
 
-##  <a name="object_entry_auto"></a>  OBJECT_ENTRY_AUTO
+## <a name="object_entry_auto"></a> OBJECT_ENTRY_AUTO
 
 Enters an ATL object into the object map, updates the registry, and creates an instance of the object.
 
@@ -77,7 +78,7 @@ The table below describes how the information added to the object map is obtaine
 |Component category registration|[Category Macros](../../atl/reference/category-macros.md)|
 |Class-level initialization and cleanup|[ObjectMain](ccomobjectrootex-class.md#objectmain)|
 
-##  <a name="object_entry_non_createable_ex_auto"></a>  OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
+## <a name="object_entry_non_createable_ex_auto"></a> OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 
 Allows you to specify that the object should be registered and initialized, but it should not be externally creatable via `CoCreateInstance`.
 
@@ -99,6 +100,6 @@ Object entry macros are placed at global scope in the project to provide support
 
 OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO allows you to specify that an object should be registered and initialized (see [OBJECT_ENTRY_AUTO](#object_entry_auto) for more information), but it should not be creatable via `CoCreateInstance`.
 
-## See Also
+## See also
 
 [Macros](../../atl/reference/atl-macros.md)

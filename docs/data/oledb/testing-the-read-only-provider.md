@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Testing the Read-Only Provider"
 title: "Testing the Read-Only Provider"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["testing, OLE DB providers", "testing providers", "OLE DB providers, calling", "OLE DB providers, testing"]
@@ -82,7 +83,7 @@ void CTestProvDlg::OnRun()
 }
 ```
 
-The `CCommand`, `CDataSource`, and `CSession` classes all belong to the OLE DB consumer templates. Each class mimics a COM object in the provider. The `CCommand` object takes the `CProvider` class, declared in the header file, as a template parameter. The `CProvider` parameter represents bindings that you use to access the data from the provider. 
+The `CCommand`, `CDataSource`, and `CSession` classes all belong to the OLE DB consumer templates. Each class mimics a COM object in the provider. The `CCommand` object takes the `CProvider` class, declared in the header file, as a template parameter. The `CProvider` parameter represents bindings that you use to access the data from the provider.
 
 The lines to open each of the classes create each COM object in the provider. To locate the provider, use the `ProgID` of the provider. You can get the `ProgID` from the system registry or by looking in the Custom.rgs file (open the provider's directory and search for the `ProgID` key).
 
@@ -96,6 +97,6 @@ When there are no more rows, providers return DB_S_ENDOFROWSET. The DB_S_ENDOFRO
 
 You should now be able to build and test the program.
 
-## See Also
+## See also
 
 [Enhancing the Simple Read-Only Provider](../../data/oledb/enhancing-the-simple-read-only-provider.md)

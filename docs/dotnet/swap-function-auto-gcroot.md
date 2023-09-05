@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: swap Function (auto_gcroot)"
 title: "swap Function (auto_gcroot)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
@@ -30,7 +31,7 @@ Another `auto_gcroot`.
 
 ## Example
 
-```
+```cpp
 // msl_swap_auto_gcroot.cpp
 // compile with: /clr
 #include <msclr\auto_gcroot.h>
@@ -61,7 +62,7 @@ s1 = 'string two', s2 = 'string one'
 
 **Namespace** msclr
 
-## See Also
+## See also
 
 [auto_gcroot](../dotnet/auto-gcroot.md)<br/>
-[auto_gcroot::swap](../dotnet/auto-gcroot-swap.md)
+[auto_gcroot::swap](./auto-gcroot-class.md#swap)

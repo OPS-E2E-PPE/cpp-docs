@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: oleautomation"
 title: "oleautomation (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.oleautomation"]
@@ -17,7 +18,7 @@ Indicates that an interface is compatible with Automation.
 
 ## Remarks
 
-The **oleautomation** C++ attribute has the same functionality as the [oleautomation](/windows/desktop/Midl/oleautomation) MIDL attribute.
+The **oleautomation** C++ attribute has the same functionality as the [oleautomation](/windows/win32/Midl/oleautomation) MIDL attribute.
 
 ## Example
 
@@ -25,9 +26,7 @@ See the examples for [defaultvalue](defaultvalue.md) and [nonextensible](nonexte
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|**interface**|
 |**Repeatable**|No|
@@ -36,7 +35,7 @@ See the examples for [defaultvalue](defaultvalue.md) and [nonextensible](nonexte
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Interface Attributes](interface-attributes.md)

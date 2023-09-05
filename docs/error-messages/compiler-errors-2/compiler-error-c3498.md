@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3498"
 title: "Compiler Error C3498"
 ms.date: "11/04/2016"
 f1_keywords: ["C3498"]
@@ -15,11 +16,11 @@ You cannot capture a variable that has a managed type or a Windows Runtime type 
 
 - Pass the managed or Windows Runtime variable to the parameter list of the lambda expression.
 
-## Example
+## Examples
 
 The following example generates C3498 because a variable that has a managed type appears in the capture list of a lambda expression:
 
-```
+```cpp
 // C3498a.cpp
 // compile with: /clr
 using namespace System;
@@ -32,11 +33,9 @@ int main()
 }
 ```
 
-## Example
-
 The following example resolves C3498 by passing the managed variable `s` to the parameter list of the lambda expression:
 
-```
+```cpp
 // C3498b.cpp
 // compile with: /clr
 using namespace System;
@@ -49,6 +48,6 @@ int main()
 }
 ```
 
-## See Also
+## See also
 
 [Lambda Expressions](../../cpp/lambda-expressions-in-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2786"
 title: "Compiler Error C2786"
 ms.date: "11/04/2016"
 f1_keywords: ["C2786"]
@@ -13,11 +14,11 @@ The [__uuidof](../../cpp/uuidof-operator.md) operator takes a user-defined type 
 
 1. The argument is not a user-defined type.
 
-1. `__uuidof` cannot extract the GUID from the argument.
+1. **`__uuidof`** cannot extract the GUID from the argument.
 
 The following sample generates C2786:
 
-```
+```cpp
 // C2786.cpp
 struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 

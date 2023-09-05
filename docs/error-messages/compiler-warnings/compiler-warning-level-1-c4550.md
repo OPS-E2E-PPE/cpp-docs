@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4550"
 title: "Compiler Warning (level 1) C4550"
 ms.date: "11/04/2016"
 f1_keywords: ["C4550"]
@@ -13,7 +14,7 @@ A dereferenced pointer to a function is missing an argument list.
 
 ## Example
 
-```
+```cpp
 // C4550.cpp
 // compile with: /W1
 bool f()

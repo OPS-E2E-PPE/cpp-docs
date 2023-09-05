@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_volatile Class"
 title: "is_volatile Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_volatile"]
@@ -18,7 +19,7 @@ struct is_volatile;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
 ## Remarks
@@ -68,5 +69,5 @@ is_volatile<volatile int> == true
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_const Class](../standard-library/is-const-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_const Class](../standard-library/is-const-class.md)

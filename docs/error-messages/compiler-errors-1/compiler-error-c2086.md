@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2086"
 title: "Compiler Error C2086"
 ms.date: "11/04/2016"
 f1_keywords: ["C2086"]
@@ -15,7 +16,7 @@ C2086 can also be the result of incremental building for a referenced C# assembl
 
 The following sample generates C2086:
 
-```
+```cpp
 // C2086.cpp
 main() {
   int a;

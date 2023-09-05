@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAutoPtrList Class"
 title: "CAutoPtrList Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAutoPtrList", "ATLCOLL/ATL::CAutoPtrList", "ATLCOLL/ATL::CAutoPtrList::CAutoPtrList"]
@@ -10,7 +11,7 @@ ms.assetid: 11de4aca-28b0-4ff2-a74a-cb602312ffbd
 This class provides methods useful when constructing a list of smart pointers.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -49,7 +50,7 @@ For more information, see [ATL Collection Classes](../../atl/atl-collection-clas
 
 **Header:** atlcoll.h
 
-##  <a name="cautoptrlist"></a>  CAutoPtrList::CAutoPtrList
+## <a name="cautoptrlist"></a> CAutoPtrList::CAutoPtrList
 
 The constructor.
 
@@ -66,7 +67,7 @@ The block size, with a default of 10.
 
 The block size is a measure of the amount of memory allocated when a new element is required. Larger block sizes reduce calls to memory allocation routines, but use more resources.
 
-## See Also
+## See also
 
 [CAtlList Class](../../atl/reference/catllist-class.md)<br/>
 [CAutoPtrElementTraits Class](../../atl/reference/cautoptrelementtraits-class.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Add a generic C++ class"
 title: "Add a generic C++ class"
 ms.date: "11/09/2018"
 f1_keywords: ["vc.codewiz.classes.adding.generic", "vc.codewiz.class.generic"]
@@ -9,15 +10,19 @@ ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
 
 You can add a generic C++ class by using **Class View**. A generic C++ class is a class that you define or that is derived from a class that you define.
 
-**To add a generic C++ class to a project:**
+::: moniker range="msvc-140"
+
+## To add a generic C++ class to a project:
 
 1. In **Class View**, right-click the project to which you want to add the new class, choose **Add**, and then choose **Class**.
 
-1. In the [Add Class](../ide/add-class-dialog-box.md) dialog box, in the templates pane, select **C++ Class**. Select **Add** to display the [generic C++ class wizard](#generic-c-class-wizard).
+1. In the [Add Class](./adding-a-class-visual-cpp.md#add-class-dialog-box) dialog box, in the templates pane, select **C++ Class**. Select **Add** to display the [generic C++ class wizard](#generic-c-class-wizard).
 
 1. In the wizard, provide a class name, and then define settings or accept the defaults.
 
 1. To close the wizard and view the new generic C++ class in the project, select **Finish**.
+
+::: moniker-end
 
 ## In this section
 
@@ -45,11 +50,11 @@ Adds a generic C++ class to a project. The class doesn't inherit from ATL or MFC
 
 - **Access**
 
-  Sets access to the base class members for the new class. Access modifiers are keywords that specify the level of access that other classes have to the class member functions. For more information about how to specify access, see [Member access control](../cpp/member-access-control-cpp.md). By default, the class access level is set to `public`.
+  Sets access to the base class members for the new class. Access modifiers are keywords that specify the level of access that other classes have to the class member functions. For more information about how to specify access, see [Member access control](../cpp/member-access-control-cpp.md). By default, the class access level is set to **`public`**.
 
-  - `public`
-  - `protected`
-  - `private`
+  - **`public`**
+  - **`protected`**
+  - **`private`**
   - **Default** (No access modifier is generated.)
 
 - **Virtual destructor**

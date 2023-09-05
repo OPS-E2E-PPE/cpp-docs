@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CContextMenuManager Class"
 title: "CContextMenuManager Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CContextMenuManager", "AFXCONTEXTMENUMANAGER/CContextMenuManager", "AFXCONTEXTMENUMANAGER/CContextMenuManager::CContextMenuManager", "AFXCONTEXTMENUMANAGER/CContextMenuManager::AddMenu", "AFXCONTEXTMENUMANAGER/CContextMenuManager::GetMenuById", "AFXCONTEXTMENUMANAGER/CContextMenuManager::GetMenuByName", "AFXCONTEXTMENUMANAGER/CContextMenuManager::GetMenuNames", "AFXCONTEXTMENUMANAGER/CContextMenuManager::LoadState", "AFXCONTEXTMENUMANAGER/CContextMenuManager::ResetState", "AFXCONTEXTMENUMANAGER/CContextMenuManager::SaveState", "AFXCONTEXTMENUMANAGER/CContextMenuManager::SetDontCloseActiveMenu", "AFXCONTEXTMENUMANAGER/CContextMenuManager::ShowPopupMenu", "AFXCONTEXTMENUMANAGER/CContextMenuManager::TrackPopupMenu"]
@@ -51,7 +52,7 @@ The `CContextMenuManager` can also save and load its state to the Windows regist
 
 ## Example
 
-The following example demonstrates how to add a menu to a `CContextMenuManager` object, and how not to close the active pop-up menu when the `CContextMenuManager` object displays a new pop-up menu. This code snippet is part of the [Custom Pages sample](../../visual-cpp-samples.md).
+The following example demonstrates how to add a menu to a `CContextMenuManager` object, and how not to close the active pop-up menu when the `CContextMenuManager` object displays a new pop-up menu. This code snippet is part of the [Custom Pages sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 
@@ -65,7 +66,7 @@ The following example demonstrates how to add a menu to a `CContextMenuManager` 
 
 **Header:** afxcontextmenumanager.h
 
-##  <a name="addmenu"></a>  CContextMenuManager::AddMenu
+## <a name="addmenu"></a> CContextMenuManager::AddMenu
 
 Adds a new shortcut menu to the [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
@@ -98,7 +99,7 @@ Nonzero if the method was successful; 0 if the method fails.
 
 This method fails if *uiMenuResId* is invalid or if another menu with the same name already is in the `CContextMenuManager`.
 
-##  <a name="ccontextmenumanager"></a>  CContextMenuManager::CContextMenuManager
+## <a name="ccontextmenumanager"></a> CContextMenuManager::CContextMenuManager
 
 Constructs a [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) object.
 
@@ -110,7 +111,7 @@ CContextMenuManager();
 
 In most cases, you should not create a `CContextMenuManager` manually. The framework of your application creates the `CContextMenuManager` object. You should call [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) during the initialization of your application. To get a pointer to the context manager, call [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager).
 
-##  <a name="getmenubyid"></a>  CContextMenuManager::GetMenuById
+## <a name="getmenubyid"></a> CContextMenuManager::GetMenuById
 
 Returns a handle to the menu associated with a given resource ID.
 
@@ -127,7 +128,7 @@ HMENU GetMenuById(UINT nMenuResId) const;
 
 A handle to the associated menu or `NULL` if the menu is not found.
 
-##  <a name="getmenubyname"></a>  CContextMenuManager::GetMenuByName
+## <a name="getmenubyname"></a> CContextMenuManager::GetMenuByName
 
 Returns a handle to a specific menu.
 
@@ -153,11 +154,11 @@ A handle to the menu that matches the name that was specified by *lpszName*. NUL
 
 If this method finds a menu that matches *lpszName*, `GetMenuByName` stores the menu resource ID in the parameter *puiOrigResID*.
 
-##  <a name="getmenunames"></a>  CContextMenuManager::GetMenuNames
+## <a name="getmenunames"></a> CContextMenuManager::GetMenuNames
 
 Returns the list of menu names added to the [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
-```
+```cpp
 void GetMenuNames(CStringList& listOfNames) const;
 ```
 
@@ -166,7 +167,7 @@ void GetMenuNames(CStringList& listOfNames) const;
 *listOfNames*<br/>
 [out] A reference to a [CStringList](../../mfc/reference/cstringlist-class.md) parameter. This method writes the list of menu names to this parameter.
 
-##  <a name="loadstate"></a>  CContextMenuManager::LoadState
+## <a name="loadstate"></a> CContextMenuManager::LoadState
 
 Loads information associated with the [CContextMenuManager Class](../../mfc/reference/ccontextmenumanager-class.md) from the Windows registry.
 
@@ -189,7 +190,7 @@ The *lpszProfileName* parameter is not the absolute path for a registry entry. I
 
 Use the method [CContextMenuManager::SaveState](#savestate) to save the shortcut menus to the registry.
 
-##  <a name="resetstate"></a>  CContextMenuManager::ResetState
+## <a name="resetstate"></a> CContextMenuManager::ResetState
 
 Clears all items from the shortcut menus associated with the [CContextMenuManager Class](../../mfc/reference/ccontextmenumanager-class.md).
 
@@ -205,7 +206,7 @@ TRUE if the method is successful; FALSE if a failure occurs.
 
 This method clears the pop-up menus and removes them from the `CContextMenuManager`.
 
-##  <a name="savestate"></a>  CContextMenuManager::SaveState
+## <a name="savestate"></a> CContextMenuManager::SaveState
 
 Saves information associated with the [CContextMenuManager Class](../../mfc/reference/ccontextmenumanager-class.md) to the Windows registry.
 
@@ -228,11 +229,11 @@ The *lpszProfileName* parameter is not the absolute path for a registry entry. I
 
 Use the method [CContextMenuManager::LoadState](#loadstate) to load the shortcut menus from the registry.
 
-##  <a name="setdontcloseactivemenu"></a>  CContextMenuManager::SetDontCloseActiveMenu
+## <a name="setdontcloseactivemenu"></a> CContextMenuManager::SetDontCloseActiveMenu
 
 Controls whether the [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) closes the active pop-up menu when it displays a new pop-up menu.
 
-```
+```cpp
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```
 
@@ -245,7 +246,7 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 
 By default, the `CContextMenuManager` closes the active pop-up menu.
 
-##  <a name="showpopupmenu"></a>  CContextMenuManager::ShowPopupMenu
+## <a name="showpopupmenu"></a> CContextMenuManager::ShowPopupMenu
 
 Displays the specified shortcut menu.
 
@@ -304,7 +305,7 @@ This method resembles the method [CContextMenuManager::TrackPopupMenu](#trackpop
 
 If the parameter *bAutoDestroy* is FALSE, you must manually call the inherited `DestroyMenu` method to release memory resources. The default implementation of `ShowPopupMenu` does not use the parameter *bAutoDestroy*. It is provided for future use or for custom classes derived from the `CContextMenuManager` class .
 
-##  <a name="trackpopupmenu"></a>  CContextMenuManager::TrackPopupMenu
+## <a name="trackpopupmenu"></a> CContextMenuManager::TrackPopupMenu
 
 Displays the specified shortcut menu and returns the index of the selected shortcut menu command.
 
@@ -342,7 +343,7 @@ The menu command ID of the command that the user chooses; 0 if the user closes t
 
 This method functions as a modal call to display a shortcut menu. The application will not continue to the following line in code until the user either closes the shortcut menu or selects a command. An alternative method that you can use to display a shortcut menu is [CContextMenuManager::ShowPopupMenu](#showpopupmenu). That method is not a modal call and will not return the ID of the selected command.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

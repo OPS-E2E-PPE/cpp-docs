@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Use Tracking References in C++/CLI"
 title: "How to: Use Tracking References in C++/CLI"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["CLR types, passing by reference"]
@@ -63,7 +64,7 @@ int main() {
 zip == 20100
 ```
 
-The next sample shows that taking the address of a tracking reference returns an [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md), and shows how to modify and access data through a tracking reference.
+The next sample shows that taking the address of a tracking reference returns an [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md), and shows how to modify and access data through a tracking reference.
 
 ```cpp
 // tracking_reference_data.cpp
@@ -285,9 +286,9 @@ Boxed new copy V: 1
 Original V: 4, Reference to handle of originally boxed V: 1
 ```
 
-## Template functions that take native, value, or reference parameters
+## Function templates that take native, value, or reference parameters
 
-By using a tracking reference in the signature of a template function, you ensure that the function can be called by a parameter whose type is native, CLR value, or CLR reference.
+By using a tracking reference in the signature of a function template, you ensure that the function can be called by a parameter whose type is native, CLR value, or CLR reference.
 
 ```cpp
 // tracking_reference_template.cpp
@@ -296,7 +297,7 @@ using namespace System;
 
 class Temp {
 public:
-   // template functions
+   // function templates
    template<typename T>
    static int f1(T% tt) {   // works for object in any location
       Console::WriteLine("T %");
@@ -334,6 +335,6 @@ T %
 T &
 ```
 
-## See Also
+## See also
 
-[Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md)
+[Tracking Reference Operator](../extensions/tracking-reference-operator-cpp-component-extensions.md)

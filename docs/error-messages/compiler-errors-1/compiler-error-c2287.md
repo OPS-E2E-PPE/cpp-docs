@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2287"
 title: "Compiler Error C2287"
 ms.date: "11/04/2016"
 f1_keywords: ["C2287"]
@@ -13,7 +14,7 @@ A class is declared with a simpler representation than required.
 
 The following sample generates C2287:
 
-```
+```cpp
 // C2287.cpp
 // compile with: /vmg /c
 class __single_inheritance X;

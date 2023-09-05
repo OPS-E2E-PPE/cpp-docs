@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2780"
 title: "Compiler Error C2780"
 ms.date: "11/04/2016"
 f1_keywords: ["C2780"]
@@ -13,7 +14,7 @@ A function template has too few or too many arguments.
 
 The following sample generates C2780 and shows how to fix it:
 
-```
+```cpp
 // C2780.cpp
 template<typename T>
 void f(T, T){}

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3797"
 title: "Compiler Error C3797"
 ms.date: "11/04/2016"
 f1_keywords: ["C3797"]
@@ -11,13 +12,13 @@ ms.assetid: ab27ff34-8c1d-4297-b004-9e39bd3a4f25
 
 You cannot override a trivial event (an event without explicitly defined accessor methods) with another trivial event. The overriding event must define its behavior with accessor functions.
 
-For more information, see [event](../../windows/event-cpp-component-extensions.md).
+For more information, see [event](../../extensions/event-cpp-component-extensions.md).
 
 ## Example
 
 The following sample generates C3797.
 
-```
+```cpp
 // C3797.cpp
 // compile with: /clr /c
 delegate void MyDel();

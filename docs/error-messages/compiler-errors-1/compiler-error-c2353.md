@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2353"
 title: "Compiler Error C2353"
 ms.date: "11/04/2016"
 f1_keywords: ["C2353"]
@@ -13,7 +14,7 @@ Exception specifications are not allowed on member functions of managed classes.
 
 The following sample generates C2353:
 
-```
+```cpp
 // C2353.cpp
 // compile with: /clr /c
 ref class X {

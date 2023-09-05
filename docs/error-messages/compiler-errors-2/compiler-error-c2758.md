@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2758"
 title: "Compiler Error C2758"
 ms.date: "11/04/2016"
 f1_keywords: ["C2758"]
@@ -13,7 +14,7 @@ Compiler error C2758 is caused when the constructor does not initialize a member
 
 The following sample generates C2758:
 
-```
+```cpp
 // C2758.cpp
 // Compile by using: cl /W3 /c C2758.cpp
 struct A {

@@ -1,8 +1,8 @@
 ---
-title: "Object Safety Classes (ATL)| Microsoft Docs"
+description: "Learn more about: Object Safety Classes"
+title: Object Safety Classes (ATL)
 ms.date: "11/04/2016"
 ms.topic: "reference"
-f1_keywords: ["vc.atl.objects.safety"]
 helpviewer_keywords: ["safety classes", "object safety classes"]
 ms.assetid: 00060b28-49e2-4ec1-9a22-f501e07821d6
 ---
@@ -16,7 +16,6 @@ The following class provides support for object safety:
 
 [ATL Tutorial](../atl/active-template-library-atl-tutorial.md)
 
-## See Also
+## See also
 
 [Class Overview](../atl/atl-class-overview.md)
-

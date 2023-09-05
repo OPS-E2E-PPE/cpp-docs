@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Use ODBC to Work with Other Users"
 title: "Use ODBC to Work with Other Users"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ODBC, working with other users"]
@@ -10,6 +11,6 @@ Use ODBC in environments where multiple users are working with the same ODBC dat
 
 ## In This Section
 
-## See Also
+## See also
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

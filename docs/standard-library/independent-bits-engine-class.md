@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: independent_bits_engine Class"
 title: "independent_bits_engine Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::independent_bits_engine"]
@@ -18,27 +19,29 @@ class independent_bits_engine;
 
 ### Parameters
 
-*Engine*<br/>
+*Engine*\
 The base engine type.
 
-*W*<br/>
+*W*\
 **Word size**. Size, in bits, of each number generated. **Precondition**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType*<br/>
+*UIntType*\
 The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Members
 
-||||
-|-|-|-|
-|`independent_bits_engine::independent_bits_engine`|`independent_bits_engine::base`|`independent_bits_engine::discard`|
-|`independent_bits_engine::operator()`|`independent_bits_engine::base_type`|`independent_bits_engine::seed`|
+`independent_bits_engine::independent_bits_engine`\
+`independent_bits_engine::base`\
+`independent_bits_engine::base_type`\
+`independent_bits_engine::discard`\
+`independent_bits_engine::operator()`\
+`independent_bits_engine::seed`
 
 For more information about engine members, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-This template class describes an *engine adaptor* that produces values by repacking bits from the values returned by its base engine, resulting in *W*-bit values.
+This class template describes an *engine adaptor* that produces values by repacking bits from the values returned by its base engine, resulting in *W*-bit values.
 
 ## Requirements
 
@@ -48,4 +51,4 @@ This template class describes an *engine adaptor* that produces values by repack
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2392"
 title: "Compiler Error C2392"
 ms.date: "11/04/2016"
 f1_keywords: ["C2392"]
@@ -15,7 +16,7 @@ Covariant return types are not allowed for Windows Runtime member functions or w
 
 The following sample generates C2392 and shows how to fix it.
 
-```
+```cpp
 // C2392.cpp
 // compile with: /clr
 public ref struct B {

@@ -1,27 +1,26 @@
 ---
+description: "Learn more about: DAO Database Engine Initialization and Termination"
 title: "DAO Database Engine Initialization and Termination"
-ms.date: "11/04/2016"
-f1_keywords: ["vc.mfc.macros.data"]
+ms.date: "09/17/2019"
 helpviewer_keywords: ["DAO (Data Access Objects), termination", "DAO (Data Access Objects), initialization"]
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
 ---
 # DAO Database Engine Initialization and Termination
 
-When using MFC DAO objects, the DAO database engine must first be initialized and then terminated before your application or DLL quits. Two functions, `AfxDaoInit` and `AfxDaoTerm`, perform these tasks.
+DAO is used with Access databases and is supported through Office 2013. DAO 3.6 is the final version, and it is considered obsolete. When using MFC DAO objects, the DAO database engine must first be initialized and then terminated before your application or DLL quits. Two functions, `AfxDaoInit` and `AfxDaoTerm`, perform these tasks.
 
 ### DAO Database Engine Initialization and Termination
 
-|||
+|Name|Description|
 |-|-|
 |[AfxDaoInit](#afxdaoinit)|Initializes the DAO database engine.|
 |[AfxDaoTerm](#afxdaoterm)|Terminates the DAO database engine.|
 
-##  <a name="afxdaoinit"></a>  AfxDaoInit
+## <a name="afxdaoinit"></a> AfxDaoInit
 
 This function initializes the DAO database engine.
 
 ```
-
 void AfxDaoInit();
 
 throw(CDaoException*);
@@ -37,12 +36,11 @@ For related information, and for an example of calling `AfxDaoInit`, see [Techni
 
   **Header** afxdao.h
 
-##  <a name="afxdaoterm"></a>  AfxDaoTerm
+## <a name="afxdaoterm"></a> AfxDaoTerm
 
 This function terminates the DAO database engine.
 
 ```
-
 void AfxDaoTerm();
 ```
 
@@ -58,6 +56,6 @@ For related information, see [Technical Note 54](../../mfc/tn054-calling-dao-dir
 
   **Header** afxdao.h
 
-## See Also
+## See also
 
 [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)

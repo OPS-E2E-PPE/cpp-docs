@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CHtmlEditCtrlBase Class"
 title: "CHtmlEditCtrlBase Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CHtmlEditCtrlBase", "AFXHTML/CHtmlEditCtrlBase", "AFXHTML/CHtmlEditCtrlBase::AddToGlyphTable", "AFXHTML/CHtmlEditCtrlBase::Bold", "AFXHTML/CHtmlEditCtrlBase::Button", "AFXHTML/CHtmlEditCtrlBase::CheckBox", "AFXHTML/CHtmlEditCtrlBase::ClearSelection", "AFXHTML/CHtmlEditCtrlBase::Copy", "AFXHTML/CHtmlEditCtrlBase::Cut", "AFXHTML/CHtmlEditCtrlBase::Delete", "AFXHTML/CHtmlEditCtrlBase::DropDownBox", "AFXHTML/CHtmlEditCtrlBase::EmptyGlyphTable", "AFXHTML/CHtmlEditCtrlBase::ExecCommand", "AFXHTML/CHtmlEditCtrlBase::Font", "AFXHTML/CHtmlEditCtrlBase::GetAbsolutePosition", "AFXHTML/CHtmlEditCtrlBase::GetBackColor", "AFXHTML/CHtmlEditCtrlBase::GetBlockFormat", "AFXHTML/CHtmlEditCtrlBase::GetBlockFormatNames", "AFXHTML/CHtmlEditCtrlBase::GetBookMark", "AFXHTML/CHtmlEditCtrlBase::GetDocument", "AFXHTML/CHtmlEditCtrlBase::GetDocumentHTML", "AFXHTML/CHtmlEditCtrlBase::GetDocumentTitle", "AFXHTML/CHtmlEditCtrlBase::GetEvent", "AFXHTML/CHtmlEditCtrlBase::GetEventSrcElement", "AFXHTML/CHtmlEditCtrlBase::GetFontFace", "AFXHTML/CHtmlEditCtrlBase::GetFontSize", "AFXHTML/CHtmlEditCtrlBase::GetForeColor", "AFXHTML/CHtmlEditCtrlBase::GetFrameZone", "AFXHTML/CHtmlEditCtrlBase::GetIsDirty", "AFXHTML/CHtmlEditCtrlBase::GetShowAlignedSiteTags", "AFXHTML/CHtmlEditCtrlBase::GetShowAllTags", "AFXHTML/CHtmlEditCtrlBase::GetShowAreaTags", "AFXHTML/CHtmlEditCtrlBase::GetShowBRTags", "AFXHTML/CHtmlEditCtrlBase::GetShowCommentTags", "AFXHTML/CHtmlEditCtrlBase::GetShowMiscTags", "AFXHTML/CHtmlEditCtrlBase::GetShowScriptTags", "AFXHTML/CHtmlEditCtrlBase::GetShowStyleTags", "AFXHTML/CHtmlEditCtrlBase::GetShowUnknownTags", "AFXHTML/CHtmlEditCtrlBase::HorizontalLine", "AFXHTML/CHtmlEditCtrlBase::HyperLink", "AFXHTML/CHtmlEditCtrlBase::IE50Paste", "AFXHTML/CHtmlEditCtrlBase::Iframe", "AFXHTML/CHtmlEditCtrlBase::Image", "AFXHTML/CHtmlEditCtrlBase::Indent", "AFXHTML/CHtmlEditCtrlBase::InsFieldSet", "AFXHTML/CHtmlEditCtrlBase::InsInputButton", "AFXHTML/CHtmlEditCtrlBase::InsInputHidden", "AFXHTML/CHtmlEditCtrlBase::InsInputImage", "AFXHTML/CHtmlEditCtrlBase::InsInputPassword", "AFXHTML/CHtmlEditCtrlBase::InsInputReset", "AFXHTML/CHtmlEditCtrlBase::InsInputSubmit", "AFXHTML/CHtmlEditCtrlBase::InsInputUpload", "AFXHTML/CHtmlEditCtrlBase::Is1DElement", "AFXHTML/CHtmlEditCtrlBase::Is2DElement", "AFXHTML/CHtmlEditCtrlBase::Italic", "AFXHTML/CHtmlEditCtrlBase::JustifyCenter", "AFXHTML/CHtmlEditCtrlBase::JustifyLeft", "AFXHTML/CHtmlEditCtrlBase::JustifyRight", "AFXHTML/CHtmlEditCtrlBase::ListBox", "AFXHTML/CHtmlEditCtrlBase::Marquee", "AFXHTML/CHtmlEditCtrlBase::NewDocument", "AFXHTML/CHtmlEditCtrlBase::OrderList", "AFXHTML/CHtmlEditCtrlBase::Outdent", "AFXHTML/CHtmlEditCtrlBase::Paragraph", "AFXHTML/CHtmlEditCtrlBase::Paste", "AFXHTML/CHtmlEditCtrlBase::PrintDocument", "AFXHTML/CHtmlEditCtrlBase::PrintPreview", "AFXHTML/CHtmlEditCtrlBase::QueryStatus", "AFXHTML/CHtmlEditCtrlBase::RadioButton", "AFXHTML/CHtmlEditCtrlBase::RefreshDocument", "AFXHTML/CHtmlEditCtrlBase::RemoveFormat", "AFXHTML/CHtmlEditCtrlBase::SaveAs", "AFXHTML/CHtmlEditCtrlBase::SelectAll", "AFXHTML/CHtmlEditCtrlBase::Set2DPosition", "AFXHTML/CHtmlEditCtrlBase::SetAbsolutePosition", "AFXHTML/CHtmlEditCtrlBase::SetAtomicSelection", "AFXHTML/CHtmlEditCtrlBase::SetAutoURLDetectMode", "AFXHTML/CHtmlEditCtrlBase::SetBackColor", "AFXHTML/CHtmlEditCtrlBase::SetBlockFormat", "AFXHTML/CHtmlEditCtrlBase::SetBookMark", "AFXHTML/CHtmlEditCtrlBase::SetCSSEditingLevel", "AFXHTML/CHtmlEditCtrlBase::SetDefaultComposeSettings", "AFXHTML/CHtmlEditCtrlBase::SetDesignMode", "AFXHTML/CHtmlEditCtrlBase::SetDisableEditFocusUI", "AFXHTML/CHtmlEditCtrlBase::SetDocumentHTML", "AFXHTML/CHtmlEditCtrlBase::SetFontFace", "AFXHTML/CHtmlEditCtrlBase::SetFontSize", "AFXHTML/CHtmlEditCtrlBase::SetForeColor", "AFXHTML/CHtmlEditCtrlBase::SetIE5PasteMode", "AFXHTML/CHtmlEditCtrlBase::SetLiveResize", "AFXHTML/CHtmlEditCtrlBase::SetMultiSelect", "AFXHTML/CHtmlEditCtrlBase::SetOverrideCursor", "AFXHTML/CHtmlEditCtrlBase::SetMode", "AFXHTML/CHtmlEditCtrlBase::SetRespectVisInDesign", "AFXHTML/CHtmlEditCtrlBase::SetShowAlignedSiteTags", "AFXHTML/CHtmlEditCtrlBase::SetShowAllTags", "AFXHTML/CHtmlEditCtrlBase::SetShowAreaTags", "AFXHTML/CHtmlEditCtrlBase::SetShowBRTags", "AFXHTML/CHtmlEditCtrlBase::SetShowCommentTags", "AFXHTML/CHtmlEditCtrlBase::SetShowMiscTags", "AFXHTML/CHtmlEditCtrlBase::SetShowScriptTags", "AFXHTML/CHtmlEditCtrlBase::SetShowStyleTags", "AFXHTML/CHtmlEditCtrlBase::SetShowUnknownTags", "AFXHTML/CHtmlEditCtrlBase::TextArea", "AFXHTML/CHtmlEditCtrlBase::TextBox", "AFXHTML/CHtmlEditCtrlBase::UnBookmark", "AFXHTML/CHtmlEditCtrlBase::Underline", "AFXHTML/CHtmlEditCtrlBase::Unlink", "AFXHTML/CHtmlEditCtrlBase::UnorderList"]
@@ -148,7 +149,7 @@ The name of the derived class.
 
 **Header:** afxhtml.h
 
-##  <a name="addtoglyphtable"></a>  CHtmlEditCtrlBase::AddToGlyphTable
+## <a name="addtoglyphtable"></a> CHtmlEditCtrlBase::AddToGlyphTable
 
 Adds an entry to the glyph table, which specifies images to display for specific tags in design mode.
 
@@ -196,11 +197,11 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-For more information on the parameters, see "Glyph Table String Format" in [Using Editing Glyphs](https://msdn.microsoft.com/library/aa969614.aspx).
+For more information on the parameters, see "Glyph Table String Format" in [Using Editing Glyphs](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa969614\(v=vs.85\)).
 
-This method sends the [IDM_ADDTOGLYPHTABLE command ID](https://msdn.microsoft.com/library/aa769891.aspx) to the WebBrowser control.
+This method sends the [IDM_ADDTOGLYPHTABLE command ID](/previous-versions/aa769891\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold
+## <a name="bold"></a> CHtmlEditCtrlBase::Bold
 
 Toggles the bold state of the selected text.
 
@@ -214,9 +215,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_BOLD command ID](https://msdn.microsoft.com/library/aa769861.aspx) to the WebBrowser control.
+This method sends the [IDM_BOLD command ID](/previous-versions/aa769861\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="button"></a>  CHtmlEditCtrlBase::Button
+## <a name="button"></a> CHtmlEditCtrlBase::Button
 
 Overwrites a button control on the current selection.
 
@@ -235,9 +236,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_BUTTON command ID](https://msdn.microsoft.com/library/aa769966.aspx) to the WebBrowser control.
+This method sends the [IDM_BUTTON command ID](/previous-versions/aa769966\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="checkbox"></a>  CHtmlEditCtrlBase::CheckBox
+## <a name="checkbox"></a> CHtmlEditCtrlBase::CheckBox
 
 Overwrites a check box control on the current selection.
 
@@ -256,9 +257,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_CHECKBOX command ID](https://msdn.microsoft.com/library/aa769972.aspx) to the WebBrowser control.
+This method sends the [IDM_CHECKBOX command ID](/previous-versions/aa769972\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="clearselection"></a>  CHtmlEditCtrlBase::ClearSelection
+## <a name="clearselection"></a> CHtmlEditCtrlBase::ClearSelection
 
 Clears the current selection.
 
@@ -272,9 +273,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_CLEARSELECTION command ID](https://msdn.microsoft.com/library/aa770038.aspx) to the WebBrowser control.
+This method sends the [IDM_CLEARSELECTION command ID](/previous-versions/aa770038\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="copy"></a>  CHtmlEditCtrlBase::Copy
+## <a name="copy"></a> CHtmlEditCtrlBase::Copy
 
 Copies the current selection to the clipboard.
 
@@ -288,9 +289,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_COPY command ID](https://msdn.microsoft.com/library/aa769872.aspx) to the WebBrowser control.
+This method sends the [IDM_COPY command ID](/previous-versions/aa769872\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="cut"></a>  CHtmlEditCtrlBase::Cut
+## <a name="cut"></a> CHtmlEditCtrlBase::Cut
 
 Copies the current selection to the clipboard and then deletes it.
 
@@ -304,9 +305,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_CUT command ID](https://msdn.microsoft.com/library/aa769875.aspx) to the WebBrowser control.
+This method sends the [IDM_CUT command ID](/previous-versions/aa769875\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="delete"></a>  CHtmlEditCtrlBase::Delete
+## <a name="delete"></a> CHtmlEditCtrlBase::Delete
 
 Deletes the current selection.
 
@@ -320,9 +321,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_DELETE command ID](https://msdn.microsoft.com/library/aa769876.aspx) to the WebBrowser control.
+This method sends the [IDM_DELETE command ID](/previous-versions/aa769876\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="dropdownbox"></a>  CHtmlEditCtrlBase::DropDownBox
+## <a name="dropdownbox"></a> CHtmlEditCtrlBase::DropDownBox
 
 Overwrites a drop-down selection control on the current selection.
 
@@ -341,9 +342,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_DROPDOWNBOX command ID](https://msdn.microsoft.com/library/aa769984.aspx) to the WebBrowser control.
+This method sends the [IDM_DROPDOWNBOX command ID](/previous-versions/aa769984\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable
+## <a name="emptyglyphtable"></a> CHtmlEditCtrlBase::EmptyGlyphTable
 
 Removes all entries from the glyph table, which hides all images displayed for tags in design mode.
 
@@ -357,9 +358,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_EMPTYGLYPHTABLE command ID](https://msdn.microsoft.com/library/aa769907.aspx) to the WebBrowser control.
+This method sends the [IDM_EMPTYGLYPHTABLE command ID](/previous-versions/aa769907\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="execcommand"></a>  CHtmlEditCtrlBase::ExecCommand
+## <a name="execcommand"></a> CHtmlEditCtrlBase::ExecCommand
 
 Executes a command.
 
@@ -381,10 +382,10 @@ HRESULT ExecCommand(
 ### Parameters
 
 *cmdID*<br/>
-The command ID to be executed. For a list, see [MSHTML Command Identifiers](https://msdn.microsoft.com/library/aa741315.aspx).
+The command ID to be executed. For a list, see [MSHTML Command Identifiers](/previous-versions/aa741315\(v=vs.85\)).
 
 *cmdExecOpt*<br/>
-Values taken from the [OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) enumeration, which describe how the object should execute the command.
+Values taken from the [OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt) enumeration, which describe how the object should execute the command.
 
 *pInVar*<br/>
 The input arguments.
@@ -401,9 +402,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method provides the functionality of [IOleCommandTarget::Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec).
+This method provides the functionality of [IOleCommandTarget::Exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec).
 
-##  <a name="font"></a>  CHtmlEditCtrlBase::Font
+## <a name="font"></a> CHtmlEditCtrlBase::Font
 
 Opens a font dialog box to enable the user to change the text color, font, and font size of the current selection.
 
@@ -417,9 +418,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_FONT command ID](https://msdn.microsoft.com/library/aa769913.aspx) to the WebBrowser control.
+This method sends the [IDM_FONT command ID](/previous-versions/aa769913\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="getabsoluteposition"></a>  CHtmlEditCtrlBase::GetAbsolutePosition
+## <a name="getabsoluteposition"></a> CHtmlEditCtrlBase::GetAbsolutePosition
 
 Returns whether an element's position property is "absolute."
 
@@ -438,9 +439,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-For more information, see [IDM_ABSOLUTE_POSITION Command ID](https://msdn.microsoft.com/library/aa769889.aspx).
+For more information, see [IDM_ABSOLUTE_POSITION Command ID](/previous-versions/aa769889\(v=vs.85\)).
 
-##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor
+## <a name="getbackcolor"></a> CHtmlEditCtrlBase::GetBackColor
 
 Retrieves the background color of the current selection.
 
@@ -459,9 +460,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_BACKCOLOR Command ID](https://msdn.microsoft.com/library/aa769858.aspx) to the WebBrowser control.
+This method sends the [IDM_BACKCOLOR Command ID](/previous-versions/aa769858\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat
+## <a name="getblockformat"></a> CHtmlEditCtrlBase::GetBlockFormat
 
 Retrieves the current block format tag.
 
@@ -480,9 +481,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_BLOCKFMT command ID](https://msdn.microsoft.com/library/aa769883.aspx) to the WebBrowser control.
+This method sends the [IDM_BLOCKFMT command ID](/previous-versions/aa769883\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="getblockformatnames"></a>  CHtmlEditCtrlBase::GetBlockFormatNames
+## <a name="getblockformatnames"></a> CHtmlEditCtrlBase::GetBlockFormatNames
 
 Retrieves the strings corresponding to the available block format tags.
 
@@ -501,9 +502,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_GETBLOCKFMTS command ID](https://msdn.microsoft.com/library/aa769884.aspx) to the WebBrowser control.
+This method sends the [IDM_GETBLOCKFMTS command ID](/previous-versions/aa769884\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark
+## <a name="getbookmark"></a> CHtmlEditCtrlBase::GetBookMark
 
 Retrieves the name of a bookmark anchor.
 
@@ -522,9 +523,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-For more information, see [IDM_BOOKMARK Command ID](https://msdn.microsoft.com/library/aa769873.aspx).
+For more information, see [IDM_BOOKMARK Command ID](/previous-versions/aa769873\(v=vs.85\)).
 
-##  <a name="getdocument"></a>  CHtmlEditCtrlBase::GetDocument
+## <a name="getdocument"></a> CHtmlEditCtrlBase::GetDocument
 
 Retrieves the document object.
 
@@ -541,7 +542,7 @@ The document object.
 
 Returns S_OK on success, or an error HRESULT on failure.
 
-##  <a name="getdocumenthtml"></a>  CHtmlEditCtrlBase::GetDocumentHTML
+## <a name="getdocumenthtml"></a> CHtmlEditCtrlBase::GetDocumentHTML
 
 Retrieves the HTML of the current document.
 
@@ -558,7 +559,7 @@ The HTML.
 
 Returns S_OK on success, or an error HRESULT on failure.
 
-##  <a name="getdocumenttitle"></a>  CHtmlEditCtrlBase::GetDocumentTitle
+## <a name="getdocumenttitle"></a> CHtmlEditCtrlBase::GetDocumentTitle
 
 Retrieves the document's title.
 
@@ -575,7 +576,7 @@ The document's title.
 
 Returns S_OK on success, or an error HRESULT on failure.
 
-##  <a name="getevent"></a>  CHtmlEditCtrlBase::GetEvent
+## <a name="getevent"></a> CHtmlEditCtrlBase::GetEvent
 
 Retrieves an interface pointer to the event object that contains information relevant to the most recent event.
 
@@ -592,7 +593,7 @@ The event object.
 
 Returns S_OK on success, or an error HRESULT on failure.
 
-##  <a name="geteventsrcelement"></a>  CHtmlEditCtrlBase::GetEventSrcElement
+## <a name="geteventsrcelement"></a> CHtmlEditCtrlBase::GetEventSrcElement
 
 Retrieves the object that fired the event.
 
@@ -609,7 +610,7 @@ The element that fired the event.
 
 Returns S_OK on success, or an error HRESULT on failure.
 
-##  <a name="getfontface"></a>  CHtmlEditCtrlBase::GetFontFace
+## <a name="getfontface"></a> CHtmlEditCtrlBase::GetFontFace
 
 Retrieves the font name for the current selection.
 
@@ -630,9 +631,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 If the current selection uses more than one font, *strFace* will be an empty string.
 
-This method sends the [IDM_FONTNAME command ID](https://msdn.microsoft.com/library/aa769880.aspx) to the WebBrowser control.
+This method sends the [IDM_FONTNAME command ID](/previous-versions/aa769880\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="getfontsize"></a>  CHtmlEditCtrlBase::GetFontSize
+## <a name="getfontsize"></a> CHtmlEditCtrlBase::GetFontSize
 
 Retrieves the font size for the current selection.
 
@@ -651,9 +652,9 @@ Returns the HTML font size (1-7). Returns 0 if the selection contains multiple f
 
 ### Remarks
 
-This method sends the [IDM_FONTSIZE command ID](https://msdn.microsoft.com/library/aa769881.aspx) to the WebBrowser control.
+This method sends the [IDM_FONTSIZE command ID](/previous-versions/aa769881\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor
+## <a name="getforecolor"></a> CHtmlEditCtrlBase::GetForeColor
 
 Retrieves the foreground (text) color of the current selection.
 
@@ -672,9 +673,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_FORECOLOR Command ID](https://msdn.microsoft.com/library/aa769882.aspx) to the WebBrowser control.
+This method sends the [IDM_FORECOLOR Command ID](/previous-versions/aa769882\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="getframezone"></a>  CHtmlEditCtrlBase::GetFrameZone
+## <a name="getframezone"></a> CHtmlEditCtrlBase::GetFrameZone
 
 Returns the security zone of the current page in the web browser.
 
@@ -693,9 +694,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_GETFRAMEZONE command ID](https://msdn.microsoft.com/library/aa769916.aspx) to the WebBrowser control.
+This method sends the [IDM_GETFRAMEZONE command ID](/previous-versions/aa769916\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty
+## <a name="getisdirty"></a> CHtmlEditCtrlBase::GetIsDirty
 
 Indicates whether the HTML document has changed.
 
@@ -705,9 +706,9 @@ HRESULT GetIsDirty() const;
 
 ### Remarks
 
-Indicates whether the document has changed. `GetIsDirty` returns an HRESULT from [IPersistStorage::IsDirty](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-isdirty).
+Indicates whether the document has changed. `GetIsDirty` returns an HRESULT from [IPersistStorage::IsDirty](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty).
 
-##  <a name="getshowalignedsitetags"></a>  CHtmlEditCtrlBase::GetShowAlignedSiteTags
+## <a name="getshowalignedsitetags"></a> CHtmlEditCtrlBase::GetShowAlignedSiteTags
 
 Returns whether a glyph is displayed for all elements that have a `styleFloat` property.
 
@@ -726,9 +727,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-For more information, see [IDM_SHOWALIGNEDSITETAGS Command ID](https://msdn.microsoft.com/library/aa769947.aspx).
+For more information, see [IDM_SHOWALIGNEDSITETAGS Command ID](/previous-versions/aa769947\(v=vs.85\)).
 
-##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags
+## <a name="getshowalltags"></a> CHtmlEditCtrlBase::GetShowAllTags
 
 Returns whether the WebBrowser displays glyphs to show the location of all tags in a document.
 
@@ -747,9 +748,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-For more information, see [IDM_SHOWALLTAGS Command ID](https://msdn.microsoft.com/library/aa769948.aspx).
+For more information, see [IDM_SHOWALLTAGS Command ID](/previous-versions/aa769948\(v=vs.85\)).
 
-##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags
+## <a name="getshowareatags"></a> CHtmlEditCtrlBase::GetShowAreaTags
 
 Retrieves whether the WebBrowser displays a glyph for area tags.
 
@@ -768,9 +769,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-For more information, see [IDM_SHOWAREATAGS Command ID](https://msdn.microsoft.com/library/aa769949.aspx).
+For more information, see [IDM_SHOWAREATAGS Command ID](/previous-versions/aa769949\(v=vs.85\)).
 
-##  <a name="getshowbrtags"></a>  CHtmlEditCtrlBase::GetShowBRTags
+## <a name="getshowbrtags"></a> CHtmlEditCtrlBase::GetShowBRTags
 
 Retrieves whether the WebBrowser displays a glyph for br tags.
 
@@ -789,9 +790,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-For more information, see [IDM_SHOWWBRTAGS Command ID](https://msdn.microsoft.com/library/aa769956.aspx).
+For more information, see [IDM_SHOWWBRTAGS Command ID](/previous-versions/aa769956\(v=vs.85\)).
 
-##  <a name="getshowcommenttags"></a>  CHtmlEditCtrlBase::GetShowCommentTags
+## <a name="getshowcommenttags"></a> CHtmlEditCtrlBase::GetShowCommentTags
 
 Retrieves whether the WebBrowser displays a glyph for comment tags.
 
@@ -810,9 +811,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-For more information, see [IDM_SHOWCOMMENTTAGS Command ID](https://msdn.microsoft.com/library/aa769950.aspx).
+For more information, see [IDM_SHOWCOMMENTTAGS Command ID](/previous-versions/aa769950\(v=vs.85\)).
 
-##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags
+## <a name="getshowmisctags"></a> CHtmlEditCtrlBase::GetShowMiscTags
 
 Retrieves whether the WebBrowser displays all the tags shown in Microsoft Internet Explorer 4.0.
 
@@ -831,9 +832,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-For more information, see [IDM_SHOWMISCTAGS Command ID](https://msdn.microsoft.com/library/aa769952.aspx).
+For more information, see [IDM_SHOWMISCTAGS Command ID](/previous-versions/aa769952\(v=vs.85\)).
 
-##  <a name="getshowscripttags"></a>  CHtmlEditCtrlBase::GetShowScriptTags
+## <a name="getshowscripttags"></a> CHtmlEditCtrlBase::GetShowScriptTags
 
 Retrieves whether the WebBrowser displays a glyph for all the script tags.
 
@@ -852,9 +853,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-For more information, see [IDM_SHOWSCRIPTTAGS Command ID](https://msdn.microsoft.com/library/aa769953.aspx).
+For more information, see [IDM_SHOWSCRIPTTAGS Command ID](/previous-versions/aa769953\(v=vs.85\)).
 
-##  <a name="getshowstyletags"></a>  CHtmlEditCtrlBase::GetShowStyleTags
+## <a name="getshowstyletags"></a> CHtmlEditCtrlBase::GetShowStyleTags
 
 Retrieves whether the WebBrowser displays a glyph for all the style tags.
 
@@ -873,9 +874,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-For more information, see [IDM_SHOWSTYLETAGS Command ID](https://msdn.microsoft.com/library/aa769954.aspx).
+For more information, see [IDM_SHOWSTYLETAGS Command ID](/previous-versions/aa769954\(v=vs.85\)).
 
-##  <a name="getshowunknowntags"></a>  CHtmlEditCtrlBase::GetShowUnknownTags
+## <a name="getshowunknowntags"></a> CHtmlEditCtrlBase::GetShowUnknownTags
 
 Retrieves whether the WebBrowser displays a glyph for all unknown tags.
 
@@ -894,9 +895,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-For more information, see [IDM_SHOWUNKNOWNTAGS Command ID](https://msdn.microsoft.com/library/aa769955.aspx).
+For more information, see [IDM_SHOWUNKNOWNTAGS Command ID](/previous-versions/aa769955\(v=vs.85\)).
 
-##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine
+## <a name="horizontalline"></a> CHtmlEditCtrlBase::HorizontalLine
 
 Overwrites a horizontal line on the current selection.
 
@@ -915,9 +916,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_HORIZONTALLINE command ID](https://msdn.microsoft.com/library/aa769968.aspx) to the WebBrowser control.
+This method sends the [IDM_HORIZONTALLINE command ID](/previous-versions/aa769968\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="hyperlink"></a>  CHtmlEditCtrlBase::HyperLink
+## <a name="hyperlink"></a> CHtmlEditCtrlBase::HyperLink
 
 Inserts a hyperlink on the current selection.
 
@@ -936,9 +937,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_HYPERLINK command ID](https://msdn.microsoft.com/library/aa769874.aspx) to the WebBrowser control.
+This method sends the [IDM_HYPERLINK command ID](/previous-versions/aa769874\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="ie50paste"></a>  CHtmlEditCtrlBase::IE50Paste
+## <a name="ie50paste"></a> CHtmlEditCtrlBase::IE50Paste
 
 Performs a paste operation that's compatible with Internet Explorer 5.
 
@@ -957,9 +958,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_IE50_PASTE command ID](https://msdn.microsoft.com/library/aa769922.aspx) to the WebBrowser control.
+This method sends the [IDM_IE50_PASTE command ID](/previous-versions/aa769922\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe
+## <a name="iframe"></a> CHtmlEditCtrlBase::Iframe
 
 Overwrites an inline frame on the current selection.
 
@@ -978,9 +979,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_IFRAME command ID](https://msdn.microsoft.com/library/aa769969.aspx) to the WebBrowser control.
+This method sends the [IDM_IFRAME command ID](/previous-versions/aa769969\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="image"></a>  CHtmlEditCtrlBase::Image
+## <a name="image"></a> CHtmlEditCtrlBase::Image
 
 Overwrites an image on the current selection.
 
@@ -999,9 +1000,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_IMAGE command ID](https://msdn.microsoft.com/library/aa769970.aspx) to the WebBrowser control.
+This method sends the [IDM_IMAGE command ID](/previous-versions/aa769970\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent
+## <a name="indent"></a> CHtmlEditCtrlBase::Indent
 
 Increases the indent of the selected text by one indentation increment.
 
@@ -1015,9 +1016,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_INDENT command ID](https://msdn.microsoft.com/library/aa769963.aspx) to the WebBrowser control.
+This method sends the [IDM_INDENT command ID](/previous-versions/aa769963\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="insfieldset"></a>  CHtmlEditCtrlBase::InsFieldSet
+## <a name="insfieldset"></a> CHtmlEditCtrlBase::InsFieldSet
 
 Overwrites a box on the current selection.
 
@@ -1036,9 +1037,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_INSFIELDSET command ID](https://msdn.microsoft.com/library/aa769967.aspx) to the WebBrowser control.
+This method sends the [IDM_INSFIELDSET command ID](/previous-versions/aa769967\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton
+## <a name="insinputbutton"></a> CHtmlEditCtrlBase::InsInputButton
 
 Overwrites a button control on the current selection.
 
@@ -1057,9 +1058,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_INSINPUTBUTTON command ID](https://msdn.microsoft.com/library/aa769971.aspx) to the WebBrowser control.
+This method sends the [IDM_INSINPUTBUTTON command ID](/previous-versions/aa769971\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="insinputhidden"></a>  CHtmlEditCtrlBase::InsInputHidden
+## <a name="insinputhidden"></a> CHtmlEditCtrlBase::InsInputHidden
 
 Inserts a hidden control on the current selection.
 
@@ -1078,9 +1079,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_INSINPUTHIDDEN command ID](https://msdn.microsoft.com/library/aa769974.aspx) to the WebBrowser control.
+This method sends the [IDM_INSINPUTHIDDEN command ID](/previous-versions/aa769974\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage
+## <a name="insinputimage"></a> CHtmlEditCtrlBase::InsInputImage
 
 Overwrites an image control on the current selection.
 
@@ -1099,9 +1100,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_INSINPUTIMAGE command ID](https://msdn.microsoft.com/library/aa769975.aspx) to the WebBrowser control.
+This method sends the [IDM_INSINPUTIMAGE command ID](/previous-versions/aa769975\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword
+## <a name="insinputpassword"></a> CHtmlEditCtrlBase::InsInputPassword
 
 Overwrites a password control on the current selection.
 
@@ -1120,9 +1121,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_INSINPUTPASSWORD command ID](https://msdn.microsoft.com/library/aa769976.aspx) to the WebBrowser control.
+This method sends the [IDM_INSINPUTPASSWORD command ID](/previous-versions/aa769976\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="insinputreset"></a>  CHtmlEditCtrlBase::InsInputReset
+## <a name="insinputreset"></a> CHtmlEditCtrlBase::InsInputReset
 
 Overwrites a reset control on the current selection.
 
@@ -1141,9 +1142,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_INSINPUTRESET command ID](https://msdn.microsoft.com/library/aa769978.aspx) to the WebBrowser control.
+This method sends the [IDM_INSINPUTRESET command ID](/previous-versions/aa769978\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit
+## <a name="insinputsubmit"></a> CHtmlEditCtrlBase::InsInputSubmit
 
 Overwrites a submit control on the current selection.
 
@@ -1162,9 +1163,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_INSINPUTSUBMIT command ID](https://msdn.microsoft.com/library/aa769979.aspx) to the WebBrowser control.
+This method sends the [IDM_INSINPUTSUBMIT command ID](/previous-versions/aa769979\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload
+## <a name="insinputupload"></a> CHtmlEditCtrlBase::InsInputUpload
 
 Overwrites a file upload control on the current selection.
 
@@ -1183,9 +1184,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_INSINPUTUPLOAD command ID](https://msdn.microsoft.com/library/aa769973.aspx) to the WebBrowser control.
+This method sends the [IDM_INSINPUTUPLOAD command ID](/previous-versions/aa769973\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement
+## <a name="is1delement"></a> CHtmlEditCtrlBase::Is1DElement
 
 Determines if an element is statically positioned.
 
@@ -1204,9 +1205,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_1D_ELEMENT command ID](https://msdn.microsoft.com/library/aa769885.aspx) to the WebBrowser control.
+This method sends the [IDM_1D_ELEMENT command ID](/previous-versions/aa769885\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement
+## <a name="is2delement"></a> CHtmlEditCtrlBase::Is2DElement
 
 Determines if an element is absolutely positioned.
 
@@ -1225,9 +1226,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_2D_ELEMENT command ID](https://msdn.microsoft.com/library/aa769886.aspx) to the WebBrowser control.
+This method sends the [IDM_2D_ELEMENT command ID](/previous-versions/aa769886\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic
+## <a name="italic"></a> CHtmlEditCtrlBase::Italic
 
 Toggles the current selection between italic and nonitalic.
 
@@ -1241,9 +1242,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_ITALIC command ID](https://msdn.microsoft.com/library/aa769988.aspx) to the WebBrowser control.
+This method sends the [IDM_ITALIC command ID](/previous-versions/aa769988\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="justifycenter"></a>  CHtmlEditCtrlBase::JustifyCenter
+## <a name="justifycenter"></a> CHtmlEditCtrlBase::JustifyCenter
 
 Centers the format block in which the current selection is located.
 
@@ -1257,9 +1258,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_JUSTIFYCENTER command ID](https://msdn.microsoft.com/library/aa769989.aspx) to the WebBrowser control.
+This method sends the [IDM_JUSTIFYCENTER command ID](/previous-versions/aa769989\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="justifyleft"></a>  CHtmlEditCtrlBase::JustifyLeft
+## <a name="justifyleft"></a> CHtmlEditCtrlBase::JustifyLeft
 
 Left-justifies the format block in which the current selection is located.
 
@@ -1273,9 +1274,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_JUSTIFYLEFT command ID](https://msdn.microsoft.com/library/aa770011.aspx) to the WebBrowser control.
+This method sends the [IDM_JUSTIFYLEFT command ID](/previous-versions/aa770011\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="justifyright"></a>  CHtmlEditCtrlBase::JustifyRight
+## <a name="justifyright"></a> CHtmlEditCtrlBase::JustifyRight
 
 Right-justifies the format block in which the current selection is located.
 
@@ -1289,9 +1290,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_JUSTIFYRIGHT command ID](https://msdn.microsoft.com/library/aa770013.aspx) to the WebBrowser control.
+This method sends the [IDM_JUSTIFYRIGHT command ID](/previous-versions/aa770013\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="listbox"></a>  CHtmlEditCtrlBase::ListBox
+## <a name="listbox"></a> CHtmlEditCtrlBase::ListBox
 
 Overwrites a list box selection control on the current selection.
 
@@ -1310,9 +1311,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_LISTBOX command ID](https://msdn.microsoft.com/library/aa769985.aspx) to the WebBrowser control.
+This method sends the [IDM_LISTBOX command ID](/previous-versions/aa769985\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee
+## <a name="marquee"></a> CHtmlEditCtrlBase::Marquee
 
 Overwrites an empty marquee on the current selection.
 
@@ -1331,9 +1332,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_MARQUEE command ID](https://msdn.microsoft.com/library/aa769981.aspx) to the WebBrowser control.
+This method sends the [IDM_MARQUEE command ID](/previous-versions/aa769981\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="newdocument"></a>  CHtmlEditCtrlBase::NewDocument
+## <a name="newdocument"></a> CHtmlEditCtrlBase::NewDocument
 
 Creates a new document.
 
@@ -1345,7 +1346,7 @@ HRESULT NewDocument() const;
 
 Returns S_OK on success, or an error HRESULT on failure.
 
-##  <a name="orderlist"></a>  CHtmlEditCtrlBase::OrderList
+## <a name="orderlist"></a> CHtmlEditCtrlBase::OrderList
 
 Toggles the current selection between an ordered list and a normal format block.
 
@@ -1364,9 +1365,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_ORDERLIST command ID](https://msdn.microsoft.com/library/aa769982.aspx) to the WebBrowser control.
+This method sends the [IDM_ORDERLIST command ID](/previous-versions/aa769982\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent
+## <a name="outdent"></a> CHtmlEditCtrlBase::Outdent
 
 Decreases by one increment the indentation of the format block in which the current selection is located.
 
@@ -1380,9 +1381,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_OUTDENT command ID](https://msdn.microsoft.com/library/aa770015.aspx) to the WebBrowser control.
+This method sends the [IDM_OUTDENT command ID](/previous-versions/aa770015\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="paragraph"></a>  CHtmlEditCtrlBase::Paragraph
+## <a name="paragraph"></a> CHtmlEditCtrlBase::Paragraph
 
 Overwrites a line break on the current selection.
 
@@ -1401,9 +1402,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_PARAGRAPH command ID](https://msdn.microsoft.com/library/aa769983.aspx) to the WebBrowser control.
+This method sends the [IDM_PARAGRAPH command ID](/previous-versions/aa769983\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="paste"></a>  CHtmlEditCtrlBase::Paste
+## <a name="paste"></a> CHtmlEditCtrlBase::Paste
 
 Overwrites the contents of the clipboard on the current selection.
 
@@ -1417,9 +1418,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_PASTE command ID](https://msdn.microsoft.com/library/aa770017.aspx) to the WebBrowser control.
+This method sends the [IDM_PASTE command ID](/previous-versions/aa770017\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="printdocument"></a>  CHtmlEditCtrlBase::PrintDocument
+## <a name="printdocument"></a> CHtmlEditCtrlBase::PrintDocument
 
 Prints the current document.
 
@@ -1443,9 +1444,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_PRINT command ID](https://msdn.microsoft.com/library/aa769937.aspx) to the WebBrowser control.
+This method sends the [IDM_PRINT command ID](/previous-versions/aa769937\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview
+## <a name="printpreview"></a> CHtmlEditCtrlBase::PrintPreview
 
 Opens the Print Preview window for the current document using either the default print preview template or a custom template.
 
@@ -1465,9 +1466,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_PRINTPREVIEW command ID](https://msdn.microsoft.com/library/aa769938.aspx) to the WebBrowser control.
+This method sends the [IDM_PRINTPREVIEW command ID](/previous-versions/aa769938\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="querystatus"></a>  CHtmlEditCtrlBase::QueryStatus
+## <a name="querystatus"></a> CHtmlEditCtrlBase::QueryStatus
 
 Call this method to query the status of commands.
 
@@ -1478,13 +1479,13 @@ long QueryStatus(long cmdID) const;
 ### Parameters
 
 *cmdID*<br/>
-The command ID. Command identifiers are taken from the CGID_MSHTML command group. These commands are defined in Mshtmcid.h. You can also find the list online at [MSHTML Command Identifiers](http://go.microsoft.com/fwlink/p/?linkid=149220).
+The command ID. Command identifiers are taken from the CGID_MSHTML command group. These commands are defined in Mshtmcid.h. You can also find the list online at [MSHTML Command Identifiers](/previous-versions/aa741315(v=vs.85)).
 
 ### Return Value
 
-Returns an [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf) indicating the status for *cmdID*, or 0 on failure.
+Returns an [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf) indicating the status for *cmdID*, or 0 on failure.
 
-##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton
+## <a name="radiobutton"></a> CHtmlEditCtrlBase::RadioButton
 
 Overwrites a radio control on the current selection.
 
@@ -1503,9 +1504,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_RADIOBUTTON command ID](https://msdn.microsoft.com/library/aa769977.aspx) to the WebBrowser control.
+This method sends the [IDM_RADIOBUTTON command ID](/previous-versions/aa769977\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="refreshdocument"></a>  CHtmlEditCtrlBase::RefreshDocument
+## <a name="refreshdocument"></a> CHtmlEditCtrlBase::RefreshDocument
 
 Refreshes the current document.
 
@@ -1519,9 +1520,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_REFRESH Command ID](https://msdn.microsoft.com/library/aa770020.aspx) to the WebBrowser control.
+This method sends the [IDM_REFRESH Command ID](/previous-versions/aa770020\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat
+## <a name="removeformat"></a> CHtmlEditCtrlBase::RemoveFormat
 
 Removes the formatting tags from the current selection.
 
@@ -1535,9 +1536,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_REMOVEFORMAT command ID](https://msdn.microsoft.com/library/aa770021.aspx) to the WebBrowser control.
+This method sends the [IDM_REMOVEFORMAT command ID](/previous-versions/aa770021\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="saveas"></a>  CHtmlEditCtrlBase::SaveAs
+## <a name="saveas"></a> CHtmlEditCtrlBase::SaveAs
 
 Saves the current Web page to a file.
 
@@ -1556,9 +1557,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_SAVEAS command ID](https://msdn.microsoft.com/library/aa770024.aspx) to the WebBrowser control.
+This method sends the [IDM_SAVEAS command ID](/previous-versions/aa770024\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="selectall"></a>  CHtmlEditCtrlBase::SelectAll
+## <a name="selectall"></a> CHtmlEditCtrlBase::SelectAll
 
 Selects the entire document.
 
@@ -1572,9 +1573,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_SELECTALL command ID](https://msdn.microsoft.com/library/aa770025.aspx) to the WebBrowser control.
+This method sends the [IDM_SELECTALL command ID](/previous-versions/aa770025\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="set2dposition"></a>  CHtmlEditCtrlBase::Set2DPosition
+## <a name="set2dposition"></a> CHtmlEditCtrlBase::Set2DPosition
 
 Allows absolutely positioned elements to be moved by dragging.
 
@@ -1593,9 +1594,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_2D_POSITION command ID](https://msdn.microsoft.com/library/aa769887.aspx) to the WebBrowser control.
+This method sends the [IDM_2D_POSITION command ID](/previous-versions/aa769887\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setabsoluteposition"></a>  CHtmlEditCtrlBase::SetAbsolutePosition
+## <a name="setabsoluteposition"></a> CHtmlEditCtrlBase::SetAbsolutePosition
 
 Sets an element's position property to "absolute" or "static."
 
@@ -1614,9 +1615,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_ABSOLUTE_POSITION command ID](https://msdn.microsoft.com/library/aa769889.aspx) to the WebBrowser control.
+This method sends the [IDM_ABSOLUTE_POSITION command ID](/previous-versions/aa769889\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setatomicselection"></a>  CHtmlEditCtrlBase::SetAtomicSelection
+## <a name="setatomicselection"></a> CHtmlEditCtrlBase::SetAtomicSelection
 
 Set atomic selection mode.
 
@@ -1635,9 +1636,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_ATOMICSELECTION command ID](https://msdn.microsoft.com/library/aa769892.aspx) to the WebBrowser control.
+This method sends the [IDM_ATOMICSELECTION command ID](/previous-versions/aa769892\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setautourldetectmode"></a>  CHtmlEditCtrlBase::SetAutoURLDetectMode
+## <a name="setautourldetectmode"></a> CHtmlEditCtrlBase::SetAutoURLDetectMode
 
 Turns automatic URL detection on and off.
 
@@ -1656,9 +1657,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_AUTOURLDETECT_MODE command ID](https://msdn.microsoft.com/library/aa769893.aspx) to the WebBrowser control.
+This method sends the [IDM_AUTOURLDETECT_MODE command ID](/previous-versions/aa769893\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setbackcolor"></a>  CHtmlEditCtrlBase::SetBackColor
+## <a name="setbackcolor"></a> CHtmlEditCtrlBase::SetBackColor
 
 Sets the background color of the current selection.
 
@@ -1670,10 +1671,10 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ### Parameters
 
 *nColor*<br/>
-The color. See *pvaIn* in [IDM_BACKCOLOR Command ID](https://msdn.microsoft.com/library/aa769858.aspx).
+The color. See *pvaIn* in [IDM_BACKCOLOR Command ID](/previous-versions/aa769858\(v=vs.85\)).
 
 *szColor*<br/>
-The color. See *pvaIn* in [IDM_BACKCOLOR Command ID](https://msdn.microsoft.com/library/aa769858.aspx).
+The color. See *pvaIn* in [IDM_BACKCOLOR Command ID](/previous-versions/aa769858\(v=vs.85\)).
 
 ### Return Value
 
@@ -1681,9 +1682,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_BACKCOLOR_ command ID](https://msdn.microsoft.com/library/aa769858.aspx) to the WebBrowser control.
+This method sends the [IDM_BACKCOLOR_ command ID](/previous-versions/aa769858\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat
+## <a name="setblockformat"></a> CHtmlEditCtrlBase::SetBlockFormat
 
 Sets the current block format tag.
 
@@ -1702,9 +1703,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx) to the WebBrowser control.
+This method sends the [IDM_BLOCKFMT_command ID](/previous-versions/aa769883\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark
+## <a name="setbookmark"></a> CHtmlEditCtrlBase::SetBookMark
 
 Creates a bookmark anchor for the current selection or insertion point.
 
@@ -1723,9 +1724,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_BOOKMARK command ID](https://msdn.microsoft.com/library/aa769873.aspx) to the WebBrowser control.
+This method sends the [IDM_BOOKMARK command ID](/previous-versions/aa769873\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel
+## <a name="setcsseditinglevel"></a> CHtmlEditCtrlBase::SetCSSEditingLevel
 
 Selects which CSS level (CSS1 or CSS2) the editor will support, if any.
 
@@ -1744,9 +1745,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_CSSEDITING_LEVEL command ID](https://msdn.microsoft.com/library/aa769903.aspx) to the WebBrowser control.
+This method sends the [IDM_CSSEDITING_LEVEL command ID](/previous-versions/aa769903\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings
+## <a name="setdefaultcomposesettings"></a> CHtmlEditCtrlBase::SetDefaultComposeSettings
 
 Call this method to set the default compose settings.
 
@@ -1790,9 +1791,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_COMPOSESETTINGS command ID](https://msdn.microsoft.com/library/aa769901.aspx) to the WebBrowser control.
+This method sends the [IDM_COMPOSESETTINGS command ID](/previous-versions/aa769901\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setdesignmode"></a>  CHtmlEditCtrlBase::SetDesignMode
+## <a name="setdesignmode"></a> CHtmlEditCtrlBase::SetDesignMode
 
 Set design mode.
 
@@ -1809,7 +1810,7 @@ If TRUE, turns design mode on.
 
 Returns TRUE on success, FALSE on failure.
 
-##  <a name="setdisableeditfocusui"></a>  CHtmlEditCtrlBase::SetDisableEditFocusUI
+## <a name="setdisableeditfocusui"></a> CHtmlEditCtrlBase::SetDisableEditFocusUI
 
 Disables the hatched border and handles around an element that has edit focus.
 
@@ -1828,9 +1829,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM_DISABLE_EDITFOCUS_UI command ID](https://msdn.microsoft.com/library/aa769905.aspx) to the WebBrowser control.
+This method sends the [IDM_DISABLE_EDITFOCUS_UI command ID](/previous-versions/aa769905\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setdocumenthtml"></a>  CHtmlEditCtrlBase::SetDocumentHTML
+## <a name="setdocumenthtml"></a> CHtmlEditCtrlBase::SetDocumentHTML
 
 Sets the HTML of the current document.
 
@@ -1847,7 +1848,7 @@ The HTML.
 
 Returns S_OK on success, or an error HRESULT on failure.
 
-##  <a name="setfontface"></a>  CHtmlEditCtrlBase::SetFontFace
+## <a name="setfontface"></a> CHtmlEditCtrlBase::SetFontFace
 
 Sets the font for the current selection.
 
@@ -1866,9 +1867,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM FONTNAME Command ID](https://msdn.microsoft.com/library/aa769880.aspx) to the WebBrowser control.
+This method sends the [IDM_FONTNAME Command ID](/previous-versions/aa769880\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setfontsize"></a>  CHtmlEditCtrlBase::SetFontSize
+## <a name="setfontsize"></a> CHtmlEditCtrlBase::SetFontSize
 
 Sets the font size for the current selection.
 
@@ -1887,9 +1888,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM FONTSIZE command ID](https://msdn.microsoft.com/library/aa769881.aspx) to the WebBrowser control.
+This method sends the [IDM_FONTSIZE command ID](/previous-versions/aa769881\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor
+## <a name="setforecolor"></a> CHtmlEditCtrlBase::SetForeColor
 
 Sets the foreground (text) color of the current selection.
 
@@ -1912,9 +1913,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM FORECOLOR command ID](https://msdn.microsoft.com/library/aa769882.aspx) to the WebBrowser control.
+This method sends the [IDM_FORECOLOR command ID](/previous-versions/aa769882\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setie5pastemode"></a>  CHtmlEditCtrlBase::SetIE5PasteMode
+## <a name="setie5pastemode"></a> CHtmlEditCtrlBase::SetIE5PasteMode
 
 Sets the paste operation to be compatible with Microsoft Internet Explorer 5.
 
@@ -1933,9 +1934,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM IE50_PASTE_MODE command ID](https://msdn.microsoft.com/library/aa769923.aspx) to the WebBrowser control.
+This method sends the [IDM_IE50_PASTE_MODE command ID](/previous-versions/aa769923\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize
+## <a name="setliveresize"></a> CHtmlEditCtrlBase::SetLiveResize
 
 Causes the WebBrowser to update an element's appearance continuously during a resizing or moving operation, rather than updating only at the completion of the move or resize.
 
@@ -1954,9 +1955,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM LIVERESIZE command ID](https://msdn.microsoft.com/library/aa769928.aspx) to the WebBrowser control.
+This method sends the [IDM_LIVERESIZE command ID](/previous-versions/aa769928\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setmultiselect"></a>  CHtmlEditCtrlBase::SetMultiSelect
+## <a name="setmultiselect"></a> CHtmlEditCtrlBase::SetMultiSelect
 
 Enables multiple selection.
 
@@ -1975,9 +1976,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM MULTIPLESELECTION command ID](https://msdn.microsoft.com/library/aa769929.aspx) to the WebBrowser control.
+This method sends the [IDM_MULTIPLESELECTION command ID](/previous-versions/aa769929\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setoverridecursor"></a>  CHtmlEditCtrlBase::SetOverrideCursor
+## <a name="setoverridecursor"></a> CHtmlEditCtrlBase::SetOverrideCursor
 
 Commands the WebBrowser never to change the mouse pointer.
 
@@ -1996,9 +1997,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM OVERRIDE_CURSOR command ID](https://msdn.microsoft.com/library/aa769932.aspx) to the WebBrowser control.
+This method sends the [IDM_OVERRIDE_CURSOR command ID](/previous-versions/aa769932\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode
+## <a name="setoverwritemode"></a> CHtmlEditCtrlBase::SetOverwriteMode
 
 Toggles the text-entry mode between insert and overwrite.
 
@@ -2017,9 +2018,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM OVERWRITE command ID](https://msdn.microsoft.com/library/aa770016.aspx) to the WebBrowser control.
+This method sends the [IDM_OVERWRITE command ID](/previous-versions/aa770016\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setrespectvisindesign"></a>  CHtmlEditCtrlBase::SetRespectVisInDesign
+## <a name="setrespectvisindesign"></a> CHtmlEditCtrlBase::SetRespectVisInDesign
 
 Hides invisible elements in design mode.
 
@@ -2038,9 +2039,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM RESPECTVISIBILITY_INDESIGN command ID](https://msdn.microsoft.com/library/aa770023.aspx) to the WebBrowser control.
+This method sends the [IDM_RESPECTVISIBILITY_INDESIGN command ID](/previous-versions/aa770023\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setshowalignedsitetags"></a>  CHtmlEditCtrlBase::SetShowAlignedSiteTags
+## <a name="setshowalignedsitetags"></a> CHtmlEditCtrlBase::SetShowAlignedSiteTags
 
 Displays a glyph for all elements that have a `styleFloat` property.
 
@@ -2059,9 +2060,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM SHOWALIGNEDSITETAGS command ID](https://msdn.microsoft.com/library/aa769947.aspx) to the WebBrowser control.
+This method sends the [IDM_SHOWALIGNEDSITETAGS command ID](/previous-versions/aa769947\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setshowalltags"></a>  CHtmlEditCtrlBase::SetShowAllTags
+## <a name="setshowalltags"></a> CHtmlEditCtrlBase::SetShowAllTags
 
 Displays glyphs to show the location of all tags in a document.
 
@@ -2080,9 +2081,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM SHOWALLTAGS command ID](https://msdn.microsoft.com/library/aa769948.aspx) to the WebBrowser control.
+This method sends the [IDM_SHOWALLTAGS command ID](/previous-versions/aa769948\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setshowareatags"></a>  CHtmlEditCtrlBase::SetShowAreaTags
+## <a name="setshowareatags"></a> CHtmlEditCtrlBase::SetShowAreaTags
 
 Displays a glyph for all the area tags.
 
@@ -2101,9 +2102,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM SHOWAREATAGS command ID](https://msdn.microsoft.com/library/aa769949.aspx) to the WebBrowser control.
+This method sends the [IDM_SHOWAREATAGS command ID](/previous-versions/aa769949\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setshowbrtags"></a>  CHtmlEditCtrlBase::SetShowBRTags
+## <a name="setshowbrtags"></a> CHtmlEditCtrlBase::SetShowBRTags
 
 Displays a glyph for all the br tags.
 
@@ -2122,9 +2123,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM SHOWWBRTAGS command ID](https://msdn.microsoft.com/library/aa769956.aspx) to the WebBrowser control.
+This method sends the [IDM_SHOWWBRTAGS command ID](/previous-versions/aa769956\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setshowcommenttags"></a>  CHtmlEditCtrlBase::SetShowCommentTags
+## <a name="setshowcommenttags"></a> CHtmlEditCtrlBase::SetShowCommentTags
 
 Displays a glyph for all the comment tags.
 
@@ -2143,9 +2144,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM SHOWCOMMENTTAGS command ID](https://msdn.microsoft.com/library/aa769950.aspx) to the WebBrowser control.
+This method sends the [IDM_SHOWCOMMENTTAGS command ID](/previous-versions/aa769950\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setshowmisctags"></a>  CHtmlEditCtrlBase::SetShowMiscTags
+## <a name="setshowmisctags"></a> CHtmlEditCtrlBase::SetShowMiscTags
 
 Displays all the tags shown in Microsoft Internet Explorer 4.0.
 
@@ -2164,9 +2165,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM SHOWMISCTAGS command ID](https://msdn.microsoft.com/library/aa769952.aspx) to the WebBrowser control.
+This method sends the [IDM_SHOWMISCTAGS command ID](/previous-versions/aa769952\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setshowscripttags"></a>  CHtmlEditCtrlBase::SetShowScriptTags
+## <a name="setshowscripttags"></a> CHtmlEditCtrlBase::SetShowScriptTags
 
 Displays a glyph for all the script tags.
 
@@ -2185,9 +2186,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM SHOWSCRIPTTAGS command ID](https://msdn.microsoft.com/library/aa769953.aspx) to the WebBrowser control.
+This method sends the [IDM_SHOWSCRIPTTAGS command ID](/previous-versions/aa769953\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setshowstyletags"></a>  CHtmlEditCtrlBase::SetShowStyleTags
+## <a name="setshowstyletags"></a> CHtmlEditCtrlBase::SetShowStyleTags
 
 Displays a glyph for all the style tags.
 
@@ -2206,9 +2207,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM SHOWSTYLETAGS command ID](https://msdn.microsoft.com/library/aa769954.aspx) to the WebBrowser control.
+This method sends the [IDM_SHOWSTYLETAGS command ID](/previous-versions/aa769954\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="setshowunknowntags"></a>  CHtmlEditCtrlBase::SetShowUnknownTags
+## <a name="setshowunknowntags"></a> CHtmlEditCtrlBase::SetShowUnknownTags
 
 Displays a glyph for all the unknown tags.
 
@@ -2227,9 +2228,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM SHOWUNKNOWNTAGS command ID](https://msdn.microsoft.com/library/aa769955.aspx) to the WebBrowser control.
+This method sends the [IDM_SHOWUNKNOWNTAGS command ID](/previous-versions/aa769955\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea
+## <a name="textarea"></a> CHtmlEditCtrlBase::TextArea
 
 Overwrites a multiline text input control on the current selection.
 
@@ -2248,9 +2249,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM TEXTAREA command ID](https://msdn.microsoft.com/library/aa769986.aspx) to the WebBrowser control.
+This method sends the [IDM_TEXTAREA command ID](/previous-versions/aa769986\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="textbox"></a>  CHtmlEditCtrlBase::TextBox
+## <a name="textbox"></a> CHtmlEditCtrlBase::TextBox
 
 Overwrites a text control on the current selection.
 
@@ -2269,9 +2270,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM TEXTBOX command ID](https://msdn.microsoft.com/library/aa769980.aspx) to the WebBrowser control.
+This method sends the [IDM_TEXTBOX command ID](/previous-versions/aa769980\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="unbookmark"></a>  CHtmlEditCtrlBase::UnBookmark
+## <a name="unbookmark"></a> CHtmlEditCtrlBase::UnBookmark
 
 Removes any bookmark from the current selection.
 
@@ -2285,9 +2286,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM UNBOOKMARK command ID](https://msdn.microsoft.com/library/aa770034.aspx) to the WebBrowser control.
+This method sends the [IDM_UNBOOKMARK command ID](/previous-versions/aa770034\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="underline"></a>  CHtmlEditCtrlBase::Underline
+## <a name="underline"></a> CHtmlEditCtrlBase::Underline
 
 Toggles the current selection between underlined and not underlined.
 
@@ -2301,9 +2302,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM UNDERLINE command ID](https://msdn.microsoft.com/library/aa770035.aspx) to the WebBrowser control.
+This method sends the [IDM_UNDERLINE command ID](/previous-versions/aa770035\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink
+## <a name="unlink"></a> CHtmlEditCtrlBase::Unlink
 
 Removes any hyperlink from the current selection.
 
@@ -2317,9 +2318,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM UNLINK command ID](https://msdn.microsoft.com/library/aa770037.aspx) to the WebBrowser control.
+This method sends the [IDM_UNLINK command ID](/previous-versions/aa770037\(v=vs.85\)) to the WebBrowser control.
 
-##  <a name="unorderlist"></a>  CHtmlEditCtrlBase::UnorderList
+## <a name="unorderlist"></a> CHtmlEditCtrlBase::UnorderList
 
 Toggles the current selection between an ordered list and a normal format block.
 
@@ -2338,10 +2339,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-This method sends the [IDM UNORDERLIST command ID](https://msdn.microsoft.com/library/aa769987.aspx) to the WebBrowser control.
+This method sends the [IDM_UNORDERLIST command ID](/previous-versions/aa769987\(v=vs.85\)) to the WebBrowser control.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
-[HTMLEdit Sample](../../visual-cpp-samples.md)
-
+[HTMLEdit Sample](../../overview/visual-cpp-samples.md)

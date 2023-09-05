@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3915"
 title: "Compiler Error C3915"
 ms.date: "11/04/2016"
 f1_keywords: ["C3915"]
@@ -11,13 +12,13 @@ ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
 
 A type does not have a default, indexed property.
 
-For more information, see [property](../../windows/property-cpp-component-extensions.md).
+For more information, see [property](../../extensions/property-cpp-component-extensions.md).
 
-## Example
+## Examples
 
 The following sample generates C3915.
 
-```
+```cpp
 // C3915.cpp
 // compile with: /clr
 ref class X {
@@ -38,13 +39,11 @@ int main() {
 }
 ```
 
-## Example
-
 C3915 can also occur if you attempt to consume a default indexer in the same compiland where it was defined with <xref:System.Reflection.DefaultMemberAttribute>.
 
 The following sample generates C3915.
 
-```
+```cpp
 // C3915_b.cpp
 // compile with: /clr
 using namespace System;

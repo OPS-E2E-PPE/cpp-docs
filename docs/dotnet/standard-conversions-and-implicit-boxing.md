@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Standard Conversions and Implicit Boxing"
 title: "Standard Conversions and Implicit Boxing"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["boxing, implicit"]
@@ -10,7 +11,7 @@ A standard conversion will be chosen by the compiler over a conversion that requ
 
 ## Example
 
-```
+```cpp
 // clr_implicit_boxing_Std_conversion.cpp
 // compile with: /clr
 int f3(int ^ i) {   // requires boxing
@@ -31,6 +32,6 @@ int main() {
 2
 ```
 
-## See Also
+## See also
 
-[Boxing](../windows/boxing-cpp-component-extensions.md)
+[Boxing](../extensions/boxing-cpp-component-extensions.md)

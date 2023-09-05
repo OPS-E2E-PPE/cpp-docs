@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Database Macros and Globals"
 title: "Database Macros and Globals"
 ms.date: "11/04/2016"
 f1_keywords: ["AFXDB/AFX_ODBC_CALL", "AFXDB/AFX_SQL_ASYNC", "AFXDB/AFX_SQL_SYNC", "AFXDB/AfxGetHENV"]
@@ -13,7 +14,7 @@ Before MFC 4.2, the macros `AFX_SQL_ASYNC` and `AFX_SQL_SYNC` gave asynchronous 
 
 ### Database Macros
 
-|||
+|Name|Description|
 |-|-|
 |[AFX_ODBC_CALL](#afx_odbc_call)|Calls an ODBC API function that returns `SQL_STILL_EXECUTING`. `AFX_ODBC_CALL` will repeatedly call the function until it no longer returns `SQL_STILL_EXECUTING`.|
 |[AFX_SQL_ASYNC](#afx_sql_async)|Calls `AFX_ODBC_CALL`.|
@@ -21,7 +22,7 @@ Before MFC 4.2, the macros `AFX_SQL_ASYNC` and `AFX_SQL_SYNC` gave asynchronous 
 
 ### Database Globals
 
-|||
+|Name|Description|
 |-|-|
 |[AfxDbInitModule](#afxdbinitmodule)|Adds database support for a regular MFC DLL that is dynamically linked to MFC.|
 |[AfxGetHENV](#afxgethenv)|Retrieves a handle to the ODBC environment currently in use by MFC. You can use this handle in direct ODBC calls.|
@@ -32,7 +33,7 @@ For MFC database (or DAO) support from a regular MFC DLL that is dynamically lin
 
 ### Syntax
 
-```
+```cpp
 void AFXAPI AfxDbInitModule( );
 ```
 
@@ -44,11 +45,7 @@ Make sure this call occurs before any base-class call or any added code which ac
 
 **Header:** \<afxdll_.h>
 
-### See Also
-
-[Macros and Globals](mfc-macros-and-globals.md)
-
-##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
+## <a name="afx_odbc_call"></a> AFX_ODBC_CALL
 
 Use this macro to call any ODBC API function that may return `SQL_STILL_EXECUTING`.
 
@@ -79,7 +76,7 @@ This example uses `AFX_ODBC_CALL` to call the `SQLColumns` ODBC API function, wh
 
 **Header:** afxdb.h
 
-##  <a name="afx_sql_async"></a>  AFX_SQL_ASYNC
+## <a name="afx_sql_async"></a> AFX_SQL_ASYNC
 
 The implementation of this macro changed in MFC 4.2.
 
@@ -100,13 +97,13 @@ An ODBC API function. For more information about ODBC API functions, see the Win
 `AFX_SQL_ASYNC` simply calls the macro [AFX_ODBC_CALL](#afx_odbc_call) and ignores the *prs* parameter. In versions of MFC prior to 4.2, `AFX_SQL_ASYNC` was used to call ODBC API functions that might return `SQL_STILL_EXECUTING`. If an ODBC API function did return `SQL_STILL_EXECUTING`, then `AFX_SQL_ASYNC` would call `prs->OnWaitForDataSource`.
 
 > [!NOTE]
->  The MFC ODBC classes now use only synchronous processing. In order to perform an asynchronous operation, you must call the ODBC API function `SQLSetConnectOption`. For more information, see the topic "Executing Functions Asynchronously" in the Windows SDK.
+> The MFC ODBC classes now use only synchronous processing. In order to perform an asynchronous operation, you must call the ODBC API function `SQLSetConnectOption`. For more information, see the topic "Executing Functions Asynchronously" in the Windows SDK.
 
 ### Requirements
 
   **Header** afxdb.h
 
-##  <a name="afx_sql_sync"></a>  AFX_SQL_SYNC
+## <a name="afx_sql_sync"></a> AFX_SQL_SYNC
 
 The `AFX_SQL_SYNC` macro simply calls the function `SQLFunc`.
 
@@ -137,7 +134,7 @@ you can simply make the assignment
 
   **Header** afxdb.h
 
-##  <a name="afxgethenv"></a>  AfxGetHENV
+## <a name="afxgethenv"></a> AfxGetHENV
 
 You can use the returned handle in direct ODBC calls, but you must not close the handle or assume that the handle is still valid and available after any existing `CDatabase`- or `CRecordset`-derived objects have been destroyed.
 
@@ -153,6 +150,6 @@ The handle to the ODBC environment currently in use by MFC. Can be `SQL_HENV_NUL
 
   **Header** afxdb.h
 
-## See Also
+## See also
 
 [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)

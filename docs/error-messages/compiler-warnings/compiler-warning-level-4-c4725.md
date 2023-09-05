@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4725"
 title: "Compiler Warning (level 4) C4725"
 ms.date: "11/04/2016"
 f1_keywords: ["C4725"]
@@ -13,7 +14,7 @@ Your code contains an inline assembly instruction that may not produce accurate 
 
 The following sample generates C4725:
 
-```
+```cpp
 // C4725.cpp
 // compile with: /W4
 // processor: x86

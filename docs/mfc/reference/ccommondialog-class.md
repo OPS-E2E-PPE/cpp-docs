@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CCommonDialog Class"
 title: "CCommonDialog Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CCommonDialog", "AFXDLGS/CCommonDialog", "AFXDLGS/CCommonDialog::CCommonDialog"]
@@ -59,7 +60,7 @@ The following classes encapsulate the functionality of the Windows common dialog
 
 **Header:** afxdlgs.h
 
-##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog
+## <a name="ccommondialog"></a> CCommonDialog::CCommonDialog
 
 Constructs a `CCommonDialog` object.
 
@@ -76,7 +77,7 @@ Points to the parent or owner window object (of type [CWnd](../../mfc/reference/
 
 See [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) for complete information.
 
-## See Also
+## See also
 
 [CDialog Class](../../mfc/reference/cdialog-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

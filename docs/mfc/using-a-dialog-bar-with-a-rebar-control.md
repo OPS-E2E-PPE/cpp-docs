@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Using a Dialog Bar with a Rebar Control"
 title: "Using a Dialog Bar with a Rebar Control"
 ms.date: "11/04/2016"
-f1_keywords: ["WM_EX_TRANSPARENT"]
 helpviewer_keywords: ["WS_EX_TRANSPARENT style", "rebar controls [MFC], dialog bars", "dialog bars [MFC], using with rebar bands"]
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
 ---
@@ -31,8 +31,7 @@ The following procedure details the steps necessary to achieve transparency with
 
 The new handlers simulate the transparency of the dialog bar by forwarding the WM_ERASEBKGND message to the parent window and forcing a repaint every time the dialog bar object is moved.
 
-## See Also
+## See also
 
 [Using CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

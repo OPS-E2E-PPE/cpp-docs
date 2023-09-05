@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2503"
 title: "Compiler Error C2503"
 ms.date: "11/04/2016"
 f1_keywords: ["C2503"]
@@ -13,7 +14,7 @@ A base class or structure contains a zero-sized array. An array in a class must 
 
 The following sample generates C2503:
 
-```
+```cpp
 // C2503.cpp
 // compile with: /c
 class A {

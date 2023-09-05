@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4627"
 title: "Compiler Warning (level 1) C4627"
 ms.date: "09/09/2018"
 f1_keywords: ["C4627"]
@@ -26,6 +27,6 @@ int main()
 }
 ```
 
-## See Also
+## See also
 
-[Creating Precompiled Header Files](../../build/reference/creating-precompiled-header-files.md)
+[Creating Precompiled Header Files](../../build/creating-precompiled-header-files.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3208"
 title: "Compiler Error C3208"
 ms.date: "11/04/2016"
 f1_keywords: ["C3208"]
@@ -13,7 +14,7 @@ A template template parameter does not have the same number of template paramete
 
 The following sample generates C3208:
 
-```
+```cpp
 // C3208.cpp
 template <template <class T> class TT >
 int f();

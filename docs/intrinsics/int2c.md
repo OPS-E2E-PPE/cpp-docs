@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: __int2c"
 title: "__int2c"
-ms.date: "11/04/2016"
+ms.date: "09/02/2019"
 f1_keywords: ["__int2c", "__int2c_cpp"]
 helpviewer_keywords: ["int2c intrinsic", "int 2c instruction", "__int2c intrinsic"]
 ms.assetid: aa20ff30-adef-42bb-8577-8010f3122f8e
@@ -13,7 +14,7 @@ Generates the `int 2c` instruction, which triggers the `2c` interrupt.
 
 ## Syntax
 
-```
+```C
 void __int2c(void);
 ```
 
@@ -27,6 +28,6 @@ void __int2c(void);
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
-[Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)
+[Compiler intrinsics](../intrinsics/compiler-intrinsics.md)

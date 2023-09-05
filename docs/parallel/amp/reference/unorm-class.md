@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: unorm Class"
 title: "unorm Class"
 ms.date: "11/04/2016"
 f1_keywords: ["unorm", "AMP_SHORT_VECTORS/unorm", "AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor"]
@@ -10,7 +11,7 @@ Represent a unorm number. Each element is a floating point number in the range o
 
 ## Syntax
 
-```
+```cpp
 class unorm;
 ```
 
@@ -45,11 +46,11 @@ class unorm;
 
 **Namespace:** Concurrency::graphics
 
-##  <a name="ctor"></a> unorm
+## <a name="ctor"></a> unorm
 
 Default constructor. Initialize to 0.0f.
 
-```
+```cpp
 unorm(
     void) restrict(amp,
     cpu);
@@ -87,6 +88,6 @@ The value used to initialize.
 *_Other*<br/>
 The norm object used to initialize.
 
-## See Also
+## See also
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2783"
 title: "Compiler Error C2783"
 ms.date: "11/04/2016"
 f1_keywords: ["C2783"]
@@ -13,7 +14,7 @@ The compiler cannot determine a template argument. Default arguments cannot be u
 
 The following sample generates C2783:
 
-```
+```cpp
 // C2783.cpp
 template<typename T1, typename T2>
 T1 f(T2) {
@@ -29,7 +30,7 @@ int main() {
 
 C2783 can also occur when using generics:
 
-```
+```cpp
 // C2783b.cpp
 // compile with: /clr
 using namespace System;

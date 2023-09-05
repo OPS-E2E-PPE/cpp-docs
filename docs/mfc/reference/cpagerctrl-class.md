@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CPagerCtrl Class"
 title: "CPagerCtrl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CPagerCtrl", "AFXCMN/CPagerCtrl", "AFXCMN/CPagerCtrl::CPagerCtrl", "AFXCMN/CPagerCtrl::Create", "AFXCMN/CPagerCtrl::CreateEx", "AFXCMN/CPagerCtrl::ForwardMouse", "AFXCMN/CPagerCtrl::GetBkColor", "AFXCMN/CPagerCtrl::GetBorder", "AFXCMN/CPagerCtrl::GetButtonSize", "AFXCMN/CPagerCtrl::GetButtonState", "AFXCMN/CPagerCtrl::GetDropTarget", "AFXCMN/CPagerCtrl::GetScrollPos", "AFXCMN/CPagerCtrl::IsButtonDepressed", "AFXCMN/CPagerCtrl::IsButtonGrayed", "AFXCMN/CPagerCtrl::IsButtonHot", "AFXCMN/CPagerCtrl::IsButtonInvisible", "AFXCMN/CPagerCtrl::IsButtonNormal", "AFXCMN/CPagerCtrl::RecalcSize", "AFXCMN/CPagerCtrl::SetBkColor", "AFXCMN/CPagerCtrl::SetBorder", "AFXCMN/CPagerCtrl::SetButtonSize", "AFXCMN/CPagerCtrl::SetChild", "AFXCMN/CPagerCtrl::SetScrollPos"]
@@ -29,12 +30,12 @@ class CPagerCtrl : public CWnd
 |----------|-----------------|
 |[CPagerCtrl::Create](#create)|Creates a pager control with specified styles and attaches it to the current `CPagerCtrl` object.|
 |[CPagerCtrl::CreateEx](#createex)|Creates a pager control with specified extended styles and attaches it to the current `CPagerCtrl` object.|
-|[CPagerCtrl::ForwardMouse](#forwardmouse)|Enables or disables forwarding [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) messages to the window that is contained in the current pager control.|
+|[CPagerCtrl::ForwardMouse](#forwardmouse)|Enables or disables forwarding [WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) messages to the window that is contained in the current pager control.|
 |[CPagerCtrl::GetBkColor](#getbkcolor)|Retrieves the background color of the current pager control.|
 |[CPagerCtrl::GetBorder](#getborder)|Retrieves the border size of the current pager control.|
 |[CPagerCtrl::GetButtonSize](#getbuttonsize)|Retrieves the button size of the current pager control.|
 |[CPagerCtrl::GetButtonState](#getbuttonstate)|Retrieves the state of the specified button in the current pager control.|
-|[CPagerCtrl::GetDropTarget](#getdroptarget)|Retrieves the [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) interface for the current pager control.|
+|[CPagerCtrl::GetDropTarget](#getdroptarget)|Retrieves the [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) interface for the current pager control.|
 |[CPagerCtrl::GetScrollPos](#getscrollpos)|Retrieves the scroll position of the current pager control.|
 |[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Indicates whether the specified button of the current pager control is in `pressed` state.|
 |[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Indicates whether the specified button of the current pager control is in `grayed` state.|
@@ -54,7 +55,7 @@ A pager control is a window that contains another window that is linear and larg
 
 For example, if your application has a toolbar that is not wide enough to show all of its items, you can assign the toolbar to a pager control and users will be able to scroll the toolbar to the left or right to access all of the items. Microsoft Internet Explorer Version 4.0 (commctrl.dll version 4.71) introduces the pager control.
 
-The `CPagerCtrl` class is derived from the [CWnd](../../mfc/reference/cwnd-class.md) class. For more information and an illustration of a pager control, see [Pager Controls](/windows/desktop/Controls/pager-controls).
+The `CPagerCtrl` class is derived from the [CWnd](../../mfc/reference/cwnd-class.md) class. For more information and an illustration of a pager control, see [Pager Controls](/windows/win32/Controls/pager-controls).
 
 ## Inheritance Hierarchy
 
@@ -70,7 +71,7 @@ The `CPagerCtrl` class is derived from the [CWnd](../../mfc/reference/cwnd-class
 
 **Header:** afxcmn.h
 
-##  <a name="cpagerctrl"></a>  CPagerCtrl::CPagerCtrl
+## <a name="cpagerctrl"></a> CPagerCtrl::CPagerCtrl
 
 Constructs a `CPagerCtrl` object.
 
@@ -82,7 +83,7 @@ CPagerCtrl();
 
 Use the [CPagerCtrl::Create](#create) or [CPagerCtrl::CreateEx](#createex) method to create a pager control and attach it to the `CPagerCtrl` object.
 
-##  <a name="create"></a>  CPagerCtrl::Create
+## <a name="create"></a> CPagerCtrl::Create
 
 Creates a pager control with specified styles and attaches it to the current `CPagerCtrl` object.
 
@@ -96,12 +97,17 @@ virtual BOOL Create(
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*dwStyle*|[in] A bitwise combination (OR) of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [pager control styles](/windows/desktop/Controls/pager-control-styles) to be applied to the control.|
-|*rect*|[in] A reference to a [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure that contains the position and size of the control in client coordinates.|
-|*pParentWnd*|[in] A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control. This parameter cannot be NULL.|
-|*nID*|[in] The ID of the control.|
+*dwStyle*\
+[in] A bitwise combination (OR) of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [pager control styles](/windows/win32/Controls/pager-control-styles) to be applied to the control.
+
+*rect*\
+[in] A reference to a [RECT](/windows/win32/api/windef/ns-windef-rect) structure that contains the position and size of the control in client coordinates.
+
+*pParentWnd*\
+[in] A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control. This parameter cannot be NULL.
+
+*nID*\
+[in] The ID of the control.
 
 ### Return Value
 
@@ -117,7 +123,7 @@ The following example creates a pager control, then uses the [CPagerCtrl::SetChi
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]
 
-##  <a name="createex"></a>  CPagerCtrl::CreateEx
+## <a name="createex"></a> CPagerCtrl::CreateEx
 
 Creates a pager control with specified extended styles and attaches it to the current `CPagerCtrl` object.
 
@@ -132,13 +138,20 @@ virtual BOOL CreateEx(
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*dwExStyle*|[in] A bitwise combination of extended styles to be applied to the control. For more information, see the *dwExStyle* parameter of the [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) function.|
-|*dwStyle*|[in] A bitwise combination (OR) of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [pager control styles](/windows/desktop/Controls/pager-control-styles) to be applied to the control.|
-|*rect*|[in] A reference to a [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure that contains the position and size of the control in client coordinates.|
-|*pParentWnd*|[in] A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control. This parameter cannot be NULL.|
-|*nID*|[in] The ID of the control.|
+*dwExStyle*\
+[in] A bitwise combination of extended styles to be applied to the control. For more information, see the *dwExStyle* parameter of the [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) function.
+
+*dwStyle*\
+[in] A bitwise combination (OR) of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [pager control styles](/windows/win32/Controls/pager-control-styles) to be applied to the control.
+
+*rect*\
+[in] A reference to a [RECT](/windows/win32/api/windef/ns-windef-rect) structure that contains the position and size of the control in client coordinates.
+
+*pParentWnd*\
+[in] A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control. This parameter cannot be NULL.
+
+*nID*\
+[in] The ID of the control.
 
 ### Return Value
 
@@ -148,25 +161,24 @@ TRUE if this method is successful; otherwise, FALSE.
 
 To create a pager control, declare a `CPagerCtrl` variable, then call the [CPagerCtrl::Create](#create) or [CPagerCtrl::CreateEx](#createex) method on that variable.
 
-##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse
+## <a name="forwardmouse"></a> CPagerCtrl::ForwardMouse
 
-Enables or disables forwarding [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) messages to the window that is contained in the current pager control.
+Enables or disables forwarding [WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) messages to the window that is contained in the current pager control.
 
-```
+```cpp
 void ForwardMouse(BOOL bForward);
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*bForward*|[in] TRUE to forward mouse messages, or FALSE to not forward mouse messages.|
+*bForward*\
+[in] TRUE to forward mouse messages, or FALSE to not forward mouse messages.
 
 ### Remarks
 
-This method sends the [PGM_FORWARDMOUSE](/windows/desktop/Controls/pgm-forwardmouse) message, which is described in the Windows SDK.
+This method sends the [PGM_FORWARDMOUSE](/windows/win32/Controls/pgm-forwardmouse) message, which is described in the Windows SDK.
 
-##  <a name="getborder"></a>  CPagerCtrl::GetBorder
+## <a name="getborder"></a> CPagerCtrl::GetBorder
 
 Retrieves the border size of the current pager control.
 
@@ -180,7 +192,7 @@ The current border size, measured in pixels.
 
 ### Remarks
 
-This method sends the [PGM_GETBORDER](/windows/desktop/Controls/pgm-getborder) message, which is described in the Windows SDK.
+This method sends the [PGM_GETBORDER](/windows/win32/Controls/pgm-getborder) message, which is described in the Windows SDK.
 
 ### Example
 
@@ -188,7 +200,7 @@ The following example uses the [CPagerCtrl::GetBorder](#getborder) method to ret
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]
 
-##  <a name="getbkcolor"></a>  CPagerCtrl::GetBkColor
+## <a name="getbkcolor"></a> CPagerCtrl::GetBkColor
 
 Retrieves the background color of the current pager control.
 
@@ -198,11 +210,11 @@ COLORREF GetBkColor() const;
 
 ### Return Value
 
-A [COLORREF](/windows/desktop/gdi/colorref) value that contains the current background color of the pager control.
+A [COLORREF](/windows/win32/gdi/colorref) value that contains the current background color of the pager control.
 
 ### Remarks
 
-This method sends the [PGM_GETBKCOLOR](/windows/desktop/Controls/pgm-getbkcolor) message, which is described in the Windows SDK.
+This method sends the [PGM_GETBKCOLOR](/windows/win32/Controls/pgm-getbkcolor) message, which is described in the Windows SDK.
 
 ### Example
 
@@ -210,7 +222,7 @@ The following example uses the [CPagerCtrl::SetBkColor](#setbkcolor) method to s
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]
 
-##  <a name="getbuttonsize"></a>  CPagerCtrl::GetButtonSize
+## <a name="getbuttonsize"></a> CPagerCtrl::GetButtonSize
 
 Retrieves the button size of the current pager control.
 
@@ -224,11 +236,11 @@ The current button size, measured in pixels.
 
 ### Remarks
 
-This method sends the [PGM_GETBUTTONSIZE](/windows/desktop/Controls/pgm-getbuttonsize) message, which is described in the Windows SDK.
+This method sends the [PGM_GETBUTTONSIZE](/windows/win32/Controls/pgm-getbuttonsize) message, which is described in the Windows SDK.
 
-If the pager control has the PGS_HORZ style, the button size determines the width of the pager buttons, and if the pager control has the PGS_VERT style, the button size determines the height of the pager buttons. For more information, see [Pager Control Styles](/windows/desktop/Controls/pager-control-styles).
+If the pager control has the PGS_HORZ style, the button size determines the width of the pager buttons, and if the pager control has the PGS_VERT style, the button size determines the height of the pager buttons. For more information, see [Pager Control Styles](/windows/win32/Controls/pager-control-styles).
 
-##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState
+## <a name="getbuttonstate"></a> CPagerCtrl::GetButtonState
 
 Retrieves the state of the specified scroll button in the current pager control.
 
@@ -238,21 +250,20 @@ DWORD GetButtonState(int iButton) const;
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*iButton*|[in] Indicates the button for which the state is retrieved. If the pager control style is PGS_HORZ, specify PGB_TOPORLEFT for the left button and PGB_BOTTOMORRIGHT for the right button. If the pager control style is PGS_VERT, specify PGB_TOPORLEFT for the top button and PGB_BOTTOMORRIGHT for the bottom button. For more information, see [Pager Control Styles](/windows/desktop/Controls/pager-control-styles).|
+*iButton*\
+[in] Indicates the button for which the state is retrieved. If the pager control style is PGS_HORZ, specify PGB_TOPORLEFT for the left button and PGB_BOTTOMORRIGHT for the right button. If the pager control style is PGS_VERT, specify PGB_TOPORLEFT for the top button and PGB_BOTTOMORRIGHT for the bottom button. For more information, see [Pager Control Styles](/windows/win32/Controls/pager-control-styles).
 
 ### Return Value
 
-The state of the button specified by the *iButton* parameter. The state is either PGF_INVISIBLE, PGF_NORMAL, PGF_GRAYED, PGF_DEPRESSED, or PGF_HOT. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) message.
+The state of the button specified by the *iButton* parameter. The state is either PGF_INVISIBLE, PGF_NORMAL, PGF_GRAYED, PGF_DEPRESSED, or PGF_HOT. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) message.
 
 ### Remarks
 
-This method sends the [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) message, which is described in the Windows SDK.
+This method sends the [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) message, which is described in the Windows SDK.
 
-##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget
+## <a name="getdroptarget"></a> CPagerCtrl::GetDropTarget
 
-Retrieves the [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) interface for the current pager control.
+Retrieves the [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) interface for the current pager control.
 
 ```
 IDropTarget* GetDropTarget() const;
@@ -266,9 +277,9 @@ A pointer to the `IDropTarget` interface for the current pager control.
 
 `IDropTarget` is one of the interfaces you implement to support drag-and-drop operations in your application.
 
-This method sends the [PGM_GETDROPTARGET](/windows/desktop/Controls/pgm-getdroptarget) message, which is described in the Windows SDK. The caller of this method is responsible for calling the `Release` member of the [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) interface when the interface is no longer needed.
+This method sends the [PGM_GETDROPTARGET](/windows/win32/Controls/pgm-getdroptarget) message, which is described in the Windows SDK. The caller of this method is responsible for calling the `Release` member of the [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) interface when the interface is no longer needed.
 
-##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos
+## <a name="getscrollpos"></a> CPagerCtrl::GetScrollPos
 
 Retrieves the scroll position of the current pager control.
 
@@ -282,7 +293,7 @@ The current scroll position, measured in pixels.
 
 ### Remarks
 
-This method sends the [PGM_GETPOS](/windows/desktop/Controls/pgm-getpos) message, which is described in the Windows SDK.
+This method sends the [PGM_GETPOS](/windows/win32/Controls/pgm-getpos) message, which is described in the Windows SDK.
 
 ### Example
 
@@ -290,7 +301,7 @@ The following example uses the [CPagerCtrl::GetScrollPos](#getscrollpos) method 
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]
 
-##  <a name="isbuttondepressed"></a>  CPagerCtrl::IsButtonDepressed
+## <a name="isbuttondepressed"></a> CPagerCtrl::IsButtonDepressed
 
 Indicates whether the specified scroll button of the current pager control is in pressed state.
 
@@ -300,9 +311,8 @@ BOOL IsButtonDepressed(int iButton) const;
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*iButton*|[in] Indicates the button for which the state is retrieved. If the pager control style is PGS_HORZ, specify PGB_TOPORLEFT for the left button and PGB_BOTTOMORRIGHT for the right button. If the pager control style is PGS_VERT, specify PGB_TOPORLEFT for the top button and PGB_BOTTOMORRIGHT for the bottom button. For more information, see [Pager Control Styles](/windows/desktop/Controls/pager-control-styles).|
+*iButton*\
+[in] Indicates the button for which the state is retrieved. If the pager control style is PGS_HORZ, specify PGB_TOPORLEFT for the left button and PGB_BOTTOMORRIGHT for the right button. If the pager control style is PGS_VERT, specify PGB_TOPORLEFT for the top button and PGB_BOTTOMORRIGHT for the bottom button. For more information, see [Pager Control Styles](/windows/win32/Controls/pager-control-styles).
 
 ### Return Value
 
@@ -310,9 +320,9 @@ TRUE if the specified button is in pressed state; otherwise, FALSE.
 
 ### Remarks
 
-This method sends the [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) message, which is described in the Windows SDK. It then tests whether the state that is returned is PGF_DEPRESSED. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) message.
+This method sends the [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) message, which is described in the Windows SDK. It then tests whether the state that is returned is PGF_DEPRESSED. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) message.
 
-##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed
+## <a name="isbuttongrayed"></a> CPagerCtrl::IsButtonGrayed
 
 Indicates whether the specified scroll button of the current pager control is in grayed state.
 
@@ -322,9 +332,8 @@ BOOL IsButtonGrayed(int iButton) const;
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*iButton*|[in] Indicates the button for which the state is retrieved. If the pager control style is PGS_HORZ, specify PGB_TOPORLEFT for the left button and PGB_BOTTOMORRIGHT for the right button. If the pager control style is PGS_VERT, specify PGB_TOPORLEFT for the top button and PGB_BOTTOMORRIGHT for the bottom button. For more information, see [Pager Control Styles](/windows/desktop/Controls/pager-control-styles).|
+*iButton*\
+[in] Indicates the button for which the state is retrieved. If the pager control style is PGS_HORZ, specify PGB_TOPORLEFT for the left button and PGB_BOTTOMORRIGHT for the right button. If the pager control style is PGS_VERT, specify PGB_TOPORLEFT for the top button and PGB_BOTTOMORRIGHT for the bottom button. For more information, see [Pager Control Styles](/windows/win32/Controls/pager-control-styles).
 
 ### Return Value
 
@@ -332,9 +341,9 @@ TRUE if the specified button is in grayed state; otherwise, FALSE.
 
 ### Remarks
 
-This method sends the [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) message, which is described in the Windows SDK. It then tests whether the state that is returned is PGF_GRAYED. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) message.
+This method sends the [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) message, which is described in the Windows SDK. It then tests whether the state that is returned is PGF_GRAYED. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) message.
 
-##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot
+## <a name="isbuttonhot"></a> CPagerCtrl::IsButtonHot
 
 Indicates whether the specified scroll button of the current pager control is in hot state.
 
@@ -344,9 +353,8 @@ BOOL IsButtonHot(int iButton) const;
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*iButton*|[in] Indicates the button for which the state is retrieved. If the pager control style is PGS_HORZ, specify PGB_TOPORLEFT for the left button and PGB_BOTTOMORRIGHT for the right button. If the pager control style is PGS_VERT, specify PGB_TOPORLEFT for the top button and PGB_BOTTOMORRIGHT for the bottom button. For more information, see [Pager Control Styles](/windows/desktop/Controls/pager-control-styles).|
+*iButton*\
+[in] Indicates the button for which the state is retrieved. If the pager control style is PGS_HORZ, specify PGB_TOPORLEFT for the left button and PGB_BOTTOMORRIGHT for the right button. If the pager control style is PGS_VERT, specify PGB_TOPORLEFT for the top button and PGB_BOTTOMORRIGHT for the bottom button. For more information, see [Pager Control Styles](/windows/win32/Controls/pager-control-styles).
 
 ### Return Value
 
@@ -354,9 +362,9 @@ TRUE if the specified button is in hot state; otherwise, FALSE.
 
 ### Remarks
 
-This method sends the [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) message, which is described in the Windows SDK. It then tests whether the state that is returned is PGF_HOT. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) message.
+This method sends the [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) message, which is described in the Windows SDK. It then tests whether the state that is returned is PGF_HOT. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) message.
 
-##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible
+## <a name="isbuttoninvisible"></a> CPagerCtrl::IsButtonInvisible
 
 Indicates whether the specified scroll button of the current pager control is in invisible state.
 
@@ -366,9 +374,8 @@ BOOL IsButtonInvisible(int iButton) const;
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*iButton*|[in] Indicates the button for which the state is retrieved. If the pager control style is PGS_HORZ, specify PGB_TOPORLEFT for the left button and PGB_BOTTOMORRIGHT for the right button. If the pager control style is PGS_VERT, specify PGB_TOPORLEFT for the top button and PGB_BOTTOMORRIGHT for the bottom button. For more information, see [Pager Control Styles](/windows/desktop/Controls/pager-control-styles).|
+*iButton*\
+[in] Indicates the button for which the state is retrieved. If the pager control style is PGS_HORZ, specify PGB_TOPORLEFT for the left button and PGB_BOTTOMORRIGHT for the right button. If the pager control style is PGS_VERT, specify PGB_TOPORLEFT for the top button and PGB_BOTTOMORRIGHT for the bottom button. For more information, see [Pager Control Styles](/windows/win32/Controls/pager-control-styles).
 
 ### Return Value
 
@@ -378,7 +385,7 @@ TRUE if the specified button is in invisible state; otherwise, FALSE.
 
 Windows makes the scroll button in a particular direction invisible when the contained window is scrolled to its farthest extent because clicking the button further cannot bring more of the contained window into view.
 
-This method sends the [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) message, which is described in the Windows SDK. It then tests whether the state that is returned is PGF_INVISIBLE. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) message.
+This method sends the [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) message, which is described in the Windows SDK. It then tests whether the state that is returned is PGF_INVISIBLE. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) message.
 
 ### Example
 
@@ -386,7 +393,7 @@ The following example uses the [CPagerCtrl::IsButtonInvisible](#isbuttoninvisibl
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]
 
-##  <a name="isbuttonnormal"></a>  CPagerCtrl::IsButtonNormal
+## <a name="isbuttonnormal"></a> CPagerCtrl::IsButtonNormal
 
 Indicates whether the specified scroll button of the current pager control is in normal state.
 
@@ -396,9 +403,8 @@ BOOL IsButtonNormal(int iButton) const;
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*iButton*|[in] Indicates the button for which the state is retrieved. If the pager control style is PGS_HORZ, specify PGB_TOPORLEFT for the left button and PGB_BOTTOMORRIGHT for the right button. If the pager control style is PGS_VERT, specify PGB_TOPORLEFT for the top button and PGB_BOTTOMORRIGHT for the bottom button. For more information, see [Pager Control Styles](/windows/desktop/Controls/pager-control-styles).|
+*iButton*\
+[in] Indicates the button for which the state is retrieved. If the pager control style is PGS_HORZ, specify PGB_TOPORLEFT for the left button and PGB_BOTTOMORRIGHT for the right button. If the pager control style is PGS_VERT, specify PGB_TOPORLEFT for the top button and PGB_BOTTOMORRIGHT for the bottom button. For more information, see [Pager Control Styles](/windows/win32/Controls/pager-control-styles).
 
 ### Return Value
 
@@ -406,33 +412,33 @@ TRUE if the specified button is in normal state; otherwise, FALSE.
 
 ### Remarks
 
-This method sends the [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) message, which is described in the Windows SDK. It then tests whether the state that is returned is PGF_NORMAL. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate) message.
+This method sends the [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) message, which is described in the Windows SDK. It then tests whether the state that is returned is PGF_NORMAL. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) message.
 
-##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize
+## <a name="recalcsize"></a> CPagerCtrl::RecalcSize
 
 Causes the current pager control to recalculate the size of the contained window.
 
-```
+```cpp
 void RecalcSize();
 ```
 
 ### Remarks
 
-This method sends the [PGM_RECALCSIZE](/windows/desktop/Controls/pgm-recalcsize) message, which is described in the Windows SDK. Consequently, the pager control sends the [PGN_CALCSIZE](/windows/desktop/Controls/pgn-calcsize) notification to obtain the scrollable dimensions of the contained window.
+This method sends the [PGM_RECALCSIZE](/windows/win32/Controls/pgm-recalcsize) message, which is described in the Windows SDK. Consequently, the pager control sends the [PGN_CALCSIZE](/windows/win32/Controls/pgn-calcsize) notification to obtain the scrollable dimensions of the contained window.
 
-### Example
+### Example 1
 
 The following example uses the [CPagerCtrl::RecalcSize](#recalcsize) method to request the current pager control to recalculate its size.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]
 
-### Example
+### Example 2
 
-The following example uses [message reflection](../../mfc/tn062-message-reflection-for-windows-controls.md) to enable the pager control to recalculate its own size instead of requiring the control's parent dialog to perform the calculation. The example derives the `MyPagerCtrl` class from the [CPagerCtrl class](../../mfc/reference/cpagerctrl-class.md), then uses a message map to associate the [PGN_CALCSIZE](/windows/desktop/Controls/pgn-calcsize) notification with the `OnCalcsize` notification handler. In this example, the notification handler sets the width and height of the pager control to fixed values.
+The following example uses [message reflection](../../mfc/tn062-message-reflection-for-windows-controls.md) to enable the pager control to recalculate its own size instead of requiring the control's parent dialog to perform the calculation. The example derives the `MyPagerCtrl` class from the [CPagerCtrl class](../../mfc/reference/cpagerctrl-class.md), then uses a message map to associate the [PGN_CALCSIZE](/windows/win32/Controls/pgn-calcsize) notification with the `OnCalcsize` notification handler. In this example, the notification handler sets the width and height of the pager control to fixed values.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]
 
-##  <a name="setbkcolor"></a>  CPagerCtrl::SetBkColor
+## <a name="setbkcolor"></a> CPagerCtrl::SetBkColor
 
 Sets the background color of the current pager control.
 
@@ -442,17 +448,16 @@ COLORREF SetBkColor(COLORREF clrBk);
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*clrBk*|[in] A [COLORREF](/windows/desktop/gdi/colorref) value that contains the new background color of the pager control.|
+*clrBk*\
+[in] A [COLORREF](/windows/win32/gdi/colorref) value that contains the new background color of the pager control.
 
 ### Return Value
 
-A [COLORREF](/windows/desktop/gdi/colorref) value that contains the previous background color of the pager control.
+A [COLORREF](/windows/win32/gdi/colorref) value that contains the previous background color of the pager control.
 
 ### Remarks
 
-This method sends the [PGM_SETBKCOLOR](/windows/desktop/Controls/pgm-setbkcolor) message, which is described in the Windows SDK.
+This method sends the [PGM_SETBKCOLOR](/windows/win32/Controls/pgm-setbkcolor) message, which is described in the Windows SDK.
 
 ### Example
 
@@ -460,7 +465,7 @@ The following example uses the [CPagerCtrl::SetBkColor](#setbkcolor) method to s
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]
 
-##  <a name="setborder"></a>  CPagerCtrl::SetBorder
+## <a name="setborder"></a> CPagerCtrl::SetBorder
 
 Sets the border size of the current pager control.
 
@@ -470,9 +475,8 @@ int SetBorder(int iBorder);
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*iBorder*|[in] The new border size, measured in pixels. If the *iBorder* parameter is negative, the border size is set to zero.|
+*iBorder*\
+[in] The new border size, measured in pixels. If the *iBorder* parameter is negative, the border size is set to zero.
 
 ### Return Value
 
@@ -480,7 +484,7 @@ The previous border size, measured in pixels.
 
 ### Remarks
 
-This method sends the [PGM_SETBORDER](/windows/desktop/Controls/pgm-setborder) message, which is described in the Windows SDK.
+This method sends the [PGM_SETBORDER](/windows/win32/Controls/pgm-setborder) message, which is described in the Windows SDK.
 
 ### Example
 
@@ -488,7 +492,7 @@ The following example creates a pager control, then uses the [CPagerCtrl::SetChi
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]
 
-##  <a name="setbuttonsize"></a>  CPagerCtrl::SetButtonSize
+## <a name="setbuttonsize"></a> CPagerCtrl::SetButtonSize
 
 Sets the button size of the current pager control.
 
@@ -498,9 +502,8 @@ int SetButtonSize(int iButtonSize);
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*iButtonSize*|[in] The new button size, measured in pixels.|
+*iButtonSize*\
+[in] The new button size, measured in pixels.
 
 ### Return Value
 
@@ -508,9 +511,9 @@ The previous button size, measured in pixels.
 
 ### Remarks
 
-This method sends the [PGM_SETBUTTONSIZE](/windows/desktop/Controls/pgm-setpos) message, which is described in the Windows SDK.
+This method sends the [PGM_SETBUTTONSIZE](/windows/win32/Controls/pgm-setpos) message, which is described in the Windows SDK.
 
-If the pager control has the PGS_HORZ style, the button size determines the width of the pager buttons, and if the pager control has the PGS_VERT style, the button size determines the height of the pager buttons. The default button size is three-fourths of the width of the scroll bar, and the minimum button size is 12 pixels. For more information, see [Pager Control Styles](/windows/desktop/Controls/pager-control-styles).
+If the pager control has the PGS_HORZ style, the button size determines the width of the pager buttons, and if the pager control has the PGS_VERT style, the button size determines the height of the pager buttons. The default button size is three-fourths of the width of the scroll bar, and the minimum button size is 12 pixels. For more information, see [Pager Control Styles](/windows/win32/Controls/pager-control-styles).
 
 ### Example
 
@@ -518,23 +521,22 @@ The following example creates a pager control, then uses the [CPagerCtrl::SetChi
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]
 
-##  <a name="setchild"></a>  CPagerCtrl::SetChild
+## <a name="setchild"></a> CPagerCtrl::SetChild
 
 Sets the contained window for the current pager control.
 
-```
+```cpp
 void SetChild(HWND hwndChild);
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*hwndChild*|[in] Handle to the window to be contained.|
+*hwndChild*\
+[in] Handle to the window to be contained.
 
 ### Remarks
 
-This method sends the [PGM_SETCHILD](/windows/desktop/Controls/pgm-setchild) message, which is described in the Windows SDK.
+This method sends the [PGM_SETCHILD](/windows/win32/Controls/pgm-setchild) message, which is described in the Windows SDK.
 
 This method does not change the parent of the contained window; it only assigns a window handle to the pager control for scrolling. In most cases, the contained window will be a child window of the pager control.
 
@@ -544,27 +546,25 @@ The following example creates a pager control, then uses the [CPagerCtrl::SetChi
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]
 
-##  <a name="setscrollpos"></a>  CPagerCtrl::SetScrollPos
+## <a name="setscrollpos"></a> CPagerCtrl::SetScrollPos
 
 Sets the scroll position of the current pager control.
 
-```
+```cpp
 void SetScrollPos(int iPos);
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*iPos*|[in] The new scroll position, measured in pixels.|
+*iPos*\
+[in] The new scroll position, measured in pixels.
 
 ### Remarks
 
-This method sends the [PGM_SETPOS](/windows/desktop/Controls/pgm-setpos) message, which is described in the Windows SDK.
+This method sends the [PGM_SETPOS](/windows/win32/Controls/pgm-setpos) message, which is described in the Windows SDK.
 
-## See Also
+## See also
 
 [CPagerCtrl Class](../../mfc/reference/cpagerctrl-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
-[Pager Controls](/windows/desktop/Controls/pager-controls)
-
+[Pager Controls](/windows/win32/Controls/pager-controls)

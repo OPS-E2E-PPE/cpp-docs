@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4272"
 title: "Compiler Warning (level 1) C4272"
 ms.date: "11/04/2016"
 f1_keywords: ["C4272"]
@@ -13,7 +14,7 @@ It is an error to export a function marked with the [__clrcall](../../cpp/clrcal
 
 The following sample generates C4272:
 
-```
+```cpp
 // C4272.cpp
 // compile with: /c /W1 /clr
 __declspec(dllimport) void __clrcall Test();   // C4272

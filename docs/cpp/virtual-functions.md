@@ -1,8 +1,10 @@
 ---
+description: "Learn more about: Virtual Functions"
 title: "Virtual Functions"
-ms.date: "11/04/2016"
+ms.date: "09/10/2019"
 helpviewer_keywords: ["functions [C++], virtual functions", "derived classes [C++], virtual functions", "virtual functions"]
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
+adobe-target: true
 ---
 # Virtual Functions
 
@@ -21,6 +23,7 @@ using namespace std;
 class Account {
 public:
    Account( double d ) { _balance = d; }
+   virtual ~Account() {}
    virtual double GetBalance() { return _balance; }
    virtual void PrintBalance() { cerr << "Error. Balance not available for base type." << endl; }
 private:
@@ -41,15 +44,15 @@ public:
 
 int main() {
    // Create objects of type CheckingAccount and SavingsAccount.
-   CheckingAccount *pChecking = new CheckingAccount( 100.00 ) ;
-   SavingsAccount  *pSavings  = new SavingsAccount( 1000.00 );
+   CheckingAccount checking( 100.00 );
+   SavingsAccount  savings( 1000.00 );
 
    // Call PrintBalance using a pointer to Account.
-   Account *pAccount = pChecking;
+   Account *pAccount = &checking;
    pAccount->PrintBalance();
 
    // Call PrintBalance using a pointer to Account.
-   pAccount = pSavings;
+   pAccount = &savings;
    pAccount->PrintBalance();
 }
 ```
@@ -121,8 +124,6 @@ int main() {
 }
 ```
 
-### Output
-
 ```Output
 Derived::NameOf
 Invoked by Base
@@ -132,9 +133,9 @@ Invoked by Derived
 
 Note that regardless of whether the `NameOf` function is invoked through a pointer to `Base` or a pointer to `Derived`, it calls the function for `Derived`. It calls the function for `Derived` because `NameOf` is a virtual function, and both `pBase` and `pDerived` point to an object of type `Derived`.
 
-Because virtual functions are called only for objects of class types, you cannot declare global or static functions as **virtual**.
+Because virtual functions are called only for objects of class types, you cannot declare global or static functions as **`virtual`**.
 
-The **virtual** keyword can be used when declaring overriding functions in a derived class, but it is unnecessary; overrides of virtual functions are always virtual.
+The **`virtual`** keyword can be used when declaring overriding functions in a derived class, but it is unnecessary; overrides of virtual functions are always virtual.
 
 Virtual functions in a base class must be defined unless they are declared using the *pure-specifier*. (For more information about pure virtual functions, see [Abstract Classes](../cpp/abstract-classes-cpp.md).)
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2588"
 title: "Compiler Error C2588"
 ms.date: "11/04/2016"
 f1_keywords: ["C2588"]
@@ -15,7 +16,7 @@ This error can be caused by a missing class, structure, or union name on the lef
 
 The following sample generates C2588:
 
-```
+```cpp
 // C2588.cpp
 ~F();   // C2588
 ```

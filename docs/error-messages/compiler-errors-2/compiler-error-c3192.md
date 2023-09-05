@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3192"
 title: "Compiler Error C3192"
 ms.date: "11/04/2016"
 f1_keywords: ["C3192"]
@@ -13,7 +14,7 @@ A handle cannot be used as a dereference operator.
 
 The following sample generates C3192:
 
-```
+```cpp
 // C3192.cpp
 // compile with: /clr
 using namespace System;

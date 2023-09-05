@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Recommendations for Choosing Between ATL and MFC"
 title: "Recommendations for Choosing Between ATL and MFC"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["MFC, ATL support", "ATL, vs. MFC"]
@@ -20,7 +21,6 @@ MFC allows you to create full applications, ActiveX controls, and active documen
 
 You can add support for using ATL in an existing MFC project by running a wizard. For details, see [Adding ATL Support to Your MFC Project](../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
-## See Also
+## See also
 
 [Introduction to ATL](../atl/introduction-to-atl.md)
-

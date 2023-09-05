@@ -1,12 +1,14 @@
 ---
+description: "Learn more about: common_type Structure"
 title: "common_type Structure"
 ms.date: "11/04/2016"
-f1_keywords: ["chrono/std::common_type"]
-ms.assetid: 2b42722c-c3dc-4d62-8613-0271e52b6f00
+f1_keywords: ["std::common_type"]
+helpviewer_keywords: ["std [C++], common_type"]
+dev_langs: ["C++"]
 ---
-# common_type Structure
+# `common_type` Structure
 
-Describes specializations of template class [common_type](../standard-library/common-type-class.md) for instantiations of [duration](../standard-library/duration-class.md) and [time_point](../standard-library/time-point-class.md).
+Describes specializations of class template [`common_type`](../standard-library/common-type-class.md) for instantiations of [`duration`](../standard-library/duration-class.md) and [`time_point`](../standard-library/time-point-class.md).
 
 ## Syntax
 
@@ -26,11 +28,11 @@ chrono::time_point<Clock, Duration2>>;
 
 ## Requirements
 
-**Header:** \<chrono>
+**Header:** `<chrono>`
 
-**Namespace:** std
+**Namespace:** `std`
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[`<chrono>`](../standard-library/chrono.md)\
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)

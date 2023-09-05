@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: invalid_link_target Class"
 title: "invalid_link_target Class"
 ms.date: "11/04/2016"
 f1_keywords: ["invalid_link_target", "CONCRT/concurrency::invalid_link_target", "CONCRT/concurrency::invalid_link_target::invalid_link_target"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when the `link_target` method of a mess
 
 ## Syntax
 
-```
+```cpp
 class invalid_link_target : public std::exception;
 ```
 
@@ -35,11 +36,11 @@ class invalid_link_target : public std::exception;
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> invalid_link_target
+## <a name="ctor"></a> invalid_link_target
 
 Constructs an `invalid_link_target` object.
 
-```
+```cpp
 explicit _CRTIMP invalid_link_target(_In_z_ const char* _Message) throw();
 
 invalid_link_target() throw();
@@ -50,8 +51,7 @@ invalid_link_target() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [Asynchronous Message Blocks](../../../parallel/concrt/asynchronous-message-blocks.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCVisualManagerVS2005 Class"
 title: "CMFCVisualManagerVS2005 Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCVisualManagerVS2005", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::GetDockingTabsBordersSize", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::GetMDITabsBordersSize", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::GetPropertyGridGroupColor", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::GetTabFrameColors", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::OnDrawCaptionButton", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::OnDrawPaneCaption", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::OnDrawSeparator", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::OnDrawTab", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::OnDrawToolBoxFrame", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::OnEraseTabsArea", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::OnFillHighlightedArea", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::OnFillMiniFrameCaption", "AFXVISUALMANAGERVS2005/CMFCVisualManagerVS2005::OnUpdateSystemColors"]
@@ -46,7 +47,7 @@ All of the members of this class are virtual functions that are derived from the
 
 ## Example
 
-The following example demonstrates how to use the visual manager VS 2005. This code snippet is part of the [Desktop Alert Demo sample](../../visual-cpp-samples.md).
+The following example demonstrates how to use the visual manager VS 2005. This code snippet is part of the [Desktop Alert Demo sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]
 
@@ -68,7 +69,7 @@ The following example demonstrates how to use the visual manager VS 2005. This c
 
 **Header:** afxvisualmanagervs2005.h
 
-##  <a name="getdockingtabsborderssize"></a>  CMFCVisualManagerVS2005::GetDockingTabsBordersSize
+## <a name="getdockingtabsborderssize"></a> CMFCVisualManagerVS2005::GetDockingTabsBordersSize
 
 ```
 virtual int GetDockingTabsBordersSize();
@@ -78,7 +79,7 @@ virtual int GetDockingTabsBordersSize();
 
 ### Remarks
 
-##  <a name="getmditabsborderssize"></a>  CMFCVisualManagerVS2005::GetMDITabsBordersSize
+## <a name="getmditabsborderssize"></a> CMFCVisualManagerVS2005::GetMDITabsBordersSize
 
 ```
 virtual int GetMDITabsBordersSize();
@@ -88,7 +89,7 @@ virtual int GetMDITabsBordersSize();
 
 ### Remarks
 
-##  <a name="getpropertygridgroupcolor"></a>  CMFCVisualManagerVS2005::GetPropertyGridGroupColor
+## <a name="getpropertygridgroupcolor"></a> CMFCVisualManagerVS2005::GetPropertyGridGroupColor
 
 ```
 virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
@@ -102,7 +103,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 
 ### Remarks
 
-##  <a name="gettabframecolors"></a>  CMFCVisualManagerVS2005::GetTabFrameColors
+## <a name="gettabframecolors"></a> CMFCVisualManagerVS2005::GetTabFrameColors
 
 ```
 virtual void GetTabFrameColors(
@@ -131,7 +132,7 @@ virtual void GetTabFrameColors(
 
 ### Remarks
 
-##  <a name="hasoverlappedautohidebuttons"></a>  CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons
+## <a name="hasoverlappedautohidebuttons"></a> CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons
 
 ```
 virtual BOOL HasOverlappedAutoHideButtons() const;
@@ -141,7 +142,7 @@ virtual BOOL HasOverlappedAutoHideButtons() const;
 
 ### Remarks
 
-##  <a name="ondrawautohidebuttonborder"></a>  CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder
+## <a name="ondrawautohidebuttonborder"></a> CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder
 
 ```
 virtual void OnDrawAutoHideButtonBorder(
@@ -160,7 +161,7 @@ virtual void OnDrawAutoHideButtonBorder(
 
 ### Remarks
 
-##  <a name="ondrawcaptionbutton"></a>  CMFCVisualManagerVS2005::OnDrawCaptionButton
+## <a name="ondrawcaptionbutton"></a> CMFCVisualManagerVS2005::OnDrawCaptionButton
 
 ```
 virtual void OnDrawCaptionButton(
@@ -185,7 +186,7 @@ virtual void OnDrawCaptionButton(
 
 ### Remarks
 
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerVS2005::OnDrawPaneCaption
+## <a name="ondrawpanecaption"></a> CMFCVisualManagerVS2005::OnDrawPaneCaption
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -208,7 +209,7 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### Remarks
 
-##  <a name="ondrawseparator"></a>  CMFCVisualManagerVS2005::OnDrawSeparator
+## <a name="ondrawseparator"></a> CMFCVisualManagerVS2005::OnDrawSeparator
 
 ```
 virtual void OnDrawSeparator(
@@ -227,7 +228,7 @@ virtual void OnDrawSeparator(
 
 ### Remarks
 
-##  <a name="ondrawtab"></a>  CMFCVisualManagerVS2005::OnDrawTab
+## <a name="ondrawtab"></a> CMFCVisualManagerVS2005::OnDrawTab
 
 ```
 virtual void OnDrawTab(
@@ -248,7 +249,7 @@ virtual void OnDrawTab(
 
 ### Remarks
 
-##  <a name="ondrawtoolboxframe"></a>  CMFCVisualManagerVS2005::OnDrawToolBoxFrame
+## <a name="ondrawtoolboxframe"></a> CMFCVisualManagerVS2005::OnDrawToolBoxFrame
 
 ```
 virtual void OnDrawToolBoxFrame(
@@ -263,7 +264,7 @@ virtual void OnDrawToolBoxFrame(
 
 ### Remarks
 
-##  <a name="onerasetabsarea"></a>  CMFCVisualManagerVS2005::OnEraseTabsArea
+## <a name="onerasetabsarea"></a> CMFCVisualManagerVS2005::OnEraseTabsArea
 
 ```
 virtual void OnEraseTabsArea(
@@ -280,7 +281,7 @@ virtual void OnEraseTabsArea(
 
 ### Remarks
 
-##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground
+## <a name="onfillautohidebuttonbackground"></a> CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground
 
 ```
 virtual void OnFillAutoHideButtonBackground(
@@ -297,7 +298,7 @@ virtual void OnFillAutoHideButtonBackground(
 
 ### Remarks
 
-##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerVS2005::OnFillHighlightedArea
+## <a name="onfillhighlightedarea"></a> CMFCVisualManagerVS2005::OnFillHighlightedArea
 
 ```
 virtual void OnFillHighlightedArea(
@@ -316,7 +317,7 @@ virtual void OnFillHighlightedArea(
 
 ### Remarks
 
-##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerVS2005::OnFillMiniFrameCaption
+## <a name="onfillminiframecaption"></a> CMFCVisualManagerVS2005::OnFillMiniFrameCaption
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -337,7 +338,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 ### Remarks
 
-##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerVS2005::OnUpdateSystemColors
+## <a name="onupdatesystemcolors"></a> CMFCVisualManagerVS2005::OnUpdateSystemColors
 
 ```
 virtual void OnUpdateSystemColors();
@@ -345,7 +346,7 @@ virtual void OnUpdateSystemColors();
 
 ### Remarks
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

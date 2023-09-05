@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Record Field Exchange: Using RFX"
 title: "Record Field Exchange: Using RFX"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["RFX (ODBC), implementing"]
@@ -9,7 +10,7 @@ ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
 This topic explains what you do to use RFX in relation to what the framework does.
 
 > [!NOTE]
->  This topic applies to classes derived from [CRecordset](../../mfc/reference/crecordset-class.md) in which bulk row fetching has not been implemented. If you are using bulk row fetching, bulk record field exchange (Bulk RFX) is implemented. Bulk RFX is similar to RFX. To understand the differences, see [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> This topic applies to classes derived from [CRecordset](../../mfc/reference/crecordset-class.md) in which bulk row fetching has not been implemented. If you are using bulk row fetching, bulk record field exchange (Bulk RFX) is implemented. Bulk RFX is similar to RFX. To understand the differences, see [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 The following topics contain related information:
 
@@ -31,7 +32,7 @@ The following table shows your role in relation to what the framework does for y
 |Scroll in the recordset using [CRecordset::Move](../../mfc/reference/crecordset-class.md#move) or a menu or toolbar command.|Calls `DoFieldExchange` to transfer data to the field data members from the new current record.|
 |Add, update, and delete records.|Calls `DoFieldExchange` to transfer data to the data source.|
 
-## See Also
+## See also
 
 [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
@@ -39,4 +40,3 @@ The following table shows your role in relation to what the framework does for y
 [CRecordset Class](../../mfc/reference/crecordset-class.md)<br/>
 [CFieldExchange Class](../../mfc/reference/cfieldexchange-class.md)<br/>
 [Macros, Global Functions, and Global Variables](../../mfc/reference/mfc-macros-and-globals.md)
-

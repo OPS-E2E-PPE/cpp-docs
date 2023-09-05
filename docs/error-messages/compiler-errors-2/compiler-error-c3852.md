@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3852"
 title: "Compiler Error C3852"
 ms.date: "11/04/2016"
 f1_keywords: ["C3852"]
@@ -13,7 +14,7 @@ An attempt was made to assign a default initialization as part of an aggregate i
 
 The following samples generate C3852:
 
-```
+```cpp
 // C3852.cpp
 struct S
 {

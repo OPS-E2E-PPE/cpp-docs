@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4926"
 title: "Compiler Warning (level 1) C4926"
 ms.date: "11/04/2016"
 f1_keywords: ["C4926"]
@@ -13,7 +14,7 @@ A forward declaration was found but an attributed construct with the same name a
 
 The following sample generates C4926:
 
-```
+```cpp
 // C4926.cpp
 // compile with: /W1
 [module(name="MyLib")];

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IDispEventImpl Class"
 title: "IDispEventImpl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["IDispEventImpl", "ATLCOM/ATL::IDispEventImpl", "ATLCOM/ATL::IDispEventImpl::IDispEventImpl", "ATLCOM/ATL::IDispEventImpl::GetFuncInfoFromId", "ATLCOM/ATL::IDispEventImpl::GetIDsOfNames", "ATLCOM/ATL::IDispEventImpl::GetTypeInfo", "ATLCOM/ATL::IDispEventImpl::GetTypeInfoCount", "ATLCOM/ATL::IDispEventImpl::GetUserDefinedType"]
@@ -10,7 +11,7 @@ ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
 This class provides implementations of the `IDispatch` methods.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -104,7 +105,7 @@ For more information, see [Supporting IDispEventImpl](../../atl/supporting-idisp
 
 **Header:** atlcom.h
 
-##  <a name="getfuncinfofromid"></a>  IDispEventImpl::GetFuncInfoFromId
+## <a name="getfuncinfofromid"></a> IDispEventImpl::GetFuncInfoFromId
 
 Locates the function index for the specified dispatch identifier.
 
@@ -134,9 +135,9 @@ HRESULT GetFuncInfoFromId(
 
 A standard HRESULT value.
 
-##  <a name="getidsofnames"></a>  IDispEventImpl::GetIDsOfNames
+## <a name="getidsofnames"></a> IDispEventImpl::GetIDsOfNames
 
-Maps a single member and an optional set of argument names to a corresponding set of integer DISPIDs, which can be used on subsequent calls to [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
+Maps a single member and an optional set of argument names to a corresponding set of integer DISPIDs, which can be used on subsequent calls to [IDispatch::Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke).
 
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -149,9 +150,9 @@ STDMETHOD(GetIDsOfNames)(
 
 ### Remarks
 
-See [IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) in the Windows SDK.
+See [IDispatch::GetIDsOfNames](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) in the Windows SDK.
 
-##  <a name="gettypeinfo"></a>  IDispEventImpl::GetTypeInfo
+## <a name="gettypeinfo"></a> IDispEventImpl::GetTypeInfo
 
 Retrieves the type information for an object, which can then be used to get the type information for an interface.
 
@@ -164,7 +165,7 @@ STDMETHOD(GetTypeInfo)(
 
 ### Remarks
 
-##  <a name="gettypeinfocount"></a>  IDispEventImpl::GetTypeInfoCount
+## <a name="gettypeinfocount"></a> IDispEventImpl::GetTypeInfoCount
 
 Retrieves the number of type information interfaces that an object provides (either 0 or 1).
 
@@ -174,9 +175,9 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### Remarks
 
-See [IDispatch::GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) in the Windows SDK.
+See [IDispatch::GetTypeInfoCount](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) in the Windows SDK.
 
-##  <a name="getuserdefinedtype"></a>  IDispEventImpl::GetUserDefinedType
+## <a name="getuserdefinedtype"></a> IDispEventImpl::GetUserDefinedType
 
 Retrieves the basic type of a user-defined type.
 
@@ -189,7 +190,7 @@ VARTYPE GetUserDefinedType(
 ### Parameters
 
 *pTI*<br/>
-[in] A pointer to the [ITypeInfo](/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface containing the user-defined type.
+[in] A pointer to the [ITypeInfo](/windows/win32/api/oaidl/nn-oaidl-itypeinfo) interface containing the user-defined type.
 
 *hrt*<br/>
 [in] A handle to the type description to be retrieved.
@@ -200,9 +201,9 @@ The type of variant.
 
 ### Remarks
 
-See [ITypeInfo::GetRefTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo).
+See [ITypeInfo::GetRefTypeInfo](/windows/win32/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo).
 
-##  <a name="idispeventimpl"></a>  IDispEventImpl::IDispEventImpl
+## <a name="idispeventimpl"></a> IDispEventImpl::IDispEventImpl
 
 The constructor. Stores the values of the class template parameters *plibid*, *pdiid*, *wMajor*, and *wMinor*.
 
@@ -210,7 +211,7 @@ The constructor. Stores the values of the class template parameters *plibid*, *p
 IDispEventImpl();
 ```
 
-##  <a name="tihclass"></a>  IDispEventImpl::tihclass
+## <a name="tihclass"></a> IDispEventImpl::tihclass
 
 This typedef is an instance of the class template parameter *tihclass*.
 
@@ -222,7 +223,7 @@ typedef tihclass _tihclass;
 
 By default, the class is `CComTypeInfoHolder`. `CComTypeInfoHolder` manages the type information for the class.
 
-## See Also
+## See also
 
 [_ATL_FUNC_INFO Structure](../../atl/reference/atl-func-info-structure.md)<br/>
 [IDispatchImpl Class](../../atl/reference/idispatchimpl-class.md)<br/>

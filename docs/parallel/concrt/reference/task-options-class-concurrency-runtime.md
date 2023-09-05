@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: task_options Class (Concurrency Runtime)"
 title: "task_options Class (Concurrency Runtime)"
 ms.date: "11/04/2016"
 f1_keywords: ["ppltasks/concurrency::task_options"]
@@ -10,7 +11,7 @@ Represents the allowed options for creating a task
 
 ## Syntax
 
-```
+```cpp
 class task_options;
 ```
 
@@ -44,61 +45,61 @@ class task_options;
 
 **Namespace:** concurrency
 
-##  <a name="get_cancellation_token"></a>  task_options::get_cancellation_token Method (Concurrency Runtime)
+## <a name="get_cancellation_token"></a> task_options::get_cancellation_token Method (Concurrency Runtime)
 
 Returns the cancellation token
 
-```
+```cpp
 cancellation_token get_cancellation_token() const;
 ```
 
 ### Return Value
 
-##  <a name="get_continuation_context"></a>  task_options::get_continuation_context Method (Concurrency Runtime)
+## <a name="get_continuation_context"></a> task_options::get_continuation_context Method (Concurrency Runtime)
 
 Returns the continuation context
 
-```
+```cpp
 task_continuation_context get_continuation_context() const;
 ```
 
 ### Return Value
 
-##  <a name="get_scheduler"></a>  task_options::get_scheduler Method (Concurrency Runtime)
+## <a name="get_scheduler"></a> task_options::get_scheduler Method (Concurrency Runtime)
 
 Returns the scheduler
 
-```
+```cpp
 scheduler_ptr get_scheduler() const;
 ```
 
 ### Return Value
 
-##  <a name="has_cancellation_token"></a>  task_options::has_cancellation_token Method (Concurrency Runtime)
+## <a name="has_cancellation_token"></a> task_options::has_cancellation_token Method (Concurrency Runtime)
 
 Indicates whether a cancellation token was specified by the user
 
-```
+```cpp
 bool has_cancellation_token() const;
 ```
 
 ### Return Value
 
-##  <a name="has_scheduler"></a>  task_options::has_scheduler Method (Concurrency Runtime)
+## <a name="has_scheduler"></a> task_options::has_scheduler Method (Concurrency Runtime)
 
 Indicates whether a scheduler n was specified by the user
 
-```
+```cpp
 bool has_scheduler() const;
 ```
 
 ### Return Value
 
-##  <a name="set_cancellation_token"></a>  task_options::set_cancellation_token Method (Concurrency Runtime)
+## <a name="set_cancellation_token"></a> task_options::set_cancellation_token Method (Concurrency Runtime)
 
 Sets the given token in the options
 
-```
+```cpp
 void set_cancellation_token(cancellation_token _Token);
 ```
 
@@ -106,11 +107,11 @@ void set_cancellation_token(cancellation_token _Token);
 
 `_Token`
 
-##  <a name="set_continuation_context"></a>  task_options::set_continuation_context Method (Concurrency Runtime)
+## <a name="set_continuation_context"></a> task_options::set_continuation_context Method (Concurrency Runtime)
 
 Sets the given continuation context in the options
 
-```
+```cpp
 void set_continuation_context(task_continuation_context _ContinuationContext);
 ```
 
@@ -118,11 +119,11 @@ void set_continuation_context(task_continuation_context _ContinuationContext);
 
 `_ContinuationContext`
 
-##  <a name="ctor"></a>  task_options::task_options Constructor (Concurrency Runtime)
+## <a name="ctor"></a> task_options::task_options Constructor (Concurrency Runtime)
 
 Default list of task creation options
 
-```
+```cpp
 task_options();
 
 task_options(
@@ -161,6 +162,6 @@ task_options(
 
 `_TaskOptions`
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4927"
 title: "Compiler Warning (level 1) C4927"
 ms.date: "11/04/2016"
 f1_keywords: ["C4927"]
@@ -13,7 +14,7 @@ More than one user-defined conversion is implicitly applied to a single value --
 
 The following sample generates C4927:
 
-```
+```cpp
 // C4927.cpp
 // compile with: /W1
 struct B

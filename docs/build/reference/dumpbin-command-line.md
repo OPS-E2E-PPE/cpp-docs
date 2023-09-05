@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: DUMPBIN Command Line"
 title: "DUMPBIN Command Line"
 ms.date: "11/04/2016"
-f1_keywords: ["dumpbin"]
 helpviewer_keywords: ["DUMPBIN program, command line"]
 ms.assetid: e6ad17d3-965d-41aa-9dfd-75bb073718d4
 ---
@@ -19,7 +19,7 @@ When you run DUMPBIN on a file without specifying an option, DUMPBIN displays th
 
 When you type the command `dumpbin` without any other command-line input, DUMPBIN displays a usage statement that summarizes its options.
 
-## See Also
+## See also
 
-[C/C++ Build Tools](../../build/reference/c-cpp-build-tools.md)<br/>
-[DUMPBIN Reference](../../build/reference/dumpbin-reference.md)
+[Additional MSVC Build Tools](c-cpp-build-tools.md)<br/>
+[DUMPBIN Reference](dumpbin-reference.md)

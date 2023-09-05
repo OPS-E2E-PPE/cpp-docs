@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ITopologyNode Structure"
 title: "ITopologyNode Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["ITopologyNode", "CONCRTRM/concurrency::ITopologyNode", "CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetExecutionResourceCount", "CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetFirstExecutionResource", "CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetId", "CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNext", "CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNumaNode"]
@@ -11,7 +12,7 @@ An interface to a topology node as defined by the Resource Manager. A node conta
 
 ## Syntax
 
-```
+```cpp
 struct ITopologyNode;
 ```
 
@@ -41,11 +42,11 @@ This interface is typically utilized to walk the topology of the system as obser
 
 **Namespace:** concurrency
 
-##  <a name="getexecutionresourcecount"></a>  ITopologyNode::GetExecutionResourceCount Method
+## <a name="getexecutionresourcecount"></a> ITopologyNode::GetExecutionResourceCount Method
 
 Returns the number of execution resources grouped together under this node.
 
-```
+```cpp
 virtual unsigned int GetExecutionResourceCount() const = 0;
 ```
 
@@ -53,11 +54,11 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 
 The number of execution resources grouped together under this node.
 
-##  <a name="getfirstexecutionresource"></a>  ITopologyNode::GetFirstExecutionResource Method
+## <a name="getfirstexecutionresource"></a> ITopologyNode::GetFirstExecutionResource Method
 
 Returns the first execution resource grouped under this node in enumeration order.
 
-```
+```cpp
 virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 ```
 
@@ -65,11 +66,11 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 
 The first execution resource grouped under this node in enumeration order.
 
-##  <a name="getid"></a>  ITopologyNode::GetId Method
+## <a name="getid"></a> ITopologyNode::GetId Method
 
 Returns the Resource Manager's unique identifier for this node.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
@@ -83,11 +84,11 @@ The Concurrency Runtime represents hardware threads on the system in groups of p
 
 The count of nodes can be obtained from the function [GetProcessorNodeCount](concurrency-namespace-functions.md).
 
-##  <a name="getnext"></a>  ITopologyNode::GetNext Method
+## <a name="getnext"></a> ITopologyNode::GetNext Method
 
 Returns an interface to the next topology node in enumeration order.
 
-```
+```cpp
 virtual ITopologyNode *GetNext() const = 0;
 ```
 
@@ -95,11 +96,11 @@ virtual ITopologyNode *GetNext() const = 0;
 
 An interface to the next node in enumeration order. If there are no more nodes in enumeration order of the system topology, this method will return the value `NULL`.
 
-##  <a name="getnumanode"></a>  ITopologyNode::GetNumaNode Method
+## <a name="getnumanode"></a> ITopologyNode::GetNumaNode Method
 
 Returns the Windows assigned NUMA node number to which this Resource Maanger node belongs.
 
-```
+```cpp
 virtual unsigned long GetNumaNode() const = 0;
 ```
 
@@ -111,6 +112,6 @@ The Windows assigned NUMA node number to which this Resource Manager node belong
 
 A thread proxy running on a virtual processor root belonging to this node will have affinity to at least the NUMA node level for the NUMA node returned by this method.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

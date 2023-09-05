@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2803"
 title: "Compiler Error C2803"
 ms.date: "11/04/2016"
 f1_keywords: ["C2803"]
@@ -17,7 +18,7 @@ If both parameters are pointers it will be a pure comparison of pointer addresse
 
 The following sample generates C2803:
 
-```
+```cpp
 // C2803.cpp
 // compile with: /c
 class A{};

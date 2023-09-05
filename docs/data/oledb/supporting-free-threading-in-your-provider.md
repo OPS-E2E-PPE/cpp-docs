@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Supporting Free Threading in Your Provider"
 title: "Supporting Free Threading in Your Provider"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["OLE DB providers, multithreaded", "threading [C++], providers"]
@@ -33,6 +34,6 @@ For more information about how to protect critical sections with `Lock` and `Unl
 
 Verify that any methods you override (such as `Execute`) are thread-safe.
 
-## See Also
+## See also
 
 [Working with OLE DB Provider Templates](../../data/oledb/working-with-ole-db-provider-templates.md)

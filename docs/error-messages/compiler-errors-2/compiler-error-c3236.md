@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3236"
 title: "Compiler Error C3236"
 ms.date: "11/04/2016"
 f1_keywords: ["C3236"]
@@ -13,7 +14,7 @@ The compiler does not allow explicit instantiation of generic classes.
 
 The following sample generates C3236:
 
-```
+```cpp
 // C3236.cpp
 // compile with: /clr
 generic<class T>
@@ -24,7 +25,7 @@ generic ref class X<int>;   // C3236
 
 The following sample demonstrates a possible resolution:
 
-```
+```cpp
 // C3236b.cpp
 // compile with: /clr /c
 generic<class T>

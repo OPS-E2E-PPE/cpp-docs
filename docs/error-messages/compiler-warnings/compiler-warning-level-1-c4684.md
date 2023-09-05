@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4684"
 title: "Compiler Warning (level 1) C4684"
 ms.date: "11/04/2016"
 f1_keywords: ["C4684"]
@@ -13,7 +14,7 @@ You used an attribute that should not commonly be used.
 
 The following sample generates C4684:
 
-```
+```cpp
 // C4684.cpp
 // compile with: /W1 /LD
 [module(name="xx")]; // C4684 expected

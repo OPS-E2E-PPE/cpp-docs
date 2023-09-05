@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4937"
 title: "Compiler Warning (level 4) C4937"
 ms.date: "11/04/2016"
 f1_keywords: ["C4937"]
@@ -15,7 +16,7 @@ Examples of such strings are __cdecl and \__forceinline.  Note, under /Za, only 
 
 The following sample generates C4937:
 
-```
+```cpp
 // C4937.cpp
 // compile with: /openmp /W4
 #include "omp.h"

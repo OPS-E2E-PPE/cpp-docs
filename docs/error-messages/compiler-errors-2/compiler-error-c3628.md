@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3628"
 title: "Compiler Error C3628"
 ms.date: "11/04/2016"
 f1_keywords: ["C3628"]
@@ -13,7 +14,7 @@ An attempt was made to use a managed or WinRT class as a [private](../../cpp/pri
 
 The following sample generates C3628 and shows how to fix it:
 
-```
+```cpp
 // C3628a.cpp
 // compile with: /clr
 ref class B {

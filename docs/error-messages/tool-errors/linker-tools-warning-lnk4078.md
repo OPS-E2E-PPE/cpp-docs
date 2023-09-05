@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Linker Tools Warning LNK4078"
 title: "Linker Tools Warning LNK4078"
 ms.date: "11/04/2016"
 f1_keywords: ["LNK4078"]
@@ -21,7 +22,7 @@ LNK4078 can also be caused by a breaking change: the section named by [init_seg]
 
 The following sample generates LNK4078.
 
-```
+```cpp
 // LNK4078.cpp
 // compile with: /W1
 // LNK4078 expected

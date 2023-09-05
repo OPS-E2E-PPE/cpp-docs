@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4036"
 title: "Compiler Warning (level 1) C4036"
 ms.date: "11/04/2016"
 f1_keywords: ["C4036"]
@@ -17,7 +18,7 @@ Specify a type name to resolve this warning.
 
 The following sample generates C4036.
 
-```
+```c
 // C4036.c
 // compile with: /Zg /W1
 // D9035 expected

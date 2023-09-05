@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Storage of Addresses"
 title: "Storage of Addresses"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["storage [C++], addresses", "addresses [C++], storage of"]
@@ -14,6 +15,6 @@ For the Microsoft C compiler, **sizeof(char \*)** is equal to **sizeof(int \*)**
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
 [Pointer Declarations](../c-language/pointer-declarations.md)

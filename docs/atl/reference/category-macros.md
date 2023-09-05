@@ -1,14 +1,15 @@
 ---
+description: "Learn more about: Category Macros"
 title: "Category Macros"
 ms.date: "11/04/2016"
-f1_keywords: ["atlbase/ATL::AtlGetHexValue", "atlbase/ATL::AtlGetVersion", "atlenc/ATL::AtlHexDecode", "atlenc/ATL::AtlHexDecodeGetRequiredLength", "atlenc/ATL::AtlHexEncode", "atlenc/ATL::AtlHexEncodeGetRequiredLength", "atlenc/ATL::AtlHexValue", "atlenc/ATL::BEncode", "atlenc/ATL::BEncodeGetRequiredLength", "atlenc/ATL::EscapeXML", "atlenc/ATL::GetExtendedChars", "atlenc/ATL::IsExtendedChar", "atlenc/ATL::QEncode", "atlenc/ATL::QEncodeGetRequiredLength", "atlenc/ATL::QPDecode", "atlenc/ATL::QPDecodeGetRequiredLength", "atlenc/ATL::QPEncode", "atlenc/ATL::QPEncodeGetRequiredLength", "atlenc/ATL::UUDecode", "atlenc/ATL::UUDecodeGetRequiredLength", "atlenc/ATL::UUEncode", "atlenc/ATL::UUEncodeGetRequiredLength"]
+f1_keywords: ["ATLCOM/BEGIN_CATEGORY_MAP", "ATLCOM/END_CATEGORY_MAP", "ATLCOM/IMPLEMENTED_CATEGORY", "ATLCOM/REQUIRED_CATEGORY", "atlcom/ATL::BEGIN_CATEGORY_MAP", "atlcom/ATL::END_CATEGORY_MAP", "atlcom/ATL::IMPLEMENTED_CATEGORY", "atlcom/ATL::REQUIRED_CATEGORY"]
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
 ---
 # Category Macros
 
 These macros define category maps.
 
-|||
+|Macro|Description|
 |-|-|
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|Marks the beginning of the category map.|
 |[END_CATEGORY_MAP](#end_category_map)|Marks the end of the category map.|
@@ -19,11 +20,11 @@ These macros define category maps.
 
 **Header:** atlcom.h
 
-##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
+## <a name="begin_category_map"></a> BEGIN_CATEGORY_MAP
 
 Marks the beginning of the category map.
 
-```
+```cpp
 BEGIN_CATEGORY_MAP(theClass)
 ```
 
@@ -41,19 +42,19 @@ Add an [IMPLEMENTED_CATEGORY](#implemented_category) entry to the map for each c
 The component categories listed in the map will be registered automatically when the module is registered if the class has an associated [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) or [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto).
 
 > [!NOTE]
->  ATL uses the standard component categories manager to register component categories. If the manager is not present on the system when the module is registered, registration succeeds, but the component categories will not be registered for that class.
+> ATL uses the standard component categories manager to register component categories. If the manager is not present on the system when the module is registered, registration succeeds, but the component categories will not be registered for that class.
 
-For more information about component categories, see [What are Component Categories and how do they work](/windows/desktop/com/component-categories-and-how-they-work) in the Windows SDK.
+For more information about component categories, see [What are Component Categories and how do they work](/windows/win32/com/component-categories-and-how-they-work) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>  END_CATEGORY_MAP
+## <a name="end_category_map"></a> END_CATEGORY_MAP
 
 Marks the end of the category map.
 
-```
+```cpp
 END_CATEGORY_MAP()
 ```
 
@@ -61,11 +62,11 @@ END_CATEGORY_MAP()
 
 See the example for [BEGIN_CATEGORY_MAP](#begin_category_map).
 
-##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY
+## <a name="implemented_category"></a> IMPLEMENTED_CATEGORY
 
 Add an IMPLEMENTED_CATEGORY macro to your component's [category map](#begin_category_map) to specify that it should be registered as implementing the category identified by the *catID* parameter.
 
-```
+```cpp
 IMPLEMENTED_CATEGORY(catID)
 ```
 
@@ -80,7 +81,7 @@ The component categories listed in the map will be registered automatically when
 
 Clients can use the category information registered for the class to determine its capabilities and requirements without having to create an instance of it.
 
-For more information about component categories, see [What are Component Categories and how do they work](/windows/desktop/com/component-categories-and-how-they-work) in the Windows SDK.
+For more information about component categories, see [What are Component Categories and how do they work](/windows/win32/com/component-categories-and-how-they-work) in the Windows SDK.
 
 ### A Selection of Stock Categories
 
@@ -92,17 +93,17 @@ For more information about component categories, see [What are Component Categor
 |Simple Data Binding|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Advanced Data Binding|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Windowless Controls|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Internet-Aware Objects|See [Internet Aware Objects](/windows/desktop/com/internet-aware-objects) in the Windows SDK for a sample list.||
+|Internet-Aware Objects|See [Internet Aware Objects](/windows/win32/com/internet-aware-objects) in the Windows SDK for a sample list.||
 
 ### Example
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="required_category"></a>  REQUIRED_CATEGORY
+## <a name="required_category"></a> REQUIRED_CATEGORY
 
 Add a REQUIRED_CATEGORY macro to your component's [category map](#begin_category_map) to specify that it should be registered as requiring the category identified by the *catID* parameter.
 
-```
+```cpp
 REQUIRED_CATEGORY( catID )
 ```
 
@@ -117,7 +118,7 @@ The component categories listed in the map will be registered automatically when
 
 Clients can use the category information registered for the class to determine its capabilities and requirements without having to create an instance of it. For example, a control may require that a container support data binding. The container can find out if it has the capabilities necessary to host the control by querying the category manager for the categories required by that control. If the container does not support a required feature, it can refuse to host the COM object.
 
-For more information about component categories, including a sample list, see [What are Component Categories and how do they work](/windows/desktop/com/component-categories-and-how-they-work) in the Windows SDK.
+For more information about component categories, including a sample list, see [What are Component Categories and how do they work](/windows/win32/com/component-categories-and-how-they-work) in the Windows SDK.
 
 ### A Selection of Stock Categories
 
@@ -129,12 +130,12 @@ For more information about component categories, including a sample list, see [W
 |Simple Data Binding|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Advanced Data Binding|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Windowless Controls|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Internet-Aware Objects|See [Internet Aware Objects](/windows/desktop/com/internet-aware-objects) in the Windows SDK for a sample list.||
+|Internet-Aware Objects|See [Internet Aware Objects](/windows/win32/com/internet-aware-objects) in the Windows SDK for a sample list.||
 
 ### Example
 
 [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]
 
-## See Also
+## See also
 
 [Macros](../../atl/reference/atl-macros.md)

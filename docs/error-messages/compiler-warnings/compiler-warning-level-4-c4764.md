@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4764"
 title: "Compiler Warning (level 4) C4764"
 ms.date: "11/04/2016"
 f1_keywords: ["C4764"]
@@ -15,7 +16,7 @@ An alignment greater than 16 was specified, but on some platforms, if the functi
 
 The following sample generates C4764:
 
-```
+```cpp
 // C4764.cpp
 // compile with: /W4 /EHsc
 // processor: x64 IPF
@@ -37,7 +38,7 @@ int main()
         a.x = 15;
         throw a;
     }
-    catch (ALIGNEDA b) // can’t align b to > 16 bytes
+    catch (ALIGNEDA b) // can't align b to > 16 bytes
     {
         printf_s("%d\n", b.x);
     }

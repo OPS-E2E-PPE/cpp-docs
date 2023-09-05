@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Fatal Error C1018"
 title: "Fatal Error C1018"
 ms.date: "11/04/2016"
 f1_keywords: ["C1018"]
@@ -13,7 +14,7 @@ The `#elif` directive appears outside an `#if`, `#ifdef`, or `#ifndef` construct
 
 The following sample generates C1018:
 
-```
+```cpp
 // C1018.cpp
 #elif      // C1018
 #endif
@@ -23,7 +24,7 @@ int main() {}
 
 Possible resolution:
 
-```
+```cpp
 // C1018b.cpp
 #if 1
 #elif

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Multithreading with C++ and MFC"
 title: "Multithreading with C++ and MFC"
 ms.date: "08/27/2018"
 helpviewer_keywords: ["MFC [C++], multithreading", "threading [C++], MFC", "worker threads [C++]", "synchronization classes [C++]", "synchronization [C++], multithreading", "threading [MFC], about threading", "CWinThread class, purpose of", "multithreading [C++], MFC", "threading [MFC]", "user interface threads [C++]"]
@@ -20,7 +21,7 @@ Special attention should be given to situations where more than one thread might
 
 Writing and debugging multithreaded programming is inherently a complicated and tricky undertaking, because you must ensure that objects are not accessed by more than one thread at a time. The multithreading topics do not teach the basics of multithreaded programming, only how to use MFC in your multithreaded program. The multithreaded MFC samples included in Visual C++ illustrate a few multithreaded Adding Functionality and Win32 APIs not encompassed by MFC; however, they are only intended to be a starting point.
 
-For more information about how the operating system handles processes and threads, see [Processes and Threads](/windows/desktop/ProcThread/processes-and-threads) in the Windows SDK.
+For more information about how the operating system handles processes and threads, see [Processes and Threads](/windows/win32/ProcThread/processes-and-threads) in the Windows SDK.
 
 For more information about MFC multithreading support, see the following topics:
 
@@ -36,6 +37,6 @@ For more information about MFC multithreading support, see the following topics:
 
 - [Multithreading: When to Use the Synchronization Classes](multithreading-when-to-use-the-synchronization-classes.md)
 
-## See Also
+## See also
 
 [Multithreading Support for Older Code (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)

@@ -1,21 +1,30 @@
 ---
-title: "&lt;locale&gt; functions"
+description: "Learn more about: <locale> functions"
+title: "<locale> functions"
 ms.date: "11/04/2016"
 f1_keywords: ["locale/std::has_facet", "locale/std::isalnum", "locale/std::isalpha", "locale/std::iscntrl", "locale/std::isdigit", "locale/std::isgraph", "locale/std::islower", "locale/std::isprint", "locale/std::ispunct", "locale/std::isspace", "locale/std::isupper", "locale/std::isxdigit", "locale/std::tolower", "locale/std::toupper", "locale/std::use_facet"]
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
 helpviewer_keywords: ["std::has_facet [C++]", "std::isalnum [C++]", "std::isalpha [C++]", "std::iscntrl [C++]", "std::isdigit [C++]", "std::isgraph [C++]", "std::islower [C++]", "std::isprint [C++]", "std::ispunct [C++]", "std::isspace [C++]", "std::isupper [C++]", "std::isxdigit [C++]", "std::tolower [C++]", "std::toupper [C++]", "std::use_facet [C++]"]
 ---
-# &lt;locale&gt; functions
+# `<locale>` functions
 
-||||
-|-|-|-|
-|[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|
-|[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
-|[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
-|[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
-|[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|
+[has_facet](#has_facet)\
+[isalnum](#isalnum)\
+[isalpha](#isalpha)\
+[iscntrl](#iscntrl)\
+[isdigit](#isdigit)\
+[isgraph](#isgraph)\
+[islower](#islower)\
+[isprint](#isprint)\
+[ispunct](#ispunct)\
+[isspace](#isspace)\
+[isupper](#isupper)\
+[isxdigit](#isxdigit)\
+[tolower](#tolower)\
+[toupper](#toupper)\
+[use_facet](#use_facet)
 
-## <a name="has_facet"></a>  has_facet
+## <a name="has_facet"></a> has_facet
 
 Tests if a particular facet is stored in a specified locale.
 
@@ -26,12 +35,12 @@ bool has_facet(const locale& Loc);
 
 ### Parameters
 
-*Loc*<br/>
+*Loc*\
 The locale to be tested for the presence of a facet.
 
 ### Return Value
 
-**true** if the locale has the facet tested for; **false** if it does not.
+**`true`** if the locale has the facet tested for; **`false`** if it does not.
 
 ### Remarks
 
@@ -58,7 +67,7 @@ int main( )
 1
 ```
 
-## <a name="isalnum"></a>  isalnum
+## <a name="isalnum"></a> isalnum
 
 Tests whether an element in a locale is an alphabetic or a numeric character.
 
@@ -69,15 +78,15 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### Parameters
 
-*Ch*<br/>
+*Ch*\
 The alphanumeric element to be tested.
 
-*Loc*<br/>
+*Loc*\
 The locale containing the alphanumeric element to be tested.
 
 ### Return Value
 
-**true** if the element tested is alphanumeric; **false** if it is not.
+**`true`** if the element tested is alphanumeric; **`false`** if it is not.
 
 ### Example
 
@@ -125,7 +134,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.
 ```
 
-## <a name="isalpha"></a>  isalpha
+## <a name="isalpha"></a> isalpha
 
 Tests whether an element in a locale is an alphabetic character.
 
@@ -136,15 +145,15 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### Parameters
 
-*Ch*<br/>
+*Ch*\
 The element to be tested.
 
-*Loc*<br/>
+*Loc*\
 The locale containing the alphabetic element to be tested.
 
 ### Return Value
 
-**true** if the element tested is alphabetic; **false** if it is not.
+**`true`** if the element tested is alphabetic; **`false`** if it is not.
 
 ### Remarks
 
@@ -190,7 +199,7 @@ int main( )
 }
 ```
 
-## <a name="iscntrl"></a>  iscntrl
+## <a name="iscntrl"></a> iscntrl
 
 Tests whether an element in a locale is a control character.
 
@@ -201,15 +210,15 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### Parameters
 
-*Ch*<br/>
+*Ch*\
 The element to be tested.
 
-*Loc*<br/>
+*Loc*\
 The locale containing the element to be tested.
 
 ### Return Value
 
-**true** if the element tested is a control character; **false** if it is not.
+**`true`** if the element tested is a control character; **`false`** if it is not.
 
 ### Remarks
 
@@ -255,7 +264,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a>  isdigit
+## <a name="isdigit"></a> isdigit
 
 Tests whether an element in a locale is a numeric character.
 
@@ -266,15 +275,15 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### Parameters
 
-*Ch*<br/>
+*Ch*\
 The element to be tested.
 
-*Loc*<br/>
+*Loc*\
 The locale containing the element to be tested.
 
 ### Return Value
 
-**true** if the element tested is a numeric character; **false** if it is not.
+**`true`** if the element tested is a numeric character; **`false`** if it is not.
 
 ### Remarks
 
@@ -320,7 +329,7 @@ int main( )
 }
 ```
 
-## <a name="isgraph"></a>  isgraph
+## <a name="isgraph"></a> isgraph
 
 Tests whether an element in a locale is an alphanumeric or punctuation character.
 
@@ -331,15 +340,15 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### Parameters
 
-*Ch*<br/>
+*Ch*\
 The element to be tested.
 
-*Loc*<br/>
+*Loc*\
 The locale containing the element to be tested.
 
 ### Return Value
 
-**true** if the element tested is an alphanumeric or a punctuation character; **false** if it is not.
+**`true`** if the element tested is an alphanumeric or a punctuation character; **`false`** if it is not.
 
 ### Remarks
 
@@ -385,7 +394,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a>  islower
+## <a name="islower"></a> islower
 
 Tests whether an element in a locale is lower case.
 
@@ -396,15 +405,15 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### Parameters
 
-*Ch*<br/>
+*Ch*\
 The element to be tested.
 
-*Loc*<br/>
+*Loc*\
 The locale containing the element to be tested.
 
 ### Return Value
 
-**true** if the element tested is a lowercase character; **false** if it is not.
+**`true`** if the element tested is a lowercase character; **`false`** if it is not.
 
 ### Remarks
 
@@ -450,7 +459,7 @@ int main( )
 }
 ```
 
-## <a name="isprint"></a>  isprint
+## <a name="isprint"></a> isprint
 
 Tests whether an element in a locale is a printable character.
 
@@ -461,15 +470,15 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### Parameters
 
-*Ch*<br/>
+*Ch*\
 The element to be tested.
 
-*Loc*<br/>
+*Loc*\
 The locale containing the element to be tested.
 
 ### Return Value
 
-**true** if the element tested is a printable; **false** if it is not.
+**`true`** if the element tested is a printable; **`false`** if it is not.
 
 ### Remarks
 
@@ -514,7 +523,7 @@ int main( )
 }
 ```
 
-## <a name="ispunct"></a>  ispunct
+## <a name="ispunct"></a> ispunct
 
 Tests whether an element in a locale is a punctuation character.
 
@@ -525,15 +534,15 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### Parameters
 
-*Ch*<br/>
+*Ch*\
 The element to be tested.
 
-*Loc*<br/>
+*Loc*\
 The locale containing the element to be tested.
 
 ### Return Value
 
-**true** if the element tested is a punctuation character; **false** if it is not.
+**`true`** if the element tested is a punctuation character; **`false`** if it is not.
 
 ### Remarks
 
@@ -579,7 +588,7 @@ int main( )
 }
 ```
 
-## <a name="isspace"></a>  isspace
+## <a name="isspace"></a> isspace
 
 Tests whether an element in a locale is a whitespace character.
 
@@ -590,15 +599,15 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### Parameters
 
-*Ch*<br/>
+*Ch*\
 The element to be tested.
 
-*Loc*<br/>
+*Loc*\
 The locale containing the element to be tested.
 
 ### Return Value
 
-**true** if the element tested is a whitespace character; **false** if it is not.
+**`true`** if the element tested is a whitespace character; **`false`** if it is not.
 
 ### Remarks
 
@@ -644,7 +653,7 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a>  isupper
+## <a name="isupper"></a> isupper
 
 Tests whether an element in a locale is in upper case.
 
@@ -655,15 +664,15 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### Parameters
 
-*Ch*<br/>
+*Ch*\
 The element to be tested.
 
-*Loc*<br/>
+*Loc*\
 The locale containing the element to be tested.
 
 ### Return Value
 
-**true** if the element tested is an uppercase character; **false** if it is not.
+**`true`** if the element tested is an uppercase character; **`false`** if it is not.
 
 ### Remarks
 
@@ -709,7 +718,7 @@ int main( )
 }
 ```
 
-## <a name="isxdigit"></a>  isxdigit
+## <a name="isxdigit"></a> isxdigit
 
 Tests whether an element in a locale is a character used to represent a hexadecimal number.
 
@@ -720,15 +729,15 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### Parameters
 
-*Ch*<br/>
+*Ch*\
 The element to be tested.
 
-*Loc*<br/>
+*Loc*\
 The locale containing the element to be tested.
 
 ### Return Value
 
-**true** if the element tested is a character used to represent a hexadecimal number; **false** if it is not.
+**`true`** if the element tested is a character used to represent a hexadecimal number; **`false`** if it is not.
 
 ### Remarks
 
@@ -776,7 +785,7 @@ int main( )
 }
 ```
 
-## <a name="tolower"></a>  tolower
+## <a name="tolower"></a> tolower
 
 Converts a character to lower case.
 
@@ -787,10 +796,10 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### Parameters
 
-*Ch*<br/>
+*Ch*\
 The character to be converted to lower case.
 
-*Loc*<br/>
+*Loc*\
 The locale containing the character to be converted.
 
 ### Return Value
@@ -825,7 +834,7 @@ int main( )
 }
 ```
 
-## <a name="toupper"></a>  toupper
+## <a name="toupper"></a> toupper
 
 Converts a character to upper case.
 
@@ -836,10 +845,10 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### Parameters
 
-*Ch*<br/>
+*Ch*\
 The character to be converted to upper case.
 
-*Loc*<br/>
+*Loc*\
 The locale containing the character to be converted.
 
 ### Return Value
@@ -874,7 +883,7 @@ int main( )
 }
 ```
 
-## <a name="use_facet"></a>  use_facet
+## <a name="use_facet"></a> use_facet
 
 Returns a reference to a facet of a specified type stored in a locale.
 
@@ -885,7 +894,7 @@ const Facet& use_facet(const locale& Loc);
 
 ### Parameters
 
-*Loc*<br/>
+*Loc*\
 The const locale containing the type of facet being referenced.
 
 ### Return Value
@@ -937,4 +946,4 @@ The character '!' in locale loc2 is not alphabetic.
 
 ## See also
 
-[\<locale>](../standard-library/locale.md)<br/>
+[\<locale>](../standard-library/locale.md)

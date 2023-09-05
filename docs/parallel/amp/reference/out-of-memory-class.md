@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: out_of_memory Class"
 title: "out_of_memory Class"
 ms.date: "11/04/2016"
 f1_keywords: ["out_of_memory", "AMPRT/out_of_memory", "AMPRT/Concurrency::out_of_memory::out_of_memory"]
@@ -11,7 +12,7 @@ The exception that is thrown when a method fails because of a lack of system or 
 
 ## Syntax
 
-```
+```cpp
 class out_of_memory : public runtime_exception;
 ```
 
@@ -36,13 +37,14 @@ class out_of_memory : public runtime_exception;
 **Header:** amprt.h
 
 **Namespace:** Concurrency
+
 ## <a name="ctor"></a> out_of_memory
 
 Initializes a new instance of the class.
 
 ### Syntax
 
-```
+```cpp
 explicit out_of_memory(
     const char * _Message ) throw();
 
@@ -58,6 +60,6 @@ A description of the error.
 
 A new instance of the `out_of_memory` class.
 
-## See Also
+## See also
 
 [Concurrency Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)

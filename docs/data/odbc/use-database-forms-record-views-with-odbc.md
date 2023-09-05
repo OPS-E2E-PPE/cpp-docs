@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Use Database Forms (Record Views) with ODBC"
 title: "Use Database Forms (Record Views) with ODBC"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ODBC, record views", "record views, ODBC"]
@@ -22,6 +23,6 @@ Some applications, such as data entry or data viewing, require a form, a view wi
 
 - [Using a record view](../../data/using-a-record-view-mfc-data-access.md)
 
-## See Also
+## See also
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4310"
 title: "Compiler Warning (level 3) C4310"
 ms.date: "11/04/2016"
 f1_keywords: ["C4310"]
@@ -11,7 +12,7 @@ cast truncates constant value
 
 A constant value is cast to a smaller type. The compiler performs the cast, which truncates data. The following sample generates C4310:
 
-```
+```cpp
 // C4310.cpp
 // compile with: /W4
 int main() {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3001"
 title: "Compiler Error C3001"
 ms.date: "11/04/2016"
 f1_keywords: ["C3001"]
@@ -13,7 +14,7 @@ The `omp` pragma must be followed by a directive.
 
 The following sample generates C3001:
 
-```
+```c
 // C3001.c
 // compile with: /openmp
 int main()

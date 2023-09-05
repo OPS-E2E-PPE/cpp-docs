@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4544"
 title: "Compiler Warning (level 1) C4544"
 ms.date: "11/04/2016"
 f1_keywords: ["C4544"]
@@ -13,7 +14,7 @@ A default template argument was specified in an incorrect location and was ignor
 
 This sample generates C4545, and the next sample shows how to fix it:
 
-```
+```cpp
 // C4544.cpp
 // compile with: /W1 /LD
 template <class T>
@@ -31,7 +32,7 @@ struct S<T>::S1 {};   // C4544
 
 In this example, the default parameter applies to class template `S`:
 
-```
+```cpp
 // C4544b.cpp
 // compile with: /LD
 template <class T = int>

@@ -1,18 +1,18 @@
 ---
+description: "Learn more about: TN048: Writing ODBC Setup and Administration Programs for MFC Database Applications"
 title: "TN048: Writing ODBC Setup and Administration Programs for MFC Database Applications"
 ms.date: "11/04/2016"
-f1_keywords: ["vc.mfc.odbc"]
 helpviewer_keywords: ["installing ODBC", "ODBC, installing", "setup, ODBC setup programs", "TN048", "ODBC, and MFC", "MFC, database applications"]
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
 ---
 # TN048: Writing ODBC Setup and Administration Programs for MFC Database Applications
 
 > [!NOTE]
->  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.
+> The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.
 
 Applications using MFC database classes will need a setup program that installs ODBC components. They may also need an ODBC Administration program that will retrieve information about the available drivers, to specify default drivers and to configure data sources. This note describes the use of the ODBC Installer API to write these programs.
 
-##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> Writing an ODBC Setup Program
+## <a name="_mfcnotes_writing_an_odbc_setup_program"></a> Writing an ODBC Setup Program
 
 An MFC database application requires the ODBC Driver Manager (ODBC.DLL) and ODBC drivers to be able to get to data sources. Many ODBC drivers also require additional network and communication DLLs. Most ODBC drivers ship with a setup program that will install the required ODBC components. Application developers using MFC database classes can:
 
@@ -26,7 +26,7 @@ A program can also install individual ODBC components. To install the Driver Man
 
 For more information on ODBC.INF, ODBCINST.INI and using the installer API, see ODBC SDK *Programmer's Reference,* Chapter 19, Installing ODBC Software.
 
-##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> Writing an ODBC Administrator
+## <a name="_mfcnotes_writing_an_odbc_administrator"></a> Writing an ODBC Administrator
 
 An MFC database application can set up and configure ODBC data sources in one of two ways, as follows:
 
@@ -40,8 +40,7 @@ To display a dialog box with which a user can add, modify, and delete data sourc
 
 For more information, see ODBC SDK *Programmer's Reference,* Chapter 23, Setup DLL Function Reference, and Chapter 24, Installer DLL Function Reference.
 
-## See Also
+## See also
 
 [Technical Notes by Number](../mfc/technical-notes-by-number.md)<br/>
 [Technical Notes by Category](../mfc/technical-notes-by-category.md)
-

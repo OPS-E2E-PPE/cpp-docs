@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Initializing Strings"
 title: "Initializing Strings"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["character arrays, initializing", "strings [C++], initializing", "initializing arrays, strings"]
@@ -43,6 +44,6 @@ In Microsoft C, string literals can be up to 2048 bytes in length.
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
 [Initialization](../c-language/initialization.md)

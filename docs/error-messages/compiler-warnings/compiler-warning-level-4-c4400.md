@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4400"
 title: "Compiler Warning (level 4) C4400"
 ms.date: "11/04/2016"
 f1_keywords: ["C4400"]
@@ -15,7 +16,7 @@ The [const](../../cpp/const-cpp.md)and [volatile](../../cpp/volatile-cpp.md)qual
 
 The following sample generates C4400.
 
-```
+```cpp
 // C4400.cpp
 // compile with: /clr /W4
 // C4401 expected

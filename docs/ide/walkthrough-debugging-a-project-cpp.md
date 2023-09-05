@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Walkthrough: Debugging a Project (C++)"
 title: "Walkthrough: Debugging a Project (C++)"
-ms.date: "09/14/2018"
+ms.date: "04/25/2019"
 helpviewer_keywords: ["projects [C++], debugging", "project debugging [C++]", "debugging projects"]
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
 ---
@@ -38,16 +39,16 @@ In this walkthrough, you modify the program to fix the problem that you found wh
 
 1. To step through the program, on the menu bar, choose **Debug** > **Step Over**, or choose the **F10** key.
 
-   Notice that after each `Cardgame` constructor executes, the value of `totalParticipants` increases. When the `PlayGames` function returns, as each `Cardgame` instance goes out of scope and is deleted (and the destructor is called), `totalParticipants` decreases. Just before the `return` statement is executed, `totalParticipants` equals 0.
+   Notice that after each `Cardgame` constructor executes, the value of `totalParticipants` increases. When the `PlayGames` function returns, as each `Cardgame` instance goes out of scope and is deleted (and the destructor is called), `totalParticipants` decreases. Just before the **`return`** statement is executed, `totalParticipants` equals 0.
 
 1. Continue stepping through the program until it exits, or let it run by choosing **Debug** > **Run** on the menu bar, or by choosing the **F5** key.
 
 ## Next Steps
 
 **Previous:** [Walkthrough: Testing a Project (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**Next:** [Walkthrough: Deploying Your Program (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+**Next:** [Walkthrough: Deploying Your Program (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
 
-## See Also
+## See also
 
 [C++ Language Reference](../cpp/cpp-language-reference.md)<br/>
-[Building C/C++ Programs](../build/building-c-cpp-programs.md)<br/>
+[Projects and build systems](../build/projects-and-build-systems-cpp.md)<br/>

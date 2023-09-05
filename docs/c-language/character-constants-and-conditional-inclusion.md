@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Character Constants and Conditional Inclusion"
 title: "Character Constants and Conditional Inclusion"
 ms.date: "11/04/2016"
 ms.assetid: 1692207b-0707-4908-9e05-f8ed7ae0dd76
@@ -9,6 +10,6 @@ ms.assetid: 1692207b-0707-4908-9e05-f8ed7ae0dd76
 
 The character set used in preprocessor statements is the same as the execution character set. The preprocessor recognizes negative character values.
 
-## See Also
+## See also
 
 [Preprocessing Directives](../c-language/preprocessing-directives.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2006"
 title: "Compiler Error C2006"
 ms.date: "11/04/2016"
 f1_keywords: ["C2006"]
@@ -13,14 +14,14 @@ Directives such as [#include](../../preprocessor/hash-include-directive-c-cpp.md
 
 The following sample generates C2006:
 
-```
+```cpp
 // C2006.cpp
 #include stdio.h   // C2006
 ```
 
 Possible resolution:
 
-```
+```cpp
 // C2006b.cpp
 // compile with: /c
 #include <stdio.h>

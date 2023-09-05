@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: strstream Class"
 title: "strstream Class"
 ms.date: "11/04/2016"
 f1_keywords: ["strstream/std::strstream::freeze", "strstream/std::strstream::pcount", "strstream/std::strstream::rdbuf", "strstream/std::strstream::str"]
@@ -43,7 +44,7 @@ The object stores an object of class `strstreambuf`.
 
 **Namespace:** std
 
-## <a name="freeze"></a>  strstream::freeze
+## <a name="freeze"></a> strstream::freeze
 
 Causes a stream buffer to be unavailable through stream buffer operations.
 
@@ -53,8 +54,8 @@ void freeze(bool _Freezeit = true);
 
 ### Parameters
 
-*_Freezeit*<br/>
-A **bool** indicating whether you want the stream to be frozen.
+*_Freezeit*\
+A **`bool`** indicating whether you want the stream to be frozen.
 
 ### Remarks
 
@@ -64,7 +65,7 @@ The member function calls [rdbuf](#rdbuf) -> [freeze](../standard-library/strstr
 
 See [strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze) for an example that uses `freeze`.
 
-## <a name="pcount"></a>  strstream::pcount
+## <a name="pcount"></a> strstream::pcount
 
 Returns a count of the number of elements written to the controlled sequence.
 
@@ -84,7 +85,7 @@ The member function returns [rdbuf](#rdbuf) -> [pcount](../standard-library/strs
 
 See [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) for a sample of using pcount.
 
-## <a name="rdbuf"></a>  strstream::rdbuf
+## <a name="rdbuf"></a> strstream::rdbuf
 
 Returns a pointer to the stream's associated strstreambuf object.
 
@@ -104,7 +105,7 @@ The member function returns the address of the stored stream buffer of type `poi
 
 See [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) for a sample that uses `rdbuf`.
 
-## <a name="str"></a>  strstream::str
+## <a name="str"></a> strstream::str
 
 Calls [freeze](../standard-library/strstreambuf-class.md#freeze), and then returns a pointer to the beginning of the controlled sequence.
 
@@ -124,7 +125,7 @@ The member function returns [rdbuf](#rdbuf) -> [str](../standard-library/strstre
 
 See [strstreambuf::str](../standard-library/strstreambuf-class.md#str) for a sample that uses `str`.
 
-## <a name="strstream"></a>  strstream::strstream
+## <a name="strstream"></a> strstream::strstream
 
 Constructs an object of type `strstream`.
 
@@ -138,13 +139,13 @@ strstream(char* ptr,
 
 ### Parameters
 
-*count*<br/>
+*count*\
 The size of the buffer.
 
-*_Mode*<br/>
+*_Mode*\
 The input and output mode of the buffer. See [ios_base::openmode](../standard-library/ios-base-class.md#openmode) for more information.
 
-*ptr*<br/>
+*ptr*\
 The buffer.
 
 ### Remarks
@@ -157,7 +158,7 @@ Both constructors initialize the base class by calling [streambuf](../standard-l
 
 ## See also
 
-[iostream](../standard-library/istream-typedefs.md#iostream)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream Programming](../standard-library/iostream-programming.md)<br/>
-[iostreams Conventions](../standard-library/iostreams-conventions.md)<br/>
+[iostream](../standard-library/istream-typedefs.md#iostream)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream Programming](../standard-library/iostream-programming.md)\
+[iostreams Conventions](../standard-library/iostreams-conventions.md)

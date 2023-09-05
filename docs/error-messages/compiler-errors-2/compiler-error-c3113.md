@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3113"
 title: "Compiler Error C3113"
 ms.date: "11/04/2016"
 f1_keywords: ["C3113"]
@@ -13,7 +14,7 @@ You attempted to make a class template or class generic out of an interface or a
 
 The following sample generates C3113:
 
-```
+```cpp
 // C3113.cpp
 // compile with: /c
 template <class T>

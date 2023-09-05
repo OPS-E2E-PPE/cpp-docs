@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CD2DRectU Class"
 title: "CD2DRectU Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CD2DRectU", "AFXRENDERTARGET/CD2DRectU", "AFXRENDERTARGET/CD2DRectU::CD2DRectU", "AFXRENDERTARGET/CD2DRectU::IsNull"]
@@ -45,14 +46,14 @@ class CD2DRectU : public D2D1_RECT_U;
 
 **Header:** afxrendertarget.h
 
-##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU
+## <a name="cd2drectu"></a> CD2DRectU::CD2DRectU
 
 Constructs a CD2DRectU object from CRect object.
 
 ```
 CD2DRectU(const CRect& rect);
 CD2DRectU(const D2D1_RECT_U& rect);
-  CD2DRectU(const D2D1_RECT_U* rect);
+CD2DRectU(const D2D1_RECT_U* rect);
 
 CD2DRectU(
     UINT32 uLeft = 0,
@@ -78,7 +79,7 @@ source right coordinate
 *uBottom*<br/>
 source bottom coordinate
 
-##  <a name="isnull"></a>  CD2DRectU::IsNull
+## <a name="isnull"></a> CD2DRectU::IsNull
 
 Returns a Boolean value that indicates whether an expression contains no valid data (Null).
 
@@ -90,7 +91,7 @@ BOOL IsNull() const;
 
 TRUE if rectangle's top, left, bottom, and right values are all equal to 0; otherwise FALSE.
 
-##  <a name="operator_crect"></a>  CD2DRectU::operator CRect
+## <a name="operator_crect"></a> CD2DRectU::operator CRect
 
 Converts CD2DRectU to CRect object.
 
@@ -102,6 +103,6 @@ operator CRect();
 
 Current value of D2D rectangle.
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

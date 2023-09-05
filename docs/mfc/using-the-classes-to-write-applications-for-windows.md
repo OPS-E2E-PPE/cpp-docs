@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using the Classes to Write Applications for Windows"
 title: "Using the Classes to Write Applications for Windows"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["Windows applications [MFC], MFC application framework", "MFC, application development", "applications [OLE], MFC application framework", "MFC ActiveX controls [MFC], creating", "OLE applications [MFC], MFC application framework", "database applications [MFC], creating"]
@@ -58,7 +59,6 @@ Other parts of the framework include:
 
 For a general guide to MFC documentation, see [General MFC Topics](../mfc/general-mfc-topics.md).
 
-## See Also
+## See also
 
 [General MFC Topics](../mfc/general-mfc-topics.md)
-

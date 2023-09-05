@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Module States of a Regular MFC DLL Dynamically Linked to MFC"
 title: "Module States of a Regular MFC DLL Dynamically Linked to MFC"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["regular MFC DLLs [C++], dynamically linked to MFC", "module states [C++]", "MFC DLLs [C++], regular MFC DLLs", "module states [C++], regular MFC DLLs dynamically linked to", "DLLs [C++], module states"]
@@ -26,10 +27,10 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 - [Managing the state data of MFC modules](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [Regular MFC DLLs dynamically linked to MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Regular MFC DLLs dynamically linked to MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC extension DLLs](../build/extension-dlls-overview.md)
+- [MFC extension DLLs](extension-dlls-overview.md)
 
-## See Also
+## See also
 
-[DLLs in Visual C++](../build/dlls-in-visual-cpp.md)
+[Create C/C++ DLLs in Visual Studio](dlls-in-visual-cpp.md)

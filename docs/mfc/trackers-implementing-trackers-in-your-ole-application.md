@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Trackers: Implementing Trackers in Your OLE Application"
 title: "Trackers: Implementing Trackers in Your OLE Application"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["trackers [MFC]", "OLE applications [MFC], trackers", "applications [OLE], trackers", "tracking OLE items [MFC]", "OLE containers [MFC], trackers", "CRectTracker class [MFC], implementing trackers"]
@@ -12,9 +13,8 @@ Trackers provide a graphical interface to enable users to interact with OLE clie
 
 - [Rubber-Banding and Trackers](../mfc/rubber-banding-and-trackers.md).
 
-The article also covers the use of styles with trackers. In addition, it makes several references to the MFC OLE sample [OCLIENT](../visual-cpp-samples.md).
+The article also covers the use of styles with trackers. In addition, it makes several references to the MFC OLE sample [OCLIENT](../overview/visual-cpp-samples.md).
 
-## See Also
+## See also
 
 [Trackers](../mfc/trackers.md)
-

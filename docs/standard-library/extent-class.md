@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: extent Class"
 title: "extent Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::extent"]
@@ -18,10 +19,10 @@ struct extent;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
-*I*<br/>
+*I*\
 The array bound to query.
 
 ## Remarks
@@ -60,6 +61,6 @@ extent 1 == 10
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_all_extents Class](../standard-library/remove-all-extents-class.md)<br/>
-[remove_extent Class](../standard-library/remove-extent-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_all_extents Class](../standard-library/remove-all-extents-class.md)\
+[remove_extent Class](../standard-library/remove-extent-class.md)

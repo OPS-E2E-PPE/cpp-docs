@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_base_of Class"
 title: "is_base_of Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_base_of"]
@@ -18,10 +19,10 @@ struct is_base_of;
 
 ### Parameters
 
-*Base*<br/>
+*Base*\
 The base class to test for.
 
-*Derived*<br/>
+*Derived*\
 The derived type to test for.
 
 ## Remarks
@@ -71,5 +72,5 @@ is_base_of<derived, base> == false
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_convertible Class](../standard-library/is-convertible-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_convertible Class](../standard-library/is-convertible-class.md)

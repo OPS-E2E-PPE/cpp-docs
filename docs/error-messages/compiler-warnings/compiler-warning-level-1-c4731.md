@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (Level 1) C4731"
 title: "Compiler Warning (Level 1) C4731"
 ms.date: "11/04/2016"
 f1_keywords: ["C4731"]
@@ -13,7 +14,7 @@ A frame pointer register was modified. You must save and restore the register in
 
 The following sample generates C4731:
 
-```
+```cpp
 // C4731.cpp
 // compile with: /W1 /LD
 // processor: x86

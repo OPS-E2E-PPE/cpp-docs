@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2258"
 title: "Compiler Error C2258"
 ms.date: "11/04/2016"
 f1_keywords: ["C2258"]
@@ -13,7 +14,7 @@ A pure virtual function is declared with incorrect syntax.
 
 The following sample generates C2258:
 
-```
+```cpp
 // C2258.cpp
 // compile with: /c
 class A {

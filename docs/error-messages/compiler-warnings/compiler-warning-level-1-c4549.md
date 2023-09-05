@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4549"
 title: "Compiler Warning (level 1) C4549"
 ms.date: "11/04/2016"
 f1_keywords: ["C4549"]
@@ -15,7 +16,7 @@ This warning is off by default. For more information, see [Compiler Warnings Tha
 
 The following sample generates C4549:
 
-```
+```cpp
 // C4549.cpp
 // compile with: /W1
 #pragma warning (default : 4549)

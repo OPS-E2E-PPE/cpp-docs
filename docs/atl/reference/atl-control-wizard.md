@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ATL Control Wizard"
 title: "ATL Control Wizard"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.codewiz.class.atl.control.overview"]
@@ -26,7 +27,7 @@ The registration script produced by this wizard will register its COM components
 Specify the names for the object, interface, and classes to be added to your project. Except for **Short name**, all other boxes can be changed independently. If you change the text for **Short name**, the change is reflected in the names of all other boxes in this page. If you change the **Coclass** name in the COM section, the change is reflected in the **Type** box, but the **Interface** name and **ProgID** do not change. This naming behavior is designed to make all the names easily identifiable for you as you develop your control.
 
 > [!NOTE]
->  **Coclass** is editable on only nonattributed controls. If your project attributed, you cannot edit **Coclass**.
+> **Coclass** is editable on only nonattributed controls. If your project attributed, you cannot edit **Coclass**.
 
 ### C++
 
@@ -60,7 +61,7 @@ Provides information for the C++ class created to implement the object.
 
    By default, any objects you add after you set this option are designated as attributed (the check box is selected). You can clear this box to add an object that does not use attributes.
 
-   See [Application Settings, ATL Project Wizard](../../atl/reference/application-settings-atl-project-wizard.md) and [Basic Mechanics of Attributes](../../windows/basic-mechanics-of-attributes.md) for more information.
+   See [Application Settings, ATL Project Wizard](../../atl/reference/application-settings-atl-project-wizard.md) and [Basic mechanics of attributes](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) for more information.
 
 ### COM
 
@@ -83,11 +84,10 @@ Provides information about the COM functionality for the object.
 
 - **ProgID**
 
-   Sets the name that containers can use instead of the CLSID of the object. This field is not automatically populated. If you do not manually populate this field, the control may not be available to other tools. For example, ActiveX controls that are generated without a `ProgID` are not available in the **Insert ActiveX Control** dialog box. For more information about the dialog box, see [Insert ActiveX Control Dialog Box](../../windows/insert-activex-control-dialog-box.md).
+   Sets the name that containers can use instead of the CLSID of the object. This field is not automatically populated. If you do not manually populate this field, the control may not be available to other tools. For example, ActiveX controls that are generated without a `ProgID` are not available in the **Insert ActiveX Control** dialog box. For more information about the dialog box, see [Insert ActiveX controls](../../windows/adding-editing-or-deleting-controls.md#insert-activex-controls).
 
-## See Also
+## See also
 
 [ATL Control](../../atl/reference/adding-an-atl-control.md)<br/>
 [Adding Functionality to the Composite Control](../../atl/adding-functionality-to-the-composite-control.md)<br/>
 [Fundamentals of ATL COM Objects](../../atl/fundamentals-of-atl-com-objects.md)
-

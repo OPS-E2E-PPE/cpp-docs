@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2627"
 title: "Compiler Error C2627"
 ms.date: "11/04/2016"
 f1_keywords: ["C2627"]
@@ -13,7 +14,7 @@ An [anonymous union](../../cpp/unions.md#anonymous_unions) cannot have member fu
 
 The following sample generates C2627:
 
-```
+```cpp
 // C2627.cpp
 int main() {
    union { void f(){} };   // C2627

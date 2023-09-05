@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2373"
 title: "Compiler Error C2373"
 ms.date: "11/04/2016"
 f1_keywords: ["C2373"]
@@ -21,7 +22,7 @@ const int i = 20;
 
 And then:
 
-```
+```cpp
 // C2373.cpp
 // compile with: /c
 #include "C2373.h"

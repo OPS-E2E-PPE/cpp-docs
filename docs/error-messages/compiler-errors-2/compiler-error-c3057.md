@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3057"
 title: "Compiler Error C3057"
 ms.date: "11/04/2016"
 f1_keywords: ["C3057"]
@@ -9,11 +10,11 @@ ms.assetid: b0b2ba88-9c74-4bec-bf60-8fc72eade34c
 
 'symbol' : dynamic initialization of 'threadprivate' symbols is not currently supported
 
-The initialized value of a symbol used in a [threadprivate](../../parallel/openmp/reference/threadprivate.md) clause must be known at compile time.
+The initialized value of a symbol used in a [threadprivate](../../parallel/openmp/reference/openmp-directives.md#threadprivate) clause must be known at compile time.
 
 The following sample generates C3057:
 
-```
+```cpp
 // C3057.cpp
 // compile with: /openmp /c
 extern int f();
@@ -39,7 +40,7 @@ int main() {
 
 The following sample generates C3057:
 
-```
+```cpp
 // C3057b.cpp
 // compile with: /openmp /c
 extern int Initialize();

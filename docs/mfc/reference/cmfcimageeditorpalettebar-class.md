@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCImageEditorPaletteBar Class"
 title: "CMFCImageEditorPaletteBar Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCImageEditorPaletteBar", "AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar", "AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar::GetRowHeight", "AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable"]
@@ -19,9 +20,8 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 
 ### Public Methods
 
-|||
-|-|-|
 |Name|Description|
+|-|-|
 |[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Returns the height of toolbar buttons. (Overrides [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|
 |[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determines whether the toolbar can display buttons that have extended borders. (Overrides [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|
 
@@ -53,7 +53,7 @@ The framework uses this class to display a palette bar in an image editor dialog
 
 **Header:** afximageeditordialog.h
 
-##  <a name="getrowheight"></a>  CMFCImageEditorPaletteBar::GetRowHeight
+## <a name="getrowheight"></a> CMFCImageEditorPaletteBar::GetRowHeight
 
 Returns the height of toolbar buttons.
 
@@ -65,7 +65,7 @@ virtual int GetRowHeight() const;
 
 The height of each button on the toolbar.
 
-##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable
+## <a name="isbuttonextrasizeavailable"></a> CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable
 
 Determines whether the toolbar can display buttons that have extended borders.
 
@@ -77,7 +77,7 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 
 This method returns FALSE.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

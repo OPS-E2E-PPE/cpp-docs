@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3222"
 title: "Compiler Error C3222"
 ms.date: "11/04/2016"
 f1_keywords: ["C3222"]
@@ -13,7 +14,7 @@ It is not permitted to declare a method parameter with a default argument. An ov
 
 The following sample generates C3222:
 
-```
+```cpp
 // C3222_2.cpp
 // compile with: /clr
 public ref class G {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2467"
 title: "Compiler Error C2467"
 ms.date: "11/04/2016"
 f1_keywords: ["C2467"]
@@ -13,7 +14,7 @@ A nested user-defined type was declared. This is an error when compiling C sourc
 
 The following sample generates C2467:
 
-```
+```c
 //C2467.c
 // compile with: /Za
 int main() {

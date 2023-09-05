@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3153"
 title: "Compiler Error C3153"
 ms.date: "11/04/2016"
 f1_keywords: ["C3153"]
@@ -13,7 +14,7 @@ An interface cannot be instantiated. To use the members of an interface, derive 
 
 The following sample generates C3153:
 
-```
+```cpp
 // C3153.cpp
 // compile with: /clr
 interface class A {

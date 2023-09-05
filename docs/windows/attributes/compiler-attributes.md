@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Attributes"
 title: "Compiler Attributes (C++ COM)"
 ms.date: "10/02/2018"
 helpviewer_keywords: ["cl.exe compiler, attributes", "attributes [C++/CLI], compiler"]
@@ -23,6 +24,6 @@ Compiler attributes provide a variety of functionality.
 |[satype](satype.md)|Specifies the data type of the `SAFEARRAY`.|
 |[version](version-cpp.md)|Identifies a particular version among multiple versions of an interface or class.|
 
-## See Also
+## See also
 
 [Attributes by Group](attributes-by-group.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4521"
 title: "Compiler Warning (level 3) C4521"
 ms.date: "11/04/2016"
 f1_keywords: ["C4521"]
@@ -17,7 +18,7 @@ Use the [warning](../../preprocessor/warning.md) pragma to suppress this warning
 
 The following sample generates C4521.
 
-```
+```cpp
 // C4521.cpp
 // compile with: /EHsc /W3
 #include <iostream>

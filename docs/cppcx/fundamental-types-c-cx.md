@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Fundamental types (C++/CX)"
 title: "Fundamental types (C++/CX)"
 ms.date: "01/22/2017"
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
@@ -13,7 +14,7 @@ The following table lists the built-in Boolean and character types, and their st
 
 |Namespace|C++/CX name|Definition|Standard C++ name|Range of Values|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|Platform|Boolean|An 8-bit Boolean value.|bool|**true** (nonzero) and **false** (zero)|
+|Platform|Boolean|An 8-bit Boolean value.|bool|**`true`** (nonzero) and **`false`** (zero)|
 |default|char16|A 16-bit non-numeric value that represents a Unicode (UTF-16) code point.|wchar_t<br /><br /> -or-<br /><br /> L'c'|(Specified by the Unicode standard)|
 
 ## Numeric types
@@ -48,6 +49,6 @@ The following table lists some additional types that are defined by the Windows 
 |UIntPtr|(For internal use only.) An unsigned 64-bit value that is used as a pointer.|
 |IntPtr|(For internal use only.)  A signed 64-bit value that is used as a pointer.|
 
-## See Also
+## See also
 
 [Type System](../cppcx/type-system-c-cx.md)

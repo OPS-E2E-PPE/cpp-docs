@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: /Zg (Generate Function Prototypes)"
 title: "/Zg (Generate Function Prototypes)"
 ms.date: "11/04/2016"
 f1_keywords: ["/zg"]
@@ -17,7 +18,7 @@ Removed. Creates a function prototype for each function defined in the source fi
 
 ## Remarks
 
-This compiler option is no longer available. It was removed in Visual C++ 2015. This page remains for users of older versions of Visual C++.
+This compiler option is no longer available. It was removed in Visual Studio 2015. This page remains for users of older versions of Visual Studio.
 
 The function prototype includes the function return type and an argument type list. The argument type list is created from the types of the formal parameters of the function. Any function prototypes already present in the source file are ignored.
 
@@ -32,23 +33,21 @@ typedef struct MyStruct { int i; } T2;
 void f2(T2 * t) {}
 ```
 
-The **/Zg** option was deprecated in Visual Studio 2005 and has been removed in Visual Studio 2015. The Visual C++ compiler has removed support for older, C-style code. For a list of deprecated compiler options, see **Deprecated and Removed Compiler Options** in [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).
+The **/Zg** option was deprecated in Visual Studio 2005 and has been removed in Visual Studio 2015. The MSVC compiler has removed support for older, C-style code. For a list of deprecated compiler options, see **Deprecated and Removed Compiler Options** in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
 ### To set this compiler option in the Visual Studio development environment
 
-1. Open the project's **Property Pages** dialog box. For details, see [Working with Project Properties](../../ide/working-with-project-properties.md).
+1. Open the project's **Property Pages** dialog box. For details, see [Set C++ compiler and build properties in Visual Studio](../working-with-project-properties.md).
 
-1. Click the **C/C++** folder.
+1. Select the **Configuration Properties** > **C/C++** > **Command Line** property page.
 
-1. Click the **Command Line** property page.
-
-1. Type the compiler option in the **Additional Options** box.
+1. Enter the compiler option in the **Additional Options** box.
 
 ### To set this compiler option programmatically
 
 - See <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## See Also
+## See also
 
-[Compiler Options](../../build/reference/compiler-options.md)<br/>
-[Setting Compiler Options](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[MSVC Compiler Command-Line Syntax](compiler-command-line-syntax.md)

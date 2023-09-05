@@ -1,8 +1,8 @@
 ---
+description: "Learn more about: Connection Points Classes"
 title: "Connection Points Classes (ATL)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
-f1_keywords: ["vc.atl.connection"]
 helpviewer_keywords: ["classes [C++], connection points", "connection points classes"]
 ms.assetid: 076365fa-299a-4dce-84c3-a5dff0e0da1f
 ---
@@ -14,7 +14,7 @@ The following classes provide support for connection points:
 
 - [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) Implements a connection point.
 
-- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) Implements a connection point representing the [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interface.
+- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) Implements a connection point representing the [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) interface.
 
 - [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) Manages unlimited connections between a connection point and its sinks.
 
@@ -32,9 +32,8 @@ The following classes provide support for connection points:
 
 [Event Handling and ATL](../atl/event-handling-and-atl.md)
 
-## See Also
+## See also
 
 [Class Overview](../atl/atl-class-overview.md)<br/>
 [Connection Point Macros](../atl/reference/connection-point-macros.md)<br/>
 [Connection Point Global Functions](../atl/reference/connection-point-global-functions.md)
-

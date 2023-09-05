@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Hosting a Windows Form User Control in an MFC Dialog Box"
 title: "Hosting a Windows Form User Control in an MFC Dialog Box"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["MFC [C++], Windows Forms support", "hosting Windows Forms control [C++]", "Windows Forms [C++], MFC support"]
@@ -8,10 +9,8 @@ ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
 
 MFC hosts a Windows Forms control as a special kind of ActiveX control and communicates with the control by using ActiveX interfaces, and properties and methods of the <xref:System.Windows.Forms.Control> class. We recommend that you use .NET Framework properties and methods to operate on the control.
 
-For a sample application that shows Windows Forms used with MFC, see [MFC and Windows Forms Integration](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
-
 > [!NOTE]
->  In the current release, a `CDialogBar` object cannot host Windows Forms controls.
+> In the current release, a `CDialogBar` object cannot host Windows Forms controls.
 
 ## In This Section
 
@@ -23,9 +22,12 @@ For a sample application that shows Windows Forms used with MFC, see [MFC and Wi
 
 ## Reference
 
-[CWinFormsControl Class](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog Class](../mfc/reference/cdialog-class.md) &#124; [CWnd Class](../mfc/reference/cwnd-class.md) &#124; <xref:System.Windows.Forms.Control>
+[`CWinFormsControl` Class](../mfc/reference/cwinformscontrol-class.md)\
+[`CDialog` Class](../mfc/reference/cdialog-class.md)\
+[`CWnd` Class](../mfc/reference/cwnd-class.md)\
+<xref:System.Windows.Forms.Control>
 
-## See Also
+## See also
 
 [Using a Windows Form User Control in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
 [Windows Forms/MFC Programming Differences](../dotnet/windows-forms-mfc-programming-differences.md)<br/>

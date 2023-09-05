@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Aggregation"
 title: "Aggregation"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["aggregation [C++]", "aggregate objects [C++]"]
@@ -12,8 +13,7 @@ Aggregation means that the containing (outer) object creates the contained (inne
 
 Primarily, all `IUnknown` method calls on the contained object must delegate to the containing object.
 
-## See Also
+## See also
 
 [Introduction to COM](../atl/introduction-to-com.md)<br/>
-[Reusing Objects](/windows/desktop/com/reusing-objects)
-
+[Reusing Objects](/windows/win32/com/reusing-objects)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_array Class"
 title: "is_array Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_array"]
@@ -18,7 +19,7 @@ struct is_array;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
 ## Remarks
@@ -65,6 +66,6 @@ is_array<int[5]> == true
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[extent Class](../standard-library/extent-class.md)<br/>
-[rank Class](../standard-library/rank-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[extent Class](../standard-library/extent-class.md)\
+[rank Class](../standard-library/rank-class.md)

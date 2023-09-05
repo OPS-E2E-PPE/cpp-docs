@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ctype_base Class"
 title: "ctype_base Class"
 ms.date: "11/04/2016"
 f1_keywords: ["locale/std::ctype_base"]
@@ -7,7 +8,7 @@ ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
 ---
 # ctype_base Class
 
-The class serves as a base class for facets of template class [ctype](../standard-library/ctype-class.md). A base class for the ctype class that is used to define enumeration types used to classify or test characters either individually or within entire ranges.
+The class serves as a base class for facets of class template [ctype](../standard-library/ctype-class.md). A base class for the ctype class that is used to define enumeration types used to classify or test characters either individually or within entire ranges.
 
 ## Syntax
 
@@ -61,7 +62,7 @@ It defines an enumeration mask. Each enumeration constant characterizes a differ
 
 - **graph** (function [isgraph](../standard-library/locale-functions.md#isgraph))
 
-You can characterize a combination of classifications by ORing these constants. In particular, it is always true that **alnum** == ( **alpha** &#124; **digit**\) and **graph** \=\= \( **alnum** &#124; **punct**).
+You can characterize a combination of classifications by a bitwise OR of these constants. In particular, it's always true that **alnum** == ( **alpha** \| **digit** ) and **graph** == ( **alnum** \| **punct** ).
 
 ## Requirements
 
@@ -71,4 +72,4 @@ You can characterize a combination of classifications by ORing these constants. 
 
 ## See also
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: db_table"
 title: "db_table (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.db_table"]
@@ -15,7 +16,7 @@ Opens an OLE DB table.
 [ db_table(db_table, name, source_name, hresult) ]
 ```
 
-#### Parameters
+### Parameters
 
 *db_table*<br/>
 A string specifying the name of a database table (such as "Products").
@@ -52,21 +53,19 @@ class CProducts {
 };
 ```
 
-For an example of this attribute used in an application, see the samples [AtlAgent](https://github.com/Microsoft/VCSamples) and [MultiRead](https://github.com/Microsoft/VCSamples).
+For an example of this attribute used in an application, see [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**class**, **struct**|
+|**Applies to**|**`class`**, **`struct`**|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [OLE DB Consumer Attributes](ole-db-consumer-attributes.md)

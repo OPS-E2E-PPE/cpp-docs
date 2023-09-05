@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Sequence of Operations for Creating Database Applications"
 title: "Sequence of Operations for Creating Database Applications"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["applications [MFC], database", "database applications [MFC]", "database applications [MFC], creating", "MFC, database applications"]
@@ -9,7 +10,7 @@ ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
 The following table shows your role and the framework's role in writing database applications.
 
 > [!NOTE]
->  The Visual C++ environment and wizards do not support DAO (although the DAO classes are included and you can still use them). Microsoft recommends that you use ODBC for new MFC projects. You should only use DAO in maintaining existing applications.
+> The Visual C++ environment and wizards do not support DAO (although the DAO classes are included and you can still use them). Microsoft recommends that you use ODBC for new MFC projects. You should only use DAO in maintaining existing applications.
 
 ### Creating Database Applications
 
@@ -23,7 +24,7 @@ The following table shows your role and the framework's role in writing database
 |...or create an explicit [CDatabase](../mfc/reference/cdatabase-class.md) in your code for each database you want to open.|Base your recordset objects on the database objects.|The database object provides an interface to the data source.|
 |Bind data columns to your recordset dynamically.|In ODBC, add code to your derived recordset class to manage the binding. See the article [Recordset: Dynamically Binding Data Columns (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
 
-## See Also
+## See also
 
 [Building on the Framework](../mfc/building-on-the-framework.md)<br/>
 [Sequence of Operations for Building MFC Applications](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2447"
 title: "Compiler Error C2447"
 ms.date: "11/04/2016"
 f1_keywords: ["C2447"]
@@ -15,7 +16,7 @@ This error can also be caused by an old-style C-language formal argument list. T
 
 The following sample generates C2447:
 
-```
+```cpp
 // C2447.cpp
 int c;
 {}       // C2447

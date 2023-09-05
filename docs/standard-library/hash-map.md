@@ -1,19 +1,20 @@
 ---
-title: "&lt;hash_map&gt;"
+description: "Learn more about: <hash_map>"
+title: "<hash_map>"
 ms.date: "01/18/2018"
-f1_keywords: ["<hash_map>", "std::<hash_map>"]
+f1_keywords: ["<hash_map>"]
 helpviewer_keywords: ["hash_map header"]
 ---
-# &lt;hash_map&gt;
+# `<hash_map>`
 
 > [!NOTE]
 > This header is obsolete. The alternative is [\<unordered_map>](unordered-map.md).
 
-Defines the container template classes hash_map and hash_multimap and their supporting templates.
+Defines the container class templates hash_map and hash_multimap and their supporting templates.
 
 ## Syntax
 
-```
+```cpp
 #include <hash_map>
 ```
 
@@ -47,6 +48,6 @@ Defines the container template classes hash_map and hash_multimap and their supp
 
 ## See also
 
-[Header Files Reference](cpp-standard-library-header-files.md)<br/>
-[Thread Safety in the C++ Standard Library](thread-safety-in-the-cpp-standard-library.md)<br/>
+[Header Files Reference](cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](thread-safety-in-the-cpp-standard-library.md)\
 [C++ Standard Library Reference](cpp-standard-library-reference.md)

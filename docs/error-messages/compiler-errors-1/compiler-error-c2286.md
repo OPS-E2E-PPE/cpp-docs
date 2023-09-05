@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2286"
 title: "Compiler Error C2286"
 ms.date: "11/04/2016"
 f1_keywords: ["C2286"]
@@ -17,7 +18,7 @@ For more information, see [Inheritance Keywords](../../cpp/inheritance-keywords.
 
 The following sample generates C2286:
 
-```
+```cpp
 // C2286.cpp
 // compile with: /c
 class __single_inheritance X;

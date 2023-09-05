@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2764"
 title: "Compiler Error C2764"
 ms.date: "11/04/2016"
 f1_keywords: ["C2764"]
@@ -15,7 +16,7 @@ A template parameter is not used in a partial specialization. This makes the par
 
 The following sample generates C2764:
 
-```
+```cpp
 // C2764.cpp
 #include <stdio.h>
 template <class T1, class T2>

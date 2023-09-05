@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleLinksDialog Class"
 title: "COleLinksDialog Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COleLinksDialog", "AFXODLGS/COleLinksDialog", "AFXODLGS/COleLinksDialog::COleLinksDialog", "AFXODLGS/COleLinksDialog::DoModal", "AFXODLGS/COleLinksDialog::m_el"]
@@ -40,9 +41,9 @@ class COleLinksDialog : public COleDialog
 Create an object of class `COleLinksDialog` when you want to call this dialog box. After a `COleLinksDialog` object has been constructed, you can use the [m_el](#m_el) structure to initialize the values or states of controls in the dialog box. The `m_el` structure is of type OLEUIEDITLINKS. For more information about using this dialog class, see the [DoModal](#domodal) member function.
 
 > [!NOTE]
->  Application Wizard-generated container code uses this class.
+> Application Wizard-generated container code uses this class.
 
-For more information, see the [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) structure in the Windows SDK.
+For more information, see the [OLEUIEDITLINKS](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw) structure in the Windows SDK.
 
 For more information regarding OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).
 
@@ -66,7 +67,7 @@ For more information regarding OLE-specific dialog boxes, see the article [Dialo
 
 **Header:** afxodlgs.h
 
-##  <a name="domodal"></a>  COleLinksDialog::DoModal
+## <a name="domodal"></a> COleLinksDialog::DoModal
 
 Displays the OLE Edit Links dialog box.
 
@@ -82,13 +83,13 @@ Completion status for the dialog box. One of the following values:
 
 - IDCANCEL if the user canceled the dialog box.
 
-- IDABORT if an error occurred. If IDABORT is returned, call the `COleDialog::GetLastError` member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) function in the Windows SDK.
+- IDABORT if an error occurred. If IDABORT is returned, call the `COleDialog::GetLastError` member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIEditLinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) function in the Windows SDK.
 
 ### Remarks
 
 If you want to initialize the various dialog box controls by setting members of the [m_el](#m_el) structure, you should do it before calling `DoModal`, but after the dialog object is constructed.
 
-##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog
+## <a name="colelinksdialog"></a> COleLinksDialog::COleLinksDialog
 
 Constructs a `COleLinksDialog` object.
 
@@ -118,7 +119,7 @@ Points to the parent or owner window object (of type `CWnd`) to which the dialog
 
 This function constructs only a `COleLinksDialog` object. To display the dialog box, call the [DoModal](#domodal) function.
 
-##  <a name="m_el"></a>  COleLinksDialog::m_el
+## <a name="m_el"></a> COleLinksDialog::m_el
 
 Structure of type OLEUIEDITLINKS used to control the behavior of the Edit Links dialog box.
 
@@ -130,9 +131,9 @@ OLEUIEDITLINKS m_el;
 
 Members of this structure can be modified either directly or through member functions.
 
-For more information, see the [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) structure in the Windows SDK.
+For more information, see the [OLEUIEDITLINKS](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw) structure in the Windows SDK.
 
-## See Also
+## See also
 
 [COleDialog Class](../../mfc/reference/coledialog-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

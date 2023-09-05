@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Internationalization Strategies"
 title: "Internationalization Strategies"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["globalization [C++], character sets", "language-portable code [C++]", "MBCS [C++], internationalization strategies", "Windows API [C++], international programming strategies", "Win32 [C++], international programming strategies", "Unicode [C++], globalizing applications", "character sets [C++], international programming strategies", "localization [C++], character sets"]
@@ -22,7 +23,7 @@ Depending on your target operating systems and markets, you have several interna
 
 The remainder of these topics focus on writing completely portable code that you can build as Unicode or as MBCS.
 
-## See Also
+## See also
 
 [Unicode and MBCS](../text/unicode-and-mbcs.md)<br/>
 [Locales and Code Pages](../text/locales-and-code-pages.md)

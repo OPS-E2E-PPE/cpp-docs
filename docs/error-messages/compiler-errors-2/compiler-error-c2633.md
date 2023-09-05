@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2633"
 title: "Compiler Error C2633"
 ms.date: "11/04/2016"
 f1_keywords: ["C2633"]
@@ -13,7 +14,7 @@ A constructor is declared as a storage class other than inline.
 
 The following sample generates C2633:
 
-```
+```cpp
 // C2633.cpp
 // compile with: /c
 class C {

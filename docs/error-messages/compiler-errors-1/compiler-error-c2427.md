@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2427"
 title: "Compiler Error C2427"
 ms.date: "11/04/2016"
 f1_keywords: ["C2427"]
@@ -13,7 +14,7 @@ An attempt was made to define a nested class, but the nested class is a member o
 
 The following sample generates C2427:
 
-```
+```cpp
 // C2427.cpp
 // compile with: /c
 template <class T>

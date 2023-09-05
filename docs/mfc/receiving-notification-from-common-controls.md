@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Receiving Notification from Common Controls"
 title: "Receiving Notification from Common Controls"
 ms.date: "11/04/2016"
-f1_keywords: ["ON_NOTIFY", "WM_NOTIFY"]
 helpviewer_keywords: ["OnNotify method [MFC]", "common controls [MFC], notifications", "ON_NOTIFY macro [MFC]", "controls [MFC], notifications", "receiving notifications from common controls", "notifications [MFC], common controls", "Windows common controls [MFC], notifications", "WM_NOTIFY message"]
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
 ---
@@ -20,7 +20,7 @@ On occasion, it is useful to determine the current position of the cursor when c
 There is a simple way to accomplish this by calling `CWnd::GetCurrentMessage`. However, this method only retrieves the cursor position at the time the message was sent. Because the cursor may have been moved since the message was sent you must call `CWnd::GetCursorPos` to get the current cursor position.
 
 > [!NOTE]
->  `CWnd::GetCurrentMessage` should only be called within a message handler.
+> `CWnd::GetCurrentMessage` should only be called within a message handler.
 
 Add the following code to the body of the notification message handler (in this example, NM_RCLICK):
 
@@ -28,8 +28,7 @@ Add the following code to the body of the notification message handler (in this 
 
 At this point, the mouse cursor location is stored in the `cursorPos` object.
 
-## See Also
+## See also
 
 [Making and Using Controls](../mfc/making-and-using-controls.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

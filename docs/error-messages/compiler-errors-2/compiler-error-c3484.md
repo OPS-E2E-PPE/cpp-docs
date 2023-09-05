@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3484"
 title: "Compiler Error C3484"
 ms.date: "11/04/2016"
 f1_keywords: ["C3484"]
@@ -15,11 +16,11 @@ You must provide `->` before the return type of a lambda expression.
 
 - Provide `->` before the return type.
 
-## Example
+## Examples
 
 The following example generates C3484:
 
-```
+```cpp
 // C3484a.cpp
 
 int main()
@@ -28,11 +29,9 @@ int main()
 }
 ```
 
-## Example
-
 The following example resolves C3484 by providing `->` before the return type of the lambda expression:
 
-```
+```cpp
 // C3484b.cpp
 
 int main()
@@ -41,6 +40,6 @@ int main()
 }
 ```
 
-## See Also
+## See also
 
 [Lambda Expressions](../../cpp/lambda-expressions-in-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3807"
 title: "Compiler Error C3807"
 ms.date: "11/04/2016"
 f1_keywords: ["C3807"]
@@ -15,7 +16,7 @@ A type that derived from <xref:System.Runtime.InteropServices.ComImportAttribute
 
 The following sample generates C3807.
 
-```
+```cpp
 // C3807.cpp
 // compile with: /clr /c
 ref struct S {};

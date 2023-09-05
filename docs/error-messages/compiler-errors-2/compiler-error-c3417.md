@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3417"
 title: "Compiler Error C3417"
 ms.date: "11/04/2016"
 f1_keywords: ["C3417"]
@@ -13,7 +14,7 @@ Value types cannot contain functions such as a default instance constructor, des
 
 The following sample generates C3517:
 
-```
+```cpp
 // C3417.cpp
 // compile with: /clr /c
 value class VC {

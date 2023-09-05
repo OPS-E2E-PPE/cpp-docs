@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Simple Data Type Classes"
 title: "Simple Data Type Classes"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.classes.data"]
@@ -45,9 +46,8 @@ Wrapper for the OLE automation type **VARIANT**. Data in **VARIANT**s can be sto
 Wrapper for the OLE automation type **CURRENCY**, a fixed-point arithmetic type, with 15 digits before the decimal point and 4 digits after.
 
 > [!NOTE]
->  `CRect`, `CSize`, and `CPoint` are usable in either ATL or MFC applications. In addition, `CStringT` provides an MFC-independent `CString`-like class. For more information on shared utility classes, see [Shared Classes](../atl-mfc-shared/atl-mfc-shared-classes.md).
+> `CRect`, `CSize`, and `CPoint` are usable in either ATL or MFC applications. In addition, `CStringT` provides an MFC-independent `CString`-like class. For more information on shared utility classes, see [Shared Classes](../atl-mfc-shared/atl-mfc-shared-classes.md).
 
-## See Also
+## See also
 
 [Class Overview](../mfc/class-library-overview.md)
-

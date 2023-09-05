@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3345"
 title: "Compiler Error C3345"
 ms.date: "11/04/2016"
 f1_keywords: ["C3345"]
@@ -19,7 +20,7 @@ The *identifier* for a module contains one or more unacceptable characters. An i
 
 The following code example causes error message C3345 because the `name` parameter of the `module` attribute contains a blank.
 
-```
+```cpp
 // cpp_attr_name_module.cpp
 // compile with: /LD /link /OPT:NOREF
 #include <atlbase.h>
@@ -44,8 +45,8 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 };
 ```
 
-## See Also
+## See also
 
 [__iscsym](../../c-runtime-library/reference/iscsym-functions.md)<br/>
 [Character Classification](../../c-runtime-library/character-classification.md)<br/>
-[module](../../windows/module-cpp.md)
+[module](../../windows/attributes/module-cpp.md)

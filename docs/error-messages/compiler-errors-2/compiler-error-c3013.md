@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3013"
 title: "Compiler Error C3013"
 ms.date: "11/04/2016"
 f1_keywords: ["C3013"]
@@ -13,7 +14,7 @@ A clause appeared twice on the same directive. Delete one occurrence of the clau
 
 The following sample generates C3013:
 
-```
+```cpp
 // C3013.cpp
 // compile with: /openmp
 int main() {

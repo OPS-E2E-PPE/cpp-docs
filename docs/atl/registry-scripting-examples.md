@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Registry Scripting Examples"
 title: "Registry Scripting Examples"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["scripting, examples", "registrar scripts [ATL]", "scripts, Registrar scripts", "registry, Registrar"]
@@ -12,7 +13,7 @@ The scripting examples in this topic demonstrate how to add a key to the system 
 
 The following parse tree illustrates a simple script that adds a single key to the system registry. In particular, the script adds the key, `MyVeryOwnKey`, to `HKEY_CURRENT_USER`. It also assigns the default string value of `HowGoesIt` to the new key:
 
-```
+```rgs
 HKEY_CURRENT_USER
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
@@ -21,7 +22,7 @@ HKEY_CURRENT_USER
 
 This script can easily be extended to define multiple subkeys as follows:
 
-```
+```rgs
 HKCU
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
@@ -37,11 +38,11 @@ HKCU
 
 Now, the script adds a subkey, `HasASubkey`, to `MyVeryOwnKey`. To this subkey, it adds both the `PrettyCool` subkey (with a default `DWORD` value of 55) and the `ANameValue` named value (with a string value of `WithANamedValue`).
 
-##  <a name="_atl_register_the_registrar_com_server"></a> Register the Registrar COM Server
+## <a name="_atl_register_the_registrar_com_server"></a> Register the Registrar COM Server
 
 The following script registers the Registrar COM server itself.
 
-```
+```rgs
 HKCR
 {
     ATL.Registrar = s 'ATL Registrar Class'
@@ -86,7 +87,7 @@ The parse tree now adds two new subkeys to `{44EC053A-400F-11D0-9DCD-00A0C90391D
 
 To specify more than one parse tree in a script, simply place one tree at the end of another. For example, the following script adds the key, `MyVeryOwnKey`, to the parse trees for both `HKEY_CLASSES_ROOT` and `HKEY_CURRENT_USER`:
 
-```
+```rgs
 HKCR
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
@@ -100,7 +101,6 @@ HKEY_CURRENT_USER
 > [!NOTE]
 > In a Registrar script, 4K is the maximum token size. (A token is any recognizable element in the syntax.) In the previous scripting example, `HKCR`, `HKEY_CURRENT_USER`, `'MyVeryOwnKey'`, and `'HowGoesIt'` are all tokens.
 
-## See Also
+## See also
 
 [Creating Registrar Scripts](../atl/creating-registrar-scripts.md)
-

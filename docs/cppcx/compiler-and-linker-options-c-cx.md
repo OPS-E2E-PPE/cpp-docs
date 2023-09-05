@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler and Linker options (C++/CX)"
 title: "Compiler and Linker options (C++/CX)"
 ms.date: "01/22/2017"
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
@@ -25,7 +26,7 @@ The %LIBPATH% environment variable specifies the default path to search for .win
 |Option|Description|
 |------------|-----------------|
 |/APPCONTAINER[:NO]|Marks the executable as runnable in the appcontainer (only).|
-|/WINMD[:{NO&#124;ONLY}]|Emits a .winmd file and an associated binary file. This option must be passed to the linker for a .winmd to be emitted.<br /><br /> **NO**—Doesn't emit a .winmd file, but does emit a binary file.<br /><br /> **ONLY**—Emits a .winmd file, but doesn't emit a binary file.|
+|/WINMD[:{NO\|ONLY}]|Emits a .winmd file and an associated binary file. This option must be passed to the linker for a .winmd to be emitted.<br /><br /> **NO**—Doesn't emit a .winmd file, but does emit a binary file.<br /><br /> **ONLY**—Emits a .winmd file, but doesn't emit a binary file.|
 |/WINMDFILE:*filename*|The name of the .winmd file to emit, instead of the default .winmd file name. If multiple file names are specified on the command line, the last name is used.|
 |/WINMDDELAYSIGN[:NO]|Partially signs the .winmd file and places the public key in the binary.<br /><br /> **NO**—(Default) Doesn't sign the .winmd file.<br /><br /> /WINMDDELAYSIGN has no effect unless /WINMDKEYFILE or /WINMDKEYCONTAINER is also specified.|
 |/WINMDKEYCONTAINER:*name*|Specifies a key container to sign an assembly. The *name* parameter corresponds to the key container that's used to sign the metadata file.|
@@ -35,6 +36,6 @@ The %LIBPATH% environment variable specifies the default path to search for .win
 
 When you use **/ZW**, the compiler automatically links to the DLL version of the C Runtime (CRT). Linking to the static library version is not allowed, and any use of CRT functions that are not allowed in a Universal Windows Platform app will cause a compile-time error.
 
-## See Also
+## See also
 
 [Building apps and libraries](../cppcx/building-apps-and-libraries-c-cx.md)

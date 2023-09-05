@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Overview of the Concurrency Runtime"
 title: "Overview of the Concurrency Runtime"
 ms.date: "11/19/2018"
 helpviewer_keywords: ["Concurrency Runtime, requirements", "Concurrency Runtime, architecture", "Concurrency Runtime, overview", "Concurrency Runtime, lambda expressions"]
@@ -8,7 +9,7 @@ ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
 
 This document provides an overview of the Concurrency Runtime. It describes the benefits of the Concurrency Runtime, when to use it, and how its components interact with each other and with the operating system and applications.
 
-##  <a name="top"></a> Sections
+## <a name="top"></a> Sections
 
 This document contains the following sections:
 
@@ -34,7 +35,7 @@ In Visual Studio 2010 through 2013, the Concurrency Runtime was incorporated wit
 
 In Visual Studio 2015 and later, the Concurrency Runtime Task Scheduler is no longer the scheduler for the task class and related types in ppltasks.h. Those types now use the Windows ThreadPool for better performance and interoperability with Windows synchronization primitives.
 
-##  <a name="runtime"></a> Why a Runtime for Concurrency is Important
+## <a name="runtime"></a> Why a Runtime for Concurrency is Important
 
 A runtime for concurrency provides uniformity and predictability to applications and application components that run simultaneously. Two examples of the benefits of the Concurrency Runtime are *cooperative task scheduling* and *cooperative blocking*.
 
@@ -44,13 +45,13 @@ The Concurrency Runtime also provides synchronization primitives that use cooper
 
 [[Top](#top)]
 
-##  <a name="architecture"></a> Architecture
+## <a name="architecture"></a> Architecture
 
 The Concurrency Runtime is divided into four components: the Parallel Patterns Library (PPL), the Asynchronous Agents Library, the Task Scheduler, and the Resource Manager. These components reside between the operating system and applications. The following illustration shows how the Concurrency Runtime components interact among the operating system and applications:
 
 **Concurrency Runtime Architecture**
 
-![The Concurrency Runtime Architecture](../../parallel/concrt/media/concurrencyrun.png "The Concurrency Runtime Architecture")
+![The Concurrency Runtime Architecture.](../../parallel/concrt/media/concurrencyrun.png "The Concurrency Runtime Architecture")
 
 > [!IMPORTANT]
 > The Task Scheduler and Resource Manager components are not available from a Universal Windows Platform (UWP) app or when you use the task class or other types in ppltasks.h.
@@ -65,7 +66,7 @@ The following sections provide a brief overview of what each component provides 
 
 The Parallel Patterns Library (PPL) provides general-purpose containers and algorithms for performing fine-grained parallelism. The PPL enables *imperative data parallelism* by providing parallel algorithms that distribute computations on collections or on sets of data across computing resources. It also enables *task parallelism* by providing task objects that distribute multiple independent operations across computing resources.
 
-Use the Parallel Patterns Library when you have a local computation that can benefit from parallel execution. For example, you can use the [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithm to transform an existing `for` loop to act in parallel.
+Use the Parallel Patterns Library when you have a local computation that can benefit from parallel execution. For example, you can use the [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithm to transform an existing **`for`** loop to act in parallel.
 
 For more information about the Parallel Patterns Library, see [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md).
 
@@ -93,7 +94,7 @@ The Resource Manager serves as an abstraction over computing resources and prima
 
 [[Top](#top)]
 
-##  <a name="lambda"></a> C++ Lambda Expressions
+## <a name="lambda"></a> C++ Lambda Expressions
 
 Many of the types and algorithms that are defined by the Concurrency Runtime are implemented as C++ templates. Some of these types and algorithms take as a parameter a routine that performs work. This parameter can be a lambda function, a function object, or a function pointer. These entities are also referred to as *work functions* or *work routines*.
 
@@ -117,7 +118,7 @@ For more information about lambda functions in C++, see [Lambda Expressions](../
 
 [[Top](#top)]
 
-##  <a name="requirements"></a> Requirements
+## <a name="requirements"></a> Requirements
 
 The following table shows the header files that are associated with each component of the Concurrency Runtime:
 
@@ -133,4 +134,3 @@ The Concurrency Runtime is declared in the [Concurrency](../../parallel/concrt/r
 The Concurrency Runtime is provided as part of the C Runtime Library (CRT). For more information about how to build an application that uses the CRT, see [CRT Library Features](../../c-runtime-library/crt-library-features.md).
 
 [[Top](#top)]
-

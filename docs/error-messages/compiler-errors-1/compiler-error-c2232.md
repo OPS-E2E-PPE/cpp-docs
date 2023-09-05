@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2232"
 title: "Compiler Error C2232"
 ms.date: "11/04/2016"
 f1_keywords: ["C2232"]
@@ -13,7 +14,7 @@ The operand to the left of the `->` operator is not a pointer. Use the period (.
 
 The following sample generates C2232:
 
-```
+```c
 // C2232.c
 struct X {
     int member;

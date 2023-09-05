@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2346"
 title: "Compiler Error C2346"
 ms.date: "11/04/2016"
 f1_keywords: ["C2346"]
@@ -23,7 +24,7 @@ For more information, see [managed, unmanaged](../../preprocessor/managed-unmana
 
 The following sample generates C2346.
 
-```
+```cpp
 // C2346.cpp
 // processor: x86
 // compile with: /clr
@@ -37,7 +38,7 @@ struct S
    virtual __clrcall ~S() { }
 };
 
-void main()
+int main()
 {
    S s;
 }

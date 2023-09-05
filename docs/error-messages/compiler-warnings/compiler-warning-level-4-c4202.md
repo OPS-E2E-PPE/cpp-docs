@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4202"
 title: "Compiler Warning (level 4) C4202"
 ms.date: "11/04/2016"
 f1_keywords: ["C4202"]
@@ -13,7 +14,7 @@ An old-style function definition contains variable arguments. These definitions 
 
 ## Example
 
-```
+```c
 // C4202.c
 // compile with: /W4
 void func( a, b, ...)   // C4202

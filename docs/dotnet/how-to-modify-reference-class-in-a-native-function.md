@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Modify Reference Class in a Native Function"
 title: "How to: Modify Reference Class in a Native Function"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -9,11 +10,11 @@ ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
 
 You can pass a reference class with a CLR array to a native function, and modify the class, using PInvoke services.
 
-## Example
+## Examples
 
 Compile the following native library.
 
-```
+```cpp
 // modify_ref_class_in_native_function.cpp
 // compile with: /LD
 #include <stdio.h>
@@ -39,11 +40,9 @@ extern "C"  {
 };
 ```
 
-## Example
-
 Compile the following assembly.
 
-```
+```cpp
 // modify_ref_class_in_native_function_2.cpp
 // compile with: /clr
 using namespace System;
@@ -81,6 +80,6 @@ In native: intarr: 100, 200
 In managed: intarr: 300, 400
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

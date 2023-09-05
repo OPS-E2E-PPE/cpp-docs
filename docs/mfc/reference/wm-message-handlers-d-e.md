@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: WM_ Message Handlers: D - E"
 title: "WM_ Message Handlers: D - E"
 ms.date: "11/04/2016"
 f1_keywords: ["ON_WM_ERASEBKGND", "ON_WM_DEVICECHANGE", "ON_WM_ENTERIDLE", "ON_WM_DESTROYCLIPBOARD", "ON_WM_DESTROY", "ON_WM_DEADCHAR", "ON_WM_DELETEITEM", "ON_WM_DROPFILES", "ON_WM_DEVMODECHANGE", "ON_WM_ENDSESSION", "ON_WM_ENABLE", "ON_WM_DRAWITEM", "ON_WM_DRAWCLIPBOARD"]
@@ -12,7 +13,7 @@ The following map entries on the left correspond to the function prototypes on t
 |Map entry|Function prototype|
 |---------------|------------------------|
 |ON_WM_DEADCHAR()|afx_msg void [OnDeadChar](../../mfc/reference/cwnd-class.md#ondeadchar)(UINT, UINT, UINT);|
-|ON_WM_DELETEITEM()|afx_msg void [OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)(LPDELETEITEMSTRUCT);|
+|ON_WM_DELETEITEM()|afx_msg void [OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)(int, LPDELETEITEMSTRUCT);|
 |ON_WM_DESTROY()|afx_msg void [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)();|
 |ON_WM_DESTROYCLIPBOARD()|afx_msg void [OnDestroyClipboard](../../mfc/reference/cwnd-class.md#ondestroyclipboard)();|
 |ON_WM_DEVICECHANGE()|afx_msg void [OnDeviceChange](../../mfc/reference/cwnd-class.md#ondevicechange)(UINT, DWORD);|
@@ -31,8 +32,7 @@ The following map entries on the left correspond to the function prototypes on t
 |ON_WM_ERASEBKGND()|afx_msg BOOL [OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)(CDC*);|
 |ON_WM_EXITSIZEMOVE()|afx_msg void [OnExitSizeMove](../../mfc/reference/cwnd-class.md#onexitsizemove)();|
 
-## See Also
+## See also
 
 [Message Maps](../../mfc/reference/message-maps-mfc.md)<br/>
 [Handlers for WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
-

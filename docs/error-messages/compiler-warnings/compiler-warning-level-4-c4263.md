@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4263"
 title: "Compiler Warning (level 4) C4263"
 ms.date: "11/04/2016"
 f1_keywords: ["C4263"]
@@ -15,7 +16,7 @@ This warning is off by default. See [Compiler Warnings That Are Off by Default](
 
 The following sample generates C4263:
 
-```
+```cpp
 // C4263.cpp
 // compile with: /W4
 #pragma warning(default:4263)

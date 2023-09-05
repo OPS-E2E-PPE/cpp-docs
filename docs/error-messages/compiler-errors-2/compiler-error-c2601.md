@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2601"
 title: "Compiler Error C2601"
 ms.date: "11/04/2016"
 f1_keywords: ["C2601"]
@@ -15,7 +16,7 @@ Or, there may be an extra brace in your source code before the location of the C
 
 The following sample generates C2601:
 
-```
+```cpp
 // C2601.cpp
 int main() {
    int i = 0;

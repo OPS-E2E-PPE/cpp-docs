@@ -1,10 +1,19 @@
 ---
+description: "Learn more about: Implementing a Simple Consumer"
 title: "Implementing a Simple Consumer"
-ms.date: "10/12/2018"
-helpviewer_keywords: ["clients, creating", "OLE DB consumers, implementing"]
+ms.date: "08/19/2019"
+helpviewer_keywords: ["OLE DB consumers, implementing"]
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
 ---
 # Implementing a Simple Consumer
+
+::: moniker range=">=msvc-160"
+
+The ATL OLE DB Consumer wizard is not available in Visual Studio 2019 and later. You can still add the functionality manually. For more information, see [Creating a Consumer Without Using a Wizard](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="<=msvc-150"
 
 The following topics show how to edit the files created by the **MFC Application Wizard** and **ATL OLE DB Consumer Wizard** to create a simple consumer. This example has the following parts:
 
@@ -27,7 +36,7 @@ The following topics show how to edit the files created by the **MFC Application
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
     //
-    #include "stdafx.h"
+    #include "pch.h" // "stdafx.h" in Visual Studio 2017 and earlier
     #include "Products.h"
     ...
     int main(int argc, char* argv[])
@@ -57,7 +66,7 @@ A bookmark is a column that uniquely identifies rows in the table. Typically it'
 
 - Request a bookmark column from the provider by setting the `DBPROP_IRowsetLocate` property.
 
-- Add a bookmark entry to the column map by using the [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) macro.
+- Add a bookmark entry to the column map by using the [BOOKMARK_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#bookmark_entry) macro.
 
 The previous steps give you bookmark support and a bookmark object with which to work. This code example demonstrates a bookmark as follows:
 
@@ -65,7 +74,7 @@ The previous steps give you bookmark support and a bookmark object with which to
 
 - Output rowset data to the file row by row.
 
-- Move the rowset cursor to the bookmark by calling [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
+- Move the rowset cursor to the bookmark by calling [MoveToBookmark](./crowset-class.md#movetobookmark).
 
 - Output the bookmarked row, appending it to the end of the file.
 
@@ -188,6 +197,8 @@ The previous steps give you bookmark support and a bookmark object with which to
 
 For more information about bookmarks, see [Using Bookmarks](../../data/oledb/using-bookmarks.md). Examples of bookmarks are also shown in [Updating Rowsets](../../data/oledb/updating-rowsets.md).
 
-## See Also
+::: moniker-end
+
+## See also
 
 [Creating an OLE DB Consumer Using a Wizard](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

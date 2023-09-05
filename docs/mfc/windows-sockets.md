@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Windows Sockets"
 title: "Windows Sockets"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["sockets [MFC], Windows sockets", "networks [MFC], Windows Sockets", "programming [MFC], network", "sockets [MFC]", "Windows Sockets [MFC]"]
@@ -11,4 +12,3 @@ This family of articles covers the MFC implementation of Windows Sockets. MFC su
 ## In This Section
 
 [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
-

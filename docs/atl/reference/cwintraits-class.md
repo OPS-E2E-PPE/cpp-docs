@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CWinTraits Class"
 title: "CWinTraits Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CWinTraits", "ATLWIN/ATL::CWinTraits", "ATLWIN/ATL::CWinTraits::GetWndExStyle", "ATLWIN/ATL::CWinTraits::GetWndStyle"]
@@ -10,7 +11,7 @@ ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
 This class provides a method for standardizing the styles used when creating a window object.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -61,7 +62,7 @@ If you want to ensure that certain styles are set for all instances of the windo
 
 **Header:** atlwin.h
 
-##  <a name="getwndstyle"></a>  CWinTraits::GetWndStyle
+## <a name="getwndstyle"></a> CWinTraits::GetWndStyle
 
 Call this function to retrieve the standard styles of the `CWinTraits` object.
 
@@ -78,7 +79,7 @@ Standard styles used for creation of a window. If *dwStyle* is 0, the template s
 
 The standard window styles of the object.
 
-##  <a name="getwndexstyle"></a>  CWinTraits::GetWndExStyle
+## <a name="getwndexstyle"></a> CWinTraits::GetWndExStyle
 
 Call this function to retrieve the extended styles of the `CWinTraits` object.
 
@@ -95,7 +96,7 @@ Extended styles used for creation of a window. If *dwExStyle* is 0, the template
 
 The extended window styles of the object.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)<br/>
 [Understanding Window Traits](../../atl/understanding-window-traits.md)

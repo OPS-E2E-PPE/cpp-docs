@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CWorkerThread Class"
 title: "CWorkerThread Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CWorkerThread", "ATLUTIL/ATL::CWorkerThread", "ATLUTIL/ATL::CWorkerThread::CWorkerThread", "ATLUTIL/ATL::CWorkerThread::AddHandle", "ATLUTIL/ATL::CWorkerThread::AddTimer", "ATLUTIL/ATL::CWorkerThread::GetThreadHandle", "ATLUTIL/ATL::CWorkerThread::GetThreadId", "ATLUTIL/ATL::CWorkerThread::Initialize", "ATLUTIL/ATL::CWorkerThread::RemoveHandle", "ATLUTIL/ATL::CWorkerThread::Shutdown"]
@@ -75,7 +76,7 @@ The class providing the thread creation function, such as [CRTThreadTraits](../.
 
 **Header:** atlutil.h
 
-##  <a name="addhandle"></a>  CWorkerThread::AddHandle
+## <a name="addhandle"></a> CWorkerThread::AddHandle
 
 Call this method to add a waitable object's handle to the list maintained by the worker thread.
 
@@ -105,7 +106,7 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) will be called through *pClient* when the handle, *hObject*, is signaled.
 
-##  <a name="addtimer"></a>  CWorkerThread::AddTimer
+## <a name="addtimer"></a> CWorkerThread::AddTimer
 
 Call this method to add a periodic waitable timer to the list maintained by the worker thread.
 
@@ -141,7 +142,7 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 Pass the timer handle from *phTimer* to [CWorkerThread::RemoveHandle](#removehandle) to close the timer.
 
-##  <a name="cworkerthread"></a>  CWorkerThread::CWorkerThread
+## <a name="cworkerthread"></a> CWorkerThread::CWorkerThread
 
 The constructor.
 
@@ -149,7 +150,7 @@ The constructor.
 CWorkerThread() throw();
 ```
 
-##  <a name="dtor"></a>  CWorkerThread::~CWorkerThread
+## <a name="dtor"></a> CWorkerThread::~CWorkerThread
 
 The destructor.
 
@@ -161,7 +162,7 @@ The destructor.
 
 Calls [CWorkerThread::Shutdown](#shutdown).
 
-##  <a name="getthreadhandle"></a>  CWorkerThread::GetThreadHandle
+## <a name="getthreadhandle"></a> CWorkerThread::GetThreadHandle
 
 Call this method to get the thread handle of the worker thread.
 
@@ -173,7 +174,7 @@ HANDLE GetThreadHandle() throw();
 
 Returns the thread handle or NULL if the worker thread has not been initialized.
 
-##  <a name="getthreadid"></a>  CWorkerThread::GetThreadId
+## <a name="getthreadid"></a> CWorkerThread::GetThreadId
 
 Call this method to get the thread ID of the worker thread.
 
@@ -185,7 +186,7 @@ DWORD GetThreadId() throw();
 
 Returns the thread ID or NULL if the worker thread has not been initialized.
 
-##  <a name="initialize"></a>  CWorkerThread::Initialize
+## <a name="initialize"></a> CWorkerThread::Initialize
 
 Call this method to initialize the worker thread.
 
@@ -212,7 +213,7 @@ To have two or more `CWorkerThread` objects use the same worker thread, initiali
 
 See [CWorkerThread::Shutdown](#shutdown) for information on how that method's behavior changes when initialized using a pointer to an existing object.
 
-##  <a name="removehandle"></a>  CWorkerThread::RemoveHandle
+## <a name="removehandle"></a> CWorkerThread::RemoveHandle
 
 Call this method to remove a handle from the list of waitable objects.
 
@@ -231,9 +232,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-When the handle is removed [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) will be called on the associated object that was passed to [AddHandle](#addhandle). If this call fails, `CWorkerThread` will call the Windows [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) function on the handle.
+When the handle is removed [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) will be called on the associated object that was passed to [AddHandle](#addhandle). If this call fails, `CWorkerThread` will call the Windows [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) function on the handle.
 
-##  <a name="shutdown"></a>  CWorkerThread::Shutdown
+## <a name="shutdown"></a> CWorkerThread::Shutdown
 
 Call this method to shut down the worker thread.
 
@@ -256,7 +257,7 @@ To reuse the object, call [CWorkerThread::Initialize](#initialize) after calling
 
 Note that calling `Shutdown` on an object initialized with a pointer to another `CWorkerThread` object has no effect and always returns S_OK.
 
-## See Also
+## See also
 
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Classes](../../atl/reference/atl-classes.md)<br/>

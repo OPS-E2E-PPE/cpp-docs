@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::UIntPtr value class"
 title: "Platform::UIntPtr value class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -26,6 +27,6 @@ public value struct UintPtr
 
 **Metadata:** platform.winmd
 
-## See Also
+## See also
 
 [Platform namespace](../cppcx/platform-namespace-c-cx.md)

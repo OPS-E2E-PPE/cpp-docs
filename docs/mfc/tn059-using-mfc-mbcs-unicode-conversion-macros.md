@@ -1,14 +1,14 @@
 ---
+description: "Learn more about: TN059: Using MFC MBCS/Unicode Conversion Macros"
 title: "TN059: Using MFC MBCS-Unicode Conversion Macros"
 ms.date: "11/04/2016"
-f1_keywords: ["vc.mfc.mbcs"]
 helpviewer_keywords: ["MFCANS32.DLL", "Unicode [MFC], conversion macros", "Unicode [MFC], OLE interfaces", "conversion macros [MFC]", "converting Unicode", "MBCS [MFC], conversion macros", "macros [MFC], MBCS conversion macros", "TN059"]
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
 ---
 # TN059: Using MFC MBCS/Unicode Conversion Macros
 
 > [!NOTE]
->  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.
+> The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.
 
 This note describes how to use the macros for MBCS/Unicode conversion, which are defined in AFXPRIV.H. These macros are most useful if your application deals directly with the OLE API or for some reason, often needs to convert between Unicode and MBCS.
 
@@ -84,7 +84,7 @@ Besides doing text conversions, there are also macros and helper functions for c
 
 ## OLE Conversion Macros
 
-The OLE conversion macros are designed specifically for handling functions that expect **OLESTR** characters. If you examine the OLE headers, you will see many references to **LPCOLESTR** and **OLECHAR**. These types are used to refer to the type of characters used in OLE interfaces in a way that is not specific to the platform. **OLECHAR** maps to **char** in Win16 and Macintosh platforms and **WCHAR** in Win32.
+The OLE conversion macros are designed specifically for handling functions that expect **OLESTR** characters. If you examine the OLE headers, you will see many references to **LPCOLESTR** and **OLECHAR**. These types are used to refer to the type of characters used in OLE interfaces in a way that is not specific to the platform. **OLECHAR** maps to **`char`** in Win16 and Macintosh platforms and **WCHAR** in Win32.
 
 In order to keep the number of **#ifdef** directives in the MFC code to a minimum we have a similar macro for each conversion that where OLE strings are involved. The following macros are the most commonly used:
 
@@ -101,7 +101,7 @@ Again, there are similar macros for doing TEXTMETRIC, DEVMODE, BSTR, and OLE all
 
 Do not use the macros in a tight loop. For example, you do not want to write the following kind of code:
 
-```
+```cpp
 void BadIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -113,7 +113,7 @@ void BadIterateCode(LPCTSTR lpsz)
 
 The code above could result in allocating megabytes of memory on the stack depending on what the contents of the string `lpsz` is! It also takes time to convert the string for each iteration of the loop. Instead, move such constant conversions out of the loop:
 
-```
+```cpp
 void MuchBetterIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -127,7 +127,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 
 If the string is not constant, then encapsulate the method call into a function. This will allow the conversion buffer to be freed each time. For example:
 
-```
+```cpp
 void CallSomeMethod(int ii, LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -179,8 +179,7 @@ return lpszT; // CString makes copy
 
 The macros are easy to use and easy to insert into your code, but as you can tell from the caveats above, you need to be careful when using them.
 
-## See Also
+## See also
 
 [Technical Notes by Number](../mfc/technical-notes-by-number.md)<br/>
 [Technical Notes by Category](../mfc/technical-notes-by-category.md)
-

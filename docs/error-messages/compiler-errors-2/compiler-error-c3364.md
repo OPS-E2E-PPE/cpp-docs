@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3364"
 title: "Compiler Error C3364"
 ms.date: "11/04/2016"
 f1_keywords: ["C3364"]
@@ -13,7 +14,7 @@ The second parameter of the delegate's constructor takes either the address of a
 
 The following sample generates C3364:
 
-```
+```cpp
 // C3364_2.cpp
 // compile with: /clr
 

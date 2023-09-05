@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: __movsd"
 title: "__movsd"
-ms.date: "11/04/2016"
+ms.date: "09/02/2019"
 f1_keywords: ["__movsd"]
 helpviewer_keywords: ["rep movsd instruction", "__movsd intrinsic", "movsd instruction"]
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
@@ -13,23 +14,23 @@ Generates a Move String (`rep movsd`) instruction.
 
 ## Syntax
 
-```
+```C
 void __movsd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long* Source,
    size_t Count
 );
 ```
 
-#### Parameters
+### Parameters
 
-*Dest*<br/>
+*Destination*\
 [out] The destination of the operation.
 
-*Source*<br/>
+*Source*\
 [in] The source of the operation.
 
-*Count*<br/>
+*Count*\
 [in] The number of doublewords to copy.
 
 ## Requirements
@@ -42,13 +43,13 @@ void __movsd(
 
 ## Remarks
 
-The result is that the first `Count` doublewords pointed to by `Source` are copied to the `Dest` string.
+The result is that the first *Count* doublewords pointed to by *Source* are copied to the *Destination* string.
 
 This routine is only available as an intrinsic.
 
 ## Example
 
-```
+```cpp
 // movsd.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -75,6 +76,6 @@ int main()
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
-[Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)
+[Compiler intrinsics](../intrinsics/compiler-intrinsics.md)

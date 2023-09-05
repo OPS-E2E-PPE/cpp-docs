@@ -1,14 +1,15 @@
 ---
 title: "_getpid"
+description: "API reference for _getpid, which gets the process identification."
 ms.date: "11/04/2016"
-apiname: ["_getpid"]
-apilocation: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ucrtbase.dll", "api-ms-win-crt-runtime-l1-1-0.dll"]
-apitype: "DLLExport"
+api_name: ["_getpid"]
+api_location: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ucrtbase.dll", "api-ms-win-crt-runtime-l1-1-0.dll"]
+api_type: ["DLLExport"]
+topic_type: ["apiref"]
 f1_keywords: ["_getpid"]
 helpviewer_keywords: ["getpid function", "_getpid function", "process identification numbers"]
-ms.assetid: d3e13bae-9a0c-4f33-86d3-ec9df9519285
 ---
-# _getpid
+# `_getpid`
 
 Gets the process identification.
 
@@ -21,21 +22,21 @@ Gets the process identification.
 int _getpid( void );
 ```
 
-## Return Value
+## Return value
 
-Returns the process ID obtained from the system. There is no error return.
+Returns the process ID obtained from the system. There's no error return.
 
 ## Remarks
 
-The **_getpid** function obtains the process ID from the system. The process ID uniquely identifies the calling process.
+The **`_getpid`** function obtains the process ID from the system. The process ID uniquely identifies the calling process.
 
 ## Requirements
 
-|Routine|Required header|
-|-------------|---------------------|
-|**_getpid**|\<process.h>|
+| Routine | Required header |
+|---|---|
+| **`_getpid`** | `<process.h>` |
 
-For more compatibility information, see [Compatibility](../../c-runtime-library/compatibility.md).
+For more compatibility information, see [Compatibility](../compatibility.md).
 
 ## Example
 
@@ -62,5 +63,5 @@ Process id: 3584
 
 ## See also
 
-[Process and Environment Control](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_mktemp, _wmktemp](mktemp-wmktemp.md)<br/>
+[Process and environment control](../process-and-environment-control.md)\
+[`_mktemp`, `_wmktemp`](mktemp-wmktemp.md)

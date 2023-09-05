@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: sync_per_thread Class"
 title: "sync_per_thread Class"
 ms.date: "11/04/2016"
 f1_keywords: ["allocators/stdext::sync_per_thread", "allocators/stdext::sync_per_thread::allocate", "allocators/stdext::sync_per_thread::deallocate", "allocators/stdext::sync_per_thread::equals"]
@@ -18,9 +19,8 @@ class sync_per_thread
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*Cache*|The type of cache associated with the synchronization filter. This can be [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), or [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+*Cache*\
+The type of cache associated with the synchronization filter. It can be [`cache_chunklist`](../standard-library/cache-chunklist-class.md), [`cache_freelist`](../standard-library/cache-freelist-class.md), or [`cache_suballoc`](../standard-library/cache-suballoc-class.md).
 
 ## Remarks
 
@@ -40,7 +40,7 @@ Allocators that use `sync_per_thread` can compare equal even though blocks alloc
 
 **Namespace:** stdext
 
-## <a name="allocate"></a>  sync_per_thread::allocate
+## <a name="allocate"></a> sync_per_thread::allocate
 
 Allocates a block of memory.
 
@@ -50,15 +50,14 @@ void *allocate(std::size_t count);
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*count*|The number of elements in the array to be allocated.|
+*count*\
+The number of elements in the array to be allocated.
 
 ### Remarks
 
 The member function returns the result of a call to `cache::allocate(count)` on the cache object belonging to the current thread. If no cache object has been allocated for the current thread, it first allocates one.
 
-## <a name="deallocate"></a>  sync_per_thread::deallocate
+## <a name="deallocate"></a> sync_per_thread::deallocate
 
 Frees a specified number of objects from storage beginning at a specified position.
 
@@ -68,16 +67,17 @@ void deallocate(void* ptr, std::size_t count);
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*ptr*|A pointer to the first object to be deallocated from storage.|
-|*count*|The number of objects to be deallocated from storage.|
+*ptr*\
+A pointer to the first object to be deallocated from storage.
+
+*count*\
+The number of objects to be deallocated from storage.
 
 ### Remarks
 
 The member function calls `deallocate` on the cache object belonging to the current thread. If no cache object has been allocated for the current thread, it first allocates one.
 
-## <a name="equals"></a>  sync_per_thread::equals
+## <a name="equals"></a> sync_per_thread::equals
 
 Compares two caches for equality.
 
@@ -87,17 +87,18 @@ bool equals(const sync<Cache>& Other) const;
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*Cache*|The cache object of the synchronization filter.|
-|*Other*|The cache object to compare for equality.|
+*Cache*\
+The cache object of the synchronization filter.
+
+*Other*\
+The cache object to compare for equality.
 
 ### Return Value
 
-**false** if no cache object has been allocated for this object or for *Other* in the current thread. Otherwise it returns the result of applying `operator==` to the two cache objects.
+**`false`** if no cache object has been allocated for this object or for *Other* in the current thread. Otherwise it returns the result of applying `operator==` to the two cache objects.
 
 ### Remarks
 
 ## See also
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

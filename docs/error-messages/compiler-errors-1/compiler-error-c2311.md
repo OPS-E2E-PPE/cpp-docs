@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2311"
 title: "Compiler Error C2311"
 ms.date: "11/04/2016"
 f1_keywords: ["C2311"]
@@ -13,7 +14,7 @@ The catch handler for the ellipsis (...) must be the last handler for a throw.
 
 The following sample generates C2311:
 
-```
+```cpp
 // C2311.cpp
 // compile with: /EHsc
 #include <eh.h>

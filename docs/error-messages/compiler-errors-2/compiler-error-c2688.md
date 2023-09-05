@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2688"
 title: "Compiler Error C2688"
 ms.date: "11/04/2016"
 f1_keywords: ["C2688"]
@@ -15,7 +16,7 @@ To resolve this error, either define your functions so that they do not use vari
 
 The following sample generates C2688:
 
-```
+```cpp
 // C2688.cpp
 struct G1 {};
 struct G2 {};

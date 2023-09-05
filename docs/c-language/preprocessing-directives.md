@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Preprocessing Directives"
 title: "Preprocessing Directives"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["preprocessing directives, C", "preprocessing directives"]
@@ -18,6 +19,6 @@ ms.assetid: b27d7444-8f84-4c31-b2fa-03335412d5e6
 
 - [Default Date and Time](../c-language/default-date-and-time.md)
 
-## See Also
+## See also
 
 [Implementation-Defined Behavior](../c-language/implementation-defined-behavior.md)

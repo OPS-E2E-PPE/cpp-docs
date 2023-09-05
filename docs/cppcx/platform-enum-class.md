@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Enum Class"
 title: "Platform::Enum Class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -22,7 +23,7 @@ The Enum class inherits the Equals(), GetHashCode(), and ToString() methods from
 
 ### Remarks
 
-Use the [public enum class](../windows/enum-class-cpp-component-extensions.md) keyword to create enumerations. Do not use the Platform::Enum type explicitly. For more information, see [Enums](../cppcx/enums-c-cx.md).
+Use the [public enum class](../extensions/enum-class-cpp-component-extensions.md) keyword to create enumerations. Do not use the Platform::Enum type explicitly. For more information, see [Enums](../cppcx/enums-c-cx.md).
 
 ### Requirements
 
@@ -34,6 +35,6 @@ Use the [public enum class](../windows/enum-class-cpp-component-extensions.md) k
 
 **Metadata:** platform.winmd
 
-## See Also
+## See also
 
 [Platform namespace](../cppcx/platform-namespace-c-cx.md)

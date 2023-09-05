@@ -1,22 +1,25 @@
 ---
-title: "IFDIF]"
-ms.date: "08/30/2018"
-f1_keywords: ["IFDIF[[I]]"]
-helpviewer_keywords: ["IFDIF[[I]] directive"]
+description: "Learn more about: IFDIF, IFDIFI"
+title: "IFDIF, IFDIFI"
+ms.date: "05/23/2019"
+f1_keywords: ["IFDIF", "IFDIFI"]
+helpviewer_keywords: ["IFDIF directive", "IFDIFI directive"]
 ms.assetid: b85a553c-9098-4a57-a24f-596456eefa1c
 ---
-# IFDIF]
+# IFDIF, IFDIFI
 
 Grants assembly if the text items are different.
 
 ## Syntax
 
-> IFDIF[[I]] textitem1, textitem2
+> **IFDIF** *textitem1*__,__ *textitem2*\
+> **IFDIFI** *textitem1*__,__ *textitem2*
 
 ## Remarks
 
-If **I** is given, the comparison is case insensitive. See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+If **IFDIFI** is given, the comparison is case insensitive. See [IF](if-masm.md) for complete syntax.
 
 ## See also
 
-[Directives Reference](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)\
+[MASM BNF Grammar](masm-bnf-grammar.md)

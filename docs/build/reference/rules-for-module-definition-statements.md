@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Rules for Module-Definition Statements"
 title: "Rules for Module-Definition Statements"
 ms.date: "11/04/2016"
 f1_keywords: [".def"]
@@ -25,8 +26,8 @@ The following syntax rules apply to all statements in a .def file. Other rules t
 
 - Numeric arguments are specified in base 10 or hexadecimal.
 
-- If a string argument matches a [reserved word](../../build/reference/reserved-words.md), it must be enclosed in double quotation marks (").
+- If a string argument matches a [reserved word](reserved-words.md), it must be enclosed in double quotation marks (").
 
-## See Also
+## See also
 
-[Module-Definition (.Def) Files](../../build/reference/module-definition-dot-def-files.md)
+[Module-Definition (.Def) Files](module-definition-dot-def-files.md)

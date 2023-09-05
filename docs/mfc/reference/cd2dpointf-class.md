@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CD2DPointF Class"
 title: "CD2DPointF Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CD2DPointF", "AFXRENDERTARGET/CD2DPointF", "AFXRENDERTARGET/CD2DPointF::CD2DPointF"]
@@ -39,7 +40,7 @@ class CD2DPointF : public D2D1_POINT_2F;
 
 **Header:** afxrendertarget.h
 
-##  <a name="cd2dpointf"></a>  CD2DPointF::CD2DPointF
+## <a name="cd2dpointf"></a> CD2DPointF::CD2DPointF
 
 Constructs a CD2DPointF object from CPoint object.
 
@@ -61,7 +62,7 @@ source X
 *fY*<br/>
 source Y
 
-##  <a name="operator_cpoint"></a>  CD2DPointF::operator CPoint
+## <a name="operator_cpoint"></a> CD2DPointF::operator CPoint
 
 Converts CD2DPointF to CPoint object.
 
@@ -73,6 +74,6 @@ operator CPoint();
 
 Current value of D2D point.
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3126"
 title: "Compiler Error C3126"
 ms.date: "11/04/2016"
 f1_keywords: ["C3126"]
@@ -13,7 +14,7 @@ A union cannot be defined inside a managed type.
 
 The following sample generates C3126:
 
-```
+```cpp
 // C3126_2.cpp
 // compile with: /clr /c
 ref class Test

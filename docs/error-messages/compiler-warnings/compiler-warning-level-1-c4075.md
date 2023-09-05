@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4075"
 title: "Compiler Warning (level 1) C4075"
 ms.date: "11/04/2016"
 f1_keywords: ["C4075"]
@@ -13,7 +14,7 @@ A [#pragma init_seg](../../preprocessor/init-seg.md) uses an unrecognized sectio
 
 The following sample generates C4075:
 
-```
+```cpp
 // C4075.cpp
 // compile with: /W1
 #pragma init_seg("mysegg")   // C4075

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3206"
 title: "Compiler Error C3206"
 ms.date: "11/04/2016"
 f1_keywords: ["C3206"]
@@ -9,11 +10,11 @@ ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
 
 'function' : invalid type argument for 'param', missing type argument list on class type 'typename'
 
-A template function is defined as taking a template type argument. However, a template template argument was passed.
+A function template is defined as taking a template type argument. However, a template template argument was passed.
 
 The following sample generates C3206:
 
-```
+```cpp
 // C3206.cpp
 template <class T>
 void f() {}
@@ -30,7 +31,7 @@ void f1() {
 
 Possible resolution:
 
-```
+```cpp
 // C3206b.cpp
 // compile with: /c
 template <class T>
@@ -46,7 +47,7 @@ void f1() {
 
 C3206 can also occur when using generics:
 
-```
+```cpp
 // C3206c.cpp
 // compile with: /clr
 generic <class GT1>
@@ -62,7 +63,7 @@ int main() {
 
 Possible resolution:
 
-```
+```cpp
 // C3206d.cpp
 // compile with: /clr
 generic <class GT1>
@@ -78,7 +79,7 @@ int main() {
 
 A class template is not allowed as a template type argument. The following sample raises C3206:
 
-```
+```cpp
 // C3206e.cpp
 template <class T>
 struct S {};
@@ -95,7 +96,7 @@ int main() {
 
 Possible resolution:
 
-```
+```cpp
 // C3206f.cpp
 template <class T>
 struct S {};
@@ -112,7 +113,7 @@ int main() {
 
 If a template template parameter is necessary, then you have to wrap the function in a template class that takes a template template parameter:
 
-```
+```cpp
 // C3206g.cpp
 template <class T>
 struct S {};

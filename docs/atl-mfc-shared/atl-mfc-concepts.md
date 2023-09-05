@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ATL/MFC Concepts"
 title: "ATL-MFC Concepts"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["MFC", "ATL"]
@@ -13,7 +14,6 @@ This section provides conceptual and task-based topics to help you program using
 [Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 Describes how to manage string data in applications.
 
-## See Also
+## See also
 
 [ATL/MFC Shared Classes](../atl-mfc-shared/atl-mfc-shared-classes.md)
-

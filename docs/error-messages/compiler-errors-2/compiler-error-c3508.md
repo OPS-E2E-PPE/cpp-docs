@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3508"
 title: "Compiler Error C3508"
 ms.date: "11/04/2016"
 f1_keywords: ["C3508"]
@@ -15,7 +16,7 @@ An invalid type was specified.
 
 The following sample generates C3508:
 
-```
+```cpp
 // C3508.cpp
 #define _ATL_DEBUG_QI
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IDispatchImpl Class"
 title: "IDispatchImpl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["IDispatchImpl", "ATLCOM/ATL::IDispatchImpl", "ATLCOM/ATL::IDispatchImpl::IDispatchImpl", "ATLCOM/ATL::IDispatchImpl::GetIDsOfNames", "ATLCOM/ATL::IDispatchImpl::GetTypeInfo", "ATLCOM/ATL::IDispatchImpl::GetTypeInfoCount", "ATLCOM/ATL::IDispatchImpl::Invoke"]
@@ -10,7 +11,7 @@ ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
 Provides a default implementation for the `IDispatch` part of a dual interface.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -83,7 +84,7 @@ By default, the `IDispatchImpl` class looks up the type information for *T* in t
 
 **Header:** atlcom.h
 
-##  <a name="getidsofnames"></a>  IDispatchImpl::GetIDsOfNames
+## <a name="getidsofnames"></a> IDispatchImpl::GetIDsOfNames
 
 Maps a set of names to a corresponding set of dispatch identifiers.
 
@@ -98,9 +99,9 @@ STDMETHOD(GetIDsOfNames)(
 
 ### Remarks
 
-See [IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) in the Windows SDK.
+See [IDispatch::GetIDsOfNames](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) in the Windows SDK.
 
-##  <a name="gettypeinfo"></a>  IDispatchImpl::GetTypeInfo
+## <a name="gettypeinfo"></a> IDispatchImpl::GetTypeInfo
 
 Retrieves the type information for the dual interface.
 
@@ -113,9 +114,9 @@ STDMETHOD(GetTypeInfo)(
 
 ### Remarks
 
-See [IDispatch::GetTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo) in the Windows SDK.
+See [IDispatch::GetTypeInfo](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfo) in the Windows SDK.
 
-##  <a name="gettypeinfocount"></a>  IDispatchImpl::GetTypeInfoCount
+## <a name="gettypeinfocount"></a> IDispatchImpl::GetTypeInfoCount
 
 Determines whether there is type information available for the dual interface.
 
@@ -127,7 +128,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 See `IDispatch::GetTypeInfoCount` in the Windows SDK.
 
-##  <a name="idispatchimpl"></a>  IDispatchImpl::IDispatchImpl
+## <a name="idispatchimpl"></a> IDispatchImpl::IDispatchImpl
 
 The constructor. Calls `AddRef` on the protected member variable that manages the type information for the dual interface. The destructor calls `Release`.
 
@@ -135,7 +136,7 @@ The constructor. Calls `AddRef` on the protected member variable that manages th
 IDispatchImpl();
 ```
 
-##  <a name="invoke"></a>  IDispatchImpl::Invoke
+## <a name="invoke"></a> IDispatchImpl::Invoke
 
 Provides access to the methods and properties exposed by the dual interface.
 
@@ -153,8 +154,8 @@ STDMETHOD(Invoke)(
 
 ### Remarks
 
-See [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) in the Windows SDK.
+See [IDispatch::Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) in the Windows SDK.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

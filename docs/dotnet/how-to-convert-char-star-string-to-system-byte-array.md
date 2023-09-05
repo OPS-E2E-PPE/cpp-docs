@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Convert char * String to System::Byte Array"
 title: "How to: Convert char * String to System::Byte Array"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -11,7 +12,7 @@ The most efficient way to convert a `char *` string to a <xref:System.Byte> arra
 
 ## Example
 
-```
+```cpp
 // convert_native_string_to_Byte_array.cpp
 // compile with: /clr
 #include <string.h>
@@ -41,6 +42,6 @@ int main() {
 Native String
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

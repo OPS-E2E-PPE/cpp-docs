@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3645"
 title: "Compiler Error C3645"
 ms.date: "11/04/2016"
 f1_keywords: ["C3645"]
@@ -15,7 +16,7 @@ The presence of some keywords in a function will cause the function to be compil
 
 The following sample generates C3645.
 
-```
+```cpp
 // C3645.cpp
 // compile with: /clr /c
 #pragma unmanaged

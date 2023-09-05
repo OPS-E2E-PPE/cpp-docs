@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ATL HTTP Utility Functions"
 title: "ATL HTTP Utility Functions"
 ms.date: "11/04/2016"
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
@@ -7,7 +8,7 @@ ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
 
 These functions support manipulation of URLs.
 
-|||
+|Function|Description|
 |-|-|
 |[AtlCanonicalizeUrl](#atlcanonicalizeurl)|Canonicalizes a URL, which includes converting unsafe characters and spaces into escape sequences.|
 |[AtlCombineUrl](#atlcombineurl)|Combines a base URL and a relative URL into a single, canonical URL.|
@@ -15,7 +16,7 @@ These functions support manipulation of URLs.
 |[AtlGetDefaultUrlPort](#atlgetdefaulturlport)|Gets the default port number associated with a particular Internet protocol or scheme.|
 |[AtlIsUnsafeUrlChar](#atlisunsafeurlchar)|Determines whether a character is safe for use in a URL.|
 |[AtlUnescapeUrl](#atlunescapeurl)|Converts escaped characters back to their original values.|
-|[RGBToHtml](#rgbtohtml)|Converts a [COLORREF](/windows/desktop/gdi/colorref) value to the HTML text corresponding to that color value.|
+|[RGBToHtml](#rgbtohtml)|Converts a [COLORREF](/windows/win32/gdi/colorref) value to the HTML text corresponding to that color value.|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|Call this function to convert a system time to a string in a format suitable for using in HTTP headers.|
 
 ## Requirements
@@ -68,11 +69,7 @@ Returns TRUE on success, FALSE on failure.
 
 ### Remarks
 
-Behaves like the current version of [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) but does not require WinInet or Internet Explorer to be installed.
-
-### See Also
-
-[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
+Behaves like the current version of [InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw) but does not require WinInet or Internet Explorer to be installed.
 
 ## <a name="atlcombineurl"></a> AtlCombineUrl
 
@@ -110,7 +107,7 @@ Returns TRUE on success, FALSE on failure.
 
 ### Remarks
 
-Behaves like the current version of [InternetCombineUrl](/windows/desktop/api/wininet/nf-wininet-internetcombineurla) but does not require WinInet or Internet Explorer to be installed.
+Behaves like the current version of [InternetCombineUrl](/windows/win32/api/wininet/nf-wininet-internetcombineurlw) but does not require WinInet or Internet Explorer to be installed.
 
 ## <a name="atlescapeurl"></a> AtlEscapeUrl
 
@@ -157,7 +154,7 @@ Returns TRUE on success, FALSE on failure.
 
 Call this function to get the default port number associated with a particular Internet protocol or scheme.
 
-```
+```cpp
 inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ```
 
@@ -174,7 +171,7 @@ The [ATL_URL_PORT](atl-typedefs.md#atl_url_port) associated with the specified s
 
 Call this function to find out whether a character is safe for use in a URL.
 
-```
+```cpp
 inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ```
 
@@ -233,7 +230,7 @@ Reverses the conversion process applied by [AtlEscapeUrl](#atlescapeurl).
 
 ## <a name="rgbtohtml"></a> RGBToHtml
 
-Converts a [COLORREF](/windows/desktop/gdi/colorref) value to the HTML text corresponding to that color value.
+Converts a [COLORREF](/windows/win32/gdi/colorref) value to the HTML text corresponding to that color value.
 
 ```cpp
 bool inline RGBToHtml(
@@ -277,9 +274,10 @@ inline void SystemTimeToHttpDate(
 The system time to be obtained as an HTTP format string.
 
 *strTime*<br/>
-A reference to a string variable to receive the HTTP date time as defined in RFC 2616 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) and RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt)).
+A reference to a string variable to receive the HTTP date time as defined in RFC 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) and RFC 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)).
 
-## See Also
+## See also
 
-[Concepts](../../atl/active-template-library-atl-concepts.md)<br/>
-[ATL COM Desktop Components](../../atl/atl-com-desktop-components.md)
+[Concepts](../active-template-library-atl-concepts.md)<br/>
+[ATL COM Desktop Components](../atl-com-desktop-components.md)<br/>
+[InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw)

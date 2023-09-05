@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComHeapPtr Class"
 title: "CComHeapPtr Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComHeapPtr", "ATLBASE/ATL::CComHeapPtr", "ATLBASE/ATL::CComHeapPtr::CComHeapPtr"]
@@ -45,7 +46,7 @@ The object type to be stored on the heap.
 
 **Header:** atlbase.h
 
-##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr
+## <a name="ccomheapptr"></a> CComHeapPtr::CComHeapPtr
 
 The constructor.
 
@@ -63,7 +64,7 @@ An existing `CComHeapPtr` object.
 
 The heap pointer can optionally be created using an existing `CComHeapPtr` object. If so, the new `CComHeapPtr` object assumes responsibility for managing the new pointer and resources.
 
-## See Also
+## See also
 
 [CHeapPtr Class](../../atl/reference/cheapptr-class.md)<br/>
 [CHeapPtrBase Class](../../atl/reference/cheapptrbase-class.md)<br/>

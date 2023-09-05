@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2774"
 title: "Compiler Error C2774"
 ms.date: "11/04/2016"
 f1_keywords: ["C2774"]
@@ -13,7 +14,7 @@ A data member declared with [property](../../cpp/property-cpp.md) has no `put` f
 
 The following sample generates C2774:
 
-```
+```cpp
 // C2774.cpp
 struct A {
    __declspec(property(get=GetProp)) int prop;

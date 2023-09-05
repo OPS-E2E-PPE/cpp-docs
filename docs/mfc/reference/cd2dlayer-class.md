@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CD2DLayer Class"
 title: "CD2DLayer Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CD2DLayer", "AFXRENDERTARGET/CD2DLayer", "AFXRENDERTARGET/CD2DLayer::CD2DLayer", "AFXRENDERTARGET/CD2DLayer::Attach", "AFXRENDERTARGET/CD2DLayer::Create", "AFXRENDERTARGET/CD2DLayer::Destroy", "AFXRENDERTARGET/CD2DLayer::Detach", "AFXRENDERTARGET/CD2DLayer::Get", "AFXRENDERTARGET/CD2DLayer::GetSize", "AFXRENDERTARGET/CD2DLayer::IsValid", "AFXRENDERTARGET/CD2DLayer::m_pLayer"]
@@ -60,7 +61,7 @@ class CD2DLayer : public CD2DResource;
 
 **Header:** afxrendertarget.h
 
-##  <a name="_dtorcd2dlayer"></a>  CD2DLayer::~CD2DLayer
+## <a name="_dtorcd2dlayer"></a> CD2DLayer::~CD2DLayer
 
 The destructor. Called when a D2D layer object is being destroyed.
 
@@ -68,11 +69,11 @@ The destructor. Called when a D2D layer object is being destroyed.
 virtual ~CD2DLayer();
 ```
 
-##  <a name="attach"></a>  CD2DLayer::Attach
+## <a name="attach"></a> CD2DLayer::Attach
 
 Attaches existing resource interface to the object
 
-```
+```cpp
 void Attach(ID2D1Layer* pResource);
 ```
 
@@ -81,7 +82,7 @@ void Attach(ID2D1Layer* pResource);
 *pResource*<br/>
 Existing resource interface. Cannot be NULL
 
-##  <a name="cd2dlayer"></a>  CD2DLayer::CD2DLayer
+## <a name="cd2dlayer"></a> CD2DLayer::CD2DLayer
 
 Constructs a CD2DLayer object.
 
@@ -99,7 +100,7 @@ A pointer to the render target.
 *bAutoDestroy*<br/>
 Indicates that the object will be destroyed by owner (pParentTarget).
 
-##  <a name="create"></a>  CD2DLayer::Create
+## <a name="create"></a> CD2DLayer::Create
 
 Creates a CD2DLayer.
 
@@ -116,7 +117,7 @@ A pointer to the render target.
 
 If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.
 
-##  <a name="destroy"></a>  CD2DLayer::Destroy
+## <a name="destroy"></a> CD2DLayer::Destroy
 
 Destroys a CD2DLayer object.
 
@@ -124,7 +125,7 @@ Destroys a CD2DLayer object.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DLayer::Detach
+## <a name="detach"></a> CD2DLayer::Detach
 
 Detaches resource interface from the object
 
@@ -136,7 +137,7 @@ ID2D1Layer* Detach();
 
 Pointer to detached resource interface.
 
-##  <a name="get"></a>  CD2DLayer::Get
+## <a name="get"></a> CD2DLayer::Get
 
 Returns ID2D1Layer interface
 
@@ -148,7 +149,7 @@ ID2D1Layer* Get();
 
 Pointer to an ID2D1Layer interface or NULL if object is not initialized yet.
 
-##  <a name="getsize"></a>  CD2DLayer::GetSize
+## <a name="getsize"></a> CD2DLayer::GetSize
 
 Returns the size of the render target in device-independent pixels
 
@@ -160,7 +161,7 @@ CD2DSizeF GetSize() const;
 
 The current size of the render target in device-independent pixels
 
-##  <a name="isvalid"></a>  CD2DLayer::IsValid
+## <a name="isvalid"></a> CD2DLayer::IsValid
 
 Checks resource validity
 
@@ -172,7 +173,7 @@ virtual BOOL IsValid() const;
 
 TRUE if resource is valid; otherwise FALSE.
 
-##  <a name="m_player"></a>  CD2DLayer::m_pLayer
+## <a name="m_player"></a> CD2DLayer::m_pLayer
 
 Stores a pointer to an ID2D1Layer object.
 
@@ -180,7 +181,7 @@ Stores a pointer to an ID2D1Layer object.
 ID2D1Layer* m_pLayer;
 ```
 
-##  <a name="operator_id2d1layer_star"></a>  CD2DLayer::operator ID2D1Layer*
+## <a name="operator_id2d1layer_star"></a> CD2DLayer::operator ID2D1Layer*
 
 Returns ID2D1Layer interface
 
@@ -192,6 +193,6 @@ operator ID2D1Layer* ();
 
 Pointer to an ID2D1Layer interface or NULL if object is not initialized yet.
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

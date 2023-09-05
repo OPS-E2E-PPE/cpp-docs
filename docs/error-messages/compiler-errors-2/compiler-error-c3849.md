@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3849"
 title: "Compiler Error C3849"
 ms.date: "11/04/2016"
 f1_keywords: ["C3849"]
@@ -15,7 +16,7 @@ To fix this error, provide an appropriate member function. You cannot execute a 
 
 The following samples generate C3849:
 
-```
+```cpp
 // C3849.cpp
 void glbFunc3(int i, char c)
 {

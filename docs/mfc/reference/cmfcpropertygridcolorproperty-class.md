@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCPropertyGridColorProperty Class"
 title: "CMFCPropertyGridColorProperty Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCPropertyGridColorProperty", "AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty", "AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty", "AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::EnableAutomaticButton", "AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::EnableOtherButton", "AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::GetColor", "AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetColor", "AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetColumnsNumber", "AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetOriginalValue"]
@@ -47,7 +48,7 @@ The `CMFCPropertyGridColorProperty` class supports a color property that can be 
 
 ## Example
 
-The following example demonstrates how to construct an object of the `CMFCPropertyGridColorProperty` class and configure this object by using various methods of the `CMFCPropertyGridColorProperty` class. The code explains how to enable the automatic and other buttons, and how to set the color and the columns number. This example is part of the [New Controls sample](../../visual-cpp-samples.md).
+The following example demonstrates how to construct an object of the `CMFCPropertyGridColorProperty` class and configure this object by using various methods of the `CMFCPropertyGridColorProperty` class. The code explains how to enable the automatic and other buttons, and how to set the color and the columns number. This example is part of the [New Controls sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#13](../../mfc/reference/codesnippet/cpp/cmfcpropertygridcolorproperty-class_1.cpp)]
 
@@ -63,7 +64,7 @@ The following example demonstrates how to construct an object of the `CMFCProper
 
 **Header:** afxpropertygridctrl.h
 
-##  <a name="cmfcpropertygridcolorproperty"></a>  CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty
+## <a name="cmfcpropertygridcolorproperty"></a> CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty
 
 Constructs a `CMFCPropertyGridColorProperty` object.
 
@@ -93,11 +94,11 @@ CMFCPropertyGridColorProperty(
 *dwData*<br/>
 [in] Application-specific data, such as an integer or a pointer to other data that is associated with the property. The default value is 0.
 
-##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton
+## <a name="enableautomaticbutton"></a> CMFCPropertyGridColorProperty::EnableAutomaticButton
 
 Enables the *automatic* button on the color selection dialog box. (The standard automatic button is labeled **Automatic**.)
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -117,11 +118,11 @@ void EnableAutomaticButton(
 
 ### Remarks
 
-##  <a name="enableotherbutton"></a>  CMFCPropertyGridColorProperty::EnableOtherButton
+## <a name="enableotherbutton"></a> CMFCPropertyGridColorProperty::EnableOtherButton
 
 Enables the *other* button on the color selection dialog box. (The standard other button is labeled **More Colors**.)
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg = TRUE,
@@ -141,7 +142,7 @@ void EnableOtherButton(
 
 ### Remarks
 
-##  <a name="getcolor"></a>  CMFCPropertyGridColorProperty::GetColor
+## <a name="getcolor"></a> CMFCPropertyGridColorProperty::GetColor
 
 Gets the current color of the property.
 
@@ -155,11 +156,11 @@ An RGB color value.
 
 ### Remarks
 
-##  <a name="setcolor"></a>  CMFCPropertyGridColorProperty::SetColor
+## <a name="setcolor"></a> CMFCPropertyGridColorProperty::SetColor
 
 Sets a new color for the property.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -170,11 +171,11 @@ void SetColor(COLORREF color);
 
 ### Remarks
 
-##  <a name="setcolumnsnumber"></a>  CMFCPropertyGridColorProperty::SetColumnsNumber
+## <a name="setcolumnsnumber"></a> CMFCPropertyGridColorProperty::SetColumnsNumber
 
 Specifies the number of columns in the current color property grid.
 
-```
+```cpp
 void SetColumnsNumber(int nColumnsNumber);
 ```
 
@@ -187,7 +188,7 @@ void SetColumnsNumber(int nColumnsNumber);
 
 This method sets the value of the `m_nColumnsNumber` protected data member.
 
-##  <a name="setoriginalvalue"></a>  CMFCPropertyGridColorProperty::SetOriginalValue
+## <a name="setoriginalvalue"></a> CMFCPropertyGridColorProperty::SetOriginalValue
 
 Sets the original value of an editable property.
 
@@ -204,7 +205,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 
 Use the [CMFCPropertyGridProperty::ResetOriginalValue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) method to reset the original value of an edited property.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

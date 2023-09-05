@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: com::ptr"
 title: "com::ptr"
 ms.date: "11/04/2016"
 ms.topic: "reference"
-f1_keywords: ["ptr"]
+f1_keywords: ["msclr/com/com::ptr"]
 helpviewer_keywords: ["com::ptr"]
 ms.assetid: ee302e3c-8fed-4875-a372-2e55003718d3
 ---
@@ -20,6 +21,6 @@ A wrapper for a COM object that can be used as a member of a CLR class. The wrap
 
 [com::ptr Class](../dotnet/com-ptr-class.md) is defined in the \<msclr\com\ptr.h> file.
 
-## See Also
+## See also
 
 [C++ Support Library](../dotnet/cpp-support-library.md)

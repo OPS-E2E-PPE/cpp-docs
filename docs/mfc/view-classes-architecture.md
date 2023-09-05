@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: View Classes (Architecture)"
 title: "View Classes (Architecture)"
-ms.date: "11/04/2016"
-f1_keywords: ["vc.classes.view"]
+ms.date: "09/17/2019"
 helpviewer_keywords: ["form and record views [MFC]", "view classes [MFC]", "control views [MFC]", "view classes [MFC], architecture"]
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
 ---
@@ -27,7 +27,7 @@ Record views are derived from form views. In addition to the dialog box template
 A scroll view whose layout is defined in a dialog box template. Derive a class from `CFormView` to implement a user interface based on a dialog box template.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Provides a form view directly connected to a Data Access Object (DAO) recordset object. Like all form views, a `CDaoRecordView` is based on a dialog box template.
+Provides a form view directly connected to a Data Access Object (DAO) recordset object. Like all form views, a `CDaoRecordView` is based on a dialog box template. DAO is used with Access databases and is supported through Office 2013. DAO 3.6 is the final version, and it is considered obsolete.
 
 [CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
 Supports a control for Web browsing within an application. The control supports dynamic HTML in MFC.
@@ -57,7 +57,6 @@ A view that contains a Windows list control (see [CListCtrl](../mfc/reference/cl
 [CTreeView](../mfc/reference/ctreeview-class.md)<br/>
 A view that contains a Windows tree control (see [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). A tree control displays icons and strings arranged in a hierarchy in a manner similar to the left pane of File Explorer.
 
-## See Also
+## See also
 
 [Class Overview](../mfc/class-library-overview.md)
-

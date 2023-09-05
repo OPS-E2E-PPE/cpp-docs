@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CNoMultipleResults Class"
 title: "CNoMultipleResults Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CNoMultipleResults", "ATL.CNoMultipleResults", "ATL::CNoMultipleResults"]
@@ -23,7 +24,7 @@ If you want a command to handle multiple result sets, use [CMultipleResults](../
 
 **Header:** atldbcli.h
 
-## See Also
+## See also
 
 [OLE DB Consumer Templates](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB Consumer Templates Reference](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2011"
 title: "Compiler Error C2011"
 ms.date: "11/04/2016"
 f1_keywords: ["C2011"]
@@ -17,7 +18,7 @@ If you need to find the initial declaration of the redefined type, you can use t
 
 The following sample generates C2011 and shows one way to fix it:
 
-```
+```cpp
 // C2011.cpp
 // compile with: /c
 struct S;

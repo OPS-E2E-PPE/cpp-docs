@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4286"
 title: "Compiler Warning (level 1) C4286"
 ms.date: "11/04/2016"
 f1_keywords: ["C4286"]
@@ -13,7 +14,7 @@ The specified exception type is handled by a previous handler. The type for the 
 
 ## Example
 
-```
+```cpp
 //C4286.cpp
 // compile with: /W1
 #include <eh.h>

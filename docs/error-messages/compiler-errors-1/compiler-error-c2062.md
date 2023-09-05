@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2062"
 title: "Compiler Error C2062"
 ms.date: "11/04/2016"
 f1_keywords: ["C2062"]
@@ -13,7 +14,7 @@ The compiler did not expect a type name.
 
 The following sample generates C2062:
 
-```
+```cpp
 // C2062.cpp
 // compile with: /c
 struct A {  : int l; };   // C2062

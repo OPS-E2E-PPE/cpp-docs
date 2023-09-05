@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2227"
 title: "Compiler Error C2227"
 ms.date: "11/04/2016"
 f1_keywords: ["C2227"]
@@ -13,7 +14,7 @@ The operand to the left of `->` is not a pointer to a class, structure, or union
 
 The following sample generates C2227:
 
-```
+```cpp
 // C2227.cpp
 int *pInt;
 struct S {

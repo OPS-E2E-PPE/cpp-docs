@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2890"
 title: "Compiler Error C2890"
 ms.date: "11/04/2016"
 f1_keywords: ["C2890"]
@@ -13,7 +14,7 @@ A reference class can only have one base class.
 
 The following sample generates C2890:
 
-```
+```cpp
 // C2890.cpp
 // compile with: /clr /c
 ref class A {};

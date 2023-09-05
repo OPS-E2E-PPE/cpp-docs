@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Truncation of Text Files"
 title: "Truncation of Text Files"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["text files", "text files, truncation"]
@@ -10,6 +11,6 @@ ms.assetid: 238307b3-c580-4280-ac6f-51345a2365bc
 
 Writing to a text stream does not truncate the file beyond that point.
 
-## See Also
+## See also
 
 [Library Functions](../c-language/library-functions.md)

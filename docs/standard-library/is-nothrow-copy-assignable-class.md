@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_nothrow_copy_assignable Class"
 title: "is_nothrow_copy_assignable Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_nothrow_copy_assignable"]
@@ -18,7 +19,7 @@ struct is_nothrow_copy_assignable;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to query.
 
 ## Remarks
@@ -33,5 +34,5 @@ An instance of the type predicate holds true for a referenceable type *T* where 
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_nothrow_assignable Class](../standard-library/is-nothrow-assignable-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_nothrow_assignable Class](../standard-library/is-nothrow-assignable-class.md)

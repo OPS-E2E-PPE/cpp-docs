@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Dynaset"
 title: "Dynaset"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ODBC recordsets, dynasets", "ODBC cursor library [ODBC], dynasets", "keyset-driven cursors in dynasets", "cursors [ODBC], keyset-driven cursors in dynasets", "cursor library [ODBC], dynaset availability", "recordsets [C++], dynasets", "dynasets"]
@@ -9,7 +10,7 @@ ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
 This topic describes dynasets and discusses their [availability](#_core_availability_of_dynasets).
 
 > [!NOTE]
->  This topic applies to the MFC ODBC classes, including [CRecordset](../../mfc/reference/crecordset-class.md). For information about dynasets in the DAO classes, see [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md). With DAO, you can open dynaset-type recordsets.
+> This topic applies to the MFC ODBC classes, including [CRecordset](../../mfc/reference/crecordset-class.md). For information about dynasets in the DAO classes, see [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md). With DAO, you can open dynaset-type recordsets.
 
 A dynaset is a recordset with dynamic properties. During its lifetime, a recordset object in dynaset mode (usually called a dynaset) stays synchronized with the data source in the following way. In a multiuser environment, other users might edit or delete records that are in your dynaset or add records to the table your dynaset represents. Records your application adds to or deletes from the recordset are reflected in your dynaset. Records that other users add to the table will not be reflected in your dynaset until you rebuild the dynaset by calling its `Requery` member function. When other users delete records, MFC code skips over the deletions in your recordset. Other users' editing changes to existing records are reflected in your dynaset as soon as you scroll to the affected record.
 
@@ -25,7 +26,7 @@ To specify that a recordset is a dynaset, pass `CRecordset::dynaset` as the firs
 > [!NOTE]
 > For updatable dynasets, your ODBC driver must support either positioned update statements or the `::SQLSetPos` ODBC API function. If both are supported, MFC uses `::SQLSetPos` for efficiency.
 
-##  <a name="_core_availability_of_dynasets"></a> Availability of Dynasets
+## <a name="_core_availability_of_dynasets"></a> Availability of Dynasets
 
 The MFC database classes support dynasets if the following requirements are met:
 
@@ -58,6 +59,6 @@ Unlike snapshots, which use intermediate storage maintained by the ODBC cursor l
 
 For a list of ODBC drivers included in this version of Visual C++ and for information about obtaining additional drivers, see [ODBC Driver List](../../data/odbc/odbc-driver-list.md).
 
-## See Also
+## See also
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

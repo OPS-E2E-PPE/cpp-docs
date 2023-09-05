@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CGopherFile Class"
 title: "CGopherFile Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CGopherFile", "AFXINET/CGopherFile", "AFXINET/CGopherFile::CGopherFile"]
@@ -10,7 +11,7 @@ ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
 Provides the functionality to find and read files on a gopher server.
 
 > [!NOTE]
->  The classes `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` and their members have been deprecated because they do not work on the Windows XP platform, but they will continue to work on earlier platforms.
+> The classes `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` and their members have been deprecated because they do not work on the Windows XP platform, but they will continue to work on earlier platforms.
 
 ## Syntax
 
@@ -48,7 +49,7 @@ To learn more about how `CGopherFile` works with the other MFC Internet classes,
 
 **Header:** afxinet.h
 
-##  <a name="cgopherfile"></a>  CGopherFile::CGopherFile
+## <a name="cgopherfile"></a> CGopherFile::CGopherFile
 
 This member function is called to construct a `CGopherFile` object.
 
@@ -95,7 +96,7 @@ You need a `CGopherFile` object to read from a file during a gopher Internet ses
 
 You never create a `CGopherFile` object directly. Instead, call [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) to open a file on a gopher server.
 
-## See Also
+## See also
 
 [CInternetFile Class](../../mfc/reference/cinternetfile-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

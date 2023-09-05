@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CFontHolder Class"
 title: "CFontHolder Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CFontHolder", "AFXCTL/CFontHolder", "AFXCTL/CFontHolder::CFontHolder", "AFXCTL/CFontHolder::GetDisplayString", "AFXCTL/CFontHolder::GetFontDispatch", "AFXCTL/CFontHolder::GetFontHandle", "AFXCTL/CFontHolder::InitializeFont", "AFXCTL/CFontHolder::QueryTextMetrics", "AFXCTL/CFontHolder::ReleaseFont", "AFXCTL/CFontHolder::Select", "AFXCTL/CFontHolder::SetFont", "AFXCTL/CFontHolder::m_pFont"]
@@ -56,7 +57,7 @@ Use this class to implement custom font properties for your control. For informa
 
 **Header:** afxctl.h
 
-##  <a name="cfontholder"></a>  CFontHolder::CFontHolder
+## <a name="cfontholder"></a> CFontHolder::CFontHolder
 
 Constructs a `CFontHolder` object.
 
@@ -73,7 +74,7 @@ Pointer to the font's `IPropertyNotifySink` interface.
 
 You must call `InitializeFont` to initialize the resulting object before using it.
 
-##  <a name="getdisplaystring"></a>  CFontHolder::GetDisplayString
+## <a name="getdisplaystring"></a> CFontHolder::GetDisplayString
 
 Retrieves a string that can be displayed in a container's property browser.
 
@@ -90,7 +91,7 @@ Reference to the [CString](../../atl-mfc-shared/reference/cstringt-class.md) tha
 
 Nonzero if the string is successfully retrieved; otherwise 0.
 
-##  <a name="getfontdispatch"></a>  CFontHolder::GetFontDispatch
+## <a name="getfontdispatch"></a> CFontHolder::GetFontDispatch
 
 Call this function to retrieve a pointer to the font's dispatch interface.
 
@@ -106,7 +107,7 @@ A pointer to the `CFontHolder` object's `IFontDisp` interface. Note that the fun
 
 Call `InitializeFont` before calling `GetFontDispatch`.
 
-##  <a name="getfonthandle"></a>  CFontHolder::GetFontHandle
+## <a name="getfonthandle"></a> CFontHolder::GetFontHandle
 
 Call this function to get a handle to a Windows font.
 
@@ -138,11 +139,11 @@ Display size = ( *cyLogical* / *cyHimetric*) X font size
 
 The version with no parameters returns a handle to a font sized correctly for the screen.
 
-##  <a name="initializefont"></a>  CFontHolder::InitializeFont
+## <a name="initializefont"></a> CFontHolder::InitializeFont
 
 Initializes a `CFontHolder` object.
 
-```
+```cpp
 void InitializeFont(
     const FONTDESC* pFontDesc = NULL,
     LPDISPATCH pFontDispAmbient = NULL);
@@ -151,7 +152,7 @@ void InitializeFont(
 ### Parameters
 
 *pFontDesc*<br/>
-Pointer to a font description structure ( [FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc)) that specifies the font's characteristics.
+Pointer to a font description structure ( [FONTDESC](/windows/win32/api/olectl/ns-olectl-fontdesc)) that specifies the font's characteristics.
 
 *pFontDispAmbient*<br/>
 Pointer to the container's ambient Font property.
@@ -164,7 +165,7 @@ If *pFontDispAmbient* is NULL, a new Font object is created either from the font
 
 Call this function after constructing a `CFontHolder` object.
 
-##  <a name="m_pfont"></a>  CFontHolder::m_pFont
+## <a name="m_pfont"></a> CFontHolder::m_pFont
 
 A pointer to the `CFontHolder` object's `IFont` interface.
 
@@ -172,28 +173,28 @@ A pointer to the `CFontHolder` object's `IFont` interface.
 LPFONT m_pFont;
 ```
 
-##  <a name="querytextmetrics"></a>  CFontHolder::QueryTextMetrics
+## <a name="querytextmetrics"></a> CFontHolder::QueryTextMetrics
 
 Retrieves information on the physical font represented by the `CFontHolder` object.
 
-```
+```cpp
 void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```
 
 ### Parameters
 
 *lptm*<br/>
-A pointer to a [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) structure that will receive the information.
+A pointer to a [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) structure that will receive the information.
 
-##  <a name="releasefont"></a>  CFontHolder::ReleaseFont
+## <a name="releasefont"></a> CFontHolder::ReleaseFont
 
 This function disconnects the `CFontHolder` object from its `IFont` interface.
 
-```
+```cpp
 void ReleaseFont();
 ```
 
-##  <a name="select"></a>  CFontHolder::Select
+## <a name="select"></a> CFontHolder::Select
 
 Call this function to select your control's font into the specified device context.
 
@@ -223,11 +224,11 @@ A pointer to the font that is being replaced.
 
 See [GetFontHandle](#getfonthandle) for a discussion of the *cyLogical* and *cyHimetric* parameters.
 
-##  <a name="setfont"></a>  CFontHolder::SetFont
+## <a name="setfont"></a> CFontHolder::SetFont
 
 Releases any existing font and connects the `CFontHolder` object to an `IFont` interface.
 
-```
+```cpp
 void SetFont(LPFONT pNewFont);
 ```
 
@@ -236,7 +237,7 @@ void SetFont(LPFONT pNewFont);
 *pNewFont*<br/>
 Pointer to the new `IFont` interface.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CPropExchange Class](../../mfc/reference/cpropexchange-class.md)

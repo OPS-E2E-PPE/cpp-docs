@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CListView Class"
 title: "CListView Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CListView", "AFXCVIEW/CListView", "AFXCVIEW/CListView::CListView", "AFXCVIEW/CListView::GetListCtrl", "AFXCVIEW/CListView::RemoveImageList"]
@@ -57,7 +58,7 @@ For more information on this architecture, see the overview for the [CView](../.
 
 **Header:** afxcview.h
 
-##  <a name="clistview"></a>  CListView::CListView
+## <a name="clistview"></a> CListView::CListView
 
 Constructs a `CListView` object.
 
@@ -65,7 +66,7 @@ Constructs a `CListView` object.
 CListView();
 ```
 
-##  <a name="getlistctrl"></a>  CListView::GetListCtrl
+## <a name="getlistctrl"></a> CListView::GetListCtrl
 
 Call this member function to get a reference to the list control associated with the view.
 
@@ -81,11 +82,11 @@ A reference to the list control associated with the view.
 
 [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]
 
-##  <a name="removeimagelist"></a>  CListView::RemoveImageList
+## <a name="removeimagelist"></a> CListView::RemoveImageList
 
 Removes the specified image list from the list view.
 
-```
+```cpp
 void RemoveImageList(int nImageList);
 ```
 
@@ -94,9 +95,9 @@ void RemoveImageList(int nImageList);
 *nImageList*<br/>
 The zero-based index of the image to remove.
 
-## See Also
+## See also
 
-[MFC Sample ROWLIST](../../visual-cpp-samples.md)<br/>
+[MFC Sample ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView Class](../../mfc/reference/cctrlview-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CCtrlView Class](../../mfc/reference/cctrlview-class.md)

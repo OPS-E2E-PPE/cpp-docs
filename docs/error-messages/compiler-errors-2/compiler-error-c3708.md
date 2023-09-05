@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3708"
 title: "Compiler Error C3708"
 ms.date: "11/04/2016"
 f1_keywords: ["C3708"]
@@ -13,7 +14,7 @@ To declare an interface as an event, the event declaration must be in an event s
 
 The following sample generates C3708:
 
-```
+```cpp
 // C3708.cpp
 // compile with: /c
 #define _ATL_ATTRIBUTES 1

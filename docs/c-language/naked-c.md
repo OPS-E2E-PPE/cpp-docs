@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Naked (C)"
 title: "Naked (C)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["naked keyword [C], storage-class attribute", "naked keyword [C]", "prolog code", "epilog code"]
@@ -14,6 +15,6 @@ For specific information about using the naked attribute, see [Naked Functions](
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
 [C Extended Storage-Class Attributes](../c-language/c-extended-storage-class-attributes.md)

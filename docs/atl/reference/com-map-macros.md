@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: COM Map Macros"
 title: "COM Map Macros"
 ms.date: "11/04/2016"
-f1_keywords: ["atlcom/ATL::BEGIN_COM_MAP", "atlcom/ATL::END_COM_MAP"]
+f1_keywords: ["atlcom/ATL::BEGIN_COM_MAP", "atlcom/ATL::END_COM_MAP", "ATLCOM/BEGIN_COM_MAP", "ATLCOM/END_COM_MAP"]
 helpviewer_keywords: ["COM interfaces, COM map macros"]
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
 ---
@@ -9,7 +10,7 @@ ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
 
 These macros define COM interface maps.
 
-|||
+|Macro|Description|
 |-|-|
 |[BEGIN_COM_MAP](#begin_com_map)|Marks the beginning of the COM interface map entries.|
 |[END_COM_MAP](#end_com_map)|Marks the end of the COM interface map entries.|
@@ -18,7 +19,7 @@ These macros define COM interface maps.
 
 **Header:** atlcom.h
 
-##  <a name="begin_com_map"></a>  BEGIN_COM_MAP
+## <a name="begin_com_map"></a> BEGIN_COM_MAP
 
 The COM map is the mechanism that exposes interfaces on an object to a client through `QueryInterface`.
 
@@ -37,11 +38,11 @@ BEGIN_COM_MAP(x)
 
 ### Example
 
-From the ATL [BEEPER](../../visual-cpp-samples.md) sample:
+From the ATL [BEEPER](../../overview/visual-cpp-samples.md) sample:
 
 [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]
 
-##  <a name="end_com_map"></a>  END_COM_MAP
+## <a name="end_com_map"></a> END_COM_MAP
 
 Ends the definition of your COM interface map.
 
@@ -49,7 +50,7 @@ Ends the definition of your COM interface map.
 END_COM_MAP()
 ```
 
-## See Also
+## See also
 
 [Macros](../../atl/reference/atl-macros.md)<br/>
 [COM Map Global Functions](../../atl/reference/com-map-global-functions.md)

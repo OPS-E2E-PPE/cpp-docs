@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: /H (Restrict Length of External Names)"
 title: "/H (Restrict Length of External Names)"
 ms.date: "09/05/2018"
 f1_keywords: ["/h"]
@@ -26,9 +27,9 @@ If a program contains external names longer than *number*, the extra characters 
 
 The limit on length includes any compiler-created leading underscore (**\_**) or at sign (**\@**). These characters are part of the identifier and take a significant location.
 
-- The compiler adds a leading underscore (**\_**) to names modified by the `__cdecl` (default) and `__stdcall` calling conventions, and a leading at sign (**\@**) to names modified by the `__fastcall` calling convention.
+- The compiler adds a leading underscore (**\_**) to names modified by the **`__cdecl`** (default) and **`__stdcall`** calling conventions, and a leading at sign (**\@**) to names modified by the **`__fastcall`** calling convention.
 
-- The compiler appends argument size information to names modified by the `__fastcall` and `__stdcall` calling conventions, and adds type information to C++ names.
+- The compiler appends argument size information to names modified by the **`__fastcall`** and **`__stdcall`** calling conventions, and adds type information to C++ names.
 
 You may find **/H** useful:
 
@@ -56,13 +57,13 @@ void func2(void) {}
 
 You must also be careful when using the **/H** option because of predefined compiler identifiers. If the maximum identifier length is too small, certain predefined identifiers will be unresolved as well as certain library function calls. For example, if the `printf` function is used and the option **/H5** is specified at compile time, the symbol **_prin** will be created in order to reference `printf`, and this will not be found in the library.
 
-Use of **/H** is incompatible with [/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md).
+Use of **/H** is incompatible with [/GL (Whole Program Optimization)](gl-whole-program-optimization.md).
 
-The **/H** option is deprecated since Visual Studio 2005; the maximum length limits have been increased and **/H** is no longer needed. For a list of deprecated compiler options, see **Deprecated and Removed Compiler Options** in [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).
+The **/H** option is deprecated since Visual Studio 2005; the maximum length limits have been increased and **/H** is no longer needed. For a list of deprecated compiler options, see **Deprecated and Removed Compiler Options** in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
 ### To set this compiler option in the Visual Studio development environment
 
-1. Open the project's **Property Pages** dialog box. For details, see [Working with Project Properties](../../ide/working-with-project-properties.md).
+1. Open the project's **Property Pages** dialog box. For details, see [Set C++ compiler and build properties in Visual Studio](../working-with-project-properties.md).
 
 1. Select the **Configuration Properties** > **C/C++** > **Command Line** property page.
 
@@ -72,7 +73,7 @@ The **/H** option is deprecated since Visual Studio 2005; the maximum length lim
 
 - See <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## See Also
+## See also
 
-[Compiler Options](../../build/reference/compiler-options.md)<br/>
-[Setting Compiler Options](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[MSVC Compiler Command-Line Syntax](compiler-command-line-syntax.md)

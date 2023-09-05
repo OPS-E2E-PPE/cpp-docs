@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: TN042: ODBC Driver Developer Recommendations"
 title: "TN042: ODBC Driver Developer Recommendations"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.odbc"]
@@ -8,7 +9,7 @@ ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
 # TN042: ODBC Driver Developer Recommendations
 
 > [!NOTE]
->  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.
+> The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.
 
 This note describes guidelines for ODBC driver writers. It outlines general requirements and assumptions of ODBC functionality that the MFC Database classes make, and various expected semantic details. Required driver functionality to support the three `CRecordset` Open modes (**forwardOnly**, **snapshot** and **dynaset**) are described.
 
@@ -106,8 +107,7 @@ Below is the minimum support required to open a dynaset:
 
 In addition, if pessimistic locking is requested, a call to `SQLSetPos` with irow 1, fRefresh FALSE and fLock **SQL_LCK_EXCLUSIVE** will be made.
 
-## See Also
+## See also
 
 [Technical Notes by Number](../mfc/technical-notes-by-number.md)<br/>
 [Technical Notes by Category](../mfc/technical-notes-by-category.md)
-

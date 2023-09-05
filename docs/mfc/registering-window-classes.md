@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Registering Window Classes"
 title: "Registering Window Classes"
 ms.date: "11/04/2016"
 f1_keywords: ["WndProc"]
@@ -19,7 +20,6 @@ In contrast, most window class registration activity is done automatically in an
 
 For more information, see [Technical Note 1](../mfc/tn001-window-class-registration.md).
 
-## See Also
+## See also
 
 [Creating Windows](../mfc/creating-windows.md)
-

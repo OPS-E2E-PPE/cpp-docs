@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComAggObject Class"
 title: "CComAggObject Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComAggObject", "ATLCOM/ATL::CComAggObject", "ATLCOM/ATL::CComAggObject::CComAggObject", "ATLCOM/ATL::CComAggObject::AddRef", "ATLCOM/ATL::CComAggObject::CreateInstance", "ATLCOM/ATL::CComAggObject::FinalConstruct", "ATLCOM/ATL::CComAggObject::FinalRelease", "ATLCOM/ATL::CComAggObject::QueryInterface", "ATLCOM/ATL::CComAggObject::Release", "ATLCOM/ATL::CComAggObject::m_contained"]
@@ -7,7 +8,7 @@ ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
 ---
 # CComAggObject Class
 
-This class implements the [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) interface for an aggregated object. By definition, an aggregated object is contained within an outer object. The `CComAggObject` class is similar to the [CComObject Class](../../atl/reference/ccomobject-class.md), except that it exposes an interface that is directly accessible to external clients.
+This class implements the [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) interface for an aggregated object. By definition, an aggregated object is contained within an outer object. The `CComAggObject` class is similar to the [CComObject Class](../../atl/reference/ccomobject-class.md), except that it exposes an interface that is directly accessible to external clients.
 
 ## Syntax
 
@@ -36,7 +37,7 @@ Your class, derived from [CComObjectRoot](../../atl/reference/ccomobjectroot-cla
 |Name|Description|
 |----------|-----------------|
 |[CComAggObject::AddRef](#addref)|Increments the reference count on the aggregated object.|
-|[CComAggObject::CreateInstance](#createinstance)|This static function allows you to create a new **CComAggObject<** `contained` **>** object without the overhead of [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|
+|[CComAggObject::CreateInstance](#createinstance)|This static function allows you to create a new **CComAggObject<** `contained` **>** object without the overhead of [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).|
 |[CComAggObject::FinalConstruct](#finalconstruct)|Performs final initialization of `m_contained`.|
 |[CComAggObject::FinalRelease](#finalrelease)|Performs final destruction of `m_contained`.|
 |[CComAggObject::QueryInterface](#queryinterface)|Retrieves a pointer to the requested interface.|
@@ -50,7 +51,7 @@ Your class, derived from [CComObjectRoot](../../atl/reference/ccomobjectroot-cla
 
 ## Remarks
 
-`CComAggObject` implements [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) for an aggregated object. `CComAggObject` has its own `IUnknown` interface, separate from the outer object's `IUnknown` interface, and maintains its own reference count.
+`CComAggObject` implements [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) for an aggregated object. `CComAggObject` has its own `IUnknown` interface, separate from the outer object's `IUnknown` interface, and maintains its own reference count.
 
 For more information about aggregation, see the article [Fundamentals of ATL COM Objects](../../atl/fundamentals-of-atl-com-objects.md).
 
@@ -68,7 +69,7 @@ For more information about aggregation, see the article [Fundamentals of ATL COM
 
 **Header:** atlcom.h
 
-##  <a name="addref"></a>  CComAggObject::AddRef
+## <a name="addref"></a> CComAggObject::AddRef
 
 Increments the reference count on the aggregated object.
 
@@ -80,7 +81,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 A value that may be useful for diagnostics or testing.
 
-##  <a name="ccomaggobject"></a>  CComAggObject::CComAggObject
+## <a name="ccomaggobject"></a> CComAggObject::CComAggObject
 
 The constructor.
 
@@ -99,7 +100,7 @@ Initializes the `CComContainedObject` member, [m_contained](#m_contained), and i
 
 The destructor decrements the module lock count.
 
-##  <a name="dtor"></a>  CComAggObject::~CComAggObject
+## <a name="dtor"></a> CComAggObject::~CComAggObject
 
 The destructor.
 
@@ -111,9 +112,9 @@ The destructor.
 
 Frees all allocated resources, calls [FinalRelease](#finalrelease), and decrements the module lock count.
 
-##  <a name="createinstance"></a>  CComAggObject::CreateInstance
+## <a name="createinstance"></a> CComAggObject::CreateInstance
 
-This static function allows you to create a new **CComAggObject<**`contained` **>** object without the overhead of [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+This static function allows you to create a new **CComAggObject<**`contained` **>** object without the overhead of [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
 ```
 static HRESULT WINAPI CreateInstance(
@@ -136,7 +137,7 @@ The object returned has a reference count of zero, so call `AddRef` immediately,
 
 If you do not need direct access to the object, but still want to create a new object without the overhead of `CoCreateInstance`, use [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) instead.
 
-##  <a name="finalconstruct"></a>  CComAggObject::FinalConstruct
+## <a name="finalconstruct"></a> CComAggObject::FinalConstruct
 
 Called during the final stages of object construction, this method performs any final initialization on the [m_contained](#m_contained) member.
 
@@ -148,15 +149,15 @@ HRESULT FinalConstruct();
 
 A standard HRESULT value.
 
-##  <a name="finalrelease"></a>  CComAggObject::FinalRelease
+## <a name="finalrelease"></a> CComAggObject::FinalRelease
 
 Called during object destruction, this method frees the [m_contained](#m_contained) member.
 
-```
+```cpp
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>  CComAggObject::m_contained
+## <a name="m_contained"></a> CComAggObject::m_contained
 
 A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) object derived from your class.
 
@@ -173,7 +174,7 @@ CComContainedObject<contained> m_contained;
 
 All `IUnknown` calls through `m_contained` are delegated to the outer unknown.
 
-##  <a name="queryinterface"></a>  CComAggObject::QueryInterface
+## <a name="queryinterface"></a> CComAggObject::QueryInterface
 
 Retrieves a pointer to the requested interface.
 
@@ -202,7 +203,7 @@ A standard HRESULT value.
 
 If the requested interface is `IUnknown`, `QueryInterface` returns a pointer to the aggregated object's own `IUnknown` and increments the reference count. Otherwise, this method queries for the interface through the `CComContainedObject` member, [m_contained](#m_contained).
 
-##  <a name="release"></a>  CComAggObject::Release
+## <a name="release"></a> CComAggObject::Release
 
 Decrements the reference count on the aggregated object.
 
@@ -214,7 +215,7 @@ STDMETHOD_(ULONG, Release)();
 
 In debug builds, `Release` returns a value that may be useful for diagnostics or testing. In non-debug builds, `Release` always returns 0.
 
-## See Also
+## See also
 
 [CComObject Class](../../atl/reference/ccomobject-class.md)<br/>
 [CComPolyObject Class](../../atl/reference/ccompolyobject-class.md)<br/>

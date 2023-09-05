@@ -1,6 +1,9 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4437"
 title: "Compiler Warning (level 4) C4437"
 ms.date: "11/04/2016"
+f1_keywords: ["C4437"]
+helpviewer_keywords: ["C4437"]
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
 ---
 # Compiler Warning (level 4) C4437
@@ -9,7 +12,7 @@ dynamic_cast from virtual base 'class1' to 'class2' could fail in some contexts 
 
 This warning is off by default. See [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md) for more information.
 
-The compiler has encountered a `dynamic_cast` operation with the following characteristics.
+The compiler has encountered a **`dynamic_cast`** operation with the following characteristics.
 
 - The cast is from a base class pointer to a derived class pointer.
 
@@ -19,7 +22,7 @@ The compiler has encountered a `dynamic_cast` operation with the following chara
 
 - The cast is not found in a constructor or destructor of the derived class, or some class which further inherits from the derived class (otherwise, compiler warning C4436 will be issued).
 
-The warning indicates that the `dynamic_cast` might not perform correctly if it is operating on a partially-constructed object.  This situation occurs when the enclosing function is called from a constructor or destructor of a class that inherits the derived class that is named in the warning.  If the derived class that is named in the warning is never further derived, or the enclosing function is not called during object construction or destruction, the warning can be ignored.
+The warning indicates that the **`dynamic_cast`** might not perform correctly if it is operating on a partially-constructed object.  This situation occurs when the enclosing function is called from a constructor or destructor of a class that inherits the derived class that is named in the warning.  If the derived class that is named in the warning is never further derived, or the enclosing function is not called during object construction or destruction, the warning can be ignored.
 
 ## Example
 
@@ -71,7 +74,7 @@ int main()
 }
 ```
 
-## See Also
+## See also
 
 [dynamic_cast Operator](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>

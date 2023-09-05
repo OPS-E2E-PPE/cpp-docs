@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: TN065: Dual-Interface Support for OLE Automation Servers"
 title: "TN065: Dual-Interface Support for OLE Automation Servers"
 ms.date: "06/28/2018"
 f1_keywords: ["vc.ole"]
@@ -10,7 +11,7 @@ ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
 > [!NOTE]
 > The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.
 
-This note discusses how to add dual-interface support to an MFC-based OLE Automation server application. The [ACDUAL](../visual-cpp-samples.md) sample illustrates dual-interface support, and the example code in this note is taken from ACDUAL. The macros described in this note, such as DECLARE_DUAL_ERRORINFO, DUAL_ERRORINFO_PART, and IMPLEMENT_DUAL_ERRORINFO, are part of the ACDUAL sample and can be found in MFCDUAL.H.
+This note discusses how to add dual-interface support to an MFC-based OLE Automation server application. The [ACDUAL](../overview/visual-cpp-samples.md) sample illustrates dual-interface support, and the example code in this note is taken from ACDUAL. The macros described in this note, such as DECLARE_DUAL_ERRORINFO, DUAL_ERRORINFO_PART, and IMPLEMENT_DUAL_ERRORINFO, are part of the ACDUAL sample and can be found in MFCDUAL.H.
 
 ## Dual Interfaces
 
@@ -32,7 +33,7 @@ A dual interface is really just a custom interface derived from `IDispatch`. The
 
 First, modify the ODL file for your server to define dual interfaces for your objects. To define a dual interface, you must use an interface statement, instead of the `DISPINTERFACE` statement that the Visual C++ wizards generate. Rather than removing the existing `DISPINTERFACE` statement, add a new interface statement. By retaining the `DISPINTERFACE` form, you can continue to use ClassWizard to add properties and methods to your object, but you must add the equivalent properties and methods to your interface statement.
 
-An interface statement for a dual interface must have the *OLEAUTOMATION* and *DUAL* attributes, and the interface must be derived from `IDispatch`. You can use the [GUIDGEN](../visual-cpp-samples.md) sample to create a **IID** for the dual interface:
+An interface statement for a dual interface must have the *OLEAUTOMATION* and *DUAL* attributes, and the interface must be derived from `IDispatch`. You can use the [GUIDGEN](../overview/visual-cpp-samples.md) sample to create a **IID** for the dual interface:
 
 ```IDL
 [ uuid(0BDD0E81-0DD7-11cf-BBA8-444553540000), // IID_IDualAClick
@@ -82,7 +83,7 @@ BEGIN_DUAL_INTERFACE_PART(DualAClick, IDualAClick)
 END_DUAL_INTERFACE_PART(DualAClick)
 ```
 
-To connect the dual interface to MFC's [QueryInterface](/windows/desktop/com/queryinterface--navigating-in-an-object) mechanism, add an `INTERFACE_PART` entry to the interface map:
+To connect the dual interface to MFC's [QueryInterface](/windows/win32/com/queryinterface--navigating-in-an-object) mechanism, add an `INTERFACE_PART` entry to the interface map:
 
 ```cpp
 BEGIN_INTERFACE_MAP(CAutoClickDoc, CDocument)
@@ -256,7 +257,7 @@ To modify a project's build settings so that a header file containing **UUID** d
 
 To add the **UUID** definitions from the MkTypLib-generated header file to your project:
 
-1. Include the MkTypLib-generated header file in your standard includes header file, STDAFX.H.
+1. Include the MkTypLib-generated header file in your standard includes header file, *stdafx.h*.
 
 2. Create a new file, INITIIDS.CPP, and add it to your project. In this file, include your MkTypLib-generated header file after including OLE2.H and INITGUID.H:
 
@@ -299,7 +300,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 }
 ```
 
-`CATCH_ALL_DUAL` takes care of returning the correct error code when an exception occurs. `CATCH_ALL_DUAL` converts an MFC exception into OLE Automation error-handling information using the `ICreateErrorInfo` interface. (An example `CATCH_ALL_DUAL` macro is in the file MFCDUAL.H in the [ACDUAL](../visual-cpp-samples.md) sample. The function it calls to handle exceptions, `DualHandleException`, is in the file MFCDUAL.CPP.) `CATCH_ALL_DUAL` determines the error code to return based on the type of exception that occurred:
+`CATCH_ALL_DUAL` takes care of returning the correct error code when an exception occurs. `CATCH_ALL_DUAL` converts an MFC exception into OLE Automation error-handling information using the `ICreateErrorInfo` interface. (An example `CATCH_ALL_DUAL` macro is in the file MFCDUAL.H in the [ACDUAL](../overview/visual-cpp-samples.md) sample. The function it calls to handle exceptions, `DualHandleException`, is in the file MFCDUAL.CPP.) `CATCH_ALL_DUAL` determines the error code to return based on the type of exception that occurred:
 
 - [COleDispatchException](../mfc/reference/coledispatchexception-class.md) - In this case, `HRESULT` is constructed using the following code:
 
@@ -321,7 +322,7 @@ Second, add code to your automation class's interface map to associate the `ISup
 
 Finally, implement the class defined to support `ISupportErrorInfo`.
 
-(The [ACDUAL](../visual-cpp-samples.md) sample contains three macros to help do these three steps, `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, and `IMPLEMENT_DUAL_ERRORINFO`, all contained in MFCDUAL.H.)
+(The [ACDUAL](../overview/visual-cpp-samples.md) sample contains three macros to help do these three steps, `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, and `IMPLEMENT_DUAL_ERRORINFO`, all contained in MFCDUAL.H.)
 
 The following example implements a class defined to support `ISupportErrorInfo`. `CAutoClickDoc` is the name of your automation class and `IID_IDualAClick` is the **IID** for the interface that is the source of errors reported through the OLE Automation error object:
 

@@ -1,18 +1,14 @@
 ---
-title: "&lt;bitset&gt; operators"
+description: "Learn more about: <bitset> operators"
+title: "<bitset> operators"
 ms.date: "11/04/2016"
-f1_keywords: ["bitset/std::operator&amp;", "bitset/std::operator&gt;&gt;", "bitset/std::operator&lt;&lt;", "bitset/std::operator^", "bitset/std::operator|"]
+f1_keywords: ["bitset/std::operator&", "bitset/std::operator>>", "bitset/std::operator<<", "bitset/std::operator^", "bitset/std::operator|"]
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
-helpviewer_keywords: ["std::operator&amp; (bitset)", "std::operator&gt;&gt; (bitset)", "std::operator&lt;&lt; (bitset)"]
+helpviewer_keywords: ["std::operator& (bitset)", "std::operator>> (bitset)", "std::operator<< (bitset)"]
 ---
-# &lt;bitset&gt; operators
+# `<bitset>` operators
 
-||||
-|-|-|-|
-|[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator^](#op_xor)|[operator&#124;](#op_or)| |
-
-## <a name="op_amp"></a>  operator&amp;
+## <a name="op_amp"></a> operator&
 
 Performs a bitwise `AND` between two bitsets.
 
@@ -26,10 +22,10 @@ operator&(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 The first of the two bitsets whose respective elements are to be combined with the bitwise `AND`.
 
-*right*<br/>
+*right*\
 The second of the two valarrays whose respective elements are to be combined with the bitwise `AND`.
 
 ### Return Value
@@ -64,11 +60,11 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="op_lt_lt"></a> `operator<<`
 
 Inserts a text representation of the bit sequence into the output stream.
 
-```
+```cpp
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
@@ -77,7 +73,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### Parameters
 
-*right*<br/>
+*right*\
 An object of type **bitset\<N>** that is to be inserted into the output stream as a string.
 
 ### Return Value
@@ -88,7 +84,7 @@ A text representation of the bit sequence in `ostr`.
 
 The template function overloads `operator<<`, allowing a bitset to be written out without first converting it into a string. The template function effectively executes:
 
-**ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )
+`ostr << right.`[to_string](bitset-class.md)`<CharType, Traits, allocator<CharType>>()`
 
 ### Example
 
@@ -121,36 +117,34 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="op_gt_gt"></a> `operator>>`
 
 Reads a string of bit characters into a bitset.
 
-```
+```cpp
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
-    basic_istream<CharType, Traits>&
-_Istr,
-    bitset<N>&
-    right);
+    basic_istream<CharType, Traits>& i_str,
+    bitset<N>& right);
 ```
 
 ### Parameters
 
-*_Istr*<br/>
+*i_str*\
 The string that is entered into the input stream to be inserted into the bitset.
 
-*right*<br/>
+*right*\
 The bitset that is receiving the bits from the input stream.
 
 ### Return Value
 
-The template function returns the string *_Istr*.
+The template function returns the string *i_str*.
 
 ### Remarks
 
-The template function overloads `operator>>` to store in the bitset _ *Right* the value bitset(`str`), where `str` is an object of type [basic_string](basic-string-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** extracted from *_Istr*.
+The template function overloads `operator>>` to store in the bitset *right* the value `bitset(str)`, where `str` is an object of type [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` extracted from *i_str*.
 
-The template function extracts elements from *_Istr* and inserts them into the bitset until:
+The template function extracts elements from *i_str* and inserts them into the bitset until:
 
 - All the bit elements have been extracted from the input stream and stored in the bitset.
 
@@ -207,7 +201,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a>  operator^
+## <a name="op_xor"></a> operator^
 
 Performs a bitwise `EXCLUSIVE-OR` between two bitsets.
 
@@ -221,10 +215,10 @@ operator^(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 The first of the two bitsets whose respective elements are to be combined with the bitwise `EXCLUSIVE-OR`.
 
-*right*<br/>
+*right*\
 The second of the two valarrays whose respective elements are to be combined with the bitwise `EXCLUSIVE-OR`.
 
 ### Return Value
@@ -259,9 +253,9 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a>  operator&#124;
+## <a name="op_or"></a> `operator|`
 
-Performs a bitwise `OR` between two bitsets.
+Performs a bitwise OR between two `bitset` objects.
 
 ```cpp
 template <size_t size>
@@ -273,10 +267,10 @@ operator|(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 The first of the two bitsets whose respective elements are to be combined with the bitwise `OR`.
 
-*right*<br/>
+*right*\
 The second of the two valarrays whose respective elements are to be combined with the bitwise `OR`.
 
 ### Return Value
@@ -310,7 +304,3 @@ bitset 1: 0101
 bitset 2: 0011
 bitset 3: 0111
 ```
-
-## See also
-
-[\<bitset>](../standard-library/bitset.md)<br/>

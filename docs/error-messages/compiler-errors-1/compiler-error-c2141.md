@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2141"
 title: "Compiler Error C2141"
 ms.date: "11/04/2016"
 f1_keywords: ["C2141"]
@@ -15,7 +16,7 @@ An array exceeds the 2GB limit. Reduce the size of the array.
 
 The following sample generates C2141.
 
-```
+```cpp
 // C2141.cpp
 // processor: IPF
 class A {

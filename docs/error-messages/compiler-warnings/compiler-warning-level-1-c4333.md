@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4333"
 title: "Compiler Warning (level 1) C4333"
 ms.date: "11/04/2016"
 f1_keywords: ["C4333"]
@@ -15,7 +16,7 @@ A right shift operation was too large an amount.  All significant bits are shift
 
 The following sample generates C4333.
 
-```
+```cpp
 // C4333.cpp
 // compile with: /c /W1
 unsigned shift8 (unsigned char c) {

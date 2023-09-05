@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Using CToolTipCtrl"
 title: "Using CToolTipCtrl"
 ms.date: "11/04/2016"
-f1_keywords: ["CToolTipCtrl"]
 helpviewer_keywords: ["CToolTipCtrl class [MFC], creating tool tips", "CToolTipCtrl class"]
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
 ---
@@ -19,8 +19,7 @@ The [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) class encapsulates th
 
 - [Manipulating the Tool Tip Control](../mfc/manipulating-the-tool-tip-control.md)
 
-## See Also
+## See also
 
 [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Event Handling and ATL"
 title: "Event Handling and ATL"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["event handling, about event handling"]
@@ -32,7 +33,6 @@ Summarizes, using tables, the main ways for implementing an event interface and 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Provides links to conceptual topics on how to program using the Active Template Library.
 
-## See Also
+## See also
 
 [Concepts](../atl/active-template-library-atl-concepts.md)
-

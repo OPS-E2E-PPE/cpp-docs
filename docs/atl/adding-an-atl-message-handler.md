@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Adding an ATL Message Handler"
 title: "Adding an ATL Message Handler"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["message handlers [C++]", "ATL, windows", "message handling [C++], ATL message handler", "windows [C++], ATL", "ATL, message handlers"]
@@ -16,7 +17,6 @@ The following conditions apply only to adding an ATL message handler:
 
 - The new message map entries are added into the main message map. The wizard does not recognize alternate message maps and chaining.
 
-## See Also
+## See also
 
 [Implementing a Window](../atl/implementing-a-window.md)
-

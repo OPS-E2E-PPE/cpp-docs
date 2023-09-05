@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleControlModule Class"
 title: "COleControlModule Class"
 ms.date: "11/04/2016"
 f1_keywords: ["OleControlModule"]
@@ -37,8 +38,7 @@ For more information on using the `COleControlModule` class, see the [CWinApp](.
 
 **Header:** afxctl.h
 
-## See Also
+## See also
 
-[MFC Sample TESTHELP](../../visual-cpp-samples.md)<br/>
+[MFC Sample TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

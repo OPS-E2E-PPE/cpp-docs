@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2387"
 title: "Compiler Error C2387"
 ms.date: "11/04/2016"
 f1_keywords: ["C2387"]
@@ -15,7 +16,7 @@ To resolve this error, either remove one of the base classes from the inheritanc
 
 The following sample generates C2387:
 
-```
+```cpp
 // C2387.cpp
 namespace N1 {
    struct B {

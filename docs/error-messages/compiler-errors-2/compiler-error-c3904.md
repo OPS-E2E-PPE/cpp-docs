@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3904"
 title: "Compiler Error C3904"
 ms.date: "11/04/2016"
 f1_keywords: ["C3904"]
@@ -15,13 +16,13 @@ Check the number of parameters in your `get` and `set` methods against property 
 
 - The number of parameters of the `set` method must be one more than the number of dimensions of the property.
 
-For more information, see [property](../../windows/property-cpp-component-extensions.md).
+For more information, see [property](../../extensions/property-cpp-component-extensions.md).
 
-## Example
+## Examples
 
 The following sample generates C3904.
 
-```
+```cpp
 // C3904.cpp
 // compile with: /clr /c
 ref class X {
@@ -39,11 +40,9 @@ ref class X {
 };
 ```
 
-## Example
-
 The following sample generates C3904.
 
-```
+```cpp
 // C3904b.cpp
 // compile with: /clr /c
 ref struct X {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComContainedObject Class"
 title: "CComContainedObject Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComContainedObject", "ATLCOM/ATL::CComContainedObject", "ATLCOM/ATL::CComContainedObject::CComContainedObject", "ATLCOM/ATL::CComContainedObject::AddRef", "ATLCOM/ATL::CComContainedObject::GetControllingUnknown", "ATLCOM/ATL::CComContainedObject::QueryInterface", "ATLCOM/ATL::CComContainedObject::Release"]
@@ -7,10 +8,10 @@ ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
 ---
 # CComContainedObject Class
 
-This class implements [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) by delegating to the owner object's `IUnknown`.
+This class implements [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) by delegating to the owner object's `IUnknown`.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -44,7 +45,7 @@ Your class, derived from [CComObjectRoot](../../atl/reference/ccomobjectroot-cla
 
 ## Remarks
 
-ATL uses `CComContainedObject` in classes [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), and [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implements [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) by delegating to the owner object's `IUnknown`. (The owner is either the outer object of an aggregation, or the object for which a tear-off interface is being created.) `CComContainedObject` calls `CComObjectRootEx`'s `OuterQueryInterface`, `OuterAddRef`, and `OuterRelease`, all inherited through `Base`.
+ATL uses `CComContainedObject` in classes [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), and [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implements [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) by delegating to the owner object's `IUnknown`. (The owner is either the outer object of an aggregation, or the object for which a tear-off interface is being created.) `CComContainedObject` calls `CComObjectRootEx`'s `OuterQueryInterface`, `OuterAddRef`, and `OuterRelease`, all inherited through `Base`.
 
 ## Inheritance Hierarchy
 
@@ -56,7 +57,7 @@ ATL uses `CComContainedObject` in classes [CComAggObject](../../atl/reference/cc
 
 **Header:** atlcom.h
 
-##  <a name="addref"></a>  CComContainedObject::AddRef
+## <a name="addref"></a> CComContainedObject::AddRef
 
 Increments the reference count on the owner object.
 
@@ -68,7 +69,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 A value that may be useful for diagnostics or testing.
 
-##  <a name="ccomcontainedobject"></a>  CComContainedObject::CComContainedObject
+## <a name="ccomcontainedobject"></a> CComContainedObject::CComContainedObject
 
 The constructor.
 
@@ -85,7 +86,7 @@ CComContainedObject(void* pv);
 
 Sets the `m_pOuterUnknown` member pointer (inherited through the `Base` class) to *pv*.
 
-##  <a name="dtor"></a>  CComContainedObject::~CComContainedObject
+## <a name="dtor"></a> CComContainedObject::~CComContainedObject
 
 The destructor.
 
@@ -97,7 +98,7 @@ The destructor.
 
 Frees all allocated resources.
 
-##  <a name="getcontrollingunknown"></a>  CComContainedObject::GetControllingUnknown
+## <a name="getcontrollingunknown"></a> CComContainedObject::GetControllingUnknown
 
 Returns the `m_pOuterUnknown` member pointer (inherited through the *Base* class) that holds the owner object's `IUnknown`.
 
@@ -113,7 +114,7 @@ The owner object's `IUnknown`.
 
 This method may be virtual if `Base` has declared the [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) macro.
 
-##  <a name="queryinterface"></a>  CComContainedObject::QueryInterface
+## <a name="queryinterface"></a> CComContainedObject::QueryInterface
 
 Retrieves a pointer to the interface requested on the owner object.
 
@@ -138,7 +139,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 A standard HRESULT value.
 
-##  <a name="release"></a>  CComContainedObject::Release
+## <a name="release"></a> CComContainedObject::Release
 
 Decrements the reference count on the owner object.
 
@@ -150,6 +151,6 @@ STDMETHOD_(ULONG, Release)();
 
 In debug builds, `Release` returns a value that may be useful for diagnostics or testing. In non-debug builds, `Release` always returns 0.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

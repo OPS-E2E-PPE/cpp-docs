@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Linker Tools Error LNK1181"
 title: "Linker Tools Error LNK1181"
 ms.date: "08/22/2018"
 f1_keywords: ["LNK1181"]
@@ -25,6 +26,6 @@ Another possible cause for LNK1181 is that a long file name with embedded spaces
 
 Compiling with the [/P (Preprocess to a File)](../../build/reference/p-preprocess-to-a-file.md) option can result in LNK1181 because that option suppresses the creation of .obj files.
 
-## See Also
+## See also
 
 [/LIBPATH (Additional Libpath)](../../build/reference/libpath-additional-libpath.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Expression Evaluation (C)"
 title: "Expression Evaluation (C)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["expression evaluation", "expressions [C++], evaluating"]
@@ -10,6 +11,6 @@ Expressions involving assignment, unary increment, unary decrement, or calling a
 
 "Side effects" are changes caused by the evaluation of an expression. Side effects occur whenever the value of a variable is changed by an expression evaluation. All assignment operations have side effects. Function calls can also have side effects if they change the value of an externally visible item, either by direct assignment or by indirect assignment through a pointer.
 
-## See Also
+## See also
 
 [Operands and Expressions](../c-language/operands-and-expressions.md)

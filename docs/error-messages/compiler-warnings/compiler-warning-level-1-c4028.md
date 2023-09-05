@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4028"
 title: "Compiler Warning (level 1) C4028"
 ms.date: "11/04/2016"
 f1_keywords: ["C4028"]
@@ -17,7 +18,7 @@ This warning is only valid for C source code.
 
 The following sample generates C4028.
 
-```
+```c
 // C4028.c
 // compile with: /W1 /Za
 void f(int , ...);

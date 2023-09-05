@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Data Access Using ADO.NET (C++/CLI)"
 title: "Data Access Using ADO.NET (C++/CLI)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ADO.NET [C++]", ".NET Framework [C++], data access", "databases [C++], accessing in C++", "data access [C++], ADO.NET", "data [C++], ADO.NET", "native strings [C++]", "ADO.NET [C++], marshaling ANSI strings", "strings [C++], ADO.NET", "BSTRs, strings", "ADO.NET [C++], marshaling BSTR strings", "strings [C++], marshaling BSTR strings", "ADO.NET [C++], marshaling Unicode strings", "Unicode [C++], strings", "strings [C++], Unicode", "VARIANT, marshaling", "ADO.NET [C++], marshaling VARIANT types", "VARIANT", "SAFEARRAY, marshaling", "ADO.NET [C++], marshaling SAFEARRAY types"]
@@ -16,14 +17,14 @@ Demonstrates how to add a native string (`char *`) to a database and how to mars
 
 ### Example
 
-In this example, the class DatabaseClass is created to interact with an ADO.NET <xref:System.Data.DataTable> object. Note that this class is a native C++ `class` (as compared to a `ref class` or `value class`). This is necessary because we want to use this class from native code, and you cannot use managed types in native code. This class will be compiled to target the CLR, as is indicated by the `#pragma managed` directive preceding the class declaration. For more information on this directive, see [managed, unmanaged](../preprocessor/managed-unmanaged.md).
+In this example, the class DatabaseClass is created to interact with an ADO.NET <xref:System.Data.DataTable> object. Note that this class is a native C++ **`class`** (as compared to a **`ref class`** or **`value class`**). This is necessary because we want to use this class from native code, and you cannot use managed types in native code. This class will be compiled to target the CLR, as is indicated by the `#pragma managed` directive preceding the class declaration. For more information on this directive, see [managed, unmanaged](../preprocessor/managed-unmanaged.md).
 
 Note the private member of the DatabaseClass class: `gcroot<DataTable ^> table`. Since native types cannot contain managed types, the `gcroot` keyword is necessary. For more information on `gcroot`, see [How to: Declare Handles in Native Types](../dotnet/how-to-declare-handles-in-native-types.md).
 
 The rest of the code in this example is native C++ code, as is indicated by the `#pragma unmanaged` directive preceding `main`. In this example, we are creating a new instance of DatabaseClass and calling its methods to create a table and populate some rows in the table. Note that native C++ strings are being passed as values for the database column StringCol. Inside DatabaseClass, these strings are marshaled to managed strings using the marshaling functionality found in the <xref:System.Runtime.InteropServices?displayProperty=fullName> namespace. Specifically, the method <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> is used to marshal a `char *` to a <xref:System.String>, and the method <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> is used to marshal a <xref:System.String> to a `char *`.
 
 > [!NOTE]
->  The memory allocated by <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> must be deallocated by calling either <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A> or `GlobalFree`.
+> The memory allocated by <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> must be deallocated by calling either <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A> or `GlobalFree`.
 
 ```cpp
 // adonet_marshal_string_native.cpp
@@ -142,14 +143,14 @@ Demonstrates how to add a COM string (`BSTR`) to a database and how to marshal a
 
 ### Example
 
-In this example, the class DatabaseClass is created to interact with an ADO.NET <xref:System.Data.DataTable> object. Note that this class is a native C++ `class` (as compared to a `ref class` or `value class`). This is necessary because we want to use this class from native code, and you cannot use managed types in native code. This class will be compiled to target the CLR, as is indicated by the `#pragma managed` directive preceding the class declaration. For more information on this directive, see [managed, unmanaged](../preprocessor/managed-unmanaged.md).
+In this example, the class DatabaseClass is created to interact with an ADO.NET <xref:System.Data.DataTable> object. Note that this class is a native C++ **`class`** (as compared to a **`ref class`** or **`value class`**). This is necessary because we want to use this class from native code, and you cannot use managed types in native code. This class will be compiled to target the CLR, as is indicated by the `#pragma managed` directive preceding the class declaration. For more information on this directive, see [managed, unmanaged](../preprocessor/managed-unmanaged.md).
 
 Note the private member of the DatabaseClass class: `gcroot<DataTable ^> table`. Since native types cannot contain managed types, the `gcroot` keyword is necessary. For more information on `gcroot`, see [How to: Declare Handles in Native Types](../dotnet/how-to-declare-handles-in-native-types.md).
 
 The rest of the code in this example is native C++ code, as is indicated by the `#pragma unmanaged` directive preceding `main`. In this example, we are creating a new instance of DatabaseClass and calling its methods to create a table and populate some rows in the table. Note that COM strings are being passed as values for the database column StringCol. Inside DatabaseClass, these strings are marshaled to managed strings using the marshaling functionality found in the <xref:System.Runtime.InteropServices?displayProperty=fullName> namespace. Specifically, the method <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> is used to marshal a `BSTR` to a <xref:System.String>, and the method <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> is used to marshal a <xref:System.String> to a `BSTR`.
 
 > [!NOTE]
->  The memory allocated by <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> must be deallocated by calling either <xref:System.Runtime.InteropServices.Marshal.FreeBSTR%2A> or `SysFreeString`.
+> The memory allocated by <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> must be deallocated by calling either <xref:System.Runtime.InteropServices.Marshal.FreeBSTR%2A> or `SysFreeString`.
 
 ``` cpp
 // adonet_marshal_string_bstr.cpp
@@ -276,14 +277,14 @@ Demonstrates how to add a native Unicode string (`wchar_t *`) to a database and 
 
 ### Example
 
-In this example, the class DatabaseClass is created to interact with an ADO.NET <xref:System.Data.DataTable> object. Note that this class is a native C++ `class` (as compared to a `ref class` or `value class`). This is necessary because we want to use this class from native code, and you cannot use managed types in native code. This class will be compiled to target the CLR, as is indicated by the `#pragma managed` directive preceding the class declaration. For more information on this directive, see [managed, unmanaged](../preprocessor/managed-unmanaged.md).
+In this example, the class DatabaseClass is created to interact with an ADO.NET <xref:System.Data.DataTable> object. Note that this class is a native C++ **`class`** (as compared to a **`ref class`** or **`value class`**). This is necessary because we want to use this class from native code, and you cannot use managed types in native code. This class will be compiled to target the CLR, as is indicated by the `#pragma managed` directive preceding the class declaration. For more information on this directive, see [managed, unmanaged](../preprocessor/managed-unmanaged.md).
 
 Note the private member of the DatabaseClass class: `gcroot<DataTable ^> table`. Since native types cannot contain managed types, the `gcroot` keyword is necessary. For more information on `gcroot`, see [How to: Declare Handles in Native Types](../dotnet/how-to-declare-handles-in-native-types.md).
 
 The rest of the code in this example is native C++ code, as is indicated by the `#pragma unmanaged` directive preceding `main`. In this example, we are creating a new instance of DatabaseClass and calling its methods to create a table and populate some rows in the table. Note that Unicode C++ strings are being passed as values for the database column StringCol. Inside DatabaseClass, these strings are marshaled to managed strings using the marshaling functionality found in the <xref:System.Runtime.InteropServices?displayProperty=fullName> namespace. Specifically, the method <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> is used to marshal a `wchar_t *` to a <xref:System.String>, and the method <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> is used to marshal a <xref:System.String> to a `wchar_t *`.
 
 > [!NOTE]
->  The memory allocated by <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> must be deallocated by calling either <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A> or `GlobalFree`.
+> The memory allocated by <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> must be deallocated by calling either <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A> or `GlobalFree`.
 
 ```cpp
 // adonet_marshal_string_wide.cpp
@@ -402,7 +403,7 @@ Demonstrates how to add a native `VARIANT` to a database and how to marshal a <x
 
 ### Example
 
-In this example, the class DatabaseClass is created to interact with an ADO.NET <xref:System.Data.DataTable> object. Note that this class is a native C++ `class` (as compared to a `ref class` or `value class`). This is necessary because we want to use this class from native code, and you cannot use managed types in native code. This class will be compiled to target the CLR, as is indicated by the `#pragma managed` directive preceding the class declaration. For more information on this directive, see [managed, unmanaged](../preprocessor/managed-unmanaged.md).
+In this example, the class DatabaseClass is created to interact with an ADO.NET <xref:System.Data.DataTable> object. Note that this class is a native C++ **`class`** (as compared to a **`ref class`** or **`value class`**). This is necessary because we want to use this class from native code, and you cannot use managed types in native code. This class will be compiled to target the CLR, as is indicated by the `#pragma managed` directive preceding the class declaration. For more information on this directive, see [managed, unmanaged](../preprocessor/managed-unmanaged.md).
 
 Note the private member of the DatabaseClass class: `gcroot<DataTable ^> table`. Since native types cannot contain managed types, the `gcroot` keyword is necessary. For more information on `gcroot`, see [How to: Declare Handles in Native Types](../dotnet/how-to-declare-handles-in-native-types.md).
 
@@ -543,7 +544,7 @@ Demonstrates how to add a native `SAFEARRAY` to a database and how to marshal a 
 
 ### Example
 
-In this example, the class DatabaseClass is created to interact with an ADO.NET <xref:System.Data.DataTable> object. Note that this class is a native C++ `class` (as compared to a `ref class` or `value class`). This is necessary because we want to use this class from native code, and you cannot use managed types in native code. This class will be compiled to target the CLR, as is indicated by the `#pragma managed` directive preceding the class declaration. For more information on this directive, see [managed, unmanaged](../preprocessor/managed-unmanaged.md).
+In this example, the class DatabaseClass is created to interact with an ADO.NET <xref:System.Data.DataTable> object. Note that this class is a native C++ **`class`** (as compared to a **`ref class`** or **`value class`**). This is necessary because we want to use this class from native code, and you cannot use managed types in native code. This class will be compiled to target the CLR, as is indicated by the `#pragma managed` directive preceding the class declaration. For more information on this directive, see [managed, unmanaged](../preprocessor/managed-unmanaged.md).
 
 Note the private member of the DatabaseClass class: `gcroot<DataTable ^> table`. Since native types cannot contain managed types, the `gcroot` keyword is necessary. For more information on `gcroot`, see [How to: Declare Handles in Native Types](../dotnet/how-to-declare-handles-in-native-types.md).
 
@@ -700,7 +701,7 @@ For information on security issues involving ADO.NET, see [Securing ADO.NET Appl
 |-------------|-----------------|
 |[ADO.NET](/dotnet/framework/data/adonet/index)|Provides an overview of ADO.NET, a set of classes that expose data access services to the .NET programmer.|
 
-## See Also
+## See also
 
 [.NET Programming with C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 

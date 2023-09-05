@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: remove_pointer Class"
 title: "remove_pointer Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::remove_pointer"]
@@ -21,7 +22,7 @@ using remove_pointer_t = typename remove_pointer<T>::type;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to modify.
 
 ## Remarks
@@ -58,5 +59,5 @@ remove_pointer_t<int *> == int
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_pointer Class](../standard-library/add-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_pointer Class](../standard-library/add-pointer-class.md)

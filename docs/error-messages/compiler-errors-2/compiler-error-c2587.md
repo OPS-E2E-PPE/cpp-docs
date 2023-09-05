@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2587"
 title: "Compiler Error C2587"
 ms.date: "11/04/2016"
 f1_keywords: ["C2587"]
@@ -13,7 +14,7 @@ Local variables are not allowed as default parameters.
 
 The following sample generates C2587:
 
-```
+```cpp
 // C2587.cpp
 // compile with: /c
 int i;

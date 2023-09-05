@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: C Compound Assignment"
 title: "C Compound Assignment"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["operators [C], assignment", "compound assignment operators", "assignment operators, compound"]
@@ -26,6 +27,6 @@ n &= MASK;
 
 In this example, a bitwise-inclusive-AND operation is performed on `n` and `MASK`, and the result is assigned to `n`. The manifest constant `MASK` is defined with a [#define](../preprocessor/hash-define-directive-c-cpp.md) preprocessor directive.
 
-## See Also
+## See also
 
 [C Assignment Operators](../c-language/c-assignment-operators.md)

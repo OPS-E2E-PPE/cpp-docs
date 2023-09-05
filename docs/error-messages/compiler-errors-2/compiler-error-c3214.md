@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3214"
 title: "Compiler Error C3214"
 ms.date: "11/04/2016"
 f1_keywords: ["C3214"]
@@ -13,7 +14,7 @@ The type was specified for an instantiation of a generic class that does not mee
 
 The following sample generates C3214:
 
-```
+```cpp
 // C3214.cpp
 // compile with: /clr
 interface struct A {};

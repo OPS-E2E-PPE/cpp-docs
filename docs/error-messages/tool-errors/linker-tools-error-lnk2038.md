@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Linker Tools Error LNK2038"
 title: "Linker Tools Error LNK2038"
 ms.date: "12/15/2017"
 f1_keywords: ["LNK2038"]
@@ -17,9 +18,9 @@ This error can occur when an object file in your project is out-of-date. Before 
 Visual Studio defines the following symbols to prevent the linking of incompatible code, which can cause run-time errors or other unexpected behavior.
 
 - `_MSC_VER`
-   Indicates the major and minor version numbers of the Visual C++ compiler that's used to build an app or library. Code that's compiled by using one version of the Visual C++ compiler is incompatible with code that's compiled by using a version that has different major and minor version numbers. For more information, see `_MSC_VER` in [Predefined Macros](../../preprocessor/predefined-macros.md).
+   Indicates the major and minor version numbers of the Microsoft C++ compiler (MSVC) that's used to build an app or library. Code that's compiled by using one version of the MSVC is incompatible with code that's compiled by using a version that has different major and minor version numbers. For more information, see `_MSC_VER` in [Predefined Macros](../../preprocessor/predefined-macros.md).
 
-   If you're linking to a library that's not compatible with the version of the Visual C++ compiler that you're using, and you cannot acquire or build a compatible version of the library, you can use an earlier version of the compiler to build your project: change the **Platform Toolset** property of the project to the earlier toolset. For more information, see [How to: Modify the Target Framework and Platform Toolset](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   If you're linking to a library that's not compatible with the version of the MSVC that you're using, and you cannot acquire or build a compatible version of the library, you can use an earlier version of the compiler to build your project: change the **Platform Toolset** property of the project to the earlier toolset. For more information, see [How to: Modify the Target Framework and Platform Toolset](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - `_ITERATOR_DEBUG_LEVEL`
    Indicates the level of security and debugging features that are enabled in the C++ Standard Library. These features can change the representation of certain C++ Standard Library objects and thereby make them incompatible with those that use different security and debugging features. For more information, see [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
@@ -32,9 +33,9 @@ Visual Studio defines the following symbols to prevent the linking of incompatib
 
 Ensure that the values of these symbols are consistent throughout the projects in your Visual Studio solution, and also that they are consistent with code and libraries that your app links to.
 
-## Third-party library issues and Vcpkg
+## Third-party library issues and vcpkg
 
-If you see this error when you are trying to configure a third-party library as part of your build, consider using [Vcpkg](../../vcpkg.md), the Visual C++ Package Manager, to install and build the library. Vcpkg supports a large and growing [list of third-party libraries](https://github.com/Microsoft/vcpkg/tree/master/ports), and sets all the configuration properties and dependencies required for successful builds as part of your project. For more information, see the related [Visual C++ Blog](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) post.
+If you see this error when you are trying to configure a third-party library as part of your build, consider using [vcpkg](https://vcpkg.io/), a C++ package manager, to install and build the library. vcpkg supports a large and growing [list of third-party libraries](https://github.com/Microsoft/vcpkg/tree/master/ports), and sets all the configuration properties and dependencies required for successful builds as part of your project.
 
 ## See also
 

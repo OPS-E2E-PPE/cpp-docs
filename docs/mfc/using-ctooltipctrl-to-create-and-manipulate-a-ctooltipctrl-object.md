@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Using CToolTipCtrl to Create and Manipulate a CToolTipCtrl Object"
 title: "Using CToolTipCtrl to Create and Manipulate a CToolTipCtrl Object"
 ms.date: "11/04/2016"
-f1_keywords: ["CToolTipCtrl"]
 helpviewer_keywords: ["tool tips [MFC], creating", "CToolTipCtrl class [MFC], using"]
 ms.assetid: 0a34583f-f66d-46a1-a239-31b80ea395ad
 ---
@@ -25,8 +25,7 @@ Here is an example of [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) usa
 
 1. Call [GetToolCount](../mfc/reference/ctooltipctrl-class.md#gettoolcount) to retrieve a count of the tools registered with the tool tip control.
 
-## See Also
+## See also
 
 [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

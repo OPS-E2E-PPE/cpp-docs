@@ -1,15 +1,19 @@
 ---
+description: "Learn more about: Record Field Exchange: Working with the Wizard Code"
 title: "Record Field Exchange: Working with the Wizard Code"
-ms.date: "11/04/2016"
+ms.date: "05/09/2019"
 helpviewer_keywords: ["DoFieldExchange method, overriding", "Unicode, with database classes", "field data members, declaring", "RFX (ODBC), wizard code", "RFX (ODBC), implementing", "field data members", "ODBC, RFX", "m_nParams data member, initializing", "m_nFields data member", "m_nParams data member", "overriding, DoFieldExchange", "m_nFields data member, initializing"]
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
 ---
 # Record Field Exchange: Working with the Wizard Code
 
+> [!NOTE]
+> The MFC ODBC Consumer wizard is not available in Visual Studio 2019 and later. You can still create a consumer manually.
+
 This topic explains the code that the MFC Application Wizard and **Add Class** (as described in [Adding an MFC ODBC Consumer](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) write to support RFX and how you might want to alter that code.
 
 > [!NOTE]
->  This topic applies to classes derived from `CRecordset` in which bulk row fetching has not been implemented. If you are using bulk row fetching, bulk record field exchange (Bulk RFX) is implemented. Bulk RFX is similar to RFX. To understand the differences, see [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> This topic applies to classes derived from `CRecordset` in which bulk row fetching has not been implemented. If you are using bulk row fetching, bulk record field exchange (Bulk RFX) is implemented. Bulk RFX is similar to RFX. To understand the differences, see [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 When you create a recordset class with the MFC Application Wizard or **Add Class**, the wizard writes the following RFX-related elements for you, based on the data source, table, and column choices you make in the wizard:
 
@@ -19,7 +23,7 @@ When you create a recordset class with the MFC Application Wizard or **Add Class
 
 - Initialization of recordset field data members in the recordset class constructor
 
-##  <a name="_core_the_field_data_member_declarations"></a> Field Data Member Declarations
+## <a name="_core_the_field_data_member_declarations"></a> Field Data Member Declarations
 
 The wizards write a recordset class declaration in an .h file that resembles the following for class `CSections`:
 
@@ -57,7 +61,7 @@ If you add parameter data members or new field data members that you bind yourse
 
 Also, notice that the wizard overrides the `DoFieldExchange` member function of class `CRecordset`.
 
-##  <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange Override
+## <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange Override
 
 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) is the heart of RFX. The framework calls `DoFieldExchange` any time it needs to move data either from data source to recordset or from recordset to data source. `DoFieldExchange` also supports obtaining information about field data members through the [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) and [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) member functions.
 
@@ -88,7 +92,7 @@ Notice the following key features of the function:
 
 - The `pFX` pointer to a [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) object that the framework passes when it calls `DoFieldExchange`. The `CFieldExchange` object specifies the operation that `DoFieldExchange` is to perform, the direction of transfer, and other context information.
 
-##  <a name="_core_the_recordset_constructor"></a> Recordset Constructor
+## <a name="_core_the_recordset_constructor"></a> Recordset Constructor
 
 The recordset constructor that the wizards write contains two things related to RFX:
 
@@ -112,7 +116,7 @@ CSections::CSections(CDatabase* pdb)
 ```
 
 > [!NOTE]
->  If you add any field data members manually, as you might if you bind new columns dynamically, you must increment `m_nFields`. Do so by appending another line of code, such as:
+> If you add any field data members manually, as you might if you bind new columns dynamically, you must increment `m_nFields`. Do so by appending another line of code, such as:
 
 ```cpp
 m_nFields += 3;
@@ -120,6 +124,6 @@ m_nFields += 3;
 
 This is the code for adding three new fields. If you add any parameter data members, you must initialize the [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) data member, which contains the number of parameter data members. Put the `m_nParams` initialization outside the brackets.
 
-## See Also
+## See also
 
 [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md)

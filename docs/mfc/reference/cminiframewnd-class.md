@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMiniFrameWnd Class"
 title: "CMiniFrameWnd Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMiniFrameWnd", "AFXWIN/CMiniFrameWnd", "AFXWIN/CMiniFrameWnd::CMiniFrameWnd", "AFXWIN/CMiniFrameWnd::Create", "AFXWIN/CMiniFrameWnd::CreateEx"]
@@ -54,7 +55,7 @@ For more information on how to use `CMiniFrameWnd` objects, see the article [Doc
 
 **Header:** afxwin.h
 
-##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd
+## <a name="cminiframewnd"></a> CMiniFrameWnd::CMiniFrameWnd
 
 Constructs a `CMiniFrameWnd` object, but does not create the window.
 
@@ -66,7 +67,7 @@ CMiniFrameWnd();
 
 To create the window, call [CMiniFrameWnd::Create](#create).
 
-##  <a name="create"></a>  CMiniFrameWnd::Create
+## <a name="create"></a> CMiniFrameWnd::Create
 
 Creates the Windows mini-frame window and attaches it to the `CMiniFrameWnd` object.
 
@@ -113,7 +114,7 @@ Specifies the window style attributes. These can include standard window styles 
 
 - MFS_BLOCKSYSMENU Disables access to the system menu and the control menu, and converts them to part of the caption (title bar).
 
-See [CWnd::Create](../../mfc/reference/cwnd-class.md#create) for a description of possible window style values. The typical combination used for mini-frame windows is WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU.
+See [CWnd::Create](../../mfc/reference/cwnd-class.md#create) for a description of possible window style values. The typical combination used for mini-frame windows is `WS_POPUP|WS_CAPTION|WS_SYSMENU`.
 
 *rect*<br/>
 A `RECT` structure specifying the desired dimensions of the window.
@@ -132,7 +133,7 @@ Nonzero if successful; otherwise 0.
 
 `Create` initializes the window's class name and window name and registers default values for its style and parent.
 
-##  <a name="createex"></a>  CMiniFrameWnd::CreateEx
+## <a name="createex"></a> CMiniFrameWnd::CreateEx
 
 Creates a `CMiniFrameWnd` object.
 
@@ -153,7 +154,7 @@ virtual BOOL CreateEx(
 Specifies the extended style of the `CMiniFrameWnd` being created. Apply any of the [extended window styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) to the window.
 
 *lpClassName*<br/>
-Points to a null-terminated character string that names the Windows class (a [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) structure). The class name can be any name registered with the global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) function or any of the predefined control-class names. It must not be NULL.
+Points to a null-terminated character string that names the Windows class (a [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) structure). The class name can be any name registered with the global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) function or any of the predefined control-class names. It must not be NULL.
 
 *lpWindowName*<br/>
 Points to a null-terminated character string that contains the window name.
@@ -190,7 +191,7 @@ The *dwStyle* parameter can be any combination of [window styles](../../mfc/refe
 
 The old style Palette toolbox windows are no longer supported. The old style, which did not have an "X" Close button, was supported when running an MFC application on previous versions of Windows, but is no longer supported in Visual C++.NET. Only the new WS_EX_TOOLWINDOW style is now supported; for a description of this style, see [Extended Window Styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
-## See Also
+## See also
 
 [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

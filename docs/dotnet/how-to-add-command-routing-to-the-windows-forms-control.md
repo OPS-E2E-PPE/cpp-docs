@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Add Command Routing to the Windows Forms Control"
 title: "How to: Add Command Routing to the Windows Forms Control"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -72,7 +73,7 @@ This topic assumes you have previously completed [How to: Create the User Contro
 
    In **Solution Explorer**, open the Resource.h file, copy the ID value for the menu option you just added, and paste that value as the first parameter to the `m_CmdSrc.AddCommandHandler` call in the C# project's `Initialize` method (replacing `32771` if necessary).
 
-9. Build and run the project.
+1. Build and run the project.
 
    On the **Build** menu, click **Build Solution**.
 
@@ -80,7 +81,7 @@ This topic assumes you have previously completed [How to: Create the User Contro
 
    Select the menu option you added. Notice that the method in the .dll is called.
 
-## See Also
+## See also
 
 [Hosting a Windows Forms User Control as an MFC View](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)<br/>
 [ICommandSource Interface](../mfc/reference/icommandsource-interface.md)<br/>

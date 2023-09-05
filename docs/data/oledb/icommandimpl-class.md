@@ -1,13 +1,14 @@
 ---
+description: "Learn more about: ICommandImpl Class"
 title: "ICommandImpl Class"
 ms.date: "11/04/2016"
-f1_keywords: ["ICommandImpl", "ICommandImpl::Cancel", "Cancel", "ICommandImpl.Cancel", "ICommandImpl::CancelExecution", "ATL::ICommandImpl::CancelExecution", "ATL.ICommandImpl.CancelExecution", "CancelExecution", "ICommandImpl.CancelExecution", "ICommandImpl::CreateRowset", "ICommandImpl.CreateRowset", "CreateRowset", "ICommandImpl::Execute", "ICommandImpl.Execute", "ICommandImpl::GetDBSession", "GetDBSession", "ICommandImpl.GetDBSession", "ATL.ICommandImpl.ICommandImpl", "ATL::ICommandImpl::ICommandImpl", "ICommandImpl", "ICommandImpl::ICommandImpl", "ICommandImpl.ICommandImpl", "ICommandImpl::m_bCancel", "ICommandImpl.m_bCancel", "m_bCancel", "ATL::ICommandImpl::m_bCancel", "ATL.ICommandImpl.m_bCancel", "ICommandImpl::m_bCancelWhenExecuting", "ICommandImpl.m_bCancelWhenExecuting", "ATL::ICommandImpl::m_bCancelWhenExecuting", "m_bCancelWhenExecuting", "ATL.ICommandImpl.m_bCancelWhenExecuting", "ICommandImpl.m_bIsExecuting", "ATL::ICommandImpl::m_bIsExecuting", "m_bIsExecuting", "ATL.ICommandImpl.m_bIsExecuting", "ICommandImpl::m_bIsExecuting"]
+f1_keywords: ["ICommandImpl", "ICommandImpl::Cancel", "Cancel", "ICommandImpl.Cancel", "ICommandImpl::CancelExecution", "ATL::ICommandImpl::CancelExecution", "ATL.ICommandImpl.CancelExecution", "CancelExecution", "ICommandImpl.CancelExecution", "ICommandImpl::CreateRowset", "ICommandImpl.CreateRowset", "CreateRowset", "ICommandImpl::Execute", "ICommandImpl.Execute", "ICommandImpl::GetDBSession", "GetDBSession", "ICommandImpl.GetDBSession", "ATL.ICommandImpl.ICommandImpl", "ATL::ICommandImpl::ICommandImpl", "ICommandImpl::ICommandImpl", "ICommandImpl.ICommandImpl", "ICommandImpl::m_bCancel", "ICommandImpl.m_bCancel", "m_bCancel", "ATL::ICommandImpl::m_bCancel", "ATL.ICommandImpl.m_bCancel", "ICommandImpl::m_bCancelWhenExecuting", "ICommandImpl.m_bCancelWhenExecuting", "ATL::ICommandImpl::m_bCancelWhenExecuting", "m_bCancelWhenExecuting", "ATL.ICommandImpl.m_bCancelWhenExecuting", "ICommandImpl.m_bIsExecuting", "ATL::ICommandImpl::m_bIsExecuting", "m_bIsExecuting", "ATL.ICommandImpl.m_bIsExecuting", "ICommandImpl::m_bIsExecuting"]
 helpviewer_keywords: ["ICommandImpl class", "Cancel method", "CancelExecution method", "CreateRowset method", "Execute method", "GetDBSession method", "ICommandImpl constructor", "ICommandImpl class, constructor", "m_bCancel", "m_bCancelWhenExecuting", "m_bIsExecuting"]
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
 ---
 # ICommandImpl Class
 
-Provides implementation for the [ICommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709737(v=vs.85)) interface.
+Provides implementation for the [ICommand](/previous-versions/windows/desktop/ms709737(v=vs.85)) interface.
 
 ## Syntax
 
@@ -32,7 +33,7 @@ A command interface. The default is `ICommand`.
 
 ### Methods
 
-|||
+| Name | Description |
 |-|-|
 |[Cancel](#cancel)|Cancels the current command execution.|
 |[CancelExecution](#cancelexecution)|Cancels the current command execution.|
@@ -43,7 +44,7 @@ A command interface. The default is `ICommand`.
 
 ### Data Members
 
-|||
+| Name | Description |
 |-|-|
 |[m_bCancel](#bcancel)|Indicates whether the command is to be canceled.|
 |[m_bCancelWhenExecuting](#bcancelwhenexecuting)|Indicates whether the command is to be canceled when executing.|
@@ -65,7 +66,7 @@ STDMETHOD(Cancel)();
 
 ### Remarks
 
-See [ICommand::Cancel](https://docs.microsoft.com/previous-versions/windows/desktop/ms714402(v=vs.85)) in the *OLE DB Programmer's Reference*.
+See [ICommand::Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
 
@@ -79,7 +80,7 @@ HRESULT CancelExecution();
 
 ## <a name="createrowset"></a> ICommandImpl::CreateRowset
 
-Called by [Execute](../../data/oledb/icommandimpl-execute.md) to create a single rowset.
+Called by [Execute](#execute) to create a single rowset.
 
 ### Syntax
 
@@ -124,7 +125,7 @@ A standard HRESULT value. See `ICommand::Execute` for a list of typical values.
 
 To create more than one rowset, or to provide your own conditions for creating different rowsets, place different calls to `CreateRowset` from within `Execute`.
 
-See [ICommand::Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) in the *OLE DB Programmer's Reference.*
+See [ICommand::Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) in the *OLE DB Programmer's Reference.*
 
 ## <a name="execute"></a> ICommandImpl::Execute
 
@@ -142,13 +143,13 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### Parameters
 
-See [ICommand::Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) in the *OLE DB Programmer's Reference*.
+See [ICommand::Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ### Remarks
 
 The outgoing interface requested will be an interface acquired from the rowset object that this function creates.
 
-`Execute` calls [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Override the default implementation to create more than one rowset or to provide your own conditions for creating different rowsets.
+`Execute` calls [CreateRowset](#createrowset). Override the default implementation to create more than one rowset or to provide your own conditions for creating different rowsets.
 
 ## <a name="getdbsession"></a> ICommandImpl::GetDBSession
 
@@ -163,7 +164,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### Parameters
 
-See [ICommand::GetDBSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms719622(v=vs.85)) in the *OLE DB Programmer's Reference*.
+See [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ### Remarks
 
@@ -205,7 +206,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 ### Remarks
 
-Defaults to **true** (can be canceled).
+Defaults to **`true`** (can be canceled).
 
 ## <a name="bisexecuting"></a> ICommandImpl::m_bIsExecuting
 
@@ -219,9 +220,9 @@ unsigned m_bIsExecuting:1;
 
 ### Remarks
 
-The `Execute` method of your command class can set this variable to **true**.
+The `Execute` method of your command class can set this variable to **`true`**.
 
-## See Also
+## See also
 
 [OLE DB Provider Templates](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB Provider Template Architecture](../../data/oledb/ole-db-provider-template-architecture.md)

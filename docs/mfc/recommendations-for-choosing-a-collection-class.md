@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Recommendations for Choosing a Collection Class"
 title: "Recommendations for Choosing a Collection Class"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["type safety of collection classes [MFC]", "collection classes [MFC], serialization", "collection classes [MFC], speed", "collection classes [MFC], type safety", "collection classes [MFC], choosing", "collection classes [MFC], functionality", "shapes, collection", "collection classes [MFC], template-based", "MFC collection classes [MFC], characteristics", "collection classes [MFC], about collection classes [MFC]", "serialization [MFC], collection classes", "collection classes [MFC], duplicates allowed", "collection classes [MFC], shapes"]
@@ -28,7 +29,7 @@ The following table, [Collection Shape Features](#_core_collection_shape_feature
 
 - Column 6 describes whether each shape allows duplicate elements.
 
-### <a name="_core_collection_shape_features"></a>  Collection Shape Features
+### <a name="_core_collection_shape_features"></a> Collection Shape Features
 
 |Shape|Ordered|Indexed|Insert an element|Search for specified element|Duplicate elements|
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|
@@ -38,7 +39,7 @@ The following table, [Collection Shape Features](#_core_collection_shape_feature
 
 The following table, [Characteristics of MFC Collection Classes](#_core_characteristics_of_mfc_collection_classes), summarizes other important characteristics of specific MFC collection classes as a guide to selection. Your choice may depend on whether the class is based on C++ templates, whether its elements can be serialized via MFC's document [serialization](../mfc/serialization-in-mfc.md) mechanism, whether its elements can be dumped via MFC's diagnostic dumping mechanism, or whether the class is type-safe — that is, whether you can guarantee the type of elements stored in and retrieved from a collection based on the class.
 
-### <a name="_core_characteristics_of_mfc_collection_classes"></a>  Characteristics of MFC Collection Classes
+### <a name="_core_characteristics_of_mfc_collection_classes"></a> Characteristics of MFC Collection Classes
 
 |Class|Uses C++<br /><br /> templates|Can be<br /><br /> serialized|Can be<br /><br /> dumped|Is<br /><br /> type-safe|
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|
@@ -72,10 +73,9 @@ The following table, [Characteristics of MFC Collection Classes](#_core_characte
 
 3. If marked Yes in this column, a nontemplate collection class is type-safe provided you use it as intended. For example, if you store bytes in a `CByteArray`, the array is type-safe. But if you use it to store characters, its type safety is less certain.
 
-## See Also
+## See also
 
 [Collections](../mfc/collections.md)<br/>
 [Template-Based Classes](../mfc/template-based-classes.md)<br/>
 [How to: Make a Type-Safe Collection](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2946"
 title: "Compiler Error C2946"
 ms.date: "11/04/2016"
 f1_keywords: ["C2946"]
@@ -15,7 +16,7 @@ You cannot explicitly instantiate a nontemplated class.
 
 The following sample generates C2946.
 
-```
+```cpp
 // C2946.cpp
 class C {};
 template C;  // C2946

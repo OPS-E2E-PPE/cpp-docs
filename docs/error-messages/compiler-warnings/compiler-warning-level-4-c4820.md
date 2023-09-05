@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4820"
 title: "Compiler Warning (level 4) C4820"
 ms.date: "11/04/2016"
 f1_keywords: ["C4820"]
@@ -15,7 +16,7 @@ This warning is off by default. See [Compiler Warnings That Are Off by Default](
 
 The following sample generates C4820:
 
-```
+```cpp
 // C4820.cpp
 // compile with: /W4 /c
 #pragma warning(default : 4820)

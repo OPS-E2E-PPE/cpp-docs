@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: message_not_found Class"
 title: "message_not_found Class"
 ms.date: "11/04/2016"
 f1_keywords: ["message_not_found", "CONCRT/concurrency::message_not_found", "CONCRT/concurrency::message_not_found::message_not_found"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when a messaging block is unable to fin
 
 ## Syntax
 
-```
+```cpp
 class message_not_found : public std::exception;
 ```
 
@@ -35,11 +36,11 @@ class message_not_found : public std::exception;
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> message_not_found
+## <a name="ctor"></a> message_not_found
 
 Constructs a `message_not_found` object.
 
-```
+```cpp
 explicit _CRTIMP message_not_found(_In_z_ const char* _Message) throw();
 
 message_not_found() throw();
@@ -50,8 +51,7 @@ message_not_found() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [Asynchronous Message Blocks](../../../parallel/concrt/asynchronous-message-blocks.md)
-

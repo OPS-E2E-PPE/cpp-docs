@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3075"
 title: "Compiler Error C3075"
 ms.date: "11/04/2016"
 f1_keywords: ["C3075"]
@@ -17,7 +18,7 @@ For more information, see [C++ Stack Semantics for Reference Types](../../dotnet
 
 The following sample generates C3075.
 
-```
+```cpp
 // C3075.cpp
 // compile with: /clr /c
 ref struct U {};

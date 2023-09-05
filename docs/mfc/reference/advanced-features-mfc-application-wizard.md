@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Advanced Features, MFC Application Wizard"
 title: "Advanced Features, MFC Application Wizard"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.appwiz.mfc.exe.advanced"]
@@ -13,7 +14,7 @@ This topic lists options for additional features for your application, such as H
 
    Generates a set of help files for context-sensitive help, available by using F1 and a Help menu, or by clicking a **Help** button on a dialog box. Help support requires the help compiler. If you do not have the help compiler, you can install it by rerunning Setup.
 
-   See [HTML Help: Context-Sensitive Help for Your Programs](../../mfc/html-help-context-sensitive-help-for-your-programs.md) and [Help Files (HTML Help)](../../ide/help-files-html-help.md) for more information.
+   See [HTML Help: Context-Sensitive Help for Your Programs](../../mfc/html-help-context-sensitive-help-for-your-programs.md) and [Help Files (HTML Help)](../../build/reference/help-files-html-help.md) for more information.
 
 - **Printing and print preview**
 
@@ -37,7 +38,7 @@ This topic lists options for additional features for your application, such as H
 
 - **Active Accessibility**
 
-   Adds support for [IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) to [CWnd](../../mfc/reference/cwnd-class.md)-derived classes, which you can use to customize the user interface for better interaction with accessibility clients.
+   Adds support for [IAccessible](/windows/win32/api/oleacc/nn-oleacc-iaccessible) to [CWnd](../../mfc/reference/cwnd-class.md)-derived classes, which you can use to customize the user interface for better interaction with accessibility clients.
 
 - **Common Control Manifest**
 
@@ -45,11 +46,11 @@ This topic lists options for additional features for your application, such as H
 
    Version 6 of the Common Control DLL does not automatically update the earlier version of the Common Controls that your existing applications use. To use version 6 of the Common Control DLL, you must create an application manifest that directs your application to load the DLL. This Common Control DLL also supports the Windows XP themes.
 
-   An application manifest can also specify other DLLs and versions that your application needs. For more information about application manifests, see [Isolated Applications and Side-by-Side Assemblies](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) in the Windows SDK.
+   An application manifest can also specify other DLLs and versions that your application needs. For more information about application manifests, see [Isolated Applications and Side-by-Side Assemblies](/windows/win32/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) in the Windows SDK.
 
 - **Support Restart Manager**
 
-   Adds support for the [Windows Restart Manager](/windows/desktop/RstMgr/using-restart-manager). This video shows how to use the Restart Manager from MFC: [How Do I: Use the New Restart Manager](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
+   Adds support for the [Windows Restart Manager](/windows/win32/RstMgr/using-restart-manager). This video shows how to use the Restart Manager from MFC: [How Do I: Use the New Restart Manager](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Advanced frame panes**
 
@@ -65,7 +66,6 @@ This topic lists options for additional features for your application, such as H
 
    Specifies the number of files to be listed on the most recently used list. The default number is 4.
 
-## See Also
+## See also
 
 [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
-

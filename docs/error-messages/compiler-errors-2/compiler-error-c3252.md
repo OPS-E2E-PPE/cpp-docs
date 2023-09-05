@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3252"
 title: "Compiler Error C3252"
 ms.date: "11/04/2016"
 f1_keywords: ["C3252"]
@@ -15,7 +16,7 @@ Note that all methods in an interface are public.
 
 The following sample generates C3252 and shows how to fix it:
 
-```
+```cpp
 // C3252.cpp
 // compile with: /clr /c
 ref class A {

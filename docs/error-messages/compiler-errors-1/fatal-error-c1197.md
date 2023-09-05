@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Fatal Error C1197"
 title: "Fatal Error C1197"
 ms.date: "11/04/2016"
 f1_keywords: ["C1197"]
@@ -17,7 +18,7 @@ To resolve this error, only reference files from the version of the common langu
 
 The following sample generates C1197:
 
-```
+```cpp
 // C1197.cpp
 // compile with: /clr /c
 // processor: x86

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Metadata::Attribute Attribute"
 title: "Platform::Metadata::Attribute Attribute"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -32,6 +33,6 @@ public ref class Attribute abstract : Object
 
 **Metadata:** platform.winmd
 
-## See Also
+## See also
 
 [Platform::Metadata Namespace](../cppcx/platform-metadata-namespace.md)

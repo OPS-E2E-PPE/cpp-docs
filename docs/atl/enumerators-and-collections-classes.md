@@ -1,8 +1,8 @@
 ---
+description: "Learn more about: Enumerators and Collections Classes"
 title: "Enumerators and Collections Classes (ATL)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
-f1_keywords: ["vc.atl.enum"]
 helpviewer_keywords: ["enumerators, ATL classes"]
 ms.assetid: fcd093b2-98bf-444d-94ab-9a55520a5051
 ---
@@ -24,7 +24,6 @@ The following classes provide support for COM collections and enumerations:
 
 [ATL Collections and Enumerators](../atl/atl-collections-and-enumerators.md)
 
-## See Also
+## See also
 
 [Class Overview](../atl/atl-class-overview.md)
-

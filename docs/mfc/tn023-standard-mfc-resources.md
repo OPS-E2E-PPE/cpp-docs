@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: TN023: Standard MFC Resources"
 title: "TN023: Standard MFC Resources"
 ms.date: "11/04/2016"
-f1_keywords: ["vc.mfc.resources"]
 helpviewer_keywords: ["resources [MFC]", "TN023", "standard resources"]
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
 ---
@@ -13,17 +13,17 @@ This note describes the standard resources provided with and needed by the MFC l
 
 MFC offers two categories of predefined resources that you can use in your application: clip-art resources and standard framework resources.
 
-Clip-art resources are additional resources that the framework does not depend on, but which you might want to add to your application's user interface. The following clip-art resources are contained in the MFC General sample [CLIPART](../visual-cpp-samples.md):
+Clip-art resources are additional resources that the framework does not depend on, but which you might want to add to your application's user interface. The following clip-art resources are contained in the MFC General sample [CLIPART](../overview/visual-cpp-samples.md):
 
 - Common.rc: A single file of resources that contains:
 
-   - A large collection of icons that represent a variety of business and data-processing tasks.
+  - A large collection of icons that represent a variety of business and data-processing tasks.
 
-   - Several common cursors (see also Afxres.rc).
+  - Several common cursors (see also Afxres.rc).
 
-   - A toolbar bitmap that contains several toolbar buttons.
+  - A toolbar bitmap that contains several toolbar buttons.
 
-   - The bitmap and icon resources that are used by Commdlg.dll.
+  - The bitmap and icon resources that are used by Commdlg.dll.
 
 - Indicate.rc: Contains string resources for the status-bar key-state indicators, such as "CAP" for Caps Lock.
 
@@ -56,10 +56,10 @@ The following framework resources are contained in the MFC\INCLUDE directory:
 To use other clip-art resources, follow the same steps. The only difference is that you will open the appropriate .rc file instead of Common.rc.
 
 > [!NOTE]
->  Be careful not to unintentionally move resources out of Common.rc permanently. If you hold the CTRL key while you drag resources, you will create a copy. If you do not hold CTRL down while you drag, the resources will be moved. If you are concerned that you might have accidentally made changes to the Common.rc file, click "No" when you are asked whether to save the changes to Common.rc.
+> Be careful not to unintentionally move resources out of Common.rc permanently. If you hold the CTRL key while you drag resources, you will create a copy. If you do not hold CTRL down while you drag, the resources will be moved. If you are concerned that you might have accidentally made changes to the Common.rc file, click "No" when you are asked whether to save the changes to Common.rc.
 
 > [!NOTE]
->  The .rc resource files have a special TEXTINCLUDE resource in them that will prevent you from accidentally saving on top of the standard .rc files.
+> The .rc resource files have a special TEXTINCLUDE resource in them that will prevent you from accidentally saving on top of the standard .rc files.
 
 ### Customizing Standard Framework Resources
 
@@ -87,10 +87,9 @@ In some rare cases you might want to customize the contents of the standard fram
 1. Modify the copy of the standard resources in your application resource file.
 
 > [!NOTE]
->  Do not modify the resources directly in the standard .rc files. Doing so will modify the resources available in every application, not just in the one you are currently working on.
+> Do not modify the resources directly in the standard .rc files. Doing so will modify the resources available in every application, not just in the one you are currently working on.
 
-## See Also
+## See also
 
 [Technical Notes by Number](../mfc/technical-notes-by-number.md)<br/>
 [Technical Notes by Category](../mfc/technical-notes-by-category.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: extreme_value_distribution Class"
 title: "extreme_value_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::extreme_value_distribution", "random/std::extreme_value_distribution::reset", "random/std::extreme_value_distribution::a", "random/std::extreme_value_distribution::b", "random/std::extreme_value_distribution::param", "random/std::extreme_value_distribution::min", "random/std::extreme_value_distribution::max", "random/std::extreme_value_distribution::operator()", "random/std::extreme_value_distribution::param_type", "random/std::extreme_value_distribution::param_type::a", "random/std::extreme_value_distribution::param_type::b", "random/std::extreme_value_distribution::param_type::operator==", "random/std::extreme_value_distribution::param_type::operator!="]
@@ -43,26 +44,24 @@ public:
 
 ### Parameters
 
-*RealType*<br/>
-The floating-point result type, defaults to **double**. For possible types, see [\<random>](../standard-library/random.md).
+*RealType*\
+The floating-point result type, defaults to **`double`**. For possible types, see [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
+*URNG*\
 The random number generator engine. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes a distribution that produces values of a user-specified floating-point type, or type **double** if none is provided, distributed according to the Extreme Value Distribution. The following table links to articles about individual members.
+The class template describes a distribution that produces values of a user-specified floating-point type, or type **`double`** if none is provided, distributed according to the Extreme Value Distribution. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[extreme_value_distribution](#extreme_value_distribution)|`extreme_value_distribution::a`|`extreme_value_distribution::param`|
-|`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[param_type](#param_type)|
+[extreme_value_distribution](#extreme_value_distribution)\
+[param_type](#param_type)
 
 The property functions `a()` and `b()` return their respective values for stored distribution parameters `a` and `b`.
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the extreme value distribution, see the Wolfram MathWorld article [Extreme Value Distribution](http://go.microsoft.com/fwlink/p/?linkid=401110).
+For detailed information about the extreme value distribution, see the Wolfram MathWorld article [Extreme Value Distribution](https://go.microsoft.com/fwlink/p/?linkid=401110).
 
 ## Example
 
@@ -153,7 +152,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="extreme_value_distribution"></a>  extreme_value_distribution::extreme_value_distribution
+## <a name="extreme_value_distribution"></a> extreme_value_distribution::extreme_value_distribution
 
 Constructs the distribution.
 
@@ -164,13 +163,13 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### Parameters
 
-*a_value*<br/>
+*a_value*\
 The `a` distribution parameter.
 
-*b_value*<br/>
+*b_value*\
 The `b` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The `param_type` structure used to construct the distribution.
 
 ### Remarks
@@ -181,7 +180,7 @@ The first constructor constructs an object whose stored `a` value holds the valu
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  extreme_value_distribution::param_type
+## <a name="param_type"></a> extreme_value_distribution::param_type
 
 Stores the parameters of the distribution.
 
@@ -199,13 +198,13 @@ struct param_type {
 
 ### Parameters
 
-*a_value*<br/>
+*a_value*\
 The `a` distribution parameter.
 
-*b_value*<br/>
+*b_value*\
 The `b` distribution parameter.
 
-*right*<br/>
+*right*\
 The `param_type` object to compare to this.
 
 ### Remarks
@@ -216,4 +215,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

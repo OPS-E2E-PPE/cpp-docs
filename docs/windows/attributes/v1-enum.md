@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: v1_enum"
 title: "v1_enum (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.v1_enum"]
@@ -17,7 +18,7 @@ Directs that the specified enumerated type be transmitted as a 32-bit entity rat
 
 ## Remarks
 
-The **v1_enum** C++ attribute has the same functionality as the [v1_enum](/windows/desktop/Midl/v1-enum) MIDL attribute.
+The **v1_enum** C++ attribute has the same functionality as the [v1_enum](/windows/win32/Midl/v1-enum) MIDL attribute.
 
 ## Example
 
@@ -36,9 +37,7 @@ enum eList {
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Enumerated type|
 |**Repeatable**|No|
@@ -47,7 +46,7 @@ enum eList {
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Typedef, Enum, Union, and Struct Attributes](typedef-enum-union-and-struct-attributes.md)

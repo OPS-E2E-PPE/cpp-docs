@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4243"
 title: "Compiler Warning (level 3) C4243"
 ms.date: "11/04/2016"
 f1_keywords: ["C4243"]
@@ -13,7 +14,7 @@ A pointer to a derived class is converted to a pointer to a base class, but the 
 
 The following sample generates C4243:
 
-```
+```cpp
 // C4243.cpp
 // compile with: /W3
 // C4243 expected

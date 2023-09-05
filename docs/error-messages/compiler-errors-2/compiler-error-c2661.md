@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2661"
 title: "Compiler Error C2661"
 ms.date: "11/04/2016"
 f1_keywords: ["C2661"]
@@ -17,7 +18,7 @@ Possible causes:
 
 The following sample generates C2661:
 
-```
+```cpp
 // C2661.cpp
 void func( int ){}
 void func( int, int ){}

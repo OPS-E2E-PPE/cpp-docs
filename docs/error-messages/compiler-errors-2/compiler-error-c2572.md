@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2572"
 title: "Compiler Error C2572"
 ms.date: "11/04/2016"
 f1_keywords: ["C2572"]
@@ -13,7 +14,7 @@ Default parameters cannot be redefined. If you require another value for the par
 
 The following sample generates C2572:
 
-```
+```cpp
 // C2572.cpp
 // compile with: /c
 void f(int i = 1);   // function declaration

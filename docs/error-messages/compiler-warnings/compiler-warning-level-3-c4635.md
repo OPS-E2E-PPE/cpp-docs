@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4635"
 title: "Compiler Warning (level 3) C4635"
 ms.date: "11/04/2016"
 f1_keywords: ["C4635"]
@@ -13,7 +14,7 @@ The compiler found some problem with the XML tags.  Fix the problem and recompil
 
 The following sample generates C4635:
 
-```
+```cpp
 // C4635.cpp
 // compile with: /doc /clr /W3 /c
 /// <summary>

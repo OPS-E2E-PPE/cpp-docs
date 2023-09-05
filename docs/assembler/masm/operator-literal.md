@@ -1,18 +1,20 @@
 ---
-title: "operator &lt;&gt;"
-ms.date: "08/30/2018"
+description: "Learn more about: Microsoft Assembler (MASM) operator <>"
+title: "MASM operator <>"
+ms.date: "12/17/2019"
 f1_keywords: ["<>", "operator <>"]
 helpviewer_keywords: ["operator <>", "<> operator"]
 ms.assetid: bc5acf43-df3e-499b-a3ed-1672cfa0d1ed
 ---
-# operator &lt;&gt;
+# MASM operator `<>`
 
 Treats *text* as a single literal element.
 
 ## Syntax
 
-> \<*text*>
+> __`<`__*text*__`>`__
 
 ## See also
 
-[Operators Reference](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)\
+[MASM BNF grammar](masm-bnf-grammar.md)

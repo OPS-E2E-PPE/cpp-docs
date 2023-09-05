@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: GetProcAddress"
 title: "GetProcAddress"
 ms.date: "11/04/2016"
 f1_keywords: ["GetProcAddress"]
@@ -7,7 +8,7 @@ ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
 ---
 # GetProcAddress
 
-Processes explicitly linking to a DLL call [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) to obtain the address of an exported function in the DLL. You use the returned function pointer to call the DLL function. **GetProcAddress** takes as parameters the DLL module handle (returned by either **LoadLibrary**, `AfxLoadLibrary`, or **GetModuleHandle**) and takes either the name of the function you want to call or the function's export ordinal.
+Processes explicitly linking to a DLL call [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) to obtain the address of an exported function in the DLL. You use the returned function pointer to call the DLL function. **GetProcAddress** takes as parameters the DLL module handle (returned by either **LoadLibrary**, `AfxLoadLibrary`, or **GetModuleHandle**) and takes either the name of the function you want to call or the function's export ordinal.
 
 Because you are calling the DLL function through a pointer and there is no compile-time type checking, make sure that the parameters to the function are correct so that you do not overstep the memory allocated on the stack and cause an access violation. One way to help provide type-safety is to look at the function prototypes of the exported functions and create matching typedefs for the function pointers. For example:
 
@@ -45,18 +46,18 @@ You can only obtain the export ordinal if the DLL you are linking to is built wi
 
 ## What do you want to do?
 
-- [How to link implicitly to a DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Link an executable to a DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [Determine which linking method to use](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Link an executable to a DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## What do you want to know more about?
 
-- [LoadLibrary and AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
+- [LoadLibrary and AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)
 
-- [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
+- [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
 
-- [Exporting from a DLL Using DEF Files](../build/exporting-from-a-dll-using-def-files.md)
+- [Exporting from a DLL Using DEF Files](exporting-from-a-dll-using-def-files.md)
 
-## See Also
+## See also
 
-[DLLs in Visual C++](../build/dlls-in-visual-cpp.md)
+[Create C/C++ DLLs in Visual Studio](dlls-in-visual-cpp.md)

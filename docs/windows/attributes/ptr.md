@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ptr"
 title: "ptr (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.ptr"]
@@ -17,7 +18,7 @@ Designates a pointer as a full pointer.
 
 ## Remarks
 
-The **ptr** C++ attribute has the same functionality as the [ptr](/windows/desktop/Midl/ptr) MIDL attribute.
+The **ptr** C++ attribute has the same functionality as the [ptr](/windows/win32/Midl/ptr) MIDL attribute.
 
 ## Example
 
@@ -25,18 +26,16 @@ See the example for [defaultvalue](defaultvalue.md) for a sample use of **ptr**.
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|Interface parameter, interface method, **typedef**|
+|**Applies to**|Interface parameter, interface method, **`typedef`**|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Interface Attributes](interface-attributes.md)<br/>

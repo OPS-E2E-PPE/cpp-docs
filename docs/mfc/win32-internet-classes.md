@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Win32 Internet Classes"
 title: "Win32 Internet Classes"
 ms.date: "09/12/2018"
 f1_keywords: ["vc.classes.win32"]
@@ -51,7 +52,6 @@ Gets a gopher "locator" from a gopher server, determines the locator's type, and
 [CInternetException](../mfc/reference/cinternetexception-class.md)<br/>
 Represents an exception condition related to an Internet operation.
 
-## See Also
+## See also
 
 [Class Overview](../mfc/class-library-overview.md)
-

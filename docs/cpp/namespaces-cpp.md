@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Namespaces (C++)"
 title: "Namespaces (C++)"
 ms.date: "08/30/2017"
 f1_keywords: ["namespace_CPP", "using_CPP"]
-helpviewer_keywords: ["namespaces [C++], C++", "namespaces [C++]", "namespaces [C++], global", "global namespace", "Visual C++, namespaces"]
+helpviewer_keywords: ["namespaces [C++]"]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
 ---
 # Namespaces (C++)
@@ -51,12 +52,12 @@ Func(mgr);
 
 ## <a id="using_directives"></a> using directives
 
-The **using** directive allows all the names in a **namespace** to be used without the *namespace-name* as an explicit qualifier. Use a using directive in an implementation file (i.e. *.cpp) if you are using several different identifiers in a namespace; if you are just using one or two identifiers, then consider a using declaration to only bring those identifiers into scope and not all the identifiers in the namespace. If a local variable has the same name as a namespace variable, the namespace variable is hidden. It is an error to have a namespace variable with the same name as a global variable.
+The **`using`** directive allows all the names in a **`namespace`** to be used without the *namespace-name* as an explicit qualifier. Use a using directive in an implementation file (i.e. *.cpp) if you are using several different identifiers in a namespace; if you are just using one or two identifiers, then consider a using declaration to only bring those identifiers into scope and not all the identifiers in the namespace. If a local variable has the same name as a namespace variable, the namespace variable is hidden. It is an error to have a namespace variable with the same name as a global variable.
 
 > [!NOTE]
->  A using directive can be placed at the top of a .cpp file (at file scope), or inside a class or function definition.
+> A using directive can be placed at the top of a .cpp file (at file scope), or inside a class or function definition.
 >
->  In general, avoid putting using directives in header files (*.h) because any file that includes that header will bring everything in the namespace into scope, which can cause name hiding and name collision problems that are very difficult to debug. Always use fully qualified names in a header file. If those names get too long, you can use a namespace alias to shorten them. (See below.)
+> In general, avoid putting using directives in header files (*.h) because any file that includes that header will bring everything in the namespace into scope, which can cause name hiding and name collision problems that are very difficult to debug. Always use fully qualified names in a header file. If those names get too long, you can use a namespace alias to shorten them. (See below.)
 
 ## Declaring namespaces and namespace members
 
@@ -72,7 +73,7 @@ namespace ContosoDataServer
 }
 ```
 
-Function implementations in contosodata.cpp should use the fully qualified name, even if you place a **using** directive at the top of the file:
+Function implementations in contosodata.cpp should use the fully qualified name, even if you place a **`using`** directive at the top of the file:
 
 ```cpp
 #include "contosodata.h"
@@ -95,15 +96,14 @@ Members of a named namespace can be defined outside the namespace in which they 
 // defining_namespace_members.cpp
 // C2039 expected
 namespace V {
-        void f();
-    }
+    void f();
+}
 
-    void V::f() { }        // ok
-    void V::g() { }        // C2039, g() is not yet a member of V
+void V::f() { }        // ok
+void V::g() { }        // C2039, g() is not yet a member of V
 
-    namespace V {
-        void g();
-    }
+namespace V {
+    void g();
 }
 ```
 
@@ -119,7 +119,7 @@ All C++ standard library types and functions are declared in the `std` namespace
 
 ## Nested namespaces
 
-Namespaces may be nested. An ordinary nested namespace has unqualified access to its parent’s members, but the parent members do not have unqualified access to the nested namespace (unless it is declared as inline), as shown in the following example:
+Namespaces may be nested. An ordinary nested namespace has unqualified access to its parent's members, but the parent members do not have unqualified access to the nested namespace (unless it is declared as inline), as shown in the following example:
 
 ```cpp
 namespace ContosoDataServer
@@ -235,7 +235,7 @@ namespace Contoso
 
 ## <a id="namespace_aliases"></a> Namespace aliases
 
-Namespace names need to be unique, which means that often they should not be too short. If the length of a name makes code difficult to read, or is tedious to type in a header file where using directives can’t be used, then you can make a namespace alias which serves as an abbreviation for the actual name. For example:
+Namespace names need to be unique, which means that often they should not be too short. If the length of a name makes code difficult to read, or is tedious to type in a header file where using directives can't be used, then you can make a namespace alias which serves as an abbreviation for the actual name. For example:
 
 ```cpp
 namespace a_very_long_namespace_name { class Foo {}; }

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: context_self_unblock Class"
 title: "context_self_unblock Class"
 ms.date: "11/04/2016"
 f1_keywords: ["context_self_unblock", "CONCRT/concurrency::context_self_unblock", "CONCRT/concurrency::context_self_unblock::context_self_unblock"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when the `Unblock` method of a `Context
 
 ## Syntax
 
-```
+```cpp
 class context_self_unblock : public std::exception;
 ```
 
@@ -35,11 +36,11 @@ class context_self_unblock : public std::exception;
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> context_self_unblock
+## <a name="ctor"></a> context_self_unblock
 
 Constructs a `context_self_unblock` object.
 
-```
+```cpp
 explicit _CRTIMP context_self_unblock(_In_z_ const char* _Message) throw();
 
 context_self_unblock() throw();
@@ -50,6 +51,6 @@ context_self_unblock() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

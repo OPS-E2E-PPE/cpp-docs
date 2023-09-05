@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Issuing a Parameterized Query"
 title: "Issuing a Parameterized Query"
 ms.date: "10/19/2018"
 helpviewer_keywords: ["parameter queries, running using CCommand class"]
@@ -20,7 +21,7 @@ int main()
     CSession session;
     CCommand<CAccessor<CArtists>> artists;
     LPCSTR clsid; // Initialize CLSID_MSDASQL here
-	LPCTSTR pName = L"NWind";
+    LPCTSTR pName = L"NWind";
 
     // Open the connection, session, and table, specifying authentication
     // using Windows NT integrated security. Hard-coding a password is a major
@@ -70,6 +71,6 @@ END_PARAM_MAP()
 };
 ```
 
-## See Also
+## See also
 
 [Working with OLE DB Consumer Templates](../../data/oledb/working-with-ole-db-consumer-templates.md)

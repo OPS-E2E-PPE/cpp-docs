@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Explicitly Defaulted and Deleted Functions"
 title: "Explicitly Defaulted and Deleted Functions"
 ms.date: "11/04/2016"
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
@@ -19,15 +20,15 @@ This is convenient for simple types, but complex types often define one or more 
 
 - If a move constructor or move-assignment operator is explicitly declared, then:
 
-   - No copy constructor is automatically generated.
+  - No copy constructor is automatically generated.
 
-   - No copy-assignment operator is automatically generated.
+  - No copy-assignment operator is automatically generated.
 
 - If a copy constructor, copy-assignment operator, move constructor, move-assignment operator, or destructor is explicitly declared, then:
 
-   - No move constructor is automatically generated.
+  - No move constructor is automatically generated.
 
-   - No move-assignment operator is automatically generated.
+  - No move-assignment operator is automatically generated.
 
 > [!NOTE]
 > Additionally, the C++11 standard specifies the following additional rules:
@@ -37,7 +38,7 @@ This is convenient for simple types, but complex types often define one or more 
 >
 > In both cases, Visual Studio continues to automatically generate the necessary functions implicitly, and does not emit a warning.
 
-The consequences of these rules can also leak into object hierarchies. For example, if for any reason a base class fails to have a default constructor that's callable from a deriving class—that is, a **public** or **protected** constructor that takes no parameters—then a class that derives from it cannot automatically generate its own default constructor.
+The consequences of these rules can also leak into object hierarchies. For example, if for any reason a base class fails to have a default constructor that's callable from a deriving class—that is, a **`public`** or **`protected`** constructor that takes no parameters—then a class that derives from it cannot automatically generate its own default constructor.
 
 These rules can complicate the implementation of what should be straight-forward, user-defined types and common C++ idioms—for example, making a user-defined type non-copyable by declaring the copy constructor and copy-assignment operator privately and not defining them.
 
@@ -54,7 +55,7 @@ private:
 
 Before C++11, this code snippet was the idiomatic form of non-copyable types. However, it has several problems:
 
-- The copy constructor has to be declared privately to hide it, but because it’s declared at all, automatic generation of the default constructor is prevented. You have to explicitly define the default constructor if you want one, even if it does nothing.
+- The copy constructor has to be declared privately to hide it, but because it's declared at all, automatic generation of the default constructor is prevented. You have to explicitly define the default constructor if you want one, even if it does nothing.
 
 - Even if the explicitly-defined default constructor does nothing, it's considered non-trivial by the compiler. It's less efficient than an automatically generated default constructor and prevents `noncopyable` from being a true POD type.
 
@@ -102,13 +103,13 @@ struct widget
 inline widget& widget::operator=(const widget&) =default;
 ```
 
-Notice that you can default a special member function outside the body of a class as long as it’s inlinable.
+Notice that you can default a special member function outside the body of a class as long as it's inlinable.
 
 Because of the performance benefits of trivial special member functions, we recommend that you prefer automatically generated special member functions over empty function bodies when you want the default behavior. You can do this either by explicitly defaulting the special member function, or by not declaring it (and also not declaring other special member functions that would prevent it from being automatically generated.)
 
 ## Deleted functions
 
-You can delete special member functions as well as normal member functions and non-member functions to prevent them from being defined or called. Deleting of special member functions provides a cleaner way of preventing the compiler from generating special member functions that you don’t want. The function must be deleted as it is declared; it cannot be deleted afterwards in the way that a function can be declared and then later defaulted.
+You can delete special member functions as well as normal member functions and non-member functions to prevent them from being defined or called. Deleting of special member functions provides a cleaner way of preventing the compiler from generating special member functions that you don't want. The function must be deleted as it is declared; it cannot be deleted afterwards in the way that a function can be declared and then later defaulted.
 
 ```cpp
 struct widget
@@ -126,7 +127,7 @@ void call_with_true_double_only(float) =delete;
 void call_with_true_double_only(double param) { return; }
 ```
 
-Notice in the preceding sample that calling `call_with_true_double_only` by using a **float** argument would cause a compiler error, but calling `call_with_true_double_only` by using an **int** argument would not; in the **int** case, the argument will be promoted from **int** to **double** and successfully call the **double** version of the function, even though that might not be what’s intended. To ensure that any call to this function by using a non-double argument causes a compiler error, you can declare a template version of the function that’s deleted.
+Notice in the preceding sample that calling `call_with_true_double_only` by using a **`float`** argument would cause a compiler error, but calling `call_with_true_double_only` by using an **`int`** argument would not; in the **`int`** case, the argument will be promoted from **`int`** to **`double`** and successfully call the **`double`** version of the function, even though that might not be what's intended. To ensure that any call to this function by using a non-double argument causes a compiler error, you can declare a template version of the function that's deleted.
 
 ```cpp
 template < typename T >

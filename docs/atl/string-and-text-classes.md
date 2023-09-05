@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: String and Text Classes"
 title: "ATL String and Text Classes"
 ms.date: "11/04/2016"
 ms.topic: "reference"
@@ -25,8 +26,7 @@ These classes provide support for strings and text string conversions.
 
 - [_U_STRINGorID](../atl/reference/u-stringorid-class.md) This argument adapter class allows either resource names (`LPCTSTR`s) or resource IDs (UINTs) to be passed to a function without requiring the caller to convert the ID to a string using the MAKEINTRESOURCE macro.
 
-## See Also
+## See also
 
 [Class Overview](../atl/atl-class-overview.md)<br/>
 [ATL and MFC String Conversion Macros](reference/string-conversion-macros.md)
-

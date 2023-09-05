@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3213"
 title: "Compiler Error C3213"
 ms.date: "11/04/2016"
 f1_keywords: ["C3213"]
@@ -13,7 +14,7 @@ A type that will be visible from an assembly must use publicly visible base clas
 
 The following sample generates C3213:
 
-```
+```cpp
 // C3213.cpp
 // compile with: /clr
 private ref struct privateG {

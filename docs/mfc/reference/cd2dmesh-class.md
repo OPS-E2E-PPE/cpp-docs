@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CD2DMesh Class"
 title: "CD2DMesh Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CD2DMesh", "AFXRENDERTARGET/CD2DMesh", "AFXRENDERTARGET/CD2DMesh::CD2DMesh", "AFXRENDERTARGET/CD2DMesh::Attach", "AFXRENDERTARGET/CD2DMesh::Create", "AFXRENDERTARGET/CD2DMesh::Destroy", "AFXRENDERTARGET/CD2DMesh::Detach", "AFXRENDERTARGET/CD2DMesh::Get", "AFXRENDERTARGET/CD2DMesh::IsValid", "AFXRENDERTARGET/CD2DMesh::Open", "AFXRENDERTARGET/CD2DMesh::m_pMesh"]
@@ -60,7 +61,7 @@ class CD2DMesh : public CD2DResource;
 
 **Header:** afxrendertarget.h
 
-##  <a name="_dtorcd2dmesh"></a>  CD2DMesh::~CD2DMesh
+## <a name="_dtorcd2dmesh"></a> CD2DMesh::~CD2DMesh
 
 The destructor. Called when a D2D mesh object is being destroyed.
 
@@ -68,11 +69,11 @@ The destructor. Called when a D2D mesh object is being destroyed.
 virtual ~CD2DMesh();
 ```
 
-##  <a name="attach"></a>  CD2DMesh::Attach
+## <a name="attach"></a> CD2DMesh::Attach
 
 Attaches existing resource interface to the object
 
-```
+```cpp
 void Attach(ID2D1Mesh* pResource);
 ```
 
@@ -81,7 +82,7 @@ void Attach(ID2D1Mesh* pResource);
 *pResource*<br/>
 Existing resource interface. Cannot be NULL
 
-##  <a name="cd2dmesh"></a>  CD2DMesh::CD2DMesh
+## <a name="cd2dmesh"></a> CD2DMesh::CD2DMesh
 
 Constructs a CD2DMesh object.
 
@@ -99,7 +100,7 @@ A pointer to the render target.
 *bAutoDestroy*<br/>
 Indicates that the object will be destroyed by owner (pParentTarget).
 
-##  <a name="create"></a>  CD2DMesh::Create
+## <a name="create"></a> CD2DMesh::Create
 
 Creates a CD2DMesh.
 
@@ -116,7 +117,7 @@ A pointer to the render target.
 
 If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.
 
-##  <a name="destroy"></a>  CD2DMesh::Destroy
+## <a name="destroy"></a> CD2DMesh::Destroy
 
 Destroys a CD2DMesh object.
 
@@ -124,7 +125,7 @@ Destroys a CD2DMesh object.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DMesh::Detach
+## <a name="detach"></a> CD2DMesh::Detach
 
 Detaches resource interface from the object
 
@@ -136,7 +137,7 @@ ID2D1Mesh* Detach();
 
 Pointer to detached resource interface.
 
-##  <a name="get"></a>  CD2DMesh::Get
+## <a name="get"></a> CD2DMesh::Get
 
 Returns ID2D1Mesh interface
 
@@ -148,7 +149,7 @@ ID2D1Mesh* Get();
 
 Pointer to an ID2D1Mesh interface or NULL if object is not initialized yet.
 
-##  <a name="isvalid"></a>  CD2DMesh::IsValid
+## <a name="isvalid"></a> CD2DMesh::IsValid
 
 Checks resource validity
 
@@ -160,7 +161,7 @@ virtual BOOL IsValid() const;
 
 TRUE if resource is valid; otherwise FALSE.
 
-##  <a name="m_pmesh"></a>  CD2DMesh::m_pMesh
+## <a name="m_pmesh"></a> CD2DMesh::m_pMesh
 
 A pointer to an ID2D1Mesh.
 
@@ -168,7 +169,7 @@ A pointer to an ID2D1Mesh.
 ID2D1Mesh* m_pMesh;
 ```
 
-##  <a name="open"></a>  CD2DMesh::Open
+## <a name="open"></a> CD2DMesh::Open
 
 Opens the mesh for population.
 
@@ -180,7 +181,7 @@ ID2D1TessellationSink* Open();
 
 A pointer to an ID2D1TessellationSink that is used to populate the mesh.
 
-##  <a name="operator_id2d1mesh_star"></a>  CD2DMesh::operator ID2D1Mesh*
+## <a name="operator_id2d1mesh_star"></a> CD2DMesh::operator ID2D1Mesh*
 
 Returns ID2D1Mesh interface
 
@@ -192,6 +193,6 @@ operator ID2D1Mesh*();
 
 Pointer to an ID2D1Mesh interface or NULL if object is not initialized yet.
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

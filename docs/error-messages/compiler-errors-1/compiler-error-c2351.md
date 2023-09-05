@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2351"
 title: "Compiler Error C2351"
 ms.date: "11/04/2016"
 f1_keywords: ["C2351"]
@@ -13,7 +14,7 @@ In a new-style initialization list for a constructor, you must explicitly name e
 
 The following sample generates C2351:
 
-```
+```cpp
 // C2351.cpp
 // compile with: /c
 class B {

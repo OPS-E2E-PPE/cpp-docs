@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3028"
 title: "Compiler Error C3028"
 ms.date: "11/04/2016"
 f1_keywords: ["C3028"]
@@ -13,7 +14,7 @@ A symbol other than a variable or static data member was passed to the reduction
 
 The following sample generates C3028:
 
-```
+```cpp
 // C3028.cpp
 // compile with: /openmp /link vcomps.lib
 int g_i;
@@ -71,8 +72,7 @@ MyClass::MyClass(int x) {
    // OK
       ;
 
-   #pragma omp parallel reduction(+: x, g_i, MyClass::x_public,
-   MyClass::x_private)
+   #pragma omp parallel reduction(+: x, g_i, MyClass::x_public, MyClass::x_private)
    // OK
       ;
 

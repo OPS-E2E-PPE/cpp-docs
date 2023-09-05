@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: vector (STL/CLR)"
 title: "vector (STL/CLR)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
-f1_keywords: ["cliext::vector", "cliext::operator!=", "cliext::operator<", "cliext::operator<=", "cliext::operator==", "cliext::operator>", "cliext::operator>=", "cliext::vector::assign", "cliext::vector::at", "cliext::vector::back", "cliext::vector::back_item", "cliext::vector::begin", "cliext::vector::capacity", "cliext::vector::clear", "cliext::vector::const_iterator", "cliext::vector::const_reference", "cliext::vector::const_reverse_iterator", "cliext::vector::difference_type", "cliext::vector::empty", "cliext::vector::end", "cliext::vector::erase", "cliext::vector::front", "cliext::vector::front_item", "cliext::vector::generic_container", "cliext::vector::generic_iterator", "cliext::vector::generic_reverse_iterator", "cliext::vector::generic_value", "cliext::vector::insert", "cliext::vector::iterator", "cliext::vector::operator=", "cliext::vector::operator", "cliext::vector::pop_back", "cliext::vector::push_back", "cliext::vector::rbegin", "cliext::vector::reference", "cliext::vector::rend", "cliext::vector::reserve", "cliext::vector::resize", "cliext::vector::reverse_iterator", "cliext::vector::size", "cliext::vector::size_type", "cliext::vector::swap", "cliext::vector::to_array", "cliext::vector::value_type", "cliext::vector::vector"]
+f1_keywords: ["cliext::vector", "cliext::vector::assign", "cliext::vector::at", "cliext::vector::back", "cliext::vector::back_item", "cliext::vector::begin", "cliext::vector::capacity", "cliext::vector::clear", "cliext::vector::const_iterator", "cliext::vector::const_reference", "cliext::vector::const_reverse_iterator", "cliext::vector::difference_type", "cliext::vector::empty", "cliext::vector::end", "cliext::vector::erase", "cliext::vector::front", "cliext::vector::front_item", "cliext::vector::generic_container", "cliext::vector::generic_iterator", "cliext::vector::generic_reverse_iterator", "cliext::vector::generic_value", "cliext::vector::insert", "cliext::vector::iterator", "cliext::vector::operator=", "cliext::vector::operator", "cliext::vector::pop_back", "cliext::vector::push_back", "cliext::vector::rbegin", "cliext::vector::reference", "cliext::vector::rend", "cliext::vector::reserve", "cliext::vector::resize", "cliext::vector::reverse_iterator", "cliext::vector::size", "cliext::vector::size_type", "cliext::vector::swap", "cliext::vector::to_array", "cliext::vector::value_type", "cliext::vector::vector"]
 helpviewer_keywords: ["vector class [STL/CLR]", "<cliext/vector> header [STL/CLR]", "<vector> header [STL/CLR]", "operator!= member [STL/CLR]", "operator< member [STL/CLR]", "operator<= member [STL/CLR]", "operator== member [STL/CLR]", "operator> (vector) member [STL/CLR]", "operator>= member [STL/CLR]", "assign member [STL/CLR]", "at member [STL/CLR]", "back member [STL/CLR]", "back_item member [STL/CLR]", "begin member [STL/CLR]", "capacity member [STL/CLR]", "clear member [STL/CLR]", "const_iterator member [STL/CLR]", "const_reference member [STL/CLR]", "const_reverse_iterator member [STL/CLR]", "difference_type member [STL/CLR]", "empty member [STL/CLR]", "end member [STL/CLR]", "erase member [STL/CLR]", "front member [STL/CLR]", "front_item member [STL/CLR]", "generic_container member [STL/CLR]", "generic_iterator member [STL/CLR]", "generic_reverse_iterator member [STL/CLR]", "generic_value member [STL/CLR]", "insert member [STL/CLR]", "iterator member [STL/CLR]", "operator= member [STL/CLR]", "operator member [STL/CLR]", "pop_back member [STL/CLR]", "push_back member [STL/CLR]", "rbegin member [STL/CLR]", "reference member [STL/CLR]", "rend member [STL/CLR]", "reserve member [STL/CLR]", "resize member [STL/CLR]", "reverse_iterator member [STL/CLR]", "size member [STL/CLR]", "size_type member [STL/CLR]", "swap member [STL/CLR]", "to_array member [STL/CLR]", "value_type member [STL/CLR]", "vector member [STL/CLR]"]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
 ---
@@ -425,7 +426,7 @@ size_type capacity();
 
 ### Remarks
 
-The member function returns the storage currently allocated to hold the controlled sequence, a value at least as large as [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`()`. You use it to determine how much the container can grow before it must reallocate storage for the controlled sequence.
+The member function returns the storage currently allocated to hold the controlled sequence, a value at least as large as [vector::size (STL/CLR)](#size)`()`. You use it to determine how much the container can grow before it must reallocate storage for the controlled sequence.
 
 ### Example
 
@@ -475,7 +476,7 @@ void clear();
 
 ### Remarks
 
-The member function effectively calls [vector::erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md)`(` [vector::begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md)`(),` [vector::end (STL/CLR)](../dotnet/vector-end-stl-clr.md)`())`. You use it to ensure that the controlled sequence is empty.
+The member function effectively calls [vector::erase (STL/CLR)](#erase)`(` [vector::begin (STL/CLR)](#begin)`(),` [vector::end (STL/CLR)](#end)`())`. You use it to ensure that the controlled sequence is empty.
 
 ### Example
 
@@ -713,7 +714,7 @@ bool empty();
 
 ### Remarks
 
-The member function returns true for an empty controlled sequence. It is equivalent to [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`() == 0`. You use it to test whether the vector is empty.
+The member function returns true for an empty controlled sequence. It is equivalent to [vector::size (STL/CLR)](#size)`() == 0`. You use it to test whether the vector is empty.
 
 ### Example
 
@@ -836,7 +837,7 @@ The first member function removes the element of the controlled sequence pointed
 
 The second member function removes the elements of the controlled sequence in the range [`first`, `last`). You use it to remove zero or more contiguous elements.
 
-Both member functions return an iterator that designates the first element remaining beyond any elements removed, or [vector::end (STL/CLR)](../dotnet/vector-end-stl-clr.md)`()` if no such element exists.
+Both member functions return an iterator that designates the first element remaining beyond any elements removed, or [vector::end (STL/CLR)](#end)`()` if no such element exists.
 
 When erasing elements, the number of element copies is linear in the number of elements between the end of the erasure and the nearer end of the sequence. (When erasing one or more elements at either end of the sequence, no element copies occur.)
 
@@ -938,7 +939,8 @@ front() = a
 x b c
 ```
 
-# <a name="front_item"></a> vector::front_item (STL/CLR)
+## <a name="front_item"></a> vector::front_item (STL/CLR)
+
 Accesses the first element.
 
 ### Syntax
@@ -988,7 +990,8 @@ front_item = a
 x b c
 ```
 
-# <a name="generic_container"></a> vector::generic_container (STL/CLR)
+## <a name="generic_container"></a> vector::generic_container (STL/CLR)
+
 The type of the generic interface for the container.
 
 ### Syntax
@@ -1111,7 +1114,8 @@ a b c
 a a c
 ```
 
-# <a name="generic_reverse_iterator"></a> vector::generic_reverse_iterator (STL/CLR)
+## <a name="generic_reverse_iterator"></a> vector::generic_reverse_iterator (STL/CLR)
+
 The type of a reverse iterator for use with the generic interface for the container.
 
 ### Syntax
@@ -1398,7 +1402,7 @@ Container to copy.
 
 ### Remarks
 
-The member operator copies *right* to the object, then returns `*this`. You use it to replace the controlled sequence with a copy of the controlled sequence in *right*.
+The member operator copies *right* to the object, then returns **`*this`**. You use it to replace the controlled sequence with a copy of the controlled sequence in *right*.
 
 ### Example
 
@@ -1815,7 +1819,7 @@ Value of the padding element.
 
 ### Remarks
 
-The member functions both ensure that [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`()` henceforth returns *new_size*. If it must make the controlled sequence longer, the first member function appends elements with value `value_type()`, while the second member function appends elements with value *val*. To make the controlled sequence shorter, both member functions effectively erase the last element [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`() -` `new_size` times. You use it to ensure that the controlled sequence has size *new_size*, by either trimming or padding the current controlled sequence.
+The member functions both ensure that [vector::size (STL/CLR)](#size)`()` henceforth returns *new_size*. If it must make the controlled sequence longer, the first member function appends elements with value `value_type()`, while the second member function appends elements with value *val*. To make the controlled sequence shorter, both member functions effectively erase the last element [vector::size (STL/CLR)](#size)`() -` `new_size` times. You use it to ensure that the controlled sequence has size *new_size*, by either trimming or padding the current controlled sequence.
 
 ### Example
 
@@ -1915,7 +1919,7 @@ size_type size();
 
 ### Remarks
 
-The member function returns the length of the controlled sequence. You use it to determine the number of elements currently in the controlled sequence. If all you care about is whether the sequence has nonzero size, see [vector::empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md)`()`.
+The member function returns the length of the controlled sequence. You use it to determine the number of elements currently in the controlled sequence. If all you care about is whether the sequence has nonzero size, see [vector::empty (STL/CLR)](#empty)`()`.
 
 ### Example
 
@@ -2018,7 +2022,7 @@ Container to swap contents with.
 
 ### Remarks
 
-The member function swaps the controlled sequences between `*this` and *right*. It does so in constant time and it throws no exceptions. You use it as a quick way to exchange the contents of two containers.
+The member function swaps the controlled sequences between **`*this`** and *right*. It does so in constant time and it throws no exceptions. You use it as a quick way to exchange the contents of two containers.
 
 ### Example
 
@@ -2373,7 +2377,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operator&lt; (vector) (STL/CLR)
+## <a name="op_lt"></a> `operator<` (vector) (STL/CLR)
 
 Vector less than comparison.
 
@@ -2442,7 +2446,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operator&lt;= (vector) (STL/CLR)
+## <a name="op_lteq"></a> `operator<=` (vector) (STL/CLR)
 
 Vector less than or equal comparison.
 
@@ -2580,7 +2584,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operator&gt; (vector) (STL/CLR)
+## <a name="op_gt"></a> `operator>` (vector) (STL/CLR)
 
 Vector greater than comparison.
 
@@ -2649,7 +2653,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operator&gt;= (vector) (STL/CLR)
+## <a name="op_gteq"></a> `operator>=` (vector) (STL/CLR)
 
 Vector greater than or equal comparison.
 

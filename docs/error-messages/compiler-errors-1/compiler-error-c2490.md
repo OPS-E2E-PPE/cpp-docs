@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2490"
 title: "Compiler Error C2490"
 ms.date: "11/04/2016"
 f1_keywords: ["C2490"]
@@ -13,7 +14,7 @@ A function defined as [naked](../../cpp/naked-cpp.md) cannot use structured exce
 
 The following sample generates C2490:
 
-```
+```cpp
 // C2490.cpp
 // processor: x86
 __declspec( naked ) int func() {

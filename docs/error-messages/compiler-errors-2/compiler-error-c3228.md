@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3228"
 title: "Compiler Error C3228"
 ms.date: "11/04/2016"
 f1_keywords: ["C3228"]
@@ -13,7 +14,7 @@ An incorrect type was passed as a generic type argument.
 
 The following sample generates C3228:
 
-```
+```cpp
 // C3228.cpp
 // compile with: /clr
 class A {};

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2082"
 title: "Compiler Error C2082"
 ms.date: "11/04/2016"
 f1_keywords: ["C2082"]
@@ -13,7 +14,7 @@ A formal parameter to a function is redeclared within the function body. To reso
 
 The following sample generates C2082:
 
-```
+```cpp
 // C2082.cpp
 void func(int i) {
    int i;   // C2082

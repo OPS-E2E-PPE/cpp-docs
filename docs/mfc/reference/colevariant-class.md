@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleVariant Class"
 title: "COleVariant Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COleVariant", "AFXDISP/COleVariant", "AFXDISP/COleVariant::COleVariant", "AFXDISP/COleVariant::Attach", "AFXDISP/COleVariant::ChangeType", "AFXDISP/COleVariant::Clear", "AFXDISP/COleVariant::Detach", "AFXDISP/COleVariant::GetByteArrayFromVariantArray", "AFXDISP/COleVariant::SetString"]
@@ -7,7 +8,7 @@ ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
 ---
 # COleVariant Class
 
-Encapsulates the [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) data type.
+Encapsulates the [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) data type.
 
 ## Syntax
 
@@ -42,18 +43,18 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator LPVARIANT](#operator_lpvariant)|Converts a `COleVariant` object into an `LPVARIANT`.|
 |[COleVariant::operator =](#operator_eq)|Copies a `COleVariant` value.|
 |[COleVariant::operator ==](#operator_eq_eq)|Compares two `COleVariant` values.|
-|[COleVariant::operator &lt;&lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Outputs a `COleVariant` value to `CArchive` or `CDumpContext` and inputs a `COleVariant` object from `CArchive`.|
+|[`COleVariant::operator <<`, `COleVariant::operator >>`](#operator_lt_lt__gt_gt)|Outputs a `COleVariant` value to `CArchive` or `CDumpContext` and inputs a `COleVariant` object from `CArchive`.|
 
 ## Remarks
 
-This data type is used in OLE automation. Specifically, the [DISPPARAMS](/windows/desktop/api/oaidl/ns-oaidl-tagdispparams) structure contains a pointer to an array of VARIANT structures. A `DISPPARAMS` structure is used to pass parameters to [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
+This data type is used in OLE automation. Specifically, the [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams) structure contains a pointer to an array of VARIANT structures. A `DISPPARAMS` structure is used to pass parameters to [IDispatch::Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke).
 
 > [!NOTE]
 > This class is derived from the `VARIANT` structure. This means you can pass a `COleVariant` in a parameter that calls for a `VARIANT` and that the data members of the `VARIANT` structure are accessible data members of `COleVariant`.
 
 The two related MFC classes [COleCurrency](../../mfc/reference/colecurrency-class.md) and [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) encapsulate the variant data types CURRENCY ( `VT_CY`) and DATE ( `VT_DATE`). The `COleVariant` class is used extensively in the DAO classes; see these classes for typical usage of this class, for example [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) and [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
-For more information, see the [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [CURRENCY](/windows/desktop/api/wtypes/ns-wtypes-tagcy), [DISPPARAMS](/windows/desktop/api/oaidl/ns-oaidl-tagdispparams), and [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) entries in the Windows SDK.
+For more information, see the [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant), [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy-r1), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams), and [IDispatch::Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) entries in the Windows SDK.
 
 For more information on the `COleVariant` class and its use in OLE automation, see "Passing Parameters in OLE Automation" in the article [Automation](../../mfc/automation.md).
 
@@ -67,11 +68,11 @@ For more information on the `COleVariant` class and its use in OLE automation, s
 
 **Header:** afxdisp.h
 
-##  <a name="attach"></a>  COleVariant::Attach
+## <a name="attach"></a> COleVariant::Attach
 
-Call this function to attach the given [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) object to the current `COleVariant` object.
+Call this function to attach the given [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) object to the current `COleVariant` object.
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -84,9 +85,9 @@ An existing `VARIANT` object to be attached to the current `COleVariant` object.
 
 This function sets the VARTYPE of *varSrc* to VT_EMPTY.
 
-For more information, see the [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) and [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum) entries in the Windows SDK.
+For more information, see the [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) and [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum) entries in the Windows SDK.
 
-##  <a name="colevariant"></a>  COleVariant::COleVariant
+## <a name="colevariant"></a> COleVariant::COleVariant
 
 Constructs a `COleVariant` object.
 
@@ -149,7 +150,7 @@ A [CByteArray](../../mfc/reference/cbytearray-class.md) object to be copied into
 A [CLongBinary](../../mfc/reference/clongbinary-class.md) object to be copied into the new `COleVariant` object.
 
 *pidl*<br/>
-A pointer to a [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) structure to be copied into the new `COleVariant` object.
+A pointer to a [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) structure to be copied into the new `COleVariant` object.
 
 ### Remarks
 
@@ -185,13 +186,13 @@ All these constructors create new `COleVariant` objects initialized to the speci
 
 - **COleVariant(** *lbSrc* **)** Copies a `CLongBinary` object into the new object, VT_EMPTY.
 
-For more information on SCODE, see [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes) in the Windows SDK.
+For more information on SCODE, see [Structure of COM Error Codes](/windows/win32/com/structure-of-com-error-codes) in the Windows SDK.
 
-##  <a name="changetype"></a>  COleVariant::ChangeType
+## <a name="changetype"></a> COleVariant::ChangeType
 
 Converts the type of variant value in this `COleVariant` object.
 
-```
+```cpp
 void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ```
 
@@ -201,17 +202,17 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 The VARTYPE for this `COleVariant` object.
 
 *pSrc*<br/>
-A pointer to the [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) object to be converted. If this value is NULL, this `COleVariant` object is used as the source for the conversion.
+A pointer to the [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) object to be converted. If this value is NULL, this `COleVariant` object is used as the source for the conversion.
 
 ### Remarks
 
-For more information, see the [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum), and [VariantChangeType](/windows/desktop/api/oleauto/nf-oleauto-variantchangetype) entries in the Windows SDK.
+For more information, see the [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant), [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum), and [VariantChangeType](/windows/win32/api/oleauto/nf-oleauto-variantchangetype) entries in the Windows SDK.
 
-##  <a name="clear"></a>  COleVariant::Clear
+## <a name="clear"></a> COleVariant::Clear
 
 Clears the `VARIANT`.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -221,9 +222,9 @@ This sets the VARTYPE for this object to VT_EMPTY. The `COleVariant` destructor 
 
 For more information, see the `VARIANT`, VARTYPE, and `VariantClear` entries in the Windows SDK.
 
-##  <a name="detach"></a>  COleVariant::Detach
+## <a name="detach"></a> COleVariant::Detach
 
-Detaches the underlying [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) object from this `COleVariant` object.
+Detaches the underlying [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) object from this `COleVariant` object.
 
 ```
 VARIANT Detach();
@@ -234,15 +235,15 @@ VARIANT Detach();
 This function sets the VARTYPE for this `COleVariant` object to VT_EMPTY.
 
 > [!NOTE]
->  After calling `Detach`, it is the caller's responsibility to call `VariantClear` on the resulting `VARIANT` structure.
+> After calling `Detach`, it is the caller's responsibility to call `VariantClear` on the resulting `VARIANT` structure.
 
-For more information, see the [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum), and [VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear) entries in the Windows SDK.
+For more information, see the [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant), [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum), and [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear) entries in the Windows SDK.
 
-##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray
+## <a name="getbytearrayfromvariantarray"></a> COleVariant::GetByteArrayFromVariantArray
 
 Retrieves a byte array from an existing variant array
 
-```
+```cpp
 void GetByteArrayFromVariantArray(CByteArray& bytes);
 ```
 
@@ -251,7 +252,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
 *bytes*<br/>
 A reference to an existing [CByteArray](../../mfc/reference/cbytearray-class.md) object.
 
-##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT
+## <a name="operator_lpcvariant"></a> COleVariant::operator LPCVARIANT
 
 This casting operator returns a `VARIANT` structure whose value is copied from this `COleVariant` object.
 
@@ -261,7 +262,7 @@ operator LPCVARIANT() const;
 
 ### Remarks
 
-##  <a name="operator_lpvariant"></a>  COleVariant::operator LPVARIANT
+## <a name="operator_lpvariant"></a> COleVariant::operator LPVARIANT
 
 Call this casting operator to access the underlying `VARIANT` structure for this `COleVariant` object.
 
@@ -274,7 +275,7 @@ operator LPVARIANT();
 > [!CAUTION]
 > Changing the value in the `VARIANT` structure accessed by the pointer returned by this function will change the value of this `COleVariant` object.
 
-##  <a name="operator_eq"></a>  COleVariant::operator =
+## <a name="operator_eq"></a> COleVariant::operator =
 
 These overloaded assignment operators copy the source value into this `COleVariant` object.
 
@@ -323,9 +324,9 @@ A brief description of each operator follows:
 
 - **operator =(** *lbSrc* **)** Copies a [CLongBinary](../../mfc/reference/clongbinary-class.md) object into this `COleVariant` object.
 
-For more information, see the [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) and [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum) entries in the Windows SDK.
+For more information, see the [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) and [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum) entries in the Windows SDK.
 
-##  <a name="operator_eq_eq"></a>  COleVariant::operator ==
+## <a name="operator_eq_eq"></a> COleVariant::operator ==
 
 This operator compares two variant values and returns nonzero if they are equal; otherwise 0.
 
@@ -334,7 +335,7 @@ BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```
 
-##  <a name="operator_lt_lt__gt_gt"></a>  COleVariant::operator &lt;&lt;, &gt;&gt;
+## <a name="operator_lt_lt__gt_gt"></a> `COleVariant::operator <<`, `COleVariant::operator >>`
 
 Outputs a `COleVariant` value to `CArchive` or `CdumpContext` and inputs a `COleVariant` object from `CArchive`.
 
@@ -356,11 +357,11 @@ friend CArchive& AFXAPI operator>>(
 
 The `COleVariant` insertion (**\<\<**) operator supports diagnostic dumping and storing to an archive. The extraction (**>>**) operator supports loading from an archive.
 
-##  <a name="setstring"></a>  COleVariant::SetString
+## <a name="setstring"></a> COleVariant::SetString
 
 Sets the string to a particular type.
 
-```
+```cpp
 void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ```
 
@@ -378,6 +379,6 @@ The parameter *vtSrc* must be VT_BSTR (UNICODE) or VT_BSTRT (ANSI). `SetString` 
 
 A DAO recordset in a non-UNICODE build expects strings to be ANSI. Thus, for DAO functions that use `COleVariant` objects, if you are not creating a UNICODE recordset, you must use the **COleVariant::COleVariant(** *lpszSrc* **,** *vtSrc* **)** form of constructor with *vtSrc* set to VT_BSTRT (ANSI) or use `SetString` with *vtSrc* set to VT_BSTRT to make ANSI strings. For example, the `CDaoRecordset` functions [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) and [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) use `COleVariant` objects as parameters. These objects must be ANSI if the DAO recordset is not UNICODE.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

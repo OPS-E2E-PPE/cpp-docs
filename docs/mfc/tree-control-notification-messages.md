@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Tree Control Notification Messages"
 title: "Tree Control Notification Messages"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["notifications [MFC], tree controls", "messages [MFC], notification", "CTreeCtrl class [MFC], notifications", "notifications [MFC], CTreeCtrl", "tree controls [MFC], notification messages"]
@@ -23,8 +24,7 @@ A tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sends the foll
 |TVN_SELCHANGING|Signals that the selection is about to be changed from one item to another|
 |TVN_SETDISPINFO|Notification to update the information maintained for an item|
 
-## See Also
+## See also
 
 [Using CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CCustomWindowsFile"
 title: "CCustomWindowsFile"
 ms.date: "10/22/2018"
 f1_keywords: ["cmyproviderwindowsfile", "ccustomwindowsfile"]
@@ -13,7 +14,7 @@ The wizard creates a class that has one row of data; in this case, it's called `
 /////////////////////////////////////////////////////////////////////
 // CustomRS.H
 
-class CCustomWindowsFile: 
+class CCustomWindowsFile:
    public WIN32_FIND_DATA
 {
 public:
@@ -66,6 +67,6 @@ The directory to search is shown by `m_strCommandText`; this contains the text r
 
 The method creates one entry for each file (corresponding to a row) and places it in the `m_rgRowData` data member. The `CRowsetImpl` class defines the `m_rgRowData` data member. The data in this array is shown the entire table and is used throughout the templates.
 
-## See Also
+## See also
 
 [Provider Wizard-Generated Files](../../data/oledb/provider-wizard-generated-files.md)<br/>

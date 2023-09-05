@@ -1,13 +1,14 @@
 ---
-title: "&lt;sstream&gt;"
+description: "Learn more about: <sstream>"
+title: "<sstream>"
 ms.date: "11/04/2016"
 f1_keywords: ["<sstream>"]
 helpviewer_keywords: ["sstream header"]
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
 ---
-# &lt;sstream&gt;
+# `<sstream>`
 
-Defines several template classes that support iostreams operations on sequences stored in an allocated array object. Such sequences are easily converted to and from objects of template class [basic_string](../standard-library/basic-string-class.md).
+Defines several class templates that support iostreams operations on sequences stored in an allocated array object. Such sequences are easily converted to and from objects of class template [basic_string](../standard-library/basic-string-class.md).
 
 ## Syntax
 
@@ -62,10 +63,11 @@ void swap (
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*left*|Reference to an `sstream` object.|
-|*right*|Reference to an `sstream` object.|
+*left*\
+Reference to an `sstream` object.
+
+*right*\
+Reference to an `sstream` object.
 
 ## Remarks
 
@@ -75,18 +77,18 @@ Objects of type `char *` can use the functionality in [\<strstream>](../standard
 
 |Type name|Description|
 |-|-|
-|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Creates a type `basic_istringstream` specialized on a **char** template parameter.|
-|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Creates a type `basic_ostringstream` specialized on a **char** template parameter.|
-|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|Creates a type `basic_stringbuf` specialized on a **char** template parameter.|
-|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|Creates a type `basic_stringstream` specialized on a **char** template parameter.|
-|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|Creates a type `basic_istringstream` specialized on a **wchar_t** template parameter.|
-|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|Creates a type `basic_ostringstream` specialized on a **wchar_t** template parameter.|
-|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|Creates a type `basic_stringbuf` specialized on a **wchar_t** template parameter.|
-|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|Creates a type `basic_stringstream` specialized on a **wchar_t** template parameter.|
+|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Creates a type `basic_istringstream` specialized on a **`char`** template parameter.|
+|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Creates a type `basic_ostringstream` specialized on a **`char`** template parameter.|
+|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|Creates a type `basic_stringbuf` specialized on a **`char`** template parameter.|
+|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|Creates a type `basic_stringstream` specialized on a **`char`** template parameter.|
+|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|Creates a type `basic_istringstream` specialized on a **`wchar_t`** template parameter.|
+|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|Creates a type `basic_ostringstream` specialized on a **`wchar_t`** template parameter.|
+|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|Creates a type `basic_stringbuf` specialized on a **`wchar_t`** template parameter.|
+|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|Creates a type `basic_stringstream` specialized on a **`wchar_t`** template parameter.|
 
 ### Manipulators
 
-|||
+|Name|Description|
 |-|-|
 |[swap](../standard-library/sstream-functions.md#sstream_swap)|Exchanges the values between two `sstream` objects.|
 
@@ -107,7 +109,7 @@ Objects of type `char *` can use the functionality in [\<strstream>](../standard
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream Programming](../standard-library/iostream-programming.md)<br/>
-[iostreams Conventions](../standard-library/iostreams-conventions.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream Programming](../standard-library/iostream-programming.md)\
+[iostreams Conventions](../standard-library/iostreams-conventions.md)

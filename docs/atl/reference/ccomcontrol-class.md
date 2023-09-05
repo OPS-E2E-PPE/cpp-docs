@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComControl Class"
 title: "CComControl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComControl", "ATLCTL/ATL::CComControl", "ATLCTL/ATL::CComControl::CComControl", "ATLCTL/ATL::CComControl::ControlQueryInterface", "ATLCTL/ATL::CComControl::CreateControlWindow", "ATLCTL/ATL::CComControl::FireOnChanged", "ATLCTL/ATL::CComControl::FireOnRequestEdit", "ATLCTL/ATL::CComControl::MessageBox"]
@@ -10,7 +11,7 @@ ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
 This class provides methods for creating and managing ATL controls.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -52,7 +53,7 @@ The base class that implements windowing functions. Defaults to [CWindowImpl](..
 
 For more information about creating a control, see the [ATL Tutorial](../../atl/active-template-library-atl-tutorial.md). For more information about the ATL Project Wizard, see the article [Creating an ATL Project](../../atl/reference/creating-an-atl-project.md).
 
-For a demonstration of `CComControl` methods and data members, see the [CIRC](../../visual-cpp-samples.md) sample.
+For a demonstration of `CComControl` methods and data members, see the [CIRC](../../overview/visual-cpp-samples.md) sample.
 
 ## Inheritance Hierarchy
 
@@ -66,7 +67,7 @@ For a demonstration of `CComControl` methods and data members, see the [CIRC](..
 
 **Header:** atlctl.h
 
-##  <a name="ccomcontrol"></a>  CComControl::CComControl
+## <a name="ccomcontrol"></a> CComControl::CComControl
 
 The constructor.
 
@@ -78,7 +79,7 @@ CComControl();
 
 Calls the [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) constructor, passing the `m_hWnd` data member inherited through [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
 
-##  <a name="controlqueryinterface"></a>  CComControl::ControlQueryInterface
+## <a name="controlqueryinterface"></a> CComControl::ControlQueryInterface
 
 Retrieves a pointer to the requested interface.
 
@@ -102,7 +103,7 @@ Only handles interfaces in the COM map table.
 
 [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]
 
-##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow
+## <a name="createcontrolwindow"></a> CComControl::CreateControlWindow
 
 By default, creates a window for the control by calling `CWindowImpl::Create`.
 
@@ -126,7 +127,7 @@ Override this method if you want to do something other than create a single wind
 
 [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]
 
-##  <a name="fireonchanged"></a>  CComControl::FireOnChanged
+## <a name="fireonchanged"></a> CComControl::FireOnChanged
 
 Notifies the container's sink that a control property has changed.
 
@@ -145,7 +146,7 @@ One of the standard HRESULT values.
 
 ### Remarks
 
-If your control class derives from [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), this method calls [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) to notify all connected `IPropertyNotifySink` interfaces that the specified control property has changed. If your control class does not derive from `IPropertyNotifySink`, this method returns S_OK.
+If your control class derives from [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink), this method calls [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) to notify all connected `IPropertyNotifySink` interfaces that the specified control property has changed. If your control class does not derive from `IPropertyNotifySink`, this method returns S_OK.
 
 This method is safe to call even if your control doesn't support connection points.
 
@@ -153,7 +154,7 @@ This method is safe to call even if your control doesn't support connection poin
 
 [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]
 
-##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit
+## <a name="fireonrequestedit"></a> CComControl::FireOnRequestEdit
 
 Notifies the container's sink that a control property is about to change and that the object is asking the sink how to proceed.
 
@@ -172,7 +173,7 @@ One of the standard HRESULT values.
 
 ### Remarks
 
-If your control class derives from [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), this method calls [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) to notify all connected `IPropertyNotifySink` interfaces that the specified control property is about to change. If your control class does not derive from `IPropertyNotifySink`, this method returns S_OK.
+If your control class derives from [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink), this method calls [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) to notify all connected `IPropertyNotifySink` interfaces that the specified control property is about to change. If your control class does not derive from `IPropertyNotifySink`, this method returns S_OK.
 
 This method is safe to call even if your control doesn't support connection points.
 
@@ -180,7 +181,7 @@ This method is safe to call even if your control doesn't support connection poin
 
 [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]
 
-##  <a name="messagebox"></a>  CComControl::MessageBox
+## <a name="messagebox"></a> CComControl::MessageBox
 
 Call this method to create, display, and operate a message box.
 
@@ -200,17 +201,17 @@ The text to be displayed in the message box.
 The dialog box title. If NULL (the default), the title "Error" is used.
 
 *nType*<br/>
-Specifies the contents and behavior of the dialog box. See the [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) entry in the Windows SDK documentation for a list of the different message boxes available. The default provides a simple **OK** button.
+Specifies the contents and behavior of the dialog box. See the [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) entry in the Windows SDK documentation for a list of the different message boxes available. The default provides a simple **OK** button.
 
 ### Return Value
 
-Returns an integer value specifying one of the menu-item values listed under [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) in the Windows SDK documentation.
+Returns an integer value specifying one of the menu-item values listed under [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) in the Windows SDK documentation.
 
 ### Remarks
 
 `MessageBox` is useful both during development and as an easy way to display an error or warning message to the user.
 
-## See Also
+## See also
 
 [CWindowImpl Class](../../atl/reference/cwindowimpl-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)<br/>

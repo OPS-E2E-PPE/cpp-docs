@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3076"
 title: "Compiler Error C3076"
 ms.date: "11/04/2016"
 f1_keywords: ["C3076"]
@@ -17,7 +18,7 @@ For more information, see [C++ Stack Semantics for Reference Types](../../dotnet
 
 The following sample generates C3076.
 
-```
+```cpp
 // C3076.cpp
 // compile with: /clr /c
 ref struct U {};

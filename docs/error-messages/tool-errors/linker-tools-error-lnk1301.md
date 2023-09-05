@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Linker Tools Error LNK1301"
 title: "Linker Tools Error LNK1301"
 ms.date: "11/04/2016"
 f1_keywords: ["LNK1301"]
@@ -21,7 +22,7 @@ For more information, see:
 
 - [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [Profile-Guided Optimizations](../../build/reference/profile-guided-optimizations.md)
+- [Profile-Guided Optimizations](../../build/profile-guided-optimizations.md)
 
 ### To correct this error
 
@@ -31,7 +32,7 @@ For more information, see:
 
 The following sample generates LNK1301:
 
-```
+```cpp
 // LNK1301.cpp
 // compile with: /clr /GL /link /LTCG:PGI LNK1301.obj
 // LNK1301 expected

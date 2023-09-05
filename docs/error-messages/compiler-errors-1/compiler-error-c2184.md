@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2184"
 title: "Compiler Error C2184"
 ms.date: "11/04/2016"
 f1_keywords: ["C2184"]
@@ -13,7 +14,7 @@ A type was used in an [__except](../../c-language/try-except-statement-c.md) sta
 
 The following sample generates C2184:
 
-```
+```cpp
 // C2184.cpp
 void f() {
    int * p;
@@ -24,7 +25,7 @@ void f() {
 
 Possible resolution:
 
-```
+```cpp
 // C2184b.cpp
 // compile with: /c
 void f() {

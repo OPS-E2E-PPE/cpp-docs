@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2548"
 title: "Compiler Error C2548"
 ms.date: "11/04/2016"
 f1_keywords: ["C2548"]
@@ -15,7 +16,7 @@ The default parameter list is missing a parameter. If you supply a default param
 
 The following sample generates C2548:
 
-```
+```cpp
 // C2548.cpp
 // compile with: /c
 void func( int = 1, int, int = 3);  // C2548

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_trivially_move_assignable Class"
 title: "is_trivially_move_assignable Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_trivially_move_assignable"]
@@ -18,7 +19,7 @@ struct is_trivially_move_assignable;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
 ## Remarks
@@ -27,15 +28,11 @@ An instance of the type predicate holds true if the type *Ty* is a class that ha
 
 A move assignment operator for a class *Ty* is trivial if:
 
-it is implicitly provided
-
-the class *Ty* has no virtual functions
-
-the class *Ty* has no virtual bases
-
-the classes of all the non-static data members of class type have trivial move assignment operators
-
-the classes of all the non-static data members of type array of class have trivial move assignment operators
+- it is implicitly provided
+- the class *Ty* has no virtual functions
+- the class *Ty* has no virtual bases
+- the classes of all the non-static data members of class type have trivial move assignment operators
+- the classes of all the non-static data members of type array of class have trivial move assignment operators
 
 ## Requirements
 
@@ -45,4 +42,4 @@ the classes of all the non-static data members of type array of class have trivi
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

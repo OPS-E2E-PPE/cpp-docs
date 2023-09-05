@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Serialization: Serializing an Object"
 title: "Serialization: Serializing an Object"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["serializing objects [MFC]", "serialization [MFC], objects", "objects [MFC], serializing"]
@@ -18,7 +19,6 @@ The article [Serialization: Making a Serializable Class](../mfc/serialization-ma
 
 You can let the framework create the archive for your serializable document or explicitly create the `CArchive` object yourself. You can transfer data between a file and your serializable object by using the <\< and >> operators for `CArchive` or, in some cases, by calling the `Serialize` function of a `CObject`-derived class.
 
-## See Also
+## See also
 
 [Serialization](../mfc/serialization-in-mfc.md)
-

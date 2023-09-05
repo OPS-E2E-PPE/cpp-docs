@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Fatal Error C1202"
 title: "Fatal Error C1202"
 ms.date: "11/04/2016"
 f1_keywords: ["C1202"]
@@ -11,11 +12,11 @@ recursive type or function dependency context too complex
 
 A template definition was recursive or exceeded complexity limits.
 
-## Example
+## Examples
 
 The following sample generates C1202.
 
-```
+```cpp
 // C1202.cpp
 // processor: x86 IPF
 template<int n>
@@ -28,11 +29,9 @@ public:
 Factorial<7> facSeven;
 ```
 
-## Example
-
 Possible resolution.
 
-```
+```cpp
 // C1202b.cpp
 // compile with: /c
 template<int n>

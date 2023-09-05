@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CGdiObject Class"
 title: "CGdiObject Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CGdiObject", "AFXWIN/CGdiObject", "AFXWIN/CGdiObject::CGdiObject", "AFXWIN/CGdiObject::Attach", "AFXWIN/CGdiObject::CreateStockObject", "AFXWIN/CGdiObject::DeleteObject", "AFXWIN/CGdiObject::DeleteTempMap", "AFXWIN/CGdiObject::Detach", "AFXWIN/CGdiObject::FromHandle", "AFXWIN/CGdiObject::GetObject", "AFXWIN/CGdiObject::GetObjectType", "AFXWIN/CGdiObject::GetSafeHandle", "AFXWIN/CGdiObject::UnrealizeObject", "AFXWIN/CGdiObject::m_hObject"]
@@ -35,7 +36,7 @@ class CGdiObject : public CObject
 |[CGdiObject::FromHandle](#fromhandle)|Returns a pointer to a `CGdiObject` object given a handle to a Windows GDI object.|
 |[CGdiObject::GetObject](#getobject)|Fills a buffer with data that describes the Windows GDI object attached to the `CGdiObject` object.|
 |[CGdiObject::GetObjectType](#getobjecttype)|Retrieves the type of the GDI object.|
-|[CGdiObject::GetSafeHandle](#getsafehandle)|Returns `m_hObject` unless **this** is NULL, in which case NULL is returned.|
+|[CGdiObject::GetSafeHandle](#getsafehandle)|Returns `m_hObject` unless **`this`** is NULL, in which case NULL is returned.|
 |[CGdiObject::UnrealizeObject](#unrealizeobject)|Resets the origin of a brush or resets a logical palette.|
 
 ### Public Operators
@@ -68,7 +69,7 @@ For more information on `CGdiObject`, see [Graphic Objects](../../mfc/graphic-ob
 
 **Header:** afxwin.h
 
-##  <a name="attach"></a>  CGdiObject::Attach
+## <a name="attach"></a> CGdiObject::Attach
 
 Attaches a Windows GDI object to a `CGdiObject` object.
 
@@ -85,7 +86,7 @@ A HANDLE to a Windows GDI object (for example, HPEN or HBRUSH).
 
 Nonzero if attachment is successful; otherwise 0.
 
-##  <a name="cgdiobject"></a>  CGdiObject::CGdiObject
+## <a name="cgdiobject"></a> CGdiObject::CGdiObject
 
 Constructs a `CGdiObject` object.
 
@@ -97,7 +98,7 @@ CGdiObject();
 
 You never create a `CGdiObject` directly. Rather, you create an object from one of its derived classes, such as `CPen` or `Cbrush`.
 
-##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject
+## <a name="createstockobject"></a> CGdiObject::CreateStockObject
 
 Retrieves a handle to one of the predefined stock Windows GDI pens, brushes, or fonts, and attaches the GDI object to the `CGdiObject` object.
 
@@ -108,7 +109,7 @@ BOOL CreateStockObject(int nIndex);
 ### Parameters
 
 *nIndex*<br/>
-A constant specifying the type of stock object desired. See the parameter *fnObject* for [GetStockObject](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) in the Windows SDK for a description of appropriate values.
+A constant specifying the type of stock object desired. See the parameter *fnObject* for [GetStockObject](/windows/win32/api/wingdi/nf-wingdi-getstockobject) in the Windows SDK for a description of appropriate values.
 
 ### Return Value
 
@@ -118,7 +119,7 @@ Nonzero if the function is successful; otherwise 0.
 
 Call this function with one of the derived classes that corresponds to the Windows GDI object type, such as `CPen` for a stock pen.
 
-##  <a name="deleteobject"></a>  CGdiObject::DeleteObject
+## <a name="deleteobject"></a> CGdiObject::DeleteObject
 
 Deletes the attached Windows GDI object from memory by freeing all system storage associated with the Windows GDI object.
 
@@ -136,7 +137,7 @@ The storage associated with the `CGdiObject` object is not affected by this call
 
 When a pattern brush is deleted, the bitmap associated with the brush is not deleted. The bitmap must be deleted independently.
 
-##  <a name="deletetempmap"></a>  CGdiObject::DeleteTempMap
+## <a name="deletetempmap"></a> CGdiObject::DeleteTempMap
 
 Called automatically by the `CWinApp` idle-time handler, `DeleteTempMap` deletes any temporary `CGdiObject` objects created by `FromHandle`.
 
@@ -152,7 +153,7 @@ static void PASCAL DeleteTempMap();
 
 [!code-cpp[NVC_MFCDocView#175](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]
 
-##  <a name="detach"></a>  CGdiObject::Detach
+## <a name="detach"></a> CGdiObject::Detach
 
 Detaches a Windows GDI object from a `CGdiObject` object and returns a handle to the Windows GDI object.
 
@@ -164,7 +165,7 @@ HGDIOBJ Detach();
 
 A `HANDLE` to the Windows GDI object detached; otherwise NULL if no GDI object is attached.
 
-##  <a name="fromhandle"></a>  CGdiObject::FromHandle
+## <a name="fromhandle"></a> CGdiObject::FromHandle
 
 Returns a pointer to a `CGdiObject` object given a handle to a Windows GDI object.
 
@@ -187,7 +188,7 @@ If a `CGdiObject` object is not already attached to the Windows GDI object, a te
 
 This temporary `CGdiObject` object is only valid until the next time the application has idle time in its event loop, at which time all temporary graphic objects are deleted. Another way of saying this is that the temporary object is only valid during the processing of one window message.
 
-##  <a name="getobject"></a>  CGdiObject::GetObject
+## <a name="getobject"></a> CGdiObject::GetObject
 
 Fills a buffer with data that defines a specified object.
 
@@ -215,18 +216,18 @@ The function retrieves a data structure whose type depends on the type of graphi
 
 |Object|Buffer type|
 |------------|-----------------|
-|`CPen`|[LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
-|`CBrush`|[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
-|`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|
-|`CBitmap`|[BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
+|`CPen`|[LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen)|
+|`CBrush`|[LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush)|
+|`CFont`|[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)|
+|`CBitmap`|[BITMAP](/windows/win32/api/wingdi/ns-wingdi-bitmap)|
 |`CPalette`|WORD|
 |`CRgn`|Not supported|
 
 If the object is a `CBitmap` object, `GetObject` returns only the width, height, and color format information of the bitmap. The actual bits can be retrieved by using [CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits).
 
-If the object is a `CPalette` object, `GetObject` retrieves a WORD that specifies the number of entries in the palette. The function does not retrieve the [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) structure that defines the palette. An application can get information on palette entries by calling [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).
+If the object is a `CPalette` object, `GetObject` retrieves a WORD that specifies the number of entries in the palette. The function does not retrieve the [LOGPALETTE](/windows/win32/api/wingdi/ns-wingdi-logpalette) structure that defines the palette. An application can get information on palette entries by calling [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).
 
-##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType
+## <a name="getobjecttype"></a> CGdiObject::GetObjectType
 
 Retrieves the type of the GDI object.
 
@@ -264,9 +265,9 @@ The type of the object, if successful; otherwise 0. The value can be one of the 
 
 - OBJ_ENHMETADC Enhanced-metafile device context
 
-##  <a name="getsafehandle"></a>  CGdiObject::GetSafeHandle
+## <a name="getsafehandle"></a> CGdiObject::GetSafeHandle
 
-Returns `m_hObject` unless **this** is NULL, in which case NULL is returned.
+Returns `m_hObject` unless **`this`** is NULL, in which case NULL is returned.
 
 ```
 HGDIOBJ GetSafeHandle() const;
@@ -284,7 +285,7 @@ This is part of the general handle interface paradigm and is useful when NULL is
 
   See the example for [CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled).
 
-##  <a name="m_hobject"></a>  CGdiObject::m_hObject
+## <a name="m_hobject"></a> CGdiObject::m_hObject
 
 A HANDLE containing the HBITMAP, HRGN, HBRUSH, HPEN, HPALETTE, or HFONT attached to this object.
 
@@ -292,7 +293,7 @@ A HANDLE containing the HBITMAP, HRGN, HBRUSH, HPEN, HPALETTE, or HFONT attached
 HGDIOBJ m_hObject;
 ```
 
-##  <a name="operator_neq"></a>  CGdiObject::operator !=
+## <a name="operator_neq"></a> CGdiObject::operator !=
 
 Determines if two GDI objects are logically not equal.
 
@@ -309,7 +310,7 @@ A pointer to an existing `CGdiObject`.
 
 Determines if a GDI object on the left side is not equal to a GDI object on the right side.
 
-##  <a name="operator_eq_eq"></a>  CGdiObject::operator ==
+## <a name="operator_eq_eq"></a> CGdiObject::operator ==
 
 Determines if two GDI objects are logically equal.
 
@@ -326,7 +327,7 @@ A reference to an existing `CGdiObject`.
 
 Determines if a GDI object on the left side is equal to a GDI object on the right side.
 
-##  <a name="operator_hgdiobj"></a>  CGdiObject::operator HGDIOBJ
+## <a name="operator_hgdiobj"></a> CGdiObject::operator HGDIOBJ
 
 Retrieves a HANDLE to the attached Windows GDI object; otherwise NULL if no object is attached.
 
@@ -334,7 +335,7 @@ Retrieves a HANDLE to the attached Windows GDI object; otherwise NULL if no obje
 operator HGDIOBJ() const;
 ```
 
-##  <a name="unrealizeobject"></a>  CGdiObject::UnrealizeObject
+## <a name="unrealizeobject"></a> CGdiObject::UnrealizeObject
 
 Resets the origin of a brush or resets a logical palette.
 
@@ -354,7 +355,7 @@ For `CBrush` objects, `UnrealizeObject` directs the system to reset the origin o
 
 The `UnrealizeObject` function should not be used with stock objects. The `UnrealizeObject` function must be called whenever a new brush origin is set (by means of the [CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg) function). The `UnrealizeObject` function must not be called for the currently selected brush or currently selected palette of any display context.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CBitmap Class](../../mfc/reference/cbitmap-class.md)<br/>

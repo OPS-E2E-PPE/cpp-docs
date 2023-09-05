@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3848"
 title: "Compiler Error C3848"
 ms.date: "11/04/2016"
 f1_keywords: ["C3848"]
@@ -13,7 +14,7 @@ A variable with a specified const-volatile type can only call member functions d
 
 The following samples generate C3848:
 
-```
+```cpp
 // C3848.cpp
 void glbFunc1()
 {

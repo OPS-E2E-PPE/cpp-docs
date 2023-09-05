@@ -1,37 +1,39 @@
 ---
+description: "Learn more about: basic_filebuf Class"
 title: "basic_filebuf Class"
-ms.date: "11/04/2016"
+ms.date: 06/07/2022
 f1_keywords: ["fstream/std::basic_filebuf", "fstream/std::basic_filebuf::char_type", "fstream/std::basic_filebuf::int_type", "fstream/std::basic_filebuf::off_type", "fstream/std::basic_filebuf::pos_type", "fstream/std::basic_filebuf::traits_type", "fstream/std::basic_filebuf::close", "fstream/std::basic_filebuf::is_open", "fstream/std::basic_filebuf::open", "fstream/std::basic_filebuf::overflow", "fstream/std::basic_filebuf::pbackfail", "fstream/std::basic_filebuf::seekoff", "fstream/std::basic_filebuf::seekpos", "fstream/std::basic_filebuf::setbuf", "fstream/std::basic_filebuf::Swap", "fstream/std::basic_filebuf::sync", "fstream/std::basic_filebuf::uflow", "fstream/std::basic_filebuf::underflow"]
 helpviewer_keywords: ["std::basic_filebuf [C++]", "std::basic_filebuf [C++], char_type", "std::basic_filebuf [C++], int_type", "std::basic_filebuf [C++], off_type", "std::basic_filebuf [C++], pos_type", "std::basic_filebuf [C++], traits_type", "std::basic_filebuf [C++], close", "std::basic_filebuf [C++], is_open", "std::basic_filebuf [C++], open", "std::basic_filebuf [C++], overflow", "std::basic_filebuf [C++], pbackfail", "std::basic_filebuf [C++], seekoff", "std::basic_filebuf [C++], seekpos", "std::basic_filebuf [C++], setbuf", "std::basic_filebuf [C++], Swap", "std::basic_filebuf [C++], sync", "std::basic_filebuf [C++], uflow", "std::basic_filebuf [C++], underflow"]
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
+ms.custom: devdivchpfy22
 ---
 # basic_filebuf Class
 
-Describes a stream buffer that controls the transmission of elements of type *Elem*, whose character traits are determined by the class *Tr*, to and from a sequence of elements stored in an external file.
+Describes a stream buffer that controls the transmission of elements of type *Char_T*, whose character traits are determined by the class *Tr*, to and from a sequence of elements stored in an external file.
 
 ## Syntax
 
 ```cpp
-template <class Elem, class Tr = char_traits<Elem>>
-class basic_filebuf : public basic_streambuf<Elem, Tr>
+template <class Char_T, class Tr = char_traits<Char_T>>
+class basic_filebuf : public basic_streambuf<Char_T, Tr>
 ```
 
 ### Parameters
 
-*Elem*<br/>
+*Char_T*\
 The basic element of the file buffer.
 
-*Tr*<br/>
-The traits of the basic element of the file buffer (usually `char_traits`< `Elem`>).
+*Tr*\
+The traits of the basic element of the file buffer (usually `char_traits<Char_T>`).
 
 ## Remarks
 
-The template class describes a stream buffer that controls the transmission of elements of type *Elem*, whose character traits are determined by the class *Tr*, to and from a sequence of elements stored in an external file.
+The class template describes a stream buffer that controls the transmission of elements of type *Char_T*, whose character traits are determined by the class *Tr*, to and from a sequence of elements stored in an external file.
 
 > [!NOTE]
-> Objects of type `basic_filebuf` are created with an internal buffer of type `char *` regardless of the `char_type` specified by the type parameter *Elem*. This means that a Unicode string (containing **wchar_t** characters) will be converted to an ANSI string (containing **char** characters) before it is written to the internal buffer. To store Unicode strings in the buffer, create a new buffer of type **wchar_t** and set it using the [basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf)`()` method. To see an example that demonstrates this behavior, see below.
+> Objects of type `basic_filebuf` are created with an internal buffer of type __char\*__ regardless of the `char_type` specified by the type parameter *Char_T*. This means that a Unicode string (containing **`wchar_t`** characters) will be converted to an ANSI string (containing **`char`** characters) before it is written to the internal buffer. To store Unicode strings in the buffer, create a new buffer of type **`wchar_t`** and set it using the [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf)`()` method. To see an example that demonstrates this behavior, see below.
 
-An object of class `basic_filebuf`< `Elem`, `Tr`> stores a file pointer, which designates the `FILE` object that controls the stream associated with an open file. It also stores pointers to two file conversion facets for use by the protected member functions [overflow](#overflow) and [underflow](#underflow). For more information, see [basic_filebuf::open](#open).
+An object of class `basic_filebuf<Char_T, Tr>` stores a file pointer, which designates the `FILE` object that controls the stream associated with an open file. It also stores pointers to two file conversion facets for use by the protected member functions [overflow](#overflow) and [underflow](#underflow). For more information, see [`basic_filebuf::open`](#open).
 
 ## Example
 
@@ -162,7 +164,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 |Type name|Description|
 |-|-|
-|[char_type](#char_type)|Associates a type name with the `Elem` template parameter.|
+|[char_type](#char_type)|Associates a type name with the `Char_T` template parameter.|
 |[int_type](#int_type)|Makes this type within `basic_filebuf`'s scope equivalent to the type of the same name in the `Tr` scope.|
 |[off_type](#off_type)|Makes this type within `basic_filebuf`'s scope equivalent to the type of the same name in the `Tr` scope.|
 |[pos_type](#pos_type)|Makes this type within `basic_filebuf`'s scope equivalent to the type of the same name in the `Tr` scope.|
@@ -191,7 +193,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 **Namespace:** std
 
-## <a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf
+## <a name="basic_filebuf"></a> basic_filebuf::basic_filebuf
 
 Constructs an object of type `basic_filebuf`.
 
@@ -207,20 +209,20 @@ The first constructor stores a null pointer in all the pointers controlling the 
 
 The second constructor initializes the object with the contents of `right`, treated as an rvalue reference.
 
-## <a name="char_type"></a>  basic_filebuf::char_type
+## <a name="char_type"></a> basic_filebuf::char_type
 
-Associates a type name with the `Elem` template parameter.
+Associates a type name with the `Char_T` template parameter.
 
 ```cpp
-typedef Elem char_type;
+typedef Char_T char_type;
 ```
 
-## <a name="close"></a>  basic_filebuf::close
+## <a name="close"></a> basic_filebuf::close
 
 Closes a file.
 
 ```cpp
-basic_filebuf<Elem, Tr> *close();
+basic_filebuf<Char_T, Tr> *close();
 ```
 
 ### Return Value
@@ -229,13 +231,13 @@ The member function returns a null pointer if the file pointer is a null pointer
 
 ### Remarks
 
-`close` calls `fclose`( **fp**). If that function returns a nonzero value, the function returns a null pointer. Otherwise, it returns **this** to indicate that the file was successfully closed.
+`close` calls `fclose(fp)`. If that function returns a nonzero value, the function returns a null pointer. Otherwise, it returns **`this`** to indicate that the file was successfully closed.
 
-For a wide stream, if any insertions have occurred since the stream was opened, or since the last call to `streampos`, the function calls [overflow](#overflow). It also inserts any sequence needed to restore the initial conversion state, by using the file conversion facet `fac` to call `fac.unshift` as needed. Each element `byte` of type **char** thus produced is written to the associated stream designated by the file pointer `fp` as if by successive calls of the form `fputc`( **byte**, **fp**). If the call to `fac.unshift` or any write fails, the function does not succeed.
+For a wide stream, if any insertions have occurred since the stream was opened, or since the last call to `streampos`, the function calls [`overflow`](#overflow). It also inserts any sequence needed to restore the initial conversion state, by using the file conversion facet `fac` to call `fac.unshift` as needed. Each produced element `byte` of type **`char`** is written to the associated stream designated by the file pointer `fp` as if by successive calls of the form `fputc(byte, fp)`. If the call to `fac.unshift` or any write fails, the function doesn't succeed.
 
 ### Example
 
-The following sample assumes two files in the current directory: basic_filebuf_close.txt (contents is "testing") and iotest.txt (contents is "ssss").
+The following sample assumes two files in the current directory: *basic_filebuf_close.txt* (contents is "testing") and *iotest.txt* (contents is "ssss").
 
 ```cpp
 // basic_filebuf_close.cpp
@@ -282,15 +284,15 @@ s
 1
 ```
 
-## <a name="int_type"></a>  basic_filebuf::int_type
+## <a name="int_type"></a> basic_filebuf::int_type
 
-Makes this type within basic_filebuf's scope equivalent to the type of the same name in the `Tr` scope.
+Makes this type within `basic_filebuf` scope equivalent to the type of the same name in the `Tr` scope.
 
 ```cpp
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="is_open"></a>  basic_filebuf::is_open
+## <a name="is_open"></a> basic_filebuf::is_open
 
 Indicates whether a file is open.
 
@@ -300,7 +302,7 @@ bool is_open() const;
 
 ### Return Value
 
-**true** if the file pointer is not a null pointer.
+**`true`** if the file pointer isn't null.
 
 ### Example
 
@@ -326,82 +328,78 @@ false
 true
 ```
 
-## <a name="off_type"></a>  basic_filebuf::off_type
+## <a name="off_type"></a> basic_filebuf::off_type
 
-Makes this type within basic_filebuf's scope equivalent to the type of the same name in the `Tr` scope.
+Makes this type within `basic_filebuf` scope equivalent to the type of the same name in the `Tr` scope.
 
 ```cpp
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="open"></a>  basic_filebuf::open
+## <a name="open"></a> basic_filebuf::open
 
 Opens a file.
 
 ```cpp
-basic_filebuf<Elem, Tr> *open(
-    const char* _Filename,
-    ios_base::openmode _Mode,
-    int _Prot = (int)ios_base::_Openprot);
+basic_filebuf<Char_T, Tr> *open(
+    const char* filename,
+    ios_base::openmode mode,
+    int protection = (int)ios_base::_Openprot);
 
-basic_filebuf<Elem, Tr> *open(
-    const char* _Filename,
-    ios_base::openmode _Mode);
+basic_filebuf<Char_T, Tr> *open(
+    const char* filename,
+    ios_base::openmode mode);
 
-basic_filebuf<Elem, Tr> *open(
-    const wchar_t* _Filename,
-    ios_base::openmode _Mode,
-    int _Prot = (int)ios_base::_Openprot);
+basic_filebuf<Char_T, Tr> *open(
+    const wchar_t* filename,
+    ios_base::openmode mode,
+    int protection = (int)ios_base::_Openprot);
 
-basic_filebuf<Elem, Tr> *open(
-    const wchar_t* _Filename,
-    ios_base::openmode _Mode);
+basic_filebuf<Char_T, Tr> *open(
+    const wchar_t* filename,
+    ios_base::openmode mode);
 ```
 
 ### Parameters
 
-*_Filename*<br/>
+*filename*\
 The name of the file to open.
 
-*_Mode*<br/>
-One of the enumerations in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*mode*\
+One of the enumerations in [`ios_base::openmode`](../standard-library/ios-base-class.md#openmode).
 
-*_Prot*<br/>
+*protection*\
 The default file opening protection, equivalent to the *shflag* parameter in [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### Return Value
 
-If the file pointer is a null pointer, the function returns a null pointer. Otherwise, it returns **this**.
+If the buffer is already open, or if the file pointer is a null pointer, the function returns a null pointer. Otherwise, it returns **`this`**.
 
 ### Remarks
 
-The member function opens the file with filename *filename*, by calling [fopen](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**). `strmode` is determined from **mode &**~( [ate](../standard-library/ios-base-class.md#openmode) & &#124; [binary](../standard-library/ios-base-class.md#openmode)):
+This function uses a `FILE *` to back the `basic_filebuf` as though you had called [`fopen/wfopen`](../c-runtime-library/reference/fopen-wfopen.md)`(filename, strmode)`. `strmode` is determined from `mode & ~(`[`ate`](../standard-library/ios-base-class.md#openmode) `|` [`binary`](../standard-library/ios-base-class.md#openmode)`)`:
 
-- `ios_base::in` becomes **"r"** (open existing file for reading).
+- `ios_base::in` becomes `"r"` (open existing file for reading).
+- [ios_base::out](../standard-library/ios-base-class.md#fmtflags) or `ios_base::out | ios_base::trunc` becomes `"w"` (truncate existing file or create for writing).
+- `ios_base::out | app` becomes `"a"` (open existing file for appending all writes).
+- `ios_base::in | ios_base::out` becomes `"r+"` (open existing file for reading and writing).
+- `ios_base::in | ios_base::out | ios_base::trunc` becomes `"w+"` (truncate existing file or create for reading and writing).
+- `ios_base::in | ios_base::out | ios_base::app` becomes `"a+"` (open existing file for reading and for appending all writes).
 
-- [ios_base::out](../standard-library/ios-base-class.md#fmtflags) or **ios_base::out &#124; ios_base::trunc** becomes **"w"** (truncate existing file or create for writing).
+If `mode & ios_base::binary` is nonzero, the function appends `b` to `strmode` to open a binary stream instead of a text stream.
+If `mode & ios_base::ate` is nonzero and the file was successfully opened, the current location in the stream is positioned at the end of file. If that fails, the file is closed.
 
-- **ios_base::out &#124; app** becomes **"a"** (open existing file for appending all writes).
+If the above operations completed successfully, the file conversion facet is determined: `use_facet<codecvt<Char_T, char, traits_type::`[`state_type`](../standard-library/char-traits-struct.md#state_type)`> >(`[`getloc`](../standard-library/basic-streambuf-class.md#getloc)`)`, for use by [underflow](#underflow) and [overflow](#overflow).
 
-- **ios_base::in &#124; ios_base::out** becomes **"r+"** (open existing file for reading and writing).
-
-- **ios_base::in &#124; ios_base::out &#124; ios_base::trunc** becomes **"w+"** (truncate existing file or create for reading and writing).
-
-- **ios_base::in &#124; ios_base::out &#124; ios_base::app** becomes **"a+"** (open existing file for reading and for appending all writes).
-
-If **mode & ios_base::binary** is nonzero, the function appends `b` to `strmode` to open a binary stream instead of a text stream. It then stores the value returned by `fopen` in the file pointer `fp`. If **mode & ios_base::ate** is nonzero and the file pointer is not a null pointer, the function calls `fseek`( **fp**, 0, `SEEK_END`) to position the stream at end of file. If that positioning operation fails, the function calls [close](#close)( `fp`) and stores a null pointer in the file pointer.
-
-If the file pointer is not a null pointer, the function determines the file conversion facet: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc)), for use by [underflow](#underflow) and [overflow](#overflow).
-
-If the file pointer is a null pointer, the function returns a null pointer. Otherwise, it returns **this**.
+If the file couldn't be successfully opened, `nullptr` is returned.
 
 ### Example
 
-See [basic_filebuf::close](#close) for an example that uses `open`.
+See [`basic_filebuf::close`](#close) for an example that uses `open`.
 
-## <a name="op_eq"></a>  basic_filebuf::operator=
+## <a name="op_eq"></a> basic_filebuf::operator=
 
-Assign the content of this stream buffer object. This is a move assignment involving an rvalue that does not leave a copy behind.
+Assign the content of this stream buffer object. This is a move assignment involving an rvalue that doesn't leave a copy behind.
 
 ```cpp
 basic_filebuf& operator=(basic_filebuf&& right);
@@ -409,18 +407,18 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### Parameters
 
-*right*<br/>
+*right*\
 An rvalue reference to a [basic_filebuf](../standard-library/basic-filebuf-class.md) object.
 
 ### Return Value
 
-Returns *this.
+Returns `*this`.
 
 ### Remarks
 
-The member operator replaces the contents of the object by using the contents of *right*, treated as an rvalue reference. For more information, see [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+The member operator replaces the contents of the object by using the contents of `right`, treated as an rvalue reference. For more information, see [Rvalue reference declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="overflow"></a>  basic_filebuf::overflow
+## <a name="overflow"></a> basic_filebuf::overflow
 
 Called when a new character is inserted into a full buffer.
 
@@ -430,24 +428,24 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### Parameters
 
-*_Meta*<br/>
+*_Meta*\
 The character to insert into the buffer or `traits_type::eof`.
 
 ### Return Value
 
-If the function cannot succeed, it returns `traits_type::eof`. Otherwise, it returns **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+If the function can't succeed, it returns `traits_type::eof`. Otherwise, it returns `traits_type::`[`not_eof`](../standard-library/char-traits-struct.md#not_eof)`(_Meta)`.
 
 ### Remarks
 
-If *_Meta* **!= traits_type::**[eof](../standard-library/char-traits-struct.md#eof), the protected virtual member function endeavors to insert the element **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*_Meta*) into the output buffer. It can do so in various ways:
+If `_Meta != traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof), the protected virtual member function attempts to insert the element `ch = traits_type::`[`to_char_type`](../standard-library/char-traits-struct.md#to_char_type)`(_Meta)` into the output buffer. It can do so in various ways:
 
 - If a write position is available, it can store the element into the write position and increment the next pointer for the output buffer.
 
 - It can make a write position available by allocating new or additional storage for the output buffer.
 
-- It can convert any pending output in the output buffer, followed by `ch`, by using the file conversion facet `fac` to call `fac.out` as needed. Each element `ch` of type *char* thus produced is written to the associated stream designated by the file pointer `fp` as if by successive calls of the form `fputc`( **ch**, **fp**). If any conversion or write fails, the function does not succeed.
+- It can convert any pending output in the output buffer, followed by `ch`, by using the file conversion facet `fac` to call `fac.out` as needed. Each produced element `ch` of type *char* is written to the associated stream designated by the file pointer `fp` as if by successive calls of the form `fputc(ch, fp)`. If any conversion or write fails, the function doesn't succeed.
 
-## <a name="pbackfail"></a>  basic_filebuf::pbackfail
+## <a name="pbackfail"></a> basic_filebuf::pbackfail
 
 Tries to put back an element into the input stream, then make it the current element (pointed to by the next pointer).
 
@@ -457,50 +455,51 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### Parameters
 
-*_Meta*<br/>
+*_Meta*\
 The character to insert into the buffer, or `traits_type::eof`.
 
 ### Return Value
 
-If the function cannot succeed, it returns `traits_type::eof`. Otherwise, it returns **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(*\_Meta*).
+If the function can't succeed, it returns `traits_type::eof`. Otherwise, it returns `traits_type::`[`not_eof`](../standard-library/char-traits-struct.md#not_eof)`(_Meta)`.
 
 ### Remarks
 
-The protected virtual member function puts back an element into the input buffer and then makes it the current element (pointed to by the next pointer). If *\_Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), the element to push back is effectively the one already in the stream before the current element. Otherwise, that element is replaced by **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). The function can put back an element in various ways:
+The protected virtual member function puts back an element into the input buffer and then makes it the current element (pointed to by the next pointer). If `_Meta == traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof), the element to push back is effectively the one already in the stream before the current element. Otherwise, that element is replaced by `ch = traits_type::`[`to_char_type`](../standard-library/char-traits-struct.md#to_char_type)`(_Meta)`. The function can put back an element in various ways:
 
-- If a putback position is available, and the element stored there compares equal to `ch`, it can decrement the next pointer for the input buffer.
+- If a `putback` position is available, and the element stored there compares equal to `ch`, it can decrement the next pointer for the input buffer.
 
 - If the function can make a `putback` position available, it can do so, set the next pointer to point at that position, and store `ch` in that position.
 
-- If the function can push back an element onto the input stream, it can do so, such as by calling `ungetc` for an element of type **char**.
+- If the function can push back an element onto the input stream, it can do so, such as by calling `ungetc` for an element of type **`char`**.
 
-## <a name="pos_type"></a>  basic_filebuf::pos_type
+## <a name="pos_type"></a> basic_filebuf::pos_type
 
-Makes this type within basic_filebuf's scope equivalent to the type of the same name in the `Tr` scope.
+Makes this type within `basic_filebuf` scope equivalent to the type of the same name in the `Tr` scope.
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="seekoff"></a>  basic_filebuf::seekoff
+## <a name="seekoff"></a> basic_filebuf::seekoff
 
 Tries to alter the current positions for the controlled streams.
 
 ```cpp
-virtual pos_type seekoff(off_type _Off,
+virtual pos_type seekoff(
+    off_type _Off,
     ios_base::seekdir _Way,
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```
 
 ### Parameters
 
-*_Off*<br/>
+*_Off*\
 The position to seek for relative to *_Way*.
 
-*_Way*<br/>
+*_Way*\
 The starting point for offset operations. See [seekdir](../standard-library/ios-base-class.md#seekdir) for possible values.
 
-*_Which*<br/>
+*_Which*\
 Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.
 
 ### Return Value
@@ -509,56 +508,58 @@ Returns the new position or an invalid stream position.
 
 ### Remarks
 
-The protected virtual member function endeavors to alter the current positions for the controlled streams. For an object of class [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, a stream position can be represented by an object of type `fpos_t`, which stores an offset and any state information needed to parse a wide stream. Offset zero designates the first element of the stream. (An object of type [pos_type](../standard-library/basic-streambuf-class.md#pos_type) stores at least an `fpos_t` object.)
+The protected virtual member function attempts to alter the current positions for the controlled streams. For an object of class [`basic_filebuf`](../standard-library/basic-filebuf-class.md)`<Char_T, Tr>`, a stream position can be represented by an object of type `fpos_t`, which stores an offset and any state information needed to parse a wide stream. Offset zero refers to the first element of the stream. (An object of type [`pos_type`](../standard-library/basic-streambuf-class.md#pos_type) stores at least an `fpos_t` object.)
 
-For a file opened for both reading and writing, both the input and output streams are positioned in tandem. To switch between inserting and extracting, you must call either [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) or [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos). Calls to `pubseekoff` (and hence to `seekoff`) have various limitations for [text streams](../c-runtime-library/text-and-binary-streams.md), [binary streams](../c-runtime-library/text-and-binary-streams.md), and [wide streams](../c-runtime-library/byte-and-wide-streams.md).
+For a file opened for both reading and writing, both the input and output streams are positioned in tandem. To switch between inserting and extracting, you must call either [`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) or [`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos). Calls to `pubseekoff` (and hence to `seekoff`) have various limitations for [text streams](../c-runtime-library/text-and-binary-streams.md), [binary streams](../c-runtime-library/text-and-binary-streams.md), and [wide streams](../c-runtime-library/byte-and-wide-streams.md).
 
-If the file pointer `fp` is a null pointer, the function fails. Otherwise, it endeavors to alter the stream position by calling `fseek`( **fp**, `_Off`, `_Way`). If that function succeeds and the resulting position `fposn` can be determined by calling `fgetpos`( **fp**, **&fposn**), the function succeeds. If the function succeeds, it returns a value of type `pos_type` containing `fposn`. Otherwise, it returns an invalid stream position.
+If the file pointer `fp` is a null pointer, the function fails. Otherwise, it attempts to alter the stream position by calling `fseek(fp, _Off, _Way)`. If that function succeeds and the resulting position `fposn` can be determined by calling `fgetpos(fp, &fposn)`, the function succeeds. If the function succeeds, it returns a value of type `pos_type` containing `fposn`. Otherwise, it returns an invalid stream position.
 
-## <a name="seekpos"></a>  basic_filebuf::seekpos
+## <a name="seekpos"></a> basic_filebuf::seekpos
 
 Tries to alter the current positions for the controlled streams.
 
 ```cpp
-virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
+virtual pos_type seekpos(
+    pos_type _Sp,
+    ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```
 
 ### Parameters
 
-*_Sp*<br/>
+*_Sp*\
 The position to seek for.
 
-*_Which*<br/>
+*_Which*\
 Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.
 
 ### Return Value
 
-If the file pointer `fp` is a null pointer, the function fails. Otherwise, it endeavors to alter the stream position by calling `fsetpos`( **fp**, **&fposn**), where `fposn` is the `fpos_t` object stored in `pos`. If that function succeeds, the function returns `pos`. Otherwise, it returns an invalid stream position. To determine if the stream position is invalid, compare the return value with `pos_type(off_type(-1))`.
+If the file pointer `fp` is a null pointer, the function fails. Otherwise, it attempts to alter the stream position by calling `fsetpos(fp, &fposn)`, where `fposn` is the `fpos_t` object stored in `pos`. If that function succeeds, the function returns `pos`. Otherwise, it returns an invalid stream position. To determine if the stream position is invalid, compare the return value with `pos_type(off_type(-1))`.
 
 ### Remarks
 
-The protected virtual member function endeavors to alter the current positions for the controlled streams. For an object of class [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**>, a stream position can be represented by an object of type `fpos_t`, which stores an offset and any state information needed to parse a wide stream. Offset zero designates the first element of the stream. (An object of type `pos_type` stores at least an `fpos_t` object.)
+The protected virtual member function attempts to alter the current positions for the controlled streams. For an object of class [`basic_filebuf`](../standard-library/basic-filebuf-class.md)`<Char_T, Tr>`, a stream position can be represented by an object of type `fpos_t`, which stores an offset and any state information needed to parse a wide stream. Offset zero refers to the first element of the stream. (An object of type `pos_type` stores at least an `fpos_t` object.)
 
-For a file opened for both reading and writing, both the input and output streams are positioned in tandem. To switch between inserting and extracting, you must call either [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) or [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos). Calls to `pubseekoff` (and hence to `seekoff`) have various limitations for text streams, binary streams, and wide streams.
+For a file opened for both reading and writing, both the input and output streams are positioned in tandem. To switch between inserting and extracting, you must call either [`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) or [`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos). Calls to `pubseekoff` (and to `seekoff`) have various limitations for text streams, binary streams, and wide streams.
 
-For a wide stream, if any insertions have occurred since the stream was opened, or since the last call to `streampos`, the function calls [overflow](#overflow). It also inserts any sequence needed to restore the initial conversion state, by using the file conversion facet `fac` to call **fac**`.unshift` as needed. Each element `byte` of type **char** thus produced is written to the associated stream designated by the file pointer `fp` as if by successive calls of the form `fputc`( **byte**, **fp**). If the call to `fac.unshift` or any write fails, the function does not succeed.
+For a wide stream, if any insertions have occurred since the stream was opened, or since the last call to `streampos`, the function calls [`overflow`](#overflow). It also inserts any sequence needed to restore the initial conversion state, by using the file conversion facet `fac` to call `fac.unshift` as needed. Each produced element `byte` of type **`char`** is written to the associated stream designated by the file pointer `fp` as if by successive calls of the form `fputc(byte, fp)`. If the call to `fac.unshift` or any write fails, the function doesn't succeed.
 
-## <a name="setbuf"></a>  basic_filebuf::setbuf
+## <a name="setbuf"></a> basic_filebuf::setbuf
 
 Performs an operation particular to each derived stream buffer.
 
 ```cpp
-virtual basic_streambuf<Elem, Tr> *setbuf(
+virtual basic_streambuf<Char_T, Tr> *setbuf(
     char_type* _Buffer,
     streamsize count);
 ```
 
 ### Parameters
 
-*_Buffer*<br/>
+*_Buffer*\
 Pointer to a buffer.
 
-*count*<br/>
+*count*\
 Size of the buffer.
 
 ### Return Value
@@ -567,9 +568,9 @@ The protected member function returns zero if the file pointer `fp` is a null po
 
 ### Remarks
 
-`setbuf` calls `setvbuf`( **fp**, ( `char` \*) `_Buffer`, `_IOFBF`, `count` \* `sizeof` ( **Elem**) ) to offer the array of `count` elements beginning at _ *Buffer* as a buffer for the stream. If that function returns a nonzero value, the function returns a null pointer. Otherwise, it returns **this** to signal success.
+`setbuf` calls `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` to offer the array of `count` elements beginning at *_Buffer* as a buffer for the stream. If that function returns a nonzero value, the function returns a null pointer. Otherwise, it returns **`this`** to signal success.
 
-## <a name="swap"></a>  basic_filebuf::swap
+## <a name="swap"></a> basic_filebuf::swap
 
 Exchanges the contents of this `basic_filebuf` for the contents of the provided `basic_filebuf`.
 
@@ -579,10 +580,10 @@ void swap(basic_filebuf& right);
 
 ### Parameters
 
-*right*<br/>
-An `lvalue` reference to another `basic_filebuf`.
+*right*\
+An lvalue reference to another `basic_filebuf`.
 
-## <a name="sync"></a>  basic_filebuf::sync
+## <a name="sync"></a> basic_filebuf::sync
 
 Tries to synchronize the controlled streams with any associated external streams.
 
@@ -592,9 +593,9 @@ virtual int sync();
 
 ### Return Value
 
-Returns zero if the file pointer `fp` is a null pointer. Otherwise, it returns zero only if calls to both [overflow](#overflow) and `fflush`( **fp**) succeed in flushing any pending output to the stream.
+Returns zero if the file pointer `fp` is a null pointer. Otherwise, it returns zero only if calls to both [overflow](#overflow) and `fflush(fp)` succeed in flushing any pending output to the stream.
 
-## <a name="traits_type"></a>  basic_filebuf::traits_type
+## <a name="traits_type"></a> basic_filebuf::traits_type
 
 Associates a type name with the `Tr` template parameter.
 
@@ -602,7 +603,7 @@ Associates a type name with the `Tr` template parameter.
 typedef Tr traits_type;
 ```
 
-## <a name="underflow"></a>  basic_filebuf::underflow
+## <a name="underflow"></a> basic_filebuf::underflow
 
 Extracts the current element from the input stream.
 
@@ -612,19 +613,19 @@ virtual int_type underflow();
 
 ### Return Value
 
-If the function cannot succeed, it returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). Otherwise, it returns `ch`, converted as described in the Remarks section.
+If the function can't succeed, it returns `traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof). Otherwise, it returns `ch`, converted as described in the Remarks section.
 
 ### Remarks
 
-The protected virtual member function endeavors to extract the current element `ch` from the input stream, and return the element as **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`ch`). It can do so in various ways:
+The protected virtual member function attempts to extract the current element `ch` from the input stream, and return the element as `traits_type::`[`to_int_type`](../standard-library/char-traits-struct.md#to_int_type)`(ch)`. It can do so in various ways:
 
 - If a read position is available, it takes `ch` as the element stored in the read position and advances the next pointer for the input buffer.
 
-- It can read one or more elements of type **char**, as if by successive calls of the form `fgetc`(**fp**), and convert them to an element **ch** of type `Elem` by using the file conversion facet fac to call `fac.in` as needed. If any read or conversion fails, the function does not succeed.
+- It can read one or more elements of type **`char`**, as if by successive calls of the form `fgetc(fp)`, and convert them to an element `ch` of type `Char_T` by using the file conversion facet `fac` to call `fac.in` as needed. If any read or conversion fails, the function doesn't succeed.
 
 ## See also
 
-[\<fstream>](../standard-library/fstream.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream Programming](../standard-library/iostream-programming.md)<br/>
-[iostreams Conventions](../standard-library/iostreams-conventions.md)<br/>
+[\<fstream>](../standard-library/fstream.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream Programming](../standard-library/iostream-programming.md)\
+[iostreams Conventions](../standard-library/iostreams-conventions.md)

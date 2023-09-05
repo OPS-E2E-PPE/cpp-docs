@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2682"
 title: "Compiler Error C2682"
 ms.date: "11/04/2016"
 f1_keywords: ["C2682"]
@@ -9,13 +10,13 @@ ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
 
 cannot use casting_operator to convert from 'type1' to 'type2'
 
-A casting operator tried to convert between incompatible types. For example, you cannot use the [dynamic_cast](../../cpp/dynamic-cast-operator.md) operator to convert a pointer to a reference. The `dynamic_cast` operator cannot be used to cast away qualifiers. All qualifiers on the types must match.
+A casting operator tried to convert between incompatible types. For example, you cannot use the [dynamic_cast](../../cpp/dynamic-cast-operator.md) operator to convert a pointer to a reference. The **`dynamic_cast`** operator cannot be used to cast away qualifiers. All qualifiers on the types must match.
 
-You can use the `const_cast` operator to remove attributes such as `const`, `volatile`, or `__unaligned`.
+You can use the **`const_cast`** operator to remove attributes such as **`const`**, **`volatile`**, or **`__unaligned`**.
 
 The following sample generates C2682:
 
-```
+```cpp
 // C2682.cpp
 class A { virtual void f(); };
 class B: public A {};
@@ -27,7 +28,7 @@ void g(A* pa) {
 
 The following sample generates C2682:
 
-```
+```cpp
 // C2682b.cpp
 // compile with: /clr
 ref struct R{};

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4267"
 title: "Compiler Warning (level 3) C4267"
 ms.date: "11/04/2016"
 f1_keywords: ["C4267"]
@@ -17,7 +18,7 @@ To fix this warning, use `size_t` instead of `type`. Alternatively, use an integ
 
 The following example generates C4267.
 
-```
+```cpp
 // C4267.cpp
 // compile by using: cl /W4 C4267.cpp
 void Func1(short) {}

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleLinkingDoc Class"
 title: "COleLinkingDoc Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COleLinkingDoc", "AFXOLE/COleLinkingDoc", "AFXOLE/COleLinkingDoc::COleLinkingDoc", "AFXOLE/COleLinkingDoc::Register", "AFXOLE/COleLinkingDoc::Revoke", "AFXOLE/COleLinkingDoc::OnFindEmbeddedItem", "AFXOLE/COleLinkingDoc::OnGetLinkedItem"]
@@ -39,7 +40,7 @@ class COleLinkingDoc : public COleDocument
 
 ## Remarks
 
-A container application that supports linking to embedded items is called a "link container." The [OCLIENT](../../visual-cpp-samples.md) sample application is an example of a link container.
+A container application that supports linking to embedded items is called a "link container." The [OCLIENT](../../overview/visual-cpp-samples.md) sample application is an example of a link container.
 
 When a linked item's source is an embedded item in another document, that containing document must be loaded in order for the embedded item to be edited. For this reason, a link container must be able to be launched by another container application when the user wants to edit the source of a linked item. Your application must also use the [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) class so that it can create documents when launched programmatically.
 
@@ -57,7 +58,7 @@ Connect your `COleTemplateServer` object to your document templates by calling t
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-For a sample `CWinApp`-derived class definition and `InitInstance` function, see OCLIENT.H and OCLIENT.CPP in the MFC sample [OCLIENT](../../visual-cpp-samples.md).
+For a sample `CWinApp`-derived class definition and `InitInstance` function, see OCLIENT.H and OCLIENT.CPP in the MFC sample [OCLIENT](../../overview/visual-cpp-samples.md).
 
 For more information on using `COleLinkingDoc`, see the articles [Containers: Implementing a Container](../../mfc/containers-implementing-a-container.md) and [Containers: Advanced Features](../../mfc/containers-advanced-features.md).
 
@@ -77,7 +78,7 @@ For more information on using `COleLinkingDoc`, see the articles [Containers: Im
 
 **Header:** afxole.h
 
-##  <a name="colelinkingdoc"></a>  COleLinkingDoc::COleLinkingDoc
+## <a name="colelinkingdoc"></a> COleLinkingDoc::COleLinkingDoc
 
 Constructs a `COleLinkingDoc` object without beginning communications with the OLE system DLLs.
 
@@ -89,7 +90,7 @@ COleLinkingDoc();
 
 You must call the `Register` member function to inform OLE that the document is open.
 
-##  <a name="onfindembeddeditem"></a>  COleLinkingDoc::OnFindEmbeddedItem
+## <a name="onfindembeddeditem"></a> COleLinkingDoc::OnFindEmbeddedItem
 
 Called by the framework to determine whether the document contains an embedded OLE item with the specified name.
 
@@ -110,7 +111,7 @@ A pointer to the specified item; NULL if the item is not found.
 
 The default implementation searches the list of embedded items for an item with the specified name (the name comparison is case sensitive). Override this function if you have your own method of storing or naming embedded OLE items.
 
-##  <a name="ongetlinkeditem"></a>  COleLinkingDoc::OnGetLinkedItem
+## <a name="ongetlinkeditem"></a> COleLinkingDoc::OnGetLinkedItem
 
 Called by the framework to check whether the document contains a linked server item with the specified name.
 
@@ -131,7 +132,7 @@ A pointer to the specified item; NULL if the item is not found.
 
 The default `COleLinkingDoc` implementation always returns NULL. This function is overriden in the derived class `COleServerDoc` to search the list of OLE server items for a linked item with the specified name (the name comparison is case sensitive). Override this function if you have implemented your own method of storing or retrieving linked server items.
 
-##  <a name="register"></a>  COleLinkingDoc::Register
+## <a name="register"></a> COleLinkingDoc::Register
 
 Informs the OLE system DLLs that the document is open.
 
@@ -159,11 +160,11 @@ Call this function when creating or opening a named file to register the documen
 
 If you are using `COleTemplateServer` in your application, `Register` is called for you by `COleLinkingDoc`'s implementation of `OnNewDocument`, `OnOpenDocument`, and `OnSaveDocument`.
 
-##  <a name="revoke"></a>  COleLinkingDoc::Revoke
+## <a name="revoke"></a> COleLinkingDoc::Revoke
 
 Informs the OLE system DLLs that the document is no longer open.
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -173,9 +174,9 @@ Call this function to revoke the document's registration with the OLE system DLL
 
 You should call this function when closing a named file, but you usually do not need to call it directly. `Revoke` is called for you by `COleLinkingDoc`'s implementation of `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, and `OnSaveDocument`.
 
-## See Also
+## See also
 
-[MFC Sample OCLIENT](../../visual-cpp-samples.md)<br/>
+[MFC Sample OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDocument Class](../../mfc/reference/coledocument-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)

@@ -1,10 +1,14 @@
 ---
+description: "Learn more about: Adding a Property Page (ATL Tutorial, Part 6)"
 title: "Adding a Property Page (ATL Tutorial, Part 6)"
 ms.custom: "get-started-article"
 ms.date: "09/27/2018"
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
 ---
 # Adding a Property Page (ATL Tutorial, Part 6)
+
+> [!NOTE]
+> The ATL OLE DB Provider wizard is not available in Visual Studio 2019 and later.
 
 Property pages are implemented as separate COM objects, which allow them to be shared if required. In this step, you will do the following tasks to add a property page to the control:
 
@@ -138,8 +142,8 @@ The **Apply** button is initially disabled. Start typing a value in the **Sides*
 
 Next, you will put your control on a Web page.
 
-[Back to Step 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [On to Step 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
+[Back to Step 5](../atl/adding-an-event-atl-tutorial-part-5.md) \| [On to Step 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
 
-## See Also
+## See also
 
 [Tutorial](../atl/active-template-library-atl-tutorial.md)

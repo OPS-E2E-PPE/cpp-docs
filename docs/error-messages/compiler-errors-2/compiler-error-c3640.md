@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3640"
 title: "Compiler Error C3640"
 ms.date: "11/04/2016"
 f1_keywords: ["C3640"]
@@ -13,7 +14,7 @@ The compiler requires certain functions to be defined.
 
 The following sample generates C3640:
 
-```
+```cpp
 // C3640.cpp
 void f()
 {

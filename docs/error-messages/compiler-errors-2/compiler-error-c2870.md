@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2870"
 title: "Compiler Error C2870"
 ms.date: "11/04/2016"
 f1_keywords: ["C2870"]
@@ -13,7 +14,7 @@ You defined namespace `name` incorrectly. Namespaces must be defined at file sco
 
 The following sample generates C2870:
 
-```
+```cpp
 // C2870.cpp
 // compile with: /c
 int main() {

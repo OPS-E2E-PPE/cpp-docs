@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Convert Between System::Guid and _GUID"
 title: "How to: Convert Between System::Guid and _GUID"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -11,7 +12,7 @@ The following code sample shows how to convert between a <xref:System.Guid> and 
 
 ## Example
 
-```
+```cpp
 // convert_guids.cpp
 // compile with: /clr
 #include <windows.h>
@@ -56,6 +57,6 @@ int main() {
 11111111-2222-3333-4455-555555555555
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

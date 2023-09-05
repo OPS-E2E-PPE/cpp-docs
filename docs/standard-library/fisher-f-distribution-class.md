@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: fisher_f_distribution Class"
 title: "fisher_f_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::fisher_f_distribution", "random/std::fisher_f_distribution::reset", "random/std::fisher_f_distribution::m", "random/std::fisher_f_distribution::n", "random/std::fisher_f_distribution::param", "random/std::fisher_f_distribution::min", "random/std::fisher_f_distribution::max", "random/std::fisher_f_distribution::operator()", "random/std::fisher_f_distribution::param_type", "random/std::fisher_f_distribution::param_type::m", "random/std::fisher_f_distribution::param_type::n", "random/std::fisher_f_distribution::param_type::operator==", "random/std::fisher_f_distribution::param_type::operator!="]
@@ -41,20 +42,18 @@ public:
 
 ### Parameters
 
-*RealType*<br/>
-The floating-point result type, defaults to **double**. For possible types, see [\<random>](../standard-library/random.md).
+*RealType*\
+The floating-point result type, defaults to **`double`**. For possible types, see [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
+*URNG*\
 The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes a distribution that produces values of a user-specified floating-point type, or type **double** if none is provided, distributed according to the Fisher's F-Distribution. The following table links to articles about individual members.
+The class template describes a distribution that produces values of a user-specified floating-point type, or type **`double`** if none is provided, distributed according to the Fisher's F-Distribution. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|
-|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|
+[fisher_f_distribution](#fisher_f_distribution)\
+[param_type](#param_type)
 
 The property functions `m()` and `n()` return the values for the stored distribution parameters `m` and `n` respectively.
 
@@ -68,7 +67,7 @@ The `operator()` member functions return the next generated value based on the U
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the F-distribution, see the Wolfram MathWorld article [F-Distribution](http://go.microsoft.com/fwlink/p/?linkid=400899).
+For detailed information about the F-distribution, see the Wolfram MathWorld article [F-Distribution](https://go.microsoft.com/fwlink/p/?linkid=400899).
 
 ## Example
 
@@ -209,7 +208,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution
+## <a name="fisher_f_distribution"></a> fisher_f_distribution::fisher_f_distribution
 
 Constructs the distribution.
 
@@ -220,13 +219,13 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### Parameters
 
-*m*<br/>
+*m*\
 The `m` distribution parameter.
 
-*n*<br/>
+*n*\
 The `n` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The `param_type` structure used to construct the distribution.
 
 ### Remarks
@@ -237,7 +236,7 @@ The first constructor constructs an object whose stored `m` value holds the valu
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  fisher_f_distribution::param_type
+## <a name="param_type"></a> fisher_f_distribution::param_type
 
 Stores the parameters of the distribution.
 
@@ -255,13 +254,13 @@ struct param_type {
 
 ### Parameters
 
-*m*<br/>
+*m*\
 The `m` distribution parameter.
 
-*n*<br/>
+*n*\
 The `n` distribution parameter.
 
-*right*<br/>
+*right*\
 The `param_type` object to compare to this.
 
 ### Remarks
@@ -272,4 +271,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

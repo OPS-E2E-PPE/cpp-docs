@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3087"
 title: "Compiler Error C3087"
 ms.date: "11/04/2016"
 f1_keywords: ["C3087"]
@@ -15,7 +16,7 @@ A named argument was specified in the same attribute block as an unnamed argumen
 
 The following sample generates C3087.
 
-```
+```cpp
 // C3087.cpp
 // compile with: /c
 [idl_quote("quote1", text="quote2")];   // C3087

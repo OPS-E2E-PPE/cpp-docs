@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Providing Windowless Activation"
 title: "Providing Windowless Activation"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["windowless activation of MFC ActiveX controls", "activation [MFC], MFC ActiveX controls", "MFC ActiveX controls [MFC], activate options", "activation [MFC], windowless"]
@@ -44,7 +45,6 @@ You may want a windowless control to be the target of an OLE drag-and-drop opera
 
 [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]
 
-## See Also
+## See also
 
 [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
-

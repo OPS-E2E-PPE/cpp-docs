@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: CManualAccessor Class"
 title: "CManualAccessor Class"
 ms.date: "11/04/2016"
-f1_keywords: ["ATL::CManualAccessor", "ATL.CManualAccessor", "CManualAccessor", "ATL::CManualAccessor::AddBindEntry", "ATL.CManualAccessor.AddBindEntry", "CManualAccessor::AddBindEntry", "AddBindEntry", "CManualAccessor.AddBindEntry", "CManualAccessor::AddParameterEntry", "ATL.CManualAccessor.AddParameterEntry", "CManualAccessor.AddParameterEntry", "AddParameterEntry", "ATL::CManualAccessor::AddParameterEntry", "ATL::CManualAccessor::CreateAccessor", "CreateAccessor", "ATL.CManualAccessor.CreateAccessor", "CManualAccessor.CreateAccessor", "CManualAccessor::CreateAccessor", "ATL::CManualAccessor::CreateParameterAccessor", "ATL.CManualAccessor.CreateParameterAccessor", "CManualAccessor.CreateParameterAccessor", "CreateParameterAccessor", "CManualAccessor::CreateParameterAccessor"]
+f1_keywords: ["ATL::CManualAccessor", "ATL.CManualAccessor", "CManualAccessor", "ATL::CManualAccessor::AddBindEntry", "ATL.CManualAccessor.AddBindEntry", "CManualAccessor::AddBindEntry", "CManualAccessor.AddBindEntry", "CManualAccessor::AddParameterEntry", "ATL.CManualAccessor.AddParameterEntry", "CManualAccessor.AddParameterEntry", "AddParameterEntry", "ATL::CManualAccessor::AddParameterEntry", "ATL::CManualAccessor::CreateAccessor", "ATL.CManualAccessor.CreateAccessor", "CManualAccessor.CreateAccessor", "CManualAccessor::CreateAccessor", "ATL::CManualAccessor::CreateParameterAccessor", "ATL.CManualAccessor.CreateParameterAccessor", "CManualAccessor.CreateParameterAccessor", "CreateParameterAccessor", "CManualAccessor::CreateParameterAccessor"]
 helpviewer_keywords: ["CManualAccessor class", "AddBindEntry method", "AddParameterEntry method", "CreateAccessor method", "CreateParameterAccessor method"]
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
 ---
@@ -23,7 +24,7 @@ class CManualAccessor : public CAccessorBase
 
 ### Methods
 
-|||
+| Name | Description |
 |-|-|
 |[AddBindEntry](#addbindentry)|Adds a bind entry to the output columns.|
 |[AddParameterEntry](#addparameterentry)|Adds a parameter entry to the parameter accessor.|
@@ -50,7 +51,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### Parameters
 
-See [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) in the *OLE DB Programmer's Reference*.
+See [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 *nOrdinal*<br/>
 [in] Column number.
@@ -72,7 +73,7 @@ See [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms7
 
 ### Remarks
 
-To use this function, you must first call [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). You cannot add more entries than the number of columns specified in `CreateAccessor`.
+To use this function, you must first call [CreateAccessor](#createaccessor). You cannot add more entries than the number of columns specified in `CreateAccessor`.
 
 ## <a name="addparameterentry"></a> CManualAccessor::AddParameterEntry
 
@@ -91,7 +92,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### Parameters
 
-See [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) in the *OLE DB Programmer's Reference*.
+See [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 *nOrdinal*<br/>
 [in] Parameter number.
@@ -116,7 +117,7 @@ See [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms7
 
 ### Remarks
 
-To use this function, you must first call [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
+To use this function, you must first call [CreateParameterAccessor](#createparameteraccessor).
 
 ## <a name="createaccessor"></a> CManualAccessor::CreateAccessor
 
@@ -133,7 +134,7 @@ HRESULT CreateAccessor(int nBindEntries,
 #### Parameters
 
 *nBindEntries*<br/>
-[in] Number of columns. This number should match the number of calls to the [CManualAccessor::AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) function.
+[in] Number of columns. This number should match the number of calls to the [CManualAccessor::AddBindEntry](#addbindentry) function.
 
 *pBuffer*<br/>
 [in] A pointer to the buffer where the output columns are stored.
@@ -178,11 +179,11 @@ One of the standard HRESULT values.
 
 ### Remarks
 
-You must call this function before calling [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md).
+You must call this function before calling [AddParameterEntry](#addparameterentry).
 
-## See Also
+## See also
 
-[DBViewer](../../visual-cpp-samples.md)<br/>
+[DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB Consumer Templates](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB Consumer Templates Reference](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor Class](../../data/oledb/caccessor-class.md)<br/>

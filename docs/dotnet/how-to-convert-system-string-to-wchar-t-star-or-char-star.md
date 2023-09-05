@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Convert System::String to wchar_t* or char*"
 title: "How to: Convert System::String to wchar_t* or char*"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -11,7 +12,7 @@ You can use `PtrToStringChars` in Vcclr.h to convert <xref:System.String> to nat
 
 ## Example
 
-```
+```cpp
 // convert_string_to_wchar.cpp
 // compile with: /clr
 #include < stdio.h >
@@ -53,6 +54,6 @@ Hello
 Hello
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

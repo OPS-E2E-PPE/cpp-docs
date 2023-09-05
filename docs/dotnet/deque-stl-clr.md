@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: deque (STL/CLR)"
 title: "deque (STL/CLR)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
@@ -2166,7 +2167,7 @@ Container to swap contents with.
 
 ### Remarks
 
-The member function swaps the controlled sequences between `*this` and *right*. It does so in constant time and it throws no exceptions. You use it as a quick way to exchange the contents of two containers.
+The member function swaps the controlled sequences between **`*this`** and *right*. It does so in constant time and it throws no exceptions. You use it as a quick way to exchange the contents of two containers.
 
 ### Example
 
@@ -2307,7 +2308,7 @@ int main()
 a b c
 ```
 
-## <a name="op_lt"></a> operator&lt; (deque) (STL/CLR)
+## <a name="op_lt"></a> `operator<` (deque) (STL/CLR)
 
 Deque less than comparison.
 
@@ -2376,7 +2377,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operator&lt;= (deque) (STL/CLR)
+## <a name="op_lteq"></a> `operator<=` (deque) (STL/CLR)
 
 Deque less than or equal comparison.
 
@@ -2462,7 +2463,7 @@ Container to copy.
 
 ### Remarks
 
-The member operator copies *right* to the object, then returns `*this`. You use it to replace the controlled sequence with a copy of the controlled sequence in *right*.
+The member operator copies *right* to the object, then returns **`*this`**. You use it to replace the controlled sequence with a copy of the controlled sequence in *right*.
 
 ### Example
 
@@ -2567,7 +2568,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operator&gt; (deque) (STL/CLR)
+## <a name="op_gt"></a> `operator>` (deque) (STL/CLR)
 
 Deque greater than comparison.
 
@@ -2636,7 +2637,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operator&gt;= (deque) (STL/CLR)
+## <a name="op_gteq"></a> `operator>=` (deque) (STL/CLR)
 
 Deque greater than or equal comparison.
 

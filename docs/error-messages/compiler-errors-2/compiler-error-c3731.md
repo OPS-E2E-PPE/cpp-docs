@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3731"
 title: "Compiler Error C3731"
 ms.date: "11/04/2016"
 f1_keywords: ["C3731"]
@@ -13,7 +14,7 @@ The event source and event receiver must have the same type (for example `native
 
 The following sample generates C3731:
 
-```
+```cpp
 // C3731.cpp
 // compile with: /clr
 #using <mscorlib.dll>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Fatal Error C1037"
 title: "Fatal Error C1037"
 ms.date: "11/04/2016"
 f1_keywords: ["C1037"]
@@ -20,4 +21,3 @@ The object file specified by [/Fo](../../build/reference/fo-object-file-name.md)
 1. Another process is using the file.
 
 1. A read-only file has the same name.
-

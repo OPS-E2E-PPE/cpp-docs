@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Recordset: Sorting Records (ODBC)"
 title: "Recordset: Sorting Records (ODBC)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["sorting data, recordset data", "ODBC recordsets, sorting", "recordsets, sorting"]
@@ -48,9 +49,9 @@ rsStudent.Open( );
 The recordset contains all of the student records, sorted in descending order (Z to A) by last name, then by first name.
 
 > [!NOTE]
->  If you choose to override the recordset's default SQL string by passing your own SQL string to `Open`, do not set a sort if your custom string has an **ORDER BY** clause.
+> If you choose to override the recordset's default SQL string by passing your own SQL string to `Open`, do not set a sort if your custom string has an **ORDER BY** clause.
 
-## See Also
+## See also
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Recordset: Parameterizing a Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>

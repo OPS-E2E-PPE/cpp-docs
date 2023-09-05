@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2617"
 title: "Compiler Error C2617"
 ms.date: "11/04/2016"
 f1_keywords: ["C2617"]
@@ -13,7 +14,7 @@ The specified function does not have a declared return type, and a previous retu
 
 The following sample generates C2617:
 
-```
+```cpp
 // C2617.cpp
 int i;
 func() {   // no return type prototype
@@ -24,7 +25,7 @@ func() {   // no return type prototype
 
 Possible resolution:
 
-```
+```cpp
 // C2617b.cpp
 // compile with: /c
 int i;

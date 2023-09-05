@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AFX_EXTENSION_MODULE Structure"
 title: "AFX_EXTENSION_MODULE Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["AFX_EXTENSION_MODULE"]
@@ -59,9 +60,8 @@ The module information stored in the `AFX_EXTENSION_MODULE` structure can be cop
 
 **Header:** afx.h
 
-## See Also
+## See also
 
 [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule)<br/>
 [AfxTermExtensionModule](extension-dll-macros.md#afxtermextensionmodule)
-

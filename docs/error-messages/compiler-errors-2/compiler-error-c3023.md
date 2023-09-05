@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3023"
 title: "Compiler Error C3023"
 ms.date: "11/04/2016"
 f1_keywords: ["C3023"]
@@ -13,7 +14,7 @@ The values passed to a clause were not valid.
 
 The following sample generates C3023:
 
-```
+```cpp
 // C3023.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

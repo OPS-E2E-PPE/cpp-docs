@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Providing Mouse Interaction While Inactive"
 title: "Providing Mouse Interaction While Inactive"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["MFC ActiveX controls [MFC], mouse interaction"]
@@ -24,7 +25,6 @@ Enabling the `IPointerInactive` interface typically means that you want the cont
 
 [!code-cpp[NVC_MFC_AxOpt#12](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_5.cpp)]
 
-## See Also
+## See also
 
 [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4374"
 title: "Compiler Warning (level 1) C4374"
 ms.date: "11/04/2016"
 f1_keywords: ["C4374"]
@@ -13,7 +14,7 @@ The compiler expected to find the [virtual](../../cpp/virtual-specifier.md) keyw
 
 The following sample generates C4374:
 
-```
+```cpp
 // C4374.cpp
 // compile with: /clr /W1 /c /WX
 public interface class I {

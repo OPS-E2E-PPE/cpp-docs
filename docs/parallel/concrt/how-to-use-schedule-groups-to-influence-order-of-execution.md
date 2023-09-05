@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Use Schedule Groups to Influence Order of Execution"
 title: "How to: Use Schedule Groups to Influence Order of Execution"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["schedule groups, using [Concurrency Runtime]", "using schedule groups [Concurrency Runtime]"]
@@ -98,10 +99,9 @@ Both policies produce the same sequence of events. However, the policy that uses
 
 Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `scheduling-protocol.cpp` and then run the following command in a Visual Studio Command Prompt window.
 
-**cl.exe /EHsc scheduling-protocol.cpp**
+> **cl.exe /EHsc scheduling-protocol.cpp**
 
-## See Also
+## See also
 
 [Schedule Groups](../../parallel/concrt/schedule-groups.md)<br/>
 [Asynchronous Agents](../../parallel/concrt/asynchronous-agents.md)
-

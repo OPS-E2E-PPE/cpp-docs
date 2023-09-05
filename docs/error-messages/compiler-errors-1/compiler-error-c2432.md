@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2432"
 title: "Compiler Error C2432"
 ms.date: "11/04/2016"
 f1_keywords: ["C2432"]
@@ -13,7 +14,7 @@ A 16-bit register is used as an index or base register. The compiler does not su
 
 The following sample generates C2432:
 
-```
+```cpp
 // C2432.cpp
 // processor: x86
 int main() {

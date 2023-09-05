@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Use safe_cast in C++/CLI"
 title: "How to: Use safe_cast in C++/CLI"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["safe_cast keyword [C++], upcasting"]
@@ -6,7 +7,7 @@ ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
 ---
 # How to: Use safe_cast in C++/CLI
 
-This article shows how to use safe_cast in C++/CLI applications. For information about safe_cast in C++/CX, see [safe_cast](../windows/safe-cast-cpp-component-extensions.md).
+This article shows how to use safe_cast in C++/CLI applications. For information about safe_cast in C++/CX, see [safe_cast](../extensions/safe-cast-cpp-component-extensions.md).
 
 ## Upcasting
 
@@ -61,7 +62,7 @@ in B::Test2
 
 ## Downcasting
 
-A downcast is a cast from a base class to a class that's derived from the base class.  A downcast is safe only if the object that's addressed at runtime is actually addressing a derived class object.  Unlike `static_cast`, `safe_cast` performs a dynamic check and throws <xref:System.InvalidCastException> if the conversion fails.
+A downcast is a cast from a base class to a class that's derived from the base class.  A downcast is safe only if the object that's addressed at runtime is actually addressing a derived class object.  Unlike **`static_cast`**, `safe_cast` performs a dynamic check and throws <xref:System.InvalidCastException> if the conversion fails.
 
 ```cpp
 // safe_downcast.cpp
@@ -236,7 +237,7 @@ int main() {
 
 Unboxing is defined as a compiler-injected, user-defined conversion.  Therefore, you can use `safe_cast` to unbox a value on the CLR heap.
 
-Unboxing is a user-defined conversion, but unlike boxing, unboxing must be explicit—that is, it must be performed by a `static_cast`, C-style cast, or `safe_cast`; unboxing cannot be performed implicitly.
+Unboxing is a user-defined conversion, but unlike boxing, unboxing must be explicit—that is, it must be performed by a **`static_cast`**, C-style cast, or `safe_cast`; unboxing cannot be performed implicitly.
 
 ```cpp
 // safe_cast_unboxing.cpp
@@ -322,6 +323,6 @@ int main() {
 }
 ```
 
-## See Also
+## See also
 
-[safe_cast](../windows/safe-cast-cpp-component-extensions.md)
+[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)

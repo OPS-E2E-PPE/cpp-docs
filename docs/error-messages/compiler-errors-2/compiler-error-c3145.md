@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3145"
 title: "Compiler Error C3145"
 ms.date: "11/04/2016"
 f1_keywords: ["C3145"]
@@ -13,7 +14,7 @@ You can only define CLR or WinRT objects within function scope.
 
 The following sample generates C3145 and shows how to fix it:
 
-```
+```cpp
 // C3145.cpp
 // compile with: /clr
 using namespace System;
@@ -36,7 +37,7 @@ int main() {
 
 The following sample generates C3145:
 
-```
+```cpp
 // C3145b.cpp
 // compile with: /clr
 ref class MyClass {

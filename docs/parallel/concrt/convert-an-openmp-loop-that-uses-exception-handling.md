@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Convert an OpenMP Loop that Uses Exception Handling to Use the Concurrency Runtime"
 title: "How to: Convert an OpenMP Loop that Uses Exception Handling to Use the Concurrency Runtime"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["exception handling, converting from OpenMP to the Concurrency Runtime", "converting from OpenMP to the Concurrency Runtime, exception handling"]
@@ -6,7 +7,7 @@ ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
 ---
 # How to: Convert an OpenMP Loop that Uses Exception Handling to Use the Concurrency Runtime
 
-This example demonstrates how to convert an OpenMP [parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../../parallel/openmp/reference/for-openmp.md) loop that performs exception handling to use the Concurrency Runtime exception handling mechanism.
+This example demonstrates how to convert an OpenMP [parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../openmp/reference/openmp-directives.md#for-openmp) loop that performs exception handling to use the Concurrency Runtime exception handling mechanism.
 
 In OpenMP, an exception that is thrown in a parallel region must be caught and handled in the same region by the same thread. An exception that escapes the parallel region is caught by the unhandled exception handler, which terminates the process by default.
 
@@ -48,11 +49,10 @@ For more information about `parallel_for` and other parallel algorithms, see [Pa
 
 Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `concrt-omp-exceptions.cpp` and then run the following command in a Visual Studio Command Prompt window.
 
-**cl.exe /EHsc /openmp concrt-omp-exceptions.cpp**
+> **cl.exe /EHsc /openmp concrt-omp-exceptions.cpp**
 
-## See Also
+## See also
 
 [Migrating from OpenMP to the Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Parallel Algorithms](../../parallel/concrt/parallel-algorithms.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3745"
 title: "Compiler Error C3745"
 ms.date: "11/04/2016"
 f1_keywords: ["C3745"]
@@ -13,7 +14,7 @@ Only a function defined with the [__event](../../cpp/event.md) keyword can be pa
 
 The following sample generates C3745:
 
-```
+```cpp
 // C3745.cpp
 struct E {
    __event void func();

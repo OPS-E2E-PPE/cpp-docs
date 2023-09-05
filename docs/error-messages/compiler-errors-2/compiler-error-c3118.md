@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3118"
 title: "Compiler Error C3118"
 ms.date: "11/04/2016"
 f1_keywords: ["C3118"]
@@ -11,7 +12,7 @@ ms.assetid: 40fbe681-8868-4cb2-a2b2-4db4449319a7
 
 You tried to virtually inherit from an interface. For example,
 
-```
+```cpp
 // C3118.cpp
 __interface I1 {
 };

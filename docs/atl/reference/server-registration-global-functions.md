@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Server Registration Global Functions"
 title: "Server Registration Global Functions"
 ms.date: "11/04/2016"
 f1_keywords: ["atlbase/ATL::AtlComModuleRegisterServer", "atlbase/ATL::AtlComModuleUnregisterServer", "atlbase/ATL::AtlComModuleRegisterClassObjects", "atlbase/ATL::AtlComModuleRevokeClassObjects", "atlbase/ATL::AtlComModuleGetClassObject"]
@@ -9,9 +10,9 @@ ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
 These functions provide support for registering and unregistering server objects in the object map.
 
 > [!IMPORTANT]
->  The functions listed in the following table cannot be used in applications that execute in the Windows Runtime.
+> The functions listed in the following table cannot be used in applications that execute in the Windows Runtime.
 
-|||
+|Name|Description|
 |-|-|
 |[AtlComModuleRegisterServer](#atlcommoduleregisterserver)|This function is called to register every object in the object map.|
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|This function is called to unregister every object in the object map.|
@@ -23,7 +24,7 @@ These functions provide support for registering and unregistering server objects
 
 **Header:** atlbase.h
 
-##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer
+## <a name="atlcommoduleregisterserver"></a> AtlComModuleRegisterServer
 
 This function is called to register every object in the object map.
 
@@ -55,7 +56,7 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 This function is called by [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).
 
-##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer
+## <a name="atlcommoduleunregisterserver"></a> AtlComModuleUnregisterServer
 
 This function is called to unregister every object in the object map.
 
@@ -87,7 +88,7 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 This function is called by [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).
 
-##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects
+## <a name="atlcommoduleregisterclassobjects"></a> AtlComModuleRegisterClassObjects
 
 This function is called to register class objects.
 
@@ -104,10 +105,10 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 Pointer to the COM module.
 
 *dwClsContext*<br/>
-Specifies the context in which the class object is to be run. Possible values are CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER, or CLSCTX_LOCAL_SERVER. See [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) for more details.
+Specifies the context in which the class object is to be run. Possible values are CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER, or CLSCTX_LOCAL_SERVER. See [CLSCTX](/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx) for more details.
 
 *dwFlags*<br/>
-Determines the connection types to the class object. Possible values are REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE, or REGCLS_MULTI_SEPARATE. See [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) for more details.
+Determines the connection types to the class object. Possible values are REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE, or REGCLS_MULTI_SEPARATE. See [REGCLS](/windows/win32/api/combaseapi/ne-combaseapi-regcls) for more details.
 
 ### Return Value
 
@@ -117,7 +118,7 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 This helper function is utilized by [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (obsolete in ATL 7.0) and [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).
 
-##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects
+## <a name="atlcommodulerevokeclassobjects"></a> AtlComModuleRevokeClassObjects
 
 This function is called to remove the class factory/factories from the Running Object Table.
 
@@ -138,7 +139,7 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 This helper function is utilized by [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (obsolete in ATL 7.0) and [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
 
-##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject
+## <a name="atlcommodulegetclassobject"></a> AtlComModuleGetClassObject
 
 This function is called to return the class factory.
 
@@ -172,6 +173,6 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 This helper function is utilized by [CComModule::GetClassObject](ccommodule-class.md#getclassobject) (obsolete in ATL 7.0) and [CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject).
 
-## See Also
+## See also
 
 [Functions](../../atl/reference/atl-functions.md)

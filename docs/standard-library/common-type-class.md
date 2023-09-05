@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: common_type Class"
 title: "common_type Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::common_type"]
@@ -113,4 +114,4 @@ ClassType: true
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: OLE DB Provider Templates (C++)"
 title: "OLE DB Provider Templates (C++)"
 ms.date: "10/24/2018"
 helpviewer_keywords: ["OLE DB providers [C++], about providers", "databases [C++], OLE DB templates", "OLE DB provider templates [C++], about OLE DB provider templates", "templates [C++], OLE DB"]
@@ -57,8 +58,8 @@ For more information, see:
 
 - [OLE DB Programming](../../data/oledb/ole-db-programming.md)
 
-## See Also
+## See also
 
 [Data Access](../data-access-in-cpp.md)<br/>
-[OLE DB SDK Documentation](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[OLE DB SDK Documentation](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
 [OLE DB Programmer's Reference](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>

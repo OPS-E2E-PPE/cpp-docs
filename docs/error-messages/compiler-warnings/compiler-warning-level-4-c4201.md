@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4201"
 title: "Compiler Warning (level 4) C4201"
 ms.date: "11/04/2016"
 f1_keywords: ["C4201"]
@@ -13,7 +14,7 @@ Under Microsoft extensions (/Ze), you can specify a structure without a declarat
 
 ## Example
 
-```
+```cpp
 // C4201.cpp
 // compile with: /W4
 struct S

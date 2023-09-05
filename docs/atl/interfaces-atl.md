@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Interfaces (ATL)"
 title: "Interfaces (ATL)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
@@ -14,10 +15,9 @@ Each interface is based on the fundamental COM interface, [IUnknown](../atl/iunk
 Also, each interface is given a unique interface ID (IID). This uniqueness makes it easy to support interface versioning. A new version of an interface is simply a new interface, with a new IID.
 
 > [!NOTE]
->  IIDs for the standard COM and OLE interfaces are predefined.
+> IIDs for the standard COM and OLE interfaces are predefined.
 
-## See Also
+## See also
 
 [Introduction to COM](../atl/introduction-to-com.md)<br/>
-[COM Objects and Interfaces](/windows/desktop/com/com-objects-and-interfaces)
-
+[COM Objects and Interfaces](/windows/win32/com/com-objects-and-interfaces)

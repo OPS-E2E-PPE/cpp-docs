@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2881"
 title: "Compiler Error C2881"
 ms.date: "11/04/2016"
 f1_keywords: ["C2881"]
@@ -13,7 +14,7 @@ You cannot use the same name as an alias for two namespaces.
 
 The following sample generates C2881:
 
-```
+```cpp
 // C2881.cpp
 // compile with: /c
 namespace A {

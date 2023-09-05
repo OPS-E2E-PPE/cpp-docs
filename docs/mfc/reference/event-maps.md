@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Event Maps"
 title: "Event Maps"
-ms.date: "06/20/2018"
-f1_keywords: ["vc.mfc.macros.maps"]
+ms.date: "09/07/2019"
 helpviewer_keywords: ["event maps [MFC]"]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ---
@@ -15,7 +15,7 @@ The Microsoft Foundation Class Library offers a programming model optimized for 
 
 The `EVENT_STOCK_CLICK` macro indicates that the control will fire a stock Click event every time it detects a mouse click. For a more detailed listing of other stock events, see the article [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md). Macros are also available to indicate custom events.
 
-Although event-map macros are important, you generally do not insert them directly. This is because the Properties window automatically creates event-map entries in your source files when you use it to associate event-firing functions with events. Any time you want to edit or add an event-map entry, you can use the Properties window.
+Although event-map macros are important, you generally do not insert them directly. This is because the **Properties** window (in **Class View**) automatically creates event-map entries in your source files when you use it to associate event-firing functions with events. Any time you want to edit or add an event-map entry, you can use the **Properties** window.
 
 To support event maps, MFC provides the following macros:
 
@@ -23,7 +23,7 @@ To support event maps, MFC provides the following macros:
 
 ### Event Map Declaration and Demarcation
 
-|||
+|Name|Description|
 |-|-|
 |[DECLARE_EVENT_MAP](#declare_event_map)|Declares that an event map will be used in a class to map events to event-firing functions (must be used in the class declaration).|
 |[BEGIN_EVENT_MAP](#begin_event_map)|Begins the definition of an event map (must be used in the class implementation).|
@@ -31,19 +31,19 @@ To support event maps, MFC provides the following macros:
 
 ### Event Mapping Macros
 
-|||
+|Name|Description|
 |-|-|
 |[EVENT_CUSTOM](#event_custom)|Indicates which event-firing function will fire the specified event.|
 |[EVENT_CUSTOM_ID](#event_custom_id)|Indicates which event-firing function will fire the specified event, with a designated dispatch ID.|
 
 ### Message Mapping Macros
 
-|||
+|Name|Description|
 |-|-|
 |[ON_OLEVERB](#on_oleverb)|Indicates a custom verb handled by the OLE control.|
 |[ON_STDOLEVERB](#on_stdoleverb)|Overrides a standard verb mapping of the OLE control.|
 
-##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP
+## <a name="declare_event_map"></a> DECLARE_EVENT_MAP
 
 Each `COleControl`-derived class in your program can provide an event map to specify the events your control will fire.
 
@@ -61,7 +61,7 @@ For more information on event maps, see the article [ActiveX Controls: Events](.
 
 **Header** afxctl.h
 
-## <a name="begin_event_map"></a>  BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a> BEGIN_EVENT_MAP
 
 Begins the definition of your event map.
 
@@ -87,7 +87,7 @@ For more information on event maps and the BEGIN_EVENT_MAP macro, see the articl
 
 **Header** afxctl.h
 
-##  <a name="end_event_map"></a>  END_EVENT_MAP
+## <a name="end_event_map"></a> END_EVENT_MAP
 
 Use the END_EVENT_MAP macro to end the definition of your event map.
 
@@ -99,7 +99,7 @@ END_EVENT_MAP()
 
 **Header** afxctl.h
 
-## <a name="event_custom"></a>  EVENT_CUSTOM
+## <a name="event_custom"></a> EVENT_CUSTOM
 
 Defines an event-map entry for a custom event.
 
@@ -130,14 +130,14 @@ The `VTS_` constants and their meanings are as follows:
 
 |Symbol|Parameter type|
 |------------|--------------------|
-|VTS_I2|**short**|
-|VTS_I4|**long**|
-|VTS_R4|**float**|
-|VTS_R8|**double**|
+|VTS_I2|**`short`**|
+|VTS_I4|**`long`**|
+|VTS_R4|**`float`**|
+|VTS_R8|**`double`**|
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|CURRENCY|
 |VTS_DATE|DATE|
-|VTS_BSTR|**const** __char\*__|
+|VTS_BSTR|**`const`** __char\*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|HANDLE|
@@ -165,16 +165,16 @@ The `VTS_` constants and their meanings are as follows:
 
 **Header** afxctl.h
 
-## <a name="event_custom_id"></a>  EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a> EVENT_CUSTOM_ID
 
 Defines an event firing function for a custom event belonging to the dispatch ID specified by *dispid*.
 
 ```cpp
 EVENT_CUSTOM_ID(
-  pszName,
-  dispid,
-  pfnFire,
-  vtsParams)
+    pszName,
+    dispid,
+    pfnFire,
+    vtsParams)
 ```
 
 ### Parameters
@@ -205,7 +205,7 @@ For a list of the `VTS_` constants, see [EVENT_CUSTOM](#event_custom).
 
 **Header** afxctl.h
 
-## <a name="on_oleverb"></a>  ON_OLEVERB
+## <a name="on_oleverb"></a> ON_OLEVERB
 
 This macro defines a message map entry that maps a custom verb to a specific member function of your control.
 
@@ -240,7 +240,7 @@ The values of the *lpMsg*, *hWndParent*, and *lpRect* parameters are taken from 
 
 **Header** afxole.h
 
-## <a name="on_stdoleverb"></a>  ON_STDOLEVERB
+## <a name="on_stdoleverb"></a> ON_STDOLEVERB
 
 Use this macro to override the default behavior of a standard verb.
 

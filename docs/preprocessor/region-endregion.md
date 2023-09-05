@@ -1,34 +1,33 @@
 ---
-title: "region, endregion"
-ms.date: "10/18/2018"
+description: "Learn more about the region and endregion pragma directives in Microsoft C/C++"
+title: "region and endregion pragma"
+ms.date: 01/22/2021
 f1_keywords: ["vc-pragma.endregion", "endregion_CPP", "region_CPP", "vc-pragma.region"]
-helpviewer_keywords: ["pragmas, region", "pragmas, endregion", "endregion pragma", "region pragma"]
-ms.assetid: c697f807-622f-4796-851b-68a42bbecd84
+helpviewer_keywords: ["pragma, region", "pragma, endregion", "endregion pragma", "region pragma"]
+no-loc: ["pragma"]
 ---
-# region, endregion
+# `region` and `endregion` pragma
 
-`#pragma region` lets you specify a block of code that you can expand or collapse when using the [outlining feature](/visualstudio/ide/outlining) of the Visual Studio Code Editor.
+`#pragma region` lets you specify a block of code that you can expand or collapse when using the [outlining feature](/visualstudio/ide/outlining) of the Visual Studio editor.
 
 ## Syntax
 
-```
-#pragma region name
-#pragma endregion comment
-```
+> **`#pragma region`** *name*\
+> **`#pragma endregion`** *comment*
 
 ### Parameters
 
-*comment*<br/>
-(Optional) A comment that will display in the code editor.
+*comment*\
+(Optional) A comment to display in the code editor.
 
-*name*<br/>
-(Optional) The name of the region.  This name will display in the code editor.
+*name*\
+(Optional) The name of the region. This name displays in the code editor.
 
 ## Remarks
 
 `#pragma endregion` marks the end of a `#pragma region` block.
 
-A `#region` block must be terminated with `#pragma endregion`.
+A `#pragma region` block must be terminated by a `#pragma endregion` directive.
 
 ## Example
 
@@ -43,6 +42,6 @@ void Test3() {}
 int main() {}
 ```
 
-## See Also
+## See also
 
-[Pragma Directives and the __Pragma Keyword](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma directives and the `__pragma` and `_Pragma` keywords](./pragma-directives-and-the-pragma-keyword.md)

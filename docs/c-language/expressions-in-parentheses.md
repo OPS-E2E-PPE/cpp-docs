@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Expressions in Parentheses"
 title: "Expressions in Parentheses"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["parentheses", "expression evaluation, evaluation order", "expressions [C++], evaluating", "parentheses, expressions"]
@@ -29,6 +30,6 @@ The compiler is free to evaluate the two sides of the multiplication in any orde
 
 Exceptions resulting from side effects are discussed in [Side Effects](../c-language/side-effects.md).
 
-## See Also
+## See also
 
 [C Primary Expressions](../c-language/c-primary-expressions.md)

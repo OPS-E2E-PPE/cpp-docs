@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CRgn Class"
 title: "CRgn Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CRgn", "AFXWIN/CRgn", "AFXWIN/CRgn::CRgn", "AFXWIN/CRgn::CombineRgn", "AFXWIN/CRgn::CopyRgn", "AFXWIN/CRgn::CreateEllipticRgn", "AFXWIN/CRgn::CreateEllipticRgnIndirect", "AFXWIN/CRgn::CreateFromData", "AFXWIN/CRgn::CreateFromPath", "AFXWIN/CRgn::CreatePolygonRgn", "AFXWIN/CRgn::CreatePolyPolygonRgn", "AFXWIN/CRgn::CreateRectRgn", "AFXWIN/CRgn::CreateRectRgnIndirect", "AFXWIN/CRgn::CreateRoundRectRgn", "AFXWIN/CRgn::EqualRgn", "AFXWIN/CRgn::FromHandle", "AFXWIN/CRgn::GetRegionData", "AFXWIN/CRgn::GetRgnBox", "AFXWIN/CRgn::OffsetRgn", "AFXWIN/CRgn::PtInRegion", "AFXWIN/CRgn::RectInRegion", "AFXWIN/CRgn::SetRectRgn"]
@@ -30,13 +31,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Sets a `CRgn` object so that it is equivalent to the union of two specified `CRgn` objects.|
 |[CRgn::CopyRgn](#copyrgn)|Sets a `CRgn` object so that it is a copy of a specified `CRgn` object.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Initializes a `CRgn` object with an elliptical region.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initializes a `CRgn` object with an elliptical region defined by a [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initializes a `CRgn` object with an elliptical region defined by a [RECT](/windows/win32/api/windef/ns-windef-rect) structure.|
 |[CRgn::CreateFromData](#createfromdata)|Creates a region from the given region and transformation data.|
 |[CRgn::CreateFromPath](#createfrompath)|Creates a region from the path that is selected into the given device context.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Initializes a `CRgn` object with a polygonal region. The system closes the polygon automatically, if necessary, by drawing a line from the last vertex to the first.|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Initializes a `CRgn` object with a region consisting of a series of closed polygons. The polygons may be disjoint, or they may overlap.|
 |[CRgn::CreateRectRgn](#createrectrgn)|Initializes a `CRgn` object with a rectangular region.|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initializes a `CRgn` object with a rectangular region defined by a [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure.|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initializes a `CRgn` object with a rectangular region defined by a [RECT](/windows/win32/api/windef/ns-windef-rect)tructure.|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Initializes a `CRgn` object with a rectangular region with rounded corners.|
 |[CRgn::EqualRgn](#equalrgn)|Checks two `CRgn` objects to determine whether they are equivalent.|
 |[CRgn::FromHandle](#fromhandle)|Returns a pointer to a `CRgn` object when given a handle to a Windows region.|
@@ -73,7 +74,7 @@ For more information on using `CRgn`, see [Graphic Objects](../../mfc/graphic-ob
 
 **Header:** afxwin.h
 
-##  <a name="combinergn"></a>  CRgn::CombineRgn
+## <a name="combinergn"></a> CRgn::CombineRgn
 
 Creates a new GDI region by combining two existing regions.
 
@@ -131,7 +132,7 @@ Use [CopyRgn](#copyrgn) to simply copy one region into another region.
 
 [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]
 
-##  <a name="copyrgn"></a>  CRgn::CopyRgn
+## <a name="copyrgn"></a> CRgn::CopyRgn
 
 Copies the region defined by *pRgnSrc* into the `CRgn` object.
 
@@ -164,7 +165,7 @@ The new region replaces the region formerly stored in the `CRgn` object. This fu
 
   See the example for [CRgn::CreateEllipticRgn](#createellipticrgn).
 
-##  <a name="createellipticrgn"></a>  CRgn::CreateEllipticRgn
+## <a name="createellipticrgn"></a> CRgn::CreateEllipticRgn
 
 Creates an elliptical region.
 
@@ -206,7 +207,7 @@ When it has finished using a region created with the `CreateEllipticRgn` functio
 
 [!code-cpp[NVC_MFCDocView#145](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]
 
-##  <a name="createellipticrgnindirect"></a>  CRgn::CreateEllipticRgnIndirect
+## <a name="createellipticrgnindirect"></a> CRgn::CreateEllipticRgnIndirect
 
 Creates an elliptical region.
 
@@ -235,7 +236,7 @@ When it has finished using a region created with the `CreateEllipticRgnIndirect`
 
   See the example for [CRgn::CreateRectRgnIndirect](#createrectrgnindirect).
 
-##  <a name="createfromdata"></a>  CRgn::CreateFromData
+## <a name="createfromdata"></a> CRgn::CreateFromData
 
 Creates a region from the given region and transformation data.
 
@@ -249,13 +250,13 @@ BOOL CreateFromData(
 ### Parameters
 
 *lpXForm*<br/>
-Points to an [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) data structure that defines the transformation to be performed on the region. If this pointer is NULL, the identity transformation is used.
+Points to an [XFORM](/windows/win32/api/wingdi/ns-wingdi-xform)ata structure that defines the transformation to be performed on the region. If this pointer is NULL, the identity transformation is used.
 
 *nCount*<br/>
 Specifies the number of bytes pointed to by *pRgnData*.
 
 *pRgnData*<br/>
-Points to a [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) data structure that contains the region data.
+Points to a [RGNDATA](/windows/win32/api/wingdi/ns-wingdi-rgndata) data structure that contains the region data.
 
 ### Return Value
 
@@ -265,7 +266,7 @@ Nonzero if the function is successful; otherwise 0.
 
 An application can retrieve data for a region by calling the `CRgn::GetRegionData` function.
 
-##  <a name="createfrompath"></a>  CRgn::CreateFromPath
+## <a name="createfrompath"></a> CRgn::CreateFromPath
 
 Creates a region from the path that is selected into the given device context.
 
@@ -286,7 +287,7 @@ Nonzero if the function is successful; otherwise 0.
 
 The device context identified by the *pDC* parameter must contain a closed path. After `CreateFromPath` converts a path into a region, Windows discards the closed path from the device context.
 
-##  <a name="createpolygonrgn"></a>  CRgn::CreatePolygonRgn
+## <a name="createpolygonrgn"></a> CRgn::CreatePolygonRgn
 
 Creates a polygonal region.
 
@@ -335,7 +336,7 @@ When an application has finished using a region created with the `CreatePolygonR
 
 [!code-cpp[NVC_MFCDocView#146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]
 
-##  <a name="createpolypolygonrgn"></a>  CRgn::CreatePolyPolygonRgn
+## <a name="createpolypolygonrgn"></a> CRgn::CreatePolyPolygonRgn
 
 Creates a region consisting of a series of closed polygons.
 
@@ -386,7 +387,7 @@ When the polygon-filling mode is WINDING, the system uses the direction in which
 
 When an application has finished using a region created with the `CreatePolyPolygonRgn` function, it should select the region out of the device context and use the [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function to remove it.
 
-##  <a name="createrectrgn"></a>  CRgn::CreateRectRgn
+## <a name="createrectrgn"></a> CRgn::CreateRectRgn
 
 Creates a rectangular region that is stored in the `CRgn` object.
 
@@ -428,7 +429,7 @@ When it has finished using a region created by `CreateRectRgn`, an application s
 
 For an additional example, see [CRgn::CombineRgn](#combinergn).
 
-##  <a name="createrectrgnindirect"></a>  CRgn::CreateRectRgnIndirect
+## <a name="createrectrgnindirect"></a> CRgn::CreateRectRgnIndirect
 
 Creates a rectangular region that is stored in the `CRgn` object.
 
@@ -464,7 +465,7 @@ When it has finished using a region created by `CreateRectRgnIndirect`, an appli
 
 [!code-cpp[NVC_MFCDocView#148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]
 
-##  <a name="createroundrectrgn"></a>  CRgn::CreateRoundRectRgn
+## <a name="createroundrectrgn"></a> CRgn::CreateRoundRectRgn
 
 Creates a rectangular region with rounded corners that is stored in the `CRgn` object.
 
@@ -512,7 +513,7 @@ When an application has finished using a region created with the `CreateRoundRec
 
 [!code-cpp[NVC_MFCDocView#149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]
 
-##  <a name="crgn"></a>  CRgn::CRgn
+## <a name="crgn"></a> CRgn::CRgn
 
 Constructs a `CRgn` object.
 
@@ -528,7 +529,7 @@ The `m_hObject` data member does not contain a valid Windows GDI region until th
 
   See the example for [CRgn::CreateRoundRectRgn](#createroundrectrgn).
 
-##  <a name="equalrgn"></a>  CRgn::EqualRgn
+## <a name="equalrgn"></a> CRgn::EqualRgn
 
 Determines whether the given region is equivalent to the region stored in the `CRgn` object.
 
@@ -549,7 +550,7 @@ Nonzero if the two regions are equivalent; otherwise 0.
 
 [!code-cpp[NVC_MFCDocView#150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]
 
-##  <a name="fromhandle"></a>  CRgn::FromHandle
+## <a name="fromhandle"></a> CRgn::FromHandle
 
 Returns a pointer to a `CRgn` object when given a handle to a Windows region.
 
@@ -570,7 +571,7 @@ A pointer to a `CRgn` object. If the function was not successful, the return val
 
 If a `CRgn` object is not already attached to the handle, a temporary `CRgn` object is created and attached. This temporary `CRgn` object is valid only until the next time the application has idle time in its event loop, at which time all temporary graphic objects are deleted. Another way of saying this is that the temporary object is only valid during the processing of one window message.
 
-##  <a name="getregiondata"></a>  CRgn::GetRegionData
+## <a name="getregiondata"></a> CRgn::GetRegionData
 
 Fills the specified buffer with data describing the region.
 
@@ -583,7 +584,7 @@ int GetRegionData(
 ### Parameters
 
 *lpRgnData*<br/>
-Points to a [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) data structure that receives the information. If this parameter is NULL, the return value contains the number of bytes needed for the region data.
+Points to a [RGNDATA](/windows/win32/api/wingdi/ns-wingdi-rgndata) data structure that receives the information. If this parameter is NULL, the return value contains the number of bytes needed for the region data.
 
 *nCount*<br/>
 Specifies the size, in bytes, of the *lpRgnData* buffer.
@@ -596,7 +597,7 @@ If the function succeeds and *nCount* specifies an adequate number of bytes, the
 
 This data includes the dimensions of the rectangles that make up the region. This function is used in conjunction with the `CRgn::CreateFromData` function.
 
-##  <a name="getrgnbox"></a>  CRgn::GetRgnBox
+## <a name="getrgnbox"></a> CRgn::GetRgnBox
 
 Retrieves the coordinates of the bounding rectangle of the `CRgn` object.
 
@@ -637,7 +638,7 @@ Specifies the region's type. It can be any of the following values:
 
   See the example for [CRgn::CreatePolygonRgn](#createpolygonrgn).
 
-##  <a name="offsetrgn"></a>  CRgn::OffsetRgn
+## <a name="offsetrgn"></a> CRgn::OffsetRgn
 
 Moves the region stored in the `CRgn` object by the specified offsets.
 
@@ -682,7 +683,7 @@ The coordinate values of a region must be less than or equal to 32,767 and great
 
   See the example for [CRgn::CreateEllipticRgn](#createellipticrgn).
 
-##  <a name="operator_hrgn"></a>  CRgn::operator HRGN
+## <a name="operator_hrgn"></a> CRgn::operator HRGN
 
 Use this operator to get the attached Windows GDI handle of the `CRgn` object.
 
@@ -698,9 +699,9 @@ If successful, a handle to the Windows GDI object represented by the `CRgn` obje
 
 This operator is a casting operator, which supports direct use of an HRGN object.
 
-For more information about using graphic objects, see the article [Graphic Objects](/windows/desktop/gdi/graphic-objects) in the Windows SDK.
+For more information about using graphic objects, see the article [Graphic Objects](/windows/win32/gdi/graphic-objects) in the Windows SDK.
 
-##  <a name="ptinregion"></a>  CRgn::PtInRegion
+## <a name="ptinregion"></a> CRgn::PtInRegion
 
 Checks whether the point given by *x* and *y* is in the region stored in the `CRgn` object.
 
@@ -727,7 +728,7 @@ The x- and y-coordinates of *point* specify the x- and y-coordinates of the poin
 
 Nonzero if the point is in the region; otherwise 0.
 
-##  <a name="rectinregion"></a>  CRgn::RectInRegion
+## <a name="rectinregion"></a> CRgn::RectInRegion
 
 Determines whether any part of the rectangle specified by *lpRect* is within the boundaries of the region stored in the `CRgn` object.
 
@@ -753,11 +754,11 @@ typedef struct tagRECT {
 
 Nonzero if any part of the specified rectangle lies within the boundaries of the region; otherwise 0.
 
-##  <a name="setrectrgn"></a>  CRgn::SetRectRgn
+## <a name="setrectrgn"></a> CRgn::SetRectRgn
 
 Creates a rectangular region.
 
-```
+```cpp
 void SetRectRgn(
     int x1,
     int y1,
@@ -790,8 +791,7 @@ Unlike [CreateRectRgn](#createrectrgn), however, it does not allocate any additi
 
 Use this function instead of the `CreateRectRgn` member function to avoid calls to the local memory manager.
 
-## See Also
+## See also
 
 [CWnd Class](../../mfc/reference/cwnd-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

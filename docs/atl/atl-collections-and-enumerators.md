@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ATL Collections and Enumerators"
 title: "ATL Collections and Enumerators"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["enumerator interfaces", "collections, ATL classes", "enumerators, ATL classes", "collection interfaces"]
@@ -12,7 +13,7 @@ At a minimum, collection interfaces must provide a `Count` property that returns
 
 An `enumerator` is a COM object that provides an interface for iterating through items in a collection. Enumerator interfaces provide serial access to the elements of a collection via four required methods: `Next`, `Skip`, `Reset`, and `Clone`.
 
-You can learn more about enumerator interfaces by reading reference content such as [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) interface.
+You can learn more about enumerator interfaces by reading reference content such as [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) interface.
 
 ## In This Section
 
@@ -30,10 +31,9 @@ An extended example that walks you through the implementation of a C++ Standard 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Provides links to conceptual topics on how to program using the Active Template Library.
 
-[ATLCollections Sample](../visual-cpp-samples.md)<br/>
+[ATLCollections Sample](../overview/visual-cpp-samples.md)<br/>
 A sample that demonstrates the use of `ICollectionOnSTLImpl` and `CComEnumOnSTL`, and the implementation of custom copy policy classes.
 
-## See Also
+## See also
 
 [Concepts](../atl/active-template-library-atl-concepts.md)
-

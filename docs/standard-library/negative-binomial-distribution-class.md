@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: negative_binomial_distribution Class"
 title: "negative_binomial_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::negative_binomial_distribution", "random/std::negative_binomial_distribution::reset", "random/std::negative_binomial_distribution::k", "random/std::negative_binomial_distribution::p", "random/std::negative_binomial_distribution::param", "random/std::negative_binomial_distribution::min", "random/std::negative_binomial_distribution::max", "random/std::negative_binomial_distribution::operator()", "random/std::negative_binomial_distribution::param_type", "random/std::negative_binomial_distribution::param_type::k", "random/std::negative_binomial_distribution::param_type::p", "random/std::negative_binomial_distribution::param_type::operator==", "random/std::negative_binomial_distribution::param_type::operator!="]
@@ -43,17 +44,15 @@ public:
 
 ### Parameters
 
-*IntType*<br/>
-The integer result type, defaults to **int**. For possible types, see [\<random>](../standard-library/random.md).
+*IntType*\
+The integer result type, defaults to **`int`**. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes a distribution that produces values of a user-specified integral type, or type **int** if none is provided, distributed according to the Negative Binomial Distribution discrete probability function. The following table links to articles about individual members.
+The class template describes a distribution that produces values of a user-specified integral type, or type **`int`** if none is provided, distributed according to the Negative Binomial Distribution discrete probability function. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
-|`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
+[negative_binomial_distribution](#negative_binomial_distribution)\
+[param_type](#param_type)
 
 The property members `k()` and `p()` return the currently stored distribution parameter values *k* and *p* respectively.
 
@@ -67,7 +66,7 @@ The `operator()` member functions return the next generated value based on the U
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the negative binomial distribution discrete probability function, see the Wolfram MathWorld article [Negative Binomial Distribution](http://go.microsoft.com/fwlink/p/?linkid=400516).
+For detailed information about the negative binomial distribution discrete probability function, see the Wolfram MathWorld article [Negative Binomial Distribution](https://go.microsoft.com/fwlink/p/?linkid=400516).
 
 ## Example
 
@@ -193,7 +192,7 @@ Histogram for 100 samples:
 
 **Namespace:** std
 
-## <a name="negative_binomial_distribution"></a>  negative_binomial_distribution::negative_binomial_distribution
+## <a name="negative_binomial_distribution"></a> negative_binomial_distribution::negative_binomial_distribution
 
 Constructs the distribution.
 
@@ -204,13 +203,13 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### Parameters
 
-*k*<br/>
+*k*\
 The `k` distribution parameter.
 
-*p*<br/>
+*p*\
 The `p` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The parameter structure used to construct the distribution.
 
 ### Remarks
@@ -221,7 +220,7 @@ The first constructor constructs an object whose stored `p` value holds the valu
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  negative_binomial_distribution::param_type
+## <a name="param_type"></a> negative_binomial_distribution::param_type
 
 Stores the parameters of the distribution.
 
@@ -237,13 +236,13 @@ struct param_type {
 
 ### Parameters
 
-*k*<br/>
+*k*\
 The `k` distribution parameter.
 
-*p*<br/>
+*p*\
 The `p` distribution parameter.
 
-*right*<br/>
+*right*\
 The `param_type` structure used to compare.
 
 ### Remarks
@@ -254,4 +253,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

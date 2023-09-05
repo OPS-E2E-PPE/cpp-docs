@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Testing the ATL DHTML Control"
 title: "Testing the ATL DHTML Control"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["HTML controls, testing", "testing controls", "DHTML controls", "DHTML controls, testing"]
@@ -26,6 +27,6 @@ Once you have created your project, you can build and test the sample control. B
 
 Next, try [modifying the DHTML control](../atl/modifying-the-atl-dhtml-control.md).
 
-## See Also
+## See also
 
 [Support for DHTML Control](../atl/atl-support-for-dhtml-controls.md)

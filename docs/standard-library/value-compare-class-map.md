@@ -1,11 +1,12 @@
 ---
-title: "value_compare Class (&lt;map&gt;)"
+description: "Learn more about: value_compare Class (<map>)"
+title: "value_compare Class (<map>)"
 ms.date: "11/04/2016"
-f1_keywords: ["std::value_compare", "std.value_compare", "map/std::value_compare", "value_compare"]
+f1_keywords: ["std::value_compare", "std.value_compare", "map/std::value_compare"]
 helpviewer_keywords: ["std::value_compare"]
 ms.assetid: ea97c1d0-04b2-4d42-8d96-23522c04cc41
 ---
-# value_compare Class (&lt;map&gt;)
+# `value_compare` Class (`<map>`)
 
 Provides a function object that can compare the elements of a map by comparing the values of their keys to determine their relative order in the map.
 
@@ -40,6 +41,6 @@ See example for [value_comp](../standard-library/map-class.md#value_comp) for an
 
 ## See also
 
-[binary_function Struct](../standard-library/binary-function-struct.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[binary_function Struct](../standard-library/binary-function-struct.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

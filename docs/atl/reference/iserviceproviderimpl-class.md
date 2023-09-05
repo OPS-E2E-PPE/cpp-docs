@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IServiceProviderImpl Class"
 title: "IServiceProviderImpl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["IServiceProviderImpl", "ATLCOM/ATL::IServiceProviderImpl", "ATLCOM/ATL::IServiceProviderImpl::QueryService"]
@@ -49,7 +50,7 @@ The service map contains two entries: [SERVICE_ENTRY](service-map-macros.md#serv
 
 **Header:** atlcom.h
 
-##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService
+## <a name="queryservice"></a> IServiceProviderImpl::QueryService
 
 Creates or accesses the specified service and returns an interface pointer to the specified interface for the service.
 
@@ -99,6 +100,6 @@ The object that implements the interface might also implement interfaces that ar
 
 Two different services, such as SID_SMyService and SID_SYourService, can both specify the use of the same interface, even though the implementation of the interface might have nothing in common between the two services. This works, because a call to `QueryService` (SID_SMyService, IID_IDispatch) can return a different object than `QueryService` (SID_SYourService, IID_IDispatch). Object identity is not assumed when you specify a different service identifier.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

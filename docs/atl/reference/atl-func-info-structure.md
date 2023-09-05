@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: _ATL_FUNC_INFO Structure"
 title: "_ATL_FUNC_INFO Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["_ATL_FUNC_INFO", "ATL::_ATL_FUNC_INFO", "ATL._ATL_FUNC_INFO"]
@@ -11,7 +12,7 @@ Contains type information used to describe a method or property on a dispinterfa
 
 ## Syntax
 
-```
+```cpp
 struct _ATL_FUNC_INFO {
     CALLCONV cc;
     VARTYPE vtReturn;
@@ -52,9 +53,8 @@ you would define an `_ATL_FUNC_INFO` structure:
 
 Header: atlcom.h
 
-## See Also
+## See also
 
 [Classes and structs](../../atl/reference/atl-classes.md)<br/>
 [IDispEventSimpleImpl Class](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
 [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
-

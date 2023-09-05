@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CSimpleMapEqualHelper Class"
 title: "CSimpleMapEqualHelper Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CSimpleMapEqualHelper", "ATLSIMPCOLL/ATL::CSimpleMapEqualHelper", "ATLSIMPCOLL/ATL::CSimpleMapEqualHelper::IsEqualKey", "ATLSIMPCOLL/ATL::CSimpleMapEqualHelper::IsEqualValue"]
@@ -41,7 +42,7 @@ This traits class is a supplement to the `CSimpleMap` class. It provides methods
 
 **Header:** atlsimpcoll.h
 
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey
+## <a name="isequalkey"></a> CSimpleMapEqualHelper::IsEqualKey
 
 Tests two keys for equality.
 
@@ -61,7 +62,7 @@ The second key.
 
 Returns true if the keys are equal, false otherwise.
 
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue
+## <a name="isequalvalue"></a> CSimpleMapEqualHelper::IsEqualValue
 
 Tests two values for equality.
 
@@ -81,7 +82,7 @@ The second value.
 
 Returns true if the values are equal, false otherwise.
 
-## See Also
+## See also
 
 [CSimpleMapEqualHelperFalse Class](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

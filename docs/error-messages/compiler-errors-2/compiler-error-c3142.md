@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3142"
 title: "Compiler Error C3142"
 ms.date: "11/04/2016"
 f1_keywords: ["C3142"]
@@ -13,7 +14,7 @@ The address of a property is not available to the developer.
 
 The following sample generates C3142:
 
-```
+```cpp
 // C3142_2.cpp
 // compile with: /clr
 using namespace System;

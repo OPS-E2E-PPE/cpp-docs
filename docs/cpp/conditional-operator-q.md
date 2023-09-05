@@ -1,11 +1,12 @@
 ---
-title: "Conditional Operator: ? :"
+description: "Learn more about: Conditional Operator: ?:"
+title: "Conditional Operator: ?:"
 ms.date: "11/04/2016"
 f1_keywords: ["?:", "?"]
 helpviewer_keywords: ["conditional operators [C++]", "? : operator"]
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
 ---
-# Conditional Operator: ? :
+# Conditional Operator: `?:`
 
 ## Syntax
 
@@ -17,11 +18,11 @@ expression ? expression : expression
 
 The conditional operator (**? :**) is a ternary operator (it takes three operands). The conditional operator works as follows:
 
-- The first operand is implicitly converted to **bool**. It is evaluated and all side effects are completed before continuing.
+- The first operand is implicitly converted to **`bool`**. It is evaluated and all side effects are completed before continuing.
 
-- If the first operand evaluates to **true** (1), the second operand is evaluated.
+- If the first operand evaluates to **`true`** (1), the second operand is evaluated.
 
-- If the first operand evaluates to **false** (0), the third operand is evaluated.
+- If the first operand evaluates to **`false`** (0), the third operand is evaluated.
 
 The result of the conditional operator is the result of whichever operand is evaluated — the second or the third. Only one of the last two operands is evaluated in a conditional expression.
 
@@ -44,7 +45,7 @@ Conditional expressions have right-to-left associativity. The first operand must
 Any combinations of second and third operands not in the preceding list are illegal. The type of the result is the common type, and it is an l-value if both the second and third operands are of the same type and both are l-values.
 
 > [!WARNING]
->  If the types of the second and third operands are not identical, then complex type conversion rules, as specified in the C++ Standard, are invoked. These conversions may lead to unexpected behavior including construction and destruction of temporary objects. For this reason, we strongly advise you to either (1) avoid using user-defined types as operands with the conditional operator or (2) if you do use user-defined types, then explicitly cast each operand to a common type.
+> If the types of the second and third operands are not identical, then complex type conversion rules, as specified in the C++ Standard, are invoked. These conversions may lead to unexpected behavior including construction and destruction of temporary objects. For this reason, we strongly advise you to either (1) avoid using user-defined types as operands with the conditional operator or (2) if you do use user-defined types, then explicitly cast each operand to a common type.
 
 ## Example
 

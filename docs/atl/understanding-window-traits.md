@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Understanding Window Traits"
 title: "ATL Window Traits"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["window traits"]
@@ -29,7 +30,6 @@ In the unlikely situation that specializing one of the templates provided by ATL
 
 Each of these functions will be passed some style value at run time which it can use to produce a new style value. If your window traits class is being used as the template argument to an ATL window class, the style values passed to these static functions will be whatever was passed as the style arguments to [Create](../atl/reference/cwindowimpl-class.md#create).
 
-## See Also
+## See also
 
 [Window Classes](../atl/atl-window-classes.md)
-

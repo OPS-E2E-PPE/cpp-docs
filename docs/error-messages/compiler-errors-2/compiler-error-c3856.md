@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3856"
 title: "Compiler Error C3856"
 ms.date: "11/04/2016"
 f1_keywords: ["C3856"]
@@ -13,7 +14,7 @@ The most common cause for this error is when there are more generic or template 
 
 The following sample generates C3856:
 
-```
+```cpp
 // C3856.cpp
 template <class T>
 struct S {
@@ -30,7 +31,7 @@ struct S<T>::S1{};
 
 Possible resolution:
 
-```
+```cpp
 // C3856b.cpp
 // compile with: /c
 template <class T>
@@ -47,7 +48,7 @@ struct S<T>::S1{};
 
 C3856 can also occur when using generics:
 
-```
+```cpp
 // C3856c.cpp
 // compile with: /clr
 generic <class T>
@@ -64,7 +65,7 @@ ref struct GS<T>::GS2 {};   // C3856
 
 Possible resolution:
 
-```
+```cpp
 // C3856d.cpp
 // compile with: /clr /c
 generic <class T>

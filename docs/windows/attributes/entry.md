@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: entry"
 title: "entry (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.entry"]
@@ -22,7 +23,7 @@ The ID of the entry point.
 
 ## Remarks
 
-The **entry** C++ attribute has the same functionality as the [entry](/windows/desktop/Midl/entry) MIDL attribute.
+The **entry** C++ attribute has the same functionality as the [entry](/windows/win32/Midl/entry) MIDL attribute.
 
 ## Example
 
@@ -30,9 +31,7 @@ See the example for [idl_module](idl-module.md) for an example use of **entry**.
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|`idl_module` attribute|
 |**Repeatable**|No|
@@ -41,6 +40,6 @@ See the example for [idl_module](idl-module.md) for an example use of **entry**.
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)

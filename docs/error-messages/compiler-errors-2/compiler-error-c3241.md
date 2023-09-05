@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3241"
 title: "Compiler Error C3241"
 ms.date: "11/04/2016"
 f1_keywords: ["C3241"]
@@ -13,7 +14,7 @@ When you explicitly override a function, the function signature must exactly mat
 
 The following sample generates C3241:
 
-```
+```cpp
 // C3241.cpp
 #pragma warning(disable:4199)
 

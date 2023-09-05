@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2193"
 title: "Compiler Error C2193"
 ms.date: "11/04/2016"
 f1_keywords: ["C2193"]
@@ -13,7 +14,7 @@ A function was placed in two different segments using `alloc_text` and `code_seg
 
 The following sample generates C2193:
 
-```
+```cpp
 // C2193.cpp
 // compile with: /c
 extern "C" void MYFUNCTION();

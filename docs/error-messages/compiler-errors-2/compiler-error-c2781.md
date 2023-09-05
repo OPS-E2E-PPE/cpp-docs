@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2781"
 title: "Compiler Error C2781"
 ms.date: "11/04/2016"
 f1_keywords: ["C2781"]
@@ -13,7 +14,7 @@ A function template with a variable parameter list has too few arguments.
 
 The following sample generates C2781:
 
-```
+```cpp
 // C2781.cpp
 template<typename T>
 void f(T, T, ...){}

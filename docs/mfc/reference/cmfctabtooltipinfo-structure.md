@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCTabToolTipInfo Structure"
 title: "CMFCTabToolTipInfo Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCTabToolTipInfo"]
@@ -31,7 +32,7 @@ A pointer to a `CMFCTabToolTipInfo` structure is passed as a parameter of the AF
 
 ## Example
 
-The following example shows how `CMFCTabToolTipInfo` is used in the [MDITabsDemo Sample: MFC Tabbed MDI Application](../../visual-cpp-samples.md).
+The following example shows how `CMFCTabToolTipInfo` is used in the [MDITabsDemo Sample: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -43,7 +44,7 @@ The following example shows how `CMFCTabToolTipInfo` is used in the [MDITabsDemo
 
 **Header:** afxbasetabctrl.h
 
-##  <a name="m_ntabindex"></a>  CMFCTabToolTipInfo::m_nTabIndex
+## <a name="m_ntabindex"></a> CMFCTabToolTipInfo::m_nTabIndex
 
 Specifies the index of the tab control.
 
@@ -57,11 +58,11 @@ Index of the tab over which the user is hovering.
 
 ### Example
 
-The following example shows how `m_nTabIndex` is used in the [MDITabsDemo Sample: MFC Tabbed MDI Application](../../visual-cpp-samples.md).
+The following example shows how `m_nTabIndex` is used in the [MDITabsDemo Sample: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-##  <a name="m_ptabwnd"></a>  CMFCTabToolTipInfo::m_pTabWnd
+## <a name="m_ptabwnd"></a> CMFCTabToolTipInfo::m_pTabWnd
 
 A pointer to the tab control.
 
@@ -71,11 +72,11 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### Example
 
-The following example shows how `m_pTabWnd` is used in the [MDITabsDemo Sample: MFC Tabbed MDI Application](../../visual-cpp-samples.md).
+The following example shows how `m_pTabWnd` is used in the [MDITabsDemo Sample: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-##  <a name="m_strtext"></a>  CMFCTabToolTipInfo::m_strText
+## <a name="m_strtext"></a> CMFCTabToolTipInfo::m_strText
 
 The tooltip text.
 
@@ -89,11 +90,11 @@ If the string is empty, the tooltip is not displayed.
 
 ### Example
 
-The following example shows how `m_strText` is used in the [MDITabsDemo Sample: MFC Tabbed MDI Application](../../visual-cpp-samples.md).
+The following example shows how `m_strText` is used in the [MDITabsDemo Sample: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Adding a Property to the Control (ATL Tutorial, Part 3)"
 title: "Adding a Property to the Control (ATL Tutorial, Part 3)"
 ms.custom: "get-started-article"
 ms.date: "09/26/2018"
@@ -18,7 +19,7 @@ ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
 
 1. Type `Sides` as the **Property Name**.
 
-1. In the drop-down list of **Property Type**, select `short`.
+1. In the drop-down list of **Property Type**, select **`short`**.
 
 1. Click **OK** to finish adding the property.
 
@@ -26,14 +27,14 @@ ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
 
     ```cpp
     short get_Sides();
-	void set_Sides(short value);
+    void set_Sides(short value);
     ```
 
     with
 
     ```cpp
     [propget, id(1), helpstring("property Sides")] HRESULT Sides([out, retval] short *pVal);
-	[propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
+    [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
     ```
 
 1. From **Solution Explorer**, open PolyCtl.h and add the following lines after the definition of `m_clrFillColor`:
@@ -56,8 +57,8 @@ The `get_Sides` method returns the current value of the `Sides` property through
 
 You now have a property called `Sides`. In the next step, you will change the drawing code to use it.
 
-[Back to Step 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [On to Step 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
+[Back to Step 2](../atl/adding-a-control-atl-tutorial-part-2.md) \| [On to Step 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
 
-## See Also
+## See also
 
 [Tutorial](../atl/active-template-library-atl-tutorial.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2838"
 title: "Compiler Error C2838"
 ms.date: "11/04/2016"
 f1_keywords: ["C2838"]
@@ -13,7 +14,7 @@ A class, structure, or union uses a fully qualified name to redeclare a member o
 
 The following sample generates C2838:
 
-```
+```cpp
 // C2838.cpp
 // compile with: /c
 class Bellini {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Converting Multibyte Characters"
 title: "Converting Multibyte Characters"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["multibyte characters, converting"]
@@ -10,6 +11,6 @@ ms.assetid: bbee7586-6a60-4168-bb98-0d1c8aa823a1
 
 The current locale is the "C" locale by default. It can be changed with the [#pragma setlocale](../preprocessor/setlocale.md).
 
-## See Also
+## See also
 
 [Characters](../c-language/characters.md)

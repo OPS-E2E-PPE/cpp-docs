@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: max_none Class"
 title: "max_none Class"
 ms.date: "11/04/2016"
 f1_keywords: ["allocators/stdext::max_none", "allocators/stdext::max_none::allocated", "allocators/stdext::max_none::deallocated", "allocators/stdext::max_none::full", "allocators/stdext::max_none::released", "allocators/stdext::max_none::saved"]
@@ -18,9 +19,8 @@ class max_none
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*Max*|The max class that determines the maximum number of elements to store in the `freelist`.|
+*Max*\
+The max class that determines the maximum number of elements to store in the `freelist`.
 
 ### Member functions
 
@@ -38,7 +38,7 @@ class max_none
 
 **Namespace:** stdext
 
-## <a name="allocated"></a>  max_none::allocated
+## <a name="allocated"></a> max_none::allocated
 
 Increments the count of allocated memory blocks.
 
@@ -48,15 +48,14 @@ void allocated(std::size_t _Nx = 1);
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*_Nx*|The increment value.|
+*_Nx*\
+The increment value.
 
 ### Remarks
 
-This member function does nothing. It is called after each successful call by `cache_freelist::allocate` to operator **new**. The argument *_Nx* is the number of memory blocks in the chunk allocated by operator **new**.
+This member function does nothing. It is called after each successful call by `cache_freelist::allocate` to operator **`new`**. The argument *_Nx* is the number of memory blocks in the chunk allocated by operator **`new`**.
 
-## <a name="deallocated"></a>  max_none::deallocated
+## <a name="deallocated"></a> max_none::deallocated
 
 Decrements the count of allocated memory blocks.
 
@@ -66,15 +65,14 @@ void deallocated(std::size_t _Nx = 1);
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*_Nx*|The increment value.|
+*_Nx*\
+The increment value.
 
 ### Remarks
 
-The member function does nothing. This member function is called after each call by `cache_freelist::deallocate` to operator **delete**. The argument *_Nx* is the number of memory blocks in the chunk deallocated by operator **delete**.
+The member function does nothing. This member function is called after each call by `cache_freelist::deallocate` to operator **`delete`**. The argument *_Nx* is the number of memory blocks in the chunk deallocated by operator **`delete`**.
 
-## <a name="full"></a>  max_none::full
+## <a name="full"></a> max_none::full
 
 Returns a value that specifies whether more memory blocks should be added to the free list.
 
@@ -84,13 +82,13 @@ bool full();
 
 ### Return Value
 
-This member function always returns **true**.
+This member function always returns **`true`**.
 
 ### Remarks
 
-This member function is called by `cache_freelist::deallocate`. If the call returns **true**, `deallocate` puts the memory block on the free list; if it returns false, `deallocate` calls operator **delete** to deallocate the block.
+This member function is called by `cache_freelist::deallocate`. If the call returns **`true`**, `deallocate` puts the memory block on the free list; if it returns **`false`**, `deallocate` calls operator **`delete`** to deallocate the block.
 
-## <a name="released"></a>  max_none::released
+## <a name="released"></a> max_none::released
 
 Decrements the count of memory blocks on the free list.
 
@@ -102,7 +100,7 @@ void released();
 
 This member function does nothing. The `released` member function of the current max class is called by `cache_freelist::allocate` whenever it removes a memory block from the free list.
 
-## <a name="saved"></a>  max_none::saved
+## <a name="saved"></a> max_none::saved
 
 Increments the count of memory blocks on the free list.
 
@@ -116,4 +114,4 @@ This member function does nothing. It is called by `cache_freelist::deallocate` 
 
 ## See also
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

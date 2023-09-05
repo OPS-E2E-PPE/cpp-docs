@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2009"
 title: "Compiler Error C2009"
 ms.date: "11/04/2016"
 f1_keywords: ["C2009"]
@@ -11,11 +12,11 @@ reuse of macro formal 'identifier'
 
 The formal parameter list of a macro definition uses the identifier more than once. Identifiers in the macro's parameter list must be unique.
 
-## Example
+## Examples
 
 The following sample generates C2009:
 
-```
+```cpp
 // C2009.cpp
 #include <stdio.h>
 
@@ -27,11 +28,9 @@ int main()
 }
 ```
 
-## Example
-
 Possible resolution:
 
-```
+```cpp
 // C2009b.cpp
 #include <stdio.h>
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Menus and Resources: Menu Merging"
 title: "Menus and Resources: Menu Merging"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["status bars [MFC], OLE document applications", "visual editing [MFC], application menus and resources", "coordinating menu layouts [MFC]", "OLE containers [MFC], menus and resources", "toolbars [MFC], OLE document applications", "merging toolbar and status bar [MFC]", "menus [MFC], OLE document applications"]
@@ -14,11 +15,9 @@ Topics covered in this article include:
 
 - [Toolbars and Status Bars](#_core_toolbars_and_status_bars)
 
-##  <a name="_core_menu_layouts"></a> Menu Layouts
+## <a name="_core_menu_layouts"></a> Menu Layouts
 
-The first step is to coordinate menu layouts. For more information, see the **Menu Creation** section in [Menu Programming Considerations](https://msdn.microsoft.com/library/ms647557.aspx) in the Windows SDK.
-
-Container applications should create a new menu to be used only when embedded items are activated in place. At the minimum, this menu should consist of the following, in the order listed:
+The first step is to coordinate menu layouts. Container applications should create a new menu to be used only when embedded items are activated in place. At the minimum, this menu should consist of the following, in the order listed:
 
 1. File menu identical to the one used when files are open. (Usually no other menu items are placed before the next item.)
 
@@ -88,16 +87,15 @@ Accelerator tables associated with the in-place menu should also be supplied by 
 
 When an embedded item is activated in place, the framework loads the in-place menu. It then asks the server application for its menu for in-place activation and inserts it where the separators are. This is how the menus combine. You get menus from the container for operating on the file and window placement, and you get menus from the server for operating on the item.
 
-##  <a name="_core_toolbars_and_status_bars"></a> Toolbars and Status Bars
+## <a name="_core_toolbars_and_status_bars"></a> Toolbars and Status Bars
 
 Server applications should create a new toolbar and store its bitmap in a separate file. The application wizard-generated applications store this bitmap in a file called ITOOLBAR.BMP. The new toolbar replaces the container application's toolbar when your server's item is activated in place, and should contain the same items as your normal toolbar, but remove icons representing items on the File and Window menus.
 
-This toolbar is loaded in your `COleIPFrameWnd`-derived class, created for you by the application wizard. The status bar is handled by the container application. For more information on the implementation of in-place frame windows, see [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md).
+This toolbar is loaded in your `COleIPFrameWnd`-derived class, created for you by the application wizard. The status bar is handled by the container application. For more information on the implementation of in-place frame windows, see [Servers: Implementing a Server](servers-implementing-a-server.md).
 
-## See Also
+## See also
 
-[Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Activation](../mfc/activation-cpp.md)<br/>
-[Servers](../mfc/servers.md)<br/>
-[Containers](../mfc/containers.md)
-
+[Menus and Resources (OLE)](menus-and-resources-ole.md)<br/>
+[Activation](activation-cpp.md)<br/>
+[Servers](servers.md)<br/>
+[Containers](containers.md)

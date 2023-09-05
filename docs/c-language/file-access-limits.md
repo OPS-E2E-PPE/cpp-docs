@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: File Access Limits"
 title: "File Access Limits"
 ms.date: "11/04/2016"
 ms.assetid: ca2b5e64-b7b8-48d6-a0a4-a1b549314cda
@@ -9,6 +10,6 @@ ms.assetid: ca2b5e64-b7b8-48d6-a0a4-a1b549314cda
 
 Opening a file that is already open is not permitted.
 
-## See Also
+## See also
 
 [Library Functions](../c-language/library-functions.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2806"
 title: "Compiler Error C2806"
 ms.date: "11/04/2016"
 f1_keywords: ["C2806"]
@@ -13,7 +14,7 @@ An overloaded operator has too many parameters.
 
 The following sample generates C2806:
 
-```
+```cpp
 // C2806.cpp
 // compile with: /c
 class X {

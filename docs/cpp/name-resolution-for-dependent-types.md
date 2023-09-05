@@ -1,11 +1,12 @@
 ---
+description: "Learn more about: Name Resolution for Dependent Types"
 title: "Name Resolution for Dependent Types"
 ms.date: "11/04/2016"
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
 ---
 # Name Resolution for Dependent Types
 
-Use **typename** for qualified names in template definitions to tell the compiler that the given qualified name identifies a type. For more information, see [typename](../cpp/typename.md).
+Use **`typename`** for qualified names in template definitions to tell the compiler that the given qualified name identifies a type. For more information, see [typename](../cpp/typename.md).
 
 ```cpp
 // template_name_resolution1.cpp
@@ -84,7 +85,7 @@ Int MyNamespace::myFunction
 
 ### Template Disambiguation
 
-Visual Studio 2012 enforces the C++98/03/11 standard rules for disambiguation with the "template" keyword. In the following example, Visual C++ 2010 would accept both the nonconforming lines and the conforming lines.  Visual Studio 2012 accepts only the conforming lines.
+Visual Studio 2012 enforces the C++98/03/11 standard rules for disambiguation with the "template" keyword. In the following example, Visual Studio 2010 would accept both the nonconforming lines and the conforming lines.  Visual Studio 2012 accepts only the conforming lines.
 
 ```cpp
 #include <iostream>

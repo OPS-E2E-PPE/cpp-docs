@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: C Language Reference"
 title: "C Language Reference"
 ms.custom: "index-page"
 ms.date: "11/04/2016"
@@ -20,6 +21,6 @@ For additional reference material on C++ and the preprocessor, see:
 
 Compiler and linker options are documented in the [C/C++ Building Reference](../build/reference/c-cpp-building-reference.md).
 
-## See Also
+## See also
 
 [C++ Language Reference](../cpp/cpp-language-reference.md)

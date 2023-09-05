@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3342"
 title: "Compiler Error C3342"
 ms.date: "11/04/2016"
 f1_keywords: ["C3342"]
@@ -13,13 +14,13 @@ The compiler found more than one definition of an attribute.
 
 An attribute was defined more than once.
 
-For more information, see [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+For more information, see [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## Example
 
 The following sample generates C3342.
 
-```
+```cpp
 // C3342.cpp
 // compile with: /clr /c
 using namespace System;

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: single_link_registry Class"
 title: "single_link_registry Class"
 ms.date: "11/04/2016"
 f1_keywords: ["single_link_registry", "AGENTS/concurrency::single_link_registry", "AGENTS/concurrency::single_link_registry::single_link_registry", "AGENTS/concurrency::single_link_registry::add", "AGENTS/concurrency::single_link_registry::begin", "AGENTS/concurrency::single_link_registry::contains", "AGENTS/concurrency::single_link_registry::count", "AGENTS/concurrency::single_link_registry::remove"]
@@ -11,12 +12,12 @@ The `single_link_registry` object is a `network_link_registry` that manages only
 
 ## Syntax
 
-```
+```cpp
 template<class _Block>
 class single_link_registry : public network_link_registry<_Block>;
 ```
 
-#### Parameters
+### Parameters
 
 *_Block*<br/>
 The block data type being stored in the `single_link_registry` object.
@@ -52,11 +53,11 @@ The block data type being stored in the `single_link_registry` object.
 
 **Namespace:** concurrency
 
-##  <a name="add"></a> add
+## <a name="add"></a> add
 
 Adds a link to the `single_link_registry` object.
 
-```
+```cpp
 virtual void add(_EType _Link);
 ```
 
@@ -69,11 +70,11 @@ A pointer to a block to be added.
 
 The method throws an [invalid_link_target](invalid-link-target-class.md) exception if there is already a link in this registry.
 
-##  <a name="begin"></a> begin
+## <a name="begin"></a> begin
 
 Returns an iterator to the first element in the `single_link_registry` object.
 
-```
+```cpp
 virtual iterator begin();
 ```
 
@@ -85,11 +86,11 @@ An iterator addressing the first element in the `single_link_registry` object.
 
 The end state is indicated by a `NULL` link.
 
-##  <a name="contains"></a> contains
+## <a name="contains"></a> contains
 
 Searches the `single_link_registry` object for a specified block.
 
-```
+```cpp
 virtual bool contains(_EType _Link);
 ```
 
@@ -100,13 +101,13 @@ A pointer to a block that is to be searched for in the `single_link_registry` ob
 
 ### Return Value
 
-**true** if the link was found, **false** otherwise.
+**`true`** if the link was found, **`false`** otherwise.
 
-##  <a name="count"></a> count
+## <a name="count"></a> count
 
 Counts the number of items in the `single_link_registry` object.
 
-```
+```cpp
 virtual size_t count();
 ```
 
@@ -114,11 +115,11 @@ virtual size_t count();
 
 The number of items in the `single_link_registry` object.
 
-##  <a name="remove"></a> remove
+## <a name="remove"></a> remove
 
 Removes a link from the `single_link_registry` object.
 
-```
+```cpp
 virtual bool remove(_EType _Link);
 ```
 
@@ -129,21 +130,21 @@ A pointer to a block to be removed, if found.
 
 ### Return Value
 
-**true** if the link was found and removed, **false** otherwise.
+**`true`** if the link was found and removed, **`false`** otherwise.
 
-##  <a name="ctor"></a> single_link_registry
+## <a name="ctor"></a> single_link_registry
 
 Constructs a `single_link_registry` object.
 
-```
+```cpp
 single_link_registry();
 ```
 
-##  <a name="dtor"></a> ~single_link_registry
+## <a name="dtor"></a> ~single_link_registry
 
 Destroys the `single_link_registry` object.
 
-```
+```cpp
 virtual ~single_link_registry();
 ```
 
@@ -151,7 +152,7 @@ virtual ~single_link_registry();
 
 The method throws an [invalid_operation](invalid-operation-class.md) exception if it is called before the link is removed.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [multi_link_registry Class](multi-link-registry-class.md)

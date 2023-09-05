@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: _com_raise_error"
 title: "_com_raise_error"
 ms.date: "11/04/2016"
 f1_keywords: ["_com_raise_error"]
@@ -13,7 +14,7 @@ Throws a [_com_error](../cpp/com-error-class.md) in response to a failure.
 
 ## Syntax
 
-```
+```cpp
 void __stdcall _com_raise_error(
    HRESULT hr,
    IErrorInfo* perrinfo = 0

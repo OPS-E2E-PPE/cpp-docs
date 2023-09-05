@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How Noncommand Messages Reach Their Handlers"
 title: "How Noncommand Messages Reach Their Handlers"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["messages [MFC], routing", "noncommand messages", "Windows messages [MFC], routing", "message handling [MFC], noncommand messages"]
@@ -10,7 +11,6 @@ Unlike commands, standard Windows messages do not get routed through a chain of 
 
 At run time, each Windows window is attached to a window object (derived directly or indirectly from `CWnd`) that has its own associated message map and handler functions. The framework uses the message map — as for a command — to map incoming messages to handlers.
 
-## See Also
+## See also
 
-[How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
-
+[How the Framework Calls a Handler](how-the-framework-calls-a-handler.md)

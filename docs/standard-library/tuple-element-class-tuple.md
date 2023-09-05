@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: tuple_element Class"
 title: "tuple_element Class"
 ms.date: "11/04/2016"
 f1_keywords: ["utility/std::tuple_element"]
@@ -48,37 +49,37 @@ template <class T1, class T2>
 
 ### Parameters
 
-*Index*<br/>
+*Index*\
 The index of the designated element.
 
-*Tuple*<br/>
+*Tuple*\
 The type of the tuple.
 
-*Elem*<br/>
+*Elem*\
 The type of an array element.
 
-*Size*<br/>
+*Size*\
 The size of the array.
 
-*T1*<br/>
+*T1*\
 The type of the first element in a pair.
 
-*T2*<br/>
+*T2*\
 The type of the second element in a pair.
 
 ## Remarks
 
-The template class `tuple_element` has a nested typedef `type` that is a synonym for the type at index *Index* of the tuple type *Tuple*.
+The class template `tuple_element` has a nested typedef `type` that is a synonym for the type at index *Index* of the tuple type *Tuple*.
 
 The typedef `tuple_element_t` is a convenient alias for `tuple_element<Index, Tuple>::type`.
 
-The template class specialization for arrays provides an interface to an `array` as a tuple of `Size` elements, each of which has the same type. Each specialization has a nested typedef `type` that is a synonym for the type of the *Index* element of the `array`, with any const-volatile qualifications preserved.
+The class template specialization for arrays provides an interface to an `array` as a tuple of `Size` elements, each of which has the same type. Each specialization has a nested typedef `type` that is a synonym for the type of the *Index* element of the `array`, with any const-volatile qualifications preserved.
 
 The template specializations for `pair` types each provide a single member typedef, `type`, which is a synonym for the type of the element at the specified position in the pair, with any const and/or volatile qualifications preserved. The typedef `tuple_element_t` is a convenient alias for `tuple_element<N, pair<T1, T2>>::type`.
 
-Use the [get Function &lt;utility&gt;](../standard-library/utility-functions.md#get) to return the element at a specified position, or of a specified type.
+Use the [`get` function](../standard-library/utility-functions.md#get) to return the element at a specified position, or of a specified type.
 
-## Example
+## Example: Get an element from a tuple
 
 ```cpp
 #include <tuple>
@@ -103,7 +104,7 @@ int main() {
 0 1.5 Tail
 ```
 
-## Example
+## Example: Get an element from an array
 
 ```cpp
 #include <array>
@@ -133,7 +134,7 @@ int main()
 0
 ```
 
-## Example
+## Example: Get an element from a pair
 
 ```cpp
 #include <utility>
@@ -173,7 +174,3 @@ int main() {
 **Header:** \<utility> (for pair specializations)
 
 **Namespace:** std
-
-## See also
-
-[tuple ](../standard-library/tuple-class.md)<br/>

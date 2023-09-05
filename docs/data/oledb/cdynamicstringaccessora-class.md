@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDynamicStringAccessorA Class"
 title: "CDynamicStringAccessorA Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CDynamicStringAccessorA"]
@@ -25,7 +26,7 @@ They both request that the provider fetch all data accessed from the data store 
 
 **Header**: atldbcli.h
 
-## See Also
+## See also
 
 [OLE DB Consumer Templates](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB Consumer Templates Reference](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

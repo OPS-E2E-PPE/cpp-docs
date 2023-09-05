@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3021"
 title: "Compiler Error C3021"
 ms.date: "11/04/2016"
 f1_keywords: ["C3021"]
@@ -15,7 +16,7 @@ An argument is required for an OpenMP directive.
 
 The following sample generates C3021:
 
-```
+```cpp
 // C3021.cpp
 // compile with: /openmp
 #include <stdio.h>

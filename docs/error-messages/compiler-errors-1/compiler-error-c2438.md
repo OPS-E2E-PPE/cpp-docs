@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2438"
 title: "Compiler Error C2438"
 ms.date: "11/04/2016"
 f1_keywords: ["C2438"]
@@ -13,7 +14,7 @@ A constructor is used to initialize a static member of a class. Static members m
 
 The following sample generates C2438:
 
-```
+```cpp
 // C2438.cpp
 struct X {
    X(int i) : j(i) {}   // C2438

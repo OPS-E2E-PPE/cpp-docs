@@ -1,12 +1,13 @@
 ---
-title: "&lt;thread&gt;"
+description: "Learn more about: <thread>"
+title: "<thread>"
 ms.date: "11/04/2016"
 f1_keywords: ["<thread>"]
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
 ---
-# &lt;thread&gt;
+# `<thread>`
 
-Include the standard header \<thread> to define the class **thread** and various supporting functions.
+Include the standard header \<thread> to define the class `thread` and various supporting functions.
 
 ## Syntax
 
@@ -42,7 +43,7 @@ The `__STDCPP_THREADS__` macro is defined as a nonzero value to indicate that th
 |[get_id](../standard-library/thread-functions.md#get_id)|Uniquely identifies the current thread of execution.|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|Blocks the calling thread.|
 |[sleep_until](../standard-library/thread-functions.md#sleep_until)|Blocks the calling thread at least until the specified time.|
-|[swap](../standard-library/thread-functions.md#swap)|Exchanges the states of two **thread** objects.|
+|[swap](../standard-library/thread-functions.md#swap)|Exchanges the states of two `thread` objects.|
 |[yield](../standard-library/thread-functions.md#yield)|Signals the operating system to run other threads, even if the current thread would ordinarily continue to run.|
 
 ### Public Operators
@@ -59,5 +60,5 @@ The `__STDCPP_THREADS__` macro is defined as a nonzero value to indicate that th
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

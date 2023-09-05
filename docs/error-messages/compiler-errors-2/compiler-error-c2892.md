@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2892"
 title: "Compiler Error C2892"
 ms.date: "11/04/2016"
 f1_keywords: ["C2892"]
@@ -13,7 +14,7 @@ Templated member functions are not valid in a class that is defined in a functio
 
 The following sample generates C2892:
 
-```
+```cpp
 // C2892.cpp
 int main() {
    struct local {

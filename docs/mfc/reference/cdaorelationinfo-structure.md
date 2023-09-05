@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDaoRelationInfo Structure"
 title: "CDaoRelationInfo Structure"
 ms.date: "06/25/2018"
 f1_keywords: ["CDaoRelationInfo"]
@@ -72,6 +73,6 @@ Information retrieved by the [CDaoDatabase::GetRelationInfo](../../mfc/reference
 
 **Header:** afxdao.h
 
-## See Also
+## See also
 
 [CDaoRelationFieldInfo Structure](../../mfc/reference/cdaorelationfieldinfo-structure.md)

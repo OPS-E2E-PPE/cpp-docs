@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2634"
 title: "Compiler Error C2634"
 ms.date: "11/04/2016"
 f1_keywords: ["C2634"]
@@ -13,7 +14,7 @@ A pointer to a reference member is declared.
 
 The following sample generates C2634:
 
-```
+```cpp
 // C2634.cpp
 int mem;
 struct S {

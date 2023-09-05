@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: threading (C++)"
 title: "threading  (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.threading"]
@@ -46,21 +47,19 @@ See the [licensed](licensed.md) example for a sample use of **threading**.
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**class**, **struct**|
+|**Applies to**|**`class`**, **`struct`**|
 |**Repeatable**|No|
 |**Required attributes**|**coclass**|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [COM Attributes](com-attributes.md)<br/>
 [Typedef, Enum, Union, and Struct Attributes](typedef-enum-union-and-struct-attributes.md)<br/>
 [Class Attributes](class-attributes.md)<br/>
 [Multithreading Support for Older Code (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
-[Neutral Apartments](/windows/desktop/cossdk/neutral-apartments)
+[Neutral Apartments](/windows/win32/cossdk/neutral-apartments)

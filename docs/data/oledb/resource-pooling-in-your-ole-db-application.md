@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Resource Pooling in Your OLE DB Application"
 title: "Resource Pooling in Your OLE DB Application"
 ms.date: "10/29/2018"
 helpviewer_keywords: ["OLE DB services [OLE DB], resource pooling", "resource pooling [OLE DB], services", "OLE DB, resource pooling", "OLE DB providers, resource pooling"]
@@ -16,6 +17,6 @@ Some providers must make a separate connection for each session. These additiona
 
 Finally, because ADO automatically makes use of OLE DB services, you can use ADO to establish connections and the pooling and enlistment happen automatically.
 
-## See Also
+## See also
 
 [OLE DB Resource Pooling and Services](../../data/oledb/ole-db-resource-pooling-and-services.md)

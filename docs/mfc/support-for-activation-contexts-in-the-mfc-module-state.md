@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Support for Activation Contexts in the MFC Module State"
 title: "Support for Activation Contexts in the MFC Module State"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["activation contexts [MFC]", "activation contexts [MFC], MFC support"]
@@ -8,11 +9,11 @@ ms.assetid: 1e49eea9-3620-46dd-bc5f-d664749567c7
 
 MFC creates an activation context using a manifest resource provided by the user module. For more information on how activation contexts are created, see the following topics:
 
-- [Activation Contexts](/windows/desktop/SbsCs/activation-contexts)
+- [Activation Contexts](/windows/win32/SbsCs/activation-contexts)
 
-- [Application Manifests](/windows/desktop/SbsCs/application-manifests)
+- [Application Manifests](/windows/win32/SbsCs/application-manifests)
 
-- [Assembly Manifests](/windows/desktop/SbsCs/assembly-manifests)
+- [Assembly Manifests](/windows/win32/SbsCs/assembly-manifests)
 
 ## Remarks
 
@@ -26,18 +27,17 @@ Activation context works in MFC applications, user DLLs, and MFC extension DLLs 
 
 - MFC extension DLLs rely on their hosting applications or user DLLs to establish their activation context.
 
-Although the activation context state can be modified using the processes described under [Using the Activation Context API](/windows/desktop/SbsCs/using-the-activation-context-api), using the MFC activation context mechanism can be useful when developing DLL-based plug-in architectures where it is not easy (or not possible) to manually switch activation state before and after individual calls to external plug-ins.
+Although the activation context state can be modified using the processes described under [Using the Activation Context API](/windows/win32/SbsCs/using-the-activation-context-api), using the MFC activation context mechanism can be useful when developing DLL-based plug-in architectures where it is not easy (or not possible) to manually switch activation state before and after individual calls to external plug-ins.
 
 The activation context is created in [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit). It is destroyed in the `AFX_MODULE_STATE` destructor. An activation context handle is kept in `AFX_MODULE_STATE`. (`AFX_MODULE_STATE` is described in [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate).)
 
 The [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro activates and deactivates the activation context. `AFX_MANAGE_STATE` is enabled for static MFC libraries, as well as MFC DLLs, to allow MFC code to execute in the proper activation context selected by the User DLL.
 
-## See Also
+## See also
 
-[Activation Contexts](/windows/desktop/SbsCs/activation-contexts)<br/>
-[Application Manifests](/windows/desktop/SbsCs/application-manifests)<br/>
-[Assembly Manifests](/windows/desktop/SbsCs/assembly-manifests)<br/>
+[Activation Contexts](/windows/win32/SbsCs/activation-contexts)<br/>
+[Application Manifests](/windows/win32/SbsCs/application-manifests)<br/>
+[Assembly Manifests](/windows/win32/SbsCs/assembly-manifests)<br/>
 [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit)<br/>
 [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate)<br/>
 [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)
-

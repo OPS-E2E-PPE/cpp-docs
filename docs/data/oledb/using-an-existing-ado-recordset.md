@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using an Existing ADO Recordset"
 title: "Using an Existing ADO Recordset"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ADO recordsets [C++]", "OLE DB consumer templates, ADO recordsets", "recordsets [C++], using in OLE DB"]
@@ -31,6 +32,6 @@ To mix OLE DB consumer templates and Active Data Objects (ADO), use ADO to open 
     rs.SetAccessor(accessor);
     ```
 
-## See Also
+## See also
 
 [Using Accessors](../../data/oledb/using-accessors.md)

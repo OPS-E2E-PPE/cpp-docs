@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: logical_or Struct"
 title: "logical_or Struct"
 ms.date: "11/04/2016"
-f1_keywords: ["xfunctional/std::logical_or"]
+f1_keywords: ["functional/std::logical_or"]
 helpviewer_keywords: ["logical_or class", "logical_or struct"]
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
 ---
@@ -30,13 +31,13 @@ struct logical_or<void>
 
 ### Parameters
 
-*Type*, *T*, *U*
+*Type*, *T*, *U*\
 Any type that supports an `operator||` that takes operands of the specified or inferred types.
 
-*Left*<br/>
+*Left*\
 The left operand of the logical disjunction operation. The unspecialized template takes an lvalue reference argument of type *Type*. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type *T*.
 
-*Right*<br/>
+*Right*\
 The right operand of the logical disjunction operation. The unspecialized template takes an lvalue reference argument of type *Type*. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type *U*.
 
 ## Return Value
@@ -96,23 +97,13 @@ int main( )
       cout << *iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 Original deque:
 d1 = ( true true false false true false false )
 Original deque:
 d2 = ( false false false true true true true )
 The deque which is the disjuction of d1 & d2 is:
 d3 = ( true true false true true true true )
-*/
 ```
-
-## Requirements
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## See also
-
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleResizeBar Class"
 title: "COleResizeBar Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COleResizeBar", "AFXOLE/COleResizeBar", "AFXOLE/COleResizeBar::COleResizeBar", "AFXOLE/COleResizeBar::Create"]
@@ -53,7 +54,7 @@ For more information, see the article [Activation](../../mfc/activation-cpp.md).
 
 **Header:** afxole.h
 
-##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar
+## <a name="coleresizebar"></a> COleResizeBar::COleResizeBar
 
 Constructs a `COleResizeBar` object.
 
@@ -65,7 +66,7 @@ COleResizeBar();
 
 Call `Create` to create the resize bar object.
 
-##  <a name="create"></a>  COleResizeBar::Create
+## <a name="create"></a> COleResizeBar::Create
 
 Creates a child window and associates it with the `COleResizeBar` object.
 
@@ -91,9 +92,9 @@ The resize bar's child window ID.
 
 Nonzero if the resize bar was created; otherwise 0.
 
-## See Also
+## See also
 
-[MFC Sample SUPERPAD](../../visual-cpp-samples.md)<br/>
+[MFC Sample SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [COleServerDoc Class](../../mfc/reference/coleserverdoc-class.md)

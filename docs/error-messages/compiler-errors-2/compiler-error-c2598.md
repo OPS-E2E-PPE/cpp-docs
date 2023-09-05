@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2598"
 title: "Compiler Error C2598"
 ms.date: "11/04/2016"
 f1_keywords: ["C2598"]
@@ -13,7 +14,7 @@ The linkage specifier is declared at local scope.
 
 The following sample generates C2598:
 
-```
+```cpp
 // C2598.cpp
 // compile with: /c
 void func() {

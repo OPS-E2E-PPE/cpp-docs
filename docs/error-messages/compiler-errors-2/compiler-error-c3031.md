@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3031"
 title: "Compiler Error C3031"
 ms.date: "11/04/2016"
 f1_keywords: ["C3031"]
@@ -13,7 +14,7 @@ A variable of the wrong type was passed to a reduction clause.
 
 The following sample generates C3031:
 
-```
+```cpp
 // C3031.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

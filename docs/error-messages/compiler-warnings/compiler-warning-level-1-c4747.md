@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4747"
 title: "Compiler Warning (level 1) C4747"
 ms.date: "11/04/2016"
 f1_keywords: ["C4747"]
@@ -23,7 +24,7 @@ For more information, see [Initialization of Mixed Assemblies](../../dotnet/init
 
 The following sample generates C4747.
 
-```
+```cpp
 // C4747.cpp
 // compile with: /clr /c /W1
 // C4747 expected

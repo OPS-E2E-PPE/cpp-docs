@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3703"
 title: "Compiler Error C3703"
 ms.date: "11/04/2016"
 f1_keywords: ["C3703"]
@@ -13,7 +14,7 @@ An [event](../../cpp/event-handling.md) has a different storage class than the e
 
 The following sample generates C3703:
 
-```
+```cpp
 // C3703.cpp
 // C3703 expected
 #include <stdio.h>

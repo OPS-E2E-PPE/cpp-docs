@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2600"
 title: "Compiler Error C2600"
 ms.date: "11/04/2016"
 f1_keywords: ["C2600"]
@@ -15,7 +16,7 @@ To fix this error, in the class declaration, declare each member function that y
 
 The following sample generates C2600:
 
-```
+```cpp
 // C2600.cpp
 // compile with: /c
 class C {};

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3373"
 title: "Compiler Error C3373"
 ms.date: "11/04/2016"
 f1_keywords: ["C3373"]
@@ -13,7 +14,7 @@ Some attributes can be applied to more than one C++ construct, but arguments to 
 
 The following sample generates C3373:
 
-```
+```cpp
 // C3373.cpp
 #include <windows.h>
 

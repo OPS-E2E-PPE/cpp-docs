@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ctype_byname Class"
 title: "ctype_byname Class"
 ms.date: "11/04/2016"
 f1_keywords: ["xlocale/std::ctype_byname"]
@@ -7,7 +8,7 @@ ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
 ---
 # ctype_byname Class
 
-The derived template class describes an object that can serve as a ctype facet of a given locale, enabling the classification of characters and conversion of characters between case and native and locale specified character sets.
+The derived class template describes an object that can serve as a ctype facet of a given locale, enabling the classification of characters and conversion of characters between case and native and locale specified character sets.
 
 ## Syntax
 
@@ -42,4 +43,4 @@ Its behavior is determined by the named locale `_Locname`. Each constructor init
 
 ## See also
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

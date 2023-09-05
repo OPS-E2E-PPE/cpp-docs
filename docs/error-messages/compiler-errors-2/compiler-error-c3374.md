@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3374"
 title: "Compiler Error C3374"
 ms.date: "11/04/2016"
 f1_keywords: ["C3374"]
@@ -13,7 +14,7 @@ The address of a function was taken in a context other than the creation of a de
 
 The following sample generates C3374:
 
-```
+```cpp
 // C3374.cpp
 // compile with: /clr
 public delegate void MyDel(int i);
@@ -34,6 +35,6 @@ int main() {
 }
 ```
 
-## See Also
+## See also
 
 [How to: Define and Use Delegates (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)

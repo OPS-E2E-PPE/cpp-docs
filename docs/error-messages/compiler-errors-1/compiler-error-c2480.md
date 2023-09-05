@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2480"
 title: "Compiler Error C2480"
 ms.date: "11/04/2016"
 f1_keywords: ["C2480"]
@@ -15,7 +16,7 @@ Use the `thread` attribute for global variables, static data members, and local 
 
 The following sample generates C2480:
 
-```
+```cpp
 // C2480.cpp
 // compile with: /c
 __declspec( thread ) void func();   // C2480

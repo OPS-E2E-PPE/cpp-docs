@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Platform::COMException Class"
 title: "Platform::COMException Class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
-f1_keywords: ["VCCORLIB/Platform::COMException", "VCCORLIB/Platform::Exception::HResult", "VCCORLIB/Platform::Exception::Message"]
+f1_keywords: ["VCCORLIB/Platform::COMException", "VCCORLIB/Platform::COMException::HResult", "VCCORLIB/Platform::COMException::Message"]
 helpviewer_keywords: ["Platform::COMException Class"]
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
 ---
@@ -103,7 +104,7 @@ An HRESULT value that specifies the error.
 
 ### Remarks
 
-For more information about how to interpret the HRESULT value, see [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes).
+For more information about how to interpret the HRESULT value, see [Structure of COM Error Codes](/windows/win32/com/structure-of-com-error-codes).
 
 ## <a name="message"></a> COMException::Message Property
 
@@ -119,6 +120,6 @@ public:property String^ Message {    String^ get();}
 
 A description of the exception.
 
-## See Also
+## See also
 
 [Platform namespace](../cppcx/platform-namespace-c-cx.md)

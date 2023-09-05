@@ -1,22 +1,25 @@
 ---
+description: "Learn more about: index Class"
 title: "index Class"
-ms.date: "11/04/2016"
+ms.date: 06/21/2022
 f1_keywords: ["AMP/index", "AMP/Concurrency::index::index", "AMP/Concurrency::index::rank"]
 helpviewer_keywords: ["index structure"]
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
+ms.custom: devdivchpfy22
 ---
+
 # index Class
 
-Defines an *N*-dimensional index pographics-cpp-amp.md.
+Defines an *N*-dimensional index vector.
 
 ## Syntax
 
-```
+```cpp
 template <int _Rank>
 class index;
 ```
 
-#### Parameters
+### Parameters
 
 *_Rank*<br/>
 The rank, or number of dimensions.
@@ -27,14 +30,14 @@ The rank, or number of dimensions.
 
 |Name|Description|
 |----------|-----------------|
-|[index Constructor](#ctor)|Initializes a new instance of the `index` class.|
+|[index Constructor](#index_ctor)|Initializes a new instance of the `index` class.|
 
 ### Public Operators
 
 |Name|Description|
 |----------|-----------------|
 |[operator--](#operator--)|Decrements each element of the `index` object.|
-|[operator(mod)=](#operator_mod_eq)|Calculates the modulus (remainder) of each element in the `index` object when that element is divided by a number.|
+|[operator%=](#operator_mod_eq)|Calculates the modulus (remainder) of each element in the `index` object when that element is divided by a number.|
 |[operator*=](#operator_star_eq)|Multiplies each element of the `index` object by a number.|
 |[operator/=](#operator_div_eq)|Divides each element of the `index` object by a number.|
 |[index::operator\[\]](#operator_at)|Returns the element that's at the specified index.|
@@ -67,7 +70,7 @@ The `index` structure represents a coordinate vector of *N* integers that specif
 
 Initializes a new instance of the index class.
 
-```
+```cpp
 index() restrict(amp,cpu);
 
 index(
@@ -114,10 +117,11 @@ The length of the least significant dimension.
 *_Other*<br/>
 An index object on which the new index object is based.
 
-## <a name="operator--"></a>  operator--
+## <a name="operator--"></a> operator--
 
 Decrements each element of the index object.
-```
+
+```cpp
 index<_Rank>& operator--() restrict(amp,cpu);
 
 index operator--(
@@ -127,13 +131,13 @@ index operator--(
 
 ### Return values
 
-For the prefix operator, the index object (*this). For the suffix operator, a new index object.
+For the prefix operator, the index object (`*this`). For the suffix operator, a new index object.
 
-## <a name="operator_mod_eq"></a>  operator(mod)=
+## <a name="operator_mod_eq"></a> operator%=
 
 Calculates the modulus (remainder) of each element in the index object when that element is divided by the specified number.
 
-```
+```cpp
 index<_Rank>& operator%=(
    int _Rhs
 ) restrict(cpu, amp);
@@ -145,12 +149,14 @@ index<_Rank>& operator%=(
 The number to divide by to find the modulus.
 
 ## Return Value
+
 The index object.
 
-## <a name="operator_star_eq"></a>  operator*=
+## <a name="operator_star_eq"></a> operator*=
 
 Multiplies each element in the index object by the specified number.
-```
+
+```cpp
 index<_Rank>& operator*=(
    int _Rhs
 ) restrict(amp,cpu);
@@ -161,11 +167,11 @@ index<_Rank>& operator*=(
 *_Rhs*<br/>
 The number to multiply.
 
-## <a name="operator_div_eq"></a>  operator/=
+## <a name="operator_div_eq"></a> operator/=
 
 Divides each element in the index object by the specified number.
 
-```
+```cpp
 index<_Rank>& operator/=(
    int _Rhs
 ) restrict(amp,cpu);
@@ -176,11 +182,11 @@ index<_Rank>& operator/=(
 *_Rhs*<br/>
 The number to divide by.
 
-## <a name="operator_at"></a>  operator\[\]
+## <a name="operator_at"></a> operator\[\]
 
 Returns the component of the index at the specified location.
 
-```
+```cpp
 int operator[] (
    unsigned _Index
 ) const restrict(amp,cpu);
@@ -202,7 +208,8 @@ The element that's at the specified index.
 ### Remarks
 
 This following example displays the component values of the index.
-```
+
+```cpp
 // Prints 1 2 3.
 concurrency::index<3> idx(1, 2, 3);
 std::cout << idx[0] << "\n";
@@ -210,10 +217,11 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>  operator++
+## <a name="operator_add_add"></a> operator++
 
 Increments each element of the index object.
-```
+
+```cpp
 index<_Rank>& operator++() restrict(amp,cpu);
 
 index<_Rank> operator++(
@@ -223,12 +231,13 @@ index<_Rank> operator++(
 
 ### Return Value
 
-For the prefix operator, the index object (*this). For the suffix operator, a new index object.
+For the prefix operator, the index object (`*this`). For the suffix operator, a new index object.
 
-## <a name="operator_add_eq"></a>  operator+=
+## <a name="operator_add_eq"></a> operator+=
 
 Adds the specified number to each element of the index object.
-```
+
+```cpp
 index<_Rank>& operator+=(
    const index<_Rank>& _Rhs
 ) restrict(amp,cpu);
@@ -247,10 +256,11 @@ The number to add.
 
 The index object.
 
-## <a name="operator_eq"></a>  operator=
+## <a name="operator_eq"></a> operator=
 
 Copies the contents of the specified index object into this one.
-```
+
+```cpp
 index<_Rank>& operator=(
    const index<_Rank>& _Other
 ) restrict(amp,cpu);
@@ -265,10 +275,11 @@ The index object to copy from.
 
 A reference to this index object.
 
-## <a name="operator_-_eq"></a>  operator-=
+## <a name="operator_-_eq"></a> operator-=
 
 Subtracts the specified number from each element of the index object.
-```
+
+```cpp
 index<_Rank>& operator-=(
    const index<_Rank>& _Rhs
 ) restrict(amp,cpu);
@@ -287,12 +298,14 @@ The number to subtract.
 
 The index object.
 
-## <a name="rank"></a>  Rank
-  Gets the rank of the index object.
-```
+## <a name="rank"></a> Rank
+
+Gets the rank of the index object.
+
+```cpp
 static const int rank = _Rank;
 ```
 
-## See Also
+## See also
 
 [Concurrency Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)

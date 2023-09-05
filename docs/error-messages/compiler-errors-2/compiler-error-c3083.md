@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3083"
 title: "Compiler Error C3083"
 ms.date: "11/04/2016"
 f1_keywords: ["C3083"]
@@ -15,7 +16,7 @@ A function was called incorrectly.
 
 The following sample generates C3083.
 
-```
+```cpp
 // C3083.cpp
 // compile with: /c
 struct N {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3642"
 title: "Compiler Error C3642"
 ms.date: "11/04/2016"
 f1_keywords: ["C3642"]
@@ -17,7 +18,7 @@ To call a managed function from a native context, you can add a "wrapper" functi
 
 The following sample generates C3642:
 
-```
+```cpp
 // C3642.cpp
 // compile with: /clr
 using namespace System;

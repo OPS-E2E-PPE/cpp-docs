@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: ICommandSource Interface"
 title: "ICommandSource Interface"
-ms.date: "11/04/2016"
+ms.date: "03/27/2019"
 f1_keywords: ["ICommandSource", "AFXWINFORMS/ICommandSource", "AFXWINFORMS/ICommandSource::AddCommandHandler", "AFXWINFORMS/ICommandSource::AddCommandRangeHandler", "AFXWINFORMS/ICommandSource::AddCommandRangeUIHandler", "AFXWINFORMS/ICommandSource::AddCommandUIHandler", "AFXWINFORMS/ICommandSource::PostCommand", "AFXWINFORMS/ICommandSource::RemoveCommandHandler", "AFXWINFORMS/ICommandSource::RemoveCommandRangeHandler", "AFXWINFORMS/ICommandSource::RemoveCommandRangeUIHandler", "AFXWINFORMS/ICommandSource::RemoveCommandUIHandler", "AFXWINFORMS/ICommandSource::SendCommand"]
 helpviewer_keywords: ["ICommandSource interface [MFC]"]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
@@ -11,7 +12,7 @@ Manages commands sent from a command source object to a user control.
 
 ## Syntax
 
-```
+```cpp
 interface class ICommandSource
 ```
 
@@ -44,10 +45,11 @@ For more information on using Windows Forms, see [Using a Windows Form User Cont
 
 **Header:** afxwinforms.h (defined in assembly atlmfc\lib\mfcmifc80.dll)
 
-## <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler
+## <a name="addcommandhandler"></a> ICommandSource::AddCommandHandler
 
 Adds a command handler to a command source object.
-```
+
+```cpp
 void AddCommandHandler(
     unsigned int cmdID,
     CommandHandler^ cmdHandler);
@@ -68,7 +70,8 @@ See [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-
 ## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 
 Adds a group of command handlers to a command source object.
-```
+
+```cpp
 void AddCommandRangeHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax,
@@ -83,6 +86,7 @@ The beginning index of the command ID range.
 The ending index of the command ID range.
 *cmdHandler*<br/>
 A handle to the message handler method to which the commands are mapped.
+
 ### Remarks
 
 This method maps a contiguous range of command IDs to a single message handler and adds it to the command source object. This is used for handling a group of related buttons with one method.
@@ -90,7 +94,8 @@ This method maps a contiguous range of command IDs to a single message handler a
 ## <a name="addcommandrangeuihandler"></a> ICommandSource::AddCommandRangeUIHandler
 
 Adds a group of user interface command message handlers to a command source object.
-```
+
+```cpp
 void AddCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax,
@@ -113,7 +118,8 @@ This method maps a contiguous range of command IDs to a single user interface co
 ## <a name="addcommanduihandler"></a> ICommandSource::AddCommandUIHandler
 
 Adds a user interface command message handler to a command source object.
-```
+
+```cpp
 void AddCommandUIHandler(
     unsigned int cmdID,
     CommandUIHandler^ cmdUIHandler);
@@ -133,7 +139,8 @@ This method adds the user interface command message handler cmdHandler to the co
 ## <a name="postcommand"></a> ICommandSource::PostCommand
 
 Posts a message without waiting for it to be processed.
-```
+
+```cpp
 void PostCommand(unsigned int command);
 ```
 
@@ -141,6 +148,7 @@ void PostCommand(unsigned int command);
 
 *command*<br/>
 The command ID of the message to be posted.
+
 ### Remarks
 
 This method asynchronously posts the message mapped to the ID specified by command. It calls CWnd::PostMessage to place the message in the window's message queue and then returns without waiting for the corresponding window to process the message.
@@ -148,7 +156,8 @@ This method asynchronously posts the message mapped to the ID specified by comma
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
 
 Removes a command handler from a command source object.
-```
+
+```cpp
 void RemoveCommandHandler(unsigned int cmdID);
 ```
 
@@ -156,14 +165,16 @@ void RemoveCommandHandler(unsigned int cmdID);
 
 *cmdID*<br/>
 The command ID.
+
 ### Remarks
 
 This method removes the command handler mapped to cmdID from the command source object.
 
-## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
+## <a name="removecommandrangehandler"></a> ICommandSource::RemoveCommandRangeHandler
 
 Removes a group of command handlers from a command source object.
-```
+
+```cpp
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
@@ -175,14 +186,16 @@ void RemoveCommandRangeUIHandler(
 The beginning index of the command ID range.
 *cmdIDMax*<br/>
 The ending index of the command ID range.
+
 ### Remarks
 
-This method removes a group of message handlers, mapped to the command IDs specifed by cmdIDMin and cmdIDMax, from the command source object.
+This method removes a group of message handlers, mapped to the command IDs specified by cmdIDMin and cmdIDMax, from the command source object.
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
 
 Removes a group of user interface command message handlers from a command source object.
-```
+
+```cpp
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
@@ -194,14 +207,16 @@ void RemoveCommandRangeUIHandler(
 The beginning index of the command ID range.
 *cmdIDMax*<br/>
 The ending index of the command ID range.
+
 ### Remarks
 
-This method removes a group of user interface command message handlers, mapped to the command IDs specifed by cmdIDMin and cmdIDMax, from the command source object.
+This method removes a group of user interface command message handlers, mapped to the command IDs specified by cmdIDMin and cmdIDMax, from the command source object.
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
 
 Removes a user interface command message handler from a command source object.
-```
+
+```cpp
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
 
@@ -209,6 +224,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 
 *cmdID*<br/>
 The command ID.
+
 ### Remarks
 
 This method removes the user interface command message handler mapped to cmdID from the command source object.
@@ -216,7 +232,8 @@ This method removes the user interface command message handler mapped to cmdID f
 ## <a name="sendcommand"></a> ICommandSource::SendCommand
 
 Sends a message and waits for it to be processed before returning.
-```
+
+```cpp
 void SendCommand(unsigned int command);
 ```
 
@@ -224,10 +241,12 @@ void SendCommand(unsigned int command);
 
 *command*<br/>
 The command ID of the message to be sent.
+
 ### Remarks
 
 This method synchronously sends the message mapped to the ID specified by command. It calls CWnd::SendMessage to place the message in the window's message queue and waits until that window procedure has processed the message before returning.
-## See Also
+
+## See also
 
 [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [ICommandTarget Interface](../../mfc/reference/icommandtarget-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: int_2 Class"
 title: "int_2 Class"
 ms.date: "11/04/2016"
 f1_keywords: ["amp_short_vectors/Concurrency::graphics::int_2::y", "amp_short_vectors/Concurrency::graphics::int_2::set_x", "amp_short_vectors/Concurrency::graphics::int_2::set_y", "amp_short_vectors/Concurrency::graphics::int_2::get_yx", "amp_short_vectors/Concurrency::graphics::int_2::operator++", "amp_short_vectors/Concurrency::graphics::int_2::x", "amp_short_vectors/Concurrency::graphics::int_2::set_yx", "amp_short_vectors/Concurrency::graphics::int_2::operator/=", "amp_short_vectors/Concurrency::graphics::int_2::get_y", "amp_short_vectors/Concurrency::graphics::int_2::gr", "amp_short_vectors/Concurrency::graphics::int_2::operator*=", "amp_short_vectors/Concurrency::graphics::int_2::r", "amp_short_vectors/Concurrency::graphics::int_2::get_xy", "amp_short_vectors/Concurrency::graphics::int_2::operator=", "amp_short_vectors/Concurrency::graphics::int_2::g", "amp_short_vectors/Concurrency::graphics::int_2::rg", "amp_short_vectors/Concurrency::graphics::int_2::xy", "amp_short_vectors/Concurrency::graphics::int_2::operator-=", "amp_short_vectors/Concurrency::graphics::int_2::get_x", "amp_short_vectors/Concurrency::graphics::int_2::yx", "amp_short_vectors/Concurrency::graphics::int_2", "amp_short_vectors/Concurrency::graphics::int_2::operator-", "amp_short_vectors/Concurrency::graphics::int_2::set_xy", "amp_short_vectors/Concurrency::graphics::int_2::operator+=", "amp_short_vectors/Concurrency::graphics::int_2::operator--"]
@@ -10,7 +11,7 @@ Represents a short vector of two integers.
 
 ## Syntax
 
-```
+```cpp
 class int_2;
 ```
 
@@ -56,7 +57,7 @@ class int_2;
 |int_2::operator*=||
 |int_2::operator/=||
 |int_2::operator^=||
-|int_2::operator&#124;=||
+|int_2::operator\|=||
 |int_2::operator~||
 |int_2::operator++||
 |int_2::operator+=||
@@ -94,11 +95,11 @@ class int_2;
 
 **Namespace:** Concurrency::graphics
 
-##  <a name="ctor"></a> int_2
+## <a name="ctor"></a> int_2
 
 Default constructor, initializes all elements with 0.
 
-```
+```cpp
 int_2() restrict(amp,
     cpu);
 
@@ -150,12 +151,12 @@ The value for initialization.
 *_Other*<br/>
 The object used to initialize.
 
-##  <a name="int_2__size"></a> size
+## <a name="int_2__size"></a> size
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## See Also
+## See also
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

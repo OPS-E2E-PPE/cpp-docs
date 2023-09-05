@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Operands and Expressions"
 title: "Operands and Expressions"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["expressions [C++], syntax", "operands, definition", "operands"]
@@ -16,6 +17,6 @@ An "operand" is an entity on which an operator acts. An "expression" is a sequen
 
 Operands in C include constants, identifiers, strings, function calls, subscript expressions, member-selection expressions, and complex expressions formed by combining operands with operators or by enclosing operands in parentheses. The syntax for these operands is given in [Primary Expressions](../c-language/c-primary-expressions.md).
 
-## See Also
+## See also
 
 [Expressions and Assignments](../c-language/expressions-and-assignments.md)

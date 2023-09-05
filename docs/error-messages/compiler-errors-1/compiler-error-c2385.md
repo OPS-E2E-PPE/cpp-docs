@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2385"
 title: "Compiler Error C2385"
 ms.date: "11/04/2016"
 f1_keywords: ["C2385"]
@@ -19,7 +20,7 @@ The member can derive from more than one object (it is inherited from more than 
 
 The following sample generates C2385.
 
-```
+```cpp
 // C2385.cpp
 // C2385 expected
 #include <stdio.h>

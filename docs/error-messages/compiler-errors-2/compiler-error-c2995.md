@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2995"
 title: "Compiler Error C2995"
 ms.date: "11/04/2016"
 f1_keywords: ["C2995"]
@@ -13,7 +14,7 @@ Make sure that there is only one definition for each member function of a templa
 
 The following sample generates C2995:
 
-```
+```cpp
 // C2995.cpp
 // compile with: /c
 template <class T>

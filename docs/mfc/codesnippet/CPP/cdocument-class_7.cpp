@@ -7,13 +7,15 @@
 BOOL CExampleDoc::OnNewDocument()
 {
    if (!CDocument::OnNewDocument())
+   {
       return FALSE;
+   }
 
    InitMyDocument(); // call your shared initialization function
 
    // If your new document object requires additional initialization
    // not necessary when the document is deserialized via File Open,
    // then perform that additional initialization here.
-   
+
    return TRUE;
 }

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3244"
 title: "Compiler Error C3244"
 ms.date: "11/04/2016"
 f1_keywords: ["C3244"]
@@ -13,7 +14,7 @@ You tried to [explicitly override](../../cpp/explicit-overrides-cpp.md) a member
 
 The following sample generates C3244:
 
-```
+```cpp
 // C3244.cpp
 #pragma warning(disable:4199)
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2909"
 title: "Compiler Error C2909"
 ms.date: "11/04/2016"
 f1_keywords: ["C2909"]
@@ -13,7 +14,7 @@ An explicit instantiation of a function template requires explicit specification
 
 The following sample generates C2909:
 
-```
+```cpp
 // C2909.cpp
 // compile with: /c
 template<class T> int f(T);

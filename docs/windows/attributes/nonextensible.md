@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: nonextensible"
 title: "nonextensible (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.nonextensible"]
@@ -17,7 +18,7 @@ Specifies that the `IDispatch` implementation includes only the properties and m
 
 ## Remarks
 
-The **nonextensible** C++ attribute has the same functionality as the [nonextensible](/windows/desktop/Midl/nonextensible) MIDL attribute.
+The **nonextensible** C++ attribute has the same functionality as the [nonextensible](/windows/win32/Midl/nonextensible) MIDL attribute.
 
 Use of **nonextensible** also requires the [oleautomation](oleautomation.md) attribute.
 
@@ -42,9 +43,7 @@ __interface IFireTabCtrl
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|**interface**|
 |**Repeatable**|No|
@@ -53,7 +52,7 @@ __interface IFireTabCtrl
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Interface Attributes](interface-attributes.md)

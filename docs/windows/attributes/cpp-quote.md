@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: cpp_quote"
 title: "cpp_quote (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.cpp_quote"]
@@ -26,7 +27,7 @@ The **cpp_quote** C++ attribute is useful if you want to put a preprocessor dire
 
 You can also use **cpp_quote** and generate an .h file as part of the MIDL compilation. For example, if you have a C++ header file that uses C++ IDL attributes but cannot use this file for some task, then you can compile it to create a MIDL-generated .h file, which you should be able to use.
 
-The **cpp_quote** attribute has the same functionality as the [cpp_quote](/windows/desktop/Midl/cpp-quote) MIDL attribute.
+The **cpp_quote** attribute has the same functionality as the [cpp_quote](/windows/win32/Midl/cpp-quote) MIDL attribute.
 
 ## Example
 
@@ -34,9 +35,7 @@ See the example for [dual](dual.md) for an example use how to use **cpp_quote**.
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Anywhere|
 |**Repeatable**|No|
@@ -45,7 +44,7 @@ See the example for [dual](dual.md) for an example use how to use **cpp_quote**.
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Stand-Alone Attributes](stand-alone-attributes.md)

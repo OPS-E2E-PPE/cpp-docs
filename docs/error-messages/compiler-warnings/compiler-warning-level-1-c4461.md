@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4461"
 title: "Compiler Warning (level 1) C4461"
 ms.date: "11/04/2016"
 f1_keywords: ["C4461"]
@@ -19,7 +20,7 @@ For more information, see [Destructors and finalizers](../../dotnet/how-to-defin
 
 The following sample generates C4461.
 
-```
+```cpp
 // C4461.cpp
 // compile with: /W1 /clr /c
 ref class A {

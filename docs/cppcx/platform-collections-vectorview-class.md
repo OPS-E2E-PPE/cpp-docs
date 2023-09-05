@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Collections::VectorView Class"
 title: "Platform::Collections::VectorView Class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -27,7 +28,7 @@ Specifies a binary predicate for testing equality with values of type `T`. The d
 
 ### Remarks
 
-The `VectorView` class implements the [Windows::Foundation::Collections::IVectorView\<T>](/uwp/api/Windows.Foundation.Collections.IVectorView_T_) interface, and support for Standard Template Library iterators.
+The `VectorView` class implements the [Windows::Foundation::Collections::IVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1) interface, and support for Standard Template Library iterators.
 
 ### Members
 
@@ -57,14 +58,13 @@ The `VectorView` class implements the [Windows::Foundation::Collections::IVector
 
 **Namespace:** Platform::Collections
 
-## <a name="first"></a>  VectorView::First Method
+## <a name="first"></a> VectorView::First Method
 
 Returns an iterator that specifies the first element in the VectorView.
 
 ### Syntax
 
 ```
-
 virtual Windows::Foundation::Collections::IIterator<T>^
    First();
 ```
@@ -75,16 +75,15 @@ An iterator that specifies the first element in the VectorView.
 
 ### Remarks
 
-A convenient way to hold the iterator returned by First() is to assign the return value to a variable that is declared with the **auto** type deduction keyword. For example, `auto x = myVectorView->First();`.
+A convenient way to hold the iterator returned by First() is to assign the return value to a variable that is declared with the **`auto`** type deduction keyword. For example, `auto x = myVectorView->First();`.
 
-## <a name="getat"></a>  VectorView::GetAt Method
+## <a name="getat"></a> VectorView::GetAt Method
 
 Retrieves the element of the current VectorView that is indicated by the specified index.
 
 ### Syntax
 
 ```
-
 T GetAt(
    UInt32 index
 );
@@ -99,14 +98,13 @@ A zero-based, unsigned integer that specifies a particular element in the Vector
 
 The element specified by the `index` parameter. The element type is specified by the VectorView template parameter, *T*.
 
-## <a name="getmany"></a>  VectorView::GetMany Method
+## <a name="getmany"></a> VectorView::GetMany Method
 
 Retrieves a sequence of items from the current VectorView, starting at the specified index.
 
 ### Syntax
 
 ```
-
 virtual unsigned int GetMany(
    unsigned int startIndex,
    ::Platform::WriteOnlyArray<T>^ dest
@@ -125,14 +123,13 @@ When this operation completes, an array of items that begin at the element speci
 
 The number of items retrieved.
 
-## <a name="indexof"></a>  VectorView::IndexOf Method
+## <a name="indexof"></a> VectorView::IndexOf Method
 
 Searches for the specified item in the current VectorView, and if found, returns the index of the item.
 
 ### Syntax
 
 ```
-
 virtual bool IndexOf(
    T value,
    unsigned int* index
@@ -147,20 +144,19 @@ The item to find.
 *index*<br/>
 The zero-based index of the item if parameter `value` is found; otherwise, 0.
 
-The *index* parameter is 0 if either the item is the first element of the `VectorView` or the item was not found. If the return value is **true**, the item was found and it is the first element; otherwise, the item was not found.
+The *index* parameter is 0 if either the item is the first element of the `VectorView` or the item was not found. If the return value is **`true`**, the item was found and it is the first element; otherwise, the item was not found.
 
 ### Return Value
 
-**true** if the specified item is found; otherwise, **false**.
+**`true`** if the specified item is found; otherwise, **`false`**.
 
-## <a name="size"></a>  VectorView::Size Method
+## <a name="size"></a> VectorView::Size Method
 
 Returns the number of elements in the current VectorView object.
 
 ### Syntax
 
 ```
-
 virtual property unsigned int Size;
 ```
 
@@ -168,7 +164,7 @@ virtual property unsigned int Size;
 
 The number of elements in the current VectorView.
 
-## <a name="ctor"></a>  VectorView::VectorView Constructor
+## <a name="ctor"></a> VectorView::VectorView Constructor
 
 Initializes a new instance of the VectorView class.
 
@@ -261,7 +257,7 @@ The first element in a sequence of objects that are used to initialize the curre
 *last*<br/>
 The last element in a sequence of objects that are used to initialize the current VectorView. The type of `last` is passed by means of *perfect forwarding*. For more information, see [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## See Also
+## See also
 
 [Platform Namespace](platform-namespace-c-cx.md)<br/>
 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ATL Macros"
 title: "ATL Macros"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ATL, macros", "macros, ATL"]
@@ -65,11 +66,10 @@ Define window class utilities.
 [Windows Messages Macros](../../atl/reference/windows-messages-macros.md)<br/>
 Forward window messages.
 
-## See Also
+## See also
 
 [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md)<br/>
 [Functions](../../atl/reference/atl-functions.md)<br/>
 [Global Variables](../../atl/reference/atl-global-variables.md)<br/>
 [Classes and structs](../../atl/reference/atl-classes.md)<br/>
 [Typedefs](../../atl/reference/atl-typedefs.md)
-

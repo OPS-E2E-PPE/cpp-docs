@@ -1,13 +1,14 @@
 ---
+description: "Learn more about: IRowsetUpdateImpl Class"
 title: "IRowsetUpdateImpl Class"
 ms.date: "11/04/2016"
-f1_keywords: ["IRowsetUpdateImpl", "ATL.IRowsetUpdateImpl", "ATL::IRowsetUpdateImpl", "SetData", "IRowsetUpdateImpl::SetData", "IRowsetUpdateImpl.SetData", "ATL::IRowsetUpdateImpl::SetData", "ATL.IRowsetUpdateImpl.SetData", "ATL.IRowsetUpdateImpl.GetOriginalData", "IRowsetUpdateImpl.GetOriginalData", "GetOriginalData", "ATL::IRowsetUpdateImpl::GetOriginalData", "IRowsetUpdateImpl::GetOriginalData", "IRowsetUpdateImpl::GetPendingRows", "GetPendingRows", "IRowsetUpdateImpl.GetPendingRows", "ATL::IRowsetUpdateImpl::GetPendingRows", "ATL.IRowsetUpdateImpl.GetPendingRows", "ATL.IRowsetUpdateImpl.GetRowStatus", "IRowsetUpdateImpl::GetRowStatus", "IRowsetUpdateImpl.GetRowStatus", "ATL::IRowsetUpdateImpl::GetRowStatus", "GetRowStatus", "ATL.IRowsetUpdateImpl.Undo", "ATL::IRowsetUpdateImpl::Undo", "IRowsetUpdateImpl::Undo", "IRowsetUpdateImpl.Undo", "ATL::IRowsetUpdateImpl::Update", "IRowsetUpdateImpl::Update", "IRowsetUpdateImpl.Update", "ATL.IRowsetUpdateImpl.Update", "IRowsetUpdateImpl::IsUpdateAllowed", "IRowsetUpdateImpl.IsUpdateAllowed", "IsUpdateAllowed", "IRowsetUpdateImpl.m_mapCachedData", "IRowsetUpdateImpl::m_mapCachedData", "m_mapCachedData"]
+f1_keywords: ["IRowsetUpdateImpl", "ATL.IRowsetUpdateImpl", "ATL::IRowsetUpdateImpl", "IRowsetUpdateImpl::SetData", "IRowsetUpdateImpl.SetData", "ATL::IRowsetUpdateImpl::SetData", "ATL.IRowsetUpdateImpl.SetData", "ATL.IRowsetUpdateImpl.GetOriginalData", "IRowsetUpdateImpl.GetOriginalData", "ATL::IRowsetUpdateImpl::GetOriginalData", "IRowsetUpdateImpl::GetOriginalData", "IRowsetUpdateImpl::GetPendingRows", "GetPendingRows", "IRowsetUpdateImpl.GetPendingRows", "ATL::IRowsetUpdateImpl::GetPendingRows", "ATL.IRowsetUpdateImpl.GetPendingRows", "ATL.IRowsetUpdateImpl.GetRowStatus", "IRowsetUpdateImpl::GetRowStatus", "IRowsetUpdateImpl.GetRowStatus", "ATL::IRowsetUpdateImpl::GetRowStatus", "ATL.IRowsetUpdateImpl.Undo", "ATL::IRowsetUpdateImpl::Undo", "IRowsetUpdateImpl::Undo", "IRowsetUpdateImpl.Undo", "ATL::IRowsetUpdateImpl::Update", "IRowsetUpdateImpl::Update", "IRowsetUpdateImpl.Update", "ATL.IRowsetUpdateImpl.Update", "IRowsetUpdateImpl::IsUpdateAllowed", "IRowsetUpdateImpl.IsUpdateAllowed", "IsUpdateAllowed", "IRowsetUpdateImpl.m_mapCachedData", "IRowsetUpdateImpl::m_mapCachedData", "m_mapCachedData"]
 helpviewer_keywords: ["providers, updatable", "IRowsetUpdateImpl class", "updatable providers, deferred update", "SetData method", "GetOriginalData method", "GetPendingRows method", "GetRowStatus method", "Undo method", "Update method", "IsUpdateAllowed method", "m_mapCachedData"]
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
 ---
 # IRowsetUpdateImpl Class
 
-The OLE DB Templates implementation of the [IRowsetUpdate](https://docs.microsoft.com/previous-versions/windows/desktop/ms714401(v=vs.85)) interface.
+The OLE DB Templates implementation of the [IRowsetUpdate](/previous-versions/windows/desktop/ms714401(v=vs.85)) interface.
 
 ## Syntax
 
@@ -53,13 +54,13 @@ The storage unit for all row handles held by the provider.
 
 ### Interface Methods (Used with IRowsetChange)
 
-|||
+| Name | Description |
 |-|-|
 |[SetData](#setdata)|Sets data values in one or more columns.|
 
 ### Interface Methods (Used with IRowsetUpdate)
 
-|||
+| Name | Description |
 |-|-|
 |[GetOriginalData](#getoriginaldata)|Gets the data most recently transmitted to or obtained from the data source, ignoring pending changes.|
 |[GetPendingRows](#getpendingrows)|Returns a list of rows with pending changes.|
@@ -69,24 +70,24 @@ The storage unit for all row handles held by the provider.
 
 ### Implementation Methods (Callback)
 
-|||
+| Name | Description |
 |-|-|
 |[IsUpdateAllowed](#isupdateallowed)|Used to check for security, integrity, and so on before allowing updates.|
 
 ### Data Members
 
-|||
+| Name | Description |
 |-|-|
 |[m_mapCachedData](#mapcacheddata)|Contains the original data for the deferred operation.|
 
 ## Remarks
 
-You should first read and understand the documentation for [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)), because everything described there also applies here. You should also read chapter 6 of the *OLE DB Programmer's Reference* on setting data.
+You should first read and understand the documentation for [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)), because everything described there also applies here. You should also read chapter 6 of the *OLE DB Programmer's Reference* on setting data.
 
 `IRowsetUpdateImpl` implements the OLE DB `IRowsetUpdate` interface, which enables consumers to delay the transmission of changes made with `IRowsetChange` to the data source and undo changes before transmission.
 
 > [!IMPORTANT]
->  It is strongly recommended that you read the following documentation BEFORE attempting to implement your provider:
+> It is strongly recommended that you read the following documentation BEFORE attempting to implement your provider:
 
 - [Creating an Updatable Provider](../../data/oledb/creating-an-updatable-provider.md)
 
@@ -108,11 +109,11 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### Parameters
 
-See [IRowsetChange::SetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85)) in the *OLE DB Programmer's Reference*.
+See [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ### Remarks
 
-This method overrides the [IRowsetChangeImpl::SetData](../../data/oledb/irowsetchangeimpl-setdata.md) method but includes caching of original data to permit either immediate or deferred processing of the operation.
+This method overrides the [IRowsetChangeImpl::SetData](./irowsetchangeimpl-class.md#setdata) method but includes caching of original data to permit either immediate or deferred processing of the operation.
 
 ## <a name="getoriginaldata"></a> IRowsetUpdateImpl::GetOriginalData
 
@@ -128,7 +129,7 @@ STDMETHOD (GetOriginalData )(HROW hRow,
 
 #### Parameters
 
-See [IRowsetUpdate::GetOriginalData](https://docs.microsoft.com/previous-versions/windows/desktop/ms709947(v=vs.85)) in the *OLE DB Programmer's Reference*.
+See [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ## <a name="getpendingrows"></a> IRowsetUpdateImpl::GetPendingRows
 
@@ -147,13 +148,13 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
 #### Parameters
 
 *hReserved*<br/>
-[in] Corresponds to the *hChapter* parameter in [IRowsetUpdate::GetPendingRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719626(v=vs.85)).
+[in] Corresponds to the *hChapter* parameter in [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)).
 
-For other parameters, see [IRowsetUpdate::GetPendingRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719626(v=vs.85)) in the *OLE DB Programmer's Reference*.
+For other parameters, see [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ### Remarks
 
-For more information, see [IRowsetUpdate::GetPendingRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719626(v=vs.85)) in the *OLE DB Programmer's Reference*.
+For more information, see [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ## <a name="getrowstatus"></a> IRowsetUpdateImpl::GetRowStatus
 
@@ -171,9 +172,9 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
 #### Parameters
 
 *hReserved*<br/>
-[in] Corresponds to the *hChapter* parameter in [IRowsetUpdate::GetRowStatus](https://docs.microsoft.com/previous-versions/windows/desktop/ms724377(v=vs.85)).
+[in] Corresponds to the *hChapter* parameter in [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85)).
 
-For other parameters, see [IRowsetUpdate::GetRowStatus](https://docs.microsoft.com/previous-versions/windows/desktop/ms724377(v=vs.85)) in the *OLE DB Programmer's Reference*.
+For other parameters, see [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ## <a name="undo"></a> IRowsetUpdateImpl::Undo
 
@@ -193,15 +194,15 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
 #### Parameters
 
 *hReserved*<br/>
-[in] Corresponds to the *hChapter* parameter in [IRowsetUpdate::Undo](https://docs.microsoft.com/previous-versions/windows/desktop/ms719655(v=vs.85)).
+[in] Corresponds to the *hChapter* parameter in [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)).
 
 *pcRowsUndone*<br/>
-[out] Corresponds to the *pcRows* parameter in [IRowsetUpdate::Undo](https://docs.microsoft.com/previous-versions/windows/desktop/ms719655(v=vs.85)).
+[out] Corresponds to the *pcRows* parameter in [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)).
 
 *prgRowsUndone*<br/>
-[in] Corresponds to the *prgRows* parameter in [IRowsetUpdate::Undo](https://docs.microsoft.com/previous-versions/windows/desktop/ms719655(v=vs.85)).
+[in] Corresponds to the *prgRows* parameter in [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)).
 
-For other parameters, see [IRowsetUpdate::Undo](https://docs.microsoft.com/previous-versions/windows/desktop/ms719655(v=vs.85)) in the *OLE DB Programmer's Reference*.
+For other parameters, see [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ## <a name="update"></a> IRowsetUpdateImpl::Update
 
@@ -221,13 +222,13 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 #### Parameters
 
 *hReserved*<br/>
-[in] Corresponds to the *hChapter* parameter in [IRowsetUpdate::Update](https://docs.microsoft.com/previous-versions/windows/desktop/ms719709(v=vs.85)).
+[in] Corresponds to the *hChapter* parameter in [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709(v=vs.85)).
 
-For other parameters, see [IRowsetUpdate::Update](https://docs.microsoft.com/previous-versions/windows/desktop/ms719709(v=vs.85)) in the *OLE DB Programmer's Reference*.
+For other parameters, see [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ### Remarks
 
-Changes are transmitted by calling [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). The consumer must call [CRowset::Update](../../data/oledb/crowset-update.md) for the changes to take effect. Set *prgRowstatus* to an appropriate value as described in [Row States](https://docs.microsoft.com/previous-versions/windows/desktop/ms722752(v=vs.85)) in the *OLE DB Programmer's Reference*.
+Changes are transmitted by calling [IRowsetChangeImpl::FlushData](./irowsetchangeimpl-class.md#flushdata). The consumer must call [CRowset::Update](./crowset-class.md#update) for the changes to take effect. Set *prgRowstatus* to an appropriate value as described in [Row States](/previous-versions/windows/desktop/ms722752(v=vs.85)) in the *OLE DB Programmer's Reference*.
 
 ## <a name="isupdateallowed"></a> IRowsetUpdateImpl::IsUpdateAllowed
 
@@ -254,7 +255,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 
 ### Remarks
 
-If you determine that an update should be allowed, returns S_OK; otherwise returns E_FAIL. If you allow an update, you also need to set the `DBROWSTATUS` in [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) to an appropriate [row state](https://docs.microsoft.com/previous-versions/windows/desktop/ms722752(v=vs.85)).
+If you determine that an update should be allowed, returns S_OK; otherwise returns E_FAIL. If you allow an update, you also need to set the `DBROWSTATUS` in [IRowsetUpdateImpl::Update](#update) to an appropriate [row state](/previous-versions/windows/desktop/ms722752(v=vs.85)).
 
 ## <a name="mapcacheddata"></a> IRowsetUpdateImpl::m_mapCachedData
 
@@ -264,7 +265,7 @@ A map containing the original data for the deferred operation.
 
 ```cpp
 CAtlMap<
-   HROW hRow, 
+   HROW hRow,
    Storage* pData
 >
 m_mapCachedData;
@@ -278,7 +279,7 @@ Handle to the rows for the data.
 *pData*<br/>
 A pointer to the data to be cached. The data is of type *Storage* (the user record class). See the *Storage* template argument in [IRowsetUpdateImpl Class](../../data/oledb/irowsetupdateimpl-class.md).
 
-## See Also
+## See also
 
 [OLE DB Provider Templates](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB Provider Template Architecture](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

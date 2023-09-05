@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CD2DBrush Class"
 title: "CD2DBrush Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CD2DBrush", "AFXRENDERTARGET/CD2DBrush", "AFXRENDERTARGET/CD2DBrush::CD2DBrush", "AFXRENDERTARGET/CD2DBrush::Attach", "AFXRENDERTARGET/CD2DBrush::Destroy", "AFXRENDERTARGET/CD2DBrush::Detach", "AFXRENDERTARGET/CD2DBrush::Get", "AFXRENDERTARGET/CD2DBrush::GetOpacity", "AFXRENDERTARGET/CD2DBrush::GetTransform", "AFXRENDERTARGET/CD2DBrush::IsValid", "AFXRENDERTARGET/CD2DBrush::SetOpacity", "AFXRENDERTARGET/CD2DBrush::SetTransform", "AFXRENDERTARGET/CD2DBrush::m_pBrush", "AFXRENDERTARGET/CD2DBrush::m_pBrushProperties"]
@@ -63,7 +64,7 @@ class CD2DBrush : public CD2DResource;
 
 **Header:** afxrendertarget.h
 
-##  <a name="_dtorcd2dbrush"></a>  CD2DBrush::~CD2DBrush
+## <a name="_dtorcd2dbrush"></a> CD2DBrush::~CD2DBrush
 
 The destructor. Called when a D2D brush object is being destroyed.
 
@@ -71,11 +72,11 @@ The destructor. Called when a D2D brush object is being destroyed.
 virtual ~CD2DBrush();
 ```
 
-##  <a name="attach"></a>  CD2DBrush::Attach
+## <a name="attach"></a> CD2DBrush::Attach
 
 Attaches existing resource interface to the object.
 
-```
+```cpp
 void Attach(ID2D1Brush* pResource);
 ```
 
@@ -84,7 +85,7 @@ void Attach(ID2D1Brush* pResource);
 *pResource*<br/>
 Existing resource interface. Cannot be NULL.
 
-##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush
+## <a name="cd2dbrush"></a> CD2DBrush::CD2DBrush
 
 Constructs a CD2DBrush object.
 
@@ -106,7 +107,7 @@ A pointer to the opacity and transformation of a brush.
 *bAutoDestroy*<br/>
 Indicates that the object will be destroyed by owner (pParentTarget).
 
-##  <a name="destroy"></a>  CD2DBrush::Destroy
+## <a name="destroy"></a> CD2DBrush::Destroy
 
 Destroys a CD2DBrush object.
 
@@ -114,7 +115,7 @@ Destroys a CD2DBrush object.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DBrush::Detach
+## <a name="detach"></a> CD2DBrush::Detach
 
 Detaches resource interface from the object.
 
@@ -126,7 +127,7 @@ ID2D1Brush* Detach();
 
 Pointer to detached resource interface.
 
-##  <a name="get"></a>  CD2DBrush::Get
+## <a name="get"></a> CD2DBrush::Get
 
 Returns ID2D1Brush interface
 
@@ -138,7 +139,7 @@ ID2D1Brush* Get();
 
 Pointer to an ID2D1Brush interface or NULL if object is not initialized yet.
 
-##  <a name="getopacity"></a>  CD2DBrush::GetOpacity
+## <a name="getopacity"></a> CD2DBrush::GetOpacity
 
 Gets the degree of opacity of this brush
 
@@ -150,11 +151,11 @@ FLOAT GetOpacity() const;
 
 A value between zero and 1 that indicates the opacity of the brush. This value is a constant multiplier that linearly scales the alpha value of all pixels filled by the brush. The opacity values are clamped in the range 0 to 1 before they are multiplied together.
 
-##  <a name="gettransform"></a>  CD2DBrush::GetTransform
+## <a name="gettransform"></a> CD2DBrush::GetTransform
 
 Gets the current transform of the render target
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 ```
 
@@ -163,7 +164,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 *transform*<br/>
 When this returns, contains the current transform of the render target. This parameter is passed uninitialized.
 
-##  <a name="isvalid"></a>  CD2DBrush::IsValid
+## <a name="isvalid"></a> CD2DBrush::IsValid
 
 Checks resource validity
 
@@ -175,7 +176,7 @@ virtual BOOL IsValid() const;
 
 TRUE if resource is valid; otherwise FALSE.
 
-##  <a name="m_pbrush"></a>  CD2DBrush::m_pBrush
+## <a name="m_pbrush"></a> CD2DBrush::m_pBrush
 
 Stores a pointer to an ID2D1Brush object.
 
@@ -183,7 +184,7 @@ Stores a pointer to an ID2D1Brush object.
 ID2D1Brush* m_pBrush;
 ```
 
-##  <a name="m_pbrushproperties"></a>  CD2DBrush::m_pBrushProperties
+## <a name="m_pbrushproperties"></a> CD2DBrush::m_pBrushProperties
 
 Brush properties.
 
@@ -191,7 +192,7 @@ Brush properties.
 CD2DBrushProperties* m_pBrushProperties;
 ```
 
-##  <a name="operator_id2d1brush_star"></a>  CD2DBrush::operator ID2D1Brush*
+## <a name="operator_id2d1brush_star"></a> CD2DBrush::operator ID2D1Brush*
 
 Returns ID2D1Brush interface
 
@@ -203,11 +204,11 @@ operator ID2D1Brush*();
 
 Pointer to an ID2D1Brush interface or NULL if object is not initialized yet.
 
-##  <a name="setopacity"></a>  CD2DBrush::SetOpacity
+## <a name="setopacity"></a> CD2DBrush::SetOpacity
 
 Sets the degree of opacity of this brush
 
-```
+```cpp
 void SetOpacity(FLOAT opacity);
 ```
 
@@ -216,11 +217,11 @@ void SetOpacity(FLOAT opacity);
 *opacity*<br/>
 A value between zero and 1 that indicates the opacity of the brush. This value is a constant multiplier that linearly scales the alpha value of all pixels filled by the brush. The opacity values are clamped in the range 0 to 1 before they are multiplied together.
 
-##  <a name="settransform"></a>  CD2DBrush::SetTransform
+## <a name="settransform"></a> CD2DBrush::SetTransform
 
 Applies the specified transform to the render target, replacing the existing transformation. All subsequent drawing operations occur in the transformed space.
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 ```
 
@@ -229,6 +230,6 @@ void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 *transform*<br/>
 The transform to apply to the render target
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

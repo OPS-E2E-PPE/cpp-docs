@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Debugging Tips"
 title: "Debugging Tips (ATL)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ATL, debugging", "services, debugging"]
@@ -14,7 +15,6 @@ The following topics outline some useful steps for debugging your service:
 
 - [Running the Program as a Local Server](../atl/running-the-program-as-a-local-server.md)
 
-## See Also
+## See also
 
 [Services](../atl/atl-services.md)
-

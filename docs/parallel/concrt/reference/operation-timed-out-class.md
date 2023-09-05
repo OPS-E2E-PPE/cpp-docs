@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: operation_timed_out Class"
 title: "operation_timed_out Class"
 ms.date: "11/04/2016"
 f1_keywords: ["operation_timed_out", "CONCRT/concurrency::operation_timed_out", "CONCRT/concurrency::operation_timed_out::operation_timed_out"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when an operation has timed out.
 
 ## Syntax
 
-```
+```cpp
 class operation_timed_out : public std::exception;
 ```
 
@@ -35,11 +36,11 @@ class operation_timed_out : public std::exception;
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> operation_timed_out
+## <a name="ctor"></a> operation_timed_out
 
 Constructs an `operation_timed_out` object.
 
-```
+```cpp
 explicit _CRTIMP operation_timed_out(_In_z_ const char* _Message) throw();
 
 operation_timed_out() throw();
@@ -50,6 +51,6 @@ operation_timed_out() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

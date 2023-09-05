@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Send a Message at a Regular Interval"
 title: "How to: Send a Message at a Regular Interval"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["timer class, example", "sending messages at regular intervals [Concurrency Runtime]"]
@@ -24,9 +25,9 @@ Performing a lengthy operation..........done.
 
 Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `report-progress.cpp` and then run the following command in a Visual Studio Command Prompt window.
 
-**cl.exe /EHsc report-progress.cpp**
+> **cl.exe /EHsc report-progress.cpp**
 
-## See Also
+## See also
 
 [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Asynchronous Message Blocks](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

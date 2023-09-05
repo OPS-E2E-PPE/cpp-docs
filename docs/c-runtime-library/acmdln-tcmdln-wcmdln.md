@@ -1,20 +1,22 @@
 ---
+description: "Learn more about: _acmdln, _tcmdln, _wcmdln"
 title: "_acmdln, _tcmdln, _wcmdln"
 ms.date: "11/04/2016"
-apiname: ["_wcmdln", "_acmdln"]
-apilocation: ["msvcrt.dll"]
-apitype: "DLLExport"
-f1_keywords: ["_acmdln", "acmdln", "_wcmdln", "wcmdln", "_tcmdln", "tcmdln"]
+api_name: ["_wcmdln", "_acmdln"]
+api_location: ["msvcrt.dll"]
+api_type: ["DLLExport"]
+topic_type: ["apiref"]
+f1_keywords: ["_acmdln", "_wcmdln", "_tcmdln"]
 helpviewer_keywords: ["_wcmdln global variable", "wcmdln global variable", "_acmdln global variable", "_tcmdln global variable", "tcmdln global variable", "acmdln global variable"]
 ms.assetid: 4fc0a6a0-3f93-420a-a19f-5276061ba539
 ---
-# _acmdln, _tcmdln, _wcmdln
+# `_acmdln`, `_tcmdln`, `_wcmdln`
 
 Internal CRT global variable. The command line.
 
 ## Syntax
 
-```
+```C
 char * _acmdln;
 wchar_t * _wcmdln;
 
@@ -26,8 +28,8 @@ wchar_t * _wcmdln;
 
 ## Remarks
 
-These CRT internal variables store the complete command line. They are exposed in the exported symbols for the CRT, but are not intended for use in your code. `_acmdln` stores the data as a character string. `_wcmdln` stores the data as a wide character string. `_tcmdln` can be defined as either `_acmdln` or `_wcmdln`, depending on which is appropriate.
+These CRT internal variables store the complete command line. They're exposed in the exported symbols for the CRT, but aren't intended for use in your code. `_acmdln` stores the data as a character string. `_wcmdln` stores the data as a wide character string. `_tcmdln` can be defined as either `_acmdln` or `_wcmdln`, depending on which is appropriate.
 
-## See Also
+## See also
 
-[Global Variables](../c-runtime-library/global-variables.md)
+[Global variables](./global-variables.md)

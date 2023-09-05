@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Add Native DLL to Global Assembly Cache"
 title: "How to: Add Native DLL to Global Assembly Cache"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -19,6 +20,6 @@ For more information, see [/ASSEMBLYLINKRESOURCE (Link to .NET Framework Resourc
 /ASSEMBLYLINKRESOURCE:MyComponent.dll
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: string (C++)"
 title: "string  (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.string"]
@@ -7,7 +8,7 @@ ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
 ---
 # string (C++)
 
-Indicates that the one-dimensional **char**, **wchar_t**, `byte` (or equivalent) array or the pointer to such an array must be treated as a string.
+Indicates that the one-dimensional **`char`**, **`wchar_t`**, `byte` (or equivalent) array or the pointer to such an array must be treated as a string.
 
 ## Syntax
 
@@ -17,7 +18,7 @@ Indicates that the one-dimensional **char**, **wchar_t**, `byte` (or equivalent)
 
 ## Remarks
 
-The **string** C++ attribute has the same functionality as the [string](/windows/desktop/Midl/string) MIDL attribute.
+The **string** C++ attribute has the same functionality as the [string](/windows/win32/Midl/string) MIDL attribute.
 
 ## Example
 
@@ -38,9 +39,7 @@ __interface IFireTabCtrl
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Array or pointer to an array, interface parameter, interface method|
 |**Repeatable**|No|
@@ -49,7 +48,7 @@ __interface IFireTabCtrl
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Array Attributes](array-attributes.md)<br/>

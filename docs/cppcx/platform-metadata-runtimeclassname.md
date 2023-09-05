@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Metadata::RuntimeClassName"
 title: "Platform::Metadata::RuntimeClassName"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -57,6 +58,6 @@ namespace Test
 }
 ```
 
-## See Also
+## See also
 
 [Platform::Metadata Namespace](../cppcx/platform-metadata-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3034"
 title: "Compiler Error C3034"
 ms.date: "11/04/2016"
 f1_keywords: ["C3034"]
@@ -13,7 +14,7 @@ Some directives cannot be nested. To fix this error, you can merge the statement
 
 The following sample generates C3034:
 
-```
+```cpp
 // C3034.cpp
 // compile with: /openmp /link vcomps.lib
 int main() {

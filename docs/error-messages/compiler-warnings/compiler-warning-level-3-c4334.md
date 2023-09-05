@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4334"
 title: "Compiler Warning (level 3) C4334"
 ms.date: "11/04/2016"
 f1_keywords: ["C4334"]
@@ -15,7 +16,7 @@ The result of 32-bit shift was implicitly converted to 64-bits, and the compiler
 
 The following sample generates C4334.
 
-```
+```cpp
 // C4334.cpp
 // compile with: /W3 /c
 void SetBit(unsigned __int64 *p, int i) {

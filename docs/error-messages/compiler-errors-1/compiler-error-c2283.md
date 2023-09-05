@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2283"
 title: "Compiler Error C2283"
 ms.date: "11/04/2016"
 f1_keywords: ["C2283"]
@@ -13,7 +14,7 @@ A member function of an unnamed class or structure is declared with a pure speci
 
 The following sample generates C2283:
 
-```
+```cpp
 // C2283.cpp
 // compile with: /c
 struct {

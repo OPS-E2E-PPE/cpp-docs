@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2250"
 title: "Compiler Error C2250"
 ms.date: "11/04/2016"
 f1_keywords: ["C2250"]
@@ -13,7 +14,7 @@ The derived class inherits more than one override of a virtual function of a vir
 
 The following sample generates C2286:
 
-```
+```cpp
 // C2250.cpp
 // compile with: /c
 // C2250 expected

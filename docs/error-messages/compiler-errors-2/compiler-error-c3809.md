@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3809"
 title: "Compiler Error C3809"
 ms.date: "11/04/2016"
 f1_keywords: ["C3809"]
@@ -13,7 +14,7 @@ Managed types and Windows Runtime types do not allow friends. To fix this error,
 
 The following sample generates C3809:
 
-```
+```cpp
 // C3809a.cpp
 // compile with: /clr
 ref class A {};

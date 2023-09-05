@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Signed Bitwise Operations"
 title: "Signed Bitwise Operations"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["bitwise operations", "signed bitwise operations"]
@@ -19,6 +20,6 @@ Bitwise operations on signed integers work the same as bitwise operations on uns
 
 The result of the bitwise AND is 96.
 
-## See Also
+## See also
 
 [Integers](../c-language/integers.md)

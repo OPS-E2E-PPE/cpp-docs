@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2164"
 title: "Compiler Error C2164"
 ms.date: "11/04/2016"
 f1_keywords: ["C2164"]
@@ -13,7 +14,7 @@ An `intrinsic` pragma uses an undeclared function (only occurs with **/Oi**). Or
 
 The following sample generates C2164:
 
-```
+```c
 // C2164.c
 // compile with: /c
 // processor: x86

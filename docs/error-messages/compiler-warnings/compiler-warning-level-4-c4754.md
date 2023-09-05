@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4754"
 title: "Compiler Warning (level 4) C4754"
 ms.date: "11/04/2016"
 f1_keywords: ["C4754"]
@@ -11,9 +12,9 @@ Conversion rules for arithmetic operations in a comparison mean that one branch 
 
 The C4754 warning is issued because the result of the comparison is always the same. This indicates that one of the branches of the condition is never executed, most likely because the associated integer expression is incorrect. This code defect often occurs in incorrect integer overflow checks on 64-bit architectures.
 
-Integer conversion rules are complex and there are many subtle pitfalls. As an alternative to fixing each C4754 warning, you can update the code to use the [SafeInt Library](../../windows/safeint-library.md).
+Integer conversion rules are complex and there are many subtle pitfalls. As an alternative to fixing each C4754 warning, you can update the code to use the [SafeInt Library](../../safeint/safeint-library.md).
 
-## Example
+## Examples
 
 This sample generates C4754:
 
@@ -50,8 +51,6 @@ To eliminate the warning, you can change the assignment statement to cast the op
 unsigned long long x =
    (unsigned long long)a + (unsigned long long)b;
 ```
-
-## Example
 
 The next sample also generates C4754.
 

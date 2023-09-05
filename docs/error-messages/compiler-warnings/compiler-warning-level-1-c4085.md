@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4085"
 title: "Compiler Warning (level 1) C4085"
 ms.date: "11/04/2016"
 f1_keywords: ["C4085"]
@@ -13,7 +14,7 @@ The pragma requires an **on** or **off** parameter. The pragma is ignored.
 
 The following sample generates C4085:
 
-```
+```cpp
 // C4085.cpp
 // compile with: /W1 /LD
 #pragma optimize( "t", maybe )  // C4085

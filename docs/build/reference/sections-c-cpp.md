@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: SECTIONS (C/C++)"
 title: "SECTIONS (C/C++)"
 ms.date: "11/04/2016"
 f1_keywords: ["SECTIONS"]
@@ -50,8 +51,8 @@ section [CLASS 'classname'] specifier
 
 The `CLASS` keyword is supported for compatibility, but is ignored.
 
-An equivalent way to specify section attributes is with the [/SECTION](../../build/reference/section-specify-section-attributes.md) option.
+An equivalent way to specify section attributes is with the [/SECTION](section-specify-section-attributes.md) option.
 
-## See Also
+## See also
 
-[Rules for Module-Definition Statements](../../build/reference/rules-for-module-definition-statements.md)
+[Rules for Module-Definition Statements](rules-for-module-definition-statements.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Avoiding Exceptions on CLR Shutdown When Consuming COM Objects Built with /clr"
 title: "Avoiding Exceptions thrown by COM Objects Built with -clr"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["interop [C++], CLR shutdown exceptions", "/clr compiler option [C++], CLR shutdown exceptions", "mixed assemblies [C++], CLR shutdown exceptions", "/clr compiler option [C++], COM objects", "interoperability [C++], CLR shutdown exceptions", "CLR shutdown exceptions [C++]"]
@@ -10,6 +11,6 @@ Once the common language runtime (CLR) enters shutdown mode, native functions ha
 
 To resolve this, ensure that destructors called from Release methods only contain native code.
 
-## See Also
+## See also
 
 [Mixed (Native and Managed) Assemblies](../dotnet/mixed-native-and-managed-assemblies.md)

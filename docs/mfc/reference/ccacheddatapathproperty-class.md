@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CCachedDataPathProperty Class"
 title: "CCachedDataPathProperty Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CCachedDataPathProperty", "AFXCTL/CCachedDataPathProperty", "AFXCTL/CCachedDataPathProperty::CCachedDataPathProperty", "AFXCTL/CCachedDataPathProperty::m_Cache"]
@@ -63,7 +64,7 @@ For more information about how to use asynchronous monikers and ActiveX controls
 
 **Header:** afxctl.h
 
-##  <a name="ccacheddatapathproperty"></a>  CCachedDataPathProperty::CCachedDataPathProperty
+## <a name="ccacheddatapathproperty"></a> CCachedDataPathProperty::CCachedDataPathProperty
 
 Constructs a `CCachedDataPathProperty` object.
 
@@ -87,7 +88,7 @@ The path, which may be absolute or relative, used to create an asynchronous moni
 
 The `COleControl` object pointed to by *pControl* is used by [Open](../../mfc/reference/cdatapathproperty-class.md#open) and retrieved by derived classes. If *pControl* is NULL, the control used with `Open` should be set with [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). If *lpszPath* is NULL, you can pass in the path through `Open` or set it with [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).
 
-##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache
+## <a name="m_cache"></a> CCachedDataPathProperty::m_Cache
 
 Contains the class name of the memory file into which data is cached.
 
@@ -99,7 +100,7 @@ CMemFile m_Cache;
 
 A memory file is stored in RAM rather than on disk.
 
-## See Also
+## See also
 
 [CDataPathProperty Class](../../mfc/reference/cdatapathproperty-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4816"
 title: "Compiler Warning (level 4) C4816"
 ms.date: "11/04/2016"
 f1_keywords: ["C4816"]
@@ -15,7 +16,7 @@ A parameter to an object with a zero-size array was not passed by reference. The
 
 The following sample generates C4816:
 
-```
+```cpp
 // C4816.cpp
 // compile with: /W4
 #include <stdio.h>

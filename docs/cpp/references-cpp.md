@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: References (C++)"
 title: "References (C++)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["objects [C++], referencing", "references [C++]", "references, to pointers", "declarations, references", "references, declaring", "referencing objects, declarator syntax"]
@@ -22,17 +23,17 @@ References are declared using the following sequence:
 
    - An optional storage class specifier.
 
-   - Optional **const** and/or **volatile** qualifiers.
+   - Optional **`const`** and/or **`volatile`** qualifiers.
 
    - The type specifier: the name of a type.
 
 1. The declarator:
 
-   - An optional Microsoft specific modifier. For more information, see [Microsoft-Specific Modifiers](../cpp/microsoft-specific-modifiers.md).
+   - An optional Microsoft-specific modifier. For more information, see [Microsoft-Specific Modifiers](../cpp/microsoft-specific-modifiers.md).
 
    - The **&** operator or **&&** operator.
 
-   - Optional **const** and/or **volatile** qualifers.
+   - Optional **`const`** and/or **`volatile`** qualifers.
 
    - The identifier.
 
@@ -68,7 +69,7 @@ struct S {
 
 int main() {
    S  s;   // Declare the object.
-   S& SRef = s;   // Declare the reference.
+   S& SRef = s;   // Declare and initialize the reference.
    s.i = 3;
 
    printf_s("%d\n", s.i);

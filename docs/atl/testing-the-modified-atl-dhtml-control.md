@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Testing the Modified ATL DHTML Control"
 title: "Testing the Modified ATL DHTML Control"
 ms.date: "11/06/2018"
 helpviewer_keywords: ["HTML controls, testing", "testing controls", "DHTML controls, testing"]
@@ -32,6 +33,6 @@ Now test the methods that are not part of the UI.
 
 To learn more about the various elements and files that make up an ATL DHTML control, see [Identifying the Elements of the DHTML Control Project](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
-## See Also
+## See also
 
 [Support for DHTML Control](../atl/atl-support-for-dhtml-controls.md)

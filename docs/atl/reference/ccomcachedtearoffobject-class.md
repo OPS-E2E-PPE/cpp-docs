@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComCachedTearOffObject Class"
 title: "CComCachedTearOffObject Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComCachedTearOffObject", "ATLCOM/ATL::CComCachedTearOffObject", "ATLCOM/ATL::CComCachedTearOffObject::CComCachedTearOffObject", "ATLCOM/ATL::CComCachedTearOffObject::AddRef", "ATLCOM/ATL::CComCachedTearOffObject::FinalConstruct", "ATLCOM/ATL::CComCachedTearOffObject::FinalRelease", "ATLCOM/ATL::CComCachedTearOffObject::QueryInterface", "ATLCOM/ATL::CComCachedTearOffObject::Release", "ATLCOM/ATL::CComCachedTearOffObject::m_contained"]
@@ -7,7 +8,7 @@ ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
 ---
 # CComCachedTearOffObject Class
 
-This class implements [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) for a tear-off interface.
+This class implements [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) for a tear-off interface.
 
 ## Syntax
 
@@ -52,7 +53,7 @@ Your tear-off class, derived from `CComTearOffObjectBase` and the interfaces you
 
 ## Remarks
 
-`CComCachedTearOffObject` implements [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) for a tear-off interface. This class differs from `CComTearOffObject` in that `CComCachedTearOffObject` has its own `IUnknown`, separate from the owner object's `IUnknown` (the owner is the object for which the tear-off is being created). `CComCachedTearOffObject` maintains its own reference count on its `IUnknown` and deletes itself once its reference count is zero. However, if you query for any of its tear-off interfaces, the reference count of the owner object's `IUnknown` will be incremented.
+`CComCachedTearOffObject` implements [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) for a tear-off interface. This class differs from `CComTearOffObject` in that `CComCachedTearOffObject` has its own `IUnknown`, separate from the owner object's `IUnknown` (the owner is the object for which the tear-off is being created). `CComCachedTearOffObject` maintains its own reference count on its `IUnknown` and deletes itself once its reference count is zero. However, if you query for any of its tear-off interfaces, the reference count of the owner object's `IUnknown` will be incremented.
 
 If the `CComCachedTearOffObject` object implementing the tear-off is already instantiated, and the tear-off interface is queried for again, the same `CComCachedTearOffObject` object is reused. In contrast, if a tear-off interface implemented by a `CComTearOffObject` is again queried for through the owner object, another `CComTearOffObject` will be instantiated.
 
@@ -72,7 +73,7 @@ The owner class must implement `FinalRelease` and call `Release` on the cached `
 
 **Header:** atlcom.h
 
-##  <a name="addref"></a>  CComCachedTearOffObject::AddRef
+## <a name="addref"></a> CComCachedTearOffObject::AddRef
 
 Increments the reference count of the `CComCachedTearOffObject` object by 1.
 
@@ -84,7 +85,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 A value that may be useful for diagnostics and testing.
 
-##  <a name="ccomcachedtearoffobject"></a>  CComCachedTearOffObject::CComCachedTearOffObject
+## <a name="ccomcachedtearoffobject"></a> CComCachedTearOffObject::CComCachedTearOffObject
 
 The constructor.
 
@@ -101,7 +102,7 @@ CComCachedTearOffObject(void* pv);
 
 Initializes the `CComContainedObject` member, [m_contained](#m_contained).
 
-##  <a name="dtor"></a>  CComCachedTearOffObject::~CComCachedTearOffObject
+## <a name="dtor"></a> CComCachedTearOffObject::~CComCachedTearOffObject
 
 The destructor.
 
@@ -113,7 +114,7 @@ The destructor.
 
 Frees all allocated resources and calls [FinalRelease](#finalrelease).
 
-##  <a name="finalconstruct"></a>  CComCachedTearOffObject::FinalConstruct
+## <a name="finalconstruct"></a> CComCachedTearOffObject::FinalConstruct
 
 Calls `m_contained::FinalConstruct` to create `m_contained`, the `CComContainedObject`< `contained`> object used to access the interface implemented by your tear-off class.
 
@@ -125,15 +126,15 @@ HRESULT FinalConstruct();
 
 A standard HRESULT value.
 
-##  <a name="finalrelease"></a>  CComCachedTearOffObject::FinalRelease
+## <a name="finalrelease"></a> CComCachedTearOffObject::FinalRelease
 
 Calls `m_contained::FinalRelease` to free `m_contained`, the `CComContainedObject`< `contained`> object.
 
-```
+```cpp
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>  CComCachedTearOffObject::m_contained
+## <a name="m_contained"></a> CComCachedTearOffObject::m_contained
 
 A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) object derived from your tear-off class.
 
@@ -150,7 +151,7 @@ CcomContainedObject <contained> m_contained;
 
 The methods `m_contained` inherits are used to access the tear-off interface in your tear-off class through the cached tear-off object's `QueryInterface`, `FinalConstruct`, and `FinalRelease`.
 
-##  <a name="queryinterface"></a>  CComCachedTearOffObject::QueryInterface
+## <a name="queryinterface"></a> CComCachedTearOffObject::QueryInterface
 
 Retrieves a pointer to the requested interface.
 
@@ -174,7 +175,7 @@ A standard HRESULT value.
 
 If the requested interface is `IUnknown`, returns a pointer to the `CComCachedTearOffObject`'s own `IUnknown` and increments the reference count. Otherwise, queries for the interface on your tear-off class using the [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) method inherited from `CComObjectRootEx`.
 
-##  <a name="release"></a>  CComCachedTearOffObject::Release
+## <a name="release"></a> CComCachedTearOffObject::Release
 
 Decrements the reference count by 1 and, if the reference count is 0, deletes the `CComCachedTearOffObject` object.
 
@@ -186,7 +187,7 @@ STDMETHOD_(ULONG, Release)();
 
 In non-debug builds, always returns 0. In debug builds, returns a value that may be useful for diagnostics or testing.
 
-## See Also
+## See also
 
 [CComTearOffObject Class](../../atl/reference/ccomtearoffobject-class.md)<br/>
 [CComObjectRootEx Class](../../atl/reference/ccomobjectrootex-class.md)<br/>

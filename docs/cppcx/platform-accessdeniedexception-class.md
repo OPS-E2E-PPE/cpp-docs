@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::AccessDeniedException Class"
 title: "Platform::AccessDeniedException Class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -30,6 +31,6 @@ If you hit this exception, ensure that you have requested the appropriate capabi
 
 **Metadata:** platform.winmd
 
-## See Also
+## See also
 
 [Platform::COMException Class](../cppcx/platform-comexception-class.md)

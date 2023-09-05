@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComQIPtrElementTraits Class"
 title: "CComQIPtrElementTraits Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComQIPtrElementTraits", "ATLCOLL/ATL::CComQIPtrElementTraits", "ATLCOLL/ATL::CComQIPtrElementTraits::INARGTYPE"]
@@ -55,7 +56,7 @@ For more information, see [ATL Collection Classes](../../atl/atl-collection-clas
 
 **Header:** atlcoll.h
 
-##  <a name="inargtype"></a>  CComQIPtrElementTraits::INARGTYPE
+## <a name="inargtype"></a> CComQIPtrElementTraits::INARGTYPE
 
 The data type to use for adding elements to the collection class object.
 
@@ -63,7 +64,7 @@ The data type to use for adding elements to the collection class object.
 typedef I* INARGTYPE;
 ```
 
-## See Also
+## See also
 
 [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

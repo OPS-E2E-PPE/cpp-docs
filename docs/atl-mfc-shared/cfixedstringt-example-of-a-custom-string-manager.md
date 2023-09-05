@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CFixedStringT: Example of a Custom String Manager"
 title: "CFixedStringT: Example of a Custom String Manager"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["CFixedStringT class, using a custom string manager"]
@@ -54,7 +55,6 @@ Whenever the fixed buffer is not in use, `CFixedStringMgr` ensures that it is in
 
 **Header:** cstringt.h
 
-## See Also
+## See also
 
 [Memory Management with CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
-

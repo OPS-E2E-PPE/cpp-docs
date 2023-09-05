@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3199"
 title: "Compiler Error C3199"
 ms.date: "11/04/2016"
 f1_keywords: ["C3199"]
@@ -13,7 +14,7 @@ The [float_control](../../preprocessor/float-control.md) pragma was used to spec
 
 The following sample generates C3199:
 
-```
+```cpp
 // C3199.cpp
 // compile with: /fp:fast
 #pragma float_control(except, on)   // C3199

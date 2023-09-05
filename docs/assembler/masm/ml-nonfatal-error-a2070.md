@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: ML Nonfatal Error A2070"
 title: "ML Nonfatal Error A2070"
-ms.date: "08/30/2018"
-ms.topic: "error-reference"
+ms.date: "12/17/2019"
+ms.topic: error-reference
 f1_keywords: ["A2070"]
 helpviewer_keywords: ["A2070"]
 ms.assetid: f6025e2c-b142-426f-88c8-7160df4c1631
@@ -14,4 +15,4 @@ One or more operands were not valid for the instruction with which they were spe
 
 ## See also
 
-[ML Error Messages](../../assembler/masm/ml-error-messages.md)<br/>
+[ML Error Messages](ml-error-messages.md)

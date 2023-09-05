@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Inserting a Composite Control"
 title: "Inserting a Composite Control"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["composite controls, inserting with ATL Object Wizard", "composite controls", "ATL Control Wizard"]
@@ -12,7 +13,6 @@ In the **Add Class** dialog box, choose **ATL Control**. This will start the [AT
 
 A default HTML page will be created for viewing the control.
 
-## See Also
+## See also
 
 [Composite Control Fundamentals](../atl/atl-composite-control-fundamentals.md)
-

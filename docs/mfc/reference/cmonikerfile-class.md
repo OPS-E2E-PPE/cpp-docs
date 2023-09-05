@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMonikerFile Class"
 title: "CMonikerFile Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMonikerFile", "AFXOLE/CMonikerFile", "AFXOLE/CMonikerFile::CMonikerFile", "AFXOLE/CMonikerFile::Close", "AFXOLE/CMonikerFile::Detach", "AFXOLE/CMonikerFile::GetMoniker", "AFXOLE/CMonikerFile::Open", "AFXOLE/CMonikerFile::CreateBindContext"]
@@ -7,7 +8,7 @@ ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
 ---
 # CMonikerFile Class
 
-Represents a stream of data ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)) named by an [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).
+Represents a stream of data ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)) named by an [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker).
 
 ## Syntax
 
@@ -46,7 +47,7 @@ Derived from `COleStreamFile`, `CMonikerFile` takes a moniker or a string repres
 
 `CMonikerFile` cannot be used to bind to anything other than a stream. If you want to bind to storage or an object, you must use the `IMoniker` interface directly.
 
-For more information on streams and monikers, see [COleStreamFile](../../mfc/reference/colestreamfile-class.md) in the *MFC Reference* and [IStream](/windows/desktop/api/objidl/nn-objidl-istream) and [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker) in the Windows SDK.
+For more information on streams and monikers, see [COleStreamFile](../../mfc/reference/colestreamfile-class.md) in the *MFC Reference* and [IStream](/windows/win32/api/objidl/nn-objidl-istream) and [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker) in the Windows SDK.
 
 ## Inheritance Hierarchy
 
@@ -62,7 +63,7 @@ For more information on streams and monikers, see [COleStreamFile](../../mfc/ref
 
 **Header:** afxole.h
 
-##  <a name="close"></a>  CMonikerFile::Close
+## <a name="close"></a> CMonikerFile::Close
 
 Call this function to detach and release the stream and to release the moniker.
 
@@ -74,7 +75,7 @@ virtual void Close();
 
 Can be called on unopened or already closed streams.
 
-##  <a name="cmonikerfile"></a>  CMonikerFile::CMonikerFile
+## <a name="cmonikerfile"></a> CMonikerFile::CMonikerFile
 
 Constructs a `CMonikerFile` object.
 
@@ -82,7 +83,7 @@ Constructs a `CMonikerFile` object.
 CMonikerFile();
 ```
 
-##  <a name="createbindcontext"></a>  CMonikerFile::CreateBindContext
+## <a name="createbindcontext"></a> CMonikerFile::CreateBindContext
 
 Call this function to create a default initialized bind context.
 
@@ -97,13 +98,13 @@ A pointer to a file exception. In the event of an error, it will be set to the c
 
 ### Return Value
 
-A pointer to the bind context [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) to bind with if successful; otherwise NULL. If the instance was opened with an `IBindHost` interface, the bind context is retrieved from the `IBindHost`. If there is no `IBindHost` interface or the interface fails to return a bind context, a bind context is created. For a description of the [IBindHost](https://msdn.microsoft.com/library/ie/ms775076) interface, see the Windows SDK.
+A pointer to the bind context [IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx) to bind with if successful; otherwise NULL. If the instance was opened with an `IBindHost` interface, the bind context is retrieved from the `IBindHost`. If there is no `IBindHost` interface or the interface fails to return a bind context, a bind context is created. For a description of the [IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\)) interface, see the Windows SDK.
 
 ### Remarks
 
 A bind context is an object that stores information about a particular moniker binding operation. You can override this function to provide a custom bind context.
 
-##  <a name="detach"></a>  CMonikerFile::Detach
+## <a name="detach"></a> CMonikerFile::Detach
 
 Call this function to close the stream.
 
@@ -120,7 +121,7 @@ A pointer to a file exception. In the event of an error, it will be set to the c
 
 Nonzero if successful; otherwise 0.
 
-##  <a name="getmoniker"></a>  CMonikerFile::GetMoniker
+## <a name="getmoniker"></a> CMonikerFile::GetMoniker
 
 Call this function to retrieve a pointer to the current moniker.
 
@@ -130,13 +131,13 @@ IMoniker* GetMoniker() const;
 
 ### Return Value
 
-A pointer to the current moniker interface ( [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)).
+A pointer to the current moniker interface ( [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker)).
 
 ### Remarks
 
-Since `CMonikerFile` is not an interface, the pointer returned does not increment the reference count (through [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)), and the moniker is released when the `CMonikerFile` object is released. If you want to hold onto the moniker or release it yourself, you must `AddRef` it.
+Since `CMonikerFile` is not an interface, the pointer returned does not increment the reference count (through [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)), and the moniker is released when the `CMonikerFile` object is released. If you want to hold onto the moniker or release it yourself, you must `AddRef` it.
 
-##  <a name="open"></a>  CMonikerFile::Open
+## <a name="open"></a> CMonikerFile::Open
 
 Call this member function to open a file or moniker object.
 
@@ -177,7 +178,7 @@ You can use a URL or a filename for the *lpszURL* parameter. For example:
 
 [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]
 
-## See Also
+## See also
 
 [COleStreamFile Class](../../mfc/reference/colestreamfile-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

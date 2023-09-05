@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4490"
 title: "Compiler Warning (level 1) C4490"
 ms.date: "11/04/2016"
 f1_keywords: ["C4490"]
@@ -11,13 +12,13 @@ ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
 
 An override specifier was used incorrectly. For example, you do not override an interface function, you implement it.
 
-For more information, see [Override Specifiers](../../windows/override-specifiers-cpp-component-extensions.md).
+For more information, see [Override Specifiers](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## Example
 
 The following sample generates C4490.
 
-```
+```cpp
 // C4490.cpp
 // compile with: /clr /c /W1
 

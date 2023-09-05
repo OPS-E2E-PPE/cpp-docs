@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3493"
 title: "Compiler Error C3493"
 ms.date: "11/04/2016"
 f1_keywords: ["C3493"]
@@ -17,11 +18,11 @@ The empty lambda expression capture, `[]`, specifies that the lambda expression 
 
 - Explicitly capture one or more variables.
 
-## Example
+## Examples
 
 The following example generates C3493 because it modifies an external variable but specifies the empty capture clause:
 
-```
+```cpp
 // C3493a.cpp
 
 int main()
@@ -31,11 +32,9 @@ int main()
 }
 ```
 
-## Example
-
 The following example resolves C3493 by specifying by-reference as the default capture mode.
 
-```
+```cpp
 // C3493b.cpp
 
 int main()
@@ -45,6 +44,6 @@ int main()
 }
 ```
 
-## See Also
+## See also
 
 [Lambda Expressions](../../cpp/lambda-expressions-in-cpp.md)

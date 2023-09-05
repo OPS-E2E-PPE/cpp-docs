@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3182"
 title: "Compiler Error C3182"
 ms.date: "11/04/2016"
 f1_keywords: ["C3182"]
@@ -13,7 +14,7 @@ A [using](../../cpp/using-declaration.md) declaration is invalid within all form
 
 The following sample generates C3182 and shows how to fix it.
 
-```
+```cpp
 // C3182a.cpp
 // compile with: /clr /c
 ref struct B {

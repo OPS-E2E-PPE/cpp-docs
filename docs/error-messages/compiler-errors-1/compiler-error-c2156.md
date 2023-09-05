@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2156"
 title: "Compiler Error C2156"
 ms.date: "11/04/2016"
 f1_keywords: ["C2156"]
@@ -13,7 +14,7 @@ A pragma that must be specified at a global level (outside a function body) is w
 
 The following sample generates C2156:
 
-```
+```cpp
 // C2156.cpp
 #pragma optimize( "l", on )   // OK
 int main() {

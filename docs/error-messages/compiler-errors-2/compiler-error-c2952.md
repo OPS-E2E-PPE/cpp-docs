@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2952"
 title: "Compiler Error C2952"
 ms.date: "11/04/2016"
 f1_keywords: ["C2952"]
@@ -13,7 +14,7 @@ A template declaration was ill formed.
 
 The following sample generates C2952:
 
-```
+```cpp
 // C2952.cpp
 // compile with: /c
 template <class T>
@@ -34,7 +35,7 @@ void S<T>::S1<T1>::f() {}
 
 C2952 can also occur when using generics:
 
-```
+```cpp
 // C2952b.cpp
 // compile with: /clr /c
 generic <class T>

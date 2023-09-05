@@ -1,6 +1,7 @@
 ---
 title: "x64 exception handling"
-ms.date: "12/17/2018"
+description: "Overview of Microsoft C++ exception handling conventions on x64."
+ms.date: "10/14/2019"
 helpviewer_keywords: ["C++ exception handling, x64", "exception handling, x64"]
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
 ---
@@ -16,19 +17,19 @@ Several data structures are required for exception handling and debugging suppor
 
 Table-based exception handling requires a table entry for all functions that allocate stack space or call another function (for example, nonleaf functions). Function table entries have the format:
 
-|||
+|Size|Value|
 |-|-|
 |ULONG|Function start address|
 |ULONG|Function end address|
 |ULONG|Unwind info address|
 
-The RUNTIME_FUNCTION structure must be DWORD aligned in memory. All addresses are image relative, that is, they are 32-bit offsets from the starting address of the image that contains the function table entry. These entries are sorted, and put in the .pdata section of a PE32+ image. For dynamically generated functions [JIT compilers], the runtime to support these functions must either use RtlInstallFunctionTableCallback or RtlAddFunctionTable to provide this information to the operating system. Failure to do so will result in unreliable exception handling and debugging of processes.
+The RUNTIME_FUNCTION structure must be DWORD aligned in memory. All addresses are image relative, that is, they're 32-bit offsets from the starting address of the image that contains the function table entry. These entries are sorted, and put in the .pdata section of a PE32+ image. For dynamically generated functions [JIT compilers], the runtime to support these functions must either use RtlInstallFunctionTableCallback or RtlAddFunctionTable to provide this information to the operating system. Failure to do so will result in unreliable exception handling and debugging of processes.
 
 ### struct UNWIND_INFO
 
-The unwind data info structure is used to record the effects a function has on the stack pointer and where the nonvolatile registers are saved on the stack:
+The unwind data info structure is used to record the effects a function has on the stack pointer, and where the nonvolatile registers are saved on the stack:
 
-|||
+|Size|Value|
 |-|-|
 |UBYTE: 3|Version|
 |UBYTE: 5|Flags|
@@ -41,14 +42,14 @@ The unwind data info structure is used to record the effects a function has on t
 
 (1)  Exception Handler
 
-|||
+|Size|Value|
 |-|-|
 |ULONG|Address of exception handler|
 |variable|Language-specific handler data (optional)|
 
 (2)  Chained Unwind Info
 
-|||
+|Size|Value|
 |-|-|
 |ULONG|Function start address|
 |ULONG|Function end address|
@@ -68,7 +69,7 @@ The UNWIND_INFO structure must be DWORD aligned in memory. Here's what each fiel
    |-|-|
    |`UNW_FLAG_EHANDLER`| The function has an exception handler that should be called when looking for functions that need to examine exceptions.|
    |`UNW_FLAG_UHANDLER`| The function has a termination handler that should be called when unwinding an exception.|
-   |`UNW_FLAG_CHAININFO`| This unwind info structure is not the primary one for the procedure. Instead, the chained unwind info entry is the contents of a previous RUNTIME_FUNCTION entry. For informations, see [Chained unwind info structures](#chained-unwind-info-structures). If this flag is set, then the UNW_FLAG_EHANDLER and UNW_FLAG_UHANDLER flags must be cleared. Also, the frame register and fixed-stack allocation fields must have the same values as in the primary unwind info.|
+   |`UNW_FLAG_CHAININFO`| This unwind info structure is not the primary one for the procedure. Instead, the chained unwind info entry is the contents of a previous RUNTIME_FUNCTION entry. For information, see [Chained unwind info structures](#chained-unwind-info-structures). If this flag is set, then the UNW_FLAG_EHANDLER and UNW_FLAG_UHANDLER flags must be cleared. Also, the frame register and fixed-stack allocation fields must have the same values as in the primary unwind info.|
 
 - **Size of prolog**
 
@@ -84,7 +85,7 @@ The UNWIND_INFO structure must be DWORD aligned in memory. Here's what each fiel
 
 - **Frame register offset (scaled)**
 
-   If the frame register field is nonzero, this field is the scaled offset from RSP that is applied to the FP register when it's established. The actual FP register is set to RSP + 16 \* this number, allowing offsets from 0 to 240. This offset permits pointing the FP register into the middle of the local stack allocation for dynamic stack frames, allowing better code density through shorter instructions (more instructions can use the 8-bit signed offset form).
+   If the frame register field is nonzero, this field is the scaled offset from RSP that is applied to the FP register when it's established. The actual FP register is set to RSP + 16 \* this number, allowing offsets from 0 to 240. This offset permits pointing the FP register into the middle of the local stack allocation for dynamic stack frames, allowing better code density through shorter instructions. (That is, more instructions can use the 8-bit signed offset form.)
 
 - **Unwind codes array**
 
@@ -100,13 +101,13 @@ The UNWIND_INFO structure must be DWORD aligned in memory. Here's what each fiel
 
 - **Chained Unwind Info**
 
-   If flag UNW_FLAG_CHAININFO is set then the UNWIND_INFO structure ends with three UWORDs.  These UWORDs represent the RUNTIME_FUNCTION information for the function of the chained unwind.
+   If flag UNW_FLAG_CHAININFO is set, then the UNWIND_INFO structure ends with three UWORDs.  These UWORDs represent the RUNTIME_FUNCTION information for the function of the chained unwind.
 
 ### struct UNWIND_CODE
 
 The unwind code array is used to record the sequence of operations in the prolog that affect the nonvolatile registers and RSP. Each code item has this format:
 
-|||
+|Size|Value|
 |-|-|
 |UBYTE|Offset in prolog|
 |UBYTE: 4|Unwind operation code|
@@ -116,11 +117,11 @@ The array is sorted by descending order of offset in the prolog.
 
 #### Offset in prolog
 
-Offset from the beginning of the prolog of the end of the instruction that performs this operation, plus 1 (that is, the offset of the start of the next instruction).
+Offset (from the beginning of the prolog) of the end of the instruction that performs this operation, plus 1 (that is, the offset of the start of the next instruction).
 
 #### Unwind operation code
 
-Note: Certain operation codes require an unsigned offset to a value in the local stack frame. This offset is from the start, that is, the lowest address of the fixed stack allocation. If the Frame Register field in the UNWIND_INFO is zero, this offset is from RSP. If the Frame Register field is nonzero, this is the offset from where RSP was located when the FP register was established. This equals the FP register minus the FP register offset (16 \* the scaled frame register offset in the UNWIND_INFO). If an FP register is used, then any unwind code taking an offset must only be used after the FP register is established in the prolog.
+Note: Certain operation codes require an unsigned offset to a value in the local stack frame. This offset is from the start, that is, the lowest address of the fixed stack allocation. If the Frame Register field in the UNWIND_INFO is zero, this offset is from RSP. If the Frame Register field is nonzero, this offset is from where RSP was located when the FP register was established. It equals the FP register minus the FP register offset (16 \* the scaled frame register offset in the UNWIND_INFO). If an FP register is used, then any unwind code taking an offset must only be used after the FP register is established in the prolog.
 
 For all opcodes except `UWOP_SAVE_XMM128` and `UWOP_SAVE_XMM128_FAR`, the offset is always a multiple of 8, because all stack values of interest are stored on 8-byte boundaries (the stack itself is always 16-byte aligned). For operation codes that take a short offset (less than 512K), the final USHORT in the nodes for this code holds the offset divided by 8. For operation codes that take a long offset (512K <= offset < 4GB), the final two USHORT nodes for this code hold the offset (in little-endian format).
 
@@ -150,7 +151,7 @@ The unwind operation code is one of these values:
 
 - `UWOP_SET_FPREG` (3) 1 node
 
-  Establish the frame pointer register by setting the register to some offset of the current RSP. The offset is equal to the Frame Register offset (scaled) field in the UNWIND_INFO \* 16, allowing offsets from 0 to 240. The use of an offset permits establishing a frame pointer that points to the middle of the fixed stack allocation, helping code density by allowing more accesses to use short instruction forms. The operation info field is reserved and should not be used.
+  Establish the frame pointer register by setting the register to some offset of the current RSP. The offset is equal to the Frame Register offset (scaled) field in the UNWIND_INFO \* 16, allowing offsets from 0 to 240. The use of an offset permits establishing a frame pointer that points to the middle of the fixed stack allocation, helping code density by allowing more accesses to use short instruction forms. The operation info field is reserved and shouldn't be used.
 
 - `UWOP_SAVE_NONVOL` (4) 2 nodes
 
@@ -170,9 +171,9 @@ The unwind operation code is one of these values:
 
 - `UWOP_PUSH_MACHFRAME` (10) 1 node
 
-  Push a machine frame.  This is used to record the effect of a hardware interrupt or exception. There are two forms. If the operation info equals 0, one of these frames has been pushed on the stack:
+  Push a machine frame.  This unwind code is used to record the effect of a hardware interrupt or exception. There are two forms. If the operation info equals 0, one of these frames has been pushed on the stack:
 
-  |||
+  |Location|Value|
   |-|-|
   |RSP+32|SS|
   |RSP+24|Old RSP|
@@ -182,7 +183,7 @@ The unwind operation code is one of these values:
 
   If the operation info equals 1, then one of these frames has been pushed:
 
-  |||
+  |Location|Value|
   |-|-|
   |RSP+40|SS|
   |RSP+32|Old RSP|
@@ -191,7 +192,7 @@ The unwind operation code is one of these values:
   |RSP+8|RIP|
   |RSP|Error code|
 
-  This unwind code always appears in a dummy prolog, which is never actually executed but instead appears before the real entry point of an interrupt routine, and exists only to provide a place to simulate the push of a machine frame. `UWOP_PUSH_MACHFRAME` records that simulation, which indicates the machine has conceptually done this operation:
+  This unwind code always appears in a dummy prolog, which is never actually executed, but instead appears before the real entry point of an interrupt routine, and exists only to provide a place to simulate the push of a machine frame. `UWOP_PUSH_MACHFRAME` records that simulation, which indicates the machine has conceptually done this operation:
 
   1. Pop RIP return address from top of stack into *Temp*
   
@@ -213,7 +214,7 @@ The unwind operation code is one of these values:
 
 The meaning of the operation info bits depends upon the operation code. To encode a general-purpose (integer) register, this mapping is used:
 
-|||
+|Bit|Register|
 |-|-|
 |0|RAX|
 |1|RCX|
@@ -235,9 +236,9 @@ PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode
 
 Chained info is useful in two situations. First, it can be used for noncontiguous code segments. By using chained info, you can reduce the size of the required unwind information, because you do not have to duplicate the unwind codes array from the primary unwind info.
 
-You can also use chained info to group volatile register saves. The compiler may delay saving some volatile registers until it is outside of the function entry prolog. You can record this by having primary unwind info for the portion of the function before the grouped code, and then setting up chained info with a non-zero size of prolog, where the unwind codes in the chained info reflect saves of the nonvolatile registers. In that case, the unwind codes are all instances of UWOP_SAVE_NONVOL. A grouping that saves nonvolatile registers by using a PUSH or modifies the RSP register by using an additional fixed stack allocation is not supported.
+You can also use chained info to group volatile register saves. The compiler may delay saving some volatile registers until it is outside of the function entry prolog. You can record them by having primary unwind info for the portion of the function before the grouped code, and then setting up chained info with a non-zero size of prolog, where the unwind codes in the chained info reflect saves of the nonvolatile registers. In that case, the unwind codes are all instances of UWOP_SAVE_NONVOL. A grouping that saves nonvolatile registers by using a PUSH or modifies the RSP register by using an additional fixed stack allocation is not supported.
 
-An UNWIND_INFO item that has UNW_FLAG_CHAININFO set can contain a RUNTIME_FUNCTION entry whose UNWIND_INFO item also has UNW_FLAG_CHAININFO set, sometimes called *multiple shrink-wrapping*. Eventually, the chained unwind info pointers arrive at an UNWIND_INFO item that has UNW_FLAG_CHAININFO cleared; this is the primary UNWIND_INFO item, which points to the actual procedure entry point.
+An UNWIND_INFO item that has UNW_FLAG_CHAININFO set can contain a RUNTIME_FUNCTION entry whose UNWIND_INFO item also has UNW_FLAG_CHAININFO set, sometimes called *multiple shrink-wrapping*. Eventually, the chained unwind info pointers arrive at an UNWIND_INFO item that has UNW_FLAG_CHAININFO cleared. This item is the primary UNWIND_INFO item, which points to the actual procedure entry point.
 
 ## Unwind procedure
 
@@ -249,19 +250,19 @@ The unwind code array is sorted into descending order. When an exception occurs,
 
 1. If a function table entry is found, RIP can lie within three regions: a) in an epilog, b) in the prolog, or c) in code that may be covered by an exception handler.
 
-   - Case a) If the RIP is within an epilog, then control is leaving the function, there can be no exception handler associated with this exception for this function, and the effects of the epilog must be continued to compute the context of the caller function. To determine if the RIP is within an epilog, the code stream from RIP on is examined. If that code stream can be matched to the trailing portion of a legitimate epilog, then it's in an epilog, and the remaining portion of the epilog is simulated, with the context record updated as each instruction is processed. After this, step 1 is repeated.
+   - Case a) If the RIP is within an epilog, then control is leaving the function, there can be no exception handler associated with this exception for this function, and the effects of the epilog must be continued to compute the context of the caller function. To determine if the RIP is within an epilog, the code stream from RIP onward is examined. If that code stream can be matched to the trailing portion of a legitimate epilog, then it's in an epilog, and the remaining portion of the epilog is simulated, with the context record updated as each instruction is processed. After this processing, step 1 is repeated.
 
-   - Case b) If the RIP lies within the prologue, then control has not entered the function, there can be no exception handler associated with this exception for this function, and the effects of the prolog must be undone to compute the context of the caller function. The RIP is within the prolog if the distance from the function start to the RIP is less than or equal to the prolog size encoded in the unwind info. The effects of the prolog are unwound by scanning forward through the unwind codes array for the first entry with an offset less than or equal to the offset of the RIP from the function start, then undoing the effect of all remaining items in the unwind code array. Step 1 is then repeated.
+   - Case b) If the RIP lies within the prologue, then control hasn't entered the function, there can be no exception handler associated with this exception for this function, and the effects of the prolog must be undone to compute the context of the caller function. The RIP is within the prolog if the distance from the function start to the RIP is less than or equal to the prolog size encoded in the unwind info. The effects of the prolog are unwound by scanning forward through the unwind codes array for the first entry with an offset less than or equal to the offset of the RIP from the function start, then undoing the effect of all remaining items in the unwind code array. Step 1 is then repeated.
 
-   - Case c) If the RIP is not within a prolog or epilog and the function has an exception handler (UNW_FLAG_EHANDLER is set), then the language-specific handler is called. The handler scans its data and calls filter functions as appropriate. The language-specific handler can return that the exception was handled or that the search is to be continued. It can also initiate an unwind directly.
+   - Case c) If the RIP isn't within a prolog or epilog, and the function has an exception handler (UNW_FLAG_EHANDLER is set), then the language-specific handler is called. The handler scans its data and calls filter functions as appropriate. The language-specific handler can return that the exception was handled or that the search is to be continued. It can also initiate an unwind directly.
 
 1. If the language-specific handler returns a handled status, then execution is continued using the original context record.
 
-1. If there's no language-specific handler or the handler returns a "continue search" status, then the context record must be unwound to the state of the caller. This is accomplished by processing all of the unwind code array elements, undoing the effect of each. Step 1 is then repeated.
+1. If there's no language-specific handler or the handler returns a "continue search" status, then the context record must be unwound to the state of the caller. It's done by processing all of the unwind code array elements, undoing the effect of each. Step 1 is then repeated.
 
-When chained unwind info is involved, these basic steps are still followed. The only difference is that, while walking the unwind code array to unwind a prolog’s effects, once the end of the array is reached, it's then linked to the parent unwind info and the entire unwind code array found there is walked. This linking continues until arriving at an unwind info without the UNW_CHAINED_INFO flag, and then it finishes walking its unwind code array.
+When chained unwind info is involved, these basic steps are still followed. The only difference is that, while walking the unwind code array to unwind a prolog's effects, once the end of the array is reached, it's then linked to the parent unwind info and the entire unwind code array found there is walked. This linking continues until arriving at an unwind info without the UNW_CHAINED_INFO flag, and then it finishes walking its unwind code array.
 
-The smallest set of unwind data is 8 bytes. This would represent a function that only allocated 128 bytes of stack or less, and possibly saved one nonvolatile register. This is also the size of a chained unwind info structure for a zero-length prolog with no unwind codes.
+The smallest set of unwind data is 8 bytes. This would represent a function that only allocated 128 bytes of stack or less, and possibly saved one nonvolatile register. It's also the size of a chained unwind info structure for a zero-length prolog with no unwind codes.
 
 ## Language-specific handler
 
@@ -297,7 +298,7 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** is the value of RIP within this function. This value is either an exception address or the address at which control left the establishing function. The RIP is used to determine if control is within some guarded construct inside this function, for example, a `__try` block for `__try`/`__except` or `__try`/`__finally`.
+**ControlPc** is the value of RIP within this function. This value is either an exception address or the address at which control left the establishing function. The RIP is used to determine if control is within some guarded construct inside this function, for example, a **`__try`** block for **`__try`**/**`__except`** or **`__try`**/**`__finally`**.
 
 **ImageBase** is the image base (load address) of the module containing this function, to be added to the 32-bit offsets used in the function entry and unwind info to record relative addresses.
 
@@ -305,7 +306,7 @@ typedef struct _DISPATCHER_CONTEXT {
 
 **EstablisherFrame** is the address of the base of the fixed stack allocation for this function.
 
-**TargetIp** Supplies an optional instruction address that specifies the continuation address of the unwind. This address is ignored if **EstablisherFrame** is not specified.
+**TargetIp** Supplies an optional instruction address that specifies the continuation address of the unwind. This address is ignored if **EstablisherFrame** isn't specified.
 
 **ContextRecord** points to the exception context, for use by the system exception dispatch/unwind code.
 
@@ -315,18 +316,18 @@ typedef struct _DISPATCHER_CONTEXT {
 
 ## Unwind helpers for MASM
 
-In order to write proper assembly routines, there's a set of pseudo-operations that can be used in parallel with the actual assembly instructions to create the appropriate .pdata and .xdata. There's also a set of macros that provide simplified use of the pseudo-operations for their most common uses.
+In order to write proper assembly routines, there's a set of pseudo-operations that can be used in parallel with the actual assembly instructions to create the appropriate .pdata and .xdata. And, there's a set of macros that provide simplified use of the pseudo-operations for their most common uses.
 
 ### Raw pseudo-operations
 
 |Pseudo operation|Description|
 |-|-|
 |PROC FRAME \[:*ehandler*]|Causes MASM to generate a function table entry in .pdata and unwind information in .xdata for a function's structured exception handling unwind behavior.  If *ehandler* is present, this proc is entered in the .xdata as the language-specific handler.<br /><br /> When the FRAME attribute is used, it must be followed by an .ENDPROLOG directive.  If the function is a leaf function (as defined in [Function types](../build/stack-usage.md#function-types)) the FRAME attribute is unnecessary, as are the remainder of these pseudo-operations.|
-|.PUSHREG *register*|Generates a UWOP_PUSH_NONVOL unwind code entry for the specified register number using the current offset in the prologue.<br /><br /> This should only be used with nonvolatile integer registers.  For pushes of volatile registers, use an .ALLOCSTACK 8, instead|
+|.PUSHREG *register*|Generates a UWOP_PUSH_NONVOL unwind code entry for the specified register number using the current offset in the prologue.<br /><br /> Only use it with nonvolatile integer registers.  For pushes of volatile registers, use an .ALLOCSTACK 8, instead|
 |.SETFRAME *register*, *offset*|Fills in the frame register field and offset in the unwind information using the specified register and offset. The offset must be a multiple of 16 and less than or equal to 240. This directive also generates a UWOP_SET_FPREG unwind code entry for the specified register using the current prologue offset.|
 |.ALLOCSTACK *size*|Generates a UWOP_ALLOC_SMALL or a UWOP_ALLOC_LARGE with the specified size for the current offset in the prologue.<br /><br /> The *size* operand must be a multiple of 8.|
-|.SAVEREG *register*, *offset*|Generates either a UWOP_SAVE_NONVOL or a UWOP_SAVE_NONVOL_FAR unwind code entry for the specified register and offset using the current prologue offset. MASM chooses the most efficient encoding.<br /><br /> *offset* must be positive, and a multiple of 8. *offset* is relative to the base of the procedure’s frame, which is generally in RSP, or, if using a frame pointer, the unscaled frame pointer.|
-|.SAVEXMM128 *register*, *offset*|Generates either a UWOP_SAVE_XMM128 or a UWOP_SAVE_XMM128_FAR unwind code entry for the specified XMM register and offset using the current prologue offset. MASM chooses the most efficient encoding.<br /><br /> *offset* must be positive, and a multiple of 16.  *offset* is relative to the base of the procedure’s frame, which is generally in RSP, or, if using a frame pointer, the unscaled frame pointer.|
+|.SAVEREG *register*, *offset*|Generates either a UWOP_SAVE_NONVOL or a UWOP_SAVE_NONVOL_FAR unwind code entry for the specified register and offset using the current prologue offset. MASM chooses the most efficient encoding.<br /><br /> *offset* must be positive, and a multiple of 8. *offset* is relative to the base of the procedure's frame, which is generally in RSP, or, if using a frame pointer, the unscaled frame pointer.|
+|.SAVEXMM128 *register*, *offset*|Generates either a UWOP_SAVE_XMM128 or a UWOP_SAVE_XMM128_FAR unwind code entry for the specified XMM register and offset using the current prologue offset. MASM chooses the most efficient encoding.<br /><br /> *offset* must be positive, and a multiple of 16.  *offset* is relative to the base of the procedure's frame, which is generally in RSP, or, if using a frame pointer, the unscaled frame pointer.|
 |.PUSHFRAME \[*code*]|Generates a UWOP_PUSH_MACHFRAME unwind code entry. If the optional *code* is specified, the unwind code entry is given a modifier of 1. Otherwise the modifier is 0.|
 |.ENDPROLOG|Signals the end of the prologue declarations.  Must occur in the first 255 bytes of the function.|
 
@@ -353,8 +354,8 @@ sample PROC FRAME
 
 ; you can modify the stack pointer outside of the prologue (similar to alloca)
 ; because we have a frame pointer.
-; if we didn’t have a frame pointer, this would be illegal
-; if we didn’t make this modification,
+; if we didn't have a frame pointer, this would be illegal
+; if we didn't make this modification,
 ; there would be no need for a frame pointer
 
     sub rsp, 060h
@@ -364,20 +365,22 @@ sample PROC FRAME
     mov rax, 0
     mov rax, [rax] ; AV!
 
-; restore the registers that weren’t saved with a push
-; this isn’t part of the official epilog, as described in section 2.5
+; restore the registers that weren't saved with a push
+; this isn't part of the official epilog, as described in section 2.5
 
     movdqa xmm7, [rbp]
     mov rsi, [rbp+018h]
     mov rdi, [rbp-010h]
 
-; Here’s the official epilog
+; Here's the official epilog
 
-    lea rsp, [rbp-020h]
+    lea rsp, [rbp+020h] ; deallocate both fixed and dynamic portions of the frame
     pop rbp
     ret
 sample ENDP
 ```
+
+For more information about the epilog example, see [Epilog code](prolog-and-epilog.md#epilog-code) in [x64 prolog and epilog](prolog-and-epilog.md).
 
 ### MASM macros
 
@@ -388,7 +391,7 @@ In order to simplify the use of the [Raw pseudo-operations](#raw-pseudo-operatio
 |alloc_stack(n)|Allocates a stack frame of n bytes (using `sub rsp, n`), and emits the appropriate unwind information (.allocstack n)|
 |save_reg *reg*, *loc*|Saves a nonvolatile register *reg* on the stack at RSP offset *loc*, and emits the appropriate unwind information. (.savereg reg, loc)|
 |push_reg *reg*|Pushes a nonvolatile register *reg* on the stack, and emits the appropriate unwind information. (.pushreg reg)|
-|rex_push_reg *reg*|Save a nonvolatile register on the stack using a 2 byte push, and emits the appropriate unwind information (.pushreg reg)  This should be used if the push is the first instruction in the function to ensure that the function is hot-patchable.|
+|rex_push_reg *reg*|Saves a nonvolatile register on the stack using a 2-byte push, and emits the appropriate unwind information (.pushreg reg).  Use this macro if the push is the first instruction in the function, to ensure that the function is hot-patchable.|
 |save_xmm128 *reg*, *loc*|Saves a nonvolatile XMM register *reg* on the stack at RSP offset *loc*, and emits the appropriate unwind information (.savexmm128 reg, loc)|
 |set_frame *reg*, *offset*|Sets the frame register *reg* to be the RSP + *offset* (using a `mov`, or an `lea`), and emits the appropriate unwind information (.set_frame reg, offset)|
 |push_eflags|Pushes the eflags with a `pushfq` instruction, and emits the appropriate unwind information (.alloc_stack 8)|
@@ -396,16 +399,10 @@ In order to simplify the use of the [Raw pseudo-operations](#raw-pseudo-operatio
 Here's a sample function prolog with proper usage of the macros:
 
 ```MASM
-SkFrame struct
-    Fill    dq ?; fill to 8 mod 16
-    SavedRdi dq ?; saved register RDI
-    SavedRsi dq ?; saved register RSI
-SkFrame ends
-
 sampleFrame struct
-    Filldq?; fill to 8 mod 16
-    SavedRdidq?; Saved Register RDI
-    SavedRsi  dq?; Saved Register RSI
+    Fill     dq ?; fill to 8 mod 16
+    SavedRdi dq ?; Saved Register RDI
+    SavedRsi dq ?; Saved Register RSI
 sampleFrame ends
 
 sample2 PROC FRAME
@@ -419,7 +416,7 @@ sample2 PROC FRAME
     mov rsi, sampleFrame.SavedRsi[rsp]
     mov rdi, sampleFrame.SavedRdi[rsp]
 
-; Here’s the official epilog
+; Here's the official epilog
 
     add rsp, (sizeof sampleFrame)
     ret
@@ -442,6 +439,8 @@ typedef enum _UNWIND_OP_CODES {
     UWOP_SAVE_XMM128_FAR, /* info == XMM reg number, offset in next 2 slots */
     UWOP_PUSH_MACHFRAME   /* info == 0: no error-code, 1: error-code */
 } UNWIND_CODE_OPS;
+
+typedef unsigned char UBYTE;
 
 typedef union _UNWIND_CODE {
     struct {
@@ -491,9 +490,9 @@ typedef struct _RUNTIME_FUNCTION {
     ((PRUNTIME_FUNCTION)((base) + *(PULONG)GetLanguageSpecificDataPtr(info)))
 
 #define GetExceptionDataPtr(info) \
-    ((PVOID)((PULONG)GetLanguageSpecificData(info) + 1)
+    ((PVOID)((PULONG)GetLanguageSpecificData(info) + 1))
 ```
 
-## See Also
+## See also
 
 [x64 software conventions](../build/x64-software-conventions.md)

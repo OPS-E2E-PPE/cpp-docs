@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CReversalTransition Class"
 title: "CReversalTransition Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CReversalTransition", "AFXANIMATIONCONTROLLER/CReversalTransition", "AFXANIMATIONCONTROLLER/CReversalTransition::CReversalTransition", "AFXANIMATIONCONTROLLER/CReversalTransition::Create", "AFXANIMATIONCONTROLLER/CReversalTransition::m_duration"]
@@ -51,7 +52,7 @@ A reversal transition smoothly changes direction over a given duration. The fina
 
 **Header:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CReversalTransition::Create
+## <a name="create"></a> CReversalTransition::Create
 
 Calls the transition library to create encapsulated transition COM object.
 
@@ -70,7 +71,7 @@ A pointer to transition library, which is responsible for creation of standard t
 
 TRUE if transition is created successfully; otherwise FALSE.
 
-##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition
+## <a name="creversaltransition"></a> CReversalTransition::CReversalTransition
 
 Constructs a reversal transition object and initializes its duration.
 
@@ -83,7 +84,7 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
 *duration*<br/>
 The duration of the transition.
 
-##  <a name="m_duration"></a>  CReversalTransition::m_duration
+## <a name="m_duration"></a> CReversalTransition::m_duration
 
 The duration of the transition.
 
@@ -91,6 +92,6 @@ The duration of the transition.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

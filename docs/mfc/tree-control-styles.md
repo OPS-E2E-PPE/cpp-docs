@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Tree Control Styles"
 title: "Tree Control Styles"
 ms.date: "11/04/2016"
 f1_keywords: ["TVS_SINGLEEXPAND", "TVS_LINESATROOT", "TVS_HASBUTTONS", "TVS_NOTOOLTIPS", "TVS_HASLINES"]
@@ -7,7 +8,7 @@ ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
 ---
 # Tree Control Styles
 
-Tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) styles govern aspects of a tree control's appearance. You set the initial styles when you create the tree control. You can retrieve and change the styles after creating the tree control by using the [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) and [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows functions, specifying **GWL_STYLE** for the *nIndex* parameter. For a complete list of styles, see [Tree View Control Window Styles](/windows/desktop/Controls/tree-view-control-window-styles) in the Windows SDK.
+Tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) styles govern aspects of a tree control's appearance. You set the initial styles when you create the tree control. You can retrieve and change the styles after creating the tree control by using the [GetWindowLong](/windows/win32/api/winuser/nf-winuser-getwindowlongw) and [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) Windows functions, specifying **GWL_STYLE** for the *nIndex* parameter. For a complete list of styles, see [Tree View Control Window Styles](/windows/win32/Controls/tree-view-control-window-styles) in the Windows SDK.
 
 The **TVS_HASLINES** style enhances the graphic representation of a tree control's hierarchy by drawing lines that link child items to their corresponding parent item. This style does not link items at the root of the hierarchy. To do so, you need to combine the **TVS_HASLINES** and **TVS_LINESATROOT** styles.
 
@@ -19,8 +20,7 @@ The **TVS_EDITLABELS** style makes it possible for the user to edit the labels o
 
 The **TVS_NOTOOLTIPS** style disables the automatic tool tip feature of tree view controls. This feature automatically displays a tool tip, containing the title of the item under the mouse cursor, if the entire title is not currently visible.
 
-## See Also
+## See also
 
 [Using CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

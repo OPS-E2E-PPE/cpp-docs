@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Command-Line Warning D9043"
 title: "Command-Line Warning D9043"
 ms.date: "11/04/2016"
 f1_keywords: ["D9043"]
@@ -13,7 +14,7 @@ invalid value 'warning_level' for 'compiler_option'; assuming '4999'; Code Analy
 
 The following sample generates C9043.
 
-```
+```cpp
 // D9043.cpp
 // compile with: /analyze /w16001
 // D9043 warning expected

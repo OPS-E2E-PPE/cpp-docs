@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: /HELP (Compiler Command-Line Help)"
 title: "/HELP (Compiler Command-Line Help)"
 ms.date: "11/04/2016"
 f1_keywords: ["/help"]
@@ -27,7 +28,7 @@ Displays a listing of compiler options to standard output.
 
 - This compiler option cannot be changed programmatically.
 
-## See Also
+## See also
 
-[Compiler Options](../../build/reference/compiler-options.md)<br/>
-[Setting Compiler Options](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[MSVC Compiler Command-Line Syntax](compiler-command-line-syntax.md)

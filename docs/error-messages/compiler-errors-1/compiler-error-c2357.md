@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2357"
 title: "Compiler Error C2357"
 ms.date: "11/04/2016"
 f1_keywords: ["C2357"]
@@ -19,7 +20,7 @@ For more information, see [init_seg](../../preprocessor/init-seg.md).
 
 The following sample generates C2357:
 
-```
+```cpp
 // C2357.cpp
 // compile with: /c
 // C2357 expected

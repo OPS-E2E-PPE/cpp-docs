@@ -1,21 +1,17 @@
 ---
-title: "&lt;unordered_set&gt; functions"
+description: "Learn more about: <unordered_set> functions"
+title: "<unordered_set> functions"
 ms.date: "11/04/2016"
 f1_keywords: ["unordered_set/std::swap (set)", "unordered_set/std::swap (unordered_multiset)"]
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
 ---
-# &lt;unordered_set&gt; functions
+# `<unordered_set>` functions
 
-|||
-|-|-|
-|[swap (set)](#swap)|[swap (unordered_multiset)](#swap_unordered_multiset)|
-
-## <a name="swap"></a>  swap (unordered_set)
+## <a name="swap"></a> swap (unordered_set)
 
 Swaps the contents of two containers.
 
-```
-
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_set <Key, Hash, Pred, Alloc>& left,
@@ -24,22 +20,22 @@ void swap(
 
 ### Parameters
 
-*Key*<br/>
+*Key*\
 The key type.
 
-*Hash*<br/>
+*Hash*\
 The hash function object type.
 
-*Pred*<br/>
+*Pred*\
 The equality comparison function object type.
 
-*Alloc*<br/>
+*Alloc*\
 The allocator class.
 
-*left*<br/>
+*left*\
 The first container to swap.
 
-*right*<br/>
+*right*\
 The second container to swap.
 
 ### Remarks
@@ -94,18 +90,16 @@ return (0);
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a>  swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a> swap (unordered_multiset)
 
 Swaps the contents of two containers.
 
-```
-
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -114,22 +108,22 @@ void swap(
 
 ### Parameters
 
-*Key*<br/>
+*Key*\
 The key type.
 
-*Hash*<br/>
+*Hash*\
 The hash function object type.
 
-*Pred*<br/>
+*Pred*\
 The equality comparison function object type.
 
-*Alloc*<br/>
+*Alloc*\
 The allocator class.
 
-*left*<br/>
+*left*\
 The first container to swap.
 
-*right*<br/>
+*right*\
 The second container to swap.
 
 ### Remarks
@@ -186,12 +180,7 @@ int main()
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
-
-## See also
-
-[<unordered_set>](../standard-library/unordered-set.md)<br/>

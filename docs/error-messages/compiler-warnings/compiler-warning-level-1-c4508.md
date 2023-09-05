@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4508"
 title: "Compiler Warning (level 1) C4508"
 ms.date: "11/04/2016"
 f1_keywords: ["C4508"]
@@ -15,7 +16,7 @@ To resolve this warning, explicitly declare the return type of functions.
 
 The following sample generates C4508:
 
-```
+```cpp
 // C4508.cpp
 // compile with: /W1 /c
 #pragma warning (disable : 4430)

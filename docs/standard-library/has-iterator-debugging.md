@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: _HAS_ITERATOR_DEBUGGING"
 title: "_HAS_ITERATOR_DEBUGGING"
 ms.date: "11/04/2016"
 f1_keywords: ["_HAS_ITERATOR_DEBUGGING"]
@@ -30,7 +31,7 @@ To disable debug iterators in debug builds, set _ITERATOR_DEBUG_LEVEL to 0 or 1.
 
 ## See also
 
-[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)<br/>
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)<br/>
-[Checked Iterators](../standard-library/checked-iterators.md)<br/>
-[Safe Libraries: C++ Standard Library](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)\
+[Debug Iterator Support](../standard-library/debug-iterator-support.md)\
+[Checked Iterators](../standard-library/checked-iterators.md)\
+[Safe Libraries: C++ Standard Library](../standard-library/safe-libraries-cpp-standard-library.md)

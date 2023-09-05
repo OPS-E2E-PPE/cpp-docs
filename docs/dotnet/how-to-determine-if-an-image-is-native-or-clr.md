@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Determine if an Image is Native or CLR"
 title: "How to: Determine if an Image is Native or CLR"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -7,15 +8,15 @@ ms.assetid: 5a854822-6172-4b22-b236-320165412568
 ---
 # How to: Determine if an Image is Native or CLR
 
-One way to determine whether an image was built for the common language runtime is to use **dumpbin**[/CLRHEADER](../build/reference/clrheader.md).
+One way to determine whether an image was built for the common language runtime is to use the **`dumpbin /CLRHEADER`** command. For more information, see [`/CLRHEADER`](../build/reference/clrheader.md).
 
-You can also programmatically check whether an image was built for the common language runtime. For more information, see [How to: Detect /clr Compilation](../dotnet/how-to-detect-clr-compilation.md).
+You can also programmatically check whether an image was built for the common language runtime. For more information, see [How to: Detect /clr compilation](../dotnet/how-to-detect-clr-compilation.md).
 
 ## Example
 
 The following sample determines whether an image was built to run on the common language runtime.
 
-```
+```cpp
 // detect_image_type.cpp
 // compile with: /clr
 using namespace System;
@@ -71,6 +72,6 @@ int main() {
 }
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

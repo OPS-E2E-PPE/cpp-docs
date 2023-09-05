@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2254"
 title: "Compiler Error C2254"
 ms.date: "11/04/2016"
 f1_keywords: ["C2254"]
@@ -9,11 +10,11 @@ ms.assetid: 49bb3d7e-3bdf-4af6-937c-fa627be412a9
 
 'function' : pure specifier or abstract override specifier not allowed on friend function
 
-A `friend` function is specified as pure `virtual`.
+A **`friend`** function is specified as pure **`virtual`**.
 
 The following sample generates C2254:
 
-```
+```cpp
 // C2254.cpp
 // compile with: /c
 class A {

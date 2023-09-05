@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4481"
 title: "Compiler Warning (level 4) C4481"
 ms.date: "11/04/2016"
 f1_keywords: ["C4481"]
@@ -13,13 +14,13 @@ A keyword was used that is not in the C++ standard, for example, one of the over
 
 - [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [Override Specifiers](../../windows/override-specifiers-cpp-component-extensions.md)
+- [Override Specifiers](../../extensions/override-specifiers-cpp-component-extensions.md)
 
 ## Example
 
 The following sample generates C4481.
 
-```
+```cpp
 // C4481.cpp
 // compile with: /W4 /c
 class B {

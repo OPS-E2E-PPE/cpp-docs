@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Design Principles for Collection and Enumerator Interfaces"
 title: "Designing Collection and Enumerator Interfaces (ATL)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["enumerator interfaces", "collection interfaces"]
@@ -14,7 +15,6 @@ There are different design principles behind each type of interface:
 
 Each type of interface plays a different role in providing access to the elements in a collection.
 
-## See Also
+## See also
 
 [Collections and Enumerators](../atl/atl-collections-and-enumerators.md)
-

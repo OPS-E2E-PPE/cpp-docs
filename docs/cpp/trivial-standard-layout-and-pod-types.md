@@ -1,11 +1,12 @@
 ---
+description: "Learn more about: Trivial, standard-layout, POD, and literal types"
 title: "Trivial, standard-layout, POD, and literal types"
 ms.date: "04/05/2018"
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
 ---
 # Trivial, standard-layout, POD, and literal types
 
-The term *layout* refers to how the members of an object of class, struct or union type are arranged in memory. In some cases, the layout is well-defined by the language specification. But when a class or struct contains certain C++ language features such as virtual base classes, virtual functions, members with different access control, then the compiler is free to choose a layout. That layout may vary depending on what optimizations are being performed and in many cases object might not even occupy a contiguous area of memory. For example, if a class has virtual functions, all the instances of that class might share a single virtual function table. Such types are of course very useful, but they also have limitations. Because the layout is undefined they cannot be passed to programs written in other languages, such as C, and because they might be non-contiguous they cannot be reliably copied with fast low-level functions such as `memcopy` or serialized over a network.
+The term *layout* refers to how the members of an object of class, struct or union type are arranged in memory. In some cases, the layout is well-defined by the language specification. But when a class or struct contains certain C++ language features such as virtual base classes, virtual functions, members with different access control, then the compiler is free to choose a layout. That layout may vary depending on what optimizations are being performed and in many cases the object might not even occupy a contiguous area of memory. For example, if a class has virtual functions, all the instances of that class might share a single virtual function table. Such types are very useful, but they also have limitations. Because the layout is undefined they cannot be passed to programs written in other languages, such as C, and because they might be non-contiguous they cannot be reliably copied with fast low-level functions such as `memcopy`, or serialized over a network.
 
 To enable compilers as well as C++ programs and metaprograms to reason about the suitability of any given type for operations that depend on a particular memory layout, C++14 introduced three categories of simple classes and structs: *trivial*, *standard-layout*, and *POD* or Plain Old Data. The Standard Library has the function templates `is_trivial<T>`, `is_standard_layout<T>` and `is_pod<T>` that determine whether a given type belongs to a given category.
 
@@ -26,17 +27,17 @@ The following examples show trivial types. In Trivial2, the presence of the `Tri
 ```cpp
 struct Trivial
 {
-      int i;
+   int i;
 private:
    int j;
-   };
+};
 
 struct Trivial2
 {
    int i;
    Trivial2(int a, int b) : i(a), j(b) {}
    Trivial2() = default;
-   private:
+private:
    int j;   // Different access control
 };
 ```
@@ -82,7 +83,7 @@ struct Base
    int j;
 };
 
-// std::is_standard_layout<<Derived> == false!
+// std::is_standard_layout<Derived> == false!
 struct Derived : public Base
 {
    int x;
@@ -98,7 +99,7 @@ struct Base
    void Foo() {}
 };
 
-// std::is_standard_layout<<Derived> == true
+// std::is_standard_layout<Derived> == true
 struct Derived : public Base
 {
    int x;
@@ -131,15 +132,15 @@ protected:
 // Neither trivial nor standard-layout
 struct A : B
 {
-      int a;
+   int a;
    int b;
    void Foo() override {} // Virtual function
 };
 
 // Trivial but not standard-layout
 struct C
-   {
-      int a;
+{
+   int a;
 private:
    int b;   // Different access control
 };

@@ -1,19 +1,24 @@
 ---
-title: "&lt;string&gt; operators"
+description: "Learn more about: <string> operators"
+title: "<string> operators"
 ms.date: "11/04/2016"
-f1_keywords: ["string/std::operator!=", "string/std::operator&gt;", "string/std::operator&gt;&gt;", "string/std::operator&gt;=", "string/std::operator&lt;", "string/std::operator&lt;&lt;", "string/std::operator&lt;=", "string/std::operator+", "string/std::operator=="]
+f1_keywords: ["string/std::operator!=", "string/std::operator>", "string/std::operator>>", "string/std::operator>=", "string/std::operator<", "string/std::operator<<", "string/std::operator<=", "string/std::operator+", "string/std::operator=="]
 ms.assetid: 33ce8f05-06c7-45d3-a0cb-bcd27cf93910
-helpviewer_keywords: ["std::operator!= (string)", "std::operator&gt; (string)", "std::operator&gt;&gt; (string)", "std::operator&gt;= (string)", "std::operator&lt; (string)", "std::operator&lt;&lt; (string)", "std::operator&lt;= (string), std::operator== (string)"]
+helpviewer_keywords: ["std::operator!= (string)", "std::operator> (string)", "std::operator>> (string)", "std::operator>= (string)", "std::operator< (string)", "std::operator<< (string)", "std::operator<= (string), std::operator== (string)"]
 ---
-# &lt;string&gt; operators
+# `<string>` operators
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|
-|[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[operator==](#op_eq_eq)|
+[operator!=](#op_neq)\
+[`operator>`](#op_gt)\
+[`operator>>`](#op_gt_gt)\
+[`operator>=`](#op_gt_eq)\
+[`operator<`](#op_lt)\
+[`operator<<`](#op_lt_lt)\
+[`operator<=`](#op_lt_eq)\
+[operator+](#op_add)\
+[operator==](#op_eq_eq)
 
-## <a name="op_add"></a>  operator+
+## <a name="op_add"></a> operator+
 
 Concatenates two string objects.
 
@@ -81,10 +86,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 A C-style string or an object of type `basic_string` to be concatenated.
 
-*right*<br/>
+*right*\
 A C-style string or an object of type `basic_string` to be concatenated.
 
 ### Return Value
@@ -93,7 +98,7 @@ The string that is the concatenation of the input strings.
 
 ### Remarks
 
-The functions each overload `operator+` to concatenate two objects of template class [basic_string Class](../standard-library/basic-string-class.md). All effectively return `basic_string< CharType, Traits, Allocator>(Left).append(right)`. For more information, see [append](../standard-library/basic-string-class.md#append).
+The functions each overload `operator+` to concatenate two objects of class template [basic_string Class](../standard-library/basic-string-class.md). All effectively return `basic_string< CharType, Traits, Allocator>(Left).append(right)`. For more information, see [append](../standard-library/basic-string-class.md#append).
 
 ### Example
 
@@ -147,7 +152,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 Tests if the string object on the left side of the operator is not equal to the string object on the right side.
 
@@ -170,15 +175,15 @@ bool operator!=(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 A C-style string or an object of type `basic_string` to be compared.
 
-*right*<br/>
+*right*\
 A C-style string or an object of type `basic_string` to be compared.
 
 ### Return Value
 
-**true** if the string object on the left side of the operator is not lexicographically equal to the string object on the right side; otherwise **false**.
+**`true`** if the string object on the left side of the operator is not lexicographically equal to the string object on the right side; otherwise **`false`**.
 
 ### Remarks
 
@@ -238,7 +243,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Tests if the string object on the left side of the operator is equal to the string object on the right side.
 
@@ -261,15 +266,15 @@ bool operator==(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 A C-style string or an object of type `basic_string` to be compared.
 
-*right*<br/>
+*right*\
 A C-style string or an object of type `basic_string` to be compared.
 
 ### Return Value
 
-**true** if the string object on the left side of the operator is lexicographically equal to the string object on the right side; otherwise **false**.
+**`true`** if the string object on the left side of the operator is lexicographically equal to the string object on the right side; otherwise **`false`**.
 
 ### Remarks
 
@@ -329,7 +334,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> `operator<`
 
 Tests if the string object on the left side of the operator is less than to the string object on the right side.
 
@@ -352,15 +357,15 @@ bool operator<(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 A C-style string or an object of type `basic_string` to be compared.
 
-*right*<br/>
+*right*\
 A C-style string or an object of type `basic_string` to be compared.
 
 ### Return Value
 
-**true** if the string object on the left side of the operator is lexicographically less than the string object on the right side; otherwise **false**.
+**`true`** if the string object on the left side of the operator is lexicographically less than the string object on the right side; otherwise **`false`**.
 
 ### Remarks
 
@@ -425,7 +430,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> `operator<=`
 
 Tests if the string object on the left side of the operator is less than or equal to the string object on the right side.
 
@@ -448,15 +453,15 @@ bool operator<=(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 A C-style string or an object of type `basic_string` to be compared.
 
-*right*<br/>
+*right*\
 A C-style string or an object of type `basic_string` to be compared.
 
 ### Return Value
 
-**true** if the string object on the left side of the operator is lexicographically less than or equal to the string object on the right side; otherwise **false**.
+**`true`** if the string object on the left side of the operator is lexicographically less than or equal to the string object on the right side; otherwise **`false`**.
 
 ### Remarks
 
@@ -528,7 +533,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="op_lt_lt"></a> `operator<<`
 
 A template function that writes a string into the output stream.
 
@@ -541,10 +546,10 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### Parameters
 
-*_Ostr*<br/>
+*_Ostr*\
 The output stream being written to.
 
-*str*<br/>
+*str*\
 The string to be entered into the output stream.
 
 ### Return Value
@@ -553,9 +558,9 @@ Writes the value of the specified string to the output stream *_Ostr*.
 
 ### Remarks
 
-The template function overloads **operator<<** to insert an object *str* of template class [basic_string](../standard-library/basic-string-class.md) into the stream *\_Ostr*. The function effectively returns `_Ostr.write( str.c_str, str.size )`.
+The template function overloads **operator<<** to insert an object *str* of class template [basic_string](../standard-library/basic-string-class.md) into the stream *\_Ostr*. The function effectively returns `_Ostr.write( str.c_str, str.size )`.
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> `operator>`
 
 Tests if the string object on the left side of the operator is greater than to the string object on the right side.
 
@@ -578,15 +583,15 @@ bool operator>(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 A C-style string or an object of type `basic_string` to be compared.
 
-*right*<br/>
+*right*\
 A C-style string or an object of type `basic_string` to be compared.
 
 ### Return Value
 
-**true** if the string object on the left side of the operator is lexicographically greater than the string object on the right side; otherwise **false**.
+**`true`** if the string object on the left side of the operator is lexicographically greater than the string object on the right side; otherwise **`false`**.
 
 ### Remarks
 
@@ -658,7 +663,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> `operator>=`
 
 Tests if the string object on the left side of the operator is greater than or equal to the string object on the right side.
 
@@ -681,15 +686,15 @@ bool operator>=(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 A C-style string or an object of type `basic_string` to be compared.
 
-*right*<br/>
+*right*\
 A C-style string or an object of type `basic_string` to be compared.
 
 ### Return Value
 
-**true** if the string object on the left side of the operator is lexicographically greater than or equal to the string object on the right side; otherwise **false**.
+**`true`** if the string object on the left side of the operator is lexicographically greater than or equal to the string object on the right side; otherwise **`false`**.
 
 ### Remarks
 
@@ -761,7 +766,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="op_gt_gt"></a> `operator>>`
 
 A template function that reads a string from an input stream.
 
@@ -774,10 +779,10 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### Parameters
 
-*_Istr*<br/>
+*_Istr*\
 The input stream used to extract the sequence
 
-*right*<br/>
+*right*\
 The string that is being extracted from the input stream.
 
 ### Return Value
@@ -798,7 +803,7 @@ After the function extracts `_Istr`. [max_size](../standard-library/basic-string
 
 - After the function extracts an element *ch* for which [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) is true, in which case the character is put back.
 
-If the function extracts no elements, it calls [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). In any case, it calls **istr**. **width**(0) and returns \* **this**.
+If the function extracts no elements, it calls [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). In any case, it calls **istr**. **width**(0) and returns \* **`this`**.
 
 ### Example
 
@@ -821,4 +826,4 @@ int main( )
 
 ## See also
 
-[\<string>](../standard-library/string.md)<br/>
+[\<string>](../standard-library/string.md)

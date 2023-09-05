@@ -53,7 +53,7 @@ public :
    END_MSG_MAP()
 
    BEGIN_SINK_MAP(CMainWindow)
-      SINK_ENTRY_EX(1, __uuidof(DCalendarEvents), 1, OnClick)
+      SINK_ENTRY_EX(1, __uuidof(DCalendarEvents), DISPID_CLICK, OnClick)
    END_SINK_MAP()
 
    // Helper to display events
@@ -293,9 +293,9 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      LPTSTR    lpCmdLine,
                      int       nCmdShow)
 {
-	UNREFERENCED_PARAMETER(hInstance);
+   UNREFERENCED_PARAMETER(hInstance);
    UNREFERENCED_PARAMETER(hPrevInstance);
-	
+
    g_UseMethod = _ttoi(lpCmdLine);
 
    if (ValidateUseMethod())

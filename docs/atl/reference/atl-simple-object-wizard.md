@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ATL Simple Object Wizard"
 title: "ATL Simple Object Wizard"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.codewiz.class.atl.simple.overview"]
@@ -20,7 +21,7 @@ Beginning with Visual Studio 2008, the registration script produced by this wiza
 Specify the names for the object, interface, and classes to be added to your project. Except for **Short name**, all other boxes can be edited independently of the others. If you change the text for **Short name**, the change is reflected in the names of all other boxes in this page. If you change the **Coclass** name in the COM section, the change is reflected in the **Type** and **ProgID** boxes, but the **Interface** name does not change. This naming behavior is designed to make all the names easily identifiable for you as you develop your control.
 
 > [!NOTE]
->  **Coclass** is editable on only nonattributed projects. If your project attributed, you cannot edit **Coclass**.
+> **Coclass** is editable on only nonattributed projects. If your project attributed, you cannot edit **Coclass**.
 
 ## C++
 
@@ -54,7 +55,7 @@ Provides information for the C++ class created for the object.
 
    By default, any objects you add after you set this option are designated as attributed (the check box is selected). You can clear this box to add an object that does not use attributes.
 
-   See [Application Settings, ATL Project Wizard](../../atl/reference/application-settings-atl-project-wizard.md) and [Basic Mechanics of Attributes](../../windows/basic-mechanics-of-attributes.md) for more information.
+   See [Application Settings, ATL Project Wizard](../../atl/reference/application-settings-atl-project-wizard.md) and [Basic mechanics of attributes](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) for more information.
 
 ## COM
 
@@ -79,7 +80,6 @@ Provides information about the COM functionality for the object.
 
    Sets the name that containers can use instead of the CLSID of the object.
 
-## See Also
+## See also
 
 [ATL Simple Object](../../atl/reference/adding-an-atl-simple-object.md)
-

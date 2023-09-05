@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAtlFileMappingBase Class"
 title: "CAtlFileMappingBase Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAtlFileMappingBase", "ATLFILE/ATL::CAtlFileMappingBase", "ATLFILE/ATL::CAtlFileMappingBase::CAtlFileMappingBase", "ATLFILE/ATL::CAtlFileMappingBase::CopyFrom", "ATLFILE/ATL::CAtlFileMappingBase::GetData", "ATLFILE/ATL::CAtlFileMappingBase::GetHandle", "ATLFILE/ATL::CAtlFileMappingBase::GetMappingSize", "ATLFILE/ATL::CAtlFileMappingBase::MapFile", "ATLFILE/ATL::CAtlFileMappingBase::MapSharedMem", "ATLFILE/ATL::CAtlFileMappingBase::OpenMapping", "ATLFILE/ATL::CAtlFileMappingBase::Unmap"]
@@ -10,11 +11,11 @@ ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
 This class represents a memory-mapped file.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
-```
+```cpp
 class CAtlFileMappingBase
 ```
 
@@ -50,17 +51,17 @@ class CAtlFileMappingBase
 
 File mapping is the association of a file's contents with a portion of the virtual address space of a process. This class provides methods for creating file-mapping objects that permit programs to easily access and share data.
 
-For more information, see [File Mapping](/windows/desktop/Memory/file-mapping) in the Windows SDK.
+For more information, see [File Mapping](/windows/win32/Memory/file-mapping) in the Windows SDK.
 
 ## Requirements
 
 **Header:** atlfile.h
 
-##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase
+## <a name="catlfilemappingbase"></a> CAtlFileMappingBase::CAtlFileMappingBase
 
 The constructor.
 
-```
+```cpp
 CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
@@ -78,11 +79,11 @@ Creates a new file-mapping object, optionally using an existing object. It is st
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlFileMappingBase::~CAtlFileMappingBase
+## <a name="dtor"></a> CAtlFileMappingBase::~CAtlFileMappingBase
 
 The destructor.
 
-```
+```cpp
 ~CAtlFileMappingBase() throw();
 ```
 
@@ -90,11 +91,11 @@ The destructor.
 
 Frees any resources allocated by the class and calls the [CAtlFileMappingBase::Unmap](#unmap) method.
 
-##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom
+## <a name="copyfrom"></a> CAtlFileMappingBase::CopyFrom
 
 Call this method to copy from a file-mapping object.
 
-```
+```cpp
 HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ```
 
@@ -107,11 +108,11 @@ The original file-mapping object to copy from.
 
 Returns S_OK on success, or an error HRESULT on failure.
 
-##  <a name="getdata"></a>  CAtlFileMappingBase::GetData
+## <a name="getdata"></a> CAtlFileMappingBase::GetData
 
 Call this method to get the data from a file-mapping object.
 
-```
+```cpp
 void* GetData() const throw();
 ```
 
@@ -119,11 +120,11 @@ void* GetData() const throw();
 
 Returns a pointer to the data.
 
-##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle
+## <a name="gethandle"></a> CAtlFileMappingBase::GetHandle
 
 Call this method to return a handle to the file-mapping object.
 
-```
+```cpp
 HANDLE GetHandle() throw ();
 ```
 
@@ -131,11 +132,11 @@ HANDLE GetHandle() throw ();
 
 Returns a handle to the file-mapping object.
 
-##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize
+## <a name="getmappingsize"></a> CAtlFileMappingBase::GetMappingSize
 
 Call this method to get the mapping size from a file-mapping object.
 
-```
+```cpp
 SIZE_T GetMappingSize() throw();
 ```
 
@@ -147,11 +148,11 @@ Returns the mapping size.
 
 See the example for [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).
 
-##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile
+## <a name="mapfile"></a> CAtlFileMappingBase::MapFile
 
 Call this method to open or create a file-mapping object for the specified file.
 
-```
+```cpp
 HRESULT MapFile(
     HANDLE hFile,
     SIZE_T nMappingSize = 0,
@@ -172,10 +173,10 @@ The mapping size. If 0, the maximum size of the file-mapping object is equal to 
 The file offset where mapping is to begin. The offset value must be a multiple of the system's memory allocation granularity.
 
 *dwMappingProtection*<br/>
-The protection desired for the file view when the file is mapped. See *flProtect* in [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) in the Windows SDK.
+The protection desired for the file view when the file is mapped. See *flProtect* in [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) in the Windows SDK.
 
 *dwViewDesiredAccess*<br/>
-Specifies the type of access to the file view and, therefore, the protection of the pages mapped by the file. See *dwDesiredAccess* in [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) in the Windows SDK.
+Specifies the type of access to the file view and, therefore, the protection of the pages mapped by the file. See *dwDesiredAccess* in [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) in the Windows SDK.
 
 ### Return Value
 
@@ -183,17 +184,17 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-After a file-mapping object has been created, the size of the file must not exceed the size of the file-mapping object; if it does, not all of the file's contents will be available for sharing. For more details, see [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) and [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) in the Windows SDK.
+After a file-mapping object has been created, the size of the file must not exceed the size of the file-mapping object; if it does, not all of the file's contents will be available for sharing. For more details, see [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) and [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) in the Windows SDK.
 
 ### Example
 
 See the example for [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).
 
-##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem
+## <a name="mapsharedmem"></a> CAtlFileMappingBase::MapSharedMem
 
 Call this method to create a file-mapping object that permits full access to all processes.
 
-```
+```cpp
 HRESULT MapSharedMem(
     SIZE_T nMappingSize,
     LPCTSTR szName,
@@ -215,13 +216,13 @@ The name of the mapping object.
 Points to a BOOL value that is set to TRUE if the mapping object already existed.
 
 *lpsa*<br/>
-The pointer to a `SECURITY_ATTRIBUTES` structure that determines whether the returned handle can be inherited by child processes. See *lpAttributes* in [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) in the Windows SDK.
+The pointer to a `SECURITY_ATTRIBUTES` structure that determines whether the returned handle can be inherited by child processes. See *lpAttributes* in [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) in the Windows SDK.
 
 *dwMappingProtection*<br/>
 The protection desired for the file view, when the file is mapped. See *flProtect* in `CreateFileMapping` in the Windows SDK.
 
 *dwViewDesiredAccess*<br/>
-Specifies the type of access to the file view and, therefore, the protection of the pages mapped by the file. See *dwDesiredAccess* in [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) in the Windows SDK.
+Specifies the type of access to the file view and, therefore, the protection of the pages mapped by the file. See *dwDesiredAccess* in [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) in the Windows SDK.
 
 ### Return Value
 
@@ -229,13 +230,13 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-`MapShareMem` allows an existing file-mapping object, created by [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga), to be shared between processes.
+`MapShareMem` allows an existing file-mapping object, created by [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga), to be shared between processes.
 
-##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping
+## <a name="openmapping"></a> CAtlFileMappingBase::OpenMapping
 
 Call this method to open a named file-mapping object for the specified file.
 
-```
+```cpp
 HRESULT OpenMapping(
     LPCTSTR szName,
     SIZE_T nMappingSize,
@@ -255,7 +256,7 @@ The mapping size. If 0, the maximum size of the file-mapping object is equal to 
 The file offset where mapping is to begin. The offset value must be a multiple of the system's memory allocation granularity.
 
 *dwViewDesiredAccess*<br/>
-Specifies the type of access to the file view and, therefore, the protection of the pages mapped by the file. See *dwDesiredAccess* in [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) in the Windows SDK.
+Specifies the type of access to the file view and, therefore, the protection of the pages mapped by the file. See *dwDesiredAccess* in [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) in the Windows SDK.
 
 ### Return Value
 
@@ -265,11 +266,11 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 In debug builds, an assertion error will occur if the input parameters are invalid.
 
-##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =
+## <a name="operator_eq"></a> CAtlFileMappingBase::operator =
 
 Sets the current file-mapping object to another file-mapping object.
 
-```
+```cpp
 CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ```
 
@@ -282,11 +283,11 @@ The current file-mapping object.
 
 Returns a reference to the current object.
 
-##  <a name="unmap"></a>  CAtlFileMappingBase::Unmap
+## <a name="unmap"></a> CAtlFileMappingBase::Unmap
 
 Call this method to unmap a file-mapping object.
 
-```
+```cpp
 HRESULT Unmap() throw();
 ```
 
@@ -296,9 +297,9 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 ### Remarks
 
-See [UnmapViewOfFile](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile) in the Windows SDK for more details.
+See [UnmapViewOfFile](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) in the Windows SDK for more details.
 
-## See Also
+## See also
 
 [CAtlFileMapping Class](../../atl/reference/catlfilemapping-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

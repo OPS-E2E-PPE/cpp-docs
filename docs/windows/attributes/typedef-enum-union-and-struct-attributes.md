@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Typedef, Enum, Union, and Struct Attributes"
 title: "Typedef, Enum, Union, and Struct Attributes (C++ COM)"
 ms.date: "10/02/2018"
 helpviewer_keywords: ["union attributes", "attributes [C++/CLI], reference topics"]
@@ -12,7 +13,7 @@ The following attributes apply to the [typedef](../../cpp/aliases-and-typedefs-c
 
 |Attribute|Description|
 |---------------|-----------------|
-|[case](case-cpp.md)|Used with the [switch_type](switch-type.md) attribute in a **union**.|
+|[case](case-cpp.md)|Used with the [switch_type](switch-type.md) attribute in a **`union`**.|
 |[custom](custom-cpp.md)|Lets you define your own attribute.|
 |[export](export.md)|Causes a data structure to be placed in the .idl file.|
 |[first_is](first-is.md)|Specifies the index of the first array element to be transmitted.|
@@ -94,6 +95,6 @@ The following attributes apply to the [typedef](../../cpp/aliases-and-typedefs-c
 |[version](version-cpp.md)|Identifies a particular version among multiple versions of a class.|
 |[vi_progid](vi-progid.md)|Specifies a version-independent form of the ProgID.|
 
-## See Also
+## See also
 
 [Attributes by Usage](attributes-by-usage.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CPageSetupDialog Class"
 title: "CPageSetupDialog Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CPageSetupDialog", "AFXDLGS/CPageSetupDialog", "AFXDLGS/CPageSetupDialog::CPageSetupDialog", "AFXDLGS/CPageSetupDialog::CreatePrinterDC", "AFXDLGS/CPageSetupDialog::DoModal", "AFXDLGS/CPageSetupDialog::GetDeviceName", "AFXDLGS/CPageSetupDialog::GetDevMode", "AFXDLGS/CPageSetupDialog::GetDriverName", "AFXDLGS/CPageSetupDialog::GetMargins", "AFXDLGS/CPageSetupDialog::GetPaperSize", "AFXDLGS/CPageSetupDialog::GetPortName", "AFXDLGS/CPageSetupDialog::OnDrawPage", "AFXDLGS/CPageSetupDialog::PreDrawPage", "AFXDLGS/CPageSetupDialog::m_psd"]
@@ -55,7 +56,7 @@ After initializing the dialog box controls, call the `DoModal` member function t
 If `DoModal` returns IDOK, you can use several of `CPageSetupDialog`'s member functions, or access the `m_psd` data member, to retrieve information input by the user.
 
 > [!NOTE]
->  After the common OLE Page Setup dialog box is dismissed, any changes made by the user will not be saved by the framework. It is up to the application itself to save any values from this dialog box to a permanent location, such as member of the application's document or application class.
+> After the common OLE Page Setup dialog box is dismissed, any changes made by the user will not be saved by the framework. It is up to the application itself to save any values from this dialog box to a permanent location, such as member of the application's document or application class.
 
 ## Inheritance Hierarchy
 
@@ -75,7 +76,7 @@ If `DoModal` returns IDOK, you can use several of `CPageSetupDialog`'s member fu
 
 **Header:** afxdlgs.h
 
-##  <a name="cpagesetupdialog"></a>  CPageSetupDialog::CPageSetupDialog
+## <a name="cpagesetupdialog"></a> CPageSetupDialog::CPageSetupDialog
 
 Call this function to construct a `CPageSetupDialog` object.
 
@@ -110,7 +111,7 @@ One or more flags you can use to customize the settings of the dialog box. The v
 
 - PSD_DISABLEORIENTATION Disables the page orientation dialog control.
 
-- PSD_RETURNDEFAULT Causes `CPageSetupDialog` to return [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) and [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) structures that are initialized for the system default printer without displaying a dialog box. It is assumed that both `hDevNames` and `hDevMode` are NULL; otherwise, the function returns an error. If the system default printer is supported by an old printer driver (earlier than Windows version 3.0), only `hDevNames` is returned; `hDevMode` is NULL.
+- PSD_RETURNDEFAULT Causes `CPageSetupDialog` to return [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) and [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) structures that are initialized for the system default printer without displaying a dialog box. It is assumed that both `hDevNames` and `hDevMode` are NULL; otherwise, the function returns an error. If the system default printer is supported by an old printer driver (earlier than Windows version 3.0), only `hDevNames` is returned; `hDevMode` is NULL.
 
 - PSD_DISABLEPAPER Disables the paper selection control.
 
@@ -137,9 +138,9 @@ Use the [DoModal](../../mfc/reference/cdialog-class.md#domodal) function to disp
 
 [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]
 
-##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
+## <a name="createprinterdc"></a> CPageSetupDialog::CreatePrinterDC
 
-Creates a printer device context from the [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) and [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) structures.
+Creates a printer device context from the [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) and [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) structures.
 
 ```
 HDC CreatePrinterDC();
@@ -149,7 +150,7 @@ HDC CreatePrinterDC();
 
 Handle to the newly created printer device context (DC).
 
-##  <a name="domodal"></a>  CPageSetupDialog::DoModal
+## <a name="domodal"></a> CPageSetupDialog::DoModal
 
 Call this function to display the Windows common OLE Page Setup dialog box and allow the user to select various print setup options such as the printing margins, size and orientation of the paper, and destination printer.
 
@@ -159,7 +160,7 @@ virtual INT_PTR DoModal();
 
 ### Return Value
 
-IDOK or IDCANCEL. If IDCANCEL is returned, call the Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) function to determine whether an error occurred.
+IDOK or IDCANCEL. If IDCANCEL is returned, call the Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) function to determine whether an error occurred.
 
 IDOK and IDCANCEL are constants that indicate whether the user selected the OK or Cancel button.
 
@@ -177,7 +178,7 @@ If you want to propagate the current settings entered by the user, make a call t
 
   See the example for [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).
 
-##  <a name="getdevicename"></a>  CPageSetupDialog::GetDeviceName
+## <a name="getdevicename"></a> CPageSetupDialog::GetDeviceName
 
 Call this function after `DoModal` to retrieve the name of the currently selected printer.
 
@@ -189,7 +190,7 @@ CString GetDeviceName() const;
 
 The device name used by the `CPageSetupDialog` object.
 
-##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode
+## <a name="getdevmode"></a> CPageSetupDialog::GetDevMode
 
 Call this function after calling `DoModal` to retrieve information about the printer device context of the `CPageSetupDialog` object.
 
@@ -199,9 +200,9 @@ LPDEVMODE GetDevMode() const;
 
 ### Return Value
 
-The [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) data structure, which contains information about the device initialization and environment of a print driver. You must unlock the memory taken by this structure with the Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) function, which is described in the Windows SDK.
+The [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) data structure, which contains information about the device initialization and environment of a print driver. You must unlock the memory taken by this structure with the Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) function, which is described in the Windows SDK.
 
-##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName
+## <a name="getdrivername"></a> CPageSetupDialog::GetDriverName
 
 Call this function after calling [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) to retrieve the name of the system-defined printer device driver.
 
@@ -217,11 +218,11 @@ A `CString` specifying the system-defined driver name.
 
 Use a pointer to the `CString` object returned by `GetDriverName` as the value of `lpszDriverName` in a call to [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).
 
-##  <a name="getmargins"></a>  CPageSetupDialog::GetMargins
+## <a name="getmargins"></a> CPageSetupDialog::GetMargins
 
 Call this function after a call to `DoModal` to retrieve the margins of the printer device driver.
 
-```
+```cpp
 void GetMargins(
     LPRECT lpRectMargins,
     LPRECT lpRectMinMargins) const;
@@ -230,12 +231,12 @@ void GetMargins(
 ### Parameters
 
 *lpRectMargins*<br/>
-Pointer to a [RECT](/windows/desktop/api/windef/ns-windef-tagrect) structure or [CRect](../../atl-mfc-shared/reference/crect-class.md) object that describes (in 1/1000 inches or 1/100 mm) the print margins for the currently selected printer. Pass NULL for this parameter, if you are not interested in this rectangle.
+Pointer to a [RECT](/windows/win32/api/windef/ns-windef-rect) structure or [CRect](../../atl-mfc-shared/reference/crect-class.md) object that describes (in 1/1000 inches or 1/100 mm) the print margins for the currently selected printer. Pass NULL for this parameter, if you are not interested in this rectangle.
 
 *lpRectMinMargins*<br/>
 Pointer to a `RECT` structure or `CRect` object that describes (in 1/1000 inches or 1/100 mm) the minimum print margins for the currently selected printer. Pass NULL for this parameter, if you are not interested in this rectangle.
 
-##  <a name="getpapersize"></a>  CPageSetupDialog::GetPaperSize
+## <a name="getpapersize"></a> CPageSetupDialog::GetPaperSize
 
 Call this function to retrieve the size of the paper selected for printing.
 
@@ -247,7 +248,7 @@ CSize GetPaperSize() const;
 
 A [CSize](../../atl-mfc-shared/reference/csize-class.md) object containing the size of the paper (in 1/1000 inches or 1/100 mm) selected for printing.
 
-##  <a name="getportname"></a>  CPageSetupDialog::GetPortName
+## <a name="getportname"></a> CPageSetupDialog::GetPortName
 
 Call this function after calling `DoModal` to retrieve the name of the currently selected printer port.
 
@@ -259,7 +260,7 @@ CString GetPortName() const;
 
 The name of the currently selected printer port.
 
-##  <a name="m_psd"></a>  CPageSetupDialog::m_psd
+## <a name="m_psd"></a> CPageSetupDialog::m_psd
 
 A structure of type PAGESETUPDLG, whose members store the characteristics of the dialog object.
 
@@ -273,11 +274,11 @@ After constructing a `CPageSetupDialog` object, you can use `m_psd` to set vario
 
 If you modify the `m_psd` data member directly, you will override any default behavior.
 
-For more information on the [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda) structure, see the Windows SDK.
+For more information on the [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw) structure, see the Windows SDK.
 
 See the example for [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).
 
-##  <a name="ondrawpage"></a>  CPageSetupDialog::OnDrawPage
+## <a name="ondrawpage"></a> CPageSetupDialog::OnDrawPage
 
 Called by the framework to draw a screen image of a printed page.
 
@@ -309,7 +310,7 @@ Specifies a message, indicating the area of the page currently being drawn. Can 
 - WM_PSD_YAFULLPAGERECT Area for a return address representation. This area extends to the edges of the sample page area.
 
 *lpRect*<br/>
-Pointer to a [CRect](../../atl-mfc-shared/reference/crect-class.md) or [RECT](/windows/desktop/api/windef/ns-windef-tagrect) object containing the coordinates of the drawing area.
+Pointer to a [CRect](../../atl-mfc-shared/reference/crect-class.md) or [RECT](/windows/win32/api/windef/ns-windef-rect) object containing the coordinates of the drawing area.
 
 ### Return Value
 
@@ -319,13 +320,13 @@ Nonzero value if handled; otherwise 0.
 
 This image is then displayed as part of the common OLE Page Setup dialog box. The default implementation draws an image of a page of text.
 
-Override this function to customize the drawing of a specific area of the image, or the entire image. You can do this by using a **switch** statement with **case** statements checking the value of *nMessage*. For example, to customize the rendering of the contents of the page image, you could use the following example code:
+Override this function to customize the drawing of a specific area of the image, or the entire image. You can do this by using a **`switch`** statement with **`case`** statements checking the value of *nMessage*. For example, to customize the rendering of the contents of the page image, you could use the following example code:
 
 [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]
 
 Note that you do not need to handle every case of *nMessage*. You can choose to handle one component of the image, several components of the image, or the whole area.
 
-##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage
+## <a name="predrawpage"></a> CPageSetupDialog::PreDrawPage
 
 Called by the framework before drawing the screen image of a printed page.
 
@@ -339,7 +340,7 @@ virtual UINT PreDrawPage(
 ### Parameters
 
 *wPaper*<br/>
-Specifies a value that indicates the paper size. This value can be one of the **DMPAPER_** values listed in the description of the [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) structure.
+Specifies a value that indicates the paper size. This value can be one of the **DMPAPER_** values listed in the description of the [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) structure.
 
 *wFlags*<br/>
 Indicates the orientation of the paper or envelope, and whether the printer is a dot-matrix or HPPCL (Hewlett Packard Printer Control Language) device. This parameter can have one of the following values:
@@ -361,7 +362,7 @@ Indicates the orientation of the paper or envelope, and whether the printer is a
 - 0x01f   Envelope in portrait mode (dot matrix)
 
 *pPSD*<br/>
-Pointer to a `PAGESETUPDLG` structure. For more information on [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda), see the Windows SDK.
+Pointer to a `PAGESETUPDLG` structure. For more information on [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw), see the Windows SDK.
 
 ### Return Value
 
@@ -371,9 +372,8 @@ Nonzero value if handled; otherwise 0.
 
 Override this function to customize the drawing of the image. If you override this function and return TRUE, you must draw the entire image. If you override this function and return FALSE, the entire default image is drawn by the framework.
 
-## See Also
+## See also
 
-[MFC Sample WORDPAD](../../visual-cpp-samples.md)<br/>
+[MFC Sample WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

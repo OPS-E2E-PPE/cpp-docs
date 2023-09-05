@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Parameter Attributes"
 title: "Parameter Attributes (C++ COM)"
 ms.date: "10/02/2018"
 helpviewer_keywords: ["attributes [C++/CLI], parameter attributes", "parameter attributes"]
@@ -29,6 +30,6 @@ The following attributes apply to parameters of a method in a class or interface
 |[size_is](size-is.md)|Specifies the size of memory allocated for sized pointers, sized pointers to sized pointers, and single- or multidimensional arrays.|
 |[unique](unique-cpp.md)|Specifies a unique pointer.|
 
-## See Also
+## See also
 
 [Attributes by Usage](attributes-by-usage.md)

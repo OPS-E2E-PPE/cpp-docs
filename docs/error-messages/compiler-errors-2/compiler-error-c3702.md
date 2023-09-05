@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3702"
 title: "Compiler Error C3702"
 ms.date: "11/04/2016"
 f1_keywords: ["C3702"]
@@ -13,7 +14,7 @@ You attempted to use COM events without including the necessary ATL header files
 
 The following sample generates C3702:
 
-```
+```cpp
 // C3702.cpp
 // uncomment the following line to resolve
 // #define _ATL_ATTRIBUTES 1

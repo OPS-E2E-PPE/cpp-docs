@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: CDataSource Class"
 title: "CDataSource Class"
 ms.date: "11/04/2016"
-f1_keywords: ["ATL.CDataSource", "ATL::CDataSource", "CDataSource", "ATL::CDataSource::Close", "ATL.CDataSource.Close", "CDataSource::Close", "CDataSource.Close", "ATL::CDataSource::GetInitializationString", "CDataSource.GetInitializationString", "GetInitializationString", "CDataSource::GetInitializationString", "ATL.CDataSource.GetInitializationString", "CDataSource::GetProperties", "ATL.CDataSource.GetProperties", "CDataSource.GetProperties", "ATL::CDataSource::GetProperties", "GetProperties", "ATL::CDataSource::GetProperty", "ATL.CDataSource.GetProperty", "CDataSource.GetProperty", "CDataSource::GetProperty", "ATL::CDataSource::Open", "ATL.CDataSource.Open", "CDataSource::Open", "CDataSource.Open", "CDataSource::OpenFromFileName", "ATL::CDataSource::OpenFromFileName", "OpenFromFileName", "CDataSource.OpenFromFileName", "ATL.CDataSource.OpenFromFileName", "CDataSource.OpenFromInitializationString", "OpenFromInitializationString", "CDataSource::OpenFromInitializationString", "ATL::CDataSource::OpenFromInitializationString", "ATL.CDataSource.OpenFromInitializationString", "CDataSource.OpenWithPromptFileName", "OpenWithPromptFileName", "ATL::CDataSource::OpenWithPromptFileName", "ATL.CDataSource.OpenWithPromptFileName", "CDataSource::OpenWithPromptFileName", "CDataSource::OpenWithServiceComponents", "OpenWithServiceComponents", "CDataSource.OpenWithServiceComponents"]
+f1_keywords: ["ATL.CDataSource", "ATL::CDataSource", "CDataSource", "ATL::CDataSource::Close", "ATL.CDataSource.Close", "CDataSource::Close", "CDataSource.Close", "ATL::CDataSource::GetInitializationString", "CDataSource.GetInitializationString", "GetInitializationString", "CDataSource::GetInitializationString", "ATL.CDataSource.GetInitializationString", "CDataSource::GetProperties", "ATL.CDataSource.GetProperties", "CDataSource.GetProperties", "ATL::CDataSource::GetProperties", "ATL::CDataSource::GetProperty", "ATL.CDataSource.GetProperty", "CDataSource.GetProperty", "CDataSource::GetProperty", "ATL::CDataSource::Open", "ATL.CDataSource.Open", "CDataSource::Open", "CDataSource.Open", "CDataSource::OpenFromFileName", "ATL::CDataSource::OpenFromFileName", "OpenFromFileName", "CDataSource.OpenFromFileName", "ATL.CDataSource.OpenFromFileName", "CDataSource.OpenFromInitializationString", "OpenFromInitializationString", "CDataSource::OpenFromInitializationString", "ATL::CDataSource::OpenFromInitializationString", "ATL.CDataSource.OpenFromInitializationString", "CDataSource.OpenWithPromptFileName", "OpenWithPromptFileName", "ATL::CDataSource::OpenWithPromptFileName", "ATL.CDataSource.OpenWithPromptFileName", "CDataSource::OpenWithPromptFileName", "CDataSource::OpenWithServiceComponents", "OpenWithServiceComponents", "CDataSource.OpenWithServiceComponents"]
 helpviewer_keywords: ["CDataSource class", "Close method", "GetInitializationString method", "GetProperties method", "GetProperty method", "Open method", "OpenFromFileName method", "OpenFromInitializationString method", "OpenWithPromptFileName method", "OpenWithServiceComponents method"]
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
 ---
@@ -23,7 +24,7 @@ class CDataSource
 
 ### Methods
 
-|||
+| Name | Description |
 |-|-|
 |[Close](#close)|Closes the connection.|
 |[GetInitializationString](#getinitializationstring)|Retrieves the initialization string of the data source that is currently open.|
@@ -37,9 +38,9 @@ class CDataSource
 
 ## Remarks
 
-One or more database sessions can be created for a single connection. These sessions are represented by `CSession`. You must call [CDataSource::Open](../../data/oledb/cdatasource-open.md) to open the connection before creating a session with `CSession::Open`.
+One or more database sessions can be created for a single connection. These sessions are represented by `CSession`. You must call [CDataSource::Open](#open) to open the connection before creating a session with `CSession::Open`.
 
-For an example of how to use `CDataSource`, see the [CatDB](../../visual-cpp-samples.md) sample.
+For an example of how to use `CDataSource`, see the [CatDB](../../overview/visual-cpp-samples.md) sample.
 
 ## <a name="close"></a> CDataSource::Close
 
@@ -68,7 +69,7 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 [out] A pointer to the initialization string.
 
 *bIncludePassword*<br/>
-[in] **true** if string includes a password; otherwise **false**.
+[in] **`true`** if string includes a password; otherwise **`false`**.
 
 ### Return Value
 
@@ -93,7 +94,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 #### Parameters
 
-See [IDBProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85)) in the *OLE DB Programmer's Reference* in the Windows SDK.
+See [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) in the *OLE DB Programmer's Reference* in the Windows SDK.
 
 ### Return Value
 
@@ -101,7 +102,7 @@ A standard HRESULT.
 
 ### Remarks
 
-To get a single property, use [GetProperty](../../data/oledb/cdatasource-getproperty.md).
+To get a single property, use [GetProperty](#getproperty).
 
 ## <a name="getproperty"></a> CDataSource::GetProperty
 
@@ -132,7 +133,7 @@ A standard HRESULT.
 
 ### Remarks
 
-To get multiple properties, use [GetProperties](../../data/oledb/cdatasource-getproperties.md).
+To get multiple properties, use [GetProperties](#getproperties).
 
 ## <a name="open"></a> CDataSource::Open
 
@@ -185,10 +186,10 @@ HRESULT Open(LPCSTR szProgID,
 [in] The `CLSID` of the data provider.
 
 *pPropSet*<br/>
-[in] A pointer to an array of [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures containing properties and values to be set. See [Property Sets and Property Groups](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) in the *OLE DB Programmer's Reference* in the Windows SDK.
+[in] A pointer to an array of [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) structures containing properties and values to be set. See [Property Sets and Property Groups](/previous-versions/windows/desktop/ms713696(v=vs.85)) in the *OLE DB Programmer's Reference* in the Windows SDK.
 
 *nPropertySets*<br/>
-[in] The number of [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures passed in the *pPropSet* argument.
+[in] The number of [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) structures passed in the *pPropSet* argument.
 
 *pName*<br/>
 [in] The name of the database to which to connect.
@@ -200,7 +201,7 @@ HRESULT Open(LPCSTR szProgID,
 [in] The user's password.
 
 *nInitMode*<br/>
-[in] Database initialization mode. See [Initialization Properties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723127(v=vs.85))in the *OLE DB Programmer's Reference* in the Windows SDK for a list of valid initialization modes. If *nInitMode* is zero, no initialization mode is included in the property set used to open the connection.
+[in] Database initialization mode. See [Initialization Properties](/previous-versions/windows/desktop/ms723127(v=vs.85))in the *OLE DB Programmer's Reference* in the Windows SDK for a list of valid initialization modes. If *nInitMode* is zero, no initialization mode is included in the property set used to open the connection.
 
 *szProgID*<br/>
 [in] A program identifier.
@@ -220,7 +221,7 @@ A standard HRESULT.
 
 ### Remarks
 
-The method overload that uses the *hWnd* parameter opens a data source object with the service components in oledb32.dll; this DLL contains the implementation of Service Components features such as Resource Pooling, Automatic Transaction Enlistment, and so on. For more information, see "OLE DB Services" in the OLE DB Programmer's Reference at [https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+The method overload that uses the *hWnd* parameter opens a data source object with the service components in oledb32.dll; this DLL contains the implementation of Service Components features such as Resource Pooling, Automatic Transaction Enlistment, and so on. For more information, see the OLE DB reference in the [OLE DB Programmer's Guide](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
 The method overloads that do not use the *hWnd* parameter open a data source object without using the service components in oledb32.dll. A [CDataSource](../../data/oledb/cdatasource-class.md) object opened with these function overloads will be unable to utilize any of the functionality of Service Components.
 
@@ -245,7 +246,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] The name of a file, usually a data source connection (.UDL) file.
 
-For more information about data link files (.udl files), see [Data Link API Overview](https://docs.microsoft.com/previous-versions/windows/desktop/ms718102(v=vs.85)) in the Windows SDK.
+For more information about data link files (.udl files), see [Data Link API Overview](/previous-versions/windows/desktop/ms718102(v=vs.85)) in the Windows SDK.
 
 ### Return Value
 
@@ -253,7 +254,7 @@ A standard HRESULT.
 
 ### Remarks
 
-This method opens a data source object using the service components in oledb32.dll; this DLL contains the implementation of Service Components features such as Resource Pooling, Automatic Transaction Enlistment, and so on. For more information, see "OLE DB Services" in the OLE DB Programmer's Reference at [https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+This method opens a data source object using the service components in oledb32.dll; this DLL contains the implementation of Service Components features such as Resource Pooling, Automatic Transaction Enlistment, and so on. For more information, see the OLE DB reference in the [OLE DB Programmer's Guide](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
 ## <a name="openfrominitializationstring"></a> CDataSource::OpenFromInitializationString
 
@@ -272,9 +273,9 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 [in] The initialization string.
 
 *fPromptForInfo*<br/>
-[in] If this argument is set to **true**, then `OpenFromInitializationString` will set the DBPROP_INIT_PROMPT property to DBPROMPT_COMPLETEREQUIRED, which specifies that the user be prompted only if more information is needed. This is useful for situations in which the initialization string specifies a database that requires a password, but the string does not contain the password. The user will be prompted for a password (or any other missing information) when trying to connect to the database.
+[in] If this argument is set to **`true`**, then `OpenFromInitializationString` will set the DBPROP_INIT_PROMPT property to DBPROMPT_COMPLETEREQUIRED, which specifies that the user be prompted only if more information is needed. This is useful for situations in which the initialization string specifies a database that requires a password, but the string does not contain the password. The user will be prompted for a password (or any other missing information) when trying to connect to the database.
 
-The default value is **false**, which specifies that the user never be prompted (sets DBPROP_INIT_PROMPT to DBPROMPT_NOPROMPT).
+The default value is **`false`**, which specifies that the user never be prompted (sets DBPROP_INIT_PROMPT to DBPROMPT_NOPROMPT).
 
 ### Return Value
 
@@ -313,7 +314,7 @@ A standard HRESULT.
 
 ### Remarks
 
-This method opens a data source object using the service components in oledb32.dll; this DLL contains the implementation of Service Components features such as Resource Pooling, Automatic Transaction Enlistment, and so on. For more information, see "OLE DB Services" in the OLE DB Programmer's Reference at [https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+This method opens a data source object using the service components in oledb32.dll; this DLL contains the implementation of Service Components features such as Resource Pooling, Automatic Transaction Enlistment, and so on. For more information, see the OLE DB reference in the [OLE DB Programmer's Guide](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
 ## <a name="openwithservicecomponents"></a> CDataSource::OpenWithServiceComponents
 
@@ -340,10 +341,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 [in] Program ID of a data provider.
 
 *pPropset*<br/>
-[in] A pointer to an array of [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures containing properties and values to be set. See [Property Sets and Property Groups](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) in the *OLE DB Programmer's Reference* in the Windows SDK. If the data source object is initialized, the properties must belong to the Data Source property group. If the same property is specified more than once in *pPropset*, then which value is used is provider-specific. If *ulPropSets* is zero, this parameter is ignored.
+[in] A pointer to an array of [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) structures containing properties and values to be set. See [Property Sets and Property Groups](/previous-versions/windows/desktop/ms713696(v=vs.85)) in the *OLE DB Programmer's Reference* in the Windows SDK. If the data source object is initialized, the properties must belong to the Data Source property group. If the same property is specified more than once in *pPropset*, then which value is used is provider-specific. If *ulPropSets* is zero, this parameter is ignored.
 
 *ulPropSets*<br/>
-[in] The number of [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) structures passed in the *pPropSet* argument. If this is zero, the provider ignores *pPropset*.
+[in] The number of [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) structures passed in the *pPropSet* argument. If this is zero, the provider ignores *pPropset*.
 
 ### Return Value
 
@@ -351,9 +352,9 @@ A standard HRESULT.
 
 ### Remarks
 
-This method opens a data source object using the service components in oledb32.dll; this DLL contains the implementation of Service Components features such as Resource Pooling, Automatic Transaction Enlistment, and so on. For more information, see "OLE DB Services" in the OLE DB Programmer's Reference at [https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+This method opens a data source object using the service components in oledb32.dll; this DLL contains the implementation of Service Components features such as Resource Pooling, Automatic Transaction Enlistment, and so on. For more information, see the OLE DB reference in the [OLE DB Programmer's Guide](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## See Also
+## See also
 
 [OLE DB Consumer Templates](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB Consumer Templates Reference](../../data/oledb/ole-db-consumer-templates-reference.md)

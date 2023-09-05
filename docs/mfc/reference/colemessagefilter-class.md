@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleMessageFilter Class"
 title: "COleMessageFilter Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COleMessageFilter", "AFXOLE/COleMessageFilter", "AFXOLE/COleMessageFilter::COleMessageFilter", "AFXOLE/COleMessageFilter::BeginBusyState", "AFXOLE/COleMessageFilter::EnableBusyDialog", "AFXOLE/COleMessageFilter::EnableNotRespondingDialog", "AFXOLE/COleMessageFilter::EndBusyState", "AFXOLE/COleMessageFilter::OnMessagePending", "AFXOLE/COleMessageFilter::Register", "AFXOLE/COleMessageFilter::Revoke", "AFXOLE/COleMessageFilter::SetBusyReply", "AFXOLE/COleMessageFilter::SetMessagePendingDelay", "AFXOLE/COleMessageFilter::SetRetryReply"]
@@ -62,7 +63,7 @@ For more information, see the article [Servers: Implementing a Server](../../mfc
 
 **Header:** afxole.h
 
-##  <a name="beginbusystate"></a>  COleMessageFilter::BeginBusyState
+## <a name="beginbusystate"></a> COleMessageFilter::BeginBusyState
 
 Call this function to begin a busy state.
 
@@ -78,7 +79,7 @@ The `BeginBusyState` and `EndBusyState` calls increment and decrement, respectiv
 
 By default, the framework enters the busy state during idle processing, which is performed by [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). While the application is handling ON_COMMANDUPDATEUI notifications, incoming calls are handled later, after idle processing is complete.
 
-##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter
+## <a name="colemessagefilter"></a> COleMessageFilter::COleMessageFilter
 
 Creates a `COleMessageFilter` object.
 
@@ -86,11 +87,11 @@ Creates a `COleMessageFilter` object.
 COleMessageFilter();
 ```
 
-##  <a name="enablebusydialog"></a>  COleMessageFilter::EnableBusyDialog
+## <a name="enablebusydialog"></a> COleMessageFilter::EnableBusyDialog
 
 Enables and disables the busy dialog box, which is displayed when the message-pending delay expires (see [SetRetryReply](#setretryreply)) during an OLE call.
 
-```
+```cpp
 void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 ```
 
@@ -99,11 +100,11 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 *bEnableBusy*<br/>
 Specifies whether the "busy" dialog box is enabled or disabled.
 
-##  <a name="enablenotrespondingdialog"></a>  COleMessageFilter::EnableNotRespondingDialog
+## <a name="enablenotrespondingdialog"></a> COleMessageFilter::EnableNotRespondingDialog
 
 Enables and disables the "not responding" dialog box, which is displayed if a keyboard or mouse message is pending during an OLE call and the call has timed out.
 
-```
+```cpp
 void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
 ```
 
@@ -112,7 +113,7 @@ void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
 *bEnableNotResponding*<br/>
 Specifies whether the "not responding" dialog box is enabled or disabled.
 
-##  <a name="endbusystate"></a>  COleMessageFilter::EndBusyState
+## <a name="endbusystate"></a> COleMessageFilter::EndBusyState
 
 Call this function to end a busy state.
 
@@ -128,7 +129,7 @@ The `BeginBusyState` and `EndBusyState` calls increment and decrement, respectiv
 
 By default, the framework enters the busy state during idle processing, which is performed by [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). While the application is handling ON_UPDATE_COMMAND_UI notifications, incoming calls are handled after idle processing is complete.
 
-##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending
+## <a name="onmessagepending"></a> COleMessageFilter::OnMessagePending
 
 Called by the framework to process messages while an OLE call is in progress.
 
@@ -151,7 +152,7 @@ When a calling application is waiting for a call to be completed, the framework 
 
 You must register your message filter by means of a call to [Register](#register) before it can become active.
 
-##  <a name="register"></a>  COleMessageFilter::Register
+## <a name="register"></a> COleMessageFilter::Register
 
 Registers the message filter with the OLE system DLLs.
 
@@ -169,11 +170,11 @@ A message filter has no effect unless it is registered with the system DLLs. Usu
 
 The framework's default message filter is automatically registered during initialization and revoked at termination.
 
-##  <a name="revoke"></a>  COleMessageFilter::Revoke
+## <a name="revoke"></a> COleMessageFilter::Revoke
 
 Revokes a previous registration performed by a call to [Register](#register).
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -183,11 +184,11 @@ A message filter should be revoked before the program terminates.
 
 The default message filter, which is created and registered automatically by the framework, is also automatically revoked.
 
-##  <a name="setbusyreply"></a>  COleMessageFilter::SetBusyReply
+## <a name="setbusyreply"></a> COleMessageFilter::SetBusyReply
 
 This function sets the application's "busy reply."
 
-```
+```cpp
 void SetBusyReply(SERVERCALL nBusyReply);
 ```
 
@@ -210,11 +211,11 @@ When an application has been made busy with a call to `BeginBusyState`, it respo
 
 By default, the busy reply is SERVERCALL_RETRYLATER. This reply causes the calling application to retry the call as soon as possible.
 
-##  <a name="setmessagependingdelay"></a>  COleMessageFilter::SetMessagePendingDelay
+## <a name="setmessagependingdelay"></a> COleMessageFilter::SetMessagePendingDelay
 
 Determines how long the calling application waits for a response from the called application before taking further action.
 
-```
+```cpp
 void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```
 
@@ -227,11 +228,11 @@ Number of milliseconds for the message-pending delay.
 
 This function works in concert with [SetRetryReply](#setretryreply).
 
-##  <a name="setretryreply"></a>  COleMessageFilter::SetRetryReply
+## <a name="setretryreply"></a> COleMessageFilter::SetRetryReply
 
 Determines the calling application's action when it receives a busy response from a called application.
 
-```
+```cpp
 void SetRetryReply(DWORD nRetryReply = 0);
 ```
 
@@ -254,7 +255,7 @@ When a keyboard or mouse message is pending during a call and the call has timed
 
 When the dialogs are disabled, the current "retry reply" is always used for calls to busy applications.
 
-## See Also
+## See also
 
 [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

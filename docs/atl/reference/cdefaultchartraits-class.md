@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDefaultCharTraits Class"
 title: "CDefaultCharTraits Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CDefaultCharTraits", "ATLCOLL/ATL::CDefaultCharTraits", "ATLCOLL/ATL::CDefaultCharTraits::CharToLower", "ATLCOLL/ATL::CDefaultCharTraits::CharToUpper"]
@@ -38,7 +39,7 @@ This class provides functions that are utilized by the class [CStringElementTrai
 
 **Header:** atlcoll.h
 
-##  <a name="chartolower"></a>  CDefaultCharTraits::CharToLower
+## <a name="chartolower"></a> CDefaultCharTraits::CharToLower
 
 Call this function to convert a character to lowercase.
 
@@ -56,7 +57,7 @@ The character to convert to lowercase.
 
 [!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]
 
-##  <a name="chartoupper"></a>  CDefaultCharTraits::CharToUpper
+## <a name="chartoupper"></a> CDefaultCharTraits::CharToUpper
 
 Call this function to convert a character to uppercase.
 
@@ -70,6 +71,6 @@ static char CharToUpper(char x);
 *x*<br/>
 The character to convert to uppercase.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ATL Connection Point Classes"
 title: "ATL Connection Point Classes"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["CFirePropNotifyEvent class, connection point classes", "connection points [C++], ATL classes", "ATL, connection points", "CComDynamicUnkArray class, connection point classes", "CFirePropNotifyEvent class", "CComUnkArray class, connection point classes"]
@@ -12,7 +13,7 @@ ATL uses the following classes to support connection points:
 
 - [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) implements the connection point container and manages the list of `IConnectionPointImpl` objects.
 
-- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) implements a connection point representing the [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interface.
+- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) implements a connection point representing the [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) interface.
 
 - [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) manages an arbitrary number of connections between the connection point and its sinks.
 
@@ -24,7 +25,6 @@ ATL uses the following classes to support connection points:
 
 - [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) works in conjunction with the event sink map in your class to route events to the appropriate handler function.
 
-## See Also
+## See also
 
 [Connection Point](../atl/atl-connection-points.md)
-

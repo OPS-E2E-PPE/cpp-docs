@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2157"
 title: "Compiler Error C2157"
 ms.date: "11/04/2016"
 f1_keywords: ["C2157"]
@@ -13,7 +14,7 @@ The function name is not declared before being referenced in the list of functio
 
 The following sample generates C2157:
 
-```
+```cpp
 // C2157.cpp
 // compile with: /c
 #pragma alloc_text( "func", func)   // C2157

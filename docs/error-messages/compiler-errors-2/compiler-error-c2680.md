@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2680"
 title: "Compiler Error C2680"
 ms.date: "11/04/2016"
 f1_keywords: ["C2680"]
@@ -13,7 +14,7 @@ A casting operator tried to convert to a type that is not a pointer or reference
 
 The following sample generates C2680:
 
-```
+```cpp
 // C2680.cpp
 // compile with: /c
 class A { virtual void f(); };
@@ -28,7 +29,7 @@ void g(B b) {
 
 C2680 can also occur when the target is not defined:
 
-```
+```cpp
 // C2680b.cpp
 // compile with: /clr /c
 // C2680 expected

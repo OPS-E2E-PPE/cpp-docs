@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: helpstringcontext"
 title: "helpstringcontext (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.helpstringcontext"]
@@ -22,7 +23,7 @@ A 32-bit Help context identifier in the **Help** file.
 
 ## Remarks
 
-The **helpstringcontext** C++ attribute has the same functionality as the [helpstringcontext](/windows/desktop/Midl/helpstringcontext) ODL attribute.
+The **helpstringcontext** C++ attribute has the same functionality as the [helpstringcontext](/windows/win32/Midl/helpstringcontext) ODL attribute.
 
 ## Example
 
@@ -42,18 +43,16 @@ __interface IMyI
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**class**, **interface**, interface method|
+|**Applies to**|**`class`**, **interface**, interface method|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Interface Attributes](interface-attributes.md)<br/>

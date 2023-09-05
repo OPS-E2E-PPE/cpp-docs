@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4336"
 title: "Compiler Warning (level 4) C4336"
 ms.date: "11/04/2016"
 f1_keywords: ["C4336"]
@@ -44,7 +45,7 @@ library C4336bLib
 
 The following sample generates C4336:
 
-```
+```cpp
 // C4336.cpp
 // compile with: /W4 /LD
 // #import "C4336a.tlb"

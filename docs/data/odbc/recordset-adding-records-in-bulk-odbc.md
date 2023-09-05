@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Recordset: Adding Records in Bulk (ODBC)"
 title: "Recordset: Adding Records in Bulk (ODBC)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ODBC recordsets, adding records", "recordsets, adding records", "bulk record additions to recordsets"]
@@ -23,7 +24,7 @@ If the ODBC Cursor Library is loaded or the ODBC driver does not support adding,
 appendOnly | optimizeBulkAdd
 ```
 
-## See Also
+## See also
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Recordset: Adding, Updating, and Deleting Records (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2687"
 title: "Compiler Error C2687"
 ms.date: "11/04/2016"
 f1_keywords: ["C2687"]
@@ -13,7 +14,7 @@ For a type to be part of an exception declaration, it must be defined and not vo
 
 The following sample generates C2687:
 
-```
+```cpp
 // C2687.cpp
 class C;
 
@@ -25,7 +26,7 @@ int main() {
 
 Possible resolution:
 
-```
+```cpp
 // C2687b.cpp
 // compile with: /EHsc
 class C {};

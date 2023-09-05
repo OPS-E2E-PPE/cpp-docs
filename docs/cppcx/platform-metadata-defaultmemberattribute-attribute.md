@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Metadata::DefaultMemberAttribute Attribute"
 title: "Platform::Metadata::DefaultMemberAttribute Attribute"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -36,6 +37,6 @@ Apply the DefaultMember attribute to a method that will be consumed by a JavaScr
 
 **Metadata:** platform.winmd
 
-## See Also
+## See also
 
 [Platform::Metadata Namespace](../cppcx/platform-metadata-namespace.md)

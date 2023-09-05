@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ATL Copy Policy Classes"
 title: "ATL Copy Policy Classes"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["data [C++], ATL", "classes [C++], copy policy", "copy policy classes [C++]", "_Copy class", "_CopyInterface class"]
@@ -31,7 +32,7 @@ By definition, a class that provides the following static functions is a copy po
 You can replace the types `DestinationType` and *SourceType* with arbitrary data types for each copy policy.
 
 > [!NOTE]
->  Although you can define copy policy classes for any arbitrary data types, use of the classes in ATL code should limit the types that make sense. For example, when using a copy policy class with ATL's collection or enumerator implementations, `DestinationType` must be a type that can be used as a parameter in a COM interface method.
+> Although you can define copy policy classes for any arbitrary data types, use of the classes in ATL code should limit the types that make sense. For example, when using a copy policy class with ATL's collection or enumerator implementations, `DestinationType` must be a type that can be used as a parameter in a COM interface method.
 
 Use **init** to initialize data, **copy** to copy data, and **destroy** to free the data. The precise meaning of initialization, copying, and destruction are the domain of the copy policy class and will vary depending on the data types involved.
 
@@ -51,7 +52,7 @@ ATL provides two copy policy classes in the form of the `_Copy` and `_CopyInterf
 
 ## Custom Implementations
 
-Typically, you'll need to define your own copy policy classes for heterogeneous copying (that is, conversion between data types). For some examples of custom copy policy classes, look at the files VCUE_Copy.h and VCUE_CopyString.h in the [ATLCollections](../visual-cpp-samples.md) sample. These files contain two template copy policy classes, `GenericCopy` and `MapCopy`, plus a number of specializations of `GenericCopy` for different data types.
+Typically, you'll need to define your own copy policy classes for heterogeneous copying (that is, conversion between data types). For some examples of custom copy policy classes, look at the files VCUE_Copy.h and VCUE_CopyString.h in the [ATLCollections](../overview/visual-cpp-samples.md) sample. These files contain two template copy policy classes, `GenericCopy` and `MapCopy`, plus a number of specializations of `GenericCopy` for different data types.
 
 ### GenericCopy
 
@@ -67,8 +68,7 @@ VCUE_Copy.h also contains the following specializations of this class: `GenericC
 
 [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]
 
-## See Also
+## See also
 
 [Implementing a C++ Standard Library-Based Collection](../atl/implementing-an-stl-based-collection.md)<br/>
-[ATLCollections Sample](../visual-cpp-samples.md)
-
+[ATLCollections Sample](../overview/visual-cpp-samples.md)

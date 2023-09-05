@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3008"
 title: "Compiler Error C3008"
 ms.date: "11/04/2016"
 f1_keywords: ["C3008"]
@@ -13,7 +14,7 @@ An OpenMP directive that takes an argument did not have a closing parenthesis.
 
 The following sample generates C3008:
 
-```
+```c
 // C3008.c
 // compile with: /openmp
 int main()

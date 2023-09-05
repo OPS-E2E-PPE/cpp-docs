@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Compiler Error C3284"
 title: "Compiler Error C3284"
 ms.date: "11/04/2016"
-f1_keywords: ["C3824"]
+f1_keywords: ["C3284"]
 helpviewer_keywords: ["C3284"]
 ms.assetid: e582f316-e9db-4d27-9c70-fdfa737a9d5f
 ---
@@ -13,7 +14,7 @@ A virtual generic function must use the same constraints as a virtual function w
 
 The following sample generates C3284:
 
-```
+```cpp
 // C3284.cpp
 // compile with: /clr /c
 // C3284 expected

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Memory Management Classes"
 title: "Memory Management Classes (ATL)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
@@ -51,7 +52,6 @@ These classes provide support for heap pointers, smart pointers, and other memor
 
 - [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) This class represents the interface to a memory manager.
 
-## See Also
+## See also
 
 [Class Overview](../atl/atl-class-overview.md)
-

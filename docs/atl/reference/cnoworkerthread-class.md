@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CNoWorkerThread Class"
 title: "CNoWorkerThread Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CNoWorkerThread", "ATLUTIL/ATL::CNoWorkerThread", "ATLUTIL/ATL::CNoWorkerThread::AddHandle", "ATLUTIL/ATL::CNoWorkerThread::AddTimer", "ATLUTIL/ATL::CNoWorkerThread::GetThreadHandle", "ATLUTIL/ATL::CNoWorkerThread::GetThreadId", "ATLUTIL/ATL::CNoWorkerThread::Initialize", "ATLUTIL/ATL::CNoWorkerThread::RemoveHandle", "ATLUTIL/ATL::CNoWorkerThread::Shutdown"]
@@ -10,7 +11,7 @@ ms.assetid: 29f06bae-b658-4aac-9c14-331e996d25d1
 Use this class as the argument for the `MonitorClass` template parameter to cache classes if you want to disable dynamic cache maintenance.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -42,7 +43,7 @@ The methods in this class are implemented to do nothing. The methods that return
 
 **Header:** atlutil.h
 
-##  <a name="addhandle"></a>  CNoWorkerThread::AddHandle
+## <a name="addhandle"></a> CNoWorkerThread::AddHandle
 
 Non-functional equivalent of [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
@@ -60,7 +61,7 @@ Always returns S_OK.
 
 The implementation provided by this class does nothing.
 
-##  <a name="addtimer"></a>  CNoWorkerThread::AddTimer
+## <a name="addtimer"></a> CNoWorkerThread::AddTimer
 
 Non-functional equivalent of [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).
 
@@ -79,7 +80,7 @@ Always returns S_OK.
 
 The implementation provided by this class does nothing.
 
-##  <a name="getthreadhandle"></a>  CNoWorkerThread::GetThreadHandle
+## <a name="getthreadhandle"></a> CNoWorkerThread::GetThreadHandle
 
 Non-functional equivalent of [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).
 
@@ -95,7 +96,7 @@ Always returns NULL.
 
 The implementation provided by this class does nothing.
 
-##  <a name="getthreadid"></a>  CNoWorkerThread::GetThreadId
+## <a name="getthreadid"></a> CNoWorkerThread::GetThreadId
 
 Non-functional equivalent of [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).
 
@@ -111,7 +112,7 @@ Always returns 0.
 
 The implementation provided by this class does nothing.
 
-##  <a name="initialize"></a>  CNoWorkerThread::Initialize
+## <a name="initialize"></a> CNoWorkerThread::Initialize
 
 Non-functional equivalent of [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).
 
@@ -127,7 +128,7 @@ Always returns S_OK.
 
 The implementation provided by this class does nothing.
 
-##  <a name="removehandle"></a>  CNoWorkerThread::RemoveHandle
+## <a name="removehandle"></a> CNoWorkerThread::RemoveHandle
 
 Non-functional equivalent of [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).
 
@@ -143,7 +144,7 @@ Always returns S_OK.
 
 The implementation provided by this class does nothing.
 
-##  <a name="shutdown"></a>  CNoWorkerThread::Shutdown
+## <a name="shutdown"></a> CNoWorkerThread::Shutdown
 
 Non-functional equivalent of [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).
 

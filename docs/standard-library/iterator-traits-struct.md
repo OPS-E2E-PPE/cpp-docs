@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: iterator_traits Struct"
 title: "iterator_traits Struct"
 ms.date: "11/04/2016"
 f1_keywords: ["xutility/std::iterator_traits"]
@@ -62,7 +63,7 @@ template <class Ty>
 ptrdiff_t *_Dist_type(const Ty *);
 ```
 
-which determine several of the same types more indirectly. You use these functions as arguments on a function call. Their sole purpose is to supply a useful template class parameter to the called function.
+which determine several of the same types more indirectly. You use these functions as arguments on a function call. Their sole purpose is to supply a useful class template parameter to the called function.
 
 ## Example
 
@@ -115,6 +116,6 @@ struct std::bidirectional_iterator_tag
 
 ## See also
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: time_get_byname Class"
 title: "time_get_byname Class"
 ms.date: "11/04/2016"
 f1_keywords: ["xloctime/std::time_get_byname"]
@@ -7,7 +8,7 @@ ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
 ---
 # time_get_byname Class
 
-The derived template class describes an object that can serve as a locale facet of type `time_get`\<CharType, InputIterator>.
+The derived class template describes an object that can serve as a locale facet of type `time_get`\<CharType, InputIterator>.
 
 ## Syntax
 
@@ -32,17 +33,15 @@ protected:
 
 ### Parameters
 
-*_Locname*<br/>
+*_Locname*\
 A named locale.
 
-*_Refs*<br/>
+*_Refs*\
 An initial reference count.
 
 ## Requirements
 
 Its behavior is determined by the named locale *_Locname*. Each constructor initializes its base object with [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).
-
-## Requirements
 
 **Header:** \<locale>
 
@@ -50,4 +49,4 @@ Its behavior is determined by the named locale *_Locname*. Each constructor init
 
 ## See also
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

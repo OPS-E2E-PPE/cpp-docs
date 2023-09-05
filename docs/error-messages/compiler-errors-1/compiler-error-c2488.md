@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2488"
 title: "Compiler Error C2488"
 ms.date: "11/04/2016"
 f1_keywords: ["C2488"]
@@ -13,7 +14,7 @@ The [naked](../../cpp/naked-cpp.md) attribute was applied to a function declarat
 
 The following sample generates C2488:
 
-```
+```cpp
 // C2488.cpp
 // compile with: /c
 // processor: x86

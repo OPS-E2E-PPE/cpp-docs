@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Using IDispEventSimpleImpl"
 title: "Using IDispEventSimpleImpl (ATL)"
-ms.date: "11/04/2016"
-f1_keywords: ["IDispEventSimpleImpl"]
+ms.date: "08/19/2019"
 helpviewer_keywords: ["IDispEventSimpleImpl class, using"]
 ms.assetid: 8640ad1a-4bd0-40a5-b5e4-7322685d7aab
 ---
@@ -25,7 +25,7 @@ When using `IDispEventSimpleImpl` to handle events, you will need to:
 
 The example below shows you how to handle the `DocumentChange` event fired by Word's **Application** object. This event is defined as a method on the `ApplicationEvents` dispinterface.
 
-The example is from the [ATLEventHandling sample](../visual-cpp-samples.md).
+The example is from the [ATLEventHandling sample](../overview/visual-cpp-samples.md).
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
@@ -43,7 +43,7 @@ methods:
 };
 ```
 
-The example uses `#import` to generate the required header files from Word's type library. If you want to use this example with other versions of Word, you must specify the correct mso dll file. For example, Office 2000 provides mso9.dll and OfficeXP provides mso.dll. This code is simplified from stdafx.h:
+The example uses `#import` to generate the required header files from Word's type library. If you want to use this example with other versions of Word, you must specify the correct mso dll file. For example, Office 2000 provides mso9.dll and OfficeXP provides mso.dll. This code is simplified from *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier):
 
 [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventsimpleimpl_1.h)]
 
@@ -57,8 +57,7 @@ The following code is from Simple.cpp:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#4](../atl/codesnippet/cpp/using-idispeventsimpleimpl_3.cpp)]
 
-## See Also
+## See also
 
 [Event Handling](../atl/event-handling-and-atl.md)<br/>
-[ATLEventHandling Sample](../visual-cpp-samples.md)
-
+[ATLEventHandling Sample](../overview/visual-cpp-samples.md)

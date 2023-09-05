@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2843"
 title: "Compiler Error C2843"
 ms.date: "11/04/2016"
 f1_keywords: ["C2843"]
@@ -13,7 +14,7 @@ An instance is needed to take the address of nonstatic data members of a managed
 
 The following sample generates C2843 and shows how to fix it:
 
-```
+```cpp
 // C2843_2.cpp
 // compile with: /clr
 public ref class C {

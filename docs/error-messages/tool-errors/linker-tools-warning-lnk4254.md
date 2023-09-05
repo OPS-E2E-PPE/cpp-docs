@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Linker Tools Warning LNK4254"
 title: "Linker Tools Warning LNK4254"
 ms.date: "11/04/2016"
 f1_keywords: ["LNK4254"]
@@ -25,7 +26,7 @@ For more information, see,
 
 The following sample generates LNK4254.
 
-```
+```cpp
 // LNK4254.cpp
 // compile with: /W1 /link /WX
 // LNK4254 expected

@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: __interface"
 title: "__interface"
-ms.date: "11/04/2016"
+ms.date: "05/07/2019"
 f1_keywords: ["__interface_cpp"]
 helpviewer_keywords: ["__interface keyword [C++]"]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
@@ -9,7 +10,7 @@ ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
 
 **Microsoft Specific**
 
-A Visual C++ interface can be defined as follows:
+A Microsoft C++ interface can be defined as follows:
 
 - Can inherit from zero or more base interfaces.
 
@@ -31,7 +32,7 @@ modifier __interface interface-name {interface-definition};
 
 ## Remarks
 
-A C++ [class](../cpp/class-cpp.md) or [struct](../cpp/struct-cpp.md) could be implemented with these rules, but **__interface** enforces them.
+A C++ [class](../cpp/class-cpp.md) or [struct](../cpp/struct-cpp.md) could be implemented with these rules, but **`__interface`** enforces them.
 
 For example, the following is a sample interface definition:
 
@@ -42,7 +43,7 @@ __interface IMyInterface {
 };
 ```
 
-For information on managed interfaces, see [interface class](../windows/interface-class-cpp-component-extensions.md).
+For information on managed interfaces, see [interface class](../extensions/interface-class-cpp-component-extensions.md).
 
 Notice that you do not have to explicitly indicate that the `CommitX` and `get_X` functions are pure virtual. An equivalent declaration for the first function would be:
 
@@ -50,7 +51,7 @@ Notice that you do not have to explicitly indicate that the `CommitX` and `get_X
 virtual HRESULT CommitX() = 0;
 ```
 
-**__interface** implies the [novtable](../cpp/novtable.md) **__declspec** modifier.
+**`__interface`** implies the [novtable](../cpp/novtable.md) **`__declspec`** modifier.
 
 ## Example
 

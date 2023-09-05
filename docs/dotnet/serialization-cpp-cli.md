@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Serialization (C++/CLI)"
 title: "Serialization (C++/CLI)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["serialization [C++]", "SerializableAttribute class, managed applications", "NonSerializedAttribute class, managed applications", "managed code [C++], serializing", ".NET Framework [C++], serialization", "serialization [C++], about serialization"]
@@ -20,7 +21,7 @@ In the following example, the class `MyClass` (and the property `m_nCount`) is m
 
 ### Code
 
-```
+```cpp
 // serialization_and_mcpp.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -39,6 +40,6 @@ private:
 
 Note that both attributes can be referenced using their "short name" (**Serializable** and **NonSerialized**). This is further explained in [Applying Attributes](/dotnet/standard/attributes/applying-attributes).
 
-## See Also
+## See also
 
 [.NET Programming with C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

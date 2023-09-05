@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: pragma"
 title: "pragma (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.pragma"]
@@ -22,7 +23,7 @@ The pragma that you want to go into the generated .idl file.
 
 ## Remarks
 
-The **pragma** C++ attribute has the same functionality as the [pragma](/windows/desktop/Midl/pragma) MIDL attribute.
+The **pragma** C++ attribute has the same functionality as the [pragma](/windows/win32/Midl/pragma) MIDL attribute.
 
 ## Example
 
@@ -42,9 +43,7 @@ __interface A
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Anywhere|
 |**Repeatable**|No|
@@ -53,7 +52,7 @@ __interface A
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Stand-Alone Attributes](stand-alone-attributes.md)<br/>

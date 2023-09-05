@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2819"
 title: "Compiler Error C2819"
 ms.date: "11/04/2016"
 f1_keywords: ["C2819"]
@@ -13,7 +14,7 @@ You need to define `operator->()` to use this pointer operation.
 
 The following sample generates C2819:
 
-```
+```cpp
 // C2819.cpp
 // compile with: /c
 class A {
@@ -43,7 +44,7 @@ void F(D j) {
 
 C2819 can also occur when using [C++ Stack Semantics for Reference Types](../../dotnet/cpp-stack-semantics-for-reference-types.md). The following sample generates C2819:
 
-```
+```cpp
 // C2819_b.cpp
 // compile with: /clr
 ref struct R {

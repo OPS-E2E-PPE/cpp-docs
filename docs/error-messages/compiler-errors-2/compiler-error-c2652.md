@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2652"
 title: "Compiler Error C2652"
 ms.date: "11/04/2016"
 f1_keywords: ["C2652"]
@@ -13,7 +14,7 @@ The first parameter in the copy constructor has the same type as the class, stru
 
 The following sample generates C2651:
 
-```
+```cpp
 // C2652.cpp
 // compile with: /c
 class A {

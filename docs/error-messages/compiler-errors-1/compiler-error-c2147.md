@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2147"
 title: "Compiler Error C2147"
 ms.date: "11/04/2016"
 f1_keywords: ["C2147"]
@@ -13,7 +14,7 @@ An identifier was used that is now a reserved keyword in the language.
 
 The following sample generates C2147:
 
-```
+```cpp
 // C2147.cpp
 // compile with: /clr
 int main() {

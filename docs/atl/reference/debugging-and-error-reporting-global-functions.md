@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Debugging and Error Reporting Global Functions"
 title: "Debugging and Error Reporting Global Functions"
 ms.date: "11/04/2016"
 f1_keywords: ["atlcomcli/ATL::AtlHresultFromLastError", "atlcom/ATL::AtlReportError", "atldef/ATL::AtlThrow"]
@@ -9,7 +10,7 @@ ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
 
 These functions provide useful debugging and trace facilities.
 
-|||
+|Name|Description|
 |-|-|
 |[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|Returns a `GetLastError` error code in the form of an HRESULT.|
 |[AtlHresultFromWin32](debugging-and-error-reporting-global-functions.md#atlhresultfromwin32)|Converts a Win32 error code into an HRESULT.|
@@ -17,7 +18,7 @@ These functions provide useful debugging and trace facilities.
 |[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|Throws a `CAtlException`.|
 |[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|Call this function to signal an error based on the result of the Windows function `GetLastError`.|
 
-##  <a name="atlhresultfromlasterror"></a>  AtlHresultFromLastError
+## <a name="atlhresultfromlasterror"></a> AtlHresultFromLastError
 
 Returns the calling thread's last-error code value in the form of an HRESULT.
 
@@ -33,7 +34,7 @@ HRESULT AtlHresultFromLastError();
 
 **Header:** atlcomcli.h
 
-##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
+## <a name="atlhresultfromwin32"></a> AtlHresultFromWin32
 
 Converts a Win32 error code into an HRESULT.
 
@@ -51,13 +52,13 @@ The error value to convert.
 Converts a Win32 error code into an HRESULT, using the macro HRESULT_FROM_WIN32.
 
 > [!NOTE]
->  Instead of using `HRESULT_FROM_WIN32(GetLastError())`, use the function [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).
+> Instead of using `HRESULT_FROM_WIN32(GetLastError())`, use the function [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).
 
 ### Requirements
 
 **Header:** atlcomcli.h
 
-##  <a name="atlreporterror"></a>  AtlReportError
+## <a name="atlreporterror"></a> AtlReportError
 
 Sets up the `IErrorInfo` interface to provide error information to clients of the object.
 
@@ -146,13 +147,13 @@ The string *lpszDesc* is used as the text description of the error. When the cli
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  Do not use `AtlReportError` in C++ catch handlers. Some overrides of these functions use the ATL string conversion macros internally, which in turn use the `_alloca` function internally. Using `AtlReportError` in a C++ catch handler can cause exceptions in C++ catch handlers.
+> Do not use `AtlReportError` in C++ catch handlers. Some overrides of these functions use the ATL string conversion macros internally, which in turn use the `_alloca` function internally. Using `AtlReportError` in a C++ catch handler can cause exceptions in C++ catch handlers.
 
 ### Requirements
 
 **Header:** atlcom.h
 
-##  <a name="atlthrow"></a>  AtlThrow
+## <a name="atlthrow"></a> AtlThrow
 
 Call this function to signal an error based on a HRESULT status code.
 
@@ -185,11 +186,11 @@ For ATL projects, it is possible to provide your own implementation of this func
 
 [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
-## Requirements
+### Requirements
 
 **Header:** atldef.h
 
-##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32
+## <a name="atlthrowlastwin32"></a> AtlThrowLastWin32
 
 Call this function to signal an error based on the result of the Windows function `GetLastError`.
 
@@ -207,12 +208,11 @@ If _ATL_NO_EXCEPTIONS is not defined in an ATL project, the function throws a [C
 
 If _ATL_NO_EXCEPTIONS is defined, the function causes an assertion failure instead of throwing an exception.
 
-## Requirements
+### Requirements
 
 **Header:** atldef.h
 
-## See Also
+## See also
 
 [Functions](../../atl/reference/atl-functions.md)<br/>
 [Debugging and Error Reporting Macros](../../atl/reference/debugging-and-error-reporting-macros.md)
-

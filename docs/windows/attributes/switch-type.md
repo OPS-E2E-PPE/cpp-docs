@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: switch_type"
 title: "switch_type (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.switch_type"]
@@ -24,9 +25,9 @@ The switch type, can be an integer, character, Boolean, or enumeration type.
 
 ## Remarks
 
-The **switch_type** C++ attribute has the same functionality as the [switch_type](/windows/desktop/Midl/switch-type) MIDL attribute.
+The **switch_type** C++ attribute has the same functionality as the [switch_type](/windows/win32/Midl/switch-type) MIDL attribute.
 
-C++ attributes do not support [encapsulated unions](/windows/desktop/Midl/encapsulated-unions). [Nonencapsulated unions](/windows/desktop/Midl/nonencapsulated-unions) are supported only in the following form:
+C++ attributes do not support [encapsulated unions](/windows/win32/Midl/encapsulated-unions). [Nonencapsulated unions](/windows/win32/Midl/nonencapsulated-unions) are supported only in the following form:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -51,18 +52,16 @@ See the [case](case-cpp.md) example for a sample use of **switch_type**.
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**typedef**|
+|**Applies to**|**`typedef`**|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Typedef, Enum, Union, and Struct Attributes](typedef-enum-union-and-struct-attributes.md)<br/>

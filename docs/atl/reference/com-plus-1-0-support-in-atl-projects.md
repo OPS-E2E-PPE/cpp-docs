@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COM+ 1.0 Support in ATL Projects"
 title: "COM+ 1.0 Support in ATL Projects"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.appwiz.ATL.MTS"]
@@ -19,9 +20,8 @@ If you select the **Support COM+ 1.0** check box, the wizard modifies the build 
 
 If you select the **Support COM+ 1.0** check box, you can also select **Support component registrar**. The component registrar allows your COM+ 1.0 object to get a list of components, register components, or unregister components (individually or all at once).
 
-## See Also
+## See also
 
 [Fundamentals of ATL COM Objects](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programming with ATL and C Run-Time Code](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Default ATL Project Configurations](../../atl/reference/default-atl-project-configurations.md)
-

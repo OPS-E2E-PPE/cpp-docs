@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2630"
 title: "Compiler Error C2630"
 ms.date: "11/04/2016"
 f1_keywords: ["C2630"]
@@ -13,7 +14,7 @@ The symbol appears in a context that requires a comma.
 
 The following sample generates C2630:
 
-```
+```cpp
 // C2630.cpp
 // compile with: /c
 struct D {

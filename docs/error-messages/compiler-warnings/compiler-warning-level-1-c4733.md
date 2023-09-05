@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (Level 1) C4733"
 title: "Compiler Warning (Level 1) C4733"
 ms.date: "11/04/2016"
 f1_keywords: ["C4733"]
@@ -15,7 +16,7 @@ To resolve this warning, either remove the FS:0 definition or turn off this warn
 
 The following sample generates C4733:
 
-```
+```cpp
 // C4733.cpp
 // compile with: /W1 /c
 // processor: x86

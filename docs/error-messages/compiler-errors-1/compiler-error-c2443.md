@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2443"
 title: "Compiler Error C2443"
 ms.date: "11/04/2016"
 f1_keywords: ["C2443"]
@@ -13,7 +14,7 @@ The instruction requires operands to be the same size.
 
 The following sample generates C2443:
 
-```
+```cpp
 // C2443.cpp
 // processor: x86
 short var;

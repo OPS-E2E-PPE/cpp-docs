@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2903"
 title: "Compiler Error C2903"
 ms.date: "11/04/2016"
 f1_keywords: ["C2903"]
@@ -13,7 +14,7 @@ Code attempts explicit instantiation of something that is not a template.
 
 The following sample generates C2903:
 
-```
+```cpp
 // C2903.cpp
 // compile with: /c
 namespace N {
@@ -28,7 +29,7 @@ void g() {
 
 C2903 can also occur when using generics:
 
-```
+```cpp
 // C2903b.cpp
 // compile with: /clr /c
 namespace N {

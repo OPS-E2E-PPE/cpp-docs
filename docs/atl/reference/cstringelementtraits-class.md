@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CStringElementTraits Class"
 title: "CStringElementTraits Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CStringElementTraits", "CSTRINGT/ATL::CStringElementTraits", "CSTRINGT/ATL::CStringElementTraits::INARGTYPE", "CSTRINGT/ATL::CStringElementTraits::OUTARGTYPE", "CSTRINGT/ATL::CStringElementTraits::CompareElements", "CSTRINGT/ATL::CStringElementTraits::CompareElementsOrdered", "CSTRINGT/ATL::CStringElementTraits::CopyElements", "CSTRINGT/ATL::CStringElementTraits::Hash", "CSTRINGT/ATL::CStringElementTraits::RelocateElements"]
@@ -50,7 +51,7 @@ For more information, see [ATL Collection Classes](../../atl/atl-collection-clas
 
 **Header:** cstringt.h
 
-##  <a name="compareelements"></a>  CStringElementTraits::CompareElements
+## <a name="compareelements"></a> CStringElementTraits::CompareElements
 
 Call this static function to compare two string elements for equality.
 
@@ -70,7 +71,7 @@ The second string element.
 
 Returns true if the elements are equal, false otherwise.
 
-##  <a name="compareelementsordered"></a>  CStringElementTraits::CompareElementsOrdered
+## <a name="compareelementsordered"></a> CStringElementTraits::CompareElementsOrdered
 
 Call this static function to compare two string elements.
 
@@ -90,7 +91,7 @@ The second string element.
 
 Zero if the strings are identical, < 0 if *str1* is less than *str2*, or > 0 if *str1* is greater than *str2*. The [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) method is used to perform the comparisons.
 
-##  <a name="copyelements"></a>  CStringElementTraits::CopyElements
+## <a name="copyelements"></a> CStringElementTraits::CopyElements
 
 Call this static function to copy `CString` elements stored in a collection class object.
 
@@ -116,7 +117,7 @@ The number of elements to copy.
 
 The source and destination elements should not overlap.
 
-##  <a name="hash"></a>  CStringElementTraits::Hash
+## <a name="hash"></a> CStringElementTraits::Hash
 
 Call this static function to calculate a hash value for the given string element.
 
@@ -133,7 +134,7 @@ The string element.
 
 Returns a hash value, calculated using the string's contents.
 
-##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE
+## <a name="inargtype"></a> CStringElementTraits::INARGTYPE
 
 The data type to use for adding elements to the collection class object.
 
@@ -141,7 +142,7 @@ The data type to use for adding elements to the collection class object.
 typedef T::PCXSTR INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CStringElementTraits::OUTARGTYPE
+## <a name="outargtype"></a> CStringElementTraits::OUTARGTYPE
 
 The data type to use for retrieving elements from the collection class object.
 
@@ -149,7 +150,7 @@ The data type to use for retrieving elements from the collection class object.
 typedef T& OUTARGTYPE;
 ```
 
-##  <a name="relocateelements"></a>  CStringElementTraits::RelocateElements
+## <a name="relocateelements"></a> CStringElementTraits::RelocateElements
 
 Call this static function to relocate `CString` elements stored in a collection class object.
 
@@ -175,7 +176,7 @@ The number of elements to relocate.
 
 This static function calls [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), which is sufficient for most data types. If the objects being moved contain pointers to their own members, this static function will need to be overridden.
 
-## See Also
+## See also
 
 [CElementTraitsBase Class](../../atl/reference/celementtraitsbase-class.md)<br/>
 [CStringElementTraitsI Class](../../atl/reference/cstringelementtraitsi-class.md)<br/>

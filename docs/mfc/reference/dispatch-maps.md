@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Dispatch Maps"
 title: "Dispatch Maps"
 ms.date: "06/20/2018"
-f1_keywords: ["vc.mfc.macros.maps"]
 helpviewer_keywords: ["dispatch maps [MFC], macros", "dispatch maps [MFC]", "dispatch map macros [MFC]"]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ---
@@ -21,7 +21,7 @@ OLE Automation provides ways to call methods and to access properties across app
 |[DISP_PROPERTY_PARAM](#disp_property_param)|Defines an OLE automation property that takes parameters and names the Get and Set functions.|
 |[DISP_DEFVALUE](#disp_defvalue)|Makes an existing property the default value of an object.|
 
-## <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP
+## <a name="declare_dispatch_map"></a> DECLARE_DISPATCH_MAP
 
 If a `CCmdTarget`-derived class in your program supports OLE Automation, that class must provide a dispatch map to expose its methods and properties.
 
@@ -34,7 +34,7 @@ DECLARE_DISPATCH_MAP()
 Use the DECLARE_DISPATCH_MAP macro at the end of your class declaration. Then, in the .CPP file that defines the member functions for the class, use the BEGIN_DISPATCH_MAP macro. Then include macro entries for each of your class's exposed methods and properties (DISP_FUNCTION, DISP_PROPERTY, and so on). Finally, use the END_DISPATCH_MAP macro.
 
 > [!NOTE]
-> If you declare any members after DECLARE_DISPATCH_MAP, you must specify a new access type ( **public**, **private**, or **protected**) for them.
+> If you declare any members after DECLARE_DISPATCH_MAP, you must specify a new access type ( **`public`**, **`private`**, or **`protected`**) for them.
 
 The Application Wizard and code wizards assist in creating Automation classes and in maintaining dispatch maps. For more information on dispatch maps, see [Automation Servers](../../mfc/automation-servers.md).
 
@@ -46,7 +46,7 @@ The Application Wizard and code wizards assist in creating Automation classes an
 
 **Header:** afxwin.h
 
-## <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP
+## <a name="begin_dispatch_map"></a> BEGIN_DISPATCH_MAP
 
 Declares the definition of your dispatch map.
 
@@ -70,7 +70,7 @@ In the implementation (.cpp) file that defines the member functions for your cla
 
 **Header:** afxdisp.h
 
-## <a name="end_dispatch_map"></a>  END_DISPATCH_MAP
+## <a name="end_dispatch_map"></a> END_DISPATCH_MAP
 
 Ends the definition of your dispatch map.
 
@@ -86,17 +86,17 @@ It must be used in conjunction with BEGIN_DISPATCH_MAP.
 
 **Header:** afxdisp.h
 
-## <a name="disp_function"></a>  DISP_FUNCTION
+## <a name="disp_function"></a> DISP_FUNCTION
 
 Defines an OLE automation function in a dispatch map.
 
 ```cpp
 DISP_FUNCTION(
-  theClass,
-  pszName,
-  pfnMember,
-  vtRetVal,
-  vtsParams)
+    theClass,
+    pszName,
+    pfnMember,
+    vtRetVal,
+    vtsParams)
 ```
 
 ### Parameters
@@ -122,11 +122,11 @@ The *vtRetVal* argument is of type VARTYPE. The following possible values for th
 
 |Symbol|Return type|
 |------------|-----------------|
-|VT_EMPTY|**void**|
-|VT_I2|**short**|
-|VT_I4|**long**|
-|VT_R4|**float**|
-|VT_R8|**double**|
+|VT_EMPTY|**`void`**|
+|VT_I2|**`short`**|
+|VT_I4|**`long`**|
+|VT_R4|**`float`**|
+|VT_R8|**`double`**|
 |VT_CY|CY|
 |VT_DATE|DATE|
 |VT_BSTR|BSTR|
@@ -146,10 +146,10 @@ The `VTS_` constants and their meanings are as follows:
 
 |Symbol|Parameter type|
 |------------|--------------------|
-|VTS_I2|**short**|
-|VTS_I4|**long**|
-|VTS_R4|**float**|
-|VTS_R8|**double**|
+|VTS_I2|**`short`**|
+|VTS_I4|**`long`**|
+|VTS_R4|**`float`**|
+|VTS_R8|**`double`**|
 |VTS_CY|`const CY` or `CY*`|
 |VTS_DATE|DATE|
 |VTS_BSTR|LPCSTR|
@@ -176,16 +176,16 @@ The `VTS_` constants and their meanings are as follows:
 
 **Header:** afxdisp.h
 
-## <a name="disp_property"></a>  DISP_PROPERTY
+## <a name="disp_property"></a> DISP_PROPERTY
 
 Defines an OLE automation property in a dispatch map.
 
 ```cpp
 DISP_PROPERTY(
-  theClass,
-  pszName,
-  memberName,
-  vtPropType)
+    theClass,
+    pszName,
+    memberName,
+    vtPropType)
 ```
 
 ### Parameters
@@ -208,10 +208,10 @@ The *vtPropType* argument is of type **VARTYPE**. Possible values for this argum
 
 |Symbol|Property type|
 |------------|-----------------------|
-|VT_I2|**short**|
-|VT_I4|**long**|
-|VT_R4|**float**|
-|VT_R8|**double**|
+|VT_I2|**`short`**|
+|VT_I4|**`long`**|
+|VT_R4|**`float`**|
+|VT_R8|**`double`**|
 |VT_CY|CY|
 |VT_DATE|DATE|
 |VT_BSTR|`CString`|
@@ -227,17 +227,17 @@ When an external client changes the property, the value of the member variable s
 
 **Header:** afxdisp.h
 
-## <a name="disp_property_ex"></a>  DISP_PROPERTY_EX
+## <a name="disp_property_ex"></a> DISP_PROPERTY_EX
 
 Defines an OLE automation property and name the functions used to get and set the property's value in a dispatch map.
 
 ```cpp
 DISP_PROPERTY_EX(
-  theClass,
-  pszName,
-  memberGet,
-  memberSet,
-  vtPropType)
+    theClass,
+    pszName,
+    memberGet,
+    memberSet,
+    vtPropType)
 ```
 
 ### Parameters
@@ -267,17 +267,17 @@ The *vtPropType* argument is of type VARTYPE. Possible values for this argument 
 
 **Header:** afxdisp.h
 
-## <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY
+## <a name="disp_property_notify"></a> DISP_PROPERTY_NOTIFY
 
 Defines an OLE automation property with notification in a dispatch map.
 
 ```cpp
 DISP_PROPERTY_NOTIFY(
-  theClass,
-  szExternalName,
-  memberName,
-  pfnAfterSet,
-  vtPropType)
+    theClass,
+    szExternalName,
+    memberName,
+    pfnAfterSet,
+    vtPropType)
 ```
 
 ### Parameters
@@ -305,10 +305,10 @@ The *vtPropType* argument is of type VARTYPE. Possible values for this argument 
 
 |Symbol|Property type|
 |------------|-----------------------|
-|VT_I2|**short**|
-|VT_I4|**long**|
-|VT_R4|**float**|
-|VT_R8|**double**|
+|VT_I2|**`short`**|
+|VT_I4|**`long`**|
+|VT_R4|**`float`**|
+|VT_R8|**`double`**|
 |VT_CY|CY|
 |VT_DATE|DATE|
 |VT_BSTR|`CString`|
@@ -322,18 +322,18 @@ The *vtPropType* argument is of type VARTYPE. Possible values for this argument 
 
 **Header:** afxdisp.h
 
-## <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM
+## <a name="disp_property_param"></a> DISP_PROPERTY_PARAM
 
 Defines a property accessed with separate `Get` and `Set` member functions.
 
 ```cpp
 DISP_PROPERTY_PARAM(
-  theClass,
-  pszExternalName,
-  pfnGet,
-  pfnSet,
-  vtPropType,
-  vtsParams)
+    theClass,
+    pszExternalName,
+    pfnGet,
+    pfnSet,
+    vtPropType,
+    vtsParams)
 ```
 
 ### Parameters
@@ -382,7 +382,7 @@ These correspond to the following DISP_PROPERTY_PARAM macro in the control dispa
 
 **Header:** afxdisp.h
 
-## <a name="disp_defvalue"></a>  DISP_DEFVALUE
+## <a name="disp_defvalue"></a> DISP_DEFVALUE
 
 Makes an existing property the default value of an object.
 

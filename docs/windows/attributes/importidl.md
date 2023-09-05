@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: importidl"
 title: "importidl (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.importidl"]
@@ -37,9 +38,7 @@ You may want to use **importidl**, for example, if you want to use a hand-coded 
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Anywhere|
 |**Repeatable**|No|
@@ -48,7 +47,7 @@ You may want to use **importidl**, for example, if you want to use a hand-coded 
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [Compiler Attributes](compiler-attributes.md)<br/>
 [Stand-Alone Attributes](stand-alone-attributes.md)<br/>

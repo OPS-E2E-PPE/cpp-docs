@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Synchronization (lock Class)"
 title: "Synchronization (lock Class)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
@@ -13,6 +14,6 @@ Provides a mechanism to automate taking a lock that synchronizes access to an ob
 
 [lock](../dotnet/lock.md)
 
-## See Also
+## See also
 
 [C++ Support Library](../dotnet/cpp-support-library.md)

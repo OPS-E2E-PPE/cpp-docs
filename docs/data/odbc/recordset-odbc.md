@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Recordset (ODBC)"
 title: "Recordset (ODBC)"
-ms.date: "11/04/2016"
+ms.date: "05/09/2019"
 helpviewer_keywords: ["recordsets, snapshots", "recordsets, creating", "dynamic recordsets", "forward-only recordsets", "recordsets, dynasets", "ODBC recordsets, CRecordset objects", "ODBC recordsets", "recordsets, about recordsets", "snapshots, ODBC recordsets", "dynasets"]
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
 ---
@@ -19,12 +20,9 @@ A [CRecordset](../../mfc/reference/crecordset-class.md) object represents a set 
 An example of a recordset based on a table is "all customers," which accesses a Customer table. An example of a query is "all invoices for Joe Smith." An example of a recordset based on a stored procedure (sometimes called a predefined query) is "all of the delinquent accounts," which invokes a stored procedure in the back-end database. A recordset can join two or more tables from the same data source, but not tables from different data sources.
 
 > [!NOTE]
->  For information about deriving recordset classes with the wizards, see [Adding an MFC ODBC Consumer](../../mfc/reference/adding-an-mfc-odbc-consumer.md) and [Database Support, MFC Application Wizard](../../mfc/reference/database-support-mfc-application-wizard.md).
+> Some ODBC drivers support views of the database. A view in this sense is a query originally created with the SQL `CREATE VIEW` statement.
 
-> [!NOTE]
->  Some ODBC drivers support views of the database. A view in this sense is a query originally created with the SQL `CREATE VIEW` statement. The wizards currently do not support views, but it is possible to code this support yourself.
-
-##  <a name="_core_recordset_capabilities"></a> Recordset Capabilities
+## <a name="_core_recordset_capabilities"></a> Recordset Capabilities
 
 All recordset objects share the following capabilities:
 
@@ -38,7 +36,7 @@ All recordset objects share the following capabilities:
 
 - You can [parameterize](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) the recordset to qualify the recordset selection at run time.
 
-##  <a name="_core_snapshots_and_dynasets"></a> Snapshots and Dynasets
+## <a name="_core_snapshots_and_dynasets"></a> Snapshots and Dynasets
 
 There are two principal types of recordsets: [snapshots](../../data/odbc/snapshot.md) and [dynasets](../../data/odbc/dynaset.md). Both are supported by class `CRecordset`. Each shares the common characteristics of all recordsets, but each also extends the common functionality in its own specialized way. Snapshots provide a static view of the data and are useful for reports and other situations in which you want a view of the data as it existed at a particular time. Dynasets are useful when you want updates made by other users to be visible in the recordset without having to requery or refresh the recordset. Snapshots and dynasets can be updateable or read-only. To reflect records added or deleted by other users, call [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery).
 
@@ -51,7 +49,7 @@ There are two principal types of recordsets: [snapshots](../../data/odbc/snapsho
     > [!NOTE]
     >  For information about ODBC driver requirements for dynaset support, see [ODBC](../../data/odbc/odbc-basics.md). For a list of ODBC drivers included in this version of Visual C++ and for information about obtaining additional drivers, see [ODBC Driver List](../../data/odbc/odbc-driver-list.md).
 
-##  <a name="_core_your_recordsets"></a> Your Recordsets
+## <a name="_core_your_recordsets"></a> Your Recordsets
 
 For every distinct table, view, or stored procedure that you want to access, you typically define a class derived from `CRecordset`. (The exception is a database join, in which one recordset represents columns from two or more tables.) When you derive a recordset class, you enable the record field exchange (RFX) mechanism or the bulk record field exchange (Bulk RFX) mechanism, which are similar to the dialog data exchange (DDX) mechanism. RFX and Bulk RFX simplify the transfer of data from the data source into your recordset; RFX additionally transfers data from your recordset to the data source. For more information, see [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md) and [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
@@ -105,7 +103,7 @@ The following topics explain the details of using recordset objects. The topics 
 
 - [Recordset: How Recordsets Update Records (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
-## See Also
+## See also
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [MFC ODBC Consume](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Command Object Interfaces"
 title: "Command Object Interfaces"
 ms.date: "10/24/2018"
 helpviewer_keywords: ["command object interfaces [C++]", "command objects [OLE DB]", "OLE DB [C++], command object interfaces"]
@@ -10,6 +11,6 @@ The command object uses the `IAccessor` interface to specify parameter bindings.
 
 The `ICommandText` interface provides a way to specify a text command. The `ICommandProperties` interface handles all the command properties.
 
-## See Also
+## See also
 
 [OLE DB Provider Template Architecture](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

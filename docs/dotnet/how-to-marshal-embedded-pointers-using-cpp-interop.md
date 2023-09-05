@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Marshal Embedded Pointers Using C++ Interop"
 title: "How to: Marshal Embedded Pointers Using C++ Interop"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -11,9 +12,9 @@ The following code examples use the [managed, unmanaged](../preprocessor/managed
 
 ## Example
 
-The following example demonstrates how an unmanaged function that takes a structure containing pointers can be called from a managed function. The managed function creates an instance of the structure and initializes the embedded pointer with the new keyword (instead of the [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) keyword). Because this allocates the memory on the native heap, there is no need to pin the array to suppress garbage collection. However, the memory must be explicitly deleted to avoid memory leakage.
+The following example demonstrates how an unmanaged function that takes a structure containing pointers can be called from a managed function. The managed function creates an instance of the structure and initializes the embedded pointer with the new keyword (instead of the [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) keyword). Because this allocates the memory on the native heap, there is no need to pin the array to suppress garbage collection. However, the memory must be explicitly deleted to avoid memory leakage.
 
-```
+```cpp
 // marshal_embedded_pointer.cpp
 // compile with: /clr
 #include <iostream>
@@ -79,6 +80,6 @@ array[8] = 97.754975
 array[9] = 27.370446
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

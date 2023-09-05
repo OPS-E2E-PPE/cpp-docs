@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2088"
 title: "Compiler Error C2088"
 ms.date: "11/04/2016"
 f1_keywords: ["C2088"]
@@ -13,7 +14,7 @@ The operator was not defined for the structure or union. This error is only vali
 
 The following sample generates C2088 three times:
 
-```
+```c
 // C2088.c
 struct S {
    int m_i;

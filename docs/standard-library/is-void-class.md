@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_void Class"
 title: "is_void Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_void"]
@@ -18,12 +19,12 @@ struct is_void;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to query.
 
 ## Remarks
 
-An instance of the type predicate holds true if the type *T* is **void** or a cv-qualified form of **void**, otherwise it holds false.
+An instance of the type predicate holds true if the type *T* is **`void`** or a cv-qualified form of **`void`**, otherwise it holds false.
 
 ## Example
 
@@ -65,4 +66,4 @@ is_void<void> == true
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

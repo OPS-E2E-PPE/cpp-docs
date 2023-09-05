@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: underlying_type Class"
 title: "underlying_type Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::underlying_type"]
@@ -18,12 +19,12 @@ struct underlying_type;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to modify.
 
 ## Remarks
 
-The `type` member typedef of the template class names the underlying integral type of *T*, when *T* is an enumeration type, otherwise there is no member typedef `type`.
+The `type` member typedef of the class template names the underlying integral type of *T*, when *T* is an enumeration type, otherwise there is no member typedef `type`.
 
 ## Requirements
 
@@ -33,4 +34,4 @@ The `type` member typedef of the template class names the underlying integral ty
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

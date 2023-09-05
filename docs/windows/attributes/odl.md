@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: odl"
 title: "odl (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.odl"]
@@ -17,7 +18,7 @@ Identifies an interface as an Object Description Language (ODL) interface. The M
 
 ## Remarks
 
-The **odl** C++ attribute has the same functionality as the [odl](/windows/desktop/Midl/odl) MIDL attribute.
+The **odl** C++ attribute has the same functionality as the [odl](/windows/win32/Midl/odl) MIDL attribute.
 
 ## Example
 
@@ -43,9 +44,7 @@ public:
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|**interface**|
 |**Repeatable**|No|
@@ -54,7 +53,7 @@ public:
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Interface Attributes](interface-attributes.md)

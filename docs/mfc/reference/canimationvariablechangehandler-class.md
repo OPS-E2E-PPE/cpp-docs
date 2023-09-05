@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAnimationVariableChangeHandler Class"
 title: "CAnimationVariableChangeHandler Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAnimationVariableChangeHandler", "AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler", "AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::OnValueChanged", "AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::SetAnimationController"]
@@ -47,7 +48,7 @@ This event handler is created and passed to `IUIAnimationVariable::SetVariableCh
 
 **Header:** afxanimationcontroller.h
 
-##  <a name="onvaluechanged"></a>  CAnimationVariableChangeHandler::OnValueChanged
+## <a name="onvaluechanged"></a> CAnimationVariableChangeHandler::OnValueChanged
 
 Called when a value of an animation variable has changed.
 
@@ -77,11 +78,11 @@ The previous value.
 
 If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.
 
-##  <a name="setanimationcontroller"></a>  CAnimationVariableChangeHandler::SetAnimationController
+## <a name="setanimationcontroller"></a> CAnimationVariableChangeHandler::SetAnimationController
 
 Stores a pointer to animation controller to route events.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
@@ -90,6 +91,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *pAnimationController*<br/>
 A pointer to animation controller, which will receive events.
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

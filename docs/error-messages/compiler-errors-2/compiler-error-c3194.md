@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3194"
 title: "Compiler Error C3194"
 ms.date: "11/04/2016"
 f1_keywords: ["C3194"]
@@ -15,7 +16,7 @@ Special member functions that require automatic invocation by the compiler, such
 
 The following sample generates C3194.
 
-```
+```cpp
 // C3194.cpp
 // compile with: /clr /c
 value struct MyStruct {

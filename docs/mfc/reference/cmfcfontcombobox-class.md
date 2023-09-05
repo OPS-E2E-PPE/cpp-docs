@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCFontComboBox Class"
 title: "CMFCFontComboBox Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCFontComboBox", "AFXFONTCOMBOBOX/CMFCFontComboBox", "AFXFONTCOMBOBOX/CMFCFontComboBox::CMFCFontComboBox", "AFXFONTCOMBOBOX/CMFCFontComboBox::GetSelFont", "AFXFONTCOMBOBOX/CMFCFontComboBox::SelectFont", "AFXFONTCOMBOBOX/CMFCFontComboBox::Setup", "AFXFONTCOMBOBOX/CMFCFontComboBox::m_bDrawUsingFont"]
@@ -32,7 +33,7 @@ class CMFCFontComboBox : public CComboBox
 |`CMFCFontComboBox::DrawItem`|Called by the framework to draw a specified item in the current font combo box control. (Overrides [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|
 |[CMFCFontComboBox::GetSelFont](#getselfont)|Retrieves information about the currently selected font.|
 |`CMFCFontComboBox::MeasureItem`|Called by the framework to inform Windows of the dimensions of the list box in the current font combo box control. (Overrides [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|
-|`CMFCFontComboBox::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) and [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows functions. (Overrides [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|`CMFCFontComboBox::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) and [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows functions. (Overrides [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CMFCFontComboBox::SelectFont](#selectfont)|Selects the font that matches the specified criteria from the font combo box.|
 |[CMFCFontComboBox::Setup](#setup)|Initializes the list of items in the font combo box.|
 
@@ -62,7 +63,7 @@ To use a `CMFCFontComboBox` object in a dialog box, add a `CMFCFontComboBox` var
 
 **Header:** afxfontcombobox.h
 
-##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox
+## <a name="cmfcfontcombobox"></a> CMFCFontComboBox::CMFCFontComboBox
 
 Constructs a `CMFCFontComboBox` object.
 
@@ -74,7 +75,7 @@ CMFCFontComboBox();
 
 ### Remarks
 
-##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont
+## <a name="getselfont"></a> CMFCFontComboBox::GetSelFont
 
 Retrieves information about the currently selected font.
 
@@ -88,7 +89,7 @@ A pointer to [CMFCFontInfo Class](../../mfc/reference/cmfcfontinfo-class.md) obj
 
 ### Remarks
 
-##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont
+## <a name="m_bdrawusingfont"></a> CMFCFontComboBox::m_bDrawUsingFont
 
 Indicates to the framework which font to use to draw the item labels in the current font combo box.
 
@@ -100,7 +101,7 @@ static BOOL m_bDrawUsingFont;
 
 Set this member to TRUE to direct the framework to use the same font to draw each item label. Set this member to FALSE to direct the framework to draw each item label with the font whose name is the same as the label. The default value of this member is FALSE.
 
-##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont
+## <a name="selectfont"></a> CMFCFontComboBox::SelectFont
 
 Selects the font that matches the specified criteria from the font combo box.
 
@@ -121,7 +122,7 @@ BOOL SelectFont(
 [in] Specifies a font name.
 
 *nCharSet*<br/>
-[in] Specifies a character set. The default value is DEFAULT_CHARSET. For more information, see the `lfCharSet` member of the [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) structure.
+[in] Specifies a character set. The default value is DEFAULT_CHARSET. For more information, see the `lfCharSet` member of the [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) structure.
 
 ### Return Value
 
@@ -133,12 +134,12 @@ Use this method to select and scroll to the item in the font combo box that corr
 
 ### Example
 
-The following example demonstrates how to use the `SelectFont` method in the `CMFCFontComboBox` class. This example is part of the [New Controls sample](../../visual-cpp-samples.md).
+The following example demonstrates how to use the `SelectFont` method in the `CMFCFontComboBox` class. This example is part of the [New Controls sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]
 
-##  <a name="setup"></a>  CMFCFontComboBox::Setup
+## <a name="setup"></a> CMFCFontComboBox::Setup
 
 Initializes the list of items in the font combo box.
 
@@ -170,12 +171,12 @@ This method initializes the font combo box by enumerating the currently installe
 
 ### Example
 
-The following example demonstrates how to use the `Setup` method in the `CMFCFontComboBox` class. This example is part of the [New Controls sample](../../visual-cpp-samples.md).
+The following example demonstrates how to use the `Setup` method in the `CMFCFontComboBox` class. This example is part of the [New Controls sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#36](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

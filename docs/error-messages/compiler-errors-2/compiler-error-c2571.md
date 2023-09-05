@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2571"
 title: "Compiler Error C2571"
 ms.date: "11/04/2016"
 f1_keywords: ["C2571"]
@@ -17,7 +18,7 @@ A union is declared with a virtual function. You can declare a virtual function 
 
 The following sample generates C2571:
 
-```
+```cpp
 // C2571.cpp
 // compile with: /c
 union A {

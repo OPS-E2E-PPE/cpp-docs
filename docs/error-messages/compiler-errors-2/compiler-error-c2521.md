@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2521"
 title: "Compiler Error C2521"
 ms.date: "11/04/2016"
 f1_keywords: ["C2521"]
@@ -17,7 +18,7 @@ For more information, see [Destructors and finalizers](../../dotnet/how-to-defin
 
 The following sample generates C2521.
 
-```
+```cpp
 // C2521.cpp
 // compile with: /clr
 ref class R {

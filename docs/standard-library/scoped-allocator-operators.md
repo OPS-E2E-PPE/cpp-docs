@@ -1,16 +1,16 @@
 ---
-title: "&lt;scoped_allocator&gt; operators"
+description: "Learn more about: <scoped_allocator> operators"
+title: "<scoped_allocator> operators"
 ms.date: "11/04/2016"
 f1_keywords: ["scoped_allocator/std::operator!=", "scoped_allocator/std::operator=="]
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
 ---
-# &lt;scoped_allocator&gt; operators
+# `<scoped_allocator>` operators
 
-|||
-|-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
+[operator!=](#op_neq)\
+[operator==](#op_eq_eq)
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 Tests two `scoped_allocator_adaptor` objects for inequality.
 
@@ -23,17 +23,17 @@ bool operator!=(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 The left `scoped_allocator_adaptor` object.
 
-*right*<br/>
+*right*\
 The right `scoped_allocator_adaptor` object.
 
 ### Return Value
 
 `!(left == right)`
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Tests two `scoped_allocator_adaptor` objects for equality.
 
@@ -46,10 +46,10 @@ bool operator==(
 
 ### Parameters
 
-*left*<br/>
+*left*\
 The left `scoped_allocator_adaptor` object.
 
-*right*<br/>
+*right*\
 The right `scoped_allocator_adaptor` object.
 
 ### Return Value
@@ -58,4 +58,4 @@ The right `scoped_allocator_adaptor` object.
 
 ## See also
 
-[<scoped_allocator>](../standard-library/scoped-allocator.md)<br/>
+[<scoped_allocator>](../standard-library/scoped-allocator.md)

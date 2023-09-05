@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: hash_compare Class"
 title: "hash_compare Class"
 ms.date: "11/04/2016"
 f1_keywords: ["hash_set/stdext::hash_compare"]
@@ -7,7 +8,7 @@ ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
 ---
 # hash_compare Class
 
-The template class describes an object that can be used by any of the hash associative containers — hash_map, hash_multimap, hash_set, or hash_multiset — as a default **Traits** parameter object to order and hash the elements they contain.
+The class template describes an object that can be used by any of the hash associative containers — hash_map, hash_multimap, hash_set, or hash_multiset — as a default **Traits** parameter object to order and hash the elements they contain.
 
 ## Syntax
 
@@ -49,5 +50,5 @@ See examples for [hash_map::hash_map](../standard-library/hash-map-class.md#hash
 
 ## See also
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

@@ -1,20 +1,21 @@
 ---
-title: "&lt;condition_variable&gt;"
+description: "Learn more about: <condition_variable>"
+title: "<condition_variable>"
 ms.date: "11/04/2016"
 f1_keywords: ["<condition_variable>"]
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
 ---
-# &lt;condition_variable&gt;
+# `<condition_variable>`
 
 Defines the classes [condition_variable](../standard-library/condition-variable-class.md) and [condition_variable_any](../standard-library/condition-variable-any-class.md) that are used to create objects that wait for a condition to become true.
 
 This header uses Concurrency Runtime (ConcRT) so that you can use it together with other ConcRT mechanisms. For more information about ConcRT, see [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
-## Syntax
+## Requirements
 
-```cpp
-#include <condition_variable>
-```
+**Header:** \<condition_variable>
+
+**Namespace:** std
 
 > [!NOTE]
 > In code that is compiled by using **/clr**, this header is blocked.
@@ -42,16 +43,24 @@ The `condition_variable_any` and `condition_variable` classes each have three me
 
 - `wait_for` waits for a specified `time interval`.
 
-Each of these methods has two overloaded versions. One just waits and can wake up spuriously. The other takes an additional template argument that defines a predicate. The method does not return until the predicate is **true**.
+Each of these methods has two overloaded versions. One just waits and can wake up spuriously. The other takes an additional template argument that defines a predicate. The method does not return until the predicate is **`true`**.
 
-Each class also has two methods that are used to notify a condition variable that its condition is **true**.
+Each class also has two methods that are used to notify a condition variable that its condition is **`true`**.
 
 - `notify_one` wakes up one of the threads that is waiting for the condition variable.
 
 - `notify_all` wakes up all of the threads that are waiting for the condition variable.
 
+## Functions and Enums
+
+```cpp
+void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
+
+enum class cv_status { no_timeout, timeout };
+```
+
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[condition_variable Class](../standard-library/condition-variable-class.md)<br/>
-[condition_variable_any Class](../standard-library/condition-variable-any-class.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\
+[condition_variable Class](../standard-library/condition-variable-class.md)\
+[condition_variable_any Class](../standard-library/condition-variable-any-class.md)

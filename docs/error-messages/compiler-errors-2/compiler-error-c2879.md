@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2879"
 title: "Compiler Error C2879"
 ms.date: "11/04/2016"
 f1_keywords: ["C2879"]
@@ -13,7 +14,7 @@ You cannot create a [namespace alias](../../cpp/namespaces-cpp.md#namespace_alia
 
 The following sample generates C2879:
 
-```
+```cpp
 // C2879.cpp
 int main() {
    int i;

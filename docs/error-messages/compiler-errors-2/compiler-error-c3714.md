@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3714"
 title: "Compiler Error C3714"
 ms.date: "11/04/2016"
 f1_keywords: ["C3714"]
@@ -13,7 +14,7 @@ You defined an event handler method that did not use the same calling convention
 
 The following sample generates C3714:
 
-```
+```cpp
 // C3714.cpp
 // compile with: /c
 // processor: x86

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Security Implications of Customization"
 title: "Security Implications of Customization"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["security, MFC Feature Pack", "MFC Feature Pack, security"]
@@ -24,7 +25,6 @@ We recommend any of these three ways to close the vulnerabilities in the registr
 
 - You can also disable customizations in your application.
 
-## See Also
+## See also
 
 [Customization for MFC](../mfc/customization-for-mfc.md)
-

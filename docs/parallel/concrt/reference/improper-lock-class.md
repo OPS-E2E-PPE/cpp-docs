@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: improper_lock Class"
 title: "improper_lock Class"
 ms.date: "11/04/2016"
 f1_keywords: ["improper_lock", "CONCRT/concurrency::improper_lock", "CONCRT/concurrency::improper_lock::improper_lock"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when a lock is acquired improperly.
 
 ## Syntax
 
-```
+```cpp
 class improper_lock : public std::exception;
 ```
 
@@ -39,11 +40,11 @@ Typically, this exception is thrown when an attempt is made to acquire a non-ree
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> improper_lock
+## <a name="ctor"></a> improper_lock
 
 Constructs an `improper_lock exception`.
 
-```
+```cpp
 explicit _CRTIMP improper_lock(_In_z_ const char* _Message) throw();
 
 improper_lock() throw();
@@ -54,7 +55,7 @@ improper_lock() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [critical_section Class](critical-section-class.md)<br/>

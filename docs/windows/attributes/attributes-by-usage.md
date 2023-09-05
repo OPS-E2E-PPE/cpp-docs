@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Attributes by Usage"
 title: "Attributes by Usage"
 ms.custom: "index-page"
 ms.date: "10/02/2018"
@@ -26,6 +27,7 @@ If an attribute precedes an element that is not in the attribute's scope, the at
 |[Custom Attributes](custom-attributes-cpp.md)|Allows the user to extend metadata.|
 
 ## Module Attributes
+
 The following attribute can only be applied to the [module](module-cpp.md) attribute.
 
 |Attribute|Description|
@@ -70,7 +72,7 @@ You must observe these rules for defining an interface:
 
 When not specifying the [uuid](uuid-cpp-attributes.md) attribute and using the same interface name in different attribute projects, the same GUID is generated.
 
-## See Also
+## See also
 
 [C++ Attributes for COM and .NET](cpp-attributes-com-net.md)<br/>
 [Attributes by Group](attributes-by-group.md)<br/>

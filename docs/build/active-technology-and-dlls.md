@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Active Technology and DLLs"
 title: "Active Technology and DLLs"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["in-process server DLLs", "Automation [C++], DLLs", "DLLs [C++], Active Technology", "Active technology [C++]", "MFC DLLs [C++], Active Technology"]
@@ -14,6 +15,6 @@ If you are writing an Automation server and your server has no user interface, y
 
 - [Automation Servers](../mfc/automation-servers.md)
 
-## See Also
+## See also
 
-[DLLs in Visual C++](../build/dlls-in-visual-cpp.md)
+[Create C/C++ DLLs in Visual Studio](dlls-in-visual-cpp.md)

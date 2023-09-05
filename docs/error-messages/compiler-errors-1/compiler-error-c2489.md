@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2489"
 title: "Compiler Error C2489"
 ms.date: "11/04/2016"
 f1_keywords: ["C2489"]
@@ -13,7 +14,7 @@ For more information, see [naked](../../cpp/naked-cpp.md).
 
 The following sample generates C2489:
 
-```
+```cpp
 // C2489.cpp
 // processor: x86
 __declspec( naked ) int func() {

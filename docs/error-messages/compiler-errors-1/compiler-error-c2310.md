@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2310"
 title: "Compiler Error C2310"
 ms.date: "11/04/2016"
 f1_keywords: ["C2310"]
@@ -13,7 +14,7 @@ A catch handler specified no type or multiple types.
 
 The following sample generates C2310:
 
-```
+```cpp
 // C2310.cpp
 // compile with: /EHsc
 #include <eh.h>

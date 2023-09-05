@@ -1,16 +1,17 @@
 ---
 title: "memset, wmemset"
-ms.date: "11/04/2016"
-apiname: ["wmemset", "memset"]
-apilocation: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ntdll.dll", "ucrtbase.dll", "api-ms-win-crt-string-l1-1-0.dll"]
-apitype: "DLLExport"
+description: "Learn more about: memset, wmemset"
+ms.date: "11/29/2021"
+api_name: ["wmemset", "memset", "_o_memset"]
+api_location: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ntdll.dll", "ucrtbase.dll", "api-ms-win-crt-string-l1-1-0.dll", "ntoskrnl.exe"]
+api_type: ["DLLExport"]
+topic_type: ["apiref"]
 f1_keywords: ["memset", "wmemset"]
 helpviewer_keywords: ["wmemset function", "memset function"]
-ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
 ---
-# memset, wmemset
+# `memset`, `wmemset`
 
-Sets buffers to a specified character.
+Sets a buffer to a specified character.
 
 ## Syntax
 
@@ -29,37 +30,39 @@ wchar_t *wmemset(
 
 ### Parameters
 
-*dest*<br/>
+*`dest`*\
 Pointer to destination.
 
-*c*<br/>
+*`c`*\
 Character to set.
 
-*count*<br/>
+*`count`*\
 Number of characters.
 
-## Return Value
+## Return value
 
-The value of *dest*.
+The value of *`dest`*.
 
 ## Remarks
 
-Sets the first *count* characters of *dest* to the character *c*.
+Sets the first *`count`* characters of *`dest`* to the character *`c`*.
 
-**Security Note** Make sure that the destination buffer has enough room for at least *count* characters. For more information, see [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Security Note** Make sure that the destination buffer has enough room for at least *`count`* characters. For more information, see [Avoiding buffer overruns](/windows/win32/SecBP/avoiding-buffer-overruns).
+
+By default, this function's global state is scoped to the application. To change this behavior, see [Global state in the CRT](../global-state.md).
 
 ## Requirements
 
-|Routine|Required header|
-|-------------|---------------------|
-|**memset**|\<memory.h> or \<string.h>|
-|**wmemset**|\<wchar.h>|
+| Routine | Required header |
+|---|---|
+| **`memset`** | `<memory.h>` or `<string.h>` |
+| **`wmemset`** | `<wchar.h>` |
 
-For additional compatibility information, see [Compatibility](../../c-runtime-library/compatibility.md).
+For more compatibility information, see [Compatibility](../compatibility.md).
 
 ## Libraries
 
-All versions of the [C run-time libraries](../../c-runtime-library/crt-library-features.md).
+All versions of the [C run-time libraries](../crt-library-features.md).
 
 ## Example
 
@@ -82,14 +85,14 @@ int main( void )
 }
 ```
 
-### Output
+The example produces this output:
 
 ```Output
 Before: This is a test of the memset function
 After:  **** is a test of the memset function
 ```
 
-Here's an example of the use of wmemset:
+Here's an example of the use of `wmemset`:
 
 ```C
 // crt_wmemset.c
@@ -105,12 +108,12 @@ int main( void )
    wchar_t buffer[] = L"This is a test of the wmemset function";
 
    wprintf( L"Before: %s\n", buffer );
-   wmemset( buffer, '*', 4 );
+   wmemset( buffer, L'*', 4 );
    wprintf( L"After:  %s\n", buffer );
 }
 ```
 
-### Output
+The example produces this output:
 
 ```Output
 Before: This is a test of the wmemset function
@@ -119,9 +122,9 @@ After:  **** is a test of the wmemset function
 
 ## See also
 
-[Buffer Manipulation](../../c-runtime-library/buffer-manipulation.md)<br/>
-[_memccpy](memccpy.md)<br/>
-[memchr, wmemchr](memchr-wmemchr.md)<br/>
-[memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
-[memcpy, wmemcpy](memcpy-wmemcpy.md)<br/>
-[_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
+[Buffer manipulation](../buffer-manipulation.md)\
+[`_memccpy`](memccpy.md)\
+[`memchr`, `wmemchr`](memchr-wmemchr.md)\
+[`memcmp`, `wmemcmp`](memcmp-wmemcmp.md)\
+[`memcpy`, `wmemcpy`](memcpy-wmemcpy.md)\
+[`_strnset`, `_strnset_l`, `_wcsnset`, `_wcsnset_l`, `_mbsnset`, `_mbsnset_l`](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)

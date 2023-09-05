@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3454"
 title: "Compiler Error C3454"
 ms.date: "11/04/2016"
 f1_keywords: ["C3454"]
@@ -17,7 +18,7 @@ For more information, see [attribute](../../windows/attributes/attribute.md).
 
 The following sample generates C3454.
 
-```
+```cpp
 // C3454.cpp
 // compile with: /clr /c
 using namespace System;

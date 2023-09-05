@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2971"
 title: "Compiler Error C2971"
 ms.date: "11/04/2016"
 f1_keywords: ["C2971"]
@@ -13,7 +14,7 @@ You cannot use the name or address of a local variable as a template argument.
 
 The following sample generates C2971:
 
-```
+```cpp
 // C2971.cpp
 template <int *pi>
 class Y {};

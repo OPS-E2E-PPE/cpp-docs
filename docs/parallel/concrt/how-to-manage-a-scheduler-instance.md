@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Manage a Scheduler Instance"
 title: "How to: Manage a Scheduler Instance"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["managing a scheduler instance [Concurrency Runtime]", "scheduler instances, managing [Concurrency Runtime]"]
@@ -10,7 +11,7 @@ Scheduler instances let you associate specific scheduling policies with various 
 
 The examples create schedulers that use the default scheduler policies. For an example that creates a scheduler that uses a custom policy, see [How to: Specify Specific Scheduler Policies](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
 
-### To manage a scheduler instance in your application
+## To manage a scheduler instance in your application
 
 1. Create a [concurrency::SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) object that contains the policy values for the scheduler to use.
 
@@ -18,7 +19,7 @@ The examples create schedulers that use the default scheduler policies. For an e
 
    If you use the `Scheduler::Create` method, call the [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) method when you need to associate the scheduler with the current context.
 
-1. Call the [CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa) function to create a handle to a non-signaled, auto-reset event object.
+1. Call the [CreateEvent](/windows/win32/api/synchapi/nf-synchapi-createeventw) function to create a handle to a non-signaled, auto-reset event object.
 
 1. Pass the handle to the event object that you just created to the [concurrency::CurrentScheduler::RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent) method or the [concurrency::Scheduler::RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) method. This registers the event to be set when the scheduler is destroyed.
 
@@ -28,9 +29,9 @@ The examples create schedulers that use the default scheduler policies. For an e
 
    If you use the `Scheduler::Create` method, call the [concurrency::Scheduler::Release](reference/scheduler-class.md#release) method to decrement the reference count of the `Scheduler` object.
 
-1. Pass the handle to the event to the [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) function to wait for the scheduler to shut down.
+1. Pass the handle to the event to the [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) function to wait for the scheduler to shut down.
 
-1. Call the [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) function to close the handle to the event object.
+1. Call the [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) function to close the handle to the event object.
 
 ## Example
 
@@ -65,10 +66,9 @@ Current scheduler id: 0
 
 Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `scheduler-instance.cpp` and then run the following command in a Visual Studio Command Prompt window.
 
-**cl.exe /EHsc scheduler-instance.cpp**
+> **cl.exe /EHsc scheduler-instance.cpp**
 
-## See Also
+## See also
 
 [Scheduler Instances](../../parallel/concrt/scheduler-instances.md)<br/>
 [How to: Specify Specific Scheduler Policies](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCBaseToolBar Class"
 title: "CMFCBaseToolBar Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCBaseToolBar", "AFXBASETOOLBAR/CMFCBaseToolBar", "AFXBASETOOLBAR/CMFCBaseToolBar::GetDockingMode", "AFXBASETOOLBAR/CMFCBaseToolBar::GetMinSize", "AFXBASETOOLBAR/CMFCBaseToolBar::OnAfterChangeParent"]
@@ -51,7 +52,7 @@ class CMFCBaseToolBar : public CPane
 
 **Header:** afxbasetoolbar.h
 
-##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode
+## <a name="getdockingmode"></a> CMFCBaseToolBar::GetDockingMode
 
 Returns the docking mode.
 
@@ -63,7 +64,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 
 The docking mode.
 
-##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize
+## <a name="getminsize"></a> CMFCBaseToolBar::GetMinSize
 
 Returns the minimum size of a toolbar.
 
@@ -76,7 +77,7 @@ virtual void GetMinSize(CSize& size) const;
 *size*<br/>
 [out] The minimum size of a toolbar.
 
-##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent
+## <a name="onafterchangeparent"></a> CMFCBaseToolBar::OnAfterChangeParent
 
 Called by the framework after the pane's parent changes.
 
@@ -89,7 +90,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 *pWndOldParent*<br/>
 [in] A pointer to the previous parent window.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)

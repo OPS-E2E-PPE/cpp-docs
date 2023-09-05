@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Project Build Error PRJ0004"
 title: "Project Build Error PRJ0004"
 ms.date: "08/27/2018"
 f1_keywords: ["PRJ0004"]
@@ -15,4 +16,4 @@ One or more properties were specified in such a way as to make the syntax of the
 
 - Your computer may be low on free disk space.
 
-You may want to review the settings for the tool by looking at the [Command Line property page](../../ide/command-line-property-pages.md).
+You may want to review the settings for the tool by looking at the [Command Line property page](../../build/reference/command-line-property-pages.md).

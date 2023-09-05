@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4129"
 title: "Compiler Warning (level 1) C4129"
 ms.date: "11/04/2016"
 f1_keywords: ["C4129"]
@@ -17,7 +18,7 @@ The C++ standard, in section 2.13.2 discusses escape sequences.
 
 The following sample generates C4129:
 
-```
+```cpp
 // C4129.cpp
 // compile with: /W1
 int main() {

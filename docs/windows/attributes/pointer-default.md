@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: pointer_default"
 title: "pointer_default (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.pointer_default"]
@@ -22,7 +23,7 @@ A value that describes the pointer type: **ptr**, **ref**, or **unique**.
 
 ## Remarks
 
-The **pointer_default** C++ attribute has the same functionality as the [pointer_default](/windows/desktop/Midl/pointer-default) MIDL attribute.
+The **pointer_default** C++ attribute has the same functionality as the [pointer_default](/windows/win32/Midl/pointer-default) MIDL attribute.
 
 ## Example
 
@@ -30,9 +31,7 @@ See the example for [defaultvalue](defaultvalue.md) for a sample use of **pointe
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|**interface**|
 |**Repeatable**|No|
@@ -41,7 +40,7 @@ See the example for [defaultvalue](defaultvalue.md) for a sample use of **pointe
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Interface Attributes](interface-attributes.md)

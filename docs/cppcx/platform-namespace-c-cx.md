@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform namespace (C++/CX)"
 title: "Platform namespace (C++/CX)"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -97,7 +98,7 @@ The Platform namespace has the following structures.
 |[Platform::SizeT value class](../cppcx/platform-sizet-value-class.md)|An unsigned data type used to represent the size of an object.|
 |[Platform::UIntPtr value class](../cppcx/platform-uintptr-value-class.md)|An unsigned pointer whose size is appropriate for the platform (32-bit or 64-bit).|
 
-## See Also
+## See also
 
 [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md)<br/>
 [Platform::Runtime::CompilerServices Namespace](../cppcx/platform-runtime-compilerservices-namespace.md)<br/>

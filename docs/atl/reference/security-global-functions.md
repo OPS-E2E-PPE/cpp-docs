@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Security Global Functions"
 title: "Security Global Functions"
 ms.date: "11/04/2016"
 f1_keywords: ["atlsecurity/ATL::AtlGetDacl", "atlsecurity/ATL::AtlSetDacl", "atlsecurity/ATL::AtlGetGroupSid", "atlsecurity/ATL::AtlSetGroupSid", "atlsecurity/ATL::AtlGetOwnerSid", "atlsecurity/ATL::AtlSetOwnerSid", "atlsecurity/ATL::AtlGetSacl", "atlsecurity/ATL::AtlSetSacl", "atlsecurity/ATL::AtlGetSecurityDescriptor"]
@@ -10,9 +11,9 @@ ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
 These functions provide support for modifying SID and ACL objects.
 
 > [!IMPORTANT]
->  The functions listed in the following table cannot be used in applications that execute in the Windows Runtime.
+> The functions listed in the following table cannot be used in applications that execute in the Windows Runtime.
 
-|||
+|Name|Description|
 |-|-|
 |[AtlGetDacl](#atlgetdacl)|Call this function to retrieve the discretionary access-control list (DACL) information of a specified object.|
 |[AtlSetDacl](#atlsetdacl)|Call this function to set the discretionary access-control list (DACL) information of a specified object.|
@@ -28,12 +29,12 @@ These functions provide support for modifying SID and ACL objects.
 
 **Header:** atlsecurity.h
 
-##  <a name="atlgetdacl"></a>  AtlGetDacl
+## <a name="atlgetdacl"></a> AtlGetDacl
 
 Call this function to retrieve the discretionary access-control list (DACL) information of a specified object.
 
 > [!IMPORTANT]
->  This function cannot be used in applications that execute in the Windows Runtime.
+> This function cannot be used in applications that execute in the Windows Runtime.
 
 ```
 inline bool AtlGetDacl(
@@ -48,7 +49,7 @@ inline bool AtlGetDacl(
 Handle to the object for which to retrieve the security information.
 
 *ObjectType*<br/>
-Specifies a value from the [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
+Specifies a value from the [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
 
 *pDacl*<br/>
 Pointer to a DACL object which will contain the retrieved security information.
@@ -61,12 +62,12 @@ Returns true on success, false on failure.
 
 In debug builds, an assertion error will occur if either *hObject* or *pDacl* is invalid.
 
-##  <a name="atlsetdacl"></a>  AtlSetDacl
+## <a name="atlsetdacl"></a> AtlSetDacl
 
 Call this function to set the discretionary access-control list (DACL) information of a specified object.
 
 > [!IMPORTANT]
->  This function cannot be used in applications that execute in the Windows Runtime.
+> This function cannot be used in applications that execute in the Windows Runtime.
 
 ```
 inline bool AtlSetDacl(
@@ -82,7 +83,7 @@ inline bool AtlSetDacl(
 Handle to the object for which to set security information.
 
 *ObjectType*<br/>
-Specifies a value from the [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
+Specifies a value from the [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
 
 *rDacl*<br/>
 The DACL containing the new security information.
@@ -97,16 +98,17 @@ Returns true on success, false on failure.
 ### Remarks
 
 In debug builds, an assertion error will occur if *hObject* is invalid, or if *dwInheritanceFlowControl* is not one of the three permitted values.
+
 ### Requirements
 
 **Header:** atlsecurity.h
 
-##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid
+## <a name="atlgetgroupsid"></a> AtlGetGroupSid
 
 Call this function to retrieve the group security identifier (SID) of an object.
 
 > [!IMPORTANT]
->  This function cannot be used in applications that execute in the Windows Runtime.
+> This function cannot be used in applications that execute in the Windows Runtime.
 
 ```
 inline bool AtlGetGroupSid(
@@ -121,7 +123,7 @@ inline bool AtlGetGroupSid(
 Handle to the object from which to retrieve security information.
 
 *ObjectType*<br/>
-Specifies a value from the [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
+Specifies a value from the [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
 
 *pSid*<br/>
 Pointer to a `CSid` object which will contain the new security information.
@@ -134,12 +136,12 @@ Returns true on success, false on failure.
 
 **Header:** atlsecurity.h
 
-##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid
+## <a name="atlsetgroupsid"></a> AtlSetGroupSid
 
 Call this function to set the group security identifier (SID) of an object.
 
 > [!IMPORTANT]
->  This function cannot be used in applications that execute in the Windows Runtime.
+> This function cannot be used in applications that execute in the Windows Runtime.
 
 ```
 inline bool AtlSetGroupSid(
@@ -154,7 +156,7 @@ inline bool AtlSetGroupSid(
 Handle to the object for which to set security information.
 
 *ObjectType*<br/>
-Specifies a value from the [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
+Specifies a value from the [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
 
 *rSid*<br/>
 The `CSid` object containing the new security information.
@@ -167,12 +169,12 @@ Returns true on success, false on failure.
 
 **Header:** atlsecurity.h
 
-##  <a name="atlgetownersid"></a>  AtlGetOwnerSid
+## <a name="atlgetownersid"></a> AtlGetOwnerSid
 
 Call this function to retrieve the owner security identifier (SID) of an object.
 
 > [!IMPORTANT]
->  This function cannot be used in applications that execute in the Windows Runtime.
+> This function cannot be used in applications that execute in the Windows Runtime.
 
 ```
 inline bool AtlGetOwnerSid(
@@ -187,7 +189,7 @@ inline bool AtlGetOwnerSid(
 Handle to the object from which to retrieve security information.
 
 *ObjectType*<br/>
-Specifies a value from the [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
+Specifies a value from the [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
 
 *pSid*<br/>
 Pointer to a `CSid` object which will contain the new security information.
@@ -200,12 +202,12 @@ Returns true on success, false on failure.
 
 **Header:** atlsecurity.h
 
-##  <a name="atlsetownersid"></a>  AtlSetOwnerSid
+## <a name="atlsetownersid"></a> AtlSetOwnerSid
 
 Call this function to set the owner security identifier (SID) of an object.
 
 > [!IMPORTANT]
->  This function cannot be used in applications that execute in the Windows Runtime.
+> This function cannot be used in applications that execute in the Windows Runtime.
 
 ```
 inline bool AtlSetOwnerSid(
@@ -220,7 +222,7 @@ inline bool AtlSetOwnerSid(
 Handle to the object for which to set security information.
 
 *ObjectType*<br/>
-Specifies a value from the [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
+Specifies a value from the [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
 
 *rSid*<br/>
 The `CSid` object containing the new security information.
@@ -233,12 +235,12 @@ Returns true on success, false on failure.
 
 **Header:** atlsecurity.h
 
-##  <a name="atlgetsacl"></a>  AtlGetSacl
+## <a name="atlgetsacl"></a> AtlGetSacl
 
 Call this function to retrieve the system access-control list (SACL) information of a specified object.
 
 > [!IMPORTANT]
->  This function cannot be used in applications that execute in the Windows Runtime.
+> This function cannot be used in applications that execute in the Windows Runtime.
 
 ```
 inline bool AtlGetSacl(
@@ -254,7 +256,7 @@ inline bool AtlGetSacl(
 Handle to the object from which to retrieve the security information.
 
 *ObjectType*<br/>
-Specifies a value from the [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
+Specifies a value from the [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
 
 *pSacl*<br/>
 Pointer to a SACL object which will contain the retrieved security information.
@@ -274,12 +276,12 @@ If `AtlGetSacl` is to be called many times on many different objects, it will be
 
 **Header:** atlsecurity.h
 
-##  <a name="atlsetsacl"></a>  AtlSetSacl
+## <a name="atlsetsacl"></a> AtlSetSacl
 
 Call this function to set the system access-control list (SACL) information of a specified object.
 
 > [!IMPORTANT]
->  This function cannot be used in applications that execute in the Windows Runtime.
+> This function cannot be used in applications that execute in the Windows Runtime.
 
 ```
 inline bool AtlSetSacl(
@@ -296,7 +298,7 @@ inline bool AtlSetSacl(
 Handle to the object for which to set security information.
 
 *ObjectType*<br/>
-Specifies a value from the [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
+Specifies a value from the [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) enumeration that indicates the type of object identified by the *hObject* parameter.
 
 *rSacl*<br/>
 The SACL containing the new security information.
@@ -321,12 +323,12 @@ If `AtlSetSacl` is to be called many times on many different objects, it will be
 
 **Header:** atlsecurity.h
 
-##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor
+## <a name="atlgetsecuritydescriptor"></a> AtlGetSecurityDescriptor
 
 Call this function to retrieve the security descriptor of a given object.
 
 > [!IMPORTANT]
->  This function cannot be used in applications that execute in the Windows Runtime.
+> This function cannot be used in applications that execute in the Windows Runtime.
 
 ```
 inline bool AtlGetSecurityDescriptor(
@@ -345,13 +347,13 @@ bool bRequestNeededPrivileges = true) throw(...);
 Pointer to a null-terminated string that specifies the name of the object from which to retrieve security information.
 
 *ObjectType*<br/>
-Specifies a value from the [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeration that indicates the type of object identified by the *pszObjectName* parameter.
+Specifies a value from the [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) enumeration that indicates the type of object identified by the *pszObjectName* parameter.
 
 *pSecurityDescriptor*<br/>
 The object which receives the requested security descriptor.
 
 *requestedInfo*<br/>
-A set of [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) bit flags that indicate the type of security information to retrieve. This parameter can be a combination of the following values.
+A set of [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) bit flags that indicate the type of security information to retrieve. This parameter can be a combination of the following values.
 
 *bRequestNeededPrivileges*<br/>
 If true, the function will attempt to enable the SE_SECURITY_NAME privilege, and restore it on completion.
@@ -368,6 +370,6 @@ If `AtlGetSecurityDescriptor` is to be called many times on many different objec
 
 **Header:** atlsecurity.h
 
-## See Also
+## See also
 
 [Functions](../../atl/reference/atl-functions.md)

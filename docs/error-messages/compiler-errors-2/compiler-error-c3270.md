@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3270"
 title: "Compiler Error C3270"
 ms.date: "11/04/2016"
 f1_keywords: ["C3270"]
@@ -13,7 +14,7 @@ A field was marked with **FieldOffset**, which is only allowed when **StructLayo
 
 The following sample generates C3270:
 
-```
+```cpp
 // C3270_2.cpp
 // compile with: /clr /c
 using namespace System::Runtime::InteropServices;

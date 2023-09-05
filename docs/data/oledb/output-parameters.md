@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Output Parameters"
 title: "Output Parameters"
 ms.date: "10/24/2018"
 helpviewer_keywords: ["OLE DB, stored procedures", "stored procedures, calling", "stored procedures, parameters", "procedure calls", "procedure calls, stored procedures"]
@@ -44,6 +45,6 @@ return 0
 
 The `@_rowcount` outparameter reports how many rows were returned from the test table. However, this stored procedure limits the number of rows to 50. For example, if there were 100 rows in test, the rowcount would be 50 (because this code retrieves only the top 50 rows). If there were only 30 rows in the table, the rowcount would be 30. Be sure to call `Close` or `CloseAll` to populate the outparameter before you fetch its value.
 
-## See Also
+## See also
 
 [Using Stored Procedures](../../data/oledb/using-stored-procedures.md)

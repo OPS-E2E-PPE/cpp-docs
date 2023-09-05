@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Macros for OLE DB Provider Templates"
 title: "Macros for OLE DB Provider Templates"
-ms.date: "11/04/2016"
-f1_keywords: ["vc.templates.ole", "BEGIN_PROPERTY_SET", "BEGIN_PROPERTY_SET_EX", "BEGIN_PROPSET_MAP", "CHAIN_PROPERTY_SET", "END_PROPERTY_SET", "END_PROPSET_MAP", "PROPERTY_INFO_ENTRY", "PROPERTY_INFO_ENTRY_EX", "PROPERTY_INFO_ENTRY_VALUE", "BEGIN_PROVIDER_COLUMN_MAP", "END_PROVIDER_COLUMN_MAP", "PROVIDER_COLUMN_ENTRY", "PROVIDER_COLUMN_ENTRY_FIXED", "PROVIDER_COLUMN_ENTRY_GN", "PROVIDER_COLUMN_ENTRY_LENGTH", "PROVIDER_COLUMN_ENTRY_STR", "PROVIDER_COLUMN_ENTRY_TYPE_LENGTH", "PROVIDER_COLUMN_ENTRY_WSTR", "BEGIN_SCHEMA_MAP", "END_SCHEMA_MAP", "SCHEMA_ENTRY"]
+ms.date: "02/11/2019"
+f1_keywords: ["BEGIN_PROPERTY_SET", "BEGIN_PROPERTY_SET_EX", "BEGIN_PROPSET_MAP", "CHAIN_PROPERTY_SET", "END_PROPERTY_SET", "END_PROPSET_MAP", "PROPERTY_INFO_ENTRY", "PROPERTY_INFO_ENTRY_EX", "PROPERTY_INFO_ENTRY_VALUE", "BEGIN_PROVIDER_COLUMN_MAP", "END_PROVIDER_COLUMN_MAP", "PROVIDER_COLUMN_ENTRY", "PROVIDER_COLUMN_ENTRY_FIXED", "PROVIDER_COLUMN_ENTRY_GN", "PROVIDER_COLUMN_ENTRY_LENGTH", "PROVIDER_COLUMN_ENTRY_STR", "PROVIDER_COLUMN_ENTRY_TYPE_LENGTH", "PROVIDER_COLUMN_ENTRY_WSTR", "BEGIN_SCHEMA_MAP", "END_SCHEMA_MAP", "SCHEMA_ENTRY"]
 helpviewer_keywords: ["OLE DB provider templates, macros", "macros, OLE DB Provider Templates", "Provider Template macros (OLE DB)", "OLE DB Provider Template macros", "BEGIN_PROPERTY_SET macro", "BEGIN_PROPERTY_SET_EX macro", "BEGIN_PROPSET_MAP macro", "CHAIN_PROPERTY_SET macro", "END_PROPERTY_SET macro", "END_PROPSET_MAP macro", "PROPERTY_INFO_ENTRY macro", "PROPERTY_INFO_ENTRY_EX macro", "PROPERTY_INFO_ENTRY_VALUE macro", "BEGIN_PROVIDER_COLUMN_MAP macro", "END_PROVIDER_COLUMN_MAP macro", "PROVIDER_COLUMN_ENTRY macro", "PROVIDER_COLUMN_ENTRY_FIXED macro", "PROVIDER_COLUMN_ENTRY_GN macro", "PROVIDER_COLUMN_ENTRY_LENGTH macro", "PROVIDER_COLUMN_ENTRY_STR macro", "PROVIDER_COLUMN_ENTRY_TYPE_LENGTH macro", "PROVIDER_COLUMN_ENTRY_WSTR macro", "BEGIN_SCHEMA_MAP macro", "END_SCHEMA_MAP macro", "SCHEMA_ENTRY macro"]
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
 ---
@@ -11,7 +12,7 @@ The OLE DB Templates Provider macros offer functionality in the following catego
 
 ## Property Set Map Macros
 
-|||
+| Name | Description |
 |-|-|
 |[BEGIN_PROPERTY_SET](#begin_property_set)|Marks the beginning of a property set.|
 |[BEGIN_PROPERTY_SET_EX](#begin_property_set_ex)|Marks the beginning of a property set.|
@@ -25,7 +26,7 @@ The OLE DB Templates Provider macros offer functionality in the following catego
 
 ## Column Map Macros
 
-|||
+| Name | Description |
 |-|-|
 |[BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)|Marks the beginning of the provider column map entries.|
 |[END_PROVIDER_COLUMN_MAP](#end_provider_column_map)|Marks the end of the provider column map entries.|
@@ -39,7 +40,7 @@ The OLE DB Templates Provider macros offer functionality in the following catego
 
 ## Schema Rowset Macros
 
-|||
+| Name | Description |
 |-|-|
 |[BEGIN_SCHEMA_MAP](#begin_schema_map)|Marks the beginning of a schema map.|
 |[END_SCHEMA_MAP](#end_schema_map)|Marks the end of a schema map.|
@@ -66,7 +67,7 @@ BEGIN_PROPERTY_SET(guid)
 
 #### Example
 
-See [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+See [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_property_set_ex"></a> BEGIN_PROPERTY_SET_EX
 
@@ -88,7 +89,7 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 
 #### Example
 
-See [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+See [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_propset_map"></a> BEGIN_PROPSET_MAP
 
@@ -105,11 +106,11 @@ BEGIN_PROPSET_MAP(Class)
 *Class*<br/>
 [in] The class in which this property set is specified. A property set can be specified in the following OLE DB objects:
 
-- [Data Source Objects](https://docs.microsoft.com/previous-versions/windows/desktop/ms721278(v=vs.85))
+- [Data Source Objects](/previous-versions/windows/desktop/ms721278(v=vs.85))
 
-- [Session Objects](https://docs.microsoft.com/previous-versions/windows/desktop/ms711572(v=vs.85))
+- [Session Objects](/previous-versions/windows/desktop/ms711572(v=vs.85))
 
-- [Commands](https://docs.microsoft.com/previous-versions/windows/desktop/ms724608(v=vs.85))
+- [Commands](/previous-versions/windows/desktop/ms724608(v=vs.85))
 
 #### Example
 
@@ -137,7 +138,7 @@ CHAIN_PROPERTY_SET(ChainClass)
 You can chain a property set from another class to your own class, then access the properties directly from your class.
 
 > [!CAUTION]
->  Use this macro sparingly. Improper use can cause a consumer to fail the OLE DB conformance tests.
+> Use this macro sparingly. Improper use can cause a consumer to fail the OLE DB conformance tests.
 
 ### <a name="end_property_set"></a> END_PROPERTY_SET
 
@@ -156,7 +157,7 @@ END_PROPERTY_SET(guid)
 
 #### Example
 
-See [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+See [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="end_propset_map"></a> END_PROPSET_MAP
 
@@ -170,7 +171,7 @@ END_PROPSET_MAP()
 
 #### Example
 
-See [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+See [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry"></a> PROPERTY_INFO_ENTRY
 
@@ -185,15 +186,15 @@ PROPERTY_INFO_ENTRY(dwPropID)
 #### Parameters
 
 *dwPropID*<br/>
-[in] A [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) value that can be used in conjunction with the property set GUID to identify a property.
+[in] A [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) value that can be used in conjunction with the property set GUID to identify a property.
 
 #### Remarks
 
-This macro sets the property value of type `DWORD` to a default value defined in ATLDB.H. To set the property to a value of your choosing, use [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). To set the `VARTYPE` and [DBPROPFLAGS](https://docs.microsoft.com/previous-versions/windows/desktop/ms724342(v=vs.85)) for the property at the same time, use [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+This macro sets the property value of type `DWORD` to a default value defined in ATLDB.H. To set the property to a value of your choosing, use [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value). To set the `VARTYPE` and [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) for the property at the same time, use [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
 #### Example
 
-See [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+See [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry_ex"></a> PROPERTY_INFO_ENTRY_EX
 
@@ -208,13 +209,13 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 #### Parameters
 
 *dwPropID*<br/>
-[in] A [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) value that can be used in conjunction with the property set GUID to identify a property.
+[in] A [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) value that can be used in conjunction with the property set GUID to identify a property.
 
 *vt*<br/>
 [in] The `VARTYPE` of this property entry. (Defined in wtypes.h)
 
 *dwFlags*<br/>
-[in] A [DBPROPFLAGS](https://docs.microsoft.com/previous-versions/windows/desktop/ms724342(v=vs.85)) value describing this property entry.
+[in] A [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) value describing this property entry.
 
 *value*<br/>
 [in] The property value of type `DWORD`.
@@ -224,11 +225,11 @@ Either DBPROPOPTIONS_REQUIRED or DBPROPOPTIONS_SETIFCHEAP. Normally, a provider 
 
 #### Remarks
 
-With this macro, you can directly specify the property value of type `DWORD` as well as options and flags. To merely set a property to a default value defined in ATLDB.H, use [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). To set a property to a value of your choice, without setting options or flags on it, use [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md).
+With this macro, you can directly specify the property value of type `DWORD` as well as options and flags. To merely set a property to a default value defined in ATLDB.H, use [PROPERTY_INFO_ENTRY](#property_info_entry). To set a property to a value of your choice, without setting options or flags on it, use [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value).
 
 #### Example
 
-See [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+See [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry_value"></a> PROPERTY_INFO_ENTRY_VALUE
 
@@ -243,18 +244,18 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 #### Parameters
 
 *dwPropID*<br/>
-[in] A [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) value that can be used in conjunction with the property set GUID to identify a property.
+[in] A [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) value that can be used in conjunction with the property set GUID to identify a property.
 
 *value*<br/>
 [in] The property value of type `DWORD`.
 
 #### Remarks
 
-With this macro, you can directly specify the property value of type `DWORD`. To set the property to default value defined in ATLDB.H, use [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). To set the value, flags, and options for the property, use [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+With this macro, you can directly specify the property value of type `DWORD`. To set the property to default value defined in ATLDB.H, use [PROPERTY_INFO_ENTRY](#property_info_entry). To set the value, flags, and options for the property, use [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
 #### Example
 
-See [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+See [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_provider_column_map"></a> BEGIN_PROVIDER_COLUMN_MAP
 
@@ -289,7 +290,7 @@ END_PROVIDER_COLUMN_MAP()
 
 #### Example
 
-See [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+See [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry"></a> PROVIDER_COLUMN_ENTRY
 
@@ -331,7 +332,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 [in] The column number. Unless the column is a Bookmark column, the column number must not be 0.
 
 *dbtype*<br/>
-[in] The data type in [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
+[in] The data type in [DBTYPE](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *member*<br/>
 [in] The member variable in `dataClass` that stores the data.
@@ -342,7 +343,7 @@ Allows you to specify the column data type.
 
 #### Example
 
-See [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+See [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_gn"></a> PROVIDER_COLUMN_ENTRY_GN
 
@@ -363,22 +364,22 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 [in] The column number. Unless the column is a Bookmark column, the column number must not be 0.
 
 *flags*<br/>
-[in] Specifies how data is returned. See the `dwFlags` description in [DBBINDING Structures](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
+[in] Specifies how data is returned. See the `dwFlags` description in [DBBINDING Structures](/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *colSize*<br/>
 [in] The column size.
 
 *dbtype*<br/>
-[in] Indicates the data type of the value. See the `wType` description in [DBBINDING Structures](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
+[in] Indicates the data type of the value. See the `wType` description in [DBBINDING Structures](/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *precision*<br/>
-[in] Indicates the precision to use when getting data if *dbType* is DBTYPE_NUMERIC or DBTYPE_DECIMAL. See the `bPrecision` description in [DBBINDING Structures](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
+[in] Indicates the precision to use when getting data if *dbType* is DBTYPE_NUMERIC or DBTYPE_DECIMAL. See the `bPrecision` description in [DBBINDING Structures](/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *scale*<br/>
-[in] Indicates the scale to use when getting data if dbType is DBTYPE_NUMERIC or DBTYPE_DECIMAL. See the `bScale` description in [DBBINDING Structures](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
+[in] Indicates the scale to use when getting data if dbType is DBTYPE_NUMERIC or DBTYPE_DECIMAL. See the `bScale` description in [DBBINDING Structures](/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *guid*<br/>
-A schema rowset GUID. See [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) in the *OLE DB Programmer's Reference* for a list of schema rowsets and their GUIDs.
+A schema rowset GUID. See [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) in the *OLE DB Programmer's Reference* for a list of schema rowsets and their GUIDs.
 
 #### Remarks
 
@@ -414,7 +415,7 @@ Allows you to specify the column size.
 
 #### Example
 
-See [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+See [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_str"></a> PROVIDER_COLUMN_ENTRY_STR
 
@@ -439,11 +440,11 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 
 #### Remarks
 
-Use this macro when the column data is assumed to be [DBTYPE_STR](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
+Use this macro when the column data is assumed to be [DBTYPE_STR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 #### Example
 
-See [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+See [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_type_length"></a> PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 
@@ -464,7 +465,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 [in] The column number. Unless the column is a Bookmark column, the column number must not be 0.
 
 *dbtype*<br/>
-[in] The data type in [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
+[in] The data type in [DBTYPE](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *size*<br/>
 [in] The column size in bytes.
@@ -474,7 +475,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 
 #### Remarks
 
-Similar to [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) but also allows you to specify the column's data type as well as size.
+Similar to [PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length) but also allows you to specify the column's data type as well as size.
 
 ### <a name="provider_column_entry_wstr"></a> PROVIDER_COLUMN_ENTRY_WSTR
 
@@ -499,7 +500,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 
 #### Remarks
 
-Use this macro when the column data is a null terminated Unicode character string, [DBTYPE_WSTR](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
+Use this macro when the column data is a null terminated Unicode character string, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 ### <a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
 
@@ -518,7 +519,7 @@ The class that contains the MAP. Typically this will be the session class.
 
 #### Remarks
 
-See [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) in the Windows SDK for more information about schema rowsets.
+See [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) in the Windows SDK for more information about schema rowsets.
 
 ### <a name="end_schema_map"></a> END_SCHEMA_MAP
 
@@ -530,9 +531,9 @@ Denotes the end of the schema map.
 END_SCHEMA_MAP()
 ```
 
-#### See Also
+#### Remarks
 
-[IDBSchemaRowsetImpl Class](../../data/oledb/idbschemarowsetimpl-class.md)
+For more information, see [IDBSchemaRowsetImpl Class](../../data/oledb/idbschemarowsetimpl-class.md).
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
 
@@ -548,7 +549,7 @@ SCHEMA_ENTRY(guid,
 #### Parameters
 
 *guid*<br/>
-A schema rowset GUID. See [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) in the *OLE DB Programmer's Reference* for a list of schema rowsets and their GUIDs.
+A schema rowset GUID. See [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) in the *OLE DB Programmer's Reference* for a list of schema rowsets and their GUIDs.
 
 *rowsetClass*<br/>
 The class that will be created to represent the schema rowset.
@@ -563,7 +564,7 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);
 ```
 
-This `Execute` function populates the rowset's data. The ATL Project Wizard creates, as described in [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) in the *OLE DB Programmer's Reference*, three initial schema rowsets in the project for each of the three mandatory OLE DB schemas:
+This `Execute` function populates the rowset's data. The ATL Project Wizard creates, as described in [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) in the *OLE DB Programmer's Reference*, three initial schema rowsets in the project for each of the three mandatory OLE DB schemas:
 
 - DBSCHEMA_TABLES
 
@@ -573,7 +574,7 @@ This `Execute` function populates the rowset's data. The ATL Project Wizard crea
 
 The wizard also adds three corresponding entries in the schema map. See [Creating an OLE DB Template Provider](../../data/oledb/creating-an-ole-db-provider.md) for more information about using the wizard to create a provider.
 
-## See Also
+## See also
 
 [OLE DB Provider Templates](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB Provider Template Architecture](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

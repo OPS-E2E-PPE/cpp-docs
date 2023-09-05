@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDaoWorkspaceInfo Structure"
 title: "CDaoWorkspaceInfo Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["CDaoWorkspaceInfo"]
@@ -41,7 +42,7 @@ Information retrieved by the [CDaoWorkspace::GetWorkspaceInfo](../../mfc/referen
 
 **Header:** afxdao.h
 
-## See Also
+## See also
 
 [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)

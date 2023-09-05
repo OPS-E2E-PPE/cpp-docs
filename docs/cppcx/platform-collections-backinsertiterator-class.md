@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Platform::Collections::BackInsertIterator Class"
 title: "Platform::Collections::BackInsertIterator Class"
-ms.date: "12/30/2016"
+ms.date: "03/27/2019"
 ms.topic: "reference"
 f1_keywords: ["COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator"]
 helpviewer_keywords: ["BackInsertIterator Class"]
@@ -53,15 +54,13 @@ The BackInsertIterator class implements the rules required by the [back_insert_i
 
 **Namespace:** Platform::Collections
 
----
-## <a name="ctor"></a>  BackInsertIterator::BackInsertIterator Constructor
+## <a name="ctor"></a> BackInsertIterator::BackInsertIterator Constructor
 
 Initializes a new instance of the `BackInsertIterator` class.
 
-## Syntax
+### Syntax
 
 ```
-
 explicit BackInsertIterator(
    Windows::Foundation::Collections::IVector<T>^ v);
 ```
@@ -75,11 +74,11 @@ An IVector\<T> object.
 
 A `BackInsertIterator` inserts elements after the last element of the object specified by parameter `v`.
 
-## <a name="operator-assign"></a>  BackInsertIterator::operator= Operator
+## <a name="operator-assign"></a> BackInsertIterator::operator= Operator
 
 Appends the specified object to the end of the current sequential collection.
 
-## Syntax
+### Syntax
 
 ```
 BackInsertIterator& operator=( const T& t);
@@ -94,11 +93,11 @@ The object to append to the current collection.
 
 A reference to the current BackInsertIterator.
 
-## <a name="operator-dereference"></a>  BackInsertIterator::operator* Operator
+## <a name="operator-dereference"></a> BackInsertIterator::operator* Operator
 
 Retrieves a reference to the current BackInsertIterator.
 
-## Syntax
+### Syntax
 
 ```
 BackInsertIterator& operator*();
@@ -112,14 +111,13 @@ A reference to the current BackInsertIterator.
 
 This operator returns a reference to the current BackInsertIterator; not to any element in the current collection.
 
-## <a name="operator-increment"></a>  BackInsertIterator::operator++ Operator
+## <a name="operator-increment"></a> BackInsertIterator::operator++ Operator
 
 Returns a reference to the current BackInsertIterator. The iterator is unmodified.
 
-## Syntax
+### Syntax
 
 ```
-
 BackInsertIterator& operator++();
 
 BackInsertIterator operator++(int);
@@ -131,10 +129,10 @@ A reference to the current BackInsertIterator.
 
 ### Remarks
 
-By design, the first syntax example pre-increments the current BackInsertIterator, and the second syntax post-increments the current BackInsertIterator. The `int` type in the second syntax indicates a post-increment operation, not an actual integer operand.
+By design, the first syntax example pre-increments the current BackInsertIterator, and the second syntax post-increments the current BackInsertIterator. The **`int`** type in the second syntax indicates a post-increment operation, not an actual integer operand.
 
-However, this operator does not actually modify the BackInsertIterator. Instead, this operator returns a reference to the unmodified, current iterator. This is the same behavior as [operator*](#dereference-operator).
+However, this operator does not actually modify the BackInsertIterator. Instead, this operator returns a reference to the unmodified, current iterator. This is the same behavior as [operator*](#operator-dereference).
 
-## See Also
+## See also
 
 [Platform Namespace](platform-namespace-c-cx.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3011"
 title: "Compiler Error C3011"
 ms.date: "11/04/2016"
 f1_keywords: ["C3011"]
@@ -13,7 +14,7 @@ An `omp` parallel region cannot contain inline assembly instructions.
 
 The following sample generates C3011:
 
-```
+```cpp
 // C3011.cpp
 // compile with: /openmp
 // processor: /x86

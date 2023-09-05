@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3372"
 title: "Compiler Error C3372"
 ms.date: "11/04/2016"
 f1_keywords: ["C3372"]
@@ -13,7 +14,7 @@ For certain attributes, you must pass an interface name as a parameter.
 
 The following sample generates C3372:
 
-```
+```cpp
 // C3372.cpp
 #include <windows.h>
 [module(name="MyModule")];

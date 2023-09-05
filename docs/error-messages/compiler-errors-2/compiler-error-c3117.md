@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3117"
 title: "Compiler Error C3117"
 ms.date: "11/04/2016"
 f1_keywords: ["C3117"]
@@ -13,7 +14,7 @@ You declared an interface that inherits from multiple base classes.
 
 The following sample generates C3117:
 
-```
+```cpp
 // C3117.cpp
 #include <windows.h>
 

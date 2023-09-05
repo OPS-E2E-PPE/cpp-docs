@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Windows::Foundation::Collections Namespace (C++/CX)"
 title: "Windows::Foundation::Collections Namespace (C++/CX)"
 ms.date: "12/30/2016"
 f1_keywords: ["collection/Windows::Foundation::Collections"]
@@ -12,7 +13,6 @@ C++/CX supplements the Windows::Foundation::Collections namespace with functions
 ## Syntax
 
 ```
-
 namespace Windows {
     namespace Foundation {
         namespace Collections;
@@ -34,4 +34,3 @@ namespace Windows {
 **Header:** collection.h
 
 **Namespace:** Windows::Foundation::Collections
-

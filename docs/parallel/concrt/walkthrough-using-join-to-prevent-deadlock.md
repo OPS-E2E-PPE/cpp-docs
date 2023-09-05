@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Walkthrough: Using join to Prevent Deadlock"
 title: "Walkthrough: Using join to Prevent Deadlock"
-ms.date: "11/19/2018"
+ms.date: "04/25/2019"
 helpviewer_keywords: ["preventing deadlock with joins [Concurrency Runtime]", "deadlock, preventing [Concurrency Runtime]", "non-greedy joins, example", "join class, example"]
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
 ---
@@ -24,7 +25,7 @@ Read the following topics before you start this walkthrough:
 
 - [Synchronization Data Structures](../../parallel/concrt/synchronization-data-structures.md)
 
-##  <a name="top"></a> Sections
+## <a name="top"></a> Sections
 
 This walkthrough contains the following sections:
 
@@ -34,43 +35,39 @@ This walkthrough contains the following sections:
 
 - [Using join to Prevent Deadlock](#solution)
 
-##  <a name="problem"></a> The Dining Philosophers Problem
+## <a name="problem"></a> The Dining Philosophers Problem
 
 The dining philosophers problem illustrates how deadlock occurs in an application. In this problem, five philosophers sit at a round table. Every philosopher alternates between thinking and eating. Every philosopher must share a chopstick with the neighbor to the left and another chopstick with the neighbor to the right. The following illustration shows this layout.
 
-![The Dining Philosophers Problem](../../parallel/concrt/media/dining_philosophersproblem.png "The Dining Philosophers Problem")
+![The Dining Philosophers Problem.](../../parallel/concrt/media/dining_philosophersproblem.png "The Dining Philosophers Problem")
 
 To eat, a philosopher must hold two chopsticks. If every philosopher holds just one chopstick and is waiting for another one, then no philosopher can eat and all starve.
 
 [[Top](#top)]
 
-##  <a name="deadlock"></a> A Naïve Implementation
+## <a name="deadlock"></a> A Naïve Implementation
 
 The following example shows a naïve implementation of the dining philosophers problem. The `philosopher` class, which derives from [concurrency::agent](../../parallel/concrt/reference/agent-class.md), enables each philosopher to act independently. The example uses a shared array of [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) objects to give each `philosopher` object exclusive access to a pair of chopsticks.
 
-To relate the implementation to the illustration, the `philosopher` class represents one philosopher. An `int` variable represents each chopstick. The `critical_section` objects serve as holders on which the chopsticks rest. The `run` method simulates the life of the philosopher. The `think` method simulates the act of thinking and the `eat` method simulates the act of eating.
+To relate the implementation to the illustration, the `philosopher` class represents one philosopher. An **`int`** variable represents each chopstick. The `critical_section` objects serve as holders on which the chopsticks rest. The `run` method simulates the life of the philosopher. The `think` method simulates the act of thinking and the `eat` method simulates the act of eating.
 
 A `philosopher` object locks both `critical_section` objects to simulate the removal of the chopsticks from the holders before it calls the `eat` method. After the call to `eat`, the `philosopher` object returns the chopsticks to the holders by setting the `critical_section` objects back to the unlocked state.
 
 The `pickup_chopsticks` method illustrates where deadlock can occur. If every `philosopher` object gains access to one of the locks, then no `philosopher` object can continue because the other lock is controlled by another `philosopher` object.
 
-## Example
-
-### Description
-
-### Code
+### Example
 
 [!code-cpp[concrt-philosophers-deadlock#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_1.cpp)]
 
-## Compiling the Code
+### Compiling the Code
 
 Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `philosophers-deadlock.cpp` and then run the following command in a Visual Studio Command Prompt window.
 
-**cl.exe /EHsc philosophers-deadlock.cpp**
+> **cl.exe /EHsc philosophers-deadlock.cpp**
 
 [[Top](#top)]
 
-##  <a name="solution"></a> Using join to Prevent Deadlock
+## <a name="solution"></a> Using join to Prevent Deadlock
 
 This section shows how to use message buffers and message-passing functions to eliminate the chance of deadlock.
 
@@ -82,7 +79,7 @@ This example uses a non-greedy `join` object because a non-greedy join gives eac
 
 For more information about greedy and non-greedy joins, and the differences between the various message buffer types, see [Asynchronous Message Blocks](../../parallel/concrt/asynchronous-message-blocks.md).
 
-#### To prevent deadlock in this example
+### To prevent deadlock in this example
 
 1. Remove the following code from the example.
 
@@ -112,17 +109,13 @@ For more information about greedy and non-greedy joins, and the differences betw
 
 [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]
 
-## Example
-
 ### Description
 
 The following shows the completed example that uses non-greedy `join` objects to eliminate the risk of deadlock.
 
-### Code
+### Example
 
 [!code-cpp[concrt-philosophers-join#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_9.cpp)]
-
-### Comments
 
 This example produces the following output.
 
@@ -134,15 +127,15 @@ socrates ate 50 times.
 plato ate 50 times.
 ```
 
-## Compiling the Code
+### Compiling the Code
 
 Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `philosophers-join.cpp` and then run the following command in a Visual Studio Command Prompt window.
 
-**cl.exe /EHsc philosophers-join.cpp**
+> **cl.exe /EHsc philosophers-join.cpp**
 
 [[Top](#top)]
 
-## See Also
+## See also
 
 [Concurrency Runtime Walkthroughs](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)<br/>

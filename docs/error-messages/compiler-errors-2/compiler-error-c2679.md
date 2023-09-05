@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2679"
 title: "Compiler Error C2679"
 ms.date: "11/04/2016"
 f1_keywords: ["C2679"]
@@ -13,7 +14,7 @@ To use the operator, you must overload it for the specified type or define a con
 
 The following sample generates C2679:
 
-```
+```cpp
 // C2679.cpp
 class C {
 public:

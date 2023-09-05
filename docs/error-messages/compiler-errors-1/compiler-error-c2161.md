@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2161"
 title: "Compiler Error C2161"
 ms.date: "11/04/2016"
 f1_keywords: ["C2161"]
@@ -13,7 +14,7 @@ A macro definition ended with a token-pasting operator (##).
 
 The following sample generates C2161:
 
-```
+```cpp
 // C2161.cpp
 // compile with: /c
 #define mac(a,b) a   // OK

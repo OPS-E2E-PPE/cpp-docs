@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2008"
 title: "Compiler Error C2008"
 ms.date: "11/04/2016"
 f1_keywords: ["C2008"]
@@ -13,14 +14,14 @@ The character appears immediately following the macro name. To resolve the error
 
 The following sample generates C2008:
 
-```
+```cpp
 // C2008.cpp
 #define TEST1"mytest1"    // C2008
 ```
 
 Possible resolution:
 
-```
+```cpp
 // C2008b.cpp
 // compile with: /c
 #define TEST2 "mytest2"

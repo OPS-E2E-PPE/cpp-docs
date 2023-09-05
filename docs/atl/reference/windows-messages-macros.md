@@ -1,14 +1,15 @@
 ---
+description: "Learn more about: Windows Messages Macros"
 title: "Windows Messages Macros"
 ms.date: "11/04/2016"
-f1_keywords: ["atlbase/ATL::WM_FORWARDMSG"]
+f1_keywords: ["atlbase/ATL::WM_FORWARDMSG", "ATLBASE/WM_FORWARDMSG"]
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
 ---
 # Windows Messages Macros
 
 This macro forwards window messages.
 
-|||
+|Name|Description|
 |-|-|
 |[WM_FORWARDMSG](#wm_forwardmsg)|Use to forward a message received by a window to another window for processing.|
 
@@ -16,7 +17,7 @@ This macro forwards window messages.
 
 **Header:** atlbase.h
 
-##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG
+## <a name="wm_forwardmsg"></a> WM_FORWARDMSG
 
 This macro forwards a message received by a window to another window for processing.
 
@@ -43,6 +44,6 @@ In the following example, `m_hWndOther` represents the other window that receive
 
 [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]
 
-## See Also
+## See also
 
 [Macros](../../atl/reference/atl-macros.md)

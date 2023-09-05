@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2262"
 title: "Compiler Error C2262"
 ms.date: "11/04/2016"
 f1_keywords: ["C2262"]
@@ -15,7 +16,7 @@ The <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute
 
 The following sample generates C2262.
 
-```
+```cpp
 // C2262.cpp
 // compile with: /clr /c
 using namespace System::Runtime::CompilerServices;

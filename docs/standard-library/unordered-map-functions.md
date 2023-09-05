@@ -1,17 +1,17 @@
 ---
-title: "&lt;unordered_map&gt; functions"
+description: "Learn more about: <unordered_map> functions"
+title: "<unordered_map> functions"
 ms.date: "11/04/2016"
 f1_keywords: ["unordered_map/std::swap", "unordered_map/std::swap (unordered_map)", "unordered_map/std::swap (unordered_multimap)"]
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords: ["std::swap (unordered_map/multimap)"]
 ---
-# &lt;unordered_map&gt; functions
+# `<unordered_map>` functions
 
-|||
-|-|-|
-|[swap (unordered_map)](#swap)|[swap (unordered_multimap)](#swap_function_multimap)|
+[swap (unordered_map)](#swap)
+[swap (unordered_multimap)](#swap_function_multimap)
 
-## <a name="swap"></a>  swap (unordered_map)
+## <a name="swap"></a> swap (unordered_map)
 
 Swaps the contents of two containers.
 
@@ -24,25 +24,25 @@ void swap(
 
 ### Parameters
 
-*Key*<br/>
+*Key*\
 The key type.
 
-*Ty*<br/>
+*Ty*\
 The mapped type.
 
-*Hash*<br/>
+*Hash*\
 The hash function object type.
 
-*Pred*<br/>
+*Pred*\
 The equality comparison function object type.
 
-*Alloc*<br/>
+*Alloc*\
 The allocator class.
 
-*left*<br/>
+*left*\
 The first container to swap.
 
-*right*<br/>
+*right*\
 The second container to swap.
 
 ### Remarks
@@ -104,7 +104,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="swap_function_multimap"></a>  swap (unordered_multimap)
+## <a name="swap_function_multimap"></a> swap (unordered_multimap)
 
 Swaps the contents of two containers.
 
@@ -117,25 +117,25 @@ void swap(
 
 ### Parameters
 
-*Key*<br/>
+*Key*\
 The key type.
 
-*Ty*<br/>
+*Ty*\
 The mapped type.
 
-*Hash*<br/>
+*Hash*\
 The hash function object type.
 
-*Pred*<br/>
+*Pred*\
 The equality comparison function object type.
 
-*Alloc*<br/>
+*Alloc*\
 The allocator class.
 
-*left*<br/>
+*left*\
 The first container to swap.
 
-*right*<br/>
+*right*\
 The second container to swap.
 
 ### Remarks
@@ -199,4 +199,4 @@ int main()
 
 ## See also
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)

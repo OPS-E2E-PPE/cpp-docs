@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: initonly (C++/CLI)"
 title: "initonly (C++/CLI)"
 ms.date: "11/04/2016"
 f1_keywords: ["initonly_cpp", "initonly"]
@@ -11,7 +12,7 @@ ms.assetid: f745d7fa-dc08-46f1-9b97-0977be58a008
 
 The following example shows how to use `initionly`:
 
-```
+```cpp
 // mcpp_initonly.cpp
 // compile with: /clr /c
 ref struct Y1 {
@@ -27,6 +28,6 @@ ref struct Y1 {
 };
 ```
 
-## See Also
+## See also
 
-[Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+[Classes and Structs](../extensions/classes-and-structs-cpp-component-extensions.md)

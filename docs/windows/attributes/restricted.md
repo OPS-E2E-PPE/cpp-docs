@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: restricted"
 title: "restricted (C++ COM Attribute)"
 ms.date: "10/03/2018"
 f1_keywords: ["vc-attr.restricted"]
@@ -24,7 +25,7 @@ One or more interfaces that may not be called arbitrarily on a COM object. This 
 
 ## Remarks
 
-The **restricted** C++ attribute has the same functionality as the [restricted](/windows/desktop/Midl/restricted) MIDL attribute.
+The **restricted** C++ attribute has the same functionality as the [restricted](/windows/win32/Midl/restricted) MIDL attribute.
 
 ## Example
 
@@ -55,18 +56,16 @@ class c : public a, public b
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|Interface method, **interface**, **class**, **struct**|
+|**Applies to**|Interface method, **interface**, **`class`**, **`struct`**|
 |**Repeatable**|No|
-|**Required attributes**|**coclass** (when applied to **class** or **struct**)|
+|**Required attributes**|**coclass** (when applied to **`class`** or **`struct`**)|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Interface Attributes](interface-attributes.md)<br/>

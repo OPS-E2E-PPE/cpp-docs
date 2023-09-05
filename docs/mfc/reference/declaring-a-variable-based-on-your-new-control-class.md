@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Declaring a Variable Based on Your New Control Class"
 title: "Declaring a Variable Based on Your New Control Class"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.codewiz.classes.control.variable"]
@@ -17,7 +18,7 @@ Once you have created an MFC control class, you can declare a variable based on 
 
 1. While pressing the CTRL key, double-click the control.
 
-   The [Add Member Variable](../../ide/add-member-variable-wizard.md) dialog box appears.
+   The [Add Member Variable](../../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) dialog box appears.
 
 1. In the **Access** box, select the correct access for your control.
 
@@ -29,11 +30,11 @@ Once you have created an MFC control class, you can declare a variable based on 
 
 1. In the **Control ID** list, pick the control that you added. The **Variable type** list should display the correct variable type, and the **Control type** box should display the correct control type.
 
-9. In the **Comment** box, add any comment you want to appear in your code.
+1. In the **Comment** box, add any comment you want to appear in your code.
 
-10. Click **OK**.
+1. Click **OK**.
 
-## See Also
+## See also
 
 [Mapping Messages to Functions](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
@@ -42,4 +43,4 @@ Once you have created an MFC control class, you can declare a variable based on 
 [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Navigating the Class Structure](../../ide/navigate-code-cpp.md)

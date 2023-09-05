@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: WM_ Message Handlers: L - M"
 title: "WM_ Message Handlers: L - M"
 ms.date: "11/04/2016"
 f1_keywords: ["ON_WM_MENUSELECT", "ON_WM_MBUTTONDBLCLK", "ON_WM_MOUSEACTIVATE", "ON_WM_MOUSEMOVE", "ON_WM_MOVING", "ON_WM_LBUTTONUP", "ON_WM_LBUTTONDBLCLK", "ON_WM_MEASUREITEM", "ON_WM_MDIACTIVATE", "ON_WM_MOVE", "ON_WM_LBUTTONDOWN", "ON_WM_MBUTTONDOWN", "ON_WM_MENUCHAR", "ON_WM_MBUTTONUP"]
@@ -33,8 +34,7 @@ The following map entries on the left correspond to the function prototypes on t
 |ON_WM_MOVE()|afx_msg void [OnMove](../../mfc/reference/cwnd-class.md#onmove)(int, int);|
 |ON_WM_MOVING()|afx_msg void [OnMoving](../../mfc/reference/cwnd-class.md#onmoving)(UINT, LPRECT);|
 
-## See Also
+## See also
 
 [Message Maps](../../mfc/reference/message-maps-mfc.md)<br/>
 [Handlers for WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
-

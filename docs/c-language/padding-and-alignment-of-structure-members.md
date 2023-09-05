@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Padding and Alignment of Structure Members"
 title: "Padding and Alignment of Structure Members"
 ms.date: "10/18/2018"
 helpviewer_keywords: ["structure members, padding and alignment"]
@@ -16,6 +17,6 @@ Every data object has an alignment-requirement. The alignment-requirement for al
 
 Adjacent bit fields are packed into the same 1-, 2-, or 4-byte allocation unit if the integral types are the same size and if the next bit field fits into the current allocation unit without crossing the boundary imposed by the common alignment requirements of the bit fields.
 
-## See Also
+## See also
 
 [Structures, Unions, Enumerations, and Bit Fields](../c-language/structures-unions-enumerations-and-bit-fields.md)

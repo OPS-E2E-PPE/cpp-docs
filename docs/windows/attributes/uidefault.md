@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: uidefault"
 title: "uidefault (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.uidefault"]
@@ -17,7 +18,7 @@ Indicates that the type information member is the default member for display in 
 
 ## Remarks
 
-The **uidefault** C++ attribute has the same functionality as the [uidefault](/windows/desktop/Midl/uidefault) MIDL attribute.
+The **uidefault** C++ attribute has the same functionality as the [uidefault](/windows/win32/Midl/uidefault) MIDL attribute.
 
 ## Example
 
@@ -42,9 +43,7 @@ __interface ICustom{
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface method|
 |**Repeatable**|No|
@@ -53,7 +52,7 @@ __interface ICustom{
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Method Attributes](method-attributes.md)

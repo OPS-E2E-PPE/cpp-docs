@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using Custom Format Strings in a Date and Time Picker Control"
 title: "Using Custom Format Strings in a Date and Time Picker Control"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["CDateTimeCtrl class [MFC], display styles", "DateTimePicker control [MFC], display styles", "DateTimePicker control [MFC]"]
@@ -22,8 +23,7 @@ The following example code (where *m_dtPicker* is the `CDateTimeCtrl` object) de
 
 In addition to custom format strings, date and time picker controls also support [callback fields](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
 
-## See Also
+## See also
 
 [Using CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

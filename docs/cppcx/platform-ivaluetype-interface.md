@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::IValueType Interface"
 title: "Platform::IValueType Interface"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -15,6 +16,6 @@ ms.assetid: 8b89b21e-0d7b-4cc2-baa3-93b17c82945c
 interface class IValueType
 ```
 
-## See Also
+## See also
 
 [Platform namespace](../cppcx/platform-namespace-c-cx.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4401"
 title: "Compiler Warning (level 1) C4401"
 ms.date: "11/04/2016"
 f1_keywords: ["C4401"]
@@ -13,7 +14,7 @@ Inline assembly code tries to access a bit-field member. Inline assembly cannot 
 
 To avoid this warning, cast the bit field to an appropriate type before making the reference in inline assembly code. The following sample generates C4401:
 
-```
+```cpp
 // C4401.cpp
 // compile with: /W1
 // processor: x86

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4610"
 title: "Compiler Warning (level 4) C4610"
 ms.date: "11/04/2016"
 f1_keywords: ["C4610"]
@@ -11,7 +12,7 @@ object 'class' can never be instantiated - user-defined constructor required
 
 The class has no user-defined or default constructors. No instantiation is performed. The following sample generates C4610:
 
-```
+```cpp
 // C4610.cpp
 // compile with: /W4
 struct A {

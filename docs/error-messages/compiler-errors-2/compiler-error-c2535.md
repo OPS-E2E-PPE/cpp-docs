@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2535"
 title: "Compiler Error C2535"
 ms.date: "11/04/2016"
 f1_keywords: ["C2535"]
@@ -15,7 +16,7 @@ If you get C2535 because of the Dispose function, see [Destructors and finalizer
 
 The following sample generates C2535:
 
-```
+```cpp
 // C2535.cpp
 // compile with: /c
 class C {

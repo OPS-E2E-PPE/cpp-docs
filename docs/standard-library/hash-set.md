@@ -1,16 +1,17 @@
 ---
-title: "&lt;hash_set&gt;"
+description: "Learn more about: <hash_set>"
+title: "<hash_set>"
 ms.date: "11/04/2016"
-f1_keywords: ["<hash_set>", "std::<hash_set>"]
+f1_keywords: ["<hash_set>"]
 helpviewer_keywords: ["hash_set header"]
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
 ---
-# &lt;hash_set&gt;
+# `<hash_set>`
 
 > [!NOTE]
 > This header is obsolete. The alternative is [<unordered_set>](../standard-library/unordered-set.md).
 
-Defines the container template classes hash_set and hash_multiset and their supporting templates.
+Defines the container class templates hash_set and hash_multiset and their supporting templates.
 
 ## Syntax
 
@@ -43,6 +44,6 @@ Defines the container template classes hash_set and hash_multiset and their supp
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3769"
 title: "Compiler Error C3769"
 ms.date: "11/04/2016"
 f1_keywords: ["C3769"]
@@ -15,7 +16,7 @@ A nested class cannot have the same name as the immediately enclosing class.
 
 The following sample generates C3769.
 
-```
+```cpp
 // C3769.cpp
 // compile with: /c
 class x {

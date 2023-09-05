@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: unbounded_buffer Class"
 title: "unbounded_buffer Class"
 ms.date: "11/04/2016"
 f1_keywords: ["unbounded_buffer", "AGENTS/concurrency::unbounded_buffer", "AGENTS/concurrency::unbounded_buffer::unbounded_buffer", "AGENTS/concurrency::unbounded_buffer::dequeue", "AGENTS/concurrency::unbounded_buffer::enqueue", "AGENTS/concurrency::unbounded_buffer::accept_message", "AGENTS/concurrency::unbounded_buffer::consume_message", "AGENTS/concurrency::unbounded_buffer::link_target_notification", "AGENTS/concurrency::unbounded_buffer::process_input_messages", "AGENTS/concurrency::unbounded_buffer::propagate_message", "AGENTS/concurrency::unbounded_buffer::propagate_output_messages", "AGENTS/concurrency::unbounded_buffer::release_message", "AGENTS/concurrency::unbounded_buffer::reserve_message", "AGENTS/concurrency::unbounded_buffer::resume_propagation", "AGENTS/concurrency::unbounded_buffer::send_message", "AGENTS/concurrency::unbounded_buffer::supports_anonymous_source"]
@@ -10,14 +11,14 @@ An `unbounded_buffer` messaging block is a multi-target, multi-source, ordered `
 
 ## Syntax
 
-```
+```cpp
 template<
    class             _Type
 >
 class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<            _Type>>, multi_link_registry<ISource<            _Type>>>;
 ```
 
-#### Parameters
+### Parameters
 
 *_Type*<br/>
 The payload type of the messages stored and propagated by the buffer.
@@ -74,11 +75,11 @@ For more information, see [Asynchronous Message Blocks](../asynchronous-message-
 
 **Namespace:** concurrency
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a> accept_message
 
 Accepts a message that was offered by this `unbounded_buffer` messaging block, transferring ownership to the caller.
 
-```
+```cpp
 virtual message<_Type> * accept_message(
    runtime_object_identity                 _MsgId
 );
@@ -93,11 +94,11 @@ The `runtime_object_identity` of the offered `message` object.
 
 A pointer to the `message` object that the caller now has ownership of.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a> consume_message
 
 Consumes a message previously offered by the `unbounded_buffer` messaging block and reserved by the target, transferring ownership to the caller.
 
-```
+```cpp
 virtual message<_Type> * consume_message(
    runtime_object_identity                 _MsgId
 );
@@ -116,11 +117,11 @@ A pointer to the `message` object that the caller now has ownership of.
 
 Similar to `accept`, but is always preceded by a call to `reserve`.
 
-##  <a name="dequeue"></a> dequeue
+## <a name="dequeue"></a> dequeue
 
 Removes an item from the `unbounded_buffer` messaging block.
 
-```
+```cpp
 _Type dequeue();
 ```
 
@@ -128,11 +129,11 @@ _Type dequeue();
 
 The payload of the message removed from the `unbounded_buffer`.
 
-##  <a name="enqueue"></a> enqueue
+## <a name="enqueue"></a> enqueue
 
 Adds an item to the `unbounded_buffer` messaging block.
 
-```
+```cpp
 bool enqueue(
    _Type const&                 _Item
 );
@@ -145,13 +146,13 @@ The item to add.
 
 ### Return Value
 
-**true** if the item was accepted, **false** otherwise.
+**`true`** if the item was accepted, **`false`** otherwise.
 
-##  <a name="link_target_notification"></a> link_target_notification
+## <a name="link_target_notification"></a> link_target_notification
 
 A callback that notifies that a new target has been linked to this `unbounded_buffer` messaging block.
 
-```
+```cpp
 virtual void link_target_notification(
    _Inout_ ITarget<_Type> *                 _PTarget
 );
@@ -162,11 +163,11 @@ virtual void link_target_notification(
 *_PTarget*<br/>
 A pointer to the newly linked target.
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a> propagate_message
 
 Asynchronously passes a message from an `ISource` block to this `unbounded_buffer` messaging block. It is invoked by the `propagate` method, when called by a source block.
 
-```
+```cpp
 virtual message_status propagate_message(
    _Inout_ message<_Type> *                 _PMessage,
    _Inout_ ISource<_Type> *                 _PSource
@@ -185,11 +186,11 @@ A pointer to the source block offering the message.
 
 A [message_status](concurrency-namespace-enums.md#message_status) indication of what the target decided to do with the message.
 
-##  <a name="propagate_output_messages"></a> propagate_output_messages
+## <a name="propagate_output_messages"></a> propagate_output_messages
 
 Places the `message` `_PMessage` in this `unbounded_buffer` messaging block and tries to offer it to all of the linked targets.
 
-```
+```cpp
 virtual void propagate_output_messages();
 ```
 
@@ -197,11 +198,11 @@ virtual void propagate_output_messages();
 
 If another message is already ahead of this one in the `unbounded_buffer`, propagation to linked targets will not occur until any earlier messages have been accepted or consumed. The first linked target to successfully `accept` or `consume` the message takes ownership, and no other target can then get the message.
 
-##  <a name="process_input_messages"></a> process_input_messages
+## <a name="process_input_messages"></a> process_input_messages
 
 Places the `message` `_PMessage` in this `unbounded_buffer` messaging block and tries to offer it to all of the linked targets.
 
-```
+```cpp
 virtual void process_input_messages(
    _Inout_ message<_Type> *                 _PMessage
 );
@@ -212,11 +213,11 @@ virtual void process_input_messages(
 *_PMessage*<br/>
 A pointer to the message that is to be processed.
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a> release_message
 
 Releases a previous message reservation.
 
-```
+```cpp
 virtual void release_message(
    runtime_object_identity                 _MsgId
 );
@@ -227,11 +228,11 @@ virtual void release_message(
 *_MsgId*<br/>
 The `runtime_object_identity` of the `message` object being released.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a> reserve_message
 
 Reserves a message previously offered by this `unbounded_buffer` messaging block.
 
-```
+```cpp
 virtual bool reserve_message(
    runtime_object_identity                 _MsgId
 );
@@ -244,25 +245,25 @@ The `runtime_object_identity` of the `message` object being reserved.
 
 ### Return Value
 
-**true** if the message was successfully reserved, **false** otherwise.
+**`true`** if the message was successfully reserved, **`false`** otherwise.
 
 ### Remarks
 
-After `reserve` is called, if it returns **true**, either `consume` or `release` must be called to either take or release ownership of the message.
+After `reserve` is called, if it returns **`true`**, either `consume` or `release` must be called to either take or release ownership of the message.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a> resume_propagation
 
 Resumes propagation after a reservation has been released.
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-##  <a name="send_message"></a> send_message
+## <a name="send_message"></a> send_message
 
 Synchronously passes a message from an `ISource` block to this `unbounded_buffer` messaging block. It is invoked by the `send` method, when called by a source block.
 
-```
+```cpp
 virtual message_status send_message(
    _Inout_ message<_Type> *                 _PMessage,
    _Inout_ ISource<_Type> *                 _PSource
@@ -281,23 +282,23 @@ A pointer to the source block offering the message.
 
 A [message_status](concurrency-namespace-enums.md#message_status) indication of what the target decided to do with the message.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source
+## <a name="supports_anonymous_source"></a> supports_anonymous_source
 
 Overrides the `supports_anonymous_source` method to indicate that this block can accept messages offered to it by a source that is not linked.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### Return Value
 
-**true** because the block does not postpone offered messages.
+**`true`** because the block does not postpone offered messages.
 
-##  <a name="ctor"></a> unbounded_buffer
+## <a name="ctor"></a> unbounded_buffer
 
 Constructs an `unbounded_buffer` messaging block.
 
-```
+```cpp
 unbounded_buffer();
 
 unbounded_buffer(
@@ -340,17 +341,16 @@ The runtime uses the default scheduler if you do not specify the `_PScheduler` o
 
 The type `filter_method` is a functor with signature `bool (_Type const &)` which is invoked by this `unbounded_buffer` messaging block to determine whether or not it should accept an offered message.
 
-##  <a name="dtor"></a> ~unbounded_buffer
+## <a name="dtor"></a> ~unbounded_buffer
 
 Destroys the `unbounded_buffer` messaging block.
 
-```
+```cpp
 ~unbounded_buffer();
 ```
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [overwrite_buffer Class](overwrite-buffer-class.md)<br/>
 [single_assignment Class](single-assignment-class.md)
-

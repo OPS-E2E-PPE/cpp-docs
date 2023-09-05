@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Calling Native Functions from Managed Code"
 title: "Calling Native Functions from Managed Code"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["native functions called from managed code [C++]", "managed code [C++], interoperability", "platform invoke [C++], interoperability", "interoperabiliy [C++], calling native functions from managed code", "calling native functions from managed code", "interop [C++], calling native functions from managed code"]
@@ -17,13 +18,13 @@ For more information, see:
 The samples in this section just illustrate how `PInvoke` can be used. `PInvoke` can simplify customized data marshaling because you provide marshaling information declaratively in attributes instead of writing procedural marshaling code.
 
 > [!NOTE]
->  The marshaling library provides an alternative way to marshal data between native and managed environments in an optimized way. See [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md) for more information about the marshaling library. The marshaling library is usable for data only, and not for functions.
+> The marshaling library provides an alternative way to marshal data between native and managed environments in an optimized way. See [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md) for more information about the marshaling library. The marshaling library is usable for data only, and not for functions.
 
 ## PInvoke and the DllImport Attribute
 
 The following example shows the use of `PInvoke` in a Visual C++ program. The native function puts is defined in msvcrt.dll. The DllImport attribute is used for the declaration of puts.
 
-```
+```cpp
 // platform_invocation_services.cpp
 // compile with: /clr
 using namespace System;
@@ -40,7 +41,7 @@ int main() {
 
 The following sample is equivalent to the previous sample, but uses IJW.
 
-```
+```cpp
 // platform_invocation_services_2.cpp
 // compile with: /clr
 using namespace System;
@@ -133,7 +134,7 @@ char* fstringA(char* param) {
 
 The following sample exhibits this problem, and even though the program may seem to give the correct output, the output is coming from memory that had been freed.
 
-```
+```cpp
 // platform_invocation_services_5.cpp
 // compile with: /clr /c
 using namespace System;
@@ -173,7 +174,7 @@ However, you must marshal types that do not have the same form. This includes ch
 |DWORD|unsigned long|unsigned long|UInt32|
 |ULONG|unsigned long|unsigned long|UInt32|
 |CHAR|char|char|Char|
-|LPCSTR|char \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
+|LPSTR|char \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
 |LPCSTR|const char \*|String ^|String|
 |LPWSTR|wchar_t \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
 |LPCWSTR|const wchar_t \*|String ^|String|
@@ -188,7 +189,7 @@ You can specify marshaling information for individual arguments of a native func
 
 In this example, the string is marshaled as a double-byte Unicode character string, LPWStr. The output is the first letter of Hello World! because the second byte of the marshaled string is null, and puts interprets this as the end-of-string marker.
 
-```
+```cpp
 // platform_invocation_services_3.cpp
 // compile with: /clr
 using namespace System;
@@ -213,6 +214,6 @@ PInvoke has an overhead of between 10 and 30 x86 instructions per call. In addit
 
 For better performance, have fewer PInvoke calls that marshal as much data as possible, instead of more calls that marshal less data per call.
 
-## See Also
+## See also
 
 [Native and .NET Interoperability](../dotnet/native-and-dotnet-interoperability.md)

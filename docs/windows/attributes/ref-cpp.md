@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ref (C++)"
 title: "ref  (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.ref"]
@@ -17,7 +18,7 @@ Identifies a reference pointer.
 
 ## Remarks
 
-The **ref** C++ attribute has the same functionality as the [ref](/windows/desktop/Midl/ref) MIDL attribute.
+The **ref** C++ attribute has the same functionality as the [ref](/windows/win32/Midl/ref) MIDL attribute.
 
 ## Example
 
@@ -37,18 +38,16 @@ __interface IFireTabCtrl
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**typedef**, interface parameter, interface method|
+|**Applies to**|**`typedef`**, interface parameter, interface method|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Typedef, Enum, Union, and Struct Attributes](typedef-enum-union-and-struct-attributes.md)<br/>

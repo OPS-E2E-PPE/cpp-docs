@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: User-Defined Conversions (C++/CLI)"
 title: "User-Defined Conversions (C++/CLI)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["user-defined conversions [C++]"]
@@ -14,9 +15,9 @@ A user-defined conversion can either be implicit or explicit.  A UDC should be i
 
 A native class's constructor can be used to convert a reference or value type to a native class.
 
-For more information about conversions, see [Boxing](../windows/boxing-cpp-component-extensions.md) and [Standard Conversions](../cpp/standard-conversions.md).
+For more information about conversions, see [Boxing](../extensions/boxing-cpp-component-extensions.md) and [Standard Conversions](../cpp/standard-conversions.md).
 
-```
+```cpp
 // mcpp_User_Defined_Conversions.cpp
 // compile with: /clr
 #include "stdio.h"
@@ -75,7 +76,7 @@ Convert-from operators create an object of the class in which the operator is de
 
 Standard C++ does not support convert-from operators; standard C++ uses constructors for this purpose. However, when using CLR types, Visual C++ provide syntactic support for calling convert-from operators.
 
-To interoperate well with other CLS-compliant languages, you may wish to wrap each user-defined unary constructor for a given class with a corresponding convert-from operator.
+To interoperate well with other CLS-conformant languages, you may wish to wrap each user-defined unary constructor for a given class with a corresponding convert-from operator.
 
 Convert-from operators:
 
@@ -89,7 +90,7 @@ Convert-from operators:
 
 The following sample shows an implicit and explicit "convert-from", user-defined conversion (UDC) operator.
 
-```
+```cpp
 // clr_udc_convert_from.cpp
 // compile with: /clr
 value struct MyDouble {
@@ -139,7 +140,7 @@ in constructor
 
 Convert-to operators convert an object of the class in which the operator is defined to some other object. The following sample shows an implicit, convert-to, user-defined conversion operator:
 
-```
+```cpp
 // clr_udc_convert_to.cpp
 // compile with: /clr
 using namespace System;
@@ -169,7 +170,7 @@ int main() {
 
 An explicit user-defined convert-to conversion operator is appropriate for conversions that potentially lose data in some way. To invoke an explicit convert-to operator, a cast must be used.
 
-```
+```cpp
 // clr_udc_convert_to_2.cpp
 // compile with: /clr
 value struct MyDouble {
@@ -201,7 +202,7 @@ int main() {
 
 You can convert a generic class to T.
 
-```
+```cpp
 // clr_udc_generics.cpp
 // compile with: /clr
 generic<class T>
@@ -233,7 +234,7 @@ True
 
 A converting constructor takes a type and uses it to create an object.  A converting constructor is called with direct initialization only; casts will not invoke converting constructors. By default, converting constructors are explicit for CLR types.
 
-```
+```cpp
 // clr_udc_converting_constructors.cpp
 // compile with: /clr
 public ref struct R {
@@ -312,6 +313,6 @@ int main() {
 2000
 ```
 
-## See Also
+## See also
 
-[Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+[Classes and Structs](../extensions/classes-and-structs-cpp-component-extensions.md)

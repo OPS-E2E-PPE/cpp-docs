@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCRibbonContextCaption Class"
 title: "CMFCRibbonContextCaption Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCRibbonContextCaption", "AFXRIBBONBAR/CMFCRibbonContextCaption", "AFXRIBBONBAR/CMFCRibbonContextCaption::GetColor", "AFXRIBBONBAR/CMFCRibbonContextCaption::GetRightTabX"]
@@ -46,7 +47,7 @@ To set the color for ribbon categories, call [CMFCRibbonCategory::SetTabColor](.
 
 **Header:** afxRibbonBar.h
 
-##  <a name="getcolor"></a>  CMFCRibbonContextCaption::GetColor
+## <a name="getcolor"></a> CMFCRibbonContextCaption::GetColor
 
 Returns the background color of the caption.
 
@@ -78,9 +79,9 @@ The returned value can be one of the following enumerated values:
 
 The color of the caption can be set by calling [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) or [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).
 
-##  <a name="getrighttabx"></a>  CMFCRibbonContextCaption::GetRightTabX
+## <a name="getrighttabx"></a> CMFCRibbonContextCaption::GetRightTabX
 
-Retrieves the position of the right-hand edge of the category’s ribbon tab.
+Retrieves the position of the right-hand edge of the category's ribbon tab.
 
 ```
 int GetRightTabX() const;
@@ -88,11 +89,11 @@ int GetRightTabX() const;
 
 ### Return Value
 
-Returns the right-hand X-value of the enclosing rectangle of the `CMFCRibbonCategory` object’s ribbon tab, or a value of -1 if the tab is truncated.
+Returns the right-hand X-value of the enclosing rectangle of the `CMFCRibbonCategory` object's ribbon tab, or a value of -1 if the tab is truncated.
 
 ### Remarks
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

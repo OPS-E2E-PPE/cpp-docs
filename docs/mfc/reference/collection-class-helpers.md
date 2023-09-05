@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Collection Class Helpers"
 title: "Collection Class Helpers"
 ms.date: "11/04/2016"
-f1_keywords: ["vc.mfc.macros.classes"]
 helpviewer_keywords: ["DestructElements function", "ConstructElements function", "SerializeElements function", "collection classes [MFC], helper functions", "helper functions collection class [MFC]"]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
 ---
@@ -13,7 +13,7 @@ The Microsoft Foundation Class Library provides the following global functions i
 
 ### Collection Class Helpers
 
-|||
+|Name|Description|
 |-|-|
 |[CompareElements](#compareelements)|Indicates whether elements are the same.|
 |[CopyElements](#copyelements)|Copies elements from one array to another.|
@@ -21,9 +21,9 @@ The Microsoft Foundation Class Library provides the following global functions i
 |[HashKey](#hashkey)|Calculates a hash key.|
 |[SerializeElements](#serializeelements)|Stores or retrieves elements to or from an archive.|
 
-##  <a name="compareelements"></a>  CompareElements
+## <a name="compareelements"></a> CompareElements
 
-Called directly by [CList::Find](clist-class.md#not_found.md#clist__find and indirectly by [cmap__lookup](cmap-class.md#lookup) and [cmap__operator &#91;&#93;](cmap-class.md#operator_at).
+Called directly by [`CList::Find`](clist-class.md#find) and indirectly by [`CMap::Lookup`](cmap-class.md#lookup) and [`CMap::operator[]`](cmap-class.md#operator_at).
 
 ```
 template<class TYPE, class ARG_TYPE>
@@ -57,13 +57,13 @@ The `CMap` calls use the `CMap` template parameters *KEY* and *ARG_KEY*.
 
 The default implementation returns the result of the comparison of *\*pElement1* and *\*pElement2*. Override this function so that it compares the elements in a way that is appropriate for your application.
 
-The C++ language defines the comparison operator ( `==`) for simple types (**char**, **int**, **float**, and so on) but does not define a comparison operator for classes and structures. If you want to use `CompareElements` or to instantiate one of the collection classes that uses it, you must either define the comparison operator or overload `CompareElements` with a version that returns appropriate values.
+The C++ language defines the comparison operator ( `==`) for simple types (**`char`**, **`int`**, **`float`**, and so on) but does not define a comparison operator for classes and structures. If you want to use `CompareElements` or to instantiate one of the collection classes that uses it, you must either define the comparison operator or overload `CompareElements` with a version that returns appropriate values.
 
 ### Requirements
 
    **Header:** afxtempl.h
 
-##  <a name="copyelements"></a>  CopyElements
+## <a name="copyelements"></a> CopyElements
 
 This function is called directly by [CArray::Append](carray-class.md#append) and [CArray::Copy](carray-class.md#copy).
 
@@ -99,7 +99,7 @@ For information on implementing this and other helper functions, see the article
 
   **Header** afxtempl.h
 
-##  <a name="dumpelements"></a>  DumpElements
+## <a name="dumpelements"></a> DumpElements
 
 Provides stream-oriented diagnostic output in text form for the elements of your collection when overridden.
 
@@ -135,7 +135,7 @@ The default implementation does nothing. If the elements of your collection are 
 
   **Header** afxtempl.h
 
-##  <a name="hashkey"></a>  HashKey
+## <a name="hashkey"></a> HashKey
 
 Calculates a hash value for the given key.
 
@@ -158,7 +158,7 @@ The key's hash value.
 
 ### Remarks
 
-This function is called directly by [CMap::RemoveKey](cmap-class.md#removekey) and indirectly by [CMap::Lookup](cmap-class.md#lookup) and [CMap::Operator &#91;&#93;](cmap-class.md#operator_at).
+This function is called directly by [`CMap::RemoveKey`](cmap-class.md#removekey) and indirectly by [`CMap::Lookup`](cmap-class.md#lookup) and [`CMap::operator[]`](cmap-class.md#operator_at).
 
 The default implementation creates a hash value by shifting *key* right by four positions. Override this function so that it returns hash values appropriate for your application.
 
@@ -177,7 +177,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 
   **Header** afxtempl.h
 
-##  <a name="serializeelements"></a>  SerializeElements
+## <a name="serializeelements"></a> SerializeElements
 
 [CArray](carray-class.md), [CList](clist-class.md), and [CMap](cmap-class.md) call this function to serialize elements.
 
@@ -214,7 +214,7 @@ See the example in the article [Collections: How to Make a Type-Safe Collection]
 
   **Header** afxtempl.h
 
-## See Also
+## See also
 
 [Macros and Globals](mfc-macros-and-globals.md)<br/>
 [CMap Class](cmap-class.md)<br/>

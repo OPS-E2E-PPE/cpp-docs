@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Expose an STL/CLR Container from an Assembly"
 title: "How to: Expose an STL/CLR Container from an Assembly"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["STL/CLR Containers [STL/CLR]", "STL/CLR, cross-assembly issues"]
@@ -376,6 +377,6 @@ cliext::vector contents:
 20
 ```
 
-## See Also
+## See also
 
 [STL/CLR Library Reference](../dotnet/stl-clr-library-reference.md)

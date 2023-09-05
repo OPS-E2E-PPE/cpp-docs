@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Interfaces, ATL Control Wizard"
 title: "Interfaces, ATL Control Wizard"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.codewiz.class.atl.control.interfaces"]
@@ -27,7 +28,6 @@ This page of the wizard identifies the interfaces that the control supports. By 
    |**\<**|Removes the interface name currently selected in the **Supported** list.|
    |**\<\<**|Removes all interface names currently listed in the **Supported** list.|
 
-## See Also
+## See also
 
 [ATL Control Wizard](../../atl/reference/atl-control-wizard.md)
-

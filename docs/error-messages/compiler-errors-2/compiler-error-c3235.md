@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3235"
 title: "Compiler Error C3235"
 ms.date: "11/04/2016"
 f1_keywords: ["C3235"]
@@ -15,7 +16,7 @@ Generic classes cannot be used for explicit or partial specializations.
 
 The following sample generates C3235.
 
-```
+```cpp
 // C3235.cpp
 // compile with: /clr
 generic<class T>

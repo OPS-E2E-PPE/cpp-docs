@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3219"
 title: "Compiler Error C3219"
 ms.date: "11/04/2016"
 f1_keywords: ["C3219"]
@@ -13,7 +14,7 @@ It is not valid to constrain a generic parameter by two or more managed classes.
 
 The following sample generates C3219:
 
-```
+```cpp
 // C3219.cpp
 // compile with: /clr
 ref class A {};
@@ -26,7 +27,7 @@ ref class E {};   // C3219
 
 The following sample demonstrates a possible resolution:
 
-```
+```cpp
 // C3219b.cpp
 // compile with: /clr /c
 ref class A {};

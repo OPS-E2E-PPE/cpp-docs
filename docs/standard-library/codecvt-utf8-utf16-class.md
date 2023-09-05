@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: codecvt_utf8_utf16"
 title: "codecvt_utf8_utf16"
 ms.date: "11/04/2016"
 f1_keywords: ["codecvt/std::cvt_utf8_utf16"]
@@ -16,13 +17,13 @@ class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 
 ## Parameters
 
-*Elem*<br/>
+*Elem*\
 The wide-character element type.
 
-*Maxcode*<br/>
+*Maxcode*\
 The maximum number of characters for the locale facet.
 
-*Mode*<br/>
+*Mode*\
 Configuration information for the locale facet.
 
 ## Remarks

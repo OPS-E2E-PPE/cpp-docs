@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2251"
 title: "Compiler Error C2251"
 ms.date: "11/04/2016"
 f1_keywords: ["C2251"]
@@ -13,7 +14,7 @@ The compiler was not able to find an identifier in the specified namespace.
 
 The following sample generates C2251:
 
-```
+```cpp
 // C2251.cpp
 // compile with: /c
 namespace A {

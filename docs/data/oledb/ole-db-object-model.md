@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: OLE DB Object Model"
 title: "OLE DB Object Model"
 ms.date: "10/22/2018"
 helpviewer_keywords: ["rowsets, OLE DB object model", "OLE DB, object model"]
@@ -42,7 +43,7 @@ A view object defines a subset of the rows and columns from a rowset. It has no 
 
 Only OLE DB uses the concept of accessors. An accessor describes how data is stored in a consumer. It has a set of bindings (called a column map) between rowset fields (columns) and data members that you declare in the consumer.
 
-##  <a name="vcconoledbcomponents_transactions"></a> Transactions
+## <a name="vcconoledbcomponents_transactions"></a> Transactions
 
 Transaction objects are used when committing or aborting nested transactions at other than the lowest level. A transaction is an indivisible work unit defined by the ACID test. ACID stands for:
 
@@ -68,7 +69,7 @@ Any interface on any OLE DB object can generate errors. Errors have additional i
 
 Notifications are used by groups of cooperating consumers sharing a rowset (where sharing means that the consumers are assumed to be working within the same transaction). Notifications enable cooperating consumers sharing a rowset to be informed about actions on the rowset performed by their peers.
 
-## See Also
+## See also
 
 [OLE DB Programming](../../data/oledb/ole-db-programming.md)<br/>
 [OLE DB Programming Overview](../../data/oledb/ole-db-programming-overview.md)

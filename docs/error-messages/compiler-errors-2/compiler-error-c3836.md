@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3836"
 title: "Compiler Error C3836"
 ms.date: "11/04/2016"
 f1_keywords: ["C3836"]
@@ -15,7 +16,7 @@ A managed class cannot have a static constructor that also has a member initiali
 
 The following sample generates C3836:
 
-```
+```cpp
 // C3836a.cpp
 // compile with: /clr
 ref class M

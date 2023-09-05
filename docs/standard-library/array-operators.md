@@ -1,19 +1,22 @@
 ---
-title: "&lt;array&gt; operators"
+description: "Learn more about: <array> operators"
+title: "<array> operators"
 ms.date: "11/04/2016"
 f1_keywords: ["array/std::array::operator!=", "array/std::array::operator<", "array/std::array::operator<=", "array/std::array::operator>", "array/std::array::operator>=", "array/std::array::operator=="]
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 ---
-# &lt;array&gt; operators
+# `<array>` operators
 
 The \<array> header includes these **array** non-member comparison template functions.
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+[operator!=](#op_neq)\
+[`operator>`](#op_gt)\
+[`operator>=`](#op_gt_eq)\
+[`operator<`](#op_lt)\
+[`operator<=`](#op_lt_eq)\
+[operator==](#op_eq_eq)
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 Array comparison, not equal.
 
@@ -26,16 +29,16 @@ bool operator!=(
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type of an element.
 
-*N*<br/>
+*N*\
 The size of the array.
 
-*left*<br/>
+*left*\
 Left container to compare.
 
-*right*<br/>
+*right*\
 Right container to compare.
 
 ### Remarks
@@ -86,7 +89,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> `operator<`
 
 Array comparison, less than.
 
@@ -99,21 +102,21 @@ bool operator<(
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type of an element.
 
-*N*<br/>
+*N*\
 The size of the array.
 
-*left*<br/>
+*left*\
 Left container to compare.
 
-*right*<br/>
+*right*\
 Right container to compare.
 
 ### Remarks
 
-The template function overloads `operator<` to compare two objects of template class [array Class](../standard-library/array-class-stl.md). The function returns `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+The template function overloads `operator<` to compare two objects of class template [array Class](../standard-library/array-class-stl.md). The function returns `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
 ### Example
 
@@ -159,7 +162,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> `operator<=`
 
 Array comparison, less than or equal.
 
@@ -172,16 +175,16 @@ bool operator<=(
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type of an element.
 
-*N*<br/>
+*N*\
 The size of the array.
 
-*left*<br/>
+*left*\
 Left container to compare.
 
-*right*<br/>
+*right*\
 Right container to compare.
 
 ### Remarks
@@ -232,7 +235,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Array comparison, equal.
 
@@ -245,21 +248,21 @@ bool operator==(
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type of an element.
 
-*N*<br/>
+*N*\
 The size of the array.
 
-*left*<br/>
+*left*\
 Left container to compare.
 
-*right*<br/>
+*right*\
 Right container to compare.
 
 ### Remarks
 
-The template function overloads `operator==` to compare two objects of template class [array Class](../standard-library/array-class-stl.md). The function returns `equal(left.begin(), left.end(), right.begin())`.
+The template function overloads `operator==` to compare two objects of class template [array Class](../standard-library/array-class-stl.md). The function returns `equal(left.begin(), left.end(), right.begin())`.
 
 ### Example
 
@@ -305,7 +308,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> `operator>`
 
 Array comparison, greater than.
 
@@ -318,16 +321,16 @@ bool operator>(
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type of an element.
 
-*N*<br/>
+*N*\
 The size of the array.
 
-*left*<br/>
+*left*\
 Left container to compare.
 
-*right*<br/>
+*right*\
 Right container to compare.
 
 ### Remarks
@@ -378,7 +381,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> `operator>=`
 
 Array comparison, greater than or equal.
 
@@ -391,16 +394,16 @@ bool operator>=(
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type of an element.
 
-*N*<br/>
+*N*\
 The size of the array.
 
-*left*<br/>
+*left*\
 Left container to compare.
 
-*right*<br/>
+*right*\
 Right container to compare.
 
 ### Remarks
@@ -453,4 +456,4 @@ false
 
 ## See also
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

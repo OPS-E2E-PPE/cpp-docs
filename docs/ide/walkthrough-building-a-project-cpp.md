@@ -1,12 +1,13 @@
 ---
+description: "Learn more about: Walkthrough: Building a Project (C++)"
 title: "Walkthrough: Building a Project (C++)"
-ms.date: "09/14/2018"
+ms.date: "04/25/2019"
 helpviewer_keywords: ["building projects [C++]", "projects [C++], building", "project building [C++]"]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
 ---
 # Walkthrough: Building a Project (C++)
 
-In this walkthrough, you deliberately introduce a Visual C++ syntax error in your code to learn what a compilation error looks like and how to fix it. When you compile the project, an error message indicates what the problem is and where it occurred.
+In this walkthrough, you deliberately introduce a C++ syntax error in your code to learn what a compilation error looks like and how to fix it. When you compile the project, an error message indicates what the problem is and where it occurred.
 
 ## Prerequisites
 
@@ -46,9 +47,9 @@ In this walkthrough, you deliberately introduce a Visual C++ syntax error in you
 ## Next Steps
 
 **Previous:** [Walkthrough: Working with Projects and Solutions (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
-**Next:** [Walkthrough: Testing a Project (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Next:** [Walkthrough: Testing a Project (C++)](../ide/walkthrough-testing-a-project-cpp.md)
 
-## See Also
+## See also
 
 [C++ Language Reference](../cpp/cpp-language-reference.md)<br/>
-[Building C/C++ Programs](../build/building-c-cpp-programs.md)<br/>
+[Projects and build systems](../build/projects-and-build-systems-cpp.md)<br/>

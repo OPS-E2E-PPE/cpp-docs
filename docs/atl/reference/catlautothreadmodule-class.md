@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAtlAutoThreadModule Class"
 title: "CAtlAutoThreadModule Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAtlAutoThreadModule", "atlbase/ATL::CAtlAutoThreadModule"]
@@ -14,7 +15,7 @@ This class implements a thread-pooled, apartment-model COM server.
 
 ## Syntax
 
-```
+```cpp
 class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 ```
 
@@ -41,7 +42,7 @@ You must use the [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factor
 
 **Header:** atlbase.h
 
-## See Also
+## See also
 
 [CAtlAutoThreadModuleT Class](../../atl/reference/catlautothreadmodulet-class.md)<br/>
 [IAtlAutoThreadModule Class](../../atl/reference/iatlautothreadmodule-class.md)<br/>

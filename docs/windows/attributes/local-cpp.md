@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: local (C++)"
 title: "local  (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.local"]
@@ -17,7 +18,7 @@ When used in the interface header, allows you to use the MIDL compiler as a head
 
 ## Remarks
 
-The **local** C++ attribute has the same functionality as the [local](/windows/desktop/Midl/local) MIDL attribute.
+The **local** C++ attribute has the same functionality as the [local](/windows/win32/Midl/local) MIDL attribute.
 
 ## Example
 
@@ -25,9 +26,7 @@ See [call_as](call-as.md) for an example of how to use **local**.
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|**interface**, interface method|
 |**Repeatable**|No|
@@ -36,7 +35,7 @@ See [call_as](call-as.md) for an example of how to use **local**.
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Interface Attributes](interface-attributes.md)<br/>

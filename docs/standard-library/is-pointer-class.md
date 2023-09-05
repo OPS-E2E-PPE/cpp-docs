@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_pointer Class"
 title: "is_pointer Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_pointer"]
@@ -18,12 +19,12 @@ struct is_pointer;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
 ## Remarks
 
-An instance of the type predicate holds true if the type *Ty* is a pointer to **void**, a pointer to an object, or a pointer to a function, or a `cv-qualified` form of one of them, otherwise it holds false. Note that `is_pointer` holds false if *Ty* is a pointer to member or a pointer to member function.
+An instance of the type predicate holds true if the type *Ty* is a pointer to **`void`**, a pointer to an object, or a pointer to a function, or a `cv-qualified` form of one of them, otherwise it holds false. Note that `is_pointer` holds false if *Ty* is a pointer to member or a pointer to member function.
 
 ## Example
 
@@ -71,6 +72,6 @@ is_pointer<int *> == true
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_pointer Class](../standard-library/is-member-pointer-class.md)<br/>
-[is_reference Class](../standard-library/is-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_member_pointer Class](../standard-library/is-member-pointer-class.md)\
+[is_reference Class](../standard-library/is-reference-class.md)

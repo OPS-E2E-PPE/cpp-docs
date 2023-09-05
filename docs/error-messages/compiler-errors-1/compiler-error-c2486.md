@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2486"
 title: "Compiler Error C2486"
 ms.date: "11/04/2016"
 f1_keywords: ["C2486"]
@@ -13,7 +14,7 @@ In inline assembly functions, the name `__LOCAL_SIZE` is reserved for functions 
 
 The following sample generates C2486:
 
-```
+```cpp
 // C2486.cpp
 // processor: x86
 void __declspec(naked) f1() {

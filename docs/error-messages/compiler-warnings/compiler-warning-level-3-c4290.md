@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4290"
 title: "Compiler Warning (level 3) C4290"
 ms.date: "11/04/2016"
 f1_keywords: ["C4290"]
@@ -15,13 +16,13 @@ For more information, see [Exception Specifications (throw)](../../cpp/exception
 
 You can avoid this warning by using the [warning](../../preprocessor/warning.md) pragma:
 
-```
+```cpp
 #pragma warning( disable : 4290 )
 ```
 
 The following code sample generates C4290:
 
-```
+```cpp
 // C4290.cpp
 // compile with: /EHs /W3 /c
 void f1(void) throw(int) {}   // C4290

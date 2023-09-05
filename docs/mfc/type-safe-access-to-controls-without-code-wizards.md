@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Type-Safe Access to Controls Without Code Wizards"
 title: "Type-Safe Access to Controls Without Code Wizards"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["dialog boxes [MFC], accessing controls", "dialog box controls [MFC], accessing"]
@@ -14,8 +15,7 @@ You can then use this member function to access the control in a type-safe manne
 
 [!code-cpp[NVC_MFCControlLadenDialog#51](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_2.cpp)]
 
-## See Also
+## See also
 
 [Type-Safe Access to Controls in a Dialog Box](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
 [Type-Safe Access to Controls With Code Wizards](../mfc/type-safe-access-to-controls-with-code-wizards.md)
-

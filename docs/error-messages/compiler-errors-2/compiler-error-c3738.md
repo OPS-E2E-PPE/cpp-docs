@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3738"
 title: "Compiler Error C3738"
 ms.date: "11/04/2016"
 f1_keywords: ["C3738"]
@@ -15,7 +16,7 @@ It is recommended that you do not specify a calling convention on an explicit in
 
 The following sample generates C3738.
 
-```
+```cpp
 // C3738.cpp
 // compile with: /clr
 // processor: x86

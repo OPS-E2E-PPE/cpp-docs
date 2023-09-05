@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: money_put Class"
 title: "money_put Class"
 ms.date: "11/01/2018"
 f1_keywords: ["xlocmon/std::money_put", "xlocmon/std::money_put::char_type", "xlocmon/std::money_put::iter_type", "xlocmon/std::money_put::string_type", "xlocmon/std::money_put::do_put", "xlocmon/std::money_put::put"]
@@ -7,7 +8,7 @@ ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
 ---
 # money_put Class
 
-The template class describes an object that can serve as a locale facet to control conversions of monetary values to sequences of type `CharType`.
+The class template describes an object that can serve as a locale facet to control conversions of monetary values to sequences of type `CharType`.
 
 ## Syntax
 
@@ -19,10 +20,10 @@ class money_put : public locale::facet;
 
 ### Parameters
 
-*CharType*<br/>
+*CharType*\
 The type used within a program to encode characters in a locale.
 
-*OutputIterator*<br/>
+*OutputIterator*\
 The type of iterator to which the monetary put functions write their output.
 
 ## Remarks
@@ -56,7 +57,7 @@ As with any locale facet, the static object ID has an initial stored value of ze
 
 **Namespace:** std
 
-## <a name="char_type"></a>  money_put::char_type
+## <a name="char_type"></a> money_put::char_type
 
 A type that is used to describe a character used by a locale.
 
@@ -68,7 +69,7 @@ typedef CharType char_type;
 
 The type is a synonym for the template parameter **CharType**.
 
-## <a name="do_put"></a>  money_put::do_put
+## <a name="do_put"></a> money_put::do_put
 
 A virtual function called to convert either number or a string to a character sequence that represents a monetary value.
 
@@ -90,19 +91,19 @@ virtual iter_type do_put(
 
 ### Parameters
 
-*next*<br/>
+*next*\
 An iterator addressing the first element of the inserted string.
 
-*_Intl*<br/>
-A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.
+*_Intl*\
+A Boolean value indicating the type of currency symbol expected in the sequence: **`true`** if international, **`false`** if domestic.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 A format flag which when set indicates that the currency symbol is optional; otherwise, it is required
 
-*_Fill*<br/>
+*_Fill*\
 A character which is used for spacing.
 
-*val*<br/>
+*val*\
 A string object to be converted.
 
 ### Return Value
@@ -151,7 +152,7 @@ The function calls **iosbase**. **width**(0) to reset the field width to zero.
 
 See the example for [put](#put), where the virtual member function is called by **put**.
 
-## <a name="iter_type"></a>  money_put::iter_type
+## <a name="iter_type"></a> money_put::iter_type
 
 A type that describes an output iterator.
 
@@ -163,7 +164,7 @@ typedef OutputIterator iter_type;
 
 The type is a synonym for the template parameter **OutputIterator.**
 
-## <a name="money_put"></a>  money_put::money_put
+## <a name="money_put"></a> money_put::money_put
 
 The constructor for objects of type `money_put`.
 
@@ -173,7 +174,7 @@ explicit money_put(size_t _Refs = 0);
 
 ### Parameters
 
-*_Refs*<br/>
+*_Refs*\
 Integer value used to specify the type of memory management for the object.
 
 ### Remarks
@@ -190,7 +191,7 @@ No direct examples are possible, because the destructor is protected.
 
 The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
-## <a name="put"></a>  money_put::put
+## <a name="put"></a> money_put::put
 
 Converts either number or a string to a character sequence that represents a monetary value.
 
@@ -212,19 +213,19 @@ iter_type put(
 
 ### Parameters
 
-*next*<br/>
+*next*\
 An iterator addressing the first element of the inserted string.
 
-*_Intl*<br/>
-A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.
+*_Intl*\
+A Boolean value indicating the type of currency symbol expected in the sequence: **`true`** if international, **`false`** if domestic.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 A format flag which when set indicates that the currency symbol is optional; otherwise, it is required
 
-*_Fill*<br/>
+*_Fill*\
 A character which is used for spacing.
 
-*val*<br/>
+*val*\
 A string object to be converted.
 
 ### Return Value
@@ -263,7 +264,7 @@ int main()
 money_put() = "EUR1.000,12"
 ```
 
-## <a name="string_type"></a>  money_put::string_type
+## <a name="string_type"></a> money_put::string_type
 
 A type that describes a string containing characters of type `CharType`.
 
@@ -273,10 +274,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### Remarks
 
-The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store sequences of elements from the source sequence.
+The type describes a specialization of class template [basic_string](../standard-library/basic-string-class.md) whose objects can store sequences of elements from the source sequence.
 
 ## See also
 
-[\<locale>](../standard-library/locale.md)<br/>
-[facet Class](../standard-library/locale-class.md#facet_class)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet Class](../standard-library/locale-class.md#facet_class)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

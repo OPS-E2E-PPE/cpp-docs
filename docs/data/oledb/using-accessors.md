@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using Accessors"
 title: "Using Accessors"
 ms.date: "10/24/2018"
 helpviewer_keywords: ["accessors [C++], OLE DB Templates", "OLE DB consumer templates, accessors", "rowsets [C++], accessors"]
@@ -18,6 +19,6 @@ The following topics explain how to determine which type of accessor is best for
 
 - [Accessing XML Data](../../data/oledb/accessing-xml-data.md)
 
-## See Also
+## See also
 
 [Working with OLE DB Consumer Templates](../../data/oledb/working-with-ole-db-consumer-templates.md)

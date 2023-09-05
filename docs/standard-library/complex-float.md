@@ -1,13 +1,14 @@
 ---
-title: "complex&lt;float&gt;"
+description: "Learn more about: complex<float>"
+title: "complex<float>"
 ms.date: "11/04/2016"
 f1_keywords: ["complex/std::complex<float>"]
 helpviewer_keywords: ["complex<float> function"]
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
 ---
-# complex&lt;float&gt;
+# `complex<float>`
 
-Describes an object that stores an ordered pair of objects both of type **float**, the first representing the real part of a complex number and the second representing the imaginary part.
+Describes an object that stores an ordered pair of objects both of type **`float`**, the first representing the real part of a complex number and the second representing the imaginary part.
 
 ## Syntax
 
@@ -27,30 +28,30 @@ constexpr complex(
 
 constexpr complex(
     const complex<long double>& complexNum);
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### Parameters
 
-*_RealVal*<br/>
-The value of type **float** for the real part of the complex number being constructed.
+*_RealVal*\
+The value of type **`float`** for the real part of the complex number being constructed.
 
-*_ImagVal*<br/>
-The value of type **float** for the imaginary part of the complex number being constructed.
+*_ImagVal*\
+The value of type **`float`** for the imaginary part of the complex number being constructed.
 
-*complexNum*<br/>
-The complex number of type **double** or of type **long double** whose real and imaginary parts are used to initialize a complex number of type **float** being constructed.
+*complexNum*\
+The complex number of type **`double`** or of type **`long double`** whose real and imaginary parts are used to initialize a complex number of type **`float`** being constructed.
 
 ## Return Value
 
-A complex number of type **float**.
+A complex number of type **`float`**.
 
 ## Remarks
 
-The explicit specialization of the template class complex to a complex class of type **float** differs from the template class only in the constructors it defines. The conversion from **float** to **double** is allowed to be implicit, but the less safe conversion from **float** to **long double** is required to be **explicit**. The use of **explicit** rules out the initiation with type conversion using assignment syntax.
+The explicit specialization of the class template complex to a complex class of type **`float`** differs from the class template only in the constructors it defines. The conversion from **`float`** to **`double`** is allowed to be implicit, but the less safe conversion from **`float`** to **`long double`** is required to be **`explicit`**. The use of **`explicit`** rules out the initiation with type conversion using assignment syntax.
 
-For more information on the template class `complex`, see [complex Class](../standard-library/complex-class.md). For a list of members of the template class `complex`, see .
+For more information on the class template `complex`, see [complex Class](../standard-library/complex-class.md). For a list of members of the class template `complex`, see .
 
 ## Example
 
@@ -116,5 +117,5 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## See also
 
-[complex Class](../standard-library/complex-class.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[complex Class](../standard-library/complex-class.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

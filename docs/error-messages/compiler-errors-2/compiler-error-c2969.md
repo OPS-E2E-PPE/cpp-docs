@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2969"
 title: "Compiler Error C2969"
 ms.date: "11/04/2016"
 f1_keywords: ["C2969"]
@@ -13,7 +14,7 @@ A template member function definition has an unmatched closing brace.
 
 The following sample generates C2969:
 
-```
+```cpp
 // C2969.cpp
 // compile with: /c
 class A {

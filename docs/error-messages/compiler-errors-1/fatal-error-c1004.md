@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Fatal Error C1004"
 title: "Fatal Error C1004"
 ms.date: "11/04/2016"
 f1_keywords: ["C1004"]
@@ -29,7 +30,7 @@ To resolve this error, check for the following:
 
 The following sample generates C1004:
 
-```
+```cpp
 // C1004.cpp
 #if TEST
 int main() {}
@@ -38,7 +39,7 @@ int main() {}
 
 Possible resolution:
 
-```
+```cpp
 // C1004b.cpp
 #if TEST
 #endif

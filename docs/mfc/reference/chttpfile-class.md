@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CHttpFile Class"
 title: "CHttpFile Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CHttpFile", "AFXINET/CHttpFile", "AFXINET/CHttpFile::CHttpFile", "AFXINET/CHttpFile::AddRequestHeaders", "AFXINET/CHttpFile::EndRequest", "AFXINET/CHttpFile::GetFileURL", "AFXINET/CHttpFile::GetObject", "AFXINET/CHttpFile::GetVerb", "AFXINET/CHttpFile::QueryInfo", "AFXINET/CHttpFile::QueryInfoStatusCode", "AFXINET/CHttpFile::SendRequest", "AFXINET/CHttpFile::SendRequestEx"]
@@ -59,7 +60,7 @@ To learn more about how `CHttpFile` works with the other MFC Internet classes, s
 
 **Header:** afxinet.h
 
-##  <a name="addrequestheaders"></a>  CHttpFile::AddRequestHeaders
+## <a name="addrequestheaders"></a> CHttpFile::AddRequestHeaders
 
 Call this member function to add one or more HTTP request headers to the HTTP request handle.
 
@@ -98,16 +99,16 @@ A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) obj
 
 ### Return Value
 
-Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.
+Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) may be called to determine the cause of the error.
 
 ### Remarks
 
 `AddRequestHeaders` appends additional, free-format headers to the HTTP request handle. It is intended for use by sophisticated clients who need detailed control over the exact request sent to the HTTP server.
 
 > [!NOTE]
->  The application can pass multiple headers in *pstrHeaders* or *str* for an `AddRequestHeaders` call using HTTP_ADDREQ_FLAG_ADD or HTTP_ADDREQ_FLAG_ADD_IF_NEW. If the application tries to remove or replace a header using HTTP_ADDREQ_FLAG_REMOVE or HTTP_ADDREQ_FLAG_REPLACE, only one header can be supplied in *lpszHeaders*.
+> The application can pass multiple headers in *pstrHeaders* or *str* for an `AddRequestHeaders` call using HTTP_ADDREQ_FLAG_ADD or HTTP_ADDREQ_FLAG_ADD_IF_NEW. If the application tries to remove or replace a header using HTTP_ADDREQ_FLAG_REMOVE or HTTP_ADDREQ_FLAG_REPLACE, only one header can be supplied in *lpszHeaders*.
 
-##  <a name="chttpfile"></a>  CHttpFile::CHttpFile
+## <a name="chttpfile"></a> CHttpFile::CHttpFile
 
 This member function is called to construct a `CHttpFile` object.
 
@@ -156,7 +157,7 @@ You never construct a `CHttpFile` object directly; rather call [CInternetSession
 
 The default value for `dwContext` is sent by MFC to the `CHttpFile` object from the [CInternetSession](../../mfc/reference/cinternetsession-class.md) object that created the `CHttpFile` object. When you call `CInternetSession::OpenURL` or `CHttpConnection` to construct a `CHttpFile` object, you can override the default to set the context identifier to a value of your choosing. The context identifier is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the object with which it is identified. See the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.
 
-##  <a name="endrequest"></a>  CHttpFile::EndRequest
+## <a name="endrequest"></a> CHttpFile::EndRequest
 
 Call this member function to end a request sent to an HTTP server with the [SendRequestEx](#sendrequestex) member function.
 
@@ -170,10 +171,10 @@ BOOL EndRequest(
 ### Parameters
 
 *dwFlags*<br/>
-Flags describing the operation. For a list of the appropriate flags, see [HttpEndRequest](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) in the Windows SDK.
+Flags describing the operation. For a list of the appropriate flags, see [HttpEndRequest](/windows/win32/api/wininet/nf-wininet-httpendrequestw) in the Windows SDK.
 
 *lpBuffIn*<br/>
-Pointer to an initialized [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa) that describes the input buffer used for the operation.
+Pointer to an initialized [INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw) that describes the input buffer used for the operation.
 
 *dwContext*<br/>
 The context identifier for the `CHttpFile` operation. See Remarks for more information about this parameter.
@@ -186,7 +187,7 @@ Nonzero if successful; otherwise 0. If the call fails, determine the cause of th
 
 The default value for *dwContext* is sent by MFC to the `CHttpFile` object from the [CInternetSession](../../mfc/reference/cinternetsession-class.md) object that created the `CHttpFile` object. When you call [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) or [CHttpConnection](../../mfc/reference/chttpconnection-class.md) to construct a `CHttpFile` object, you can override the default to set the context identifier to a value of your choosing. The context identifier is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the object with which it is identified. See article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.
 
-##  <a name="getfileurl"></a>  CHttpFile::GetFileURL
+## <a name="getfileurl"></a> CHttpFile::GetFileURL
 
 Call this member function to get the name of the HTTP file as a URL.
 
@@ -202,7 +203,7 @@ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object containing 
 
 Use this member function only after a successful call to [SendRequest](#sendrequest) or on a `CHttpFile` object successfully created by [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
-##  <a name="getobject"></a>  CHttpFile::GetObject
+## <a name="getobject"></a> CHttpFile::GetObject
 
 Call this member function to get the name of the object associated with this `CHttpFile`.
 
@@ -218,7 +219,7 @@ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object containing 
 
 Use this member function only after a successful call to [SendRequest](#sendrequest) or on a `CHttpFile` object successfully created by [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
-##  <a name="getverb"></a>  CHttpFile::GetVerb
+## <a name="getverb"></a> CHttpFile::GetVerb
 
 Call this member function to get the HTTP verb (or method) associated with this `CHttpFile`.
 
@@ -234,7 +235,7 @@ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object containing 
 
 Use this member function only after a successful call to [SendRequest](#sendrequest) or on a `CHttpFile` object successfully created by [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
-##  <a name="queryinfo"></a>  CHttpFile::QueryInfo
+## <a name="queryinfo"></a> CHttpFile::QueryInfo
 
 Call this member function to return response or request headers from an HTTP request.
 
@@ -265,7 +266,7 @@ A combination of the attribute to query and the following flags that specify the
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS Typically, the application queries the response headers, but an application can also query request headers by using this flag.
 
-- HTTP_QUERY_FLAG_SYSTEMTIME For those headers whose value is a date/time string, such as "Last-Modified-Time," this flag returns the header value as a standard Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) structure that does not require the application to parse the data. If you use this flag, you may want to use the `SYSTEMTIME` override of the function.
+- HTTP_QUERY_FLAG_SYSTEMTIME For those headers whose value is a date/time string, such as "Last-Modified-Time," this flag returns the header value as a standard Win32 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) structure that does not require the application to parse the data. If you use this flag, you may want to use the `SYSTEMTIME` override of the function.
 
 - HTTP_QUERY_FLAG_NUMBER For those headers whose value is a number, such as the status code, this flag returns the data as a 32-bit number.
 
@@ -287,11 +288,11 @@ A reference to the [CString](../../atl-mfc-shared/reference/cstringt-class.md) o
 An index value. See *lpdwIndex*.
 
 *pSysTime*<br/>
-A pointer to a Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) structure.
+A pointer to a Win32 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) structure.
 
 ### Return Value
 
-Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.
+Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) may be called to determine the cause of the error.
 
 ### Remarks
 
@@ -355,7 +356,7 @@ The possible *dwInfoLevel* values include:
 
 - HTTP_QUERY_RAW_HEADERS_CRLF
 
-##  <a name="queryinfostatuscode"></a>  CHttpFile::QueryInfoStatusCode
+## <a name="queryinfostatuscode"></a> CHttpFile::QueryInfoStatusCode
 
 Call this member function to get the status code associated with an HTTP request and place it in the supplied *dwStatusCode* parameter.
 
@@ -370,7 +371,7 @@ A reference to a status code. Status codes indicate the success or failure of th
 
 ### Return Value
 
-Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.
+Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) may be called to determine the cause of the error.
 
 ### Remarks
 
@@ -396,7 +397,7 @@ Common HTTP Status Codes:
 |500|Unknown server error|
 |503|Server capacity reached|
 
-##  <a name="sendrequest"></a>  CHttpFile::SendRequest
+## <a name="sendrequest"></a> CHttpFile::SendRequest
 
 Call this member function to send a request to an HTTP server.
 
@@ -434,7 +435,7 @@ A string containing the name of the headers for the request being sent.
 
 Nonzero if successful; otherwise 0. If the call fails, determine the cause of the failure by examining the thrown [CInternetException](../../mfc/reference/cinternetexception-class.md) object.
 
-##  <a name="sendrequestex"></a>  CHttpFile::SendRequestEx
+## <a name="sendrequestex"></a> CHttpFile::SendRequestEx
 
 Call this member function to send a request to an HTTP server.
 
@@ -457,13 +458,13 @@ BOOL SendRequestEx(
 Number of bytes to be sent in the request.
 
 *dwFlags*<br/>
-Flags describing the operation. For a list of appropriate flags, see [HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) in the Windows SDK.
+Flags describing the operation. For a list of appropriate flags, see [HttpSendRequestEx](/windows/win32/api/wininet/nf-wininet-httpsendrequestexw) in the Windows SDK.
 
 *dwContext*<br/>
 The context identifier for the `CHttpFile` operation. See Remarks for more information about this parameter.
 
 *lpBuffIn*<br/>
-Pointer to an initialized [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa) that describes the input buffer used for the operation.
+Pointer to an initialized [INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw) that describes the input buffer used for the operation.
 
 *lpBuffOut*<br/>
 Pointer to an initialized INTERNET_BUFFERS that describes the output buffer used for the operation.
@@ -486,7 +487,7 @@ This code fragment sends the content of a string to a DLL named MFCISAPI.DLL on 
 
 [!code-cpp[NVC_MFCWinInet#9](../../mfc/codesnippet/cpp/chttpfile-class_1.cpp)]
 
-## See Also
+## See also
 
 [CInternetFile Class](../../mfc/reference/cinternetfile-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Use combinable to Combine Sets"
 title: "How to: Use combinable to Combine Sets"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["combinable class, example", "combining sets with combinable [Concurrency Runtime]"]
@@ -28,11 +29,10 @@ parallel time: 78 ms
 
 Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `parallel-combine-primes.cpp` and then run the following command in a Visual Studio Command Prompt window.
 
-**cl.exe /EHsc parallel-combine-primes.cpp**
+> **cl.exe /EHsc parallel-combine-primes.cpp**
 
-## See Also
+## See also
 
 [Parallel Containers and Objects](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [combinable Class](../../parallel/concrt/reference/combinable-class.md)<br/>
 [combinable::combine_each Method](reference/combinable-class.md#combine_each)
-

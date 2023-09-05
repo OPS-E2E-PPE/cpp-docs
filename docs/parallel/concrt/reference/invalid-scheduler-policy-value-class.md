@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: invalid_scheduler_policy_value Class"
 title: "invalid_scheduler_policy_value Class"
 ms.date: "11/04/2016"
 f1_keywords: ["concrt/concurrency::invalid_scheduler_policy_value"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when a policy key of a `SchedulerPolicy
 
 ## Syntax
 
-```
+```cpp
 class invalid_scheduler_policy_value : public std::exception;
 ```
 
@@ -35,11 +36,11 @@ class invalid_scheduler_policy_value : public std::exception;
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> invalid_scheduler_policy_value
+## <a name="ctor"></a> invalid_scheduler_policy_value
 
 Constructs an `invalid_scheduler_policy_value` object.
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_value(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_value() throw();
@@ -50,7 +51,7 @@ invalid_scheduler_policy_value() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [SchedulerPolicy Class](schedulerpolicy-class.md)

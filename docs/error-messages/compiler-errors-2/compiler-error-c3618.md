@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3618"
 title: "Compiler Error C3618"
 ms.date: "11/04/2016"
 f1_keywords: ["C3618"]
@@ -15,7 +16,7 @@ A method marked with <xref:System.Runtime.InteropServices.DllImportAttribute> is
 
 The following sample generates C3618.
 
-```
+```cpp
 // C3618.cpp
 // compile with: /clr /c
 using namespace System;

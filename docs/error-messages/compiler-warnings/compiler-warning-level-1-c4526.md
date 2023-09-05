@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4526"
 title: "Compiler Warning (level 1) C4526"
 ms.date: "11/04/2016"
 f1_keywords: ["C4526"]
@@ -13,7 +14,7 @@ The static member function meets the criteria to override the virtual function, 
 
 The following code generates C4526:
 
-```
+```cpp
 // C4526.cpp
 // compile with: /W1 /c
 // C4526 expected

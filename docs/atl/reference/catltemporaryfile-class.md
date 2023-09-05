@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAtlTemporaryFile Class"
 title: "CAtlTemporaryFile Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAtlTemporaryFile", "ATLFILE/ATL::CAtlTemporaryFile", "ATLFILE/ATL::CAtlTemporaryFile::CAtlTemporaryFile", "ATLFILE/ATL::CAtlTemporaryFile::Close", "ATLFILE/ATL::CAtlTemporaryFile::Create", "ATLFILE/ATL::CAtlTemporaryFile::Flush", "ATLFILE/ATL::CAtlTemporaryFile::GetPosition", "ATLFILE/ATL::CAtlTemporaryFile::GetSize", "ATLFILE/ATL::CAtlTemporaryFile::HandsOff", "ATLFILE/ATL::CAtlTemporaryFile::HandsOn", "ATLFILE/ATL::CAtlTemporaryFile::LockRange", "ATLFILE/ATL::CAtlTemporaryFile::Read", "ATLFILE/ATL::CAtlTemporaryFile::Seek", "ATLFILE/ATL::CAtlTemporaryFile::SetSize", "ATLFILE/ATL::CAtlTemporaryFile::TempFileName", "ATLFILE/ATL::CAtlTemporaryFile::UnlockRange", "ATLFILE/ATL::CAtlTemporaryFile::Write"]
@@ -10,11 +11,11 @@ ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
 This class provides methods for the creation and use of a temporary file.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
-```
+```cpp
 class CAtlTemporaryFile
 ```
 
@@ -64,11 +65,11 @@ class CAtlTemporaryFile
 
 See the example for [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).
 
-##  <a name="catltemporaryfile"></a>  CAtlTemporaryFile::CAtlTemporaryFile
+## <a name="catltemporaryfile"></a> CAtlTemporaryFile::CAtlTemporaryFile
 
 The constructor.
 
-```
+```cpp
 CAtlTemporaryFile() throw();
 ```
 
@@ -80,11 +81,11 @@ A file is not actually opened until a call is made to [CAtlTemporaryFile::Create
 
 [!code-cpp[NVC_ATL_Utilities#73](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlTemporaryFile::~CAtlTemporaryFile
+## <a name="dtor"></a> CAtlTemporaryFile::~CAtlTemporaryFile
 
 The destructor.
 
-```
+```cpp
 ~CAtlTemporaryFile() throw();
 ```
 
@@ -92,11 +93,11 @@ The destructor.
 
 The destructor calls [CAtlTemporaryFile::Close](#close).
 
-##  <a name="close"></a>  CAtlTemporaryFile::Close
+## <a name="close"></a> CAtlTemporaryFile::Close
 
 Call this method to close a temporary file and either delete its contents or store them under the specified file name.
 
-```
+```cpp
 HRESULT Close(LPCTSTR szNewName = NULL) throw();
 ```
 
@@ -113,21 +114,21 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 See the example for [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).
 
-##  <a name="create"></a>  CAtlTemporaryFile::Create
+## <a name="create"></a> CAtlTemporaryFile::Create
 
 Call this method to create a temporary file.
 
-```
+```cpp
 HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) throw();
 ```
 
 ### Parameters
 
 *pszDir*<br/>
-The path for the temporary file. If this is NULL, [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha) will be called to assign a path.
+The path for the temporary file. If this is NULL, [GetTempPath](/windows/win32/api/fileapi/nf-fileapi-gettemppathw) will be called to assign a path.
 
 *dwDesiredAccess*<br/>
-The desired access. See *dwDesiredAccess* in [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) in the Windows SDK.
+The desired access. See *dwDesiredAccess* in [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew) in the Windows SDK.
 
 ### Return Value
 
@@ -137,11 +138,11 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 See the example for [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).
 
-##  <a name="flush"></a>  CAtlTemporaryFile::Flush
+## <a name="flush"></a> CAtlTemporaryFile::Flush
 
 Call this method to force any data remaining in the file buffer to be written to the temporary file.
 
-```
+```cpp
 HRESULT Flush() throw();
 ```
 
@@ -157,11 +158,11 @@ Similar to [CAtlTemporaryFile::HandsOff](#handsoff), except that the file is not
 
 See the example for [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).
 
-##  <a name="getposition"></a>  CAtlTemporaryFile::GetPosition
+## <a name="getposition"></a> CAtlTemporaryFile::GetPosition
 
 Call this method to get the current file pointer position.
 
-```
+```cpp
 HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ```
 
@@ -178,11 +179,11 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 To change the file pointer position, use [CAtlTemporaryFile::Seek](#seek).
 
-##  <a name="getsize"></a>  CAtlTemporaryFile::GetSize
+## <a name="getsize"></a> CAtlTemporaryFile::GetSize
 
 Call this method to get the size in bytes of the temporary file.
 
-```
+```cpp
 HRESULT GetSize(ULONGLONG& nLen) const throw();
 ```
 
@@ -195,11 +196,11 @@ The number of bytes in the file.
 
 Returns S_OK on success, or an error HRESULT on failure.
 
-##  <a name="handsoff"></a>  CAtlTemporaryFile::HandsOff
+## <a name="handsoff"></a> CAtlTemporaryFile::HandsOff
 
 Call this method to disassociate the file from the `CAtlTemporaryFile` object.
 
-```
+```cpp
 HRESULT HandsOff() throw();
 ```
 
@@ -211,11 +212,11 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 `HandsOff` and [CAtlTemporaryFile::HandsOn](#handson) are used to disassociate the file from the object, and reattach it if needed. `HandsOff` will force any data remaining in the file buffer to be written to the temporary file, and then close the file. If you want to close and delete the file permanently, or if you want to close and retain the contents of the file with a given name, use [CAtlTemporaryFile::Close](#close).
 
-##  <a name="handson"></a>  CAtlTemporaryFile::HandsOn
+## <a name="handson"></a> CAtlTemporaryFile::HandsOn
 
 Call this method to open an existing temporary file and position the pointer at the end of the file.
 
-```
+```cpp
 HRESULT HandsOn() throw();
 ```
 
@@ -227,11 +228,11 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 [CAtlTemporaryFile::HandsOff](#handsoff) and `HandsOn` are used to disassociate the file from the object, and reattach it if needed.
 
-##  <a name="lockrange"></a>  CAtlTemporaryFile::LockRange
+## <a name="lockrange"></a> CAtlTemporaryFile::LockRange
 
 Call this method to lock a region in the temporary file to prevent other processes from accessing it.
 
-```
+```cpp
 HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```
 
@@ -251,19 +252,19 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 Locking bytes in a file prevents access to those bytes by other processes. You can lock more than one region of a file, but no overlapping regions are allowed. To successfully unlock a region, use [CAtlTemporaryFile::UnlockRange](#unlockrange), ensuring the byte range corresponds exactly to the region that was previously locked. `LockRange` does not merge adjacent regions; if two locked regions are adjacent, you must unlock each separately.
 
-##  <a name="operator_handle"></a>  CAtlTemporaryFile::operator HANDLE
+## <a name="operator_handle"></a> CAtlTemporaryFile::operator HANDLE
 
 Returns a handle to the temporary file.
 
-```
+```cpp
 operator HANDLE() throw();
 ```
 
-##  <a name="read"></a>  CAtlTemporaryFile::Read
+## <a name="read"></a> CAtlTemporaryFile::Read
 
 Call this method to read data from the temporary file starting at the position indicated by the file pointer.
 
-```
+```cpp
 HRESULT Read(
     LPVOID pBuffer,
     DWORD nBufSize,
@@ -293,11 +294,11 @@ Calls [CAtlFile::Read](../../atl/reference/catlfile-class.md#read). To change th
 
 See the example for [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).
 
-##  <a name="seek"></a>  CAtlTemporaryFile::Seek
+## <a name="seek"></a> CAtlTemporaryFile::Seek
 
 Call this method to move the file pointer of the temporary file.
 
-```
+```cpp
 HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 ```
 
@@ -321,11 +322,11 @@ Calls [CAtlFile::Seek](../../atl/reference/catlfile-class.md#seek). To obtain th
 
 See the example for [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).
 
-##  <a name="setsize"></a>  CAtlTemporaryFile::SetSize
+## <a name="setsize"></a> CAtlTemporaryFile::SetSize
 
 Call this method to set the size of the temporary file.
 
-```
+```cpp
 HRESULT SetSize(ULONGLONG nNewLen) throw();
 ```
 
@@ -342,11 +343,11 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 Calls [CAtlFile::SetSize](../../atl/reference/catlfile-class.md#setsize). On return, the file pointer is positioned at the end of the file.
 
-##  <a name="tempfilename"></a>  CAtlTemporaryFile::TempFileName
+## <a name="tempfilename"></a> CAtlTemporaryFile::TempFileName
 
 Call this method to return the name of temporary file.
 
-```
+```cpp
 LPCTSTR TempFileName() throw();
 ```
 
@@ -356,13 +357,13 @@ Returns the LPCTSTR pointing to the file name.
 
 ### Remarks
 
-The file name is generated in [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) with a call to the [GetTempFile](/windows/desktop/api/fileapi/nf-fileapi-gettempfilenamea)Windows SDK function. The file extension will always be "TFR" for the temporary file.
+The file name is generated in [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) with a call to the [GetTempFile](/windows/win32/api/fileapi/nf-fileapi-gettempfilenamew)Windows SDK function. The file extension will always be "TFR" for the temporary file.
 
-##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange
+## <a name="unlockrange"></a> CAtlTemporaryFile::UnlockRange
 
 Call this method to unlock a region of the temporary file.
 
-```
+```cpp
 HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```
 
@@ -382,11 +383,11 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 Calls [CAtlFile::UnlockRange](../../atl/reference/catlfile-class.md#unlockrange).
 
-##  <a name="write"></a>  CAtlTemporaryFile::Write
+## <a name="write"></a> CAtlTemporaryFile::Write
 
 Call this method to write data to the temporary file starting at the position indicated by the file pointer.
 
-```
+```cpp
 HRESULT Write(
     LPCVOID pBuffer,
     DWORD nBufSize,
@@ -416,7 +417,7 @@ Calls [CAtlFile::Write](../../atl/reference/catlfile-class.md#write).
 
 See the example for [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)<br/>
 [CAtlFile Class](../../atl/reference/catlfile-class.md)

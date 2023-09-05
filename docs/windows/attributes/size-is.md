@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: size_is"
 title: "size_is (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.size_is"]
@@ -22,7 +23,7 @@ The size of memory allocated for sized pointers.
 
 ## Remarks
 
-The **size_is** C++ attribute has the same functionality as the [size_is](/windows/desktop/Midl/size-is) MIDL attribute.
+The **size_is** C++ attribute has the same functionality as the [size_is](/windows/win32/Midl/size-is) MIDL attribute.
 
 ## Example
 
@@ -30,18 +31,16 @@ See the example for [first_is](first-is.md) for a sample of how to specify a sec
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|Field in **struct** or **union**, interface parameter, interface method|
+|**Applies to**|Field in **`struct`** or **`union`**, interface parameter, interface method|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|`max_is`|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Typedef, Enum, Union, and Struct Attributes](typedef-enum-union-and-struct-attributes.md)<br/>

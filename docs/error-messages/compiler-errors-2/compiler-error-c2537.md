@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2537"
 title: "Compiler Error C2537"
 ms.date: "11/04/2016"
 f1_keywords: ["C2537"]
@@ -17,7 +18,7 @@ Possible causes:
 
 The following sample generates C2537:
 
-```
+```cpp
 // C2537.cpp
 // compile with: /c
 extern "c" void func();   // C2537

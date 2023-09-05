@@ -1,18 +1,14 @@
 ---
-title: "&lt;stack&gt; operators"
+description: "Learn more about: <stack> operators"
+title: "<stack> operators"
 ms.date: "11/04/2016"
-f1_keywords: ["stack/std::operator!=", "stack/std::operator&gt;", "stack/std::operator&gt;=", "stack/std::operator&lt;", "stack/std::operator&lt;=", "stack/std::operator=="]
+f1_keywords: ["stack/std::operator!=", "stack/std::operator>", "stack/std::operator>=", "stack/std::operator<", "stack/std::operator<=", "stack/std::operator=="]
 ms.assetid: 9c1fc282-2f61-4727-9e80-84ea5d4934a2
-helpviewer_keywords: ["std::operator!= (stack)", "std::operator&gt; (stack)", "std::operator&gt;= (stack)", "std::operator&lt; (stack)", "std::operator&lt;= (stack)", "std::operator== (stack)"]
+helpviewer_keywords: ["std::operator!= (stack)", "std::operator> (stack)", "std::operator>= (stack)", "std::operator< (stack)", "std::operator<= (stack)", "std::operator== (stack)"]
 ---
-# &lt;stack&gt; operators
+# `<stack>` operators
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 Tests if the stack object on the left side of the operator is not equal to stack object on the right side.
 
@@ -22,15 +18,15 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `stack`.
 
-*right*<br/>
+*right*\
 An object of type `stack`.
 
 ### Return Value
 
-**true** if the stacks or stacks are not equal; **false** if stacks or stacks are equal.
+**`true`** if the stacks or stacks are not equal; **`false`** if stacks or stacks are equal.
 
 ### Remarks
 
@@ -77,7 +73,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> `operator<`
 
 Tests if the stack object on the left side of the operator is less than the stack object on the right side.
 
@@ -87,15 +83,15 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `stack`.
 
-*right*<br/>
+*right*\
 An object of type `stack`.
 
 ### Return Value
 
-**true** if the stack on the left side of the operator is less than and not equal to the stack on the right side of the operator; otherwise **false**.
+**`true`** if the stack on the left side of the operator is less than and not equal to the stack on the right side of the operator; otherwise **`false`**.
 
 ### Remarks
 
@@ -161,7 +157,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> `operator<=`
 
 Tests if the stack object on the left side of the operator is less than or equal to the stack object on the right side.
 
@@ -171,15 +167,15 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `stack`.
 
-*right*<br/>
+*right*\
 An object of type `stack`.
 
 ### Return Value
 
-**true** if the stack on the left side of the operator is less than or equal to the stack on the right side of the operator; otherwise **false**.
+**`true`** if the stack on the left side of the operator is less than or equal to the stack on the right side of the operator; otherwise **`false`**.
 
 ### Remarks
 
@@ -228,7 +224,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Tests if the stack object on the left side of the operator is equal to stack object on the right side.
 
@@ -238,15 +234,15 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `stack`.
 
-*right*<br/>
+*right*\
 An object of type `stack`.
 
 ### Return Value
 
-**true** if the stacks or stacks are equal; **false** if stacks or stacks are not equal.
+**`true`** if the stacks or stacks are equal; **`false`** if stacks or stacks are not equal.
 
 ### Remarks
 
@@ -293,7 +289,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> `operator>`
 
 Tests if the stack object on the left side of the operator is greater than the stack object on the right side.
 
@@ -303,15 +299,15 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `stack`.
 
-*right*<br/>
+*right*\
 An object of type `stack`.
 
 ### Return Value
 
-**true** if the stack on the left side of the operator is greater than and not equal to the stack on the right side of the operator; otherwise **false**.
+**`true`** if the stack on the left side of the operator is greater than and not equal to the stack on the right side of the operator; otherwise **`false`**.
 
 ### Remarks
 
@@ -362,7 +358,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> `operator>=`
 
 Tests if the stack object on the left side of the operator is greater than or equal to the stack object on the right side.
 
@@ -372,15 +368,15 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `stack`.
 
-*right*<br/>
+*right*\
 An object of type `stack`.
 
 ### Return Value
 
-**true** if the stack on the left side of the operator is strictly less than the stack on the right side of the operator; otherwise **false**.
+**`true`** if the stack on the left side of the operator is strictly less than the stack on the right side of the operator; otherwise **`false`**.
 
 ### Remarks
 
@@ -429,7 +425,3 @@ int main( )
 The stack s1 is less than the stack s2.
 The stack s1 is greater than or equal to the stack s3.
 ```
-
-## See also
-
-[\<stack>](../standard-library/stack.md)<br/>

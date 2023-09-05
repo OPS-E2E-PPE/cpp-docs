@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Global Constants in C++"
 title: "Global Constants in C++"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["global constants", "constants, global"]
@@ -12,7 +13,7 @@ One way to resolve this error is to include the const initializations in a heade
 
 The following sample generates C2019:
 
-```
+```cpp
 // global_constants.cpp
 // LNK2019 expected
 void test(void);
@@ -25,7 +26,7 @@ int main() {
 
 And then,
 
-```
+```cpp
 // global_constants_2.cpp
 // compile with: global_constants.cpp
 extern int lnktest1;
@@ -35,6 +36,6 @@ void test() {
 }
 ```
 
-## See Also
+## See also
 
 [Linker Tools Error LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

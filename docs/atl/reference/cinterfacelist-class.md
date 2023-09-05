@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CInterfaceList Class"
 title: "CInterfaceList Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CInterfaceList", "ATLCOLL/ATL::CInterfaceList", "ATLCOLL/ATL::CInterfaceList::CInterfaceList"]
@@ -50,7 +51,7 @@ For more information, see [ATL Collection Classes](../../atl/atl-collection-clas
 
 **Header:** atlcoll.h
 
-##  <a name="cinterfacelist"></a>  CInterfaceList::CInterfaceList
+## <a name="cinterfacelist"></a> CInterfaceList::CInterfaceList
 
 The constructor for the interface list.
 
@@ -67,7 +68,7 @@ The block size, with a default of 10.
 
 The block size is a measure of the amount of memory allocated when a new element is required. Larger block sizes reduce calls to memory allocation routines, but use more resources.
 
-## See Also
+## See also
 
 [CAtlList Class](../../atl/reference/catllist-class.md)<br/>
 [CComQIPtr Class](../../atl/reference/ccomqiptr-class.md)<br/>

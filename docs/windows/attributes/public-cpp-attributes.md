@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: public (C++ Attributes)"
 title: "public (C++ Attributes) (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.public"]
@@ -17,11 +18,11 @@ Ensures that a typedef will go into the type library even if it is not reference
 
 ## Remarks
 
-The **public** C++ attribute has the same functionality as the [public](/windows/desktop/Midl/public) MIDL attribute.
+The **`public`** C++ attribute has the same functionality as the [public](/windows/win32/Midl/public) MIDL attribute.
 
 ## Example
 
-The following code shows how to use the **public** attribute:
+The following code shows how to use the **`public`** attribute:
 
 ```cpp
 // cpp_attr_ref_public.cpp
@@ -39,18 +40,16 @@ __interface IFireTabCtrl : IDispatch
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**typedef**|
+|**Applies to**|**`typedef`**|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Typedef, Enum, Union, and Struct Attributes](typedef-enum-union-and-struct-attributes.md)

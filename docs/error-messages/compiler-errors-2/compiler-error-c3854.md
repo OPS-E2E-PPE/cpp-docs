@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3854"
 title: "Compiler Error C3854"
 ms.date: "11/04/2016"
 f1_keywords: ["C3854"]
@@ -13,7 +14,7 @@ A reference cannot be reinitialized. Dereferencing a reference to a function yie
 
 The following sample generates C3854:
 
-```
+```cpp
 // C3854.cpp
 int afunc(int i)
 {

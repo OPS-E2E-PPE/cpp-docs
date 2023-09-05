@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: strerror Function"
 title: "strerror Function"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["strerror function"]
@@ -50,6 +51,6 @@ The `strerror` function generates these messages:
 36  Resource deadlock would occur
 ```
 
-## See Also
+## See also
 
 [Library Functions](../c-language/library-functions.md)

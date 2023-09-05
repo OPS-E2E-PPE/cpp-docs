@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Linker Tools Warning LNK4248"
 title: "Linker Tools Warning LNK4248"
 ms.date: "11/04/2016"
 f1_keywords: ["LNK4248"]
@@ -9,7 +10,7 @@ ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
 
 unresolved typeref token (token) for 'type'; image may not run
 
-A type doesn’t have a definition in MSIL metadata.
+A type doesn't have a definition in MSIL metadata.
 
 LNK4248 can occur when there is only a forward declaration for a type in an MSIL module (compiled with **/clr**), where the type is referenced in the MSIL module, and where the MSIL module is linked with a native module that has a definition for the type.
 
@@ -23,11 +24,11 @@ For more information, see [/clr (Common Language Runtime Compilation)](../../bui
 
 1. Provide the type definition in the MSIL module.
 
-## Example
+## Examples
 
 The following sample generates LNK4248. Define struct A to resolve.
 
-```
+```cpp
 // LNK4248.cpp
 // compile with: /clr /W1
 // LNK4248 expected
@@ -39,11 +40,9 @@ int main() {
 }
 ```
 
-## Example
-
 The following sample has a forward definition of a type.
 
-```
+```cpp
 // LNK4248_2.cpp
 // compile with: /clr /c
 class A;   // provide a definition for A here to resolve
@@ -56,11 +55,9 @@ int main() {
 }
 ```
 
-## Example
-
 The following sample generates LNK4248.
 
-```
+```cpp
 // LNK4248_3.cpp
 // compile with: /c
 // post-build command: link LNK4248_2.obj LNK4248_3.obj

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: concurrent_queue Class"
 title: "concurrent_queue Class"
 ms.date: "11/04/2016"
 f1_keywords: ["concurrent_queue", "CONCURRENT_QUEUE/concurrency::concurrent_queue", "CONCURRENT_QUEUE/concurrency::concurrent_queue::concurrent_queue", "CONCURRENT_QUEUE/concurrency::concurrent_queue::clear", "CONCURRENT_QUEUE/concurrency::concurrent_queue::empty", "CONCURRENT_QUEUE/concurrency::concurrent_queue::get_allocator", "CONCURRENT_QUEUE/concurrency::concurrent_queue::push", "CONCURRENT_QUEUE/concurrency::concurrent_queue::try_pop", "CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_begin", "CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_end", "CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_size"]
@@ -7,16 +8,16 @@ ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
 ---
 # concurrent_queue Class
 
-The `concurrent_queue` class is a sequence container class that allows first-in, first-out access to its elements. It enables a limited set of concurrency-safe operations, such as `push` and `try_pop`.
+The `concurrent_queue` class is a sequence container class that allows first-in, first-out access to its elements. It enables a limited set of concurrency-safe operations, such as `push` and `try_pop`. Here, concurrency-safe means pointers or iterators are always valid. It's not a guarantee of element initialization, or of a particular traversal order.
 
 ## Syntax
 
-```
+```cpp
 template<typename T, class _Ax>
 class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4;
 ```
 
-#### Parameters
+### Parameters
 
 *T*<br/>
 The data type of the elements to be stored in the queue.
@@ -31,8 +32,8 @@ The type that represents the stored allocator object that encapsulates details a
 |Name|Description|
 |----------|-----------------|
 |`allocator_type`|A type that represents the allocator class for the concurrent queue.|
-|`const_iterator`|A type that represents a non-thread-safe `const` iterator over elements in a concurrent queue.|
-|`const_reference`|A type that provides a reference to a `const` element stored in a concurrent queue for reading and performing `const` operations.|
+|`const_iterator`|A type that represents a non-thread-safe **`const`** iterator over elements in a concurrent queue.|
+|`const_reference`|A type that provides a reference to a **`const`** element stored in a concurrent queue for reading and performing **`const`** operations.|
 |`difference_type`|A type that provides the signed distance between two elements in a concurrent queue.|
 |`iterator`|A type that represents a non-thread-safe iterator over the elements in a concurrent queue.|
 |`reference`|A type that provides a reference to an element stored in a concurrent queue.|
@@ -73,19 +74,19 @@ For more information, see [Parallel Containers and Objects](../../../parallel/co
 
 **Namespace:** concurrency
 
-##  <a name="clear"></a> clear
+## <a name="clear"></a> clear
 
 Clears the concurrent queue, destroying any currently enqueued elements. This method is not concurrency-safe.
 
-```
+```cpp
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_queue
+## <a name="ctor"></a> concurrent_queue
 
 Constructs a concurrent queue.
 
-```
+```cpp
 explicit concurrent_queue(
     const allocator_type& _Al = allocator_type());
 
@@ -131,35 +132,35 @@ The third constructor specifies a move of the concurrent queue `_OtherQ`.
 
 The fourth constructor specifies values supplied by the iterator range [ `_Begin`, `_End`).
 
-##  <a name="dtor"></a> ~concurrent_queue
+## <a name="dtor"></a> ~concurrent_queue
 
 Destroys the concurrent queue.
 
-```
+```cpp
 ~concurrent_queue();
 ```
 
-##  <a name="empty"></a> empty
+## <a name="empty"></a> empty
 
 Tests if the concurrent queue is empty at the moment this method is called. This method is concurrency-safe.
 
-```
+```cpp
 bool empty() const;
 ```
 
 ### Return Value
 
-**true** if the concurrent queue was empty at the moment we looked, **false** otherwise.
+**`true`** if the concurrent queue was empty at the moment we looked, **`false`** otherwise.
 
 ### Remarks
 
 While this method is concurrency-safe with respect to calls to the methods `push`, `try_pop`, and `empty`, the value returned might be incorrect by the time it is inspected by the calling thread.
 
-##  <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a> get_allocator
 
 Returns a copy of the allocator used to construct the concurrent queue. This method is concurrency-safe.
 
-```
+```cpp
 allocator_type get_allocator() const;
 ```
 
@@ -167,11 +168,11 @@ allocator_type get_allocator() const;
 
 A copy of the allocator used to construct the concurrent queue.
 
-##  <a name="push"></a> push
+## <a name="push"></a> push
 
 Enqueues an item at tail end of the concurrent queue. This method is concurrency-safe.
 
-```
+```cpp
 void push(const T& _Src);
 
 void push(T&& _Src);
@@ -186,11 +187,11 @@ The item to be added to the queue.
 
 `push` is concurrency-safe with respect to calls to the methods `push`, `try_pop`, and `empty`.
 
-##  <a name="try_pop"></a> try_pop
+## <a name="try_pop"></a> try_pop
 
 Dequeues an item from the queue if one is available. This method is concurrency-safe.
 
-```
+```cpp
 bool try_pop(T& _Dest);
 ```
 
@@ -201,19 +202,19 @@ A reference to a location to store the dequeued item.
 
 ### Return Value
 
-**true** if an item was successfully dequeued, **false** otherwise.
+**`true`** if an item was successfully dequeued, **`false`** otherwise.
 
 ### Remarks
 
-If an item was successfully dequeued, the parameter `_Dest` receives the dequeued value, the original value held in the queue is destroyed, and this function returns **true**. If there was no item to dequeue, this function returns `false` without blocking, and the contents of the `_Dest` parameter are undefined.
+If an item was successfully dequeued, the parameter `_Dest` receives the dequeued value, the original value held in the queue is destroyed, and this function returns **`true`**. If there was no item to dequeue, this function returns **`false`** without blocking, and the contents of the `_Dest` parameter are undefined.
 
 `try_pop` is concurrency-safe with respect to calls to the methods `push`, `try_pop`, and `empty`.
 
-##  <a name="unsafe_begin"></a> unsafe_begin
+## <a name="unsafe_begin"></a> unsafe_begin
 
 Returns an iterator of type `iterator` or `const_iterator` to the beginning of the concurrent queue. This method is not concurrency-safe.
 
-```
+```cpp
 iterator unsafe_begin();
 
 const_iterator unsafe_begin() const;
@@ -227,11 +228,11 @@ An iterator of type `iterator` or `const_iterator` to the beginning of the concu
 
 The iterators for the `concurrent_queue` class are primarily intended for debugging, as they are slow, and iteration is not concurrency-safe with respect to other queue operations.
 
-##  <a name="unsafe_end"></a> unsafe_end
+## <a name="unsafe_end"></a> unsafe_end
 
 Returns an iterator of type `iterator` or `const_iterator` to the end of the concurrent queue. This method is not concurrency-safe.
 
-```
+```cpp
 iterator unsafe_end();
 
 const_iterator unsafe_end() const;
@@ -245,11 +246,11 @@ An iterator of type `iterator` or `const_iterator` to the end of the concurrent 
 
 The iterators for the `concurrent_queue` class are primarily intended for debugging, as they are slow, and iteration is not concurrency-safe with respect to other queue operations.
 
-##  <a name="unsafe_size"></a> unsafe_size
+## <a name="unsafe_size"></a> unsafe_size
 
 Returns the number of items in the queue. This method is not concurrency-safe.
 
-```
+```cpp
 size_type unsafe_size() const;
 ```
 
@@ -261,6 +262,6 @@ The size of the concurrent queue.
 
 `unsafe_size` is not concurrency-safe and can produce incorrect results if called concurrently with calls to the methods `push`, `try_pop`, and `empty`.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

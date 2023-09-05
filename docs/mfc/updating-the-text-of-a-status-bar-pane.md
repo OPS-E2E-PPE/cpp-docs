@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Updating the Text of a Status-Bar Pane"
 title: "Updating the Text of a Status-Bar Pane"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["updating user interface objects [MFC]", "ON_UPDATE_COMMAND_UI macro [MFC]", "user interface objects [MFC], updating", "text, status bar", "CStatusBar class [MFC], updating", "SetText method [MFC]", "panes, status bar", "status bars [MFC], updating"]
@@ -20,7 +21,7 @@ For example, suppose one pane has `ID_INDICATOR_PAGE` as its command identifier 
 
 1. Define a default string to display in the pane.
 
-   With Resource View open, double-click **String Table** in the window that lists resource types for your application. With the **String Table** editor open, choose **New String** from the **Insert** menu. In the String Properties window, select your pane's command ID (for example, `ID_INDICATOR_PAGE`) and type a default string value, such as "Page   ". Close the string editor. (You need a default string to avoid a compiler error.)
+   With Resource View open, double-click **String Table** in the window that lists resource types for your application. With the **String Table** editor open, choose **New String** from the **Insert** menu. Select your pane's command ID (for example, `ID_INDICATOR_PAGE`) and type a default string value, such as "Page   ". Close the string editor. (You need a default string to avoid a compiler error.)
 
 1. Add the pane to the *indicators* array.
 
@@ -31,7 +32,7 @@ For example, suppose one pane has `ID_INDICATOR_PAGE` as its command identifier 
 The recommended way to display text in a pane is to call the `SetText` member function of class `CCmdUI` in an update handler function for the pane. For example, you might want to set up an integer variable *m_nPage* that contains the current page number and use `SetText` to set the pane's text to a string version of that number.
 
 > [!NOTE]
->  The `SetText` approach is recommended. It is possible to perform this task at a slightly lower level by calling the `CStatusBar` member function `SetPaneText`. Even so, you still need an update handler. Without such a handler for the pane, MFC automatically disables the pane, erasing its content.
+> The `SetText` approach is recommended. It is possible to perform this task at a slightly lower level by calling the `CStatusBar` member function `SetPaneText`. Even so, you still need an update handler. Without such a handler for the pane, MFC automatically disables the pane, erasing its content.
 
 The following procedure shows how to use an update handler function to display text in a pane.
 
@@ -59,7 +60,7 @@ Once you define the value of the *m_nPage* member variable (of class `CMainFrame
 
 - [Updating user-interface objects (how to update toolbar buttons and menu items as program conditions change)](../mfc/how-to-update-user-interface-objects.md)
 
-## See Also
+## See also
 
 [Status Bar Implementation in MFC](../mfc/status-bar-implementation-in-mfc.md)<br/>
 [CStatusBar Class](../mfc/reference/cstatusbar-class.md)

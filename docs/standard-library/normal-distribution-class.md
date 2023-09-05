@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: normal_distribution Class"
 title: "normal_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::normal_distribution", "random/std::normal_distribution::reset", "random/std::normal_distribution::mean", "random/std::normal_distribution::stddev", "random/std::normal_distribution::param", "random/std::normal_distribution::min", "random/std::normal_distribution::max", "random/std::normal_distribution::operator()", "random/std::normal_distribution::param_type", "random/std::normal_distribution::param_type::mean", "random/std::normal_distribution::param_type::stddev", "random/std::normal_distribution::param_type::operator==", "random/std::normal_distribution::param_type::operator!="]
@@ -43,17 +44,15 @@ public:
 
 ### Parameters
 
-*RealType*<br/>
-The floating-point result type, defaults to **double**. For possible types, see [\<random>](../standard-library/random.md).
+*RealType*\
+The floating-point result type, defaults to **`double`**. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes a distribution that produces values of a user-specified integral type, or type **double** if none is provided, distributed according to the Normal Distribution. The following table links to articles about individual members.
+The class template describes a distribution that produces values of a user-specified integral type, or type **`double`** if none is provided, distributed according to the Normal Distribution. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
-|`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
+[normal_distribution](#normal_distribution)\
+[param_type](#param_type)
 
 The property functions `mean()` and `stddev()` return the values for the stored distribution parameters *mean* and *stddev* respectively.
 
@@ -67,7 +66,7 @@ The `operator()` member functions return the next generated value based on the U
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the Normal distribution, see the Wolfram MathWorld article [Normal Distribution](http://go.microsoft.com/fwlink/p/?linkid=400924).
+For detailed information about the Normal distribution, see the Wolfram MathWorld article [Normal Distribution](https://go.microsoft.com/fwlink/p/?linkid=400924).
 
 ## Example
 
@@ -159,7 +158,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="normal_distribution"></a>  normal_distribution::normal_distribution
+## <a name="normal_distribution"></a> normal_distribution::normal_distribution
 
 Constructs the distribution.
 
@@ -170,24 +169,24 @@ explicit normal_distribution(const param_type& parm);
 
 ### Parameters
 
-*mean*<br/>
+*mean*\
 The `mean` distribution parameter.
 
-*stddev*<br/>
+*stddev*\
 The `stddev` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The parameter structure used to construct the distribution.
 
 ### Remarks
 
-**Precondition:** `0.0 ≤ stddev`
+**Precondition:** `0.0 < stddev`
 
 The first constructor constructs an object whose stored `mean` value holds the value *mean* and whose stored `stddev` value holds the value *stddev*.
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  normal_distribution::param_type
+## <a name="param_type"></a> normal_distribution::param_type
 
 Stores the parameters of the distribution.
 
@@ -205,21 +204,21 @@ struct param_type {
 
 ### Parameters
 
-*mean*<br/>
+*mean*\
 The `mean` distribution parameter.
 
-*stddev*<br/>
+*stddev*\
 The `stddev` distribution parameter.
 
-*right*<br/>
+*right*\
 The `param_type` structure used to compare.
 
 ### Remarks
 
-**Precondition:** `0.0 ≤ stddev`
+**Precondition:** `0.0 < stddev`
 
 This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ATL Collection and Enumerator Classes"
 title: "ATL Collection and Enumerator Classes"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["enumerators, ATL classes", "collection classes, ATL"]
@@ -19,7 +20,6 @@ ATL provides the following classes to help you implement collections and enumera
 |[_CopyInterface](../atl/atl-copy-policy-classes.md)|Copy policy class|
 |[CAdapt](../atl/reference/cadapt-class.md)|Adapter class (hides **operator &** allowing `CComPtr`, `CComQIPtr`, and `CComBSTR` to be stored in C++ Standard Library containers)|
 
-## See Also
+## See also
 
 [Collections and Enumerators](../atl/atl-collections-and-enumerators.md)
-

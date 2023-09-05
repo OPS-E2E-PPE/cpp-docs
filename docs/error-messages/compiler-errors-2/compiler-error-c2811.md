@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2811"
 title: "Compiler Error C2811"
 ms.date: "11/04/2016"
 f1_keywords: ["C2811"]
@@ -13,7 +14,7 @@ You attempted to use an unmanaged class as a base class for a managed class.
 
 The following sample generates C2811:
 
-```
+```cpp
 // C2811.cpp
 // compile with: /clr /c
 struct S{};

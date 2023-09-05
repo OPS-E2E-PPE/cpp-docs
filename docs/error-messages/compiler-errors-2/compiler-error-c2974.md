@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2974"
 title: "Compiler Error C2974"
 ms.date: "11/04/2016"
 f1_keywords: ["C2974"]
@@ -13,7 +14,7 @@ The generic or template argument does not match the generic or template declarat
 
 The following sample generates C2974:
 
-```
+```cpp
 // C2974.cpp
 // C2974 expected
 template <class T>
@@ -34,7 +35,7 @@ int main() {
 
 C2974 can also occur when using generics:
 
-```
+```cpp
 // C2974b.cpp
 // compile with: /clr
 // C2974 expected

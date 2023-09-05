@@ -1,13 +1,14 @@
 ---
-title: "vector&lt;bool&gt;::reference::operator bool"
+description: "Learn more about: vector<bool>::reference::operator bool"
+title: "vector<bool>::reference::operator bool"
 ms.date: "11/04/2016"
 f1_keywords: ["operatorbool", "vector<bool>::reference::operatorbool", "bool", "std::vector<bool>::reference::operatorbool"]
 helpviewer_keywords: ["BOOL operator", "reference::operator bool"]
 ms.assetid: b0e57869-18cc-4296-9061-da502f30120d
 ---
-# vector&lt;bool&gt;::reference::operator bool
+# `vector<bool>::reference::operator bool`
 
-Provides an implicit conversion from `vector<bool>::reference` to **bool**.
+Provides an implicit conversion from `vector<bool>::reference` to **`bool`**.
 
 ## Syntax
 
@@ -31,5 +32,5 @@ The `vector<bool>` object cannot be modified by this operator.
 
 ## See also
 
-[vector\<bool>::reference Class](../standard-library/vector-bool-reference-class.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[vector\<bool>::reference Class](../standard-library/vector-bool-reference-class.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

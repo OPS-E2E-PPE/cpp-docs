@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: range (C++)"
 title: "range  (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.range"]
@@ -25,7 +26,7 @@ The high range value.
 
 ## Remarks
 
-The **range** C++ attribute has the same functionality as the [range](/windows/desktop/Midl/range) MIDL attribute.
+The **range** C++ attribute has the same functionality as the [range](/windows/win32/Midl/range) MIDL attribute.
 
 ## Example
 
@@ -45,9 +46,7 @@ __interface ICustom {
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface method, interface parameter|
 |**Repeatable**|No|
@@ -56,7 +55,7 @@ __interface ICustom {
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Method Attributes](method-attributes.md)<br/>

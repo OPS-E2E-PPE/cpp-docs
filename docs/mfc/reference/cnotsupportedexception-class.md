@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CNotSupportedException Class"
 title: "CNotSupportedException Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CNotSupportedException", "AFX/CNotSupportedException", "AFX/CNotSupportedException::CNotSupportedException"]
@@ -43,7 +44,7 @@ For more information on using `CNotSupportedException`, see the article [Excepti
 
 **Header:** afx.h
 
-##  <a name="cnotsupportedexception"></a>  CNotSupportedException::CNotSupportedException
+## <a name="cnotsupportedexception"></a> CNotSupportedException::CNotSupportedException
 
 Constructs a `CNotSupportedException` object.
 
@@ -55,8 +56,7 @@ CNotSupportedException();
 
 Do not use this constructor directly, but rather call the global function [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception). for more information about exception processing, see the article [Exception Handling in MFC](../exception-handling-in-mfc.md).
 
-## See Also
+## See also
 
 [CException Class](cexception-class.md)<br/>
 [Hierarchy Chart](../hierarchy-chart.md)
-

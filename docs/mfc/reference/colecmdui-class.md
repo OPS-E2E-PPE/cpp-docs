@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: COleCmdUI Class"
 title: "COleCmdUI Class"
-ms.date: "09/12/2018"
+ms.date: 07/24/2020
 f1_keywords: ["COleCmdUI", "AFXDOCOBJ/COleCmdUI", "AFXDOCOBJ/COleCmdUI::COleCmdUI", "AFXDOCOBJ/COleCmdUI::Enable", "AFXDOCOBJ/COleCmdUI::SetCheck", "AFXDOCOBJ/COleCmdUI::SetText"]
 helpviewer_keywords: ["COleCmdUI [MFC], COleCmdUI", "COleCmdUI [MFC], Enable", "COleCmdUI [MFC], SetCheck", "COleCmdUI [MFC], SetText"]
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
@@ -11,7 +12,7 @@ Implements a method for MFC to update the state of user-interface objects relate
 
 ## Syntax
 
-```
+```cpp
 class COleCmdUI : public CCmdUI
 ```
 
@@ -47,13 +48,13 @@ For further information on DocObjects, see [CDocObjectServer](../../mfc/referenc
 
 ## Requirements
 
-**Header:** afxdocobj.h
+**Header:** afxdocob.h
 
-##  <a name="colecmdui"></a>  COleCmdUI::COleCmdUI
+## <a name="colecmdui"></a> COleCmdUI::COleCmdUI
 
 Constructs a `COleCmdUI` object associated with a particular user-interface command.
 
-```
+```cpp
 COleCmdUI(
     OLECMD* rgCmds,
     ULONG cCmds,
@@ -75,11 +76,11 @@ A pointer to a GUID that identifies a set of commands.
 
 The `COleCmdUI` object provides a programmatic interface for updating DocObject user-interface objects such as menu items or control-bar buttons. The user-interface objects can be enabled, disabled, checked, and/or cleared through the `COleCmdUI` object.
 
-##  <a name="enable"></a>  COleCmdUI::Enable
+## <a name="enable"></a> COleCmdUI::Enable
 
 Call this function to set the command flag of the `COleCmdUI` object to OLECOMDF_ENABLED, which tells the interface the command is available and enabled, or to clear the command flag.
 
-```
+```cpp
 virtual void Enable(BOOL bOn);
 ```
 
@@ -88,11 +89,11 @@ virtual void Enable(BOOL bOn);
 *bOn*<br/>
 Indicates whether the command associated with the `COleCmdUI` object should be enabled or disabled. Nonzero enables the command; 0 disables the command.
 
-##  <a name="setcheck"></a>  COleCmdUI::SetCheck
+## <a name="setcheck"></a> COleCmdUI::SetCheck
 
 Call this function to set the state of an on/off toggle command.
 
-```
+```cpp
 virtual void SetCheck(int nCheck);
 ```
 
@@ -107,11 +108,11 @@ A value determining the state to set an on/off toggle command. Values are:
 |**2**|Sets the command to indeterminate; the state cannot be determined because the attribute of this command is in both on and off states in the relevant selection.|
 |any other value|Sets the command to off.|
 
-##  <a name="settext"></a>  COleCmdUI::SetText
+## <a name="settext"></a> COleCmdUI::SetText
 
 Call this function to return a text name or status string for a command.
 
-```
+```cpp
 virtual void SetText(LPCTSTR lpszText);
 ```
 
@@ -120,8 +121,7 @@ virtual void SetText(LPCTSTR lpszText);
 *lpszText*<br/>
 A pointer to the text to be used with the command.
 
-## See Also
+## See also
 
 [CCmdUI Class](../../mfc/reference/ccmdui-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

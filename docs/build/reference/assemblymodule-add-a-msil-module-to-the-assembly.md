@@ -1,60 +1,59 @@
 ---
-title: "/ASSEMBLYMODULE (Add a MSIL Module to the Assembly)"
-ms.date: "11/04/2016"
+description: "Learn more about: /ASSEMBLYMODULE (Add an MSIL module to the assembly)"
+title: "/ASSEMBLYMODULE (Add an MSIL module to the assembly)"
+ms.date: 05/11/2022
 f1_keywords: ["/assemblymodule", "VC.Project.VCLinkerTool.AddModuleNamesToAssembly"]
 helpviewer_keywords: ["ASSEMBLYMODULE linker option", "assemblies [C++], adding modules to", "assemblies [C++]", "/ASSEMBLYMODULE linker option", "-ASSEMBLYMODULE linker option"]
 ms.assetid: 67357da8-e4b6-49fd-932c-329a5777f143
 ---
-# /ASSEMBLYMODULE (Add a MSIL Module to the Assembly)
+# `/ASSEMBLYMODULE` (Add an MSIL module to the assembly)
 
-```
-/ASSEMBLYMODULE:filename
-```
+## Syntax
 
-## Arguments
+> **`/ASSEMBLYMODULE:`*`filename`***
 
-*filename*<br/>
+### Arguments
+
+*`filename`*\
 The module you want to include in this assembly.
 
 ## Remarks
 
-The /ASSEMBLYMODULE option allows you to add a module reference to an assembly. Type information in the module will not be available to the assembly program that added the module reference. However, type information in the module will be available to any program that references the assembly.
+The **`/ASSEMBLYMODULE`** linker option allows you to add a module reference to an assembly. Type information in the module won't be available to the assembly program that added the module reference. However, type information in the module will be available to any program that references the assembly.
 
-Use [#using](../../preprocessor/hash-using-directive-cpp.md) to both add a module reference to an assembly and make the module's type information available to the assembly program.
+Use [`#using`](../../preprocessor/hash-using-directive-cpp.md) to both add a module reference to an assembly and make the module's type information available to the assembly program.
 
 For example, consider the following scenario:
 
-1. Create a module with [/LN](../../build/reference/ln-create-msil-module.md).
+1. Create a module with [`/LN`](ln-create-msil-module.md).
 
-1. Use /ASSEMBLYMODULE in a different project to include the module in the current compilation, which will create an assembly. This project will not reference the module with `#using`.
+1. Use **`/ASSEMBLYMODULE`** in a different project to include the module in the current compilation, which creates an assembly. This project won't reference the module with `#using`.
 
 1. Any project that references this assembly can now also use types from the module.
 
 Other linker options that affect assembly generation are:
 
-- [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)
+- [`/ASSEMBLYDEBUG`](assemblydebug-add-debuggableattribute.md)
 
-- [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)
+- [`/ASSEMBLYLINKRESOURCE`](assemblylinkresource-link-to-dotnet-framework-resource.md)
 
-- [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+- [`/ASSEMBLYRESOURCE`](assemblyresource-embed-a-managed-resource.md)
 
-- [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)
+- [`/DELAYSIGN`](delaysign-partially-sign-an-assembly.md)
 
-- [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
+- [`/NOASSEMBLY`](noassembly-create-a-msil-module.md)
 
-- [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+- [`/KEYFILE`](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
 
-- [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+- [`/KEYCONTAINER`](keycontainer-specify-a-key-container-to-sign-an-assembly.md)
 
-The Visual C++ linker accepts .netmodule files as input and the output file produced by the linker will be an assembly or .netmodule with no run-time dependence on any of the .netmodules that were input to the linker.  For more information, see [.netmodule Files as Linker Input](../../build/reference/netmodule-files-as-linker-input.md).
+The MSVC linker accepts *`.netmodule`* files as input and the output file produced by the linker will be an assembly or *`.netmodule`* file with no run-time dependence on any of the *`.netmodule`* files that were input to the linker. For more information, see [`.netmodule` files as linker input](netmodule-files-as-linker-input.md).
 
 ### To set this linker option in the Visual Studio development environment
 
-1. Open the project's **Property Pages** dialog box. For details, see [Setting Visual C++ Project Properties](../../ide/working-with-project-properties.md).
+1. Open the project's **Property Pages** dialog box. For details, see [Set C++ compiler and build properties in Visual Studio](../working-with-project-properties.md).
 
-1. Click the **Linker** folder.
-
-1. Click the **Input** property page.
+1. Select the **Configuration Properties** > **Linker** > **Input** property page.
 
 1. Modify the **Add Module to Assembly** property.
 
@@ -62,7 +61,7 @@ The Visual C++ linker accepts .netmodule files as input and the output file prod
 
 - See <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AddModuleNamesToAssembly%2A>.
 
-## See Also
+## See also
 
-[Setting Linker Options](../../build/reference/setting-linker-options.md)<br/>
-[Linker Options](../../build/reference/linker-options.md)
+[MSVC linker reference](linking.md)\
+[MSVC linker options](linker-options.md)

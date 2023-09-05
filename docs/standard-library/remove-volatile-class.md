@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: remove_volatile Class"
 title: "remove_volatile Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::remove_volatile"]
@@ -21,7 +22,7 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to modify.
 
 ## Remarks
@@ -58,5 +59,5 @@ remove_volatile_t<volatile int> == int
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_volatile Class](../standard-library/add-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_volatile Class](../standard-library/add-volatile-class.md)

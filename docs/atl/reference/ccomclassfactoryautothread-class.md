@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComClassFactoryAutoThread Class"
 title: "CComClassFactoryAutoThread Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComClassFactoryAutoThread", "ATLCOM/ATL::CComClassFactoryAutoThread", "ATLCOM/ATL::CComClassFactoryAutoThread::CreateInstance", "ATLCOM/ATL::CComClassFactoryAutoThread::LockServer"]
@@ -7,10 +8,10 @@ ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
 ---
 # CComClassFactoryAutoThread Class
 
-This class implements the [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interface, and allows objects to be created in multiple apartments.
+This class implements the [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) interface, and allows objects to be created in multiple apartments.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -51,7 +52,7 @@ ATL objects normally acquire a class factory by deriving from [CComCoClass](../.
 
 **Header:** atlcom.h
 
-##  <a name="createinstance"></a>  CComClassFactoryAutoThread::CreateInstance
+## <a name="createinstance"></a> CComClassFactoryAutoThread::CreateInstance
 
 Creates an object of the specified CLSID and retrieves an interface pointer to this object.
 
@@ -81,7 +82,7 @@ A standard HRESULT value.
 
 If your module derives from [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` first selects a thread to create the object in the associated apartment.
 
-##  <a name="lockserver"></a>  CComClassFactoryAutoThread::LockServer
+## <a name="lockserver"></a> CComClassFactoryAutoThread::LockServer
 
 Increments and decrements the module lock count by calling `_Module::Lock` and `_Module::Unlock`, respectively.
 
@@ -104,9 +105,9 @@ When using `CComClassFactoryAutoThread`, `_Module` typically refers to the globa
 
 Calling `LockServer` allows a client to hold onto a class factory so that multiple objects can be quickly created.
 
-## See Also
+## See also
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
 [CComClassFactory2 Class](../../atl/reference/ccomclassfactory2-class.md)<br/>
 [CComClassFactorySingleton Class](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
 [CComObjectRootEx Class](../../atl/reference/ccomobjectrootex-class.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: WM_ Messages: S"
 title: "WM_ Messages: S"
 ms.date: "11/04/2016"
 f1_keywords: ["ON_WM_SYSDEADCHAR", "ON_WM_SYSKEYDOWN", "ON_WM_STYLECHANGING", "ON_WM_STYLECHANGED", "ON_WM_SPOOLERSTATUS", "ON_WM_SYSCHAR", "ON_WM_SETFOCUS", "ON_WM_SIZE", "ON_WM_SIZING", "ON_WM_SETCURSOR", "ON_WM_SYSCOMMAND", "ON_WM_SETTINGCHANGE", "ON_WM_SHOWWINDOW", "ON_WM_SYSKEYUP", "ON_WM_SIZECLIPBOARD", "ON_WM_SYSCOLORCHANGE"]
@@ -28,8 +29,7 @@ The following map entries correspond to the function prototypes.
 |ON_WM_SYSKEYDOWN( )|afx_msg void [OnSysKeyDown](../../mfc/reference/cwnd-class.md#onsyskeydown)( UINT, UINT, UINT );|
 |ON_WM_SYSKEYUP( )|afx_msg void [OnSysKeyUp](../../mfc/reference/cwnd-class.md#onsyskeyup)( UINT, UINT, UINT );|
 
-## See Also
+## See also
 
 [Message Maps](../../mfc/reference/message-maps-mfc.md)<br/>
 [Handlers for WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
-

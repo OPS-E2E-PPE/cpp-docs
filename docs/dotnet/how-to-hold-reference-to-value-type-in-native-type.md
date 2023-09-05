@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Hold Reference to Value Type in Native Type"
 title: "How to: Hold Reference to Value Type in Native Type"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -11,7 +12,7 @@ Use `gcroot` on the boxed type to hold a reference to a value type in a native t
 
 ## Example
 
-```
+```cpp
 // reference_to_value_in_native.cpp
 // compile with: /clr
 #using <mscorlib.dll>
@@ -41,6 +42,6 @@ int main() {
 String in V: Hello
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

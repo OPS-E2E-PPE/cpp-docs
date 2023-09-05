@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3867"
 title: "Compiler Error C3867"
 ms.date: "11/04/2016"
 f1_keywords: ["C3867"]
@@ -11,15 +12,15 @@ ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
 
 You tried to take the address of a member function without qualifying the member function with its class name and the address-of operator.
 
-This error can also be generated as a result of compiler conformance work that was done for Visual C++ 2005: enhanced pointer-to-member conformance. Code that compiled prior to Visual C++ 2005 will now generate C3867.
+This error can also be generated as a result of compiler conformance work that was done for Visual Studio 2005: enhanced pointer-to-member conformance. Code that compiled prior to Visual Studio 2005 will now generate C3867.
 
-## Example
+## Examples
 
 C3867 can be issued from the compiler with a misleading suggested resolution. Whenever possible, use the most derived class.
 
 The following sample generates C3867 and shows how to fix it.
 
-```
+```cpp
 // C3867_1.cpp
 // compile with: /c
 struct Base {
@@ -37,11 +38,9 @@ void Derived::Bar() {
 }
 ```
 
-## Example
-
 The following sample generates C3867 and shows how to fix it.
 
-```
+```cpp
 // C3867_2.cpp
 #include<stdio.h>
 
@@ -69,11 +68,9 @@ int main() {
 }
 ```
 
-## Example
-
 The following sample generates C3867 and shows how to fix it.
 
-```
+```cpp
 // C3867_3.cpp
 class X {
 public:
@@ -88,11 +85,9 @@ int main() {
 }
 ```
 
-## Example
-
 The following sample generates C3867.
 
-```
+```cpp
 // C3867_4.cpp
 // compile with: /c
 class A {
@@ -112,11 +107,9 @@ public:
 };
 ```
 
-## Example
-
 The following sample generates C3867.
 
-```
+```cpp
 // C3867_5.cpp
 // compile with: /EHsc
 #include <iostream>

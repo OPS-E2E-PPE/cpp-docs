@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4212"
 title: "Compiler Warning (level 4) C4212"
 ms.date: "11/04/2016"
 f1_keywords: ["C4212"]
@@ -13,7 +14,7 @@ The function prototype has a variable number of arguments. The function definiti
 
 The following sample generates C4212:
 
-```
+```c
 // C4212.c
 // compile with: /W4 /Ze /c
 void f(int , ...);

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CD2DBitmapBrush Class"
 title: "CD2DBitmapBrush Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CD2DBitmapBrush", "AFXRENDERTARGET/CD2DBitmapBrush", "AFXRENDERTARGET/CD2DBitmapBrush::CD2DBitmapBrush", "AFXRENDERTARGET/CD2DBitmapBrush::Attach", "AFXRENDERTARGET/CD2DBitmapBrush::Create", "AFXRENDERTARGET/CD2DBitmapBrush::Destroy", "AFXRENDERTARGET/CD2DBitmapBrush::Detach", "AFXRENDERTARGET/CD2DBitmapBrush::Get", "AFXRENDERTARGET/CD2DBitmapBrush::GetBitmap", "AFXRENDERTARGET/CD2DBitmapBrush::GetExtendModeX", "AFXRENDERTARGET/CD2DBitmapBrush::GetExtendModeY", "AFXRENDERTARGET/CD2DBitmapBrush::GetInterpolationMode", "AFXRENDERTARGET/CD2DBitmapBrush::SetBitmap", "AFXRENDERTARGET/CD2DBitmapBrush::SetExtendModeX", "AFXRENDERTARGET/CD2DBitmapBrush::SetExtendModeY", "AFXRENDERTARGET/CD2DBitmapBrush::SetInterpolationMode", "AFXRENDERTARGET/CD2DBitmapBrush::CommonInit", "AFXRENDERTARGET/CD2DBitmapBrush::m_pBitmap", "AFXRENDERTARGET/CD2DBitmapBrush::m_pBitmapBrush", "AFXRENDERTARGET/CD2DBitmapBrush::m_pBitmapBrushProperties"]
@@ -76,7 +77,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 **Header:** afxrendertarget.h
 
-##  <a name="dtor"></a>  CD2DBitmapBrush::~CD2DBitmapBrush
+## <a name="dtor"></a> CD2DBitmapBrush::~CD2DBitmapBrush
 
 The destructor. Called when a D2D bitmap brush object is being destroyed.
 
@@ -84,11 +85,11 @@ The destructor. Called when a D2D bitmap brush object is being destroyed.
 virtual ~CD2DBitmapBrush();
 ```
 
-##  <a name="attach"></a>  CD2DBitmapBrush::Attach
+## <a name="attach"></a> CD2DBitmapBrush::Attach
 
 Attaches existing resource interface to the object
 
-```
+```cpp
 void Attach(ID2D1BitmapBrush* pResource);
 ```
 
@@ -97,7 +98,7 @@ void Attach(ID2D1BitmapBrush* pResource);
 *pResource*<br/>
 Existing resource interface. Cannot be NULL
 
-##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush
+## <a name="cd2dbitmapbrush"></a> CD2DBitmapBrush::CD2DBitmapBrush
 
 Constructs a CD2DBitmapBrush object.
 
@@ -152,11 +153,11 @@ Destination size of the bitmap.
 *lpszImagePath*<br/>
 Pointer to a null-terminated string that contains the name of file.
 
-##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit
+## <a name="commoninit"></a> CD2DBitmapBrush::CommonInit
 
 Initializes the object
 
-```
+```cpp
 void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```
 
@@ -165,7 +166,7 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 *pBitmapBrushProperties*<br/>
 A pointer to the bitmap brush properties.
 
-##  <a name="create"></a>  CD2DBitmapBrush::Create
+## <a name="create"></a> CD2DBitmapBrush::Create
 
 Creates a CD2DBitmapBrush.
 
@@ -182,7 +183,7 @@ A pointer to the render target.
 
 If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.
 
-##  <a name="destroy"></a>  CD2DBitmapBrush::Destroy
+## <a name="destroy"></a> CD2DBitmapBrush::Destroy
 
 Destroys a CD2DBitmapBrush object.
 
@@ -190,7 +191,7 @@ Destroys a CD2DBitmapBrush object.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DBitmapBrush::Detach
+## <a name="detach"></a> CD2DBitmapBrush::Detach
 
 Detaches resource interface from the object
 
@@ -202,7 +203,7 @@ ID2D1BitmapBrush* Detach();
 
 Pointer to detached resource interface.
 
-##  <a name="get"></a>  CD2DBitmapBrush::Get
+## <a name="get"></a> CD2DBitmapBrush::Get
 
 Returns ID2D1BitmapBrush interface
 
@@ -214,7 +215,7 @@ ID2D1BitmapBrush* Get();
 
 Pointer to an ID2D1BitmapBrush interface or NULL if object is not initialized yet.
 
-##  <a name="getbitmap"></a>  CD2DBitmapBrush::GetBitmap
+## <a name="getbitmap"></a> CD2DBitmapBrush::GetBitmap
 
 Gets the bitmap source that this brush uses to paint
 
@@ -226,7 +227,7 @@ CD2DBitmap* GetBitmap();
 
 Pointer to an CD2DBitmap object or NULL if object is not initialized yet.
 
-##  <a name="getextendmodex"></a>  CD2DBitmapBrush::GetExtendModeX
+## <a name="getextendmodex"></a> CD2DBitmapBrush::GetExtendModeX
 
 Gets the method by which the brush horizontally tiles those areas that extend past its bitmap
 
@@ -238,7 +239,7 @@ D2D1_EXTEND_MODE GetExtendModeX() const;
 
 A value that specifies how the brush horizontally tiles those areas that extend past its bitmap
 
-##  <a name="getextendmodey"></a>  CD2DBitmapBrush::GetExtendModeY
+## <a name="getextendmodey"></a> CD2DBitmapBrush::GetExtendModeY
 
 Gets the method by which the brush vertically tiles those areas that extend past its bitmap
 
@@ -250,7 +251,7 @@ D2D1_EXTEND_MODE GetExtendModeY() const;
 
 A value that specifies how the brush vertically tiles those areas that extend past its bitmap
 
-##  <a name="getinterpolationmode"></a>  CD2DBitmapBrush::GetInterpolationMode
+## <a name="getinterpolationmode"></a> CD2DBitmapBrush::GetInterpolationMode
 
 Gets the interpolation method used when the brush bitmap is scaled or rotated
 
@@ -262,7 +263,7 @@ D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;
 
 The interpolation method used when the brush bitmap is scaled or rotated
 
-##  <a name="m_pbitmap"></a>  CD2DBitmapBrush::m_pBitmap
+## <a name="m_pbitmap"></a> CD2DBitmapBrush::m_pBitmap
 
 Stores a pointer to a CD2DBitmap object.
 
@@ -270,7 +271,7 @@ Stores a pointer to a CD2DBitmap object.
 CD2DBitmap* m_pBitmap;
 ```
 
-##  <a name="m_pbitmapbrush"></a>  CD2DBitmapBrush::m_pBitmapBrush
+## <a name="m_pbitmapbrush"></a> CD2DBitmapBrush::m_pBitmapBrush
 
 Stores a pointer to an ID2D1BitmapBrush object.
 
@@ -278,7 +279,7 @@ Stores a pointer to an ID2D1BitmapBrush object.
 ID2D1BitmapBrush* m_pBitmapBrush;
 ```
 
-##  <a name="m_pbitmapbrushproperties"></a>  CD2DBitmapBrush::m_pBitmapBrushProperties
+## <a name="m_pbitmapbrushproperties"></a> CD2DBitmapBrush::m_pBitmapBrushProperties
 
 Bitmap brush properties.
 
@@ -286,7 +287,7 @@ Bitmap brush properties.
 D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;
 ```
 
-##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush*
+## <a name="operator_id2d1bitmapbrush_star"></a> CD2DBitmapBrush::operator ID2D1BitmapBrush*
 
 Returns ID2D1BitmapBrush interface
 
@@ -298,11 +299,11 @@ operator ID2D1BitmapBrush*();
 
 Pointer to an ID2D1BitmapBrush interface or NULL if object is not initialized yet.
 
-##  <a name="setbitmap"></a>  CD2DBitmapBrush::SetBitmap
+## <a name="setbitmap"></a> CD2DBitmapBrush::SetBitmap
 
 Specifies the bitmap source that this brush uses to paint
 
-```
+```cpp
 void SetBitmap(CD2DBitmap* pBitmap);
 ```
 
@@ -311,11 +312,11 @@ void SetBitmap(CD2DBitmap* pBitmap);
 *pBitmap*<br/>
 The bitmap source used by the brush
 
-##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX
+## <a name="setextendmodex"></a> CD2DBitmapBrush::SetExtendModeX
 
 Specifies how the brush horizontally tiles those areas that extend past its bitmap
 
-```
+```cpp
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```
 
@@ -324,11 +325,11 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 *extendModeX*<br/>
 A value that specifies how the brush horizontally tiles those areas that extend past its bitmap
 
-##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY
+## <a name="setextendmodey"></a> CD2DBitmapBrush::SetExtendModeY
 
 Specifies how the brush vertically tiles those areas that extend past its bitmap
 
-```
+```cpp
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```
 
@@ -337,11 +338,11 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 *extendModeY*<br/>
 A value that specifies how the brush vertically tiles those areas that extend past its bitmap
 
-##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode
+## <a name="setinterpolationmode"></a> CD2DBitmapBrush::SetInterpolationMode
 
 Specifies the interpolation mode used when the brush bitmap is scaled or rotated
 
-```
+```cpp
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```
 
@@ -350,6 +351,6 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 *interpolationMode*<br/>
 The interpolation mode used when the brush bitmap is scaled or rotated
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CPropExchange Class"
 title: "CPropExchange Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CPropExchange", "AFXCTL/CPropExchange", "AFXCTL/CPropExchange::ExchangeBlobProp", "AFXCTL/CPropExchange::ExchangeFontProp", "AFXCTL/CPropExchange::ExchangePersistentProp", "AFXCTL/CPropExchange::ExchangeProp", "AFXCTL/CPropExchange::ExchangeVersion", "AFXCTL/CPropExchange::GetVersion", "AFXCTL/CPropExchange::IsAsynchronous", "AFXCTL/CPropExchange::IsLoading"]
@@ -54,7 +55,7 @@ For more information on using `CPropExchange`, see the article [MFC ActiveX Cont
 
 **Header:** afxctl.h
 
-##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp
+## <a name="exchangeblobprop"></a> CPropExchange::ExchangeBlobProp
 
 Serializes a property that stores binary large object (BLOB) data.
 
@@ -86,7 +87,7 @@ The property's value is read from or written to, as appropriate, the variable re
 
 The functions `CArchivePropExchange::ExchangeBlobProp`, `CResetPropExchange::ExchangeBlobProp`, and `CPropsetPropExchange::ExchangeBlobProp` override this pure virtual function.
 
-##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp
+## <a name="exchangefontprop"></a> CPropExchange::ExchangeFontProp
 
 Exchanges a font property between a storage medium and the control.
 
@@ -107,7 +108,7 @@ The name of the property being exchanged.
 A reference to a [CFontHolder](../../mfc/reference/cfontholder-class.md) object that contains the font property.
 
 *pFontDesc*<br/>
-A pointer to a [FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc) structure containing values for initializing the default state of the font property when *pFontDispAmbient* is NULL.
+A pointer to a [FONTDESC](/windows/win32/api/olectl/ns-olectl-fontdesc) structure containing values for initializing the default state of the font property when *pFontDispAmbient* is NULL.
 
 *pFontDispAmbient*<br/>
 A pointer to the `IFontDisp` interface of a font to be used for initializing the default state of the font property.
@@ -122,7 +123,7 @@ If the font property is being loaded from the medium to the control, the font's 
 
 The functions `CArchivePropExchange::ExchangeFontProp`, `CResetPropExchange::ExchangeFontProp`, and `CPropsetPropExchange::ExchangeFontProp` override this pure virtual function.
 
-##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp
+## <a name="exchangepersistentprop"></a> CPropExchange::ExchangePersistentProp
 
 Exchanges a property between the control and a file.
 
@@ -158,7 +159,7 @@ If the property is being loaded from the file to the control, the property is cr
 
 The functions `CArchivePropExchange::ExchangePersistentProp`, `CResetPropExchange::ExchangePersistentProp`, and `CPropsetPropExchange::ExchangePersistentProp` override this pure virtual function.
 
-##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp
+## <a name="exchangeprop"></a> CPropExchange::ExchangeProp
 
 Exchanges a property between a storage medium and the control.
 
@@ -180,13 +181,13 @@ A symbol specifying the type of the property being exchanged. Possible values ar
 
 |Symbol|Property Type|
 |------------|-------------------|
-|VT_I2|**short**|
-|VT_I4|**long**|
+|VT_I2|**`short`**|
+|VT_I4|**`long`**|
 |VT_BOOL|**BOOL**|
 |VT_BSTR|`CString`|
 |VT_CY|**CY**|
-|VT_R4|**float**|
-|VT_R8|**double**|
+|VT_R4|**`float`**|
+|VT_R8|**`double`**|
 
 *pvProp*<br/>
 A pointer to the property's value.
@@ -204,7 +205,7 @@ If the property is being loaded from the medium to the control, the property's v
 
 The functions `CArchivePropExchange::ExchangeProp`, `CResetPropExchange::ExchangeProp`, and `CPropsetPropExchange::ExchangeProp` override this pure virtual function.
 
-##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion
+## <a name="exchangeversion"></a> CPropExchange::ExchangeVersion
 
 Called by the framework to handle persistence of a version number.
 
@@ -230,7 +231,7 @@ Indicates whether to convert persistent data to the current version or keep it a
 
 Nonzero if the function succeeded; 0 otherwise.
 
-##  <a name="getversion"></a>  CPropExchange::GetVersion
+## <a name="getversion"></a> CPropExchange::GetVersion
 
 Call this function to retrieve the version number of the control.
 
@@ -242,7 +243,7 @@ DWORD GetVersion();
 
 The version number of the control.
 
-##  <a name="isasynchronous"></a>  CPropExchange::IsAsynchronous
+## <a name="isasynchronous"></a> CPropExchange::IsAsynchronous
 
 Determines if property exchanges are done asynchronously.
 
@@ -254,7 +255,7 @@ BOOL IsAsynchronous();
 
 Returns TRUE if properties are exchanged asynchronously, otherwise FALSE.
 
-##  <a name="isloading"></a>  CPropExchange::IsLoading
+## <a name="isloading"></a> CPropExchange::IsLoading
 
 Call this function to determine whether properties are being loaded to the control or saved from it.
 
@@ -266,8 +267,7 @@ BOOL IsLoading();
 
 Nonzero if properties are being loaded; otherwise 0.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Multithreading: Creating Worker Threads in MFC"
 title: "Multithreading: Creating Worker Threads in MFC"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["multithreading [C++], worker threads", "background tasks [C++]", "threading [C++], worker threads", "worker threads [C++]", "threading [C++], creating threads", "threading [MFC], worker threads", "threading [C++], user input not required"]
@@ -16,7 +17,7 @@ A worker thread is commonly used to handle background tasks that the user should
 
 Creating a worker thread is a relatively simple task. Only two steps are required to get your thread running: implementing the controlling function and starting the thread. It is not necessary to derive a class from [CWinThread](../mfc/reference/cwinthread-class.md). You can derive a class if you need a special version of `CWinThread`, but it is not required for most simple worker threads. You can use `CWinThread` without modification.
 
-##  <a name="_core_starting_the_thread"></a> Starting the Thread
+## <a name="_core_starting_the_thread"></a> Starting the Thread
 
 There are two overloaded versions of `AfxBeginThread`: one that can only create worker threads, and one that can create both user-interface threads and worker threads. To begin execution of your worker thread using the first overload, call [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), providing the following information:
 
@@ -24,21 +25,21 @@ There are two overloaded versions of `AfxBeginThread`: one that can only create 
 
 - The parameter to be passed to the controlling function.
 
-- (Optional) The desired priority of the thread. The default is normal priority. For more information about the available priority levels, see [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) in the Windows SDK.
+- (Optional) The desired priority of the thread. The default is normal priority. For more information about the available priority levels, see [SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) in the Windows SDK.
 
 - (Optional) The desired stack size for the thread. The default is the same size stack as the creating thread.
 
 - (Optional) CREATE_SUSPENDED if you want the thread to be created in a suspended state. The default is 0, or start the thread normally.
 
-- (Optional) The desired security attributes. The default is the same access as the parent thread. For more information about the format of this security information, see [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) in the Windows SDK.
+- (Optional) The desired security attributes. The default is the same access as the parent thread. For more information about the format of this security information, see [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) in the Windows SDK.
 
 `AfxBeginThread` creates and initializes a `CWinThread` object for you, starts it, and returns its address so you can refer to it later. Checks are made throughout the procedure to make sure all objects are deallocated properly should any part of the creation fail.
 
-##  <a name="_core_implementing_the_controlling_function"></a> Implementing the Controlling Function
+## <a name="_core_implementing_the_controlling_function"></a> Implementing the Controlling Function
 
 The controlling function defines the thread. When this function is entered, the thread starts, and when it exits, the thread terminates. This function should have the following prototype:
 
-```
+```cpp
 UINT MyControllingFunction( LPVOID pParam );
 ```
 
@@ -48,11 +49,11 @@ When the function terminates, it should return a UINT value indicating the reaso
 
 There are some restrictions on what you can do in a multithreaded program written with the MFC library. For descriptions of these restrictions and other tips about using threads, see [Multithreading: Programming Tips](multithreading-programming-tips.md).
 
-##  <a name="_core_controlling_function_example"></a> Controlling Function Example
+## <a name="_core_controlling_function_example"></a> Controlling Function Example
 
 The following example shows how to define a controlling function and use it from another portion of the program.
 
-```
+```cpp
 UINT MyThreadProc( LPVOID pParam )
 {
     CMyObject* pObject = (CMyObject*)pParam;
@@ -81,6 +82,6 @@ AfxBeginThread(MyThreadProc, pNewObject);
 
 - [Multithreading: Creating User-Interface Threads](multithreading-creating-user-interface-threads.md)
 
-## See Also
+## See also
 
 [Multithreading with C++ and MFC](multithreading-with-cpp-and-mfc.md)

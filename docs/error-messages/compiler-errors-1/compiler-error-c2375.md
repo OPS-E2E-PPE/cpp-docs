@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2375"
 title: "Compiler Error C2375"
 ms.date: "11/04/2016"
 f1_keywords: ["C2375"]
@@ -13,7 +14,7 @@ The function is already declared with a different linkage specifier.
 
 The following sample generates C2375:
 
-```
+```cpp
 // C2375.cpp
 // compile with: /Za /c
 extern void func( void );

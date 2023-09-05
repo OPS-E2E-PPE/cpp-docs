@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4441"
 title: "Compiler Warning (level 1) C4441"
 ms.date: "11/04/2016"
 f1_keywords: ["C4441"]
@@ -15,7 +16,7 @@ Member functions in managed user-defined types and global function generics must
 
 The following sample generates C4441.
 
-```
+```cpp
 // C4441.cpp
 // compile with: /clr /W1 /c
 generic <class ItemType>

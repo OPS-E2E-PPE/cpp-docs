@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Function Templates"
 title: "Function Templates"
-ms.date: "11/04/2016"
+ms.date: "07/15/2019"
 helpviewer_keywords: ["function templates", "templates, function", "function templates, about function templates"]
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
 ---
@@ -19,7 +20,7 @@ int main() {
 }
 ```
 
-This code defines a family of functions that swap the values of the arguments. From this template, you can generate functions that will swap **int** and **long** types and also user-defined types. `MySwap` will even swap classes if the class's copy constructor and assignment operator are properly defined.
+This code defines a family of functions that swap the values of the arguments. From this template, you can generate functions that will swap **`int`** and **`long`** types and also user-defined types. `MySwap` will even swap classes if the class's copy constructor and assignment operator are properly defined.
 
 In addition, the function template will prevent you from swapping objects of different types, because the compiler knows the types of the *a* and *b* parameters at compile time.
 
@@ -46,7 +47,7 @@ int main(int j) {
 }
 ```
 
-When the template argument is explicitly specified, normal implicit conversions are done to convert the function argument to the type of the corresponding function template parameters. In the above example, the compiler will convert `char j` to type **int**.
+When the template argument is explicitly specified, normal implicit conversions are done to convert the function argument to the type of the corresponding function template parameters. In the above example, the compiler will convert `j` to type **`char`**.
 
 ## See also
 

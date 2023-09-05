@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2735"
 title: "Compiler Error C2735"
 ms.date: "11/04/2016"
 f1_keywords: ["C2735"]
@@ -13,7 +14,7 @@ The keyword is invalid in this context.
 
 The following sample generates C2735:
 
-```
+```cpp
 // C2735.cpp
 void f(inline int){}   // C2735
 ```

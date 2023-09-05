@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CShellManager Class"
 title: "CShellManager Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CShellManager", "AFXSHELLMANAGER/CShellManager", "AFXSHELLMANAGER/CShellManager::CShellManager", "AFXSHELLMANAGER/CShellManager::BrowseForFolder", "AFXSHELLMANAGER/CShellManager::ConcatenateItem", "AFXSHELLMANAGER/CShellManager::CopyItem", "AFXSHELLMANAGER/CShellManager::CreateItem", "AFXSHELLMANAGER/CShellManager::FreeItem", "AFXSHELLMANAGER/CShellManager::GetItemCount", "AFXSHELLMANAGER/CShellManager::GetItemSize", "AFXSHELLMANAGER/CShellManager::GetNextItem", "AFXSHELLMANAGER/CShellManager::GetParentItem", "AFXSHELLMANAGER/CShellManager::ItemFromPath"]
@@ -54,7 +55,7 @@ You should not create a `CShellManager` object manually. It will be created auto
 
 **Header:** afxshellmanager.h
 
-##  <a name="browseforfolder"></a>  CShellManager::BrowseForFolder
+## <a name="browseforfolder"></a> CShellManager::BrowseForFolder
 
 Displays a dialog box that enables the user to select a shell folder.
 
@@ -83,7 +84,7 @@ BOOL BrowseForFolder(
 [in] The title for the dialog box.
 
 *ulFlags*<br/>
-[in] Flags specifying options for the dialog box. See [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) for the detailed description.
+[in] Flags specifying options for the dialog box. See [BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) for the detailed description.
 
 *piFolderImage*<br/>
 [out] A pointer to the integer value where the method writes the image index of the selected folder.
@@ -98,11 +99,11 @@ When you call this method, the application creates and shows a dialog box that e
 
 ### Example
 
-The following example demonstrates how to retrieve a reference to a `CShellManager` object by using the `CWinAppEx::GetShellManager` method and how to use the `BrowseForFolder` method. This code snippet is part of the [Explorer sample](../../visual-cpp-samples.md).
+The following example demonstrates how to retrieve a reference to a `CShellManager` object by using the `CWinAppEx::GetShellManager` method and how to use the `BrowseForFolder` method. This code snippet is part of the [Explorer sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]
 
-##  <a name="concatenateitem"></a>  CShellManager::ConcatenateItem
+## <a name="concatenateitem"></a> CShellManager::ConcatenateItem
 
 Creates a new list containing two PIDLs.
 
@@ -126,9 +127,9 @@ A pointer to the new item list if the function succeeds, otherwise NULL.
 
 ### Remarks
 
-This method creates a new [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) large enough to contain both *pidl1* and *pidl2*. It then copies *pidl1* and *pidl2* to the new list.
+This method creates a new [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) large enough to contain both *pidl1* and *pidl2*. It then copies *pidl1* and *pidl2* to the new list.
 
-##  <a name="copyitem"></a>  CShellManager::CopyItem
+## <a name="copyitem"></a> CShellManager::CopyItem
 
 Copies an item list.
 
@@ -149,7 +150,7 @@ A pointer to the newly created item list if successful; otherwise NULL.
 
 The newly created item list has the same size as the source item list.
 
-##  <a name="createitem"></a>  CShellManager::CreateItem
+## <a name="createitem"></a> CShellManager::CreateItem
 
 Creates a new PIDL.
 
@@ -166,7 +167,7 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 
 A pointer to the created item list if successful; otherwise NULL.
 
-##  <a name="cshellmanager"></a>  CShellManager::CShellManager
+## <a name="cshellmanager"></a> CShellManager::CShellManager
 
 Constructs a `CShellManager` object.
 
@@ -178,11 +179,11 @@ CShellManager();
 
 In most cases, you do not have to create a `CShellManager` directly. By default, the framework creates one for you. To get a pointer to the `CShellManager`, call [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager). If you do create a `CShellManager` manually, you must initialize it with the method [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager).
 
-##  <a name="freeitem"></a>  CShellManager::FreeItem
+## <a name="freeitem"></a> CShellManager::FreeItem
 
 Deletes an item list.
 
-```
+```cpp
 void FreeItem(LPITEMIDLIST pidl);
 ```
 
@@ -191,7 +192,7 @@ void FreeItem(LPITEMIDLIST pidl);
 *pidl*<br/>
 [in] An item list to delete.
 
-##  <a name="getitemcount"></a>  CShellManager::GetItemCount
+## <a name="getitemcount"></a> CShellManager::GetItemCount
 
 Returns the number of items in an item list.
 
@@ -208,7 +209,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 
 The number of items in the item list.
 
-##  <a name="getitemsize"></a>  CShellManager::GetItemSize
+## <a name="getitemsize"></a> CShellManager::GetItemSize
 
 Returns the size of an item list.
 
@@ -225,7 +226,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 
 The size of the item list.
 
-##  <a name="getnextitem"></a>  CShellManager::GetNextItem
+## <a name="getnextitem"></a> CShellManager::GetNextItem
 
 Retrieves the next item from a pointer to an item identifier list (PIDL).
 
@@ -246,7 +247,7 @@ A pointer to the next item in the list.
 
 If there are no more items in the list, this method returns NULL.
 
-##  <a name="getparentitem"></a>  CShellManager::GetParentItem
+## <a name="getparentitem"></a> CShellManager::GetParentItem
 
 Retrieves the parent of a pointer to an item identifier list (PIDL).
 
@@ -272,7 +273,7 @@ The level of the parent PIDL.
 
 The level of a PIDL is relative to the desktop. The desktop PIDL is considered to have a level of 0.
 
-##  <a name="itemfrompath"></a>  CShellManager::ItemFromPath
+## <a name="itemfrompath"></a> CShellManager::ItemFromPath
 
 Retrieves the pointer to an item identifier list (PIDL) from the item identified by a string path.
 
@@ -294,7 +295,7 @@ HRESULT ItemFromPath(
 
 Returns NOERROR if successful; an OLE-defined error value.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)

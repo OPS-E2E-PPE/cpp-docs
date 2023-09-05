@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3030"
 title: "Compiler Error C3030"
 ms.date: "11/04/2016"
 f1_keywords: ["C3030"]
@@ -13,7 +14,7 @@ You can only pass value parameters to certain clauses, such as the reduction cla
 
 The following sample generates C3030:
 
-```
+```cpp
 // C3030.cpp
 // compile with: /openmp /link vcomps.lib
 #include "omp.h"

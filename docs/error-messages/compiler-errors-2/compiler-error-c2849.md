@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2849"
 title: "Compiler Error C2849"
 ms.date: "11/04/2016"
 f1_keywords: ["C2849"]
@@ -13,7 +14,7 @@ A Visual C++ [interface](../../cpp/interface.md) cannot have a destructor.
 
 The following sample generates C2849:
 
-```
+```cpp
 // C2849.cpp
 // compile with: /c
 __interface C {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleDropSource Class"
 title: "COleDropSource Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COleDropSource", "AFXOLE/COleDropSource", "AFXOLE/COleDropSource::COleDropSource", "AFXOLE/COleDropSource::GiveFeedback", "AFXOLE/COleDropSource::OnBeginDrag", "AFXOLE/COleDropSource::QueryContinueDrag"]
@@ -37,9 +38,9 @@ The [COleDropTarget](../../mfc/reference/coledroptarget-class.md) class handles 
 
 To use a `COleDropSource` object, just call the constructor. This simplifies the process of determining what events, such as a mouse click, begin a drag operation using [COleDataSource::DoDragDrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::DoDragDrop](../../mfc/reference/coleclientitem-class.md#dodragdrop), or [COleServerItem::DoDragDrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) function. These functions will create a `COleDropSource` object for you. You might want to modify the default behavior of the `COleDropSource` overridable functions. These member functions will be called at the appropriate times by the framework.
 
-For more information on drag-and-drop operations using OLE, see the article [Drag and Drop (OLE)](../../mfc/drag-and-drop-ole.md).
+For more information on drag-and-drop operations using OLE, see the article [OLE drag and drop](../../mfc/drag-and-drop-ole.md).
 
-For more information, see [IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource) in the Windows SDK.
+For more information, see [IDropSource](/windows/win32/api/oleidl/nn-oleidl-idropsource) in the Windows SDK.
 
 ## Inheritance Hierarchy
 
@@ -53,7 +54,7 @@ For more information, see [IDropSource](/windows/desktop/api/oleidl/nn-oleidl-id
 
 **Header:** afxole.h
 
-##  <a name="coledropsource"></a>  COleDropSource::COleDropSource
+## <a name="coledropsource"></a> COleDropSource::COleDropSource
 
 Constructs a `COleDropSource` object.
 
@@ -61,7 +62,7 @@ Constructs a `COleDropSource` object.
 COleDropSource();
 ```
 
-##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback
+## <a name="givefeedback"></a> COleDropSource::GiveFeedback
 
 Called by the framework after calling [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) or [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).
 
@@ -90,11 +91,11 @@ Returns DRAGDROP_S_USEDEFAULTCURSORS if dragging is in progress, NOERROR if it i
 
 ### Remarks
 
-Override this function to provide feedback to the user about what would happen if a drop occurred at this point. The default implementation uses the OLE default cursors. For more information on drag-and-drop operations using OLE, see the article [Drag and Drop (OLE)](../../mfc/drag-and-drop-ole.md).
+Override this function to provide feedback to the user about what would happen if a drop occurred at this point. The default implementation uses the OLE default cursors. For more information on drag-and-drop operations using OLE, see the article [OLE drag and drop](../../mfc/drag-and-drop-ole.md).
 
-For more information, see [IDropSource::GiveFeedback](/windows/desktop/api/oleidl/nf-oleidl-idropsource-givefeedback), [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover), and [IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) in the Windows SDK.
+For more information, see [IDropSource::GiveFeedback](/windows/win32/api/oleidl/nf-oleidl-idropsource-givefeedback), [IDropTarget::DragOver](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover), and [IDropTarget::DragEnter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) in the Windows SDK.
 
-##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag
+## <a name="onbegindrag"></a> COleDropSource::OnBeginDrag
 
 Called by the framework when an event occurs that could begin a drag operation, such as pressing the left mouse button.
 
@@ -115,7 +116,7 @@ Nonzero if dragging is allowed, otherwise 0.
 
 Override this function if you want to modify the way the dragging process is started. The default implementation captures the mouse and stays in drag mode until the user clicks the left or right mouse button or hits ESC, at which time it releases the mouse.
 
-##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag
+## <a name="querycontinuedrag"></a> COleDropSource::QueryContinueDrag
 
 After dragging has begun, this function is called repeatedly by the framework until the drag operation is either canceled or completed.
 
@@ -145,10 +146,9 @@ The default implementation initiates the drop or cancels the drag as follows. It
 
 Because this function is called frequently, it should be optimized as much as possible.
 
-## See Also
+## See also
 
-[MFC Sample HIERSVR](../../visual-cpp-samples.md)<br/>
-[MFC Sample OCLIENT](../../visual-cpp-samples.md)<br/>
+[MFC Sample HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

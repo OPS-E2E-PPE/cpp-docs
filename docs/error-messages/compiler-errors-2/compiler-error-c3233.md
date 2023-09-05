@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3233"
 title: "Compiler Error C3233"
 ms.date: "11/04/2016"
 f1_keywords: ["C3233"]
@@ -13,7 +14,7 @@ It is not valid to constrain a generic parameter in more than one `where` clause
 
 The following sample generates C3233:
 
-```
+```cpp
 // C3233.cpp
 // compile with: /clr /LD
 

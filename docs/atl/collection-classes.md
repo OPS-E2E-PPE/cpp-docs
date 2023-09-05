@@ -1,5 +1,6 @@
 ---
-title: "ATL Collection Classes"
+description: "Learn more about: Collection Classes"
+title: "Collection classes in ATL"
 ms.date: "11/04/2016"
 ms.topic: "reference"
 helpviewer_keywords: ["collection classes"]
@@ -25,9 +26,9 @@ The following classes provide support for arrays, lists, maps, and also traits m
 
 - [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) This class provides methods, static functions, and typedefs useful when creating collections of COM interface pointers.
 
-- [CComSafeArray](../atl/reference/ccomsafearray-class.md) This class is a wrapper for the [SAFEARRAY Data Type](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) structure.
+- [CComSafeArray](../atl/reference/ccomsafearray-class.md) This class is a wrapper for the [SAFEARRAY Data Type](/windows/win32/api/oaidl/ns-oaidl-safearray) structure.
 
-- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) This class is a wrapper for a [SAFEARRAYBOUND](/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) structure.
+- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) This class is a wrapper for a [SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-safearraybound) structure.
 
 - [CComUnkArray](../atl/reference/ccomunkarray-class.md) This class stores **IUnknown** pointers and is designed to be used as a parameter to the [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) template class.
 
@@ -79,10 +80,9 @@ The following classes provide support for arrays, lists, maps, and also traits m
 
 ## Related Articles
 
-[ATL Collection Classes](../atl/atl-collection-classes.md)
+[ATL collection class overview](../atl/atl-collection-classes.md)
 
-## See Also
+## See also
 
 [Class Overview](../atl/atl-class-overview.md)<br/>
 [Collection Classes](../atl/atl-collection-classes.md)
-

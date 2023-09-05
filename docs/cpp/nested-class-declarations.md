@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Nested Class Declarations"
 title: "Nested Class Declarations"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["classes [C++], declaring", "declarations, class", "nested classes [C++]", "nested classes [C++], declaring", "declaring classes [C++]", "declarations, nested classes"]
@@ -49,7 +50,7 @@ Nested classes can directly use names, type names, names of static members, and 
 In the preceding `BufferedIO` example, the enumeration `IOError` can be accessed directly by member functions in the nested classes, `BufferedIO::BufferedInput` or `BufferedIO::BufferedOutput`, as shown in function `good`.
 
 > [!NOTE]
->  Nested classes declare only types within class scope. They do not cause contained objects of the nested class to be created. The preceding example declares two nested classes but does not declare any objects of these class types.
+> Nested classes declare only types within class scope. They do not cause contained objects of the nested class to be created. The preceding example declares two nested classes but does not declare any objects of these class types.
 
 An exception to the scope visibility of a nested class declaration is when a type name is declared together with a forward declaration.  In this case, the class name declared by the forward declaration is visible outside the enclosing class, with its scope defined to be the smallest enclosing non-class scope.  For example:
 
@@ -136,7 +137,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-The preceding declaration is equivalent to the previous one, but it uses a **typedef** name in place of the class names.
+The preceding declaration is equivalent to the previous one, but it uses a **`typedef`** name in place of the class names.
 
 ## Friend functions in nested classes
 

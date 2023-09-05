@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CD2DRoundedRect Class"
 title: "CD2DRoundedRect Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CD2DRoundedRect", "AFXRENDERTARGET/CD2DRoundedRect", "AFXRENDERTARGET/CD2DRoundedRect::CD2DRoundedRect"]
@@ -33,7 +34,7 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 
 **Header:** afxrendertarget.h
 
-##  <a name="cd2droundedrect"></a>  CD2DRoundedRect::CD2DRoundedRect
+## <a name="cd2droundedrect"></a> CD2DRoundedRect::CD2DRoundedRect
 
 Constructs a CD2DRoundedRect object from CD2DRectF object.
 
@@ -54,6 +55,6 @@ source rectangle
 *sizeRadius*<br/>
 radius size
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

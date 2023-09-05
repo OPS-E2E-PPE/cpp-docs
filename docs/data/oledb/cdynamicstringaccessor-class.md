@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDynamicStringAccessor Class"
 title: "CDynamicStringAccessor Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CDynamicStringAccessor", "CDynamicStringAccessor.GetString", "CDynamicStringAccessor::GetString", "CDynamicStringAccessor::SetString", "CDynamicStringAccessor.SetString"]
@@ -24,7 +25,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 ### Methods
 
-|||
+| Name | Description |
 |-|-|
 |[GetString](#getstring)|Retrieves the specified column data as a string.|
 |[SetString](#setstring)|Sets the specified column data as a string.|
@@ -37,7 +38,7 @@ The native type of column data in the data store does not matter; as long as the
 
 Use `CDynamicStringAccessor` methods to obtain column information. You use this column information to create an accessor dynamically at run time.
 
-The column information is stored in a buffer created and managed by this class. Obtain data from the buffer using [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md), or store it to the buffer using [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
+The column information is stored in a buffer created and managed by this class. Obtain data from the buffer using [GetString](#getstring), or store it to the buffer using [SetString](#setstring).
 
 For a discussion and examples of using the dynamic accessor classes, see [Using Dynamic Accessors](../../data/oledb/using-dynamic-accessors.md).
 
@@ -109,7 +110,7 @@ The second override form takes the column name as an ANSI string and the third o
 
 If _SECURE_ATL is defined to have a nonzero value, a runtime assertion failure will be generated if the input *data* string is longer than the maximum allowable length of the referenced data column. Otherwise, the input string will be truncated if it is longer than the maximum allowable length.
 
-## See Also
+## See also
 
 [OLE DB Consumer Templates](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB Consumer Templates Reference](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

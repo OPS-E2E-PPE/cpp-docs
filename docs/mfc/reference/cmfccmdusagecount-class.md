@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCCmdUsageCount Class"
 title: "CMFCCmdUsageCount Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCCmdUsageCount", "AFXCMDUSAGECOUNT/CMFCCmdUsageCount", "AFXCMDUSAGECOUNT/CMFCCmdUsageCount::AddCmd", "AFXCMDUSAGECOUNT/CMFCCmdUsageCount::GetCount", "AFXCMDUSAGECOUNT/CMFCCmdUsageCount::HasEnoughInformation", "AFXCMDUSAGECOUNT/CMFCCmdUsageCount::IsFreqeuntlyUsedCmd", "AFXCMDUSAGECOUNT/CMFCCmdUsageCount::Reset", "AFXCMDUSAGECOUNT/CMFCCmdUsageCount::Serialize", "AFXCMDUSAGECOUNT/CMFCCmdUsageCount::SetOptions"]
@@ -19,17 +20,15 @@ class CMFCCmdUsageCount : public CObject
 
 ### Public Constructors
 
-|||
-|-|-|
 |Name|Description|
+|-|-|
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|Default constructor.|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Destructor.|
 
 ### Public Methods
 
-|||
-|-|-|
 |Name|Description|
+|-|-|
 |[CMFCCmdUsageCount::AddCmd](#addcmd)|Increments by one the counter that is associated with the given command.|
 |[CMFCCmdUsageCount::GetCount](#getcount)|Retrieves the usage count that is associated with the given command ID.|
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Determines whether this object has collected the minimum amount of tracking data.|
@@ -40,9 +39,8 @@ class CMFCCmdUsageCount : public CObject
 
 ### Data Members
 
-|||
-|-|-|
 |Name|Description|
+|-|-|
 |`m_CmdUsage`|A `CMap` object that maps commands to their usage counts.|
 |`m_nMinUsagePercentage`|The minimum usage percentage for a command to be frequently used.|
 |`m_nStartCount`|The start counter that is used to determine whether this object has collected the minimum amount of tracking data.|
@@ -64,20 +62,18 @@ You can persist `CMFCCmdUsageCount` class data between runs of your program. Use
 
 **Header:** afxcmdusagecount.h
 
-##  <a name="addcmd"></a>  CMFCCmdUsageCount::AddCmd
+## <a name="addcmd"></a> CMFCCmdUsageCount::AddCmd
 
 Increments by one the counter that is associated with the given command.
 
-```
+```cpp
 void AddCmd(UINT uiCmd);
 ```
 
 ### Parameters
 
-|||
-|-|-|
-|Parameter|Description|
-|*uiCmd*|[in] Specifies the command counter to increment.|
+*uiCmd*\
+[in] Specifies the command counter to increment.
 
 ### Remarks
 
@@ -91,7 +87,7 @@ This method does nothing in the following cases:
 
 - *uiCmd* refers to a standard command (the global `IsStandardCommand` function returns a nonzero value).
 
-##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount
+## <a name="getcount"></a> CMFCCmdUsageCount::GetCount
 
 Retrieves the usage count that is associated with the given command ID.
 
@@ -101,16 +97,14 @@ UINT GetCount(UINT uiCmd) const;
 
 ### Parameters
 
-|||
-|-|-|
-|Parameter|Description|
-|*uiCmd*|[in] The ID of the command counter to retrieve.|
+*uiCmd*\
+[in] The ID of the command counter to retrieve.
 
 ### Return Value
 
 The usage count that is associated with the given command ID.
 
-##  <a name="hasenoughinformation"></a>  CMFCCmdUsageCount::HasEnoughInformation
+## <a name="hasenoughinformation"></a> CMFCCmdUsageCount::HasEnoughInformation
 
 Determines whether this object has received the minimum amount of tracking data.
 
@@ -128,7 +122,7 @@ This method returns a nonzero value if the total count, `m_nTotalUsage`, of all 
 
 This method is used by [CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands) to determine whether to show all available menu commands.
 
-##  <a name="isfreqeuntlyusedcmd"></a>  CMFCCmdUsageCount::IsFreqeuntlyUsedCmd
+## <a name="isfreqeuntlyusedcmd"></a> CMFCCmdUsageCount::IsFreqeuntlyUsedCmd
 
 Determines whether the given command is frequently used.
 
@@ -138,10 +132,8 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 
 ### Parameters
 
-|||
-|-|-|
-|Parameter|Description|
-|*uiCmd*|[in] Specifies the command to check.|
+*uiCmd*\
+[in] Specifies the command to check.
 
 ### Return Value
 
@@ -153,11 +145,11 @@ This method returns 0 if the total command usage, `m_nTotalUsage`, is 0. Otherwi
 
 [CMFCToolBar::IsCommandRarelyUsed](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused) uses this method to determine whether a command is rarely used.
 
-##  <a name="reset"></a>  CMFCCmdUsageCount::Reset
+## <a name="reset"></a> CMFCCmdUsageCount::Reset
 
 Clears the usage count of all commands.
 
-```
+```cpp
 void Reset();
 ```
 
@@ -165,7 +157,7 @@ void Reset();
 
 Call this method to clear all entries from the map structure of command counts, `m_CmdUsage`, and to reset the total command usage, `m_nTotalUsage`, counter to 0.
 
-##  <a name="serialize"></a>  CMFCCmdUsageCount::Serialize
+## <a name="serialize"></a> CMFCCmdUsageCount::Serialize
 
 Reads this object from an archive, or writes it to an archive.
 
@@ -175,10 +167,8 @@ virtual void Serialize(CArchive& ar);
 
 ### Parameters
 
-|||
-|-|-|
-|Parameter|Description|
-|*ar*|[in] A `CArchive` object to serialize from or to.|
+*ar*\
+[in] A `CArchive` object to serialize from or to.
 
 ### Remarks
 
@@ -186,7 +176,7 @@ This method serializes the map structure of command counts, `m_CmdUsage`, and th
 
 For serialization examples, see [Serialization: Serializing an Object](../../mfc/serialization-serializing-an-object.md).
 
-##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions
+## <a name="setoptions"></a> CMFCCmdUsageCount::SetOptions
 
 Sets the values of shared `CMFCCmdUsageCount` class data members.
 
@@ -198,11 +188,11 @@ static BOOL __stdcall SetOptions(
 
 ### Parameters
 
-|||
-|-|-|
-|Parameter|Description|
-|*nStartCount*|[in] The new initial count of all tracked commands.|
-|*nMinUsagePercentage*|[in] The new minimum usage percentage.|
+*nStartCount*\
+[in] The new initial count of all tracked commands.
+
+*nMinUsagePercentage*\
+[in] The new minimum usage percentage.
 
 ### Return Value
 
@@ -214,7 +204,7 @@ This method sets the shared `CMFCCmdUsageCount` class data members `m_nStartCoun
 
 In Debug builds this method generates an assertion failure if the *nMinUsagePercentage* parameter is larger than or equal to 100.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

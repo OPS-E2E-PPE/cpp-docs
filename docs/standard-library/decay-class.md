@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: decay Class"
 title: "decay Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::decay"]
@@ -21,12 +22,12 @@ using decay_t = typename decay<T>::type;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to modify.
 
 ## Remarks
 
-Use the decay template to produce the resulting type as if the type was passed by value as an argument. The template class member typedef `type` holds a modified type that is defined in the following stages:
+Use the decay template to produce the resulting type as if the type was passed by value as an argument. The class template member typedef `type` holds a modified type that is defined in the following stages:
 
 - The type `U` is defined as `remove_reference<T>::type`.
 
@@ -44,4 +45,4 @@ Use the decay template to produce the resulting type as if the type was passed b
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

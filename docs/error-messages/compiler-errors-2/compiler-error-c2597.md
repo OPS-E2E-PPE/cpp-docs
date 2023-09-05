@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2597"
 title: "Compiler Error C2597"
 ms.date: "11/04/2016"
 f1_keywords: ["C2597"]
@@ -19,7 +20,7 @@ Possible causes:
 
 1. The following sample generates C2597 and shows how to fix it:
 
-```
+```cpp
 // C2597.cpp
 // compile with: /c
 struct s1 {

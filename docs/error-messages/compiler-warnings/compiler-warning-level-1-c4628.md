@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4628"
 title: "Compiler Warning (level 1) C4628"
 ms.date: "11/04/2016"
 f1_keywords: ["C4628"]
@@ -15,7 +16,7 @@ This warning is off by default. See [Compiler Warnings That Are Off by Default](
 
 The following sample generates C4628:
 
-```
+```cpp
 // C4628.cpp
 // compile with: /WX
 #pragma warning(default : 4628)

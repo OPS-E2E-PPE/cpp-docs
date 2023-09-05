@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CStatusBarCtrl Class"
 title: "CStatusBarCtrl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CStatusBarCtrl", "AFXCMN/CStatusBarCtrl", "AFXCMN/CStatusBarCtrl::CStatusBarCtrl", "AFXCMN/CStatusBarCtrl::Create", "AFXCMN/CStatusBarCtrl::CreateEx", "AFXCMN/CStatusBarCtrl::DrawItem", "AFXCMN/CStatusBarCtrl::GetBorders", "AFXCMN/CStatusBarCtrl::GetIcon", "AFXCMN/CStatusBarCtrl::GetParts", "AFXCMN/CStatusBarCtrl::GetRect", "AFXCMN/CStatusBarCtrl::GetText", "AFXCMN/CStatusBarCtrl::GetTextLength", "AFXCMN/CStatusBarCtrl::GetTipText", "AFXCMN/CStatusBarCtrl::IsSimple", "AFXCMN/CStatusBarCtrl::SetBkColor", "AFXCMN/CStatusBarCtrl::SetIcon", "AFXCMN/CStatusBarCtrl::SetMinHeight", "AFXCMN/CStatusBarCtrl::SetParts", "AFXCMN/CStatusBarCtrl::SetSimple", "AFXCMN/CStatusBarCtrl::SetText", "AFXCMN/CStatusBarCtrl::SetTipText"]
@@ -68,7 +69,7 @@ For more information on using `CStatusBarCtrl`, see [Controls](../../mfc/control
 
 **Header:** afxcmn.h
 
-##  <a name="create"></a>  CStatusBarCtrl::Create
+## <a name="create"></a> CStatusBarCtrl::Create
 
 Creates a status bar control and attaches it to a `CStatusBarCtrl` object.
 
@@ -83,10 +84,10 @@ virtual BOOL Create(
 ### Parameters
 
 *dwStyle*<br/>
-Specifies the status bar control's style. Apply any combination of status bar control styles listed in [Common Control Styles](/windows/desktop/Controls/common-control-styles) in the Windows SDK. This parameter must include the WS_CHILD style. It should also include the WS_VISIBLE style.
+Specifies the status bar control's style. Apply any combination of status bar control styles listed in [Common Control Styles](/windows/win32/Controls/common-control-styles) in the Windows SDK. This parameter must include the WS_CHILD style. It should also include the WS_VISIBLE style.
 
 *rect*<br/>
-Specifies the status bar control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure.
+Specifies the status bar control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](/windows/win32/api/windef/ns-windef-rect) structure.
 
 *pParentWnd*<br/>
 Specifies the status bar control's parent window, usually a `CDialog`. It must not be NULL.
@@ -110,7 +111,7 @@ To create a status bar with extended window styles, call [CStatusBarCtrl::Create
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]
 
-##  <a name="createex"></a>  CStatusBarCtrl::CreateEx
+## <a name="createex"></a> CStatusBarCtrl::CreateEx
 
 Creates a control (a child window) and associates it with the `CStatusBarCtrl` object.
 
@@ -126,13 +127,13 @@ virtual BOOL CreateEx(
 ### Parameters
 
 *dwExStyle*<br/>
-Specifies the extended style of the control being created. For a list of extended Windows styles, see the *dwExStyle* parameter for [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) in the Windows SDK.
+Specifies the extended style of the control being created. For a list of extended Windows styles, see the *dwExStyle* parameter for [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) in the Windows SDK.
 
 *dwStyle*<br/>
-Specifies the status bar control's style. Apply any combination of status bar control styles listed in [Common Control Styles](/windows/desktop/Controls/common-control-styles) in the Windows SDK. This parameter must include the WS_CHILD style. It should also include the WS_VISIBLE style.
+Specifies the status bar control's style. Apply any combination of status bar control styles listed in [Common Control Styles](/windows/win32/Controls/common-control-styles) in the Windows SDK. This parameter must include the WS_CHILD style. It should also include the WS_VISIBLE style.
 
 *rect*<br/>
-A reference to a [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of *pParentWnd*.
+A reference to a [RECT](/windows/win32/api/windef/ns-windef-rect) structure describing the size and position of the window to be created, in client coordinates of *pParentWnd*.
 
 *pParentWnd*<br/>
 A pointer to the window that is the control's parent.
@@ -148,7 +149,7 @@ Nonzero if successful; otherwise 0.
 
 Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.
 
-##  <a name="cstatusbarctrl"></a>  CStatusBarCtrl::CStatusBarCtrl
+## <a name="cstatusbarctrl"></a> CStatusBarCtrl::CStatusBarCtrl
 
 Constructs a `CStatusBarCtrl` object.
 
@@ -156,7 +157,7 @@ Constructs a `CStatusBarCtrl` object.
 CStatusBarCtrl();
 ```
 
-##  <a name="drawitem"></a>  CStatusBarCtrl::DrawItem
+## <a name="drawitem"></a> CStatusBarCtrl::DrawItem
 
 Called by the framework when a visual aspect of an owner-draw status bar control changes.
 
@@ -167,7 +168,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### Parameters
 
 *lpDrawItemStruct*<br/>
-A long pointer to a [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) structure that contains information about the type of drawing required.
+A long pointer to a [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) structure that contains information about the type of drawing required.
 
 ### Remarks
 
@@ -177,7 +178,7 @@ By default, this member function does nothing. Override this member function to 
 
 The application should restore all graphics device interface (GDI) objects selected for the display context supplied in *lpDrawItemStruct* before this member function terminates.
 
-##  <a name="getborders"></a>  CStatusBarCtrl::GetBorders
+## <a name="getborders"></a> CStatusBarCtrl::GetBorders
 
 Retrieves the status bar control's current widths of the horizontal and vertical borders and of the space between rectangles.
 
@@ -216,7 +217,7 @@ These borders determine the spacing between the outside edge of the control and 
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_2.cpp)]
 
-##  <a name="geticon"></a>  CStatusBarCtrl::GetIcon
+## <a name="geticon"></a> CStatusBarCtrl::GetIcon
 
 Retrieves the icon for a part (also known as a pane) in the current status bar control.
 
@@ -226,9 +227,8 @@ HICON GetIcon(int iPart) const;
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*iPart*|[in] The zero-based index of the part that contains the icon to be retrieved. If this parameter is -1, the status bar is assumed to be a simple mode status bar.|
+*iPart*\
+[in] The zero-based index of the part that contains the icon to be retrieved. If this parameter is -1, the status bar is assumed to be a simple mode status bar.
 
 ### Return Value
 
@@ -236,23 +236,21 @@ The handle to the icon if the method successful; otherwise, NULL.
 
 ### Remarks
 
-This method sends the [SB_GETICON](/windows/desktop/Controls/sb-geticon) message, which is described in the Windows SDK.
+This method sends the [SB_GETICON](/windows/win32/Controls/sb-geticon) message, which is described in the Windows SDK.
 
 A status bar control consists of a row of text output panes, which are also known as parts. For more information about the status bar, see [Status Bar Implementation in MFC](../../mfc/status-bar-implementation-in-mfc.md) and [Setting the Mode of a CStatusBarCtrl Object](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).
 
 ### Example
 
-The following code example defines a variable, `m_statusBar`, that is used to access the current status bar control. This variable is used in the next example.
+The first code example defines a variable, `m_statusBar`, that is used to access the current status bar control. This variable is used in the next example.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_3.h)]
 
-### Example
-
-The following code example copies an icon to two panes of the current status bar control. In an earlier section of the code example we created a status bar control with three panes and then added an icon to the first pane. This example retrieves the icon from the first pane and then adds it to the second and third pane.
+The next code example copies an icon to two panes of the current status bar control. In an earlier section of the code example we created a status bar control with three panes and then added an icon to the first pane. This example retrieves the icon from the first pane and then adds it to the second and third pane.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_4.cpp)]
 
-##  <a name="getparts"></a>  CStatusBarCtrl::GetParts
+## <a name="getparts"></a> CStatusBarCtrl::GetParts
 
 Retrieves a count of the parts in a status bar control.
 
@@ -282,7 +280,7 @@ This member function also retrieves the coordinate of the right edge of the give
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#3](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_5.cpp)]
 
-##  <a name="getrect"></a>  CStatusBarCtrl::GetRect
+## <a name="getrect"></a> CStatusBarCtrl::GetRect
 
 Retrieves the bounding rectangle of a part in a status bar control.
 
@@ -298,7 +296,7 @@ BOOL GetRect(
 Zero-based index of the part whose bounding rectangle is to be retrieved.
 
 *lpRect*<br/>
-Address of a [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure that receives the bounding rectangle.
+Address of a [RECT](/windows/win32/api/windef/ns-windef-rect) structure that receives the bounding rectangle.
 
 ### Return Value
 
@@ -308,7 +306,7 @@ Nonzero if successful; otherwise zero.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]
 
-##  <a name="gettext"></a>  CStatusBarCtrl::GetText
+## <a name="gettext"></a> CStatusBarCtrl::GetText
 
 Retrieves the text from the given part of a status bar control.
 
@@ -350,7 +348,7 @@ The length, in characters, of the text or a [CString](../../atl-mfc-shared/refer
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]
 
-##  <a name="gettextlength"></a>  CStatusBarCtrl::GetTextLength
+## <a name="gettextlength"></a> CStatusBarCtrl::GetTextLength
 
 Retrieves the length, in characters, of the text from the given part of a status bar control.
 
@@ -384,7 +382,7 @@ The length, in characters, of the text.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]
 
-##  <a name="gettiptext"></a>  CStatusBarCtrl::GetTipText
+## <a name="gettiptext"></a> CStatusBarCtrl::GetTipText
 
 Retrieves the tooltip text for a pane in a status bar.
 
@@ -403,13 +401,13 @@ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object containing 
 
 ### Remarks
 
-This member function implements the behavior of the Win32 message [SB_GETTIPTEXT](/windows/desktop/Controls/sb-gettiptext), as described in the Windows SDK.
+This member function implements the behavior of the Win32 message [SB_GETTIPTEXT](/windows/win32/Controls/sb-gettiptext), as described in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]
 
-##  <a name="issimple"></a>  CStatusBarCtrl::IsSimple
+## <a name="issimple"></a> CStatusBarCtrl::IsSimple
 
 Checks a status window control to determine if it is in simple mode.
 
@@ -423,9 +421,9 @@ Nonzero if the status window control is in simple mode; otherwise zero.
 
 ### Remarks
 
-This member function implements the behavior of the Win32 message [SB_ISSIMPLE](/windows/desktop/Controls/sb-issimple), as described in the Windows SDK.
+This member function implements the behavior of the Win32 message [SB_ISSIMPLE](/windows/win32/Controls/sb-issimple), as described in the Windows SDK.
 
-##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor
+## <a name="setbkcolor"></a> CStatusBarCtrl::SetBkColor
 
 Sets the background color in a status bar.
 
@@ -440,17 +438,17 @@ COLORREF value that specifies the new background color. Specify the CLR_DEFAULT 
 
 ### Return Value
 
-A [COLORREF](/windows/desktop/gdi/colorref) value that represents the previous default background color.
+A [COLORREF](/windows/win32/gdi/colorref) value that represents the previous default background color.
 
 ### Remarks
 
-This member function implements the behavior of the Win32 message [SB_SETBKCOLOR](/windows/desktop/Controls/sb-setbkcolor), as described in the Windows SDK.
+This member function implements the behavior of the Win32 message [SB_SETBKCOLOR](/windows/win32/Controls/sb-setbkcolor), as described in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]
 
-##  <a name="seticon"></a>  CStatusBarCtrl::SetIcon
+## <a name="seticon"></a> CStatusBarCtrl::SetIcon
 
 Sets the icon for a pane in a status bar.
 
@@ -474,17 +472,17 @@ Nonzero if successful; otherwise zero.
 
 ### Remarks
 
-This member function implements the behavior of the Win32 message [SB_SETICON](/windows/desktop/Controls/sb-seticon), as described in the Windows SDK.
+This member function implements the behavior of the Win32 message [SB_SETICON](/windows/win32/Controls/sb-seticon), as described in the Windows SDK.
 
 ### Example
 
   See the example for [CStatusBarCtrl::SetBkColor](#setbkcolor).
 
-##  <a name="setminheight"></a>  CStatusBarCtrl::SetMinHeight
+## <a name="setminheight"></a> CStatusBarCtrl::SetMinHeight
 
 Sets the minimum height of a status bar control's drawing area.
 
-```
+```cpp
 void SetMinHeight(int nMin);
 ```
 
@@ -501,7 +499,7 @@ The minimum height is the sum of *nMin* and twice the width, in pixels, of the v
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#9](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]
 
-##  <a name="setparts"></a>  CStatusBarCtrl::SetParts
+## <a name="setparts"></a> CStatusBarCtrl::SetParts
 
 Sets the number of parts in a status bar control and the coordinate of the right edge of each part.
 
@@ -527,7 +525,7 @@ Nonzero if successful; otherwise zero.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#10](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_12.cpp)]
 
-##  <a name="setsimple"></a>  CStatusBarCtrl::SetSimple
+## <a name="setsimple"></a> CStatusBarCtrl::SetSimple
 
 Specifies whether a status bar control displays simple text or displays all control parts set by a previous call to [SetParts](#setparts).
 
@@ -548,7 +546,7 @@ Always returns 0.
 
 If your application changes the status bar control from non-simple to simple, or vice versa, the system immediately redraws the control.
 
-##  <a name="settext"></a>  CStatusBarCtrl::SetText
+## <a name="settext"></a> CStatusBarCtrl::SetText
 
 Sets the text in the given part of a status bar control.
 
@@ -568,7 +566,7 @@ Address of a null-terminated string specifying the text to set. If *nType* is SB
 Zero-based index of the part to set. If this value is 255, the status bar control is assumed to be a simple control having only one part.
 
 *nType*<br/>
-Type of drawing operation. See [SB_SETTEXT message](/windows/desktop/Controls/sb-settext) for a list of possible values.
+Type of drawing operation. See [SB_SETTEXT message](/windows/win32/Controls/sb-settext) for a list of possible values.
 
 ### Return Value
 
@@ -582,11 +580,11 @@ The message invalidates the portion of the control that has changed, causing it 
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]
 
-##  <a name="settiptext"></a>  CStatusBarCtrl::SetTipText
+## <a name="settiptext"></a> CStatusBarCtrl::SetTipText
 
 Sets the tooltip text for a pane in a status bar.
 
-```
+```cpp
 void SetTipText(
     int nPane,
     LPCTSTR pszTipText);
@@ -602,13 +600,13 @@ A pointer to a string containing the tooltip text.
 
 ### Remarks
 
-This member function implements the behavior of the Win32 message [SB_SETTIPTEXT](/windows/desktop/Controls/sb-settiptext), as described in the Windows SDK.
+This member function implements the behavior of the Win32 message [SB_SETTIPTEXT](/windows/win32/Controls/sb-settiptext), as described in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]
 
-## See Also
+## See also
 
 [CWnd Class](../../mfc/reference/cwnd-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

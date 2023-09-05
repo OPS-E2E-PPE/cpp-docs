@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3858"
 title: "Compiler Error C3858"
 ms.date: "11/04/2016"
 f1_keywords: ["C3858"]
@@ -13,7 +14,7 @@ The type cannot be declared twice in the same scope.
 
 The following sample generates C3858:
 
-```
+```cpp
 // C3858.cpp
 // compile with: /LD
 template <class T>

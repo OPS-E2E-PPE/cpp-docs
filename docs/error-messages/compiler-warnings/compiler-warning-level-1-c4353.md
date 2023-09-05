@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4353"
 title: "Compiler Warning (level 1) C4353"
 ms.date: "11/04/2016"
 f1_keywords: ["C4353"]
@@ -13,7 +14,7 @@ You cannot use the constant zero (0) as a function expression. For more informat
 
 The following sample generates C4353:
 
-```
+```cpp
 // C4353.cpp
 // compile with: /W1
 void MyPrintf(void){};

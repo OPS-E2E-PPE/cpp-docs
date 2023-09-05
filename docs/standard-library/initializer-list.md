@@ -1,11 +1,12 @@
 ---
-title: "&lt;initializer_list&gt;"
+description: "Learn more about: <initializer_list>"
+title: "<initializer_list>"
 ms.date: "11/04/2016"
 ms.assetid: 820b6448-fb01-49a4-aeaa-546ad7576ea4
 ---
-# &lt;initializer_list&gt;
+# `<initializer_list>`
 
-Defines the container template class `initializer_list` and several supporting templates.
+Defines the container class template `initializer_list` and several supporting templates.
 
 ## Syntax
 
@@ -21,4 +22,4 @@ Defines the container template class `initializer_list` and several supporting t
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)

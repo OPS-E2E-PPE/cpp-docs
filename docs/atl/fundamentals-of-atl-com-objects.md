@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Fundamentals of ATL COM Objects"
 title: "Fundamentals of ATL COM Objects"
 ms.date: "11/19/2018"
 helpviewer_keywords: ["COM, and ATL", "ATL, COM", "ATL COM objects", "COM objects, ATL"]
@@ -8,10 +9,10 @@ ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
 
 The following illustration depicts the relationship among the classes and interfaces that are used to define an ATL COM object.
 
-![ATL structure](../atl/media/vc307y1.gif "ATL structure")
+![Diagram of the classes and interfaces used to define an A T L object.](../atl/media/vc307y1.gif "ATL structure")
 
 > [!NOTE]
->  This diagram shows that `CComObject` is derived from `CYourClass` whereas `CComAggObject` and `CComPolyObject` include `CYourClass` as a member variable.
+> This diagram shows that `CComObject` is derived from `CYourClass` whereas `CComAggObject` and `CComPolyObject` include `CYourClass` as a member variable.
 
 There are three ways to define an ATL COM object. The standard option is to use the `CComObject` class which is derived from `CYourClass`. The second option is to create an aggregated object by using the `CComAggObject` class. The third option is to use the `CComPolyObject` class. `CComPolyObject` acts as a hybrid: it can function as a `CComObject` class or as a `CComAggObject` class, depending on how it is first created. For more information about how to use the `CComPolyObject` class, see [CComPolyObject Class](../atl/reference/ccompolyobject-class.md).
 
@@ -21,7 +22,7 @@ When you use an aggregated object, the outer object does not provide wrappers fo
 
 Because the client does not have to go through the outer object to interact with the inner object, aggregated objects are usually more efficient. Also, the outer object does not have to know the functionality of the aggregated object, given that the interface of the aggregated object is directly available to the client. However, not all objects can be aggregated. For an object to be aggregated, it needs to be designed with aggregation in mind.
 
-ATL implements [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) in two phases:
+ATL implements [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) in two phases:
 
 - [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), or [CComPolyObject](../atl/reference/ccompolyobject-class.md) implements the `IUnknown` methods.
 
@@ -63,7 +64,6 @@ Provides information about creating an ATL COM object.
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Provides links to conceptual topics on how to program using the Active Template Library.
 
-## See Also
+## See also
 
 [Concepts](../atl/active-template-library-atl-concepts.md)
-

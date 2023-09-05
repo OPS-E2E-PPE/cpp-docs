@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2553"
 title: "Compiler Error C2553"
 ms.date: "11/04/2016"
 f1_keywords: ["C2553"]
@@ -13,7 +14,7 @@ A function in a derived class attempted to override a virtual function in a base
 
 The following sample generates C2553:
 
-```
+```cpp
 // C2553.cpp
 // compile with: /clr /c
 ref struct C {

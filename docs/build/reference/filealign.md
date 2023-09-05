@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: /FILEALIGN (Align sections in files)"
 title: "/FILEALIGN (Align sections in files)"
 ms.date: "10/23/2017"
 f1_keywords: ["/filealign"]
@@ -28,17 +29,17 @@ Use [DUMPBIN](dumpbin-reference.md) to see information about sections in your ou
 
 ### To set this linker option in the Visual Studio development environment
 
-1. Open the project's **Property Pages** dialog box. For details, see [Working with Project Properties](../../ide/working-with-project-properties.md).
+1. Open the project's **Property Pages** dialog box. For details, see [Set C++ compiler and build properties in Visual Studio](../working-with-project-properties.md).
 
-1. Select the **Command Line** property page in the **Linker** folder.
+1. Select the **Configuration Properties** > **Linker** > **Command Line** property page.
 
-1. Type the option name **/FILEALIGN:** and the size in the **Additional Options** box.
+1. Enter the option name **/FILEALIGN:** and the size in the **Additional Options** box.
 
 ### To set this linker option programmatically
 
 - See <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## See Also
+## See also
 
-[Setting Linker Options](../../build/reference/setting-linker-options.md)<br/>
-[Linker Options](../../build/reference/linker-options.md)
+[MSVC linker reference](linking.md)<br/>
+[MSVC Linker Options](linker-options.md)

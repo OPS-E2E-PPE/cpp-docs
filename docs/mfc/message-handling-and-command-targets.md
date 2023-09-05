@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Message Handling and Command Targets"
 title: "Message Handling and Command Targets"
 ms.date: "11/04/2016"
 f1_keywords: ["IOleCommandTarget"]
@@ -38,7 +39,6 @@ interface IOleCommandTarget : IUnknown
 
 The `QueryStatus` method here tests whether a particular set of commands, the set being identified with a **GUID**, is supported. This call fills an array of **OLECMD** values (structures) with the supported list of commands as well as returning text describing the name of a command and/or status information. When the caller wishes to invoke a command, it can pass the command (and the set **GUID**) to `Exec` along with options and arguments, getting back a return value.
 
-## See Also
+## See also
 
-[Active Document Containers](../mfc/active-document-containers.md)
-
+[Active Document Containers](active-document-containers.md)

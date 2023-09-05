@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Fatal Error C1071"
 title: "Fatal Error C1071"
 ms.date: "11/04/2016"
 f1_keywords: ["C1071"]
@@ -19,7 +20,7 @@ The compiler reached the end of the file while scanning a comment.
 
 The following sample generates C1071:
 
-```
+```cpp
 // C1071.cpp
 int main() {
 }

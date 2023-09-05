@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: C Declarations and Definitions"
 title: "C Declarations and Definitions"
 ms.date: "11/04/2016"
 ms.assetid: 575f0c9b-5554-4346-be64-b2129ca9227f
@@ -22,6 +23,6 @@ int count( double f ) {}
 
 The variables `var` and `val` can be used in the `find` and `count` functions; no further declarations are needed. But these names are not visible (cannot be accessed) in `main`.
 
-## See Also
+## See also
 
 [Source Files and Source Programs](../c-language/source-files-and-source-programs.md)

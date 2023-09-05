@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2093"
 title: "Compiler Error C2093"
 ms.date: "11/04/2016"
 f1_keywords: ["C2093"]
@@ -13,7 +14,7 @@ When compiling with [/Za](../../build/reference/za-ze-disable-language-extension
 
 The following sample generates C2093:
 
-```
+```c
 // C2093.c
 // compile with: /Za /c
 void func() {

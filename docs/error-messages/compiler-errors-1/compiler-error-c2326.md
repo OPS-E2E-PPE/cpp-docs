@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2326"
 title: "Compiler Error C2326"
 ms.date: "11/04/2016"
 f1_keywords: ["C2326"]
@@ -15,7 +16,7 @@ The code tries to modify a member variable, which is not possible.
 
 The following sample generates C2326:
 
-```
+```cpp
 // C2326.cpp
 void MyFunc() {
    int i;

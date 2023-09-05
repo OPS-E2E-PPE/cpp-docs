@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: list (STL/CLR)"
 title: "list (STL/CLR)"
 ms.date: "11/04/2016"
 ms.topic: "reference"
-f1_keywords: ["cliext::list", "cliext::list::assign", "cliext::list::assign", "cliext::list::back", "cliext::list::back_item", "cliext::list::begin", "cliext::list::clear", "cliext::list::const_iterator", "cliext::list::const_reference", "cliext::list::const_reverse_iterator", "cliext::list::difference_type", "cliext::list::empty", "cliext::list::end", "cliext::list::erase", "cliext::list::front", "cliext::list::front_item", "cliext::list::generic_container", "cliext::list::generic_iterator", "cliext::list::generic_reverse_iterator", "cliext::list::generic_value", "cliext::list::insert", "cliext::list::iterator", "cliext::list::list", "cliext::list::merge", "cliext::list::operator=", "cliext::list::pop_back", "cliext::list::pop_front", "cliext::list::push_back", "cliext::list::push_front", "cliext::list::rbegin", "cliext::list::reference", "cliext::list::remove", "cliext::list::remove_if", "cliext::list::rend", "cliext::list::resize", "cliext::list::reverse", "cliext::list::reverse_iterator", "cliext::list::size", "cliext::list::size_type", "cliext::list::sort", "cliext::list::splice", "cliext::list::swap", "cliext::list::to_array", "cliext::list::unique", "cliext::list::value_type", "cliext::operator!=(list)", "cliext::operator<(list)", "cliext::operator<=(list)", "cliext::operator==(list)", "cliext::operator>(list)", "cliext::operator>=(list)"]
+f1_keywords: ["cliext::list", "cliext::list::assign", "cliext::list::back", "cliext::list::back_item", "cliext::list::begin", "cliext::list::clear", "cliext::list::const_iterator", "cliext::list::const_reference", "cliext::list::const_reverse_iterator", "cliext::list::difference_type", "cliext::list::empty", "cliext::list::end", "cliext::list::erase", "cliext::list::front", "cliext::list::front_item", "cliext::list::generic_container", "cliext::list::generic_iterator", "cliext::list::generic_reverse_iterator", "cliext::list::generic_value", "cliext::list::insert", "cliext::list::iterator", "cliext::list::list", "cliext::list::merge", "cliext::list::operator=", "cliext::list::pop_back", "cliext::list::pop_front", "cliext::list::push_back", "cliext::list::push_front", "cliext::list::rbegin", "cliext::list::reference", "cliext::list::remove", "cliext::list::remove_if", "cliext::list::rend", "cliext::list::resize", "cliext::list::reverse", "cliext::list::reverse_iterator", "cliext::list::size", "cliext::list::size_type", "cliext::list::sort", "cliext::list::splice", "cliext::list::swap", "cliext::list::to_array", "cliext::list::unique", "cliext::list::value_type", "cliext::operator!=(list)", "cliext::operator<(list)", "cliext::operator<=(list)", "cliext::operator==(list)", "cliext::operator>(list)", "cliext::operator>=(list)"]
 helpviewer_keywords: ["<cliext/list> header [STL/CLR]", "list class [STL/CLR]", "<list> header [STL/CLR]", "assign member [STL/CLR]", "assign member [STL/CLR]", "back member [STL/CLR]", "back_item member [STL/CLR]", "begin member [STL/CLR]", "clear member [STL/CLR]", "const_iterator member [STL/CLR]", "const_reference member [STL/CLR]", "const_reverse_iterator member [STL/CLR]", "difference_type member [STL/CLR]", "empty member [STL/CLR]", "end member [STL/CLR]", "erase member [STL/CLR]", "front member [STL/CLR]", "front_item member [STL/CLR]", "generic_container member [STL/CLR]", "generic_iterator member [STL/CLR]", "generic_reverse_iterator member [STL/CLR]", "generic_value member [STL/CLR]", "insert member [STL/CLR]", "iterator member [STL/CLR]", "list member [STL/CLR]", "merge member [STL/CLR]", "operator= member [STL/CLR]", "pop_back member [STL/CLR]", "pop_front member [STL/CLR]", "push_back member [STL/CLR]", "push_front member [STL/CLR]", "rbegin member [STL/CLR]", "reference member [STL/CLR]", "remove member [STL/CLR]", "remove_if member [STL/CLR]", "rend member [STL/CLR]", "resize member [STL/CLR]", "reverse member [STL/CLR]", "reverse_iterator member [STL/CLR]", "size member [STL/CLR]", "size_type member [STL/CLR]", "sort member [STL/CLR]", "splice member [STL/CLR]", "swap member [STL/CLR]", "to_array member [STL/CLR]", "unique member [STL/CLR]", "value_type member [STL/CLR]", "operator!=(list) member [STL/CLR]", "operator<(list) member [STL/CLR]", "operator<=(list) member [STL/CLR]", "operator==(list) member [STL/CLR]", "operator>(list) member [STL/CLR]", "operator>=(list) member [STL/CLR]"]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
 ---
@@ -116,7 +117,7 @@ The type of an element in the controlled sequence.
 
 The object allocates and frees storage for the sequence it controls as individual nodes in a bidirectional link list. It rearranges elements by altering the links between nodes, never by copying the contents of one node to another. That means you can insert and remove elements freely without disturbing remaining elements. Thus, a list is a good candidate for the underlying container for template class [queue (STL/CLR)](../dotnet/queue-stl-clr.md) or template class [stack (STL/CLR)](../dotnet/stack-stl-clr.md).
 
-A `list` object supports bidirectional iterators, which means you can step to adjacent elements given an iterator that designates an element in the controlled sequence. A special head node corresponds to the iterator returned by [list::end (STL/CLR)](../dotnet/list-end-stl-clr.md)`()`. You can decrement this iterator to reach the last element in the controlled sequence, if present. You can increment a list iterator to reach the head node, and it will then compare equal to `end()`. But you cannot dereference the iterator returned by `end()`.
+A `list` object supports bidirectional iterators, which means you can step to adjacent elements given an iterator that designates an element in the controlled sequence. A special head node corresponds to the iterator returned by [list::end (STL/CLR)](#end)`()`. You can decrement this iterator to reach the last element in the controlled sequence, if present. You can increment a list iterator to reach the head node, and it will then compare equal to `end()`. But you cannot dereference the iterator returned by `end()`.
 
 Note that you cannot refer to a list element directly given its numerical position -- that requires a random-access iterator. So a list is *not* usable as the underlying container for template class [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).
 
@@ -377,7 +378,7 @@ void clear();
 
 ### Remarks
 
-The member function effectively calls [list::erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)`(` [list::begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)`(),` [list::end (STL/CLR)](../dotnet/list-end-stl-clr.md)`())`. You use it to ensure that the controlled sequence is empty.
+The member function effectively calls [list::erase (STL/CLR)](#erase)`(` [list::begin (STL/CLR)](#begin)`(),` [list::end (STL/CLR)](#end)`())`. You use it to ensure that the controlled sequence is empty.
 
 ### Example
 
@@ -615,7 +616,7 @@ bool empty();
 
 ### Remarks
 
-The member function returns true for an empty controlled sequence. It is equivalent to [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`. You use it to test whether the list is empty.
+The member function returns true for an empty controlled sequence. It is equivalent to [list::size (STL/CLR)](#size)`() == 0`. You use it to test whether the list is empty.
 
 ### Example
 
@@ -738,7 +739,7 @@ The first member function removes the element of the controlled sequence pointed
 
 The second member function removes the elements of the controlled sequence in the range [`first`, `last`). You use it to remove zero or more contiguous elements.
 
-Both member functions return an iterator that designates the first element remaining beyond any elements removed, or [list::end (STL/CLR)](../dotnet/list-end-stl-clr.md)`()` if no such element exists.
+Both member functions return an iterator that designates the first element remaining beyond any elements removed, or [list::end (STL/CLR)](#end)`()` if no such element exists.
 
 When erasing elements, the number of element copies is linear in the number of elements between the end of the erasure and the nearer end of the sequence. (When erasing one or more elements at either end of the sequence, no element copies occur.)
 
@@ -1554,7 +1555,7 @@ Container to copy.
 
 ### Remarks
 
-The member operator copies *right* to the object, then returns `*this`. You use it to replace the controlled sequence with a copy of the controlled sequence in *right*.
+The member operator copies *right* to the object, then returns **`*this`**. You use it to replace the controlled sequence with a copy of the controlled sequence in *right*.
 
 ### Example
 
@@ -2074,7 +2075,7 @@ Value of the padding element.
 
 ### Remarks
 
-The member functions both ensure that [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)`()` henceforth returns *new_size*. If it must make the controlled sequence longer, the first member function appends elements with value `value_type()`, while the second member function appends elements with value *val*. To make the controlled sequence shorter, both member functions effectively erase the last element [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() -` `new_size` times. You use it to ensure that the controlled sequence has size *new_size*, by either trimming or padding the current controlled sequence.
+The member functions both ensure that [list::size (STL/CLR)](#size)`()` henceforth returns *new_size*. If it must make the controlled sequence longer, the first member function appends elements with value `value_type()`, while the second member function appends elements with value *val*. To make the controlled sequence shorter, both member functions effectively erase the last element [list::size (STL/CLR)](#size)`() -` `new_size` times. You use it to ensure that the controlled sequence has size *new_size*, by either trimming or padding the current controlled sequence.
 
 ### Example
 
@@ -2221,7 +2222,7 @@ size_type size();
 
 ### Remarks
 
-The member function returns the length of the controlled sequence. You use it to determine the number of elements currently in the controlled sequence. If all you care about is whether the sequence has nonzero size, see [list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)`()`.
+The member function returns the length of the controlled sequence. You use it to determine the number of elements currently in the controlled sequence. If all you care about is whether the sequence has nonzero size, see [list::empty (STL/CLR)](#empty)`()`.
 
 ### Example
 
@@ -2405,11 +2406,11 @@ Where in container to splice before.
 
 ### Remarks
 
-The first member function inserts the sequence controlled by *right* before the element in the controlled sequence pointed to by *where*. It also removes all elements from *right*. (`%right` must not equal `this`.) You use it to splice all of one list into another.
+The first member function inserts the sequence controlled by *right* before the element in the controlled sequence pointed to by *where*. It also removes all elements from *right*. (`%right` must not equal **`this`**.) You use it to splice all of one list into another.
 
 The second member function removes the element pointed to by *first* in the sequence controlled by *right* and inserts it before the element in the controlled sequence pointed to by *where*. (If `where` `==` `first` `||` `where` `== ++first`, no change occurs.) You use it to splice a single element of one list into another.
 
-The third member function inserts the subrange designated by [`first`, `last`) from the sequence controlled by *right* before the element in the controlled sequence pointed to by *where*. It also removes the original subrange from the sequence controlled by *right*. (If `right` `==` `this`, the range [`first`, `last`) must not include the element pointed to by *where*.) You use it to splice a subsequence of zero or more elements from one list into another.
+The third member function inserts the subrange designated by [`first`, `last`) from the sequence controlled by *right* before the element in the controlled sequence pointed to by *where*. It also removes the original subrange from the sequence controlled by *right*. (If `right == this`, the range [`first`, `last`) must not include the element pointed to by *where*.) You use it to splice a subsequence of zero or more elements from one list into another.
 
 ### Example
 
@@ -2485,7 +2486,7 @@ Container to swap contents with.
 
 ### Remarks
 
-The member function swaps the controlled sequences between `*this` and *right*. It does so in constant time and it throws no exceptions. You use it as a quick way to exchange the contents of two containers.
+The member function swaps the controlled sequences between **`*this`** and *right*. It does so in constant time and it throws no exceptions. You use it as a quick way to exchange the contents of two containers.
 
 ### Example
 
@@ -2600,7 +2601,7 @@ Comparer for element pairs.
 
 ### Remarks
 
-The first member function removes from the controlled sequence (erases) every element that compares equal to its preceding element -- if element `X` precedes element `Y` and `X == Y`, the member function removes `Y`. You use it to remove all but one copy of every subsequence of adjacent elements that compare equal. Note that if the controlled sequence is ordered, such as by calling [list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, the member function leaves only elements with unique values. (Hence the name).
+The first member function removes from the controlled sequence (erases) every element that compares equal to its preceding element -- if element `X` precedes element `Y` and `X == Y`, the member function removes `Y`. You use it to remove all but one copy of every subsequence of adjacent elements that compare equal. Note that if the controlled sequence is ordered, such as by calling [list::sort (STL/CLR)](#sort)`()`, the member function leaves only elements with unique values. (Hence the name).
 
 The second member function behaves the same as the first, except that it removes each element `Y` following an element `X` for which `pred(X, Y)`. You use it to remove all but one copy of every subsequence of adjacent elements that satisfy a predicate function or delegate that you specify. Note that if the controlled sequence is ordered, such as by calling `sort(pred)`, the member function leaves only elements that do not have equivalent ordering with any other elements.
 
@@ -2761,7 +2762,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operator&lt; (list) (STL/CLR)
+## <a name="op_lt"></a> `operator<` (list) (STL/CLR)
 
 List less than comparison.
 
@@ -2830,7 +2831,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operator&lt;= (list) (STL/CLR)
+## <a name="op_lteq"></a> `operator<=` (list) (STL/CLR)
 
 List less than or equal comparison.
 
@@ -2968,7 +2969,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operator&gt; (list) (STL/CLR)
+## <a name="op_gt"></a> `operator>` (list) (STL/CLR)
 
 List greater than comparison.
 
@@ -3037,7 +3038,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operator&gt;= (list) (STL/CLR)
+## <a name="op_gteq"></a> `operator>=` (list) (STL/CLR)
 
 List greater than or equal comparison.
 

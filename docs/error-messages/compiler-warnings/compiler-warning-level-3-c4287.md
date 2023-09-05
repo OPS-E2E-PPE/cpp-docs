@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4287"
 title: "Compiler Warning (level 3) C4287"
 ms.date: "11/04/2016"
 f1_keywords: ["C4287"]
@@ -17,7 +18,7 @@ This warning is off by default. See [Compiler Warnings That Are Off by Default](
 
 The following sample generates C4287:
 
-```
+```cpp
 // C4287.cpp
 // compile with: /W3
 #pragma warning(default : 4287)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CHeapPtrList Class"
 title: "CHeapPtrList Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CHeapPtrList", "ATLCOLL/ATL::CHeapPtrList", "ATLCOLL/ATL::CHeapPtrList::CHeapPtrList"]
@@ -10,7 +11,7 @@ ms.assetid: cc70e585-362a-4007-81db-c705eb181226
 This class provides methods useful when constructing a list of heap pointers.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -51,7 +52,7 @@ This class provides a constructor and derives methods from [CAtlList](../../atl/
 
 **Header:** atlcoll.h
 
-##  <a name="cheapptrlist"></a>  CHeapPtrList::CHeapPtrList
+## <a name="cheapptrlist"></a> CHeapPtrList::CHeapPtrList
 
 The constructor.
 
@@ -68,7 +69,7 @@ The block size.
 
 The block size is a measure of the amount of memory allocated when a new element is required. Larger block sizes reduce calls to memory allocation routines, but use more resources.
 
-## See Also
+## See also
 
 [CAtlList Class](../../atl/reference/catllist-class.md)<br/>
 [CHeapPtr Class](../../atl/reference/cheapptr-class.md)<br/>

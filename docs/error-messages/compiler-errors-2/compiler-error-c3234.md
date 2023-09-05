@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3234"
 title: "Compiler Error C3234"
 ms.date: "11/04/2016"
 f1_keywords: ["C3234"]
@@ -15,7 +16,7 @@ A generic class cannot inherit from a generic type parameter.
 
 The following sample generates C3234.
 
-```
+```cpp
 // C3234.cpp
 // compile with: /clr /c
 generic <class T>

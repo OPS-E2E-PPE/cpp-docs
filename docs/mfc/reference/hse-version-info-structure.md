@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: HSE_VERSION_INFO Structure"
 title: "HSE_VERSION_INFO Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["HSE_VERSION_INFO"]
@@ -30,7 +31,6 @@ The text description of the ISA. The default implementation provides placeholder
 
 **Header:** httpext.h
 
-## See Also
+## See also
 
 [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-

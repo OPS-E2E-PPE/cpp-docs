@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2787"
 title: "Compiler Error C2787"
 ms.date: "11/04/2016"
 f1_keywords: ["C2787"]
@@ -13,7 +14,7 @@ The [__uuidof](../../cpp/uuidof-operator.md) operator takes a user-defined type 
 
 The following sample generates C2787:
 
-```
+```cpp
 // C2787.cpp
 #include <windows.h>
 struct F {};

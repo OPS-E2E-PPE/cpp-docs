@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3383"
 title: "Compiler Error C3383"
 ms.date: "11/04/2016"
 f1_keywords: ["C3383"]
@@ -21,7 +22,7 @@ For more information, see,
 
 The following sample generates C3383.
 
-```
+```cpp
 // C3383.cpp
 // compile with: /clr:safe
 int main() {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2332"
 title: "Compiler Error C2332"
 ms.date: "11/04/2016"
 f1_keywords: ["C2332"]
@@ -13,7 +14,7 @@ The compiler found an incomplete type definition.
 
 The following sample generates C2332:
 
-```
+```cpp
 // C2332.cpp
 // compile with: /c
 struct S {

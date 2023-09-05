@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Properties (C++/CX)"
 title: "Properties (C++/CX)"
 ms.date: "01/22/2017"
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
@@ -29,8 +30,8 @@ Note that a property cannot be initialized in a member list. You can of course i
 
 [!code-cpp[cx_properties#01](../cppcx/codesnippet/CPP/cx_properties/class1.h#01)]
 
-## See Also
+## See also
 
 [Type System](../cppcx/type-system-c-cx.md)<br/>
-[Visual C++ Language Reference](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++/CX Language Reference](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Namespaces Reference](../cppcx/namespaces-reference-c-cx.md)

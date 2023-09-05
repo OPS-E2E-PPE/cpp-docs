@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_pod Class"
 title: "is_pod Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_pod"]
@@ -18,12 +19,12 @@ struct is_pod;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to query.
 
 ## Remarks
 
-`is_pod<T>::value` is **true** if the type *T* is Plain Old Data (POD). Otherwise it is **false**.
+`is_pod<T>::value` is **`true`** if the type *T* is Plain Old Data (POD). Otherwise it is **`false`**.
 
 Arithmetic types, enumeration types, pointer types, and pointer to member types are POD.
 
@@ -93,4 +94,4 @@ is_pod<throws> == false
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

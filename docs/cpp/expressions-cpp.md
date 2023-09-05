@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Expressions (C++)"
 title: "Expressions (C++)"
 ms.custom: "index-page"
 ms.date: "11/04/2016"
@@ -41,7 +42,7 @@ Topics on operators in other sections:
 
 - [Overloaded operators](../cpp/operator-overloading.md)
 
-- [typeid](../windows/typeid-cpp-component-extensions.md)
+- [typeid](../extensions/typeid-cpp-component-extensions.md) (C++/CLI)
 
     > [!NOTE]
     >  Operators for built-in types cannot be overloaded; their behavior is predefined.

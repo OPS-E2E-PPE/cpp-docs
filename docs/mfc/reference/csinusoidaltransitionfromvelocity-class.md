@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CSinusoidalTransitionFromVelocity Class"
 title: "CSinusoidalTransitionFromVelocity Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CSinusoidalTransitionFromVelocity", "AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity", "AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity", "AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::Create", "AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::m_duration", "AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::m_period"]
@@ -52,7 +53,7 @@ The value of the animation variable oscillates around the initial value over the
 
 **Header:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSinusoidalTransitionFromVelocity::Create
+## <a name="create"></a> CSinusoidalTransitionFromVelocity::Create
 
 Calls the transition library to create encapsulated transition COM object.
 
@@ -71,7 +72,7 @@ A pointer to transition library, which is responsible for creation of standard t
 
 TRUE if transition is created successfully; otherwise FALSE.
 
-##  <a name="csinusoidaltransitionfromvelocity"></a>  CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
+## <a name="csinusoidaltransitionfromvelocity"></a> CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
 
 Constructs a transition object.
 
@@ -89,7 +90,7 @@ The duration of the transition.
 *period*<br/>
 The period of oscillation of the sinusoidal wave in seconds.
 
-##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration
+## <a name="m_duration"></a> CSinusoidalTransitionFromVelocity::m_duration
 
 The duration of the transition.
 
@@ -97,7 +98,7 @@ The duration of the transition.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_period"></a>  CSinusoidalTransitionFromVelocity::m_period
+## <a name="m_period"></a> CSinusoidalTransitionFromVelocity::m_period
 
 The period of oscillation of the sinusoidal wave in seconds.
 
@@ -105,6 +106,6 @@ The period of oscillation of the sinusoidal wave in seconds.
 UI_ANIMATION_SECONDS m_period;
 ```
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

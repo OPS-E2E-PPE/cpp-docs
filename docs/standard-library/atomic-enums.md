@@ -1,13 +1,14 @@
 ---
-title: "&lt;atomic&gt; enums"
+description: "Learn more about: <atomic> enums"
+title: "<atomic> enums"
 ms.date: "11/04/2016"
 f1_keywords: ["atomic/std::memory_order"]
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords: ["std::memory_order"]
 ---
-# &lt;atomic&gt; enums
+# `<atomic>` enums
 
-## <a name="memory_order_enum"></a>  memory_order Enum
+## <a name="memory_order_enum"></a> memory_order Enum
 
 Supplies symbolic names for synchronization operations on memory locations. These operations affect how assignments in one thread become visible in another.
 
@@ -24,7 +25,7 @@ typedef enum memory_order {
 
 ### Enumeration members
 
-|||
+|Name|Description|
 |-|-|
 |`memory_order_relaxed`|No ordering required.|
 |`memory_order_consume`|A load operation acts as a consume operation on the memory location.|
@@ -35,4 +36,4 @@ typedef enum memory_order {
 
 ## See also
 
-[\<atomic>](../standard-library/atomic.md)<br/>
+[\<atomic>](../standard-library/atomic.md)

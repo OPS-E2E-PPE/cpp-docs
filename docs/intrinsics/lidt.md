@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: __lidt"
 title: "__lidt"
-ms.date: "11/04/2016"
+ms.date: "09/02/2019"
 f1_keywords: ["__lidt", "__lidt_cpp"]
 helpviewer_keywords: ["LIDT instruction", "__lidt intrinsic"]
 ms.assetid: 8298d25d-a19e-4900-828d-6b3b09841882
@@ -13,15 +14,14 @@ Loads the interrupt descriptor table register (IDTR) with the value in the speci
 
 ## Syntax
 
-```
+```C
 void __lidt(void * Source);
 ```
 
-#### Parameters
+### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*Source*|[in] Pointer to the value to be copied to the IDTR.|
+*Source*\
+[in] Pointer to the value to be copied to the IDTR.
 
 ## Requirements
 
@@ -37,7 +37,7 @@ The `__lidt` function is equivalent to the `LIDT` machine instruction, and is av
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
-[Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)<br/>
+[Compiler intrinsics](../intrinsics/compiler-intrinsics.md)\
 [__sidt](../intrinsics/sidt.md)

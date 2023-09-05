@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2106"
 title: "Compiler Error C2106"
 ms.date: "11/04/2016"
 f1_keywords: ["C2106"]
@@ -13,7 +14,7 @@ The operator must have an l-value as its left operand.
 
 The following sample generates C2106:
 
-```
+```cpp
 // C2106.cpp
 int main() {
    int a;

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4337"
 title: "Compiler Warning (level 4) C4337"
 ms.date: "11/04/2016"
 f1_keywords: ["C4337"]
@@ -52,7 +53,7 @@ library C4337bLib
 
 The following sample generates C4337:
 
-```
+```cpp
 // C4337.cpp
 // compile with: /W4 /LD
 #import "c4337b.tlb" auto_search   // C4337

@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: MFC Technical Notes"
 title: "MFC Technical Notes"
 ms.date: "11/04/2016"
-f1_keywords: ["vc.mfc.technotes"]
 helpviewer_keywords: ["MFC, technical notes", "technical notes, MFC", "technical notes [MFC]"]
 ms.assetid: 8aa01d66-0b07-4d0a-a080-4bb00c7baaac
 ---
@@ -13,11 +13,10 @@ Each technical note describes a problem or feature that is beyond the scope of t
 
 There are two ways to browse through the technical notes:
 
-- [Technical Notes By Number](../mfc/technical-notes-by-number.md)
+- [Technical Notes By Number](technical-notes-by-number.md)
 
-- [Technical Notes By Category](../mfc/technical-notes-by-category.md)
+- [Technical Notes By Category](technical-notes-by-category.md)
 
-## See Also
+## See also
 
-[MFC Desktop Applications](../mfc/mfc-desktop-applications.md)
-
+[MFC Desktop Applications](mfc-desktop-applications.md)

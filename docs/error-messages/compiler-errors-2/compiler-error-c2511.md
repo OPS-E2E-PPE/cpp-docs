@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2511"
 title: "Compiler Error C2511"
 ms.date: "11/04/2016"
 f1_keywords: ["C2511"]
@@ -19,7 +20,7 @@ No version of the function is declared with the specified parameters.  Possible 
 
 The following sample generates C2511:
 
-```
+```cpp
 // C2511.cpp
 // compile with: /c
 class C {

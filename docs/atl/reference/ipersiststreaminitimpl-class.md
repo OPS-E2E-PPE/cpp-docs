@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IPersistStreamInitImpl Class"
 title: "IPersistStreamInitImpl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["IPersistStreamInitImpl", "ATLCOM/ATL::IPersistStreamInitImpl", "ATLCOM/ATL::IPersistStreamInitImpl::GetClassID", "ATLCOM/ATL::IPersistStreamInitImpl::GetSizeMax", "ATLCOM/ATL::IPersistStreamInitImpl::InitNew", "ATLCOM/ATL::IPersistStreamInitImpl::IsDirty", "ATLCOM/ATL::IPersistStreamInitImpl::Load", "ATLCOM/ATL::IPersistStreamInitImpl::Save"]
@@ -7,10 +8,10 @@ ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
 ---
 # IPersistStreamInitImpl Class
 
-This class implements `IUnknown` and provides a default implementation of the [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) interface.
+This class implements `IUnknown` and provides a default implementation of the [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) interface.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -40,7 +41,7 @@ Your class, derived from `IPersistStreamInitImpl`.
 
 ## Remarks
 
-The [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) interface allows a client to request that your object loads and saves its persistent data to a single stream. Class `IPersistStreamInitImpl` provides a default implementation of this interface and implements `IUnknown` by sending information to the dump device in debug builds.
+The [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) interface allows a client to request that your object loads and saves its persistent data to a single stream. Class `IPersistStreamInitImpl` provides a default implementation of this interface and implements `IUnknown` by sending information to the dump device in debug builds.
 
 **Related Articles** [ATL Tutorial](../../atl/active-template-library-atl-tutorial.md), [Creating an ATL Project](../../atl/reference/creating-an-atl-project.md)
 
@@ -54,7 +55,7 @@ The [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)
 
 **Header:** atlcom.h
 
-##  <a name="getclassid"></a>  IPersistStreamInitImpl::GetClassID
+## <a name="getclassid"></a> IPersistStreamInitImpl::GetClassID
 
 Retrieves the object's CLSID.
 
@@ -64,9 +65,9 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 
 ### Remarks
 
-See [IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) in the Windows SDK.
+See [IPersist::GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) in the Windows SDK.
 
-##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax
+## <a name="getsizemax"></a> IPersistStreamInitImpl::GetSizeMax
 
 Retrieves the size of the stream needed to save the object's data.
 
@@ -80,9 +81,9 @@ Returns E_NOTIMPL.
 
 ### Remarks
 
-See [IPersistStreamInit::GetSizeMax](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) in the Windows SDK.
+See [IPersistStreamInit::GetSizeMax](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) in the Windows SDK.
 
-##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew
+## <a name="initnew"></a> IPersistStreamInitImpl::InitNew
 
 Initializes a newly created object.
 
@@ -92,9 +93,9 @@ STDMETHOD(InitNew)();
 
 ### Remarks
 
-See [IPersistStreamInit::InitNew](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) in the Windows SDK.
+See [IPersistStreamInit::InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) in the Windows SDK.
 
-##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty
+## <a name="isdirty"></a> IPersistStreamInitImpl::IsDirty
 
 Checks whether the object's data has changed since it was last saved.
 
@@ -104,9 +105,9 @@ STDMETHOD(IsDirty)();
 
 ### Remarks
 
-See [IPersistStreamInit::IsDirty](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) in the Windows SDK.
+See [IPersistStreamInit::IsDirty](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) in the Windows SDK.
 
-##  <a name="load"></a>  IPersistStreamInitImpl::Load
+## <a name="load"></a> IPersistStreamInitImpl::Load
 
 Loads the object's properties from the specified stream.
 
@@ -118,9 +119,9 @@ STDMETHOD(Load)(LPSTREAM pStm);
 
 ATL uses the object's property map to retrieve this information.
 
-See [IPersistStreamInit::Load](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-load) in the Windows SDK.
+See [IPersistStreamInit::Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) in the Windows SDK.
 
-##  <a name="save"></a>  IPersistStreamInitImpl::Save
+## <a name="save"></a> IPersistStreamInitImpl::Save
 
 Saves the object's properties to the specified stream.
 
@@ -132,9 +133,9 @@ STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
 
 ATL uses the object's property map to store this information.
 
-See [IPersistStreamInit::Save](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-save) in the Windows SDK.
+See [IPersistStreamInit::Save](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-save) in the Windows SDK.
 
-## See Also
+## See also
 
-[Storages and Streams](/windows/desktop/Stg/storages-and-streams)<br/>
+[Storages and Streams](/windows/win32/Stg/storages-and-streams)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

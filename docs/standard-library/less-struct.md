@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: less Struct"
 title: "less Struct"
 ms.date: "11/04/2016"
-f1_keywords: ["xfunctional/std::less"]
+f1_keywords: ["functional/std::less"]
 helpviewer_keywords: ["less struct", "less function"]
 ms.assetid: 39349da3-11cd-4774-b2cc-b46af5aae5d7
 ---
@@ -30,13 +31,13 @@ struct less<void>
 
 ### Parameters
 
-*Type*, *T*, *U*
+*Type*, *T*, *U*\
 Any type that supports an `operator<` that takes operands of the specified or inferred types.
 
-*Left*<br/>
+*Left*\
 The left operand of the less-than operation. The unspecialized template takes an lvalue reference argument of type *Type*. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type *T*.
 
-*Right*<br/>
+*Right*\
 The right operand of the less-than operation. The unspecialized template takes an lvalue reference argument of type *Type*. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type *U*.
 
 ## Return Value
@@ -45,7 +46,7 @@ The result of `Left < Right`. The specialized template does perfect forwarding o
 
 ## Remarks
 
-The binary predicate `less`< `Type`> provides a strict weak ordering of a set of element values of type *Type* into equivalence classes, if and only if this type satisfies the standard mathematical requirements for being so ordered. The specializations for any pointer type yield a total ordering of elements, in that all elements of distinct values are ordered with respect to each other.
+The binary predicate `less`<`Type`> provides a strict weak ordering of a set of element values of type *Type* into equivalence classes, if and only if this type satisfies the standard mathematical requirements for being so ordered. The specializations for any pointer type yield a total ordering of elements, in that all elements of distinct values are ordered with respect to each other.
 
 ## Example
 
@@ -92,19 +93,7 @@ cout << Iter1->m_i << " ";
 }
 ```
 
-## Output
-
 ```Output
 Original vector v1 = (41 18467 6334 26500 19169 15724 11478)
 Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 ```
-
-## Requirements
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## See also
-
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>

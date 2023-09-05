@@ -1,14 +1,15 @@
 ---
+description: "Learn more about: Service Map Macros"
 title: "Service Map Macros"
 ms.date: "11/04/2016"
-f1_keywords: ["atlcom/ATL::BEGIN_SERVICE_MAP", "atlcom/ATL::END_SERVICE_MAP", "atlcom/ATL::SERVICE_ENTRY", "atlcom/ATL::SERVICE_ENTRY_CHAIN"]
+f1_keywords: ["atlcom/ATL::BEGIN_SERVICE_MAP", "atlcom/ATL::END_SERVICE_MAP", "atlcom/ATL::SERVICE_ENTRY", "atlcom/ATL::SERVICE_ENTRY_CHAIN", "ATLCOM/BEGIN_SERVICE_MAP", "ATLCOM/END_SERVICE_MAP", "ATLCOM/SERVICE_ENTRY", "ATLCOM/SERVICE_ENTRY_CHAIN"]
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
 ---
 # Service Map Macros
 
 These macros define service maps and entries.
 
-|||
+|Name|Description|
 |-|-|
 |[BEGIN_SERVICE_MAP](#begin_service_map)|Marks the beginning of an ATL service map.|
 |[END_SERVICE_MAP](#end_service_map)|Marks the end of an ATL service map.|
@@ -19,7 +20,7 @@ These macros define service maps and entries.
 
 **Header:** atlcom.h
 
-##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP
+## <a name="begin_service_map"></a> BEGIN_SERVICE_MAP
 
 Marks the beginning of the service map.
 
@@ -44,7 +45,7 @@ Use the service map to implement service provider functionality on your COM obje
 
 [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]
 
-##  <a name="end_service_map"></a>  END_SERVICE_MAP
+## <a name="end_service_map"></a> END_SERVICE_MAP
 
 Marks the end of the service map.
 
@@ -56,7 +57,7 @@ END_SERVICE_MAP()
 
 See the example for [BEGIN_SERVICE_MAP](#begin_service_map).
 
-##  <a name="service_entry"></a>  SERVICE_ENTRY
+## <a name="service_entry"></a> SERVICE_ENTRY
 
 Indicates that the object supports the service id specified by *SID*.
 
@@ -73,7 +74,7 @@ The service ID.
 
 See the example for [BEGIN_SERVICE_MAP](#begin_service_map).
 
-##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN
+## <a name="service_entry_chain"></a> SERVICE_ENTRY_CHAIN
 
 Instructs [IServiceProviderImpl::QueryService](#queryservice) to chain to the object specified by *punk*.
 
@@ -90,7 +91,7 @@ A pointer to the **IUnknown** interface to which to chain.
 
 See the example for [BEGIN_SERVICE_MAP](#begin_service_map).
 
-##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService
+## <a name="queryservice"></a> IServiceProviderImpl::QueryService
 
 Creates or accesses the specified service and returns an interface pointer to the specified interface for the service.
 
@@ -114,7 +115,7 @@ STDMETHOD(QueryService)(
 
 ### Return Value
 
-The returned HRESULT value is one of the following:
+The returned HRESULT is one of the following values:
 
 |Return value|Meaning|
 |------------------|-------------|
@@ -122,24 +123,24 @@ The returned HRESULT value is one of the following:
 |E_INVALIDARG|One or more of the arguments is invalid.|
 |E_OUTOFMEMORY|Memory is insufficient to create the service.|
 |E_UNEXPECTED|An unknown error occurred.|
-|E_NOINTERFACE|The requested interface is not part of this service, or the service is unknown.|
+|E_NOINTERFACE|The requested interface isn't part of this service, or the service is unknown.|
 
 ### Remarks
 
-`QueryService` returns an indirect pointer to the requested interface in the specified service. The caller is responsible for releasing this pointer when it is no longer required.
+`QueryService` returns an indirect pointer to the requested interface in the specified service. The caller is responsible for releasing this pointer when it's no longer required.
 
 When you call `QueryService`, you pass both a service identifier (*guidService*) and an interface identifier (*riid*). The *guidService* specifies the service to which you want access, and the *riid* identifies an interface that is part of the service. In return, you receive an indirect pointer to the interface.
 
-The object that implements the interface might also implement interfaces that are part of other services. Consider the following:
+The object that implements the interface might also implement interfaces that are part of other services. Consider the following possibilities:
 
 - Some of these interfaces might be optional. Not all interfaces defined in the service description are necessarily present on every implementation of the service or on every returned object.
 
-- Unlike calls to `QueryInterface`, passing a different service identifier does not necessarily mean that a different Component Object Model (COM) object is returned.
+- Unlike calls to `QueryInterface`, passing a different service identifier doesn't necessarily mean that a different Component Object Model (COM) object is returned.
 
-- The returned object might have additional interfaces that are not part of the definition of the service.
+- The returned object might have other interfaces that aren't part of the definition of the service.
 
-Two different services, such as SID_SMyService and SID_SYourService, can both specify the use of the same interface, even though the implementation of the interface might have nothing in common between the two services. This works, because a call to `QueryService` (SID_SMyService, IID_IDispatch) can return a different object than `QueryService` (SID_SYourService, IID_IDispatch). Object identity is not assumed when you specify a different service identifier.
+Two different services, such as SID_SMyService and SID_SYourService, can both specify the use of the same interface, even though the implementation of the interface might have nothing in common between the two services. This approach works, because a call to `QueryService` (SID_SMyService, IID_IDispatch) can return a different object than `QueryService` (SID_SYourService, IID_IDispatch). Object identity isn't assumed when you specify a different service identifier.
 
-## See Also
+## See also
 
 [Macros](../../atl/reference/atl-macros.md)

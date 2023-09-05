@@ -1,18 +1,14 @@
 ---
-title: "&lt;queue&gt; operators"
+description: "Learn more about: <queue> operators"
+title: "<queue> operators"
 ms.date: "11/04/2016"
-f1_keywords: ["queue/std::operator!=", "queue/std::operator&gt;", "queue/std::operator&gt;=", "queue/std::operator&lt;", "queue/std::operator&lt;=", "queue/std::operator=="]
+f1_keywords: ["queue/std::operator!=", "queue/std::operator>", "queue/std::operator>=", "queue/std::operator<", "queue/std::operator<=", "queue/std::operator=="]
 ms.assetid: 7c435b48-175c-45b0-88eb-24561044019c
-helpviewer_keywords: ["std::operator!= (queue)", "std::operator&gt; (queue)", "std::operator&gt;= (queue)", "std::operator&lt; (queue)", "std::operator&lt;= (queue)", "std::operator== (queue)"]
+helpviewer_keywords: ["std::operator!= (queue)", "std::operator> (queue)", "std::operator>= (queue)", "std::operator< (queue)", "std::operator<= (queue)", "std::operator== (queue)"]
 ---
-# &lt;queue&gt; operators
+# `<queue>` operators
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 Tests if the queue object on the left side of the operator is not equal to the queue object on the right side.
 
@@ -22,15 +18,15 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `queue`.
 
-*right*<br/>
+*right*\
 An object of type `queue`.
 
 ### Return Value
 
-**true** if the queues are not equal; **false** if queues are equal.
+**`true`** if the queues are not equal; **`false`** if queues are equal.
 
 ### Remarks
 
@@ -79,7 +75,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> `operator<`
 
 Tests if the queue object on the left side of the operator is less than the queue object on the right side.
 
@@ -89,15 +85,15 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `queue`.
 
-*right*<br/>
+*right*\
 An object of type `queue`.
 
 ### Return Value
 
-**true** if the queue on the left side of the operator is less than and not equal to the queue on the right side of the operator; otherwise **false**.
+**`true`** if the queue on the left side of the operator is less than and not equal to the queue on the right side of the operator; otherwise **`false`**.
 
 ### Remarks
 
@@ -142,7 +138,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> `operator<=`
 
 Tests if the queue object on the left side of the operator is less than or equal to the queue object on the right side.
 
@@ -152,15 +148,15 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `queue`.
 
-*right*<br/>
+*right*\
 An object of type `queue`.
 
 ### Return Value
 
-**true** if the queue on the left side of the operator is strictly less than the queue on the right side of the operator; otherwise **false**.
+**`true`** if the queue on the left side of the operator is strictly less than the queue on the right side of the operator; otherwise **`false`**.
 
 ### Remarks
 
@@ -207,7 +203,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Tests if the queue object on the left side of the operator is equal to queue object on the right side.
 
@@ -217,15 +213,15 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `queue`.
 
-*right*<br/>
+*right*\
 An object of type `queue`.
 
 ### Return Value
 
-**true** if the queues are not equal; **false** if queues are equal.
+**`true`** if the queues are not equal; **`false`** if queues are equal.
 
 ### Remarks
 
@@ -273,7 +269,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> `operator>`
 
 Tests if the queue object on the left side of the operator is greater than the queue object on the right side.
 
@@ -283,15 +279,15 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `queue`.
 
-*right*<br/>
+*right*\
 An object of type `queue`.
 
 ### Return Value
 
-**true** if the queue on the left side of the operator is strictly less than the queue on the right side of the operator; otherwise **false**.
+**`true`** if the queue on the left side of the operator is strictly less than the queue on the right side of the operator; otherwise **`false`**.
 
 ### Remarks
 
@@ -339,7 +335,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> `operator>=`
 
 Tests if the queue object on the left side of the operator is greater than or equal to the queue object on the right side.
 
@@ -349,15 +345,15 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### Parameters
 
-*left*<br/>
+*left*\
 An object of type `queue`.
 
-*right*<br/>
+*right*\
 An object of type `queue`.
 
 ### Return Value
 
-**true** if the queue on the left side of the operator is strictly less than the queue on the right side of the operator; otherwise **false**.
+**`true`** if the queue on the left side of the operator is strictly less than the queue on the right side of the operator; otherwise **`false`**.
 
 ### Remarks
 
@@ -403,7 +399,3 @@ int main( )
 The queue q1 is less than the queue q2.
 The queue q1 is greater than or equal to the queue q3.
 ```
-
-## See also
-
-[\<queue>](../standard-library/queue.md)<br/>

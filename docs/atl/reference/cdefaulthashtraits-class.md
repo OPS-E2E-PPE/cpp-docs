@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDefaultHashTraits Class"
 title: "CDefaultHashTraits Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CDefaultHashTraits", "ATLCOLL/ATL::CDefaultHashTraits", "ATLCOLL/ATL::CDefaultHashTraits::Hash"]
@@ -39,7 +40,7 @@ For more information, see [ATL Collection Classes](../../atl/atl-collection-clas
 
 **Header:** atlcoll.h
 
-##  <a name="hash"></a>  CDefaultHashTraits::Hash
+## <a name="hash"></a> CDefaultHashTraits::Hash
 
 Call this function to calculate a hash value for a given element.
 
@@ -60,6 +61,6 @@ Returns the hash value.
 
 The default hashing algorithm is very simple: the return value is the element number. Override this function if a more complicated algorithm is required.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

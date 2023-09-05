@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ActiveX Control Containers: Connecting an ActiveX Control to a Member Variable"
 title: "ActiveX Control Containers: Connecting an ActiveX Control to a Member Variable"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ActiveX control containers [MFC], accessing ActiveX controls", "ActiveX controls [MFC], member variables of project", "connecting ActiveX controls to container member variables", "ActiveX controls [MFC], accessing", "member variables [MFC], ActiveX controls in project", "ActiveX control containers [MFC], ActiveX controls as member variables"]
@@ -9,7 +10,7 @@ ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
 The easiest way to access an ActiveX control from within its control container application is to associate the ActiveX control with a member variable of the dialog class that will contain the control.
 
 > [!NOTE]
->  This is not the only way to access an embedded control from within a container class, but for the purposes of this article it is sufficient.
+> This is not the only way to access an embedded control from within a container class, but for the purposes of this article it is sufficient.
 
 ### Adding a member variable to the dialog class
 
@@ -27,7 +28,6 @@ The easiest way to access an ActiveX control from within its control container a
 
 1. Click **Finish** to accept your choices and exit the Add Member Variable Wizard.
 
-## See Also
+## See also
 
-[ActiveX Control Containers](../mfc/activex-control-containers.md)
-
+[ActiveX Control Containers](activex-control-containers.md)

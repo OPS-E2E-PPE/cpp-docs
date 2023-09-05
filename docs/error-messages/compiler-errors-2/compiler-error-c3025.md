@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3025"
 title: "Compiler Error C3025"
 ms.date: "11/04/2016"
 f1_keywords: ["C3025"]
@@ -15,7 +16,7 @@ A clause requires an integer expression but was given a noninteger expression.
 
 The following sample generates C3025.
 
-```
+```cpp
 // C3025.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

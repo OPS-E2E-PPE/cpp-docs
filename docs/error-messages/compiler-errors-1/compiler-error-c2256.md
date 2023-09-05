@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2256"
 title: "Compiler Error C2256"
 ms.date: "11/04/2016"
 f1_keywords: ["C2256"]
@@ -13,7 +14,7 @@ A destructor or constructor cannot be specified as a [friend](../../cpp/friend-c
 
 The following sample generates C2256:
 
-```
+```cpp
 // C2256.cpp
 // compile with: /c
 class C {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2549"
 title: "Compiler Error C2549"
 ms.date: "11/04/2016"
 f1_keywords: ["C2549"]
@@ -11,7 +12,7 @@ user-defined conversion cannot specify a return type
 
 The following sample generates C2549:
 
-```
+```cpp
 // C2549.cpp
 // compile with: /c
 class X {

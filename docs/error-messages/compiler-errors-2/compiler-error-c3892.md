@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3892"
 title: "Compiler Error C3892"
 ms.date: "11/04/2016"
 f1_keywords: ["C3892"]
@@ -13,7 +14,7 @@ A const variable cannot be changed after it is declared and initialized.
 
 The following sample generates C3892:
 
-```
+```cpp
 // C3892.cpp
 // compile with: /clr
 ref struct Y1 {

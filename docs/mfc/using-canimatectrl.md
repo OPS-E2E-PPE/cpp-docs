@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Using CAnimateCtrl"
 title: "Using CAnimateCtrl"
 ms.date: "11/04/2016"
-f1_keywords: ["CAnimateCtrl"]
 helpviewer_keywords: ["animation controls [MFC], CAnimateCtrl class", "controls [MFC], animation", "CAnimateCtrl class [MFC], about CAnimateCtrl class [MFC]"]
 ms.assetid: 696c0805-bef0-4e2e-a9e7-b37b9215b7f0
 ---
@@ -19,7 +19,6 @@ Animation controls can only play simple AVI clips, and they do not support sound
 
 - [Notifications Sent by Animation Controls](../mfc/notifications-sent-by-animation-controls.md)
 
-## See Also
+## See also
 
 [Controls](../mfc/controls-mfc.md)
-

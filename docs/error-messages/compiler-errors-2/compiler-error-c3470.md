@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3470"
 title: "Compiler Error C3470"
 ms.date: "11/04/2016"
 f1_keywords: ["C3470"]
@@ -15,7 +16,7 @@ A type cannot define both a default indexer and an operator[].
 
 The following sample generates C3470
 
-```
+```cpp
 // C3470.cpp
 // compile with: /clr
 using namespace System;

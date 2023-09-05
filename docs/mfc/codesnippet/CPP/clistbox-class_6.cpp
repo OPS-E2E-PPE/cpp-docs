@@ -1,5 +1,5 @@
-// CMyODListBox is my owner-drawn list box derived from CListBox. This 
-// example simply frees the item's text. The list box control was created 
+// CMyODListBox is my owner-drawn list box derived from CListBox. This
+// example simply frees the item's text. The list box control was created
 // with the following code:
 //   m_myODListBox.Create(
 //      WS_CHILD|WS_VISIBLE|WS_BORDER|WS_HSCROLL|WS_VSCROLL|
@@ -9,7 +9,7 @@
 void CMyODListBox::DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct)
 {
    ASSERT(lpDeleteItemStruct->CtlType == ODT_LISTBOX);
-   LPVOID lpszText = (LPVOID) lpDeleteItemStruct->itemData;
+   LPVOID lpszText = (LPVOID)lpDeleteItemStruct->itemData;
    ASSERT(lpszText != NULL);
 
    free(lpszText);

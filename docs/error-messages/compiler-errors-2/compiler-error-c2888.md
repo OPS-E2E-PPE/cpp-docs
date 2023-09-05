@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2888"
 title: "Compiler Error C2888"
 ms.date: "11/04/2016"
 f1_keywords: ["C2888"]
@@ -13,7 +14,7 @@ A symbol belonging to namespace A must be defined in a namespace that encloses A
 
 The following sample generates C2888:
 
-```
+```cpp
 // C2888.cpp
 // compile with: /c
 namespace M {

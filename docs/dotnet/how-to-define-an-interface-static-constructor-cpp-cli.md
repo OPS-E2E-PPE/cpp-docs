@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Define an Interface Static Constructor (C++/CLI)"
 title: "How to: Define an Interface Static Constructor (C++/CLI)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["constructors [C++]", "static constructors, interface", "interface static constructor"]
@@ -10,7 +11,7 @@ An interface can have a static constructor, which can be used to initialize stat
 
 ## Example
 
-```
+```cpp
 // mcppv2_interface_class2.cpp
 // compile with: /clr
 using namespace System;
@@ -45,6 +46,6 @@ in MyInterface static constructor
 99
 ```
 
-## See Also
+## See also
 
-[interface class](../windows/interface-class-cpp-component-extensions.md)
+[interface class](../extensions/interface-class-cpp-component-extensions.md)

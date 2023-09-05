@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2540"
 title: "Compiler Error C2540"
 ms.date: "11/04/2016"
 f1_keywords: ["C2540"]
@@ -13,7 +14,7 @@ An array must have a constant bound.
 
 The following sample generates C2540:
 
-```
+```cpp
 // C2540.cpp
 void func(int n, int pC[]) {
    int i = ((int [n])pC)[1];   // C2540

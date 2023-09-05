@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: bindable"
 title: "bindable (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.bindable"]
@@ -17,7 +18,7 @@ Indicates that the property supports data binding.
 
 ## Remarks
 
-The **bindable** C++ attribute has the same functionality as the [bindable](/windows/desktop/Midl/bindable) MIDL attribute. You can use it on properties defined with the [propget](propget.md), [propput](propput.md), or [propputref](propputref.md) attributes, or you can manually define a bindable method.
+The **bindable** C++ attribute has the same functionality as the [bindable](/windows/win32/Midl/bindable) MIDL attribute. You can use it on properties defined with the [propget](propget.md), [propput](propput.md), or [propputref](propputref.md) attributes, or you can manually define a bindable method.
 
 The following MFC samples show the use of **bindable**:
 
@@ -52,9 +53,7 @@ __interface IPropDemo : IDispatch {
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface method|
 |**Repeatable**|No|
@@ -63,7 +62,7 @@ __interface IPropDemo : IDispatch {
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Method Attributes](method-attributes.md)<br/>

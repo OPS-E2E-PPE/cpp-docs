@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2599"
 title: "Compiler Error C2599"
 ms.date: "11/04/2016"
 f1_keywords: ["C2599"]
@@ -15,7 +16,7 @@ Forward declaration of an enum type is not allowed under [/Za](../../build/refer
 
 The following sample generates C2599:
 
-```
+```cpp
 // C2599.cpp
 // compile with: /clr /c
 enum class Status;   // C2599

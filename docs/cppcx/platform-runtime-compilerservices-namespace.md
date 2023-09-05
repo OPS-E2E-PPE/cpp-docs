@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Runtime::CompilerServices Namespace"
 title: "Platform::Runtime::CompilerServices Namespace"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -52,6 +53,6 @@ Although this namespace is intended for internal use, browsers can display the f
 
 **Namespace:** Platform::CompilerServices
 
-## See Also
+## See also
 
 [Platform Namespace](platform-namespace-c-cx.md)

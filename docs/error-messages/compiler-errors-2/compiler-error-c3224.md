@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3224"
 title: "Compiler Error C3224"
 ms.date: "11/04/2016"
 f1_keywords: ["C3224"]
@@ -22,7 +23,7 @@ public class C<T,U> {}
 
 And then,
 
-```
+```cpp
 // C3224b.cpp
 // compile with: /clr
 #using "C3224.dll"

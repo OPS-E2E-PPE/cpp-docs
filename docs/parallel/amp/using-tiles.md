@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Using Tiles"
 title: "Using Tiles"
 ms.date: "11/19/2018"
-ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
 ---
 # Using Tiles
 
@@ -9,7 +9,7 @@ You can use tiling to maximize the acceleration of your app. Tiling divides thre
 
 - `tile_static` variables. The primary benefit of tiling is the performance gain from `tile_static` access. Access to data in `tile_static` memory can be significantly faster than access to data in the global space (`array` or `array_view` objects). An instance of a `tile_static` variable is created for each tile, and all threads in the tile have access to the variable. In a typical tiled algorithm, data is copied into `tile_static` memory once from global memory and then accessed many times from the `tile_static` memory.
 
-- [tile_barrier::wait Method](reference/tile-barrier-class.md#wait). A call to `tile_barrier::wait` suspends execution of the current thread until all of the threads in the same tile reach the call to `tile_barrier::wait`. You cannot guarantee the order that the threads will run in, only that no threads in the tile will execute past the call to `tile_barrier::wait` until all of the threads have reached the call. This means that by using the `tile_barrier::wait` method, you can perform tasks on a tile-by-tile basis rather than a thread-by-thread basis. A typical tiling algorithm has code to initialize the `tile_static` memory for the whole tile followed by a call to `tile_barrer::wait`. Code that follows `tile_barrier::wait` contains computations that require access to all the `tile_static` values.
+- [tile_barrier::wait Method](reference/tile-barrier-class.md#wait). A call to `tile_barrier::wait` suspends execution of the current thread until all of the threads in the same tile reach the call to `tile_barrier::wait`. You cannot guarantee the order that the threads will run in, only that no threads in the tile will execute past the call to `tile_barrier::wait` until all of the threads have reached the call. This means that by using the `tile_barrier::wait` method, you can perform tasks on a tile-by-tile basis rather than a thread-by-thread basis. A typical tiling algorithm has code to initialize the `tile_static` memory for the whole tile followed by a call to `tile_barrier::wait`. Code that follows `tile_barrier::wait` contains computations that require access to all the `tile_static` values.
 
 - Local and global indexing. You have access to the index of the thread relative to the entire `array_view` or `array` object and the index relative to the tile. Using the local index can make your code easier to read and debug. Typically, you use local indexing to access `tile_static` variables, and global indexing to access `array` and `array_view` variables.
 
@@ -19,9 +19,13 @@ To take advantage of tiling, your algorithm must partition the compute domain in
 
 ## Example of Global, Tile, and Local Indices
 
+> [!NOTE]
+> C++ AMP headers are deprecated starting with Visual Studio 2022 version 17.0.
+> Including any AMP headers will generate build errors. Define `_SILENCE_AMP_DEPRECATION_WARNINGS` before including any AMP headers to silence the warnings.
+
 The following diagram represents an 8x9 matrix of data that is arranged in 2x3 tiles.
 
-![8&#45;by&#45;9 matrix divided into 2&#45;by&#45;3 tiles](../../parallel/amp/media/usingtilesmatrix.png "8&#45;by&#45;9 matrix divided into 2&#45;by&#45;3 tiles")
+![Diagram of an 8 by 9 matrix divided into 2 by 3 tiles.](../../parallel/amp/media/usingtilesmatrix.png)
 
 The following example displays the global, tile, and local indices of this tiled matrix. An `array_view` object is created by using elements of type `Description`. The `Description` holds the global, tile, and local indices of the element in the matrix. The code in the call to `parallel_for_each` sets the values of the global, tile, and local indices of each element. The output displays the values in the `Description` structures.
 
@@ -128,7 +132,7 @@ void TilingDescription() {
     }
 }
 
-void main() {
+int main() {
     TilingDescription();
     char wait;
     std::cin >> wait;
@@ -159,7 +163,7 @@ The previous example illustrates the tile layout and indices, but is not in itse
 
 5. There is a line of code to copy the values in each tile to the `tile_static` array. For each thread, after the value is copied to the array, execution on the thread stops due to the call to `tile_barrier::wait`.
 
-6. When all of the threads in a tile have reached the barrier, the average can be calculated. Because the code executes for every thread, there is an `if` statement to only calculate the average on one thread. The average is stored in the averages variable. The barrier is essentially the construct that controls calculations by tile, much as you might use a `for` loop.
+6. When all of the threads in a tile have reached the barrier, the average can be calculated. Because the code executes for every thread, there is an `if` statement to only calculate the average on one thread. The average is stored in the averages variable. The barrier is essentially the construct that controls calculations by tile, much as you might use a **`for`** loop.
 
 7. The data in the `averages` variable, because it is an `array` object, must be copied back to the host. This example uses the vector conversion operator.
 
@@ -228,7 +232,7 @@ void SamplingExample() {
         }
         std::cout << "\n";
     }
-    // Output for SAMPLESSIZE = 2 is:
+    // Output for SAMPLESIZE = 2 is:
     //  4.5  6.5  8.5 10.5
     // 20.5 22.5 24.5 26.5
     // 36.5 38.5 40.5 42.5

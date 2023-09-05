@@ -1,19 +1,20 @@
 ---
-title: "&lt;istream&gt; typedefs"
+description: "Learn more about: <istream> typedefs"
+title: "<istream> typedefs"
 ms.date: "11/04/2016"
 f1_keywords: ["istream/std::iostream", "istream/std::istream", "istream/std::wiostream", "istream/std::wistream"]
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
 ---
-# &lt;istream&gt; typedefs
+# `<istream>` typedefs
 
-||||
-|-|-|-|
-|[iostream](#iostream)|[istream](#istream)|[wiostream](#wiostream)|
-|[wistream](#wistream)|
+[iostream](#iostream)\
+[istream](#istream)\
+[wiostream](#wiostream)\
+[wistream](#wistream)
 
-## <a name="iostream"></a>  iostream
+## <a name="iostream"></a> iostream
 
-A type `basic_iostream` specialized on **char**.
+A type `basic_iostream` specialized on **`char`**.
 
 ```cpp
 typedef basic_iostream<char, char_traits<char>> iostream;
@@ -21,11 +22,11 @@ typedef basic_iostream<char, char_traits<char>> iostream;
 
 ### Remarks
 
-The type is a synonym for template class [basic_iostream](../standard-library/basic-iostream-class.md), specialized for elements of type **char** with default character traits.
+The type is a synonym for class template [basic_iostream](../standard-library/basic-iostream-class.md), specialized for elements of type **`char`** with default character traits.
 
-## <a name="istream"></a>  istream
+## <a name="istream"></a> istream
 
-A type `basic_istream` specialized on **char**.
+A type `basic_istream` specialized on **`char`**.
 
 ```cpp
 typedef basic_istream<char, char_traits<char>> istream;
@@ -33,11 +34,11 @@ typedef basic_istream<char, char_traits<char>> istream;
 
 ### Remarks
 
-The type is a synonym for template class [basic_istream](../standard-library/basic-istream-class.md), specialized for elements of type **char** with default character traits.
+The type is a synonym for class template [basic_istream](../standard-library/basic-istream-class.md), specialized for elements of type **`char`** with default character traits.
 
-## <a name="wiostream"></a>  wiostream
+## <a name="wiostream"></a> wiostream
 
-A type `basic_iostream` specialized on **wchar_t**.
+A type `basic_iostream` specialized on **`wchar_t`**.
 
 ```cpp
 typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
@@ -45,11 +46,11 @@ typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
 
 ### Remarks
 
-The type is a synonym for template class [basic_iostream](../standard-library/basic-iostream-class.md), specialized for elements of type **wchar_t** with default character traits.
+The type is a synonym for class template [basic_iostream](../standard-library/basic-iostream-class.md), specialized for elements of type **`wchar_t`** with default character traits.
 
-## <a name="wistream"></a>  wistream
+## <a name="wistream"></a> wistream
 
-A type `basic_istream` specialized on **wchar_t**.
+A type `basic_istream` specialized on **`wchar_t`**.
 
 ```cpp
 typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
@@ -57,8 +58,8 @@ typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
 
 ### Remarks
 
-The type is a synonym for template class [basic_istream](../standard-library/basic-istream-class.md), specialized for elements of type **wchar_t** with default character traits.
+The type is a synonym for class template [basic_istream](../standard-library/basic-istream-class.md), specialized for elements of type **`wchar_t`** with default character traits.
 
 ## See also
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)

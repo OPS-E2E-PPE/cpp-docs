@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: defer_lock_t Structure"
 title: "defer_lock_t Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["mutex/std::defer_lock_t"]
@@ -22,5 +23,5 @@ struct defer_lock_t;
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

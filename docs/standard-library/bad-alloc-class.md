@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: bad_alloc Class"
 title: "bad_alloc Class"
 ms.date: "11/04/2016"
 f1_keywords: ["new/std::bad_alloc"]
@@ -14,20 +15,16 @@ The class describes an exception thrown to indicate that an allocation request d
 ```cpp
 class bad_alloc : public exception {
     bad_alloc();
-virtual ~bad_alloc();
-
+    virtual ~bad_alloc();
+    bad_alloc(const bad_alloc&);
+    bad_alloc& operator=(const bad_alloc&);
+    const char* what() const override;
 };
 ```
 
 ## Remarks
 
 The value returned by `what` is an implementation-defined C string. None of the member functions throw any exceptions.
-
-## Requirements
-
-**Header:** \<new>
-
-**Namespace:** std
 
 ## Example
 
@@ -50,17 +47,6 @@ int main() {
 }
 ```
 
-## Sample Output
-
 ```Output
 bad allocation
 ```
-
-## Requirements
-
-**Header:** \<new>
-
-## See Also
-
-[exception Class](../standard-library/exception-class.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

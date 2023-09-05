@@ -1,19 +1,17 @@
 ---
-title: "&lt;system_error&gt; enums"
+description: "Learn more about: <system_error> enums"
+title: "<system_error> enums"
 ms.date: "11/04/2016"
 f1_keywords: ["system_error/std::errc", "system_error/std::io_errc"]
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
 ---
-# &lt;system_error&gt; enums
+# `<system_error>` enums
 
-|||
-|-|-|
-|[errc](#errc)|[io_errc](#io_errc)|
+## <a name="errc"></a> errc
 
-## <a name="errc"></a>  errc Enumeration
+Provides symbolic names for all the error-code macros defined by POSIX in `<errno.h>`.
 
-Provides symbolic names for all the error-code macros defined by Posix in `<errno.h>`.
-
+```cpp
 class errc {
    address_family_not_supported = EAFNOSUPPORT,
    address_in_use = EADDRINUSE,
@@ -93,17 +91,20 @@ class errc {
    too_many_synbolic_link_levels = ELOOP,
    value_too_large = EOVERFLOW,
    wrong_protocol_type = EPROTOTYPE,
-   };
+};
+```
 
 ### Remarks
 
-## <a name="io_errc"></a>  io_errc Enumeration
+## <a name="io_errc"></a> io_errc
 
 Provides symbolic names for the error conditions in \<iostream>. Can be used to create [error_condition](../standard-library/error-condition-class.md) objects to be compared with the value that's returned by the [ios_base::failure](../standard-library/ios-base-class.md#failure)`code()` function.
 
+```cpp
 class io_errc {
    stream = 1
-   };
+};
+```
 
 ### Remarks
 
@@ -139,7 +140,3 @@ int main()
     }
 }
 ```
-
-## See also
-
-[<system_error>](../standard-library/system-error.md)<br/>

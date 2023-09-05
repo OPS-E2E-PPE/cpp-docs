@@ -1,63 +1,69 @@
 ---
 title: "log, logf, logl, log10, log10f, log10l"
-ms.date: "04/05/2018"
-apiname: ["log10f", "logf", "log10", "log", "log10l", "logl"]
-apilocation: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ucrtbase.dll", "api-ms-win-crt-math-l1-1-0.dll"]
-apitype: "DLLExport"
+description: "API reference for log, logf, logl, log10, log10f, and log10l; which calculate logarithms."
+ms.date: "9/1/2020"
+api_name: ["log10f", "logf", "log10", "log", "log10l", "logl", "_o_log", "_o_log10", "_o_log10f", "_o_logf"]
+api_location: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ucrtbase.dll", "api-ms-win-crt-math-l1-1-0.dll"]
+api_type: ["DLLExport"]
+topic_type: ["apiref"]
 f1_keywords: ["logf", "logl", "_log10l", "log", "_logl", "log10f", "log10l", "log10"]
 helpviewer_keywords: ["calculating logarithms", "log10f function", "log10 function", "log function", "log10l function", "logl function", "logf function", "logarithms"]
-ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
 ---
-# log, logf, logl, log10, log10f, log10l
+# `log`, `logf`, `logl`, `log10`, `log10f`, `log10l`
 
 Calculates logarithms.
 
 ## Syntax
 
 ```C
-double log( double x );
-float logf( float x );
-long double logl( double x );
-double log10( double x );
-float log10f ( float x );
-long double log10l( double x );
-```
+double log(double x);
+float logf(float x);
+long double logl(double x);
+double log10(double x);
+float log10f (float x);
+long double log10l(double x);
+#define log(X) // Requires C11 or higher
+#define log10(X) // Requires C11 or higher
 
-```cpp
-float log( float x );  // C++ only
-long double log( long double x );  // C++ only
-float log10( float x );  // C++ only
-long double log10( long double x );  // C++ only
+float log(float x);  // C++ only
+long double log(long double x);  // C++ only
+float log10(float x);  // C++ only
+long double log10(long double x);  // C++ only
 ```
 
 ### Parameters
 
-*x*<br/>
+*`x`*\
 Value whose logarithm is to be found.
 
-## Return Value
+## Return value
 
-The **log** functions return the natural logarithm (base *e*) of *x* if successful. The **log10** functions return the base-10 logarithm. If *x* is negative, these functions return an indefinite (IND), by default. If *x* is 0, they return infinity (INF).
+The **`log`** functions return the natural logarithm (base *`e`*) of *`x`* if successful. The **`log10`** functions return the base-10 logarithm. If *`x`* is negative, these functions return an indefinite (`IND`), by default. If *`x`* is 0, they return infinity (`INF`).
 
-|Input|SEH Exception|Matherr Exception|
-|-----------|-------------------|-----------------------|
-|± QNAN, IND|none|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
-|*x* < 0|INVALID|_DOMAIN|
+| Input | SEH exception | `_matherr` exception |
+|---|---|---|
+| ± QNaN, IND | none | `_DOMAIN` |
+| ± 0 | `ZERODIVIDE` | `_SING` |
+| *`x < 0`* | `INVALID` | `_DOMAIN` |
 
-**log** and **log10** have an implementation that uses Streaming SIMD Extensions 2 (SSE2). See [_set_SSE2_enable](set-sse2-enable.md) for information and restrictions on using the SSE2 implementation.
+**`log`** and **`log10`** have an implementation that uses Streaming SIMD Extensions 2 (SSE2). See [`_set_SSE2_enable`](set-sse2-enable.md) for information and restrictions on using the SSE2 implementation.
 
 ## Remarks
 
-C++ allows overloading, so you can call overloads of **log** and **log10** that take and return **float** or **long double** values. In a C program, **log** and **log10** always take and return a **double**.
+C++ allows overloading, so you can call overloads of **`log`** and **`log10`** that take and return **`float`** or **`long double`** values. In a C program, unless you're using the `<tgmath.h>` macro to call this function, **`log`** and **`log10`** always take and return a **`double`**.
+
+If you use the `<tgmath.h> log()` macro, the type of the argument determines which version of the function is selected. See [Type-generic math](../tgmath.md) for details.
+
+By default, this function's global state is scoped to the application. To change this behavior, see [Global state in the CRT](../global-state.md).
 
 ## Requirements
 
-|Routine|Required header|
-|-------------|---------------------|
-|**log**, **logf**, **logl**, **log10**, **log10f**, **log10l**|\<math.h>|
+| Routine | Required header |
+|---|---|
+| **`log`**, **`logf`**, **`logl`**, **`log10`**, **`log10f`**, **`log10l`** | `<math.h>` |
+| **`log`** macro | `<tgmath.h>` |
 
-For additional compatibility information, see [Compatibility](../../c-runtime-library/compatibility.md).
+For more compatibility information, see [Compatibility](../compatibility.md).
 
 ## Example
 
@@ -116,9 +122,9 @@ Log base 2 of 65536.000000 is 16.000000
 
 ## See also
 
-[Floating-Point Support](../../c-runtime-library/floating-point-support.md) <br/>
-[exp, expf, expl](exp-expf.md) <br/>
-[_matherr](matherr.md) <br/>
-[pow, powf, powl](pow-powf-powl.md) <br/>
-[_CIlog](../../c-runtime-library/cilog.md) <br/>
-[_CIlog10](../../c-runtime-library/cilog10.md)<br/>
+[Math and floating-point support](../floating-point-support.md) \
+[`exp`, `expf`, `expl`](exp-expf.md) \
+[`_matherr`](matherr.md) \
+[`pow`, `powf`, `powl`](pow-powf-powl.md) \
+[`_CIlog`](../cilog.md) \
+[`_CIlog10`](../cilog10.md)\

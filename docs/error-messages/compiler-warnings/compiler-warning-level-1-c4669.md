@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4669"
 title: "Compiler Warning (level 1) C4669"
 ms.date: "11/04/2016"
 f1_keywords: ["C4669"]
@@ -13,7 +14,7 @@ A cast contains a Windows Runtime or managed type. The compiler completes the ca
 
 The following sample generates C4669 and shows how to fix it:
 
-```
+```cpp
 // C4669.cpp
 // compile with: /clr /W1
 ref struct A {

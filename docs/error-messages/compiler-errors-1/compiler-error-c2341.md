@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2341"
 title: "Compiler Error C2341"
 ms.date: "11/04/2016"
 f1_keywords: ["C2341"]
@@ -13,7 +14,7 @@ An [allocate](../../cpp/allocate.md) statement refers to a segment not yet defin
 
 The following sample generates C2341:
 
-```
+```cpp
 // C2341.cpp
 // compile with: /c
 __declspec(allocate(".test"))   // C2341
@@ -22,7 +23,7 @@ int j = 1;
 
 Possible resolution:
 
-```
+```cpp
 // C2341b.cpp
 // compile with: /c
 #pragma data_seg(".test")

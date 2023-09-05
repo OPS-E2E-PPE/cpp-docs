@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2754"
 title: "Compiler Error C2754"
 ms.date: "11/04/2016"
 f1_keywords: ["C2754"]
@@ -13,7 +14,7 @@ An attempt was made to partially specialize a template class that has a dependen
 
 The following sample generates C2754:
 
-```
+```cpp
 // C2754.cpp
 // compile with: /c
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2906"
 title: "Compiler Error C2906"
 ms.date: "11/04/2016"
 f1_keywords: ["C2906"]
@@ -13,7 +14,7 @@ You must use the new syntax for explicit specialization of templates.
 
 The following sample generates C2906:
 
-```
+```cpp
 // C2906.cpp
 // compile with: /c
 template<class T> class X{};   // primary template

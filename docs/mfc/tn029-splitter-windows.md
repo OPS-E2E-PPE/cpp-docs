@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: TN029: Splitter Windows"
 title: "TN029: Splitter Windows"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.windows.splitter"]
@@ -37,7 +38,7 @@ The maximum number of panes that you can specify for dynamic splitters is 2 rows
 
 ## Splitter Examples
 
-Many of the MFC sample programs use splitter windows directly or indirectly. The MFC General sample [VIEWEX](../visual-cpp-samples.md) illustrates several uses of static splitters, including how to place a splitter in a splitter.
+Many of the MFC sample programs use splitter windows directly or indirectly. The MFC General sample [VIEWEX](../overview/visual-cpp-samples.md) illustrates several uses of static splitters, including how to place a splitter in a splitter.
 
 You can also use ClassWizard to create a new multiple document interface (MDI) Child frame window class that contains a splitter window. For more information on splitter windows, see [Multiple Document Types, Views, and Frame Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
 
@@ -132,8 +133,7 @@ The `CView` class uses the following high level commands to delegate to the `CSp
 
    Executes the keyboard split command, usually "Window Split".
 
-## See Also
+## See also
 
 [Technical Notes by Number](../mfc/technical-notes-by-number.md)<br/>
 [Technical Notes by Category](../mfc/technical-notes-by-category.md)
-

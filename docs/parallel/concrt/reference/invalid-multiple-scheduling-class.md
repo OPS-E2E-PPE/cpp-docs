@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: invalid_multiple_scheduling Class"
 title: "invalid_multiple_scheduling Class"
 ms.date: "11/04/2016"
 f1_keywords: ["invalid_multiple_scheduling", "CONCRT/concurrency::invalid_multiple_scheduling", "CONCRT/concurrency::invalid_multiple_scheduling::invalid_multiple_scheduling"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when a `task_handle` object is schedule
 
 ## Syntax
 
-```
+```cpp
 class invalid_multiple_scheduling : public std::exception;
 ```
 
@@ -35,11 +36,11 @@ class invalid_multiple_scheduling : public std::exception;
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> invalid_multiple_scheduling
+## <a name="ctor"></a> invalid_multiple_scheduling
 
 Constructs an `invalid_multiple_scheduling` object.
 
-```
+```cpp
 explicit _CRTIMP invalid_multiple_scheduling(_In_z_ const char* _Message) throw();
 
 invalid_multiple_scheduling() throw();
@@ -50,7 +51,7 @@ invalid_multiple_scheduling() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [task_handle Class](task-handle-class.md)<br/>

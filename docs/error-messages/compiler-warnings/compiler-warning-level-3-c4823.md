@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4823"
 title: "Compiler Warning (level 3) C4823"
 ms.date: "11/04/2016"
 f1_keywords: ["C4823"]
@@ -17,7 +18,7 @@ You can also manually unpin the object and ignore the warning.
 
 The following sample generates C4823.
 
-```
+```cpp
 // C4823.cpp
 // compile with: /clr /W3 /EHa-
 using namespace System;

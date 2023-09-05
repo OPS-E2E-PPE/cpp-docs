@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2134"
 title: "Compiler Error C2134"
 ms.date: "11/04/2016"
 f1_keywords: ["C2134"]
@@ -12,7 +13,7 @@ A function declared as constexpr can only call other functions declared as const
 
 The following sample generates C2134:
 
-```
+```cpp
 // C2134.cpp
 // compile with: /c
 int A() {
@@ -26,7 +27,7 @@ constexpr int B() {
 
 Possible resolution:
 
-```
+```cpp
 // C2134b.cpp
 constexpr int A() {  // add constexpr to A, since it meets the requirements of constexpr.
     return 42;

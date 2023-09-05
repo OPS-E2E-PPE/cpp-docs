@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CSingleDocTemplate Class"
 title: "CSingleDocTemplate Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CSingleDocTemplate", "AFXWIN/CSingleDocTemplate", "AFXWIN/CSingleDocTemplate::CSingleDocTemplate"]
@@ -55,7 +56,7 @@ For more information on using `CSingleDocTemplate`, see [Document Templates and 
 
 **Header:** afxwin.h
 
-##  <a name="csingledoctemplate"></a>  CSingleDocTemplate::CSingleDocTemplate
+## <a name="csingledoctemplate"></a> CSingleDocTemplate::CSingleDocTemplate
 
 Constructs a `CSingleDocTemplate` object.
 
@@ -102,12 +103,12 @@ Dynamically allocate a `CSingleDocTemplate` object and pass it to `CWinApp::AddD
 ### Example
 
 [!code-cpp[NVC_MFCDocViewSDI#13](../../mfc/codesnippet/cpp/csingledoctemplate-class_1.cpp)]
-
+&nbsp;
 [!code-cpp[NVC_MFCDocViewSDI#14](../../mfc/codesnippet/cpp/csingledoctemplate-class_2.cpp)]
 
-## See Also
+## See also
 
-[MFC Sample DOCKTOOL](../../visual-cpp-samples.md)<br/>
+[MFC Sample DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
 [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)<br/>

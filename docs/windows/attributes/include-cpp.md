@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: include (C++)"
 title: "include  (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.include"]
@@ -24,7 +25,7 @@ The name of a file that you want included in the generated .idl file.
 
 The **include** C++ attribute causes an `#include` statement to be placed below the `import "docobj.idl"` statement in the generated .idl file.
 
-The **include** C++ attribute has the same functionality as the [include](/windows/desktop/Midl/include) MIDL attribute.
+The **include** C++ attribute has the same functionality as the [include](/windows/win32/Midl/include) MIDL attribute.
 
 ## Example
 
@@ -39,9 +40,7 @@ The following code shows an example of how to use **include**. For this example,
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Anywhere|
 |**Repeatable**|No|
@@ -50,7 +49,7 @@ The following code shows an example of how to use **include**. For this example,
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Stand-Alone Attributes](stand-alone-attributes.md)<br/>

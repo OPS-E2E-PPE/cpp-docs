@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDataPathProperty Class"
 title: "CDataPathProperty Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CDataPathProperty", "AFXCTL/CDataPathProperty", "AFXCTL/CDataPathProperty::CDataPathProperty", "AFXCTL/CDataPathProperty::GetControl", "AFXCTL/CDataPathProperty::GetPath", "AFXCTL/CDataPathProperty::Open", "AFXCTL/CDataPathProperty::ResetData", "AFXCTL/CDataPathProperty::SetControl", "AFXCTL/CDataPathProperty::SetPath"]
@@ -64,7 +65,7 @@ For more information about how to use asynchronous monikers and ActiveX controls
 
 **Header:** afxctl.h
 
-##  <a name="cdatapathproperty"></a>  CDataPathProperty::CDataPathProperty
+## <a name="cdatapathproperty"></a> CDataPathProperty::CDataPathProperty
 
 Constructs a `CDataPathProperty` object.
 
@@ -85,7 +86,7 @@ The path, which may be absolute or relative, used to create an asynchronous moni
 
 The `COleControl` object pointed to by *pControl* is used by `Open` and retrieved by derived classes. If *pControl* is NULL, the control used with `Open` should be set with `SetControl`. If *lpszPath* is NULL, you can pass in the path through `Open` or set it with `SetPath`.
 
-##  <a name="getcontrol"></a>  CDataPathProperty::GetControl
+## <a name="getcontrol"></a> CDataPathProperty::GetControl
 
 Call this member function to retrieve the `COleControl` object associated with the `CDataPathProperty` object.
 
@@ -97,7 +98,7 @@ COleControl* GetControl();
 
 Returns a pointer to the OLE control associated with the `CDataPathProperty` object. NULL if not control is associated.
 
-##  <a name="getpath"></a>  CDataPathProperty::GetPath
+## <a name="getpath"></a> CDataPathProperty::GetPath
 
 Call this member function to retrieve the path, set when the `CDataPathProperty` object was constructed, or specified in `Open`, or specified in a previous call to the `SetPath` member function.
 
@@ -109,7 +110,7 @@ CString GetPath() const;
 
 Returns the pathname to the property itself. Can be empty if no path has been specified.
 
-##  <a name="open"></a>  CDataPathProperty::Open
+## <a name="open"></a> CDataPathProperty::Open
 
 Call this member function to initiate loading of the asynchronous property for the associated control.
 
@@ -155,7 +156,7 @@ Before calling `Open` without a control, an ActiveX control (formerly known as a
 
 All overloads of [CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open) are also available from `CDataPathProperty`.
 
-##  <a name="resetdata"></a>  CDataPathProperty::ResetData
+## <a name="resetdata"></a> CDataPathProperty::ResetData
 
 Call this function to get `CAsyncMonikerFile::OnDataAvailable` to notify the container that the control properties have changed, and all the information loaded asynchronously is no longer useful.
 
@@ -167,11 +168,11 @@ virtual void ResetData();
 
 Opening should be restarted. Derived classes can override this function for different defaults.
 
-##  <a name="setcontrol"></a>  CDataPathProperty::SetControl
+## <a name="setcontrol"></a> CDataPathProperty::SetControl
 
 Call this member function to associate an asynchronous OLE control with the `CDataPathProperty` object.
 
-```
+```cpp
 void SetControl(COleControl* pControl);
 ```
 
@@ -180,11 +181,11 @@ void SetControl(COleControl* pControl);
 *pControl*<br/>
 A pointer to the asynchronous OLE control to be associated with the property.
 
-##  <a name="setpath"></a>  CDataPathProperty::SetPath
+## <a name="setpath"></a> CDataPathProperty::SetPath
 
 Call this member function to set the pathname of the property.
 
-```
+```cpp
 void SetPath(LPCTSTR lpszPath);
 ```
 
@@ -193,9 +194,9 @@ void SetPath(LPCTSTR lpszPath);
 *lpszPath*<br/>
 A path, which may be absolute or relative, to the property being loaded asynchronously. `CDataPathProperty` uses URLs, not filenames. If you want a `CDataPathProperty` object for a file, prepend `file://` to the path.
 
-## See Also
+## See also
 
-[MFC Sample Image](../../visual-cpp-samples.md)<br/>
+[MFC Sample Image](../../overview/visual-cpp-samples.md)<br/>
 [CAsyncMonikerFile Class](../../mfc/reference/casyncmonikerfile-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CAsyncMonikerFile Class](../../mfc/reference/casyncmonikerfile-class.md)

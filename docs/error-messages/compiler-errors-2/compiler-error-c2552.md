@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2552"
 title: "Compiler Error C2552"
 ms.date: "11/04/2016"
 f1_keywords: ["C2552"]
@@ -17,13 +18,13 @@ The aggregate identifier was incorrectly initialized.
 
 - Classes, structures, and unions that do not have:
 
-   - Constructors
+  - Constructors
 
-   - Private or protected members
+  - Private or protected members
 
-   - Base classes
+  - Base classes
 
-   - Virtual functions
+  - Virtual functions
 
 In addition, Visual C++ does not allow data types in an aggregate that contains constructors.
 
@@ -43,7 +44,7 @@ The following represent the reasons C2552 may fire when an aggregate initializat
 
 The following sample generates C2552:
 
-```
+```cpp
 // C2552.cpp
 // compile with: /clr
 #include <string>

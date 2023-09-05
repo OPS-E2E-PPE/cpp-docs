@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Obsolete Calling Conventions"
 title: "Obsolete Calling Conventions"
 ms.date: "11/04/2016"
 f1_keywords: ["__fortran", "__pascal", "__syscall"]
@@ -7,7 +8,7 @@ ms.assetid: a91fc665-034a-48ce-b6bd-d27125f308a7
 ---
 # Obsolete Calling Conventions
 
-## Microsoft Specific
+**Microsoft Specific**
 
 The **__pascal**, **__fortran**, and **__syscall** calling conventions are no longer supported. You can emulate their functionality by using one of the supported calling conventions and appropriate linker options.
 

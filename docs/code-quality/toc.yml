@@ -1,0 +1,867 @@
+items: 
+- name: Code analysis documentation
+  href: ../code-quality/index.yml
+- name: Overview
+  displayName: "C and C++ code analysis"
+  href: ../code-quality/code-analysis-for-c-cpp-overview.md
+- name: Quickstart
+  href: ../code-quality/quick-start-code-analysis-for-c-cpp.md
+- name: Analyze C/C++ code for defects
+  href: ../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md
+- name: Sample project
+  href: ../code-quality/demo-sample.md
+- name: Use the C++ Core Guidelines checkers
+  href: ../code-quality/using-the-cpp-core-guidelines-checkers.md
+- name: Set code analysis properties
+  href: ../code-quality/how-to-set-code-analysis-properties-for-c-cpp-projects.md
+- name: Rule sets for C++ code
+  href: ../code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run.md
+- name: Use Clang-Tidy
+  href: ../code-quality/clang-tidy.md
+- name: Use SAL annotations to reduce code defects
+  items:
+  - name: Overview
+    displayName: SAL annotations
+    href: ../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md
+  - name: Understand SAL
+    href: ../code-quality/understanding-sal.md
+  - name: Annotate function parameters and return values
+    href: ../code-quality/annotating-function-parameters-and-return-values.md
+  - name: Annotate function behavior
+    href: ../code-quality/annotating-function-behavior.md
+  - name: Annotate structs and classes
+    href: ../code-quality/annotating-structs-and-classes.md
+  - name: Annotate locking behavior
+    href: ../code-quality/annotating-locking-behavior.md
+  - name: Specify when and where an annotation applies
+    href: ../code-quality/specifying-when-and-where-an-annotation-applies.md
+  - name: Intrinsic functions
+    href: ../code-quality/intrinsic-functions.md
+  - name: Best practices and examples (SAL)
+    href: ../code-quality/best-practices-and-examples-sal.md
+- name: Specify additional code information by using _Analysis_assume_
+  href: ../code-quality/how-to-specify-additional-code-information-by-using-analysis-assume.md
+- name: C++ Core Guidelines checker warnings
+  items:
+  - name: Overview
+    displayName: "C++ core guidelines checker warnings"
+    href: ../code-quality/code-analysis-for-cpp-corecheck.md
+  - name: Warning C26400
+    href: ../code-quality/c26400.md
+  - name: Warning C26401
+    href: ../code-quality/c26401.md
+  - name: Warning C26402
+    href: ../code-quality/c26402.md
+  - name: Warning C26403
+    href: ../code-quality/c26403.md
+  - name: Warning C26404
+    href: ../code-quality/c26404.md
+  - name: Warning C26405
+    href: ../code-quality/c26405.md
+  - name: Warning C26406
+    href: ../code-quality/c26406.md
+  - name: Warning C26407
+    href: ../code-quality/c26407.md
+  - name: Warning C26408
+    href: ../code-quality/c26408.md
+  - name: Warning C26409
+    href: ../code-quality/c26409.md
+  - name: Warning C26410
+    href: ../code-quality/c26410.md
+  - name: Warning C26411
+    href: ../code-quality/c26411.md
+  - name: Warning C26414
+    href: ../code-quality/c26414.md
+  - name: Warning C26415
+    href: ../code-quality/c26415.md
+  - name: Warning C26416
+    href: ../code-quality/c26416.md
+  - name: Warning C26417
+    href: ../code-quality/c26417.md
+  - name: Warning C26418
+    href: ../code-quality/c26418.md
+  - name: Warning C26426
+    href: ../code-quality/c26426.md
+  - name: Warning C26427
+    href: ../code-quality/c26427.md
+  - name: Warning C26429
+    href: ../code-quality/c26429.md
+  - name: Warning C26430
+    href: ../code-quality/c26430.md
+  - name: Warning C26431
+    href: ../code-quality/c26431.md
+  - name: Warning C26432
+    href: ../code-quality/c26432.md
+  - name: Warning C26433
+    href: ../code-quality/c26433.md
+  - name: Warning C26434
+    href: ../code-quality/c26434.md
+  - name: Warning C26435
+    href: ../code-quality/c26435.md
+  - name: Warning C26436
+    href: ../code-quality/c26436.md
+  - name: Warning C26437
+    href: ../code-quality/c26437.md
+  - name: Warning C26438
+    href: ../code-quality/c26438.md
+  - name: Warning C26439
+    href: ../code-quality/c26439.md
+  - name: Warning C26440
+    href: ../code-quality/c26440.md
+  - name: Warning C26441
+    href: ../code-quality/c26441.md
+  - name: Warning C26443
+    href: ../code-quality/c26443.md
+  - name: Warning C26444
+    href: ../code-quality/c26444.md
+  - name: Warning C26445
+    href: ../code-quality/c26445.md
+  - name: Warning C26446
+    href: ../code-quality/c26446.md
+  - name: Warning C26447
+    href: ../code-quality/c26447.md
+  - name: Warning C26448
+    href: ../code-quality/c26448.md
+  - name: Warning C26449
+    href: ../code-quality/c26449.md
+  - name: Warning C26450
+    href: ../code-quality/c26450.md
+  - name: Warning C26451
+    href: ../code-quality/c26451.md
+  - name: Warning C26452
+    href: ../code-quality/c26452.md
+  - name: Warning C26453
+    href: ../code-quality/c26453.md
+  - name: Warning C26454
+    href: ../code-quality/c26454.md
+  - name: Warning C26455
+    href: ../code-quality/c26455.md
+  - name: Warning C26456
+    href: ../code-quality/c26456.md
+  - name: Warning C26457
+    href: ../code-quality/c26457.md
+  - name: Warning C26460
+    href: ../code-quality/c26460.md
+  - name: Warning C26461
+    href: ../code-quality/c26461.md
+  - name: Warning C26462
+    href: ../code-quality/c26462.md
+  - name: Warning C26463
+    href: ../code-quality/c26463.md
+  - name: Warning C26464
+    href: ../code-quality/c26464.md
+  - name: Warning C26465
+    href: ../code-quality/c26465.md
+  - name: Warning C26466
+    href: ../code-quality/c26466.md
+  - name: Warning C26471
+    href: ../code-quality/c26471.md
+  - name: Warning C26472
+    href: ../code-quality/c26472.md
+  - name: Warning C26473
+    href: ../code-quality/c26473.md
+  - name: Warning C26474
+    href: ../code-quality/c26474.md
+  - name: Warning C26475
+    href: ../code-quality/c26475.md
+  - name: Warning C26476
+    href: ../code-quality/c26476.md
+  - name: Warning C26477
+    href: ../code-quality/c26477.md
+  - name: Warning C26478
+    href: ../code-quality/c26478.md
+  - name: Warning C26481
+    href: ../code-quality/c26481.md
+  - name: Warning C26482
+    href: ../code-quality/c26482.md
+  - name: Warning C26483
+    href: ../code-quality/c26483.md
+  - name: Warning C26485
+    href: ../code-quality/c26485.md
+  - name: Warning C26486
+    href: ../code-quality/c26486.md
+  - name: Warning C26487
+    href: ../code-quality/c26487.md
+  - name: Warning C26488
+    href: ../code-quality/c26488.md
+  - name: Warning C26489
+    href: ../code-quality/c26489.md
+  - name: Warning C26490
+    href: ../code-quality/c26490.md
+  - name: Warning C26491
+    href: ../code-quality/c26491.md
+  - name: Warning C26492
+    href: ../code-quality/c26492.md
+  - name: Warning C26493
+    href: ../code-quality/c26493.md
+  - name: Warning C26494
+    href: ../code-quality/c26494.md
+  - name: Warning C26495
+    href: ../code-quality/c26495.md
+  - name: Warning C26496
+    href: ../code-quality/c26496.md
+  - name: Warning C26497
+    href: ../code-quality/c26497.md
+  - name: Warning C26498
+    href: ../code-quality/c26498.md
+  - name: Warning C26812
+    href: ../code-quality/c26812.md
+  - name: Warning C26814
+    href: ../code-quality/c26814.md
+  - name: Warning C26815
+    href: ../code-quality/c26815.md
+  - name: Warning C26816
+    href: ../code-quality/c26816.md
+  - name: Warning C26817
+    href: ../code-quality/c26817.md
+  - name: Warning C26818
+    href: ../code-quality/c26818.md
+  - name: Warning C26819
+    href: ../code-quality/c26819.md
+  - name: Warning C26820
+    href: ../code-quality/c26820.md
+- name: C/C++ code analysis warnings
+  items:
+  - name: Overview
+    displayName: "Code analysis warnings"
+    href: ../code-quality/code-analysis-for-c-cpp-warnings.md
+  - name: Fatal error C1250
+    href: ../code-quality/c1250.md
+  - name: Fatal error C1251
+    href: ../code-quality/c1251.md
+  - name: Fatal error C1252
+    href: ../code-quality/c1252.md
+  - name: Fatal error C1253
+    href: ../code-quality/c1253.md
+  - name: Fatal error C1254
+    href: ../code-quality/c1254.md
+  - name: Fatal error C1255
+    href: ../code-quality/c1255.md
+  - name: Fatal error C1256
+    href: ../code-quality/c1256.md
+  - name: Fatal error C1257
+    href: ../code-quality/c1257.md
+  - name: Fatal error C1258
+    href: ../code-quality/c1258.md
+  - name: Fatal error C1259
+    href: ../code-quality/c1259.md
+  - name: Fatal error C1260
+    href: ../code-quality/c1260.md
+  - name: Warning C6001
+    href: ../code-quality/c6001.md
+  - name: Warning C6011
+    href: ../code-quality/c6011.md
+  - name: Warning C6014
+    href: ../code-quality/c6014.md
+  - name: Warning C6029
+    href: ../code-quality/c6029.md
+  - name: Warning C6030
+    href: ../code-quality/c6030.md
+  - name: Warning C6031
+    href: ../code-quality/c6031.md
+  - name: Warning C6053
+    href: ../code-quality/c6053.md
+  - name: Warning C6054
+    href: ../code-quality/c6054.md
+  - name: Warning C6059
+    href: ../code-quality/c6059.md
+  - name: Warning C6063
+    href: ../code-quality/c6063.md
+  - name: Warning C6064
+    href: ../code-quality/c6064.md
+  - name: Warning C6065
+    href: ../code-quality/c6065.md
+  - name: Warning C6066
+    href: ../code-quality/c6066.md
+  - name: Warning C6067
+    href: ../code-quality/c6067.md
+  - name: Warning C6101
+    href: ../code-quality/c6101.md
+  - name: Warning C6102
+    href: ../code-quality/c6102.md
+  - name: Warning C6103
+    href: ../code-quality/c6103.md
+  - name: Warning C6200
+    href: ../code-quality/c6200.md
+  - name: Warning C6201
+    href: ../code-quality/c6201.md
+  - name: Warning C6211
+    href: ../code-quality/c6211.md
+  - name: Warning C6214
+    href: ../code-quality/c6214.md
+  - name: Warning C6215
+    href: ../code-quality/c6215.md
+  - name: Warning C6216
+    href: ../code-quality/c6216.md
+  - name: Warning C6217
+    href: ../code-quality/c6217.md
+  - name: Warning C6219
+    href: ../code-quality/c6219.md
+  - name: Warning C6220
+    href: ../code-quality/c6220.md
+  - name: Warning C6221
+    href: ../code-quality/c6221.md
+  - name: Warning C6225
+    href: ../code-quality/c6225.md
+  - name: Warning C6226
+    href: ../code-quality/c6226.md
+  - name: Warning C6230
+    href: ../code-quality/c6230.md
+  - name: Warning C6235
+    href: ../code-quality/c6235.md
+  - name: Warning C6236
+    href: ../code-quality/c6236.md
+  - name: Warning C6237
+    href: ../code-quality/c6237.md
+  - name: Warning C6239
+    href: ../code-quality/c6239.md
+  - name: Warning C6240
+    href: ../code-quality/c6240.md
+  - name: Warning C6242
+    href: ../code-quality/c6242.md
+  - name: Warning C6244
+    href: ../code-quality/c6244.md
+  - name: Warning C6246
+    href: ../code-quality/c6246.md
+  - name: Warning C6248
+    href: ../code-quality/c6248.md
+  - name: Warning C6250
+    href: ../code-quality/c6250.md
+  - name: Warning C6255
+    href: ../code-quality/c6255.md
+  - name: Warning C6258
+    href: ../code-quality/c6258.md
+  - name: Warning C6259
+    href: ../code-quality/c6259.md
+  - name: Warning C6260
+    href: ../code-quality/c6260.md
+  - name: Warning C6262
+    href: ../code-quality/c6262.md
+  - name: Warning C6263
+    href: ../code-quality/c6263.md
+  - name: Warning C6268
+    href: ../code-quality/c6268.md
+  - name: Warning C6269
+    href: ../code-quality/c6269.md
+  - name: Warning C6270
+    href: ../code-quality/c6270.md
+  - name: Warning C6271
+    href: ../code-quality/c6271.md
+  - name: Warning C6272
+    href: ../code-quality/c6272.md
+  - name: Warning C6273
+    href: ../code-quality/c6273.md
+  - name: Warning C6274
+    href: ../code-quality/c6274.md
+  - name: Warning C6276
+    href: ../code-quality/c6276.md
+  - name: Warning C6277
+    href: ../code-quality/c6277.md
+  - name: Warning C6278
+    href: ../code-quality/c6278.md
+  - name: Warning C6279
+    href: ../code-quality/c6279.md
+  - name: Warning C6280
+    href: ../code-quality/c6280.md
+  - name: Warning C6281
+    href: ../code-quality/c6281.md
+  - name: Warning C6282
+    href: ../code-quality/c6282.md
+  - name: Warning C6283
+    href: ../code-quality/c6283.md
+  - name: Warning C6284
+    href: ../code-quality/c6284.md
+  - name: Warning C6285
+    href: ../code-quality/c6285.md
+  - name: Warning C6286
+    href: ../code-quality/c6286.md
+  - name: Warning C6287
+    href: ../code-quality/c6287.md
+  - name: Warning C6288
+    href: ../code-quality/c6288.md
+  - name: Warning C6289
+    href: ../code-quality/c6289.md
+  - name: Warning C6290
+    href: ../code-quality/c6290.md
+  - name: Warning C6291
+    href: ../code-quality/c6291.md
+  - name: Warning C6292
+    href: ../code-quality/c6292.md
+  - name: Warning C6293
+    href: ../code-quality/c6293.md
+  - name: Warning C6294
+    href: ../code-quality/c6294.md
+  - name: Warning C6295
+    href: ../code-quality/c6295.md
+  - name: Warning C6296
+    href: ../code-quality/c6296.md
+  - name: Warning C6297
+    href: ../code-quality/c6297.md
+  - name: Warning C6298
+    href: ../code-quality/c6298.md
+  - name: Warning C6299
+    href: ../code-quality/c6299.md
+  - name: Warning C6302
+    href: ../code-quality/c6302.md
+  - name: Warning C6303
+    href: ../code-quality/c6303.md
+  - name: Warning C6305
+    href: ../code-quality/c6305.md
+  - name: Warning C6306
+    href: ../code-quality/c6306.md
+  - name: Warning C6308
+    href: ../code-quality/c6308.md
+  - name: Warning C6310
+    href: ../code-quality/c6310.md
+  - name: Warning C6312
+    href: ../code-quality/c6312.md
+  - name: Warning C6313
+    href: ../code-quality/c6313.md
+  - name: Warning C6314
+    href: ../code-quality/c6314.md
+  - name: Warning C6315
+    href: ../code-quality/c6315.md
+  - name: Warning C6316
+    href: ../code-quality/c6316.md
+  - name: Warning C6317
+    href: ../code-quality/c6317.md
+  - name: Warning C6318
+    href: ../code-quality/c6318.md
+  - name: Warning C6319
+    href: ../code-quality/c6319.md
+  - name: Warning C6320
+    href: ../code-quality/c6320.md
+  - name: Warning C6322
+    href: ../code-quality/c6322.md
+  - name: Warning C6323
+    href: ../code-quality/c6323.md
+  - name: Warning C6324
+    href: ../code-quality/c6324.md
+  - name: Warning C6326
+    href: ../code-quality/c6326.md
+  - name: Warning C6328
+    href: ../code-quality/c6328.md
+  - name: Warning C6329
+    href: ../code-quality/c6329.md
+  - name: Warning C6330
+    href: ../code-quality/c6330.md
+  - name: Warning C6331
+    href: ../code-quality/c6331.md
+  - name: Warning C6332
+    href: ../code-quality/c6332.md
+  - name: Warning C6333
+    href: ../code-quality/c6333.md
+  - name: Warning C6334
+    href: ../code-quality/c6334.md
+  - name: Warning C6335
+    href: ../code-quality/c6335.md
+  - name: Warning C6336
+    href: ../code-quality/c6336.md
+  - name: Warning C6340
+    href: ../code-quality/c6340.md
+  - name: Warning C6381
+    href: ../code-quality/c6381.md
+  - name: Warning C6383
+    href: ../code-quality/c6383.md
+  - name: Warning C6384
+    href: ../code-quality/c6384.md
+  - name: Warning C6385
+    href: ../code-quality/c6385.md
+  - name: Warning C6386
+    href: ../code-quality/c6386.md
+  - name: Warning C6387
+    href: ../code-quality/c6387.md
+  - name: Warning C6388
+    href: ../code-quality/c6388.md
+  - name: Warning C6389
+    href: ../code-quality/c6389.md
+  - name: Warning C6390
+    href: ../code-quality/c6390.md
+  - name: Warning C6400
+    href: ../code-quality/c6400.md
+  - name: Warning C6401
+    href: ../code-quality/c6401.md
+  - name: Warning C6411
+    href: ../code-quality/c6411.md
+  - name: Warning C6412
+    href: ../code-quality/c6412.md
+  - name: Warning C6500
+    href: ../code-quality/c6500.md
+  - name: Warning C6501
+    href: ../code-quality/c6501.md
+  - name: Warning C6503
+    href: ../code-quality/c6503.md
+  - name: Warning C6504
+    href: ../code-quality/c6504.md
+  - name: Warning C6505
+    href: ../code-quality/c6505.md
+  - name: Warning C6506
+    href: ../code-quality/c6506.md
+  - name: Warning C6508
+    href: ../code-quality/c6508.md
+  - name: Warning C6509
+    href: ../code-quality/c6509.md
+  - name: Warning C6510
+    href: ../code-quality/c6510.md
+  - name: Warning C6511
+    href: ../code-quality/c6511.md
+  - name: Warning C6513
+    href: ../code-quality/c6513.md
+  - name: Warning C6514
+    href: ../code-quality/c6514.md
+  - name: Warning C6515
+    href: ../code-quality/c6515.md
+  - name: Warning C6516
+    href: ../code-quality/c6516.md
+  - name: Warning C6517
+    href: ../code-quality/c6517.md
+  - name: Warning C6518
+    href: ../code-quality/c6518.md
+  - name: Warning C6522
+    href: ../code-quality/c6522.md
+  - name: Warning C6525
+    href: ../code-quality/c6525.md
+  - name: Warning C6527
+    href: ../code-quality/c6527.md
+  - name: Warning C6530
+    href: ../code-quality/c6530.md
+  - name: Warning C6540
+    href: ../code-quality/c6540.md
+  - name: Warning C6551
+    href: ../code-quality/c6551.md
+  - name: Warning C6552
+    href: ../code-quality/c6552.md
+  - name: Warning C6701
+    href: ../code-quality/c6701.md
+  - name: Warning C6702
+    href: ../code-quality/c6702.md
+  - name: Warning C6703
+    href: ../code-quality/c6703.md
+  - name: Warning C6704
+    href: ../code-quality/c6704.md
+  - name: Warning C6705
+    href: ../code-quality/c6705.md
+  - name: Warning C6706
+    href: ../code-quality/c6706.md
+  - name: Warning C6707
+    href: ../code-quality/c6707.md
+  - name: Warning C6993
+    href: ../code-quality/c6993.md
+  - name: Warning C6995
+    href: ../code-quality/c6995.md
+  - name: Warning C6997
+    href: ../code-quality/c6997.md
+  - name: Warning C26100
+    href: ../code-quality/c26100.md
+  - name: Warning C26101
+    href: ../code-quality/c26101.md
+  - name: Warning C26105
+    href: ../code-quality/c26105.md
+  - name: Warning C26110
+    href: ../code-quality/c26110.md
+  - name: Warning C26111
+    href: ../code-quality/c26111.md
+  - name: Warning C26112
+    href: ../code-quality/c26112.md
+  - name: Warning C26115
+    href: ../code-quality/c26115.md
+  - name: Warning C26116
+    href: ../code-quality/c26116.md
+  - name: Warning C26117
+    href: ../code-quality/c26117.md
+  - name: Warning C26130
+    href: ../code-quality/c26130.md
+  - name: Warning C26135
+    href: ../code-quality/c26135.md
+  - name: Warning C26138
+    href: ../code-quality/c26138.md
+  - name: Warning C26140
+    href: ../code-quality/c26140.md
+  - name: Warning C26160
+    href: ../code-quality/c26160.md
+  - name: Warning C26165
+    href: ../code-quality/c26165.md
+  - name: Warning C26166
+    href: ../code-quality/c26166.md
+  - name: Warning C26167
+    href: ../code-quality/c26167.md
+  - name: Warning C26800
+    href: ../code-quality/c26800.md
+  - name: Warning C26810
+    href: ../code-quality/c26810.md
+  - name: Warning C26811
+    href: ../code-quality/c26811.md
+  - name: Warning C26813
+    href: ../code-quality/c26813.md
+  - name: Warning C26822
+    href: ../code-quality/c26822.md
+  - name: Warning C26823
+    href: ../code-quality/c26823.md
+  - name: Warning C26824
+    href: ../code-quality/c26824.md
+  - name: Warning C26825
+    href: ../code-quality/c26825.md
+  - name: Warning C26826
+    href: ../code-quality/c26826.md
+  - name: Warning C26827
+    href: ../code-quality/c26827.md
+  - name: Warning C26828
+    href: ../code-quality/c26828.md
+  - name: Warning C26829
+    href: ../code-quality/c26829.md
+  - name: Warning C26830
+    href: ../code-quality/c26830.md
+  - name: Warning C26831
+    href: ../code-quality/c26831.md
+  - name: Warning C26832
+    href: ../code-quality/c26832.md
+  - name: Warning C26833
+    href: ../code-quality/c26833.md
+  - name: Warning C26835
+    href: ../code-quality/c26835.md
+  - name: Warning C26859
+    href: ../code-quality/c26859.md
+  - name: Warning C26860
+    href: ../code-quality/c26860.md
+  - name: Warning C28020
+    href: ../code-quality/c28020.md
+  - name: Warning C28021
+    href: ../code-quality/c28021.md
+  - name: Warning C28022
+    href: ../code-quality/c28022.md
+  - name: Warning C28023
+    href: ../code-quality/c28023.md
+  - name: Warning C28024
+    href: ../code-quality/c28024.md
+  - name: Warning C28039
+    href: ../code-quality/c28039.md
+  - name: Warning C28103
+    href: ../code-quality/c28103.md
+  - name: Warning C28104
+    href: ../code-quality/c28104.md
+  - name: Warning C28105
+    href: ../code-quality/c28105.md
+  - name: Warning C28106
+    href: ../code-quality/c28106.md
+  - name: Warning C28107
+    href: ../code-quality/c28107.md
+  - name: Warning C28108
+    href: ../code-quality/c28108.md
+  - name: Warning C28109
+    href: ../code-quality/c28109.md
+  - name: Warning C28112
+    href: ../code-quality/c28112.md
+  - name: Warning C28113
+    href: ../code-quality/c28113.md
+  - name: Warning C28125
+    href: ../code-quality/c28125.md
+  - name: Warning C28137
+    href: ../code-quality/c28137.md
+  - name: Warning C28138
+    href: ../code-quality/c28138.md
+  - name: Warning C28159
+    href: ../code-quality/c28159.md
+  - name: Warning C28160
+    href: ../code-quality/c28160.md
+  - name: Warning C28163
+    href: ../code-quality/c28163.md
+  - name: Warning C28164
+    href: ../code-quality/c28164.md
+  - name: Warning C28182
+    href: ../code-quality/c28182.md
+  - name: Warning C28183
+    href: ../code-quality/c28183.md
+  - name: Warning C28193
+    href: ../code-quality/c28193.md
+  - name: Warning C28194
+    href: ../code-quality/c28194.md
+  - name: Warning C28195
+    href: ../code-quality/c28195.md
+  - name: Warning C28196
+    href: ../code-quality/c28196.md
+  - name: Warning C28197
+    href: ../code-quality/c28197.md
+  - name: Warning C28198
+    href: ../code-quality/c28198.md
+  - name: Warning C28199
+    href: ../code-quality/c28199.md
+  - name: Warning C28202
+    href: ../code-quality/c28202.md
+  - name: Warning C28203
+    href: ../code-quality/c28203.md
+  - name: Warning C28204
+    href: ../code-quality/c28204.md
+  - name: Warning C28205
+    href: ../code-quality/c28205.md
+  - name: Warning C28206
+    href: ../code-quality/c28206.md
+  - name: Warning C28207
+    href: ../code-quality/c28207.md
+  - name: Warning C28208
+    href: ../code-quality/c28208.md
+  - name: Warning C28209
+    href: ../code-quality/c28209.md
+  - name: Warning C28210
+    href: ../code-quality/c28210.md
+  - name: Warning C28211
+    href: ../code-quality/c28211.md
+  - name: Warning C28212
+    href: ../code-quality/c28212.md
+  - name: Warning C28213
+    href: ../code-quality/c28213.md
+  - name: Warning C28214
+    href: ../code-quality/c28214.md
+  - name: Warning C28215
+    href: ../code-quality/c28215.md
+  - name: Warning C28216
+    href: ../code-quality/c28216.md
+  - name: Warning C28217
+    href: ../code-quality/c28217.md
+  - name: Warning C28218
+    href: ../code-quality/c28218.md
+  - name: Warning C28219
+    href: ../code-quality/c28219.md
+  - name: Warning C28220
+    href: ../code-quality/c28220.md
+  - name: Warning C28221
+    href: ../code-quality/c28221.md
+  - name: Warning C28222
+    href: ../code-quality/c28222.md
+  - name: Warning C28223
+    href: ../code-quality/c28223.md
+  - name: Warning C28224
+    href: ../code-quality/c28224.md
+  - name: Warning C28225
+    href: ../code-quality/c28225.md
+  - name: Warning C28226
+    href: ../code-quality/c28226.md
+  - name: Warning C28227
+    href: ../code-quality/c28227.md
+  - name: Warning C28228
+    href: ../code-quality/c28228.md
+  - name: Warning C28229
+    href: ../code-quality/c28229.md
+  - name: Warning C28230
+    href: ../code-quality/c28230.md
+  - name: Warning C28231
+    href: ../code-quality/c28231.md
+  - name: Warning C28232
+    href: ../code-quality/c28232.md
+  - name: Warning C28233
+    href: ../code-quality/c28233.md
+  - name: Warning C28234
+    href: ../code-quality/c28234.md
+  - name: Warning C28235
+    href: ../code-quality/c28235.md
+  - name: Warning C28236
+    href: ../code-quality/c28236.md
+  - name: Warning C28237
+    href: ../code-quality/c28237.md
+  - name: Warning C28238
+    href: ../code-quality/c28238.md
+  - name: Warning C28239
+    href: ../code-quality/c28239.md
+  - name: Warning C28240
+    href: ../code-quality/c28240.md
+  - name: Warning C28241
+    href: ../code-quality/c28241.md
+  - name: Warning C28243
+    href: ../code-quality/c28243.md
+  - name: Warning C28244
+    href: ../code-quality/c28244.md
+  - name: Warning C28245
+    href: ../code-quality/c28245.md
+  - name: Warning C28246
+    href: ../code-quality/c28246.md
+  - name: Warning C28250
+    href: ../code-quality/c28250.md
+  - name: Warning C28251
+    href: ../code-quality/c28251.md
+  - name: Warning C28252
+    href: ../code-quality/c28252.md
+  - name: Warning C28253
+    href: ../code-quality/c28253.md
+  - name: Warning C28254
+    href: ../code-quality/c28254.md
+  - name: Warning C28262
+    href: ../code-quality/c28262.md
+  - name: Warning C28263
+    href: ../code-quality/c28263.md
+  - name: Warning C28267
+    href: ../code-quality/c28267.md
+  - name: Warning C28272
+    href: ../code-quality/c28272.md
+  - name: Warning C28273
+    href: ../code-quality/c28273.md
+  - name: Warning C28275
+    href: ../code-quality/c28275.md
+  - name: Warning C28278
+    href: ../code-quality/c28278.md
+  - name: Warning C28279
+    href: ../code-quality/c28279.md
+  - name: Warning C28280
+    href: ../code-quality/c28280.md
+  - name: Warning C28282
+    href: ../code-quality/c28282.md
+  - name: Warning C28283
+    href: ../code-quality/c28283.md
+  - name: Warning C28284
+    href: ../code-quality/c28284.md
+  - name: Warning C28285
+    href: ../code-quality/c28285.md
+  - name: Warning C28286
+    href: ../code-quality/c28286.md
+  - name: Warning C28287
+    href: ../code-quality/c28287.md
+  - name: Warning C28288
+    href: ../code-quality/c28288.md
+  - name: Warning C28289
+    href: ../code-quality/c28289.md
+  - name: Warning C28290
+    href: ../code-quality/c28290.md
+  - name: Warning C28291
+    href: ../code-quality/c28291.md
+  - name: Warning C28300
+    href: ../code-quality/c28300.md
+  - name: Warning C28301
+    href: ../code-quality/c28301.md
+  - name: Warning C28302
+    href: ../code-quality/c28302.md
+  - name: Warning C28303
+    href: ../code-quality/c28303.md
+  - name: Warning C28304
+    href: ../code-quality/c28304.md
+  - name: Warning C28305
+    href: ../code-quality/c28305.md
+  - name: Warning C28306
+    href: ../code-quality/c28306.md
+  - name: Warning C28307
+    href: ../code-quality/c28307.md
+  - name: Warning C28308
+    href: ../code-quality/c28308.md
+  - name: Warning C28309
+    href: ../code-quality/c28309.md
+  - name: Warning C28310
+    href: ../code-quality/c28310.md
+  - name: Warning C28311
+    href: ../code-quality/c28311.md
+  - name: Warning C28312
+    href: ../code-quality/c28312.md
+  - name: Warning C28350
+    href: ../code-quality/c28350.md
+  - name: Warning C28351
+    href: ../code-quality/c28351.md
+  - name: Warning C33001
+    href: ../code-quality/c33001.md
+  - name: Warning C33004
+    href: ../code-quality/c33004.md
+  - name: Warning C33005
+    href: ../code-quality/c33005.md
+  - name: Warning C33010
+    href: ../code-quality/c33010.md
+  - name: Warning C33011
+    href: ../code-quality/c33011.md
+  - name: Warning C33020
+    href: ../code-quality/c33020.md
+  - name: Warning C33022
+    href: ../code-quality/c33022.md

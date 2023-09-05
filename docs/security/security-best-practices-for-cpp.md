@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Security Best Practices for C++"
 title: "Security Best Practices for C++"
 ms.date: "05/08/2018"
 f1_keywords: ["securitybestpracticesVC"]
@@ -11,24 +12,24 @@ This article contains information about security tools and practices. Using them
 
 ## Visual C++ Security Features
 
-These security features are built into the Visual C++ compiler and linker:
+These security features are built into the Microsoft C++ compiler and linker:
 
-[/guard (Enable Control Flow Guard)](../build/reference/guard-enable-control-flow-guard.md)<br/>
+[`/guard` (Enable Control Flow Guard)](../build/reference/guard-enable-control-flow-guard.md)<br/>
 Causes the compiler to analyze control flow for indirect call targets at compile time, and then to insert code to verify the targets at runtime.
 
-[/GS (Buffer Security Check)](../build/reference/gs-buffer-security-check.md)<br/>
+[`/GS` (Buffer Security Check)](../build/reference/gs-buffer-security-check.md)<br/>
 Instructs the compiler to insert overrun detection code into functions that are at risk of being exploited. When an overrun is detected, execution is stopped. By default, this option is on.
 
-[/SAFESEH (Image has Safe Exception Handlers)](../build/reference/safeseh-image-has-safe-exception-handlers.md)<br/>
+[`/SAFESEH` (Image has Safe Exception Handlers)](../build/reference/safeseh-image-has-safe-exception-handlers.md)<br/>
 Instructs the linker to include in the output image a table that contains the address of each exception handler. At run time, the operating system uses this table to make sure that only legitimate exception handlers are executed. This helps prevent the execution of exception handlers that are introduced by a malicious attack at run time. By default, this option is off.
 
-[/NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (Compatible with Data Execution Prevention)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)
+[`/NXCOMPAT`](../build/reference/nxcompat.md), [`/NXCOMPAT` (Compatible with Data Execution Prevention)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)
 These compiler and linker options enable Data Execution Prevention (DEP) compatibility. DEP guards the CPU against the execution of non-code pages.
 
-[/analyze (Code Analysis)](../build/reference/analyze-code-analysis.md)<br/>
-This compiler option activates code analysis that reports potential security issues such as buffer overrun, un-initialized memory, null pointer dereferencing, and memory leaks. By default, this option is off. For more information, see [Code Analysis for C/C++ Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+[`/analyze` (Code Analysis)](../build/reference/analyze-code-analysis.md)<br/>
+This compiler option activates code analysis that reports potential security issues such as buffer overrun, un-initialized memory, null pointer dereferencing, and memory leaks. By default, this option is off. For more information, see [Code Analysis for C/C++ Overview](../code-quality/code-analysis-for-c-cpp-overview.md).
 
-[/DYNAMICBASE (Use address space layout randomization)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
+[`/DYNAMICBASE` (Use address space layout randomization)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 This linker option enables the building of an executable image that can be loaded at different locations in memory at the beginning of execution. This option also makes the stack location in memory much less predictable.
 
 ## Security-Enhanced CRT
@@ -37,7 +38,7 @@ The C Runtime Library (CRT) has been augmented to include secure versions of fun
 
 ## SafeInt Library
 
-[SafeInt Library](../windows/safeint-library.md) helps prevent integer overflows and other exploitable errors that might occur when the application performs mathematical operations. The `SafeInt` library includes the [SafeInt Class](../windows/safeint-class.md), the [SafeIntException Class](../windows/safeintexception-class.md), and several [SafeInt Functions](../windows/safeint-functions.md).
+[SafeInt Library](../safeint/safeint-library.md) helps prevent integer overflows and other exploitable errors that might occur when the application performs mathematical operations. The `SafeInt` library includes the [SafeInt Class](../safeint/safeint-class.md), the [SafeIntException Class](../safeint/safeintexception-class.md), and several [SafeInt Functions](../safeint/safeint-functions.md).
 
 The `SafeInt` class protects against integer overflow and divide-by-zero exploits. You can use it to handle comparisons between values of different types. It provides two error handling policies. The default policy is for the `SafeInt` class to throw a `SafeIntException` class exception to report why a mathematical operation cannot be completed. The second policy is for the `SafeInt` class to stop program execution. You can also define a custom policy.
 
@@ -45,7 +46,7 @@ Each `SafeInt` function protects one mathematical operation from an exploitable 
 
 ## Checked Iterators
 
-A checked iterator enforces container boundaries. By default, when a checked iterator is out of bounds, it generates an exception and ends program execution. A checked iterator provides other levels of response that depend on values that are assigned to preprocessor defines such as **\_SECURE\_SCL\_THROWS** and **\_ITERATOR\_DEBUG\_LEVEL**. For example, at **\_ITERATOR\_DEBUG\_LEVEL=2**, a checked iterator provides comprehensive correctness checks in debug mode, which are made available by using asserts. For more information, see [Checked Iterators](../standard-library/checked-iterators.md) and [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md).
+A checked iterator enforces container boundaries. By default, when a checked iterator is out of bounds, it generates an exception and ends program execution. A checked iterator provides other levels of response that depend on values that are assigned to preprocessor defines such as `_SECURE_SCL_THROWS` and `_ITERATOR_DEBUG_LEVEL`. For example, at `_ITERATOR_DEBUG_LEVEL=2`, a checked iterator provides comprehensive correctness checks in debug mode, which are made available by using asserts. For more information, see [Checked Iterators](../standard-library/checked-iterators.md) and [`_ITERATOR_DEBUG_LEVEL`](../standard-library/iterator-debug-level.md).
 
 ## Code Analysis for Managed Code
 
@@ -63,8 +64,7 @@ Code Analysis for Managed Code, also known as FxCop, checks assemblies for confo
 
 ## Windows Application Verifier
 
-The [Application Verifier (AppVerifier)](/windows-hardware/drivers/debugger/application-verifier
-) can help you identify potential application compatibility, stability, and security issues.
+The [Application Verifier (AppVerifier)](/windows-hardware/drivers/debugger/enable-application-verifier) can help you identify potential application compatibility, stability, and security issues.
 
 The AppVerifier monitors how an application uses the operating system. It watches the file system, registry, memory, and APIs while the application is running, and recommends source-code fixes for issues that it uncovers.
 
@@ -84,7 +84,7 @@ Using Windows user accounts that belong to the Administrators group exposes deve
 
 For information about how to indentify and mitigate against speculative execution side channel hardware vulnerabilities in C++ software, see [C++ Developer Guidance for Speculative Execution Side Channels](developer-guidance-speculative-execution.md).
 
-## See Also
+## See also
 
 <xref:System.Security> <br/>
 [Security](/dotnet/standard/security/index)<br/>

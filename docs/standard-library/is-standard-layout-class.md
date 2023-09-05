@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_standard_layout Class"
 title: "is_standard_layout Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_standard_layout"]
@@ -18,9 +19,8 @@ struct is_standard_layout;
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*Ty*|The type to query|
+*Ty*\
+The type to query
 
 ## Remarks
 
@@ -34,4 +34,4 @@ An instance of this type predicate holds true if the type *Ty* is a class that h
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

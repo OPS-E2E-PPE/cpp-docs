@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Linker Tools Warning LNK4253"
 title: "Linker Tools Warning LNK4253"
 ms.date: "11/04/2016"
 f1_keywords: ["LNK4253"]
@@ -27,7 +28,7 @@ For more information, see,
 
 In the following sample, the linker is instructed to merge the `.rdata` section twice, but into different sections. The following sample generates LNK4253.
 
-```
+```cpp
 // LNK4253.cpp
 // compile with: /W1 /link /merge:.rdata=text2
 // LNK4253 expected

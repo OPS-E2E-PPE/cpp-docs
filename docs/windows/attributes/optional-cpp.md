@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: optional (C++)"
 title: "optional  (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.optional"]
@@ -17,7 +18,7 @@ Specifies an optional parameter for a member function.
 
 ## Remarks
 
-The **optional** C++ attribute has the same functionality as the [optional](/windows/desktop/Midl/optional) MIDL attribute.
+The **optional** C++ attribute has the same functionality as the [optional](/windows/win32/Midl/optional) MIDL attribute.
 
 ## Example
 
@@ -38,9 +39,7 @@ __interface IFireTabCtrl : IDispatch
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface parameter|
 |**Repeatable**|No|
@@ -49,7 +48,7 @@ __interface IFireTabCtrl : IDispatch
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Parameter Attributes](parameter-attributes.md)

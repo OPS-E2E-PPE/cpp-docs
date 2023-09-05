@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3712"
 title: "Compiler Error C3712"
 ms.date: "11/04/2016"
 f1_keywords: ["C3712"]
@@ -13,7 +14,7 @@ You defined an event handler method that did not return the same type as the sou
 
 The following sample generates C3712:
 
-```
+```cpp
 // C3712.cpp
 // compile with: /c
 [event_source(native)]

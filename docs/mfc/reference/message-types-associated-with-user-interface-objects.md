@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Message Types Associated with User-Interface Objects"
 title: "Message Types Associated with User-Interface Objects"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.codewiz.uiobject.msgs"]
@@ -17,7 +18,7 @@ The following table shows the types of objects with which you work, and the type
 |Menu or accelerator identifier|- COMMAND message (executes the program function).<br />- UPDATE_COMMAND_UI message (dynamically updates the menu item).|
 |Control identifier|Control notification messages for the selected control type.|
 
-## See Also
+## See also
 
 [Mapping Messages to Functions](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
@@ -26,4 +27,4 @@ The following table shows the types of objects with which you work, and the type
 [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Navigating the Class Structure](../../ide/navigate-code-cpp.md)

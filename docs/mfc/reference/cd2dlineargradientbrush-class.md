@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CD2DLinearGradientBrush Class"
 title: "CD2DLinearGradientBrush Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CD2DLinearGradientBrush", "AFXRENDERTARGET/CD2DLinearGradientBrush", "AFXRENDERTARGET/CD2DLinearGradientBrush::CD2DLinearGradientBrush", "AFXRENDERTARGET/CD2DLinearGradientBrush::Attach", "AFXRENDERTARGET/CD2DLinearGradientBrush::Create", "AFXRENDERTARGET/CD2DLinearGradientBrush::Destroy", "AFXRENDERTARGET/CD2DLinearGradientBrush::Detach", "AFXRENDERTARGET/CD2DLinearGradientBrush::Get", "AFXRENDERTARGET/CD2DLinearGradientBrush::GetEndPoint", "AFXRENDERTARGET/CD2DLinearGradientBrush::GetStartPoint", "AFXRENDERTARGET/CD2DLinearGradientBrush::SetEndPoint", "AFXRENDERTARGET/CD2DLinearGradientBrush::SetStartPoint", "AFXRENDERTARGET/CD2DLinearGradientBrush::m_LinearGradientBrushProperties", "AFXRENDERTARGET/CD2DLinearGradientBrush::m_pLinearGradientBrush"]
@@ -67,7 +68,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 **Header:** afxrendertarget.h
 
-##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::~CD2DLinearGradientBrush
+## <a name="_dtorcd2dlineargradientbrush"></a> CD2DLinearGradientBrush::~CD2DLinearGradientBrush
 
 The destructor. Called when a D2D linear gradient brush object is being destroyed.
 
@@ -75,11 +76,11 @@ The destructor. Called when a D2D linear gradient brush object is being destroye
 virtual ~CD2DLinearGradientBrush();
 ```
 
-##  <a name="attach"></a>  CD2DLinearGradientBrush::Attach
+## <a name="attach"></a> CD2DLinearGradientBrush::Attach
 
 Attaches existing resource interface to the object
 
-```
+```cpp
 void Attach(ID2D1LinearGradientBrush* pResource);
 ```
 
@@ -88,7 +89,7 @@ void Attach(ID2D1LinearGradientBrush* pResource);
 *pResource*<br/>
 Existing resource interface. Cannot be NULL
 
-##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush
+## <a name="cd2dlineargradientbrush"></a> CD2DLinearGradientBrush::CD2DLinearGradientBrush
 
 Constructs a CD2DLinearGradientBrush object.
 
@@ -130,7 +131,7 @@ A pointer to the opacity and transformation of a brush.
 *bAutoDestroy*<br/>
 Indicates that the object will be destroyed by owner (pParentTarget).
 
-##  <a name="create"></a>  CD2DLinearGradientBrush::Create
+## <a name="create"></a> CD2DLinearGradientBrush::Create
 
 Creates a CD2DLinearGradientBrush.
 
@@ -147,7 +148,7 @@ A pointer to the render target.
 
 If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.
 
-##  <a name="destroy"></a>  CD2DLinearGradientBrush::Destroy
+## <a name="destroy"></a> CD2DLinearGradientBrush::Destroy
 
 Destroys a CD2DLinearGradientBrush object.
 
@@ -155,7 +156,7 @@ Destroys a CD2DLinearGradientBrush object.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DLinearGradientBrush::Detach
+## <a name="detach"></a> CD2DLinearGradientBrush::Detach
 
 Detaches resource interface from the object
 
@@ -167,7 +168,7 @@ ID2D1LinearGradientBrush* Detach();
 
 Pointer to detached resource interface.
 
-##  <a name="get"></a>  CD2DLinearGradientBrush::Get
+## <a name="get"></a> CD2DLinearGradientBrush::Get
 
 Returns ID2D1LinearGradientBrush interface
 
@@ -179,7 +180,7 @@ ID2D1LinearGradientBrush* Get();
 
 Pointer to an ID2D1LinearGradientBrush interface or NULL if object is not initialized yet.
 
-##  <a name="getendpoint"></a>  CD2DLinearGradientBrush::GetEndPoint
+## <a name="getendpoint"></a> CD2DLinearGradientBrush::GetEndPoint
 
 Retrieves the ending coordinates of the linear gradient
 
@@ -191,7 +192,7 @@ CD2DPointF GetEndPoint() const;
 
 The ending two-dimensional coordinates of the linear gradient, in the brush's coordinate space
 
-##  <a name="getstartpoint"></a>  CD2DLinearGradientBrush::GetStartPoint
+## <a name="getstartpoint"></a> CD2DLinearGradientBrush::GetStartPoint
 
 Retrieves the starting coordinates of the linear gradient
 
@@ -203,7 +204,7 @@ CD2DPointF GetStartPoint() const;
 
 The starting two-dimensional coordinates of the linear gradient, in the brush's coordinate space
 
-##  <a name="m_lineargradientbrushproperties"></a>  CD2DLinearGradientBrush::m_LinearGradientBrushProperties
+## <a name="m_lineargradientbrushproperties"></a> CD2DLinearGradientBrush::m_LinearGradientBrushProperties
 
 The start and end points of the gradient.
 
@@ -211,7 +212,7 @@ The start and end points of the gradient.
 D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES m_LinearGradientBrushProperties;
 ```
 
-##  <a name="m_plineargradientbrush"></a>  CD2DLinearGradientBrush::m_pLinearGradientBrush
+## <a name="m_plineargradientbrush"></a> CD2DLinearGradientBrush::m_pLinearGradientBrush
 
 A pointer to an ID2D1LinearGradientBrush.
 
@@ -219,7 +220,7 @@ A pointer to an ID2D1LinearGradientBrush.
 ID2D1LinearGradientBrush* m_pLinearGradientBrush;
 ```
 
-##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*
+## <a name="operator_id2d1lineargradientbrush_star"></a> CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*
 
 Returns ID2D1LinearGradientBrush interface
 
@@ -231,11 +232,11 @@ operator ID2D1LinearGradientBrush*();
 
 Pointer to an ID2D1LinearGradientBrush interface or NULL if object is not initialized yet.
 
-##  <a name="setendpoint"></a>  CD2DLinearGradientBrush::SetEndPoint
+## <a name="setendpoint"></a> CD2DLinearGradientBrush::SetEndPoint
 
 Sets the ending coordinates of the linear gradient in the brush's coordinate space
 
-```
+```cpp
 void SetEndPoint(CD2DPointF point);
 ```
 
@@ -244,11 +245,11 @@ void SetEndPoint(CD2DPointF point);
 *point*<br/>
 The ending two-dimensional coordinates of the linear gradient, in the brush's coordinate space
 
-##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint
+## <a name="setstartpoint"></a> CD2DLinearGradientBrush::SetStartPoint
 
 Sets the starting coordinates of the linear gradient in the brush's coordinate space
 
-```
+```cpp
 void SetStartPoint(CD2DPointF point);
 ```
 
@@ -257,6 +258,6 @@ void SetStartPoint(CD2DPointF point);
 *point*<br/>
 The starting two-dimensional coordinates of the linear gradient, in the brush's coordinate space
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

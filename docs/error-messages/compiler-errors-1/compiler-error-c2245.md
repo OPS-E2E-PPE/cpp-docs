@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2245"
 title: "Compiler Error C2245"
 ms.date: "11/04/2016"
 f1_keywords: ["C2245"]
@@ -13,7 +14,7 @@ A function specified as a friend was not found by the compiler.
 
 The following sample generates C2245:
 
-```
+```cpp
 // C2245.cpp
 // compile with: /c
 class B {

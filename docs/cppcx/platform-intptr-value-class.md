@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::IntPtr value class"
 title: "Platform::IntPtr value class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -90,6 +91,6 @@ int32 IntPtr::ToInt32();
 
 A 32-bit integer.
 
-## See Also
+## See also
 
 [Platform namespace](../cppcx/platform-namespace-c-cx.md)

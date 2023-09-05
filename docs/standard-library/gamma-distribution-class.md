@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: gamma_distribution Class"
 title: "gamma_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::gamma_distribution", "random/std::gamma_distribution::reset", "random/std::gamma_distribution::alpha", "random/std::gamma_distribution::beta", "random/std::gamma_distribution::param", "random/std::gamma_distribution::min", "random/std::gamma_distribution::max", "random/std::gamma_distribution::operator()", "random/std::gamma_distribution::param_type", "random/std::gamma_distribution::param_type::alpha", "random/std::gamma_distribution::param_type::beta", "random/std::gamma_distribution::param_type::operator==", "random/std::gamma_distribution::param_type::operator!="]
@@ -42,20 +43,18 @@ public:
 
 ### Parameters
 
-*RealType*<br/>
-The floating-point result type, defaults to **double**. For possible types, see [\<random>](../standard-library/random.md).
+*RealType*\
+The floating-point result type, defaults to **`double`**. For possible types, see [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
+*URNG*\
 The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes a distribution that produces values of a user-specified floating-point type, or type **double** if none is provided, distributed according to the Gamma Distribution. The following table links to articles about individual members.
+The class template describes a distribution that produces values of a user-specified floating-point type, or type **`double`** if none is provided, distributed according to the Gamma Distribution. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
-|`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|
+[gamma_distribution](#gamma_distribution)\
+[param_type](#param_type)
 
 The property functions `alpha()` and `beta()` return their respective values for stored distribution parameters *alpha* and *beta*.
 
@@ -69,7 +68,7 @@ The `operator()` member functions return the next generated value based on the U
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the gamma distribution, see the Wolfram MathWorld article [Gamma Distribution](http://go.microsoft.com/fwlink/p/?linkid=401111).
+For detailed information about the gamma distribution, see the Wolfram MathWorld article [Gamma Distribution](https://go.microsoft.com/fwlink/p/?linkid=401111).
 
 ## Example
 
@@ -160,7 +159,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="gamma_distribution"></a>  gamma_distribution::gamma_distribution
+## <a name="gamma_distribution"></a> gamma_distribution::gamma_distribution
 
 Constructs the distribution.
 
@@ -171,13 +170,13 @@ explicit gamma_distribution(const param_type& parm);
 
 ### Parameters
 
-*alpha*<br/>
+*alpha*\
 The `alpha` distribution parameter.
 
-*beta*<br/>
+*beta*\
 The `beta` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The parameter structure used to construct the distribution.
 
 ### Remarks
@@ -188,7 +187,7 @@ The first constructor constructs an object whose stored `alpha` value holds the 
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  gamma_distribution::param_type
+## <a name="param_type"></a> gamma_distribution::param_type
 
 Stores the parameters of the distribution.
 
@@ -206,13 +205,13 @@ struct param_type {
 
 ### Parameters
 
-*alpha*<br/>
+*alpha*\
 The `alpha` distribution parameter.
 
-*beta*<br/>
+*beta*\
 The `beta` distribution parameter.
 
-*right*<br/>
+*right*\
 The `param_type` instance to compare this to.
 
 ### Remarks
@@ -223,4 +222,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

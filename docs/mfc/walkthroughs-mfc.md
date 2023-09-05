@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Walkthroughs (MFC)"
 title: "Walkthroughs (MFC)"
 ms.date: "09/20/2018"
 helpviewer_keywords: ["MFC Feature Pack, walkthroughs"]
@@ -22,6 +23,6 @@ Demonstrates how to add a D2D object to a project and introduces how to use D2D.
 [Walkthrough: Adding Animation to an MFC Project](../mfc/walkthrough-adding-animation-to-an-mfc-project.md)<br/>
 Demonstrates how to add a graphical object to a project and introduces how to animate it.
 
-## See Also
+## See also
 
 [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)

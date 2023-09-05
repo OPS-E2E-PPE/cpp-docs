@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: version (C++)"
 title: "version  (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.version"]
@@ -22,7 +23,7 @@ The version number of the `coclass`. If not specified, 1.0 will be placed in the
 
 ## Remarks
 
-The **version** C++ attribute has the same functionality as the [version](/windows/desktop/Midl/version) MIDL attribute and is passed through to the generated .idl file.
+The **version** C++ attribute has the same functionality as the [version](/windows/win32/Midl/version) MIDL attribute and is passed through to the generated .idl file.
 
 ## Example
 
@@ -30,18 +31,16 @@ See the [bindable](bindable.md) example for a sample use of **version**.
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**class**, **struct**|
+|**Applies to**|**`class`**, **`struct`**|
 |**Repeatable**|No|
 |**Required attributes**|**coclass**|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [Compiler Attributes](compiler-attributes.md)<br/>
 [Class Attributes](class-attributes.md)

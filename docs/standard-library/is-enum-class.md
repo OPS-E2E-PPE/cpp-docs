@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_enum Class"
 title: "is_enum Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_enum"]
@@ -18,7 +19,7 @@ struct is_enum;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
 ## Remarks
@@ -68,5 +69,5 @@ is_enum<int> == false
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_integral Class](../standard-library/is-integral-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_integral Class](../standard-library/is-integral-class.md)

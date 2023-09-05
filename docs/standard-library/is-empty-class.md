@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_empty Class"
 title: "is_empty Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_empty"]
@@ -18,7 +19,7 @@ struct is_empty;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
 ## Remarks
@@ -69,4 +70,4 @@ is_empty<int> == false
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CUserTool Class"
 title: "CUserTool Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CUserTool", "AFXUSERTOOL/CUserTool", "AFXUSERTOOL/CUserTool::CopyIconToClipboard", "AFXUSERTOOL/CUserTool::DrawToolIcon", "AFXUSERTOOL/CUserTool::GetCommand", "AFXUSERTOOL/CUserTool::GetCommandId", "AFXUSERTOOL/CUserTool::Invoke", "AFXUSERTOOL/CUserTool::Serialize", "AFXUSERTOOL/CUserTool::SetCommand", "AFXUSERTOOL/CUserTool::SetToolIcon", "AFXUSERTOOL/CUserTool::LoadDefaultIcon", "AFXUSERTOOL/CUserTool::m_strArguments", "AFXUSERTOOL/CUserTool::m_strInitialDirectory", "AFXUSERTOOL/CUserTool::m_strLabel"]
@@ -50,7 +51,7 @@ For more information about how to enable user tools in your application, see [CU
 
 ## Example
 
-The following example demonstrates how to create a tool from a `CUserToolsManager` object, set the `m_strLabel` member variable, and set the application that the user tool runs. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).
+The following example demonstrates how to create a tool from a `CUserToolsManager` object, set the `m_strLabel` member variable, and set the application that the user tool runs. This code snippet is part of the [Visual Studio Demo sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]
 
@@ -64,7 +65,7 @@ The following example demonstrates how to create a tool from a `CUserToolsManage
 
 **Header:** afxusertool.h
 
-##  <a name="copyicontoclipboard"></a>  CUserTool::CopyIconToClipboard
+## <a name="copyicontoclipboard"></a> CUserTool::CopyIconToClipboard
 
 For more detail see the source code located in the **VC\\atlmfc\\src\\mfc** folder of your Visual Studio installation.
 
@@ -76,11 +77,11 @@ BOOL CopyIconToClipboard();
 
 ### Remarks
 
-##  <a name="drawtoolicon"></a>  CUserTool::DrawToolIcon
+## <a name="drawtoolicon"></a> CUserTool::DrawToolIcon
 
 Draws the user tool icon at the center of a specified rectangle.
 
-```
+```cpp
 void DrawToolIcon(
     CDC* pDC,
     const CRect& rectImage);
@@ -94,7 +95,7 @@ void DrawToolIcon(
 *rectImage*<br/>
 [in] Specifies the coordinates of the area to display the icon.
 
-##  <a name="getcommand"></a>  CUserTool::GetCommand
+## <a name="getcommand"></a> CUserTool::GetCommand
 
 Returns a string that contains the text of the command associated with the user tool.
 
@@ -106,7 +107,7 @@ const CString& GetCommand() const;
 
 A reference to `CString` object that contains the text of the command associated with the user tool.
 
-##  <a name="getcommandid"></a>  CUserTool::GetCommandId
+## <a name="getcommandid"></a> CUserTool::GetCommandId
 
 Returns the command ID of the user tool.
 
@@ -118,7 +119,7 @@ UINT GetCommandId() const;
 
 The command ID of this user tool.
 
-##  <a name="invoke"></a>  CUserTool::Invoke
+## <a name="invoke"></a> CUserTool::Invoke
 
 Executes the command associated with the user tool.
 
@@ -132,9 +133,9 @@ Nonzero if the command was executed successfully; otherwise 0.
 
 ### Remarks
 
-Calls [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) to execute a command associated with the user tool. The function fails if the command is empty or if [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) fails.
+Calls [ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew) to execute a command associated with the user tool. The function fails if the command is empty or if [ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew) fails.
 
-##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon
+## <a name="loaddefaulticon"></a> CUserTool::LoadDefaultIcon
 
 Loads the default icon for a user tool.
 
@@ -152,7 +153,7 @@ The framework calls this method when it is unable to load an icon for a user-def
 
 Override this method to supply your own default tool icon.
 
-##  <a name="m_strarguments"></a>  CUserTool::m_strArguments
+## <a name="m_strarguments"></a> CUserTool::m_strArguments
 
 The command-line arguments for the user tool.
 
@@ -164,7 +165,7 @@ CString m_strArguments;
 
 This string is passed to the tool when you call [CUserTool::Invoke](#invoke) or when a user clicks the command associated with this tool.
 
-##  <a name="m_strinitialdirectory"></a>  CUserTool::m_strInitialDirectory
+## <a name="m_strinitialdirectory"></a> CUserTool::m_strInitialDirectory
 
 Specifies the initial directory for the user tool.
 
@@ -176,7 +177,7 @@ CString m_strInitialDirectory;
 
 This variable specifies the initial directory that the tool executes in when you call [CUserTool::Invoke](#invoke) or when a user clicks the command associated with this tool.
 
-##  <a name="m_strlabel"></a>  CUserTool::m_strLabel
+## <a name="m_strlabel"></a> CUserTool::m_strLabel
 
 The label that is displayed in the menu item for the tool.
 
@@ -184,7 +185,7 @@ The label that is displayed in the menu item for the tool.
 CString m_strLabel;
 ```
 
-##  <a name="serialize"></a>  CUserTool::Serialize
+## <a name="serialize"></a> CUserTool::Serialize
 
 For more detail see the source code located in the **VC\\atlmfc\\src\\mfc** folder of your Visual Studio installation.
 
@@ -198,11 +199,11 @@ virtual void Serialize(CArchive& ar);
 
 ### Remarks
 
-##  <a name="setcommand"></a>  CUserTool::SetCommand
+## <a name="setcommand"></a> CUserTool::SetCommand
 
 Sets the application that the user tool runs.
 
-```
+```cpp
 void SetCommand(LPCTSTR lpszCmd);
 ```
 
@@ -215,7 +216,7 @@ void SetCommand(LPCTSTR lpszCmd);
 
 Call this method to set a new application that the user tool runs. The method destroys the old icon and loads a new icon from the given application. If it cannot load an icon from the application, it loads the default icon for a user tool by calling [CUserTool::LoadDefaultIcon](#loaddefaulticon).
 
-##  <a name="settoolicon"></a>  CUserTool::SetToolIcon
+## <a name="settoolicon"></a> CUserTool::SetToolIcon
 
 Loads the icon for the user tool from the application that the tool uses.
 
@@ -231,7 +232,7 @@ A handle to the loaded icon.
 
 Call this method to load the icon to be displayed on the menu item. This method searches for the icon in the executable file that the tool uses. If it does not have a default icon, the icon provided by [CUserTool::LoadDefaultIcon](#loaddefaulticon) is used instead.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

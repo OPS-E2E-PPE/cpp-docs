@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: _com_ptr_t::AddRef"
 title: "_com_ptr_t::AddRef"
 ms.date: "11/04/2016"
 f1_keywords: ["_com_ptr_t::AddRef"]
@@ -13,7 +14,7 @@ Calls the `AddRef` member function of `IUnknown` on the encapsulated interface p
 
 ## Syntax
 
-```
+```cpp
 void AddRef( );
 ```
 

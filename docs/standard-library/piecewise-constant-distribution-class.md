@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: piecewise_constant_distribution Class"
 title: "piecewise_constant_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::piecewise_constant_distribution", "random/std::piecewise_constant_distribution::reset", "random/std::piecewise_constant_distribution::intervals", "random/std::piecewise_constant_distribution::densities", "random/std::piecewise_constant_distribution::param", "random/std::piecewise_constant_distribution::min", "random/std::piecewise_constant_distribution::max", "random/std::piecewise_constant_distribution::operator()", "random/std::piecewise_constant_distribution::param_type", "random/std::piecewise_constant_distribution::param_type::intervals", "random/std::piecewise_constant_distribution::param_type::densities", "random/std::piecewise_constant_distribution::param_type::operator==", "random/std::piecewise_constant_distribution::param_type::operator!="]
@@ -52,8 +53,8 @@ public:
 
 ### Parameters
 
-*RealType*<br/>
-The floating point result type, defaults to **double**. For possible types, see [\<random>](../standard-library/random.md).
+*RealType*\
+The floating point result type, defaults to **`double`**. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
@@ -61,10 +62,8 @@ This sampling distribution has varying-width intervals with uniform probability 
 
 The following table links to articles about individual members:
 
-||||
-|-|-|-|
-|[piecewise_constant_distribution](#piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|
-|`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[param_type](#param_type)|
+[piecewise_constant_distribution](#piecewise_constant_distribution)\
+[param_type](#param_type)
 
 The property function `intervals()` returns a `vector<result_type>` with the set of stored intervals of the distribution.
 
@@ -190,7 +189,7 @@ Distribution for 100 samples:
 
 **Namespace:** std
 
-## <a name="piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution
+## <a name="piecewise_constant_distribution"></a> piecewise_constant_distribution::piecewise_constant_distribution
 
 Constructs the distribution.
 
@@ -220,31 +219,31 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### Parameters
 
-*firstI*<br/>
+*firstI*\
 An input iterator of the first element in the distribution range.
 
-*lastI*<br/>
+*lastI*\
 An input iterator of the last element in the distribution range.
 
-*firstW*<br/>
+*firstW*\
 An input iterator of the first element in the weights range.
 
-*intervals*<br/>
+*intervals*\
 An [initializer_list](../cpp/initializers.md) with the intervals of the distribution.
 
-*count*<br/>
+*count*\
 The number of elements in the distribution range.
 
-*xmin*<br/>
+*xmin*\
 The lowest value in the distribution range.
 
-*xmax*<br/>
+*xmax*\
 The highest value in the distribution range. Must be greater than *xmin*.
 
-*weightfunc*<br/>
-The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to **double**.
+*weightfunc*\
+The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to **`double`**.
 
-*parm*<br/>
+*parm*\
 The parameter structure used to construct the distribution.
 
 ### Remarks
@@ -252,6 +251,7 @@ The parameter structure used to construct the distribution.
 The default constructor sets the stored parameters such that there is one interval, 0 to 1, with a probability density of 1.
 
 The iterator range constructor
+
 ```cpp
 template <class InputIteratorI, class InputIteratorW>
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
@@ -261,6 +261,7 @@ piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
 constructs a distribution object with itnervals from iterators over the sequence [ `firstI`, `lastI`) and a matching weight sequence starting at `firstW`.
 
 The initializer list constructor
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(initializer_list<result_type>
@@ -271,22 +272,24 @@ intervals,
 constructs a distribution object with intervals from the initializer list *intervals* and weights generated from the function *weightfunc*.
 
 The constructor defined as
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,
     UnaryOperation weightfunc);
 ```
 
-constructs a distribution object with *count* intervals distributed uniformly over [ `xmin,xmax`], assigning each interval weights according to the function *weightfunc*, and *weightfunc* must accept one parameter and have a return value, both of which are convertible to `double`. **Precondition:** `xmin < xmax`
+constructs a distribution object with *count* intervals distributed uniformly over [ `xmin,xmax`], assigning each interval weights according to the function *weightfunc*, and *weightfunc* must accept one parameter and have a return value, both of which are convertible to **`double`**. **Precondition:** `xmin < xmax`
 
 The constructor defined as
+
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
 constructs a distribution object using *parm* as the stored parameter structure.
 
-## <a name="param_type"></a>  piecewise_constant_distribution::param_type
+## <a name="param_type"></a> piecewise_constant_distribution::param_type
 
 Stores all the parameters of the distribution.
 
@@ -318,5 +321,5 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
-[piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)<br/>
+[\<random>](../standard-library/random.md)\
+[piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

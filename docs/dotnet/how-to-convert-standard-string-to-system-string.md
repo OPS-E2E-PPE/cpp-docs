@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Convert Standard String to System::String"
 title: "How to: Convert Standard String to System::String"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -11,7 +12,7 @@ This topic shows how convert a C++ Standard Library string ([\<string>](../stand
 
 ## Example
 
-```
+```cpp
 // convert_standard_string_to_system_string.cpp
 // compile with: /clr
 #include <string>
@@ -26,7 +27,7 @@ int main() {
    Console::WriteLine(str2);
 
    // alternatively
-   String^ str3 = gcnew String(str.c_str());
+   String^ str3 = gcnew String(str.data());
    Console::WriteLine(str3);
 }
 ```
@@ -37,6 +38,6 @@ test
 test
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

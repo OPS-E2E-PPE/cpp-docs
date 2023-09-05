@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2790"
 title: "Compiler Error C2790"
 ms.date: "11/04/2016"
 f1_keywords: ["C2790"]
@@ -13,7 +14,7 @@ This error message appears if the user ever tries to uses the keyword [super](..
 
 The following sample generates C2790:
 
-```
+```cpp
 // C2790.cpp
 void f() {
    __super::g();   // C2790

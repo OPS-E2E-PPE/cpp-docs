@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using Frame Windows"
 title: "Using Frame Windows"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["windows [MFC], frame windows", "frame windows [MFC], using", "MFC, frame windows"]
@@ -32,7 +33,6 @@ The MFC framework creates document frame windows — and their views and documen
 
 - [The frame window's role in printing and print preview](../mfc/orchestrating-other-window-actions.md)
 
-## See Also
+## See also
 
 [Frame Windows](../mfc/frame-windows.md)
-

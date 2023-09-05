@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3227"
 title: "Compiler Error C3227"
 ms.date: "11/04/2016"
 f1_keywords: ["C3227"]
@@ -17,7 +18,7 @@ You can use templates instead of generics to resolve this error, or you can use 
 
 The following sample generates C3227.
 
-```
+```cpp
 // C3227.cpp
 // compile with: /clr /c
 generic<class T> interface class ICreate {

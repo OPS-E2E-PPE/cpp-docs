@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Rebar Controls and Bands"
 title: "Rebar Controls and Bands"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["rebar controls [MFC], working with bands in", "bands, in rebar controls"]
@@ -30,8 +31,7 @@ The following example demonstrates adding a toolbar band (*m_wndToolBar*) to an 
 
 [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]
 
-## See Also
+## See also
 
 [Using CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

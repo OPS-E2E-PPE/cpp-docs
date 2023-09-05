@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4709"
 title: "Compiler Warning (level 4) C4709"
 ms.date: "11/04/2016"
 f1_keywords: ["C4709"]
@@ -15,7 +16,7 @@ When a comma occurs in an array index expression, the compiler uses the value af
 
 The following sample generates C4709:
 
-```
+```cpp
 // C4709.cpp
 // compile with: /W4
 #include <stdio.h>

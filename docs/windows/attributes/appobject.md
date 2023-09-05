@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: appobject"
 title: "appobject (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.appobject"]
@@ -17,7 +18,7 @@ Identifies the coclass as an application object, which is associated with a full
 
 ## Remarks
 
-The **appobject** C++ attribute has the same functionality as the [appobject](/windows/desktop/Midl/appobject) MIDL attribute.
+The **appobject** C++ attribute has the same functionality as the [appobject](/windows/win32/Midl/appobject) MIDL attribute.
 
 ## Example
 
@@ -40,18 +41,16 @@ class A : public ICustom {
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**class**, **struct**|
+|**Applies to**|**`class`**, **`struct`**|
 |**Repeatable**|No|
 |**Required attributes**|`coclass`|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Class Attributes](class-attributes.md)<br/>

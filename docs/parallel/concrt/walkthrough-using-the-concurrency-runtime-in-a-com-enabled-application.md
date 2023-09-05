@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Walkthrough: Using the Concurrency Runtime in a COM-Enabled Application"
 title: "Walkthrough: Using the Concurrency Runtime in a COM-Enabled Application"
-ms.date: "11/04/2016"
+ms.date: "04/25/2019"
 helpviewer_keywords: ["Concurrency Runtime, use with COM", "COM, use with the Concurrency Runtime"]
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
 ---
@@ -20,17 +21,17 @@ Read the following documents before you start this walkthrough:
 
 - [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)
 
-For more information about COM, see [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
+For more information about COM, see [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal).
 
 ## Managing the Lifetime of the COM Library
 
 Although the use of COM with the Concurrency Runtime follows the same principles as any other concurrency mechanism, the following guidelines can help you use these libraries together effectively.
 
-- A thread must call [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) before it uses the COM library.
+- A thread must call [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) before it uses the COM library.
 
 - A thread can call `CoInitializeEx` multiple times as long as it provides the same arguments to every call.
 
-- For each call to `CoInitializeEx`, a thread must also call [CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize). In other words, calls to `CoInitializeEx` and `CoUninitialize` must be balanced.
+- For each call to `CoInitializeEx`, a thread must also call [CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize). In other words, calls to `CoInitializeEx` and `CoUninitialize` must be balanced.
 
 - To switch from one thread apartment to another, a thread must completely free the COM library before it calls `CoInitializeEx` with the new threading specification.
 
@@ -143,9 +144,9 @@ fib(12) = 144
 
 Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `parallel-scripts.cpp` and then run the following command in a Visual Studio Command Prompt window.
 
-**cl.exe /EHsc parallel-scripts.cpp /link ole32.lib**
+> **cl.exe /EHsc parallel-scripts.cpp /link ole32.lib**
 
-## See Also
+## See also
 
 [Concurrency Runtime Walkthroughs](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Task Parallelism](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
@@ -154,4 +155,3 @@ Copy the example code and paste it in a Visual Studio project, or paste it in a 
 [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Cancellation in the PPL](cancellation-in-the-ppl.md)<br/>
 [Task Scheduler](../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

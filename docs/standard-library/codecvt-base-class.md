@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: codecvt_base Class"
 title: "codecvt_base Class"
 ms.date: "11/04/2016"
 f1_keywords: ["xlocale/std::codecvt_base"]
@@ -30,7 +31,7 @@ protected:
 
 ## Remarks
 
-The class describes an enumeration common to all specializations of template class [codecvt](../standard-library/codecvt-class.md). The enumeration result describes the possible return values from [do_in](../standard-library/codecvt-class.md#do_in) or [do_out](../standard-library/codecvt-class.md#do_out):
+The class describes an enumeration common to all specializations of class template [codecvt](../standard-library/codecvt-class.md). The enumeration result describes the possible return values from [do_in](../standard-library/codecvt-class.md#do_in) or [do_out](../standard-library/codecvt-class.md#do_out):
 
 - `ok` if the conversion between internal and external character encodings succeeds.
 
@@ -48,4 +49,4 @@ The class describes an enumeration common to all specializations of template cla
 
 ## See also
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

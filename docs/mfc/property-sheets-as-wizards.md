@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Property Sheets as Wizards"
 title: "Property Sheets as Wizards"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["property sheets, as wizards"]
@@ -16,7 +17,6 @@ To display all of the default buttons, you mush show the Finish button and move 
 
 [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/cpp/property-sheets-as-wizards_1.cpp)]
 
-## See Also
+## See also
 
 [Property Sheets](../mfc/property-sheets-mfc.md)
-

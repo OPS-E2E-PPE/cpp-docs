@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Create the User Control and Host in a Dialog Box"
 title: "How to: Create the User Control and Host in a Dialog Box"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -107,6 +108,6 @@ The steps in this article assume that you are creating a dialog-based ([CDialog 
 
    On the **Debug** menu, click **Start without debugging**. The MFC dialog box should display the Windows Forms control.
 
-## See Also
+## See also
 
 [Hosting a Windows Form User Control in an MFC Dialog Box](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)

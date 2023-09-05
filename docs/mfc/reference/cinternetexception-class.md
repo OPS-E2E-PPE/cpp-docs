@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CInternetException Class"
 title: "CInternetException Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CInternetException", "AFXINET/CInternetException", "AFXINET/CInternetException::CInternetException", "AFXINET/CInternetException::m_dwContext", "AFXINET/CInternetException::m_dwError"]
@@ -48,7 +49,7 @@ For more information about context identifiers for Internet applications, see th
 
 **Header:** afxinet.h
 
-##  <a name="cinternetexception"></a>  CInternetException::CInternetException
+## <a name="cinternetexception"></a> CInternetException::CInternetException
 
 This member function is called when a `CInternetException` object is created.
 
@@ -65,7 +66,7 @@ The error that caused the exception.
 
 To throw a CInternetException, call the MFC global function [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).
 
-##  <a name="m_dwcontext"></a>  CInternetException::m_dwContext
+## <a name="m_dwcontext"></a> CInternetException::m_dwContext
 
 The context value associated with the related Internet operation.
 
@@ -77,7 +78,7 @@ DWORD_PTR m_dwContext;
 
 The context identifier is originally specified in [CInternetSession](../../mfc/reference/cinternetsession-class.md) and passed by MFC to [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- and [CInternetFile](../../mfc/reference/cinternetfile-class.md)-derived classes. You can override this default and assign any *dwContext* parameter a value of your choosing. *dwContext* is associated with any operation of the given object. *dwContext* identifies the operation's status information returned by [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).
 
-##  <a name="m_dwerror"></a>  CInternetException::m_dwError
+## <a name="m_dwerror"></a> CInternetException::m_dwError
 
 The error that caused the exception.
 
@@ -89,9 +90,9 @@ DWORD m_dwError;
 
 This error value may be a system error code, found in WINERROR.H, or an error value from WININET.H.
 
-For a list of Win32 error codes, see [Error Codes](/windows/desktop/Debug/system-error-codes). For a list of Internet-specific error messages, see  . Both topics are in the Windows SDK.
+For a list of Win32 error codes, see [Error Codes](/windows/win32/Debug/system-error-codes). For a list of Internet-specific error messages, see  . Both topics are in the Windows SDK.
 
-## See Also
+## See also
 
 [CException Class](../../mfc/reference/cexception-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

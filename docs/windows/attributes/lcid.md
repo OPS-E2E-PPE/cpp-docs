@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: lcid"
 title: "lcid (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.lcid"]
@@ -17,7 +18,7 @@ Lets you pass a locale identifier to a function.
 
 ## Remarks
 
-The **lcid** C++ attribute implements the functionality of the [lcid](/windows/desktop/Midl/lcid) MIDL attribute. If you want to implement locale for a library block, use the **lcid=**`lcid` parameter to the [module](module-cpp.md) attribute.
+The **lcid** C++ attribute implements the functionality of the [lcid](/windows/win32/Midl/lcid) MIDL attribute. If you want to implement locale for a library block, use the **lcid=**`lcid` parameter to the [module](module-cpp.md) attribute.
 
 ## Example
 
@@ -36,9 +37,7 @@ __interface IStatic {
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface parameter|
 |**Repeatable**|No|
@@ -47,7 +46,7 @@ __interface IStatic {
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Parameter Attributes](parameter-attributes.md)

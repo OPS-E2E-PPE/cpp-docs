@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2081"
 title: "Compiler Error C2081"
 ms.date: "11/04/2016"
 f1_keywords: ["C2081"]
@@ -15,14 +16,14 @@ This error can be caused by using the old style for the formal parameter list. Y
 
 The following sample generates C2081:
 
-```
+```c
 // C2081.c
 void func( int i, j ) {}  // C2081, no type specified for j
 ```
 
 Possible resolution:
 
-```
+```c
 // C2081b.c
 // compile with: /c
 void func( int i, int j ) {}

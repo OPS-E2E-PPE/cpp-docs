@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_convertible Class"
 title: "is_convertible Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_convertible"]
@@ -18,10 +19,10 @@ struct is_convertible;
 
 ### Parameters
 
-*From*<br/>
+*From*\
 The type to convert from.
 
-*Ty*<br/>
+*Ty*\
 The type to convert to.
 
 ## Remarks
@@ -68,5 +69,5 @@ is_convertible<char, int> == true
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_base_of Class](../standard-library/is-base-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_base_of Class](../standard-library/is-base-of-class.md)

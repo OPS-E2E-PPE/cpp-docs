@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComPolyObject Class"
 title: "CComPolyObject Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComPolyObject", "ATLCOM/ATL::CComPolyObject", "ATLCOM/ATL::CComPolyObject::CComPolyObject", "ATLCOM/ATL::CComPolyObject::AddRef", "ATLCOM/ATL::CComPolyObject::CreateInstance", "ATLCOM/ATL::CComPolyObject::FinalConstruct", "ATLCOM/ATL::CComPolyObject::FinalRelease", "ATLCOM/ATL::CComPolyObject::QueryInterface", "ATLCOM/ATL::CComPolyObject::Release", "ATLCOM/ATL::CComPolyObject::m_contained"]
@@ -36,7 +37,7 @@ Your class, derived from [CComObjectRoot](../../atl/reference/ccomobjectroot-cla
 |Name|Description|
 |----------|-----------------|
 |[CComPolyObject::AddRef](#addref)|Increments the object's reference count.|
-|[CComPolyObject::CreateInstance](#createinstance)|(Static) Allows you to create a new **CComPolyObject<** `contained` **>** object without the overhead of [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|
+|[CComPolyObject::CreateInstance](#createinstance)|(Static) Allows you to create a new **CComPolyObject<** `contained` **>** object without the overhead of [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).|
 |[CComPolyObject::FinalConstruct](#finalconstruct)|Performs final initialization of `m_contained`.|
 |[CComPolyObject::FinalRelease](#finalrelease)|Performs final destruction of `m_contained`.|
 |[CComPolyObject::QueryInterface](#queryinterface)|Retrieves a pointer to the requested interface.|
@@ -50,7 +51,7 @@ Your class, derived from [CComObjectRoot](../../atl/reference/ccomobjectroot-cla
 
 ## Remarks
 
-`CComPolyObject` implements [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) for an aggregated or nonaggregated object.
+`CComPolyObject` implements [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) for an aggregated or nonaggregated object.
 
 When an instance of `CComPolyObject` is created, the value of the outer unknown is checked. If it is NULL, `IUnknown` is implemented for a nonaggregated object. If the outer unknown is not NULL, `IUnknown` is implemented for an aggregated object.
 
@@ -76,7 +77,7 @@ For more information about aggregation, see the article [Fundamentals of ATL COM
 
 **Header:** atlcom.h
 
-##  <a name="addref"></a>  CComPolyObject::AddRef
+## <a name="addref"></a> CComPolyObject::AddRef
 
 Increments the reference count on the object.
 
@@ -88,7 +89,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 A value that may be useful for diagnostics or testing.
 
-##  <a name="ccompolyobject"></a>  CComPolyObject::CComPolyObject
+## <a name="ccompolyobject"></a> CComPolyObject::CComPolyObject
 
 The constructor.
 
@@ -107,7 +108,7 @@ Initializes the `CComContainedObject` data member, [m_contained](#m_contained), 
 
 The destructor decrements the module lock count.
 
-##  <a name="dtor"></a>  CComPolyObject::~CComPolyObject
+## <a name="dtor"></a> CComPolyObject::~CComPolyObject
 
 The destructor.
 
@@ -119,9 +120,9 @@ The destructor.
 
 Frees all allocated resources, calls [FinalRelease](#finalrelease), and decrements the module lock count.
 
-##  <a name="createinstance"></a>  CComPolyObject::CreateInstance
+## <a name="createinstance"></a> CComPolyObject::CreateInstance
 
-Allows you to create a new **CComPolyObject<**`contained` **>** object without the overhead of [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+Allows you to create a new **CComPolyObject<**`contained` **>** object without the overhead of [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
 ```
 static HRESULT WINAPI CreateInstance(
@@ -144,7 +145,7 @@ The object returned has a reference count of zero, so call `AddRef` immediately,
 
 If you don't need direct access to the object, but still want to create a new object without the overhead of `CoCreateInstance`, use [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) instead.
 
-##  <a name="finalconstruct"></a>  CComPolyObject::FinalConstruct
+## <a name="finalconstruct"></a> CComPolyObject::FinalConstruct
 
 Called during the final stages of object construction, this method performs any final initialization on the [m_contained](#m_contained) data member.
 
@@ -156,15 +157,15 @@ HRESULT FinalConstruct();
 
 A standard HRESULT value.
 
-##  <a name="finalrelease"></a>  CComPolyObject::FinalRelease
+## <a name="finalrelease"></a> CComPolyObject::FinalRelease
 
 Called during object destruction, this method frees the [m_contained](#m_contained) data member.
 
-```
+```cpp
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>  CComPolyObject::m_contained
+## <a name="m_contained"></a> CComPolyObject::m_contained
 
 A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) object derived from your class.
 
@@ -181,7 +182,7 @@ CComContainedObject<contained> m_contained;
 
 `IUnknown` calls through `m_contained` are delegated to the outer unknown if the object is aggregated, or to the `IUnknown` of this object if the object is not aggregated.
 
-##  <a name="queryinterface"></a>  CComPolyObject::QueryInterface
+## <a name="queryinterface"></a> CComPolyObject::QueryInterface
 
 Retrieves a pointer to the requested interface.
 
@@ -213,7 +214,7 @@ A standard HRESULT value.
 
 For an aggregated object, if the requested interface is `IUnknown`, `QueryInterface` returns a pointer to the aggregated object's own `IUnknown` and increments the reference count. Otherwise, this method queries for the interface through the `CComContainedObject` data member, [m_contained](#m_contained).
 
-##  <a name="release"></a>  CComPolyObject::Release
+## <a name="release"></a> CComPolyObject::Release
 
 Decrements the reference count on the object.
 
@@ -225,7 +226,7 @@ STDMETHOD_(ULONG, Release)();
 
 In debug builds, `Release` returns a value that may be useful for diagnostics or testing. In nondebug builds, `Release` always returns 0.
 
-## See Also
+## See also
 
 [CComObjectRootEx Class](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)<br/>

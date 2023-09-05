@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3487"
 title: "Compiler Error C3487"
 ms.date: "11/04/2016"
 f1_keywords: ["C3487"]
@@ -19,7 +20,7 @@ A lambda must specify its return type unless it contains a single return stateme
 
 The following example generates C3487 because the return types of the lambda do not match:
 
-```
+```cpp
 // C3487.cpp
 // Compile by using: cl /c /W4 C3487.cpp
 
@@ -34,6 +35,6 @@ int* test(int* pi) {
 }
 ```
 
-## See Also
+## See also
 
 [Lambda Expressions](../../cpp/lambda-expressions-in-cpp.md)

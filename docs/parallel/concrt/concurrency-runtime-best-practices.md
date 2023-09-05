@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Concurrency Runtime Best Practices"
 title: "Concurrency Runtime Best Practices"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["best practices [Concurrency Runtime]", "Concurrency Runtime, practices to avoid", "practices to avoid [Concurrency Runtime]", "Concurrency Runtime, best practices"]
@@ -35,4 +36,3 @@ Describes the various synchronization primitives that the Concurrency Runtime pr
 
 [Task Scheduler](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 Describes how to use the Task Scheduler to adjust the performance of your applications.
-

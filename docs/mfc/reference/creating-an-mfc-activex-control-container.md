@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Creating an MFC ActiveX Control Container"
 title: "Creating an MFC ActiveX Control Container"
 ms.date: "09/12/2018"
 f1_keywords: ["vc.appwiz.activex.container"]
@@ -26,7 +27,6 @@ Creating an MFC container program using the [MFC Application Wizard](../../mfc/r
 
 1. [MFC ActiveX controls](../../mfc/mfc-activex-controls.md)
 
-## See Also
+## See also
 
-[Visual C++ Project Types](../../ide/visual-cpp-project-types.md)
-
+[C++ project types in Visual Studio](../../build/reference/visual-cpp-project-types.md)

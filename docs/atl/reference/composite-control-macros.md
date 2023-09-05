@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Composite Control Macros"
 title: "Composite Control Macros"
-ms.date: "11/04/2016"
-f1_keywords: ["atlcom/ATL::BEGIN_SINK_MAP", "atlcom/ATL::END_SINK_MAP", "atlcom/ATL::SINK_ENTRY"]
+ms.date: "05/06/2019"
+f1_keywords: ["atlcom/ATL::BEGIN_SINK_MAP", "atlcom/ATL::END_SINK_MAP", "atlcom/ATL::SINK_ENTRY", "ATLCOM/BEGIN_SINK_MAP", "ATLCOM/END_SINK_MAP", "ATLCOM/SINK_ENTRY", "ATLCOM/SINK_ENTRY_EX", "ATLCOM/SINK_ENTRY_EX_P", "ATLCOM/SINK_ENTRY_INFO", "ATLCOM/SINK_ENTRY_INFO_P", "BEGIN_SINK_MAP", "END_SINK_MAP", "SINK_ENTRY", "SINK_ENTRY_EX", "SINK_ENTRY_EX_P", "SINK_ENTRY_INFO", "SINK_ENTRY_INFO_P"]
 helpviewer_keywords: ["composite controls, macros"]
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
 ---
@@ -9,12 +10,12 @@ ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
 
 These macros define event sink maps and entries.
 
-|||
+|Macro|Description|
 |-|-|
 |[BEGIN_SINK_MAP](#begin_sink_map)|Marks the beginning of the event sink map for the composite control.|
 |[END_SINK_MAP](#end_sink_map)|Marks the end of the event sink map for the composite control.|
 |[SINK_ENTRY](#sink_entry)|Entry to the event sink map.|
-|[SINK_ENTRY_EX](#sink_entry_ex)|Entry to the event sink map with an additional parameter.|
+|[SINK_ENTRY_EX](#sink_entry_ex)|Entry to the event sink map with an extra parameter.|
 |[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Similar to SINK_ENTRY_EX except that it takes a pointer to iid.|
 |[SINK_ENTRY_INFO](#sink_entry_info)|Entry to the event sink map with manually supplied type information for use with [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Similar to SINK_ENTRY_INFO except that it takes a pointer to iid.|
@@ -23,7 +24,7 @@ These macros define event sink maps and entries.
 
 **Header:** atlcom.h
 
-##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
+## <a name="begin_sink_map"></a> BEGIN_SINK_MAP
 
 Declares the beginning of the event sink map for the composite control.
 
@@ -42,9 +43,9 @@ BEGIN_SINK_MAP(_class)
 
 ### Remarks
 
-CE ATL implementation of ActiveX event sinks only supports return values of type HRESULT or void from your event handler methods; any other return value is unsupported and its behavior is undefined.
+CE ATL implementation of ActiveX event sinks only supports return values of type HRESULT or void from your event handler methods. Any other return value is unsupported and its behavior is undefined.
 
-##  <a name="end_sink_map"></a>  END_SINK_MAP
+## <a name="end_sink_map"></a> END_SINK_MAP
 
 Declares the end of the event sink map for the composite control.
 
@@ -58,9 +59,9 @@ END_SINK_MAP()
 
 ### Remarks
 
-CE ATL implementation of ActiveX event sinks only supports return values of type HRESULT or void from your event handler methods; any other return value is unsupported and its behavior is undefined.
+CE ATL implementation of ActiveX event sinks only supports return values of type HRESULT or void from your event handler methods. Any other return value is unsupported and its behavior is undefined.
 
-##  <a name="sink_entry"></a>  SINK_ENTRY
+## <a name="sink_entry"></a> SINK_ENTRY
 
 Declares the handler function (*fn*) for the specified event (*dispid*), of the control identified by *id*.
 
@@ -85,9 +86,9 @@ SINK_ENTRY( id, dispid, fn )
 
 ### Remarks
 
-CE ATL implementation of ActiveX event sinks only supports return values of type HRESULT or void from your event handler methods; any other return value is unsupported and its behavior is undefined.
+CE ATL implementation of ActiveX event sinks only supports return values of type HRESULT or void from your event handler methods. Any other return value is unsupported and its behavior is undefined.
 
-##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX and SINK_ENTRY_EX_P
+## <a name="sink_entry_ex"></a> SINK_ENTRY_EX and SINK_ENTRY_EX_P
 
 Declares the handler function (*fn*) for the specified event (*dispid*), of the dispatch interface (*iid*), for the control identified by *id*.
 
@@ -119,9 +120,9 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### Remarks
 
-CE ATL implementation of ActiveX event sinks only supports return values of type HRESULT or void from your event handler methods; any other return value is unsupported and its behavior is undefined.
+CE ATL implementation of ActiveX event sinks only supports return values of type HRESULT or void from your event handler methods. Any other return value is unsupported and its behavior is undefined.
 
-##  <a name="sink_entry_info"></a>  SINK_ENTRY_INFO and SINK_ENTRY_INFO_P
+## <a name="sink_entry_info"></a> SINK_ENTRY_INFO and SINK_ENTRY_INFO_P
 
 Use the SINK_ENTRY_INFO macro within an event sink map to provide the information needed by [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) to route events to the relevant handler function.
 
@@ -152,9 +153,9 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ### Remarks
 
-The first four macro parameters are the same as those for the [SINK_ENTRY_EX](#sink_entry_ex) macro. The final parameter provides type information for the event. CE ATL implementation of ActiveX event sinks only supports return values of type HRESULT or void from your event handler methods; any other return value is unsupported and its behavior is undefined.
+The first four macro parameters are the same as the ones for the [SINK_ENTRY_EX](#sink_entry_ex) macro. The final parameter provides type information for the event. CE ATL implementation of ActiveX event sinks only supports return values of type HRESULT or void from your event handler methods. Any other return value is unsupported and its behavior is undefined.
 
-## See Also
+## See also
 
 [Macros](../../atl/reference/atl-macros.md)<br/>
 [Composite Control Global Functions](../../atl/reference/composite-control-global-functions.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: STACKSIZE"
 title: "STACKSIZE"
 ms.date: "11/04/2016"
 f1_keywords: ["STACKSIZE"]
@@ -15,10 +16,10 @@ STACKSIZE reserve[,commit]
 
 ## Remarks
 
-An equivalent way to set the stack is with the [Stack Allocations](../../build/reference/stack-stack-allocations.md) (/STACK) option. See the documentation on that option for details about the *reserve* and `commit` arguments.
+An equivalent way to set the stack is with the [Stack Allocations](stack-stack-allocations.md) (/STACK) option. See the documentation on that option for details about the *reserve* and `commit` arguments.
 
 This option has no effect on DLLs.
 
-## See Also
+## See also
 
-[Rules for Module-Definition Statements](../../build/reference/rules-for-module-definition-statements.md)
+[Rules for Module-Definition Statements](rules-for-module-definition-statements.md)

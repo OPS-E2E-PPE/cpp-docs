@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (levels 1 and 4) C4112"
 title: "Compiler Warning (levels 1 and 4) C4112"
 ms.date: "11/04/2016"
 f1_keywords: ["C4112"]
@@ -15,7 +16,7 @@ If the specified parameter is less than 1, the line counter is reset to 1. If th
 
 The following sample generates C4112:
 
-```
+```cpp
 // C4112.cpp
 // compile with: /W4
 #line 0   // C4112, value must be between 1 and number

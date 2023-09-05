@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: lognormal_distribution Class"
 title: "lognormal_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::lognormal_distribution", "random/std::lognormal_distribution::reset", "random/std::lognormal_distribution::m", "random/std::lognormal_distribution::s", "random/std::lognormal_distribution::param", "random/std::lognormal_distribution::min", "random/std::lognormal_distribution::max", "random/std::lognormal_distribution::operator()", "random/std::lognormal_distribution::param_type", "random/std::lognormal_distribution::param_type::m", "random/std::lognormal_distribution::param_type::s", "random/std::lognormal_distribution::param_type::operator==", "random/std::lognormal_distribution::param_type::operator!="]
@@ -40,17 +41,15 @@ public:
 
 ### Parameters
 
-*RealType*<br/>
-The floating-point result type, defaults to **double**. For possible types, see [\<random>](../standard-library/random.md).
+*RealType*\
+The floating-point result type, defaults to **`double`**. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes a distribution that produces values of a user-specified integral type, or type **double** if none is provided, distributed according to the Log Normal Distribution. The following table links to articles about individual members.
+The class template describes a distribution that produces values of a user-specified integral type, or type **`double`** if none is provided, distributed according to the Log Normal Distribution. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[lognormal_distribution](#lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|
-|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[param_type](#param_type)|
+[lognormal_distribution](#lognormal_distribution)\
+[param_type](#param_type)
 
 The property functions `m()` and `s()` return the values for the stored distribution parameters *m* and *s*, respectively.
 
@@ -64,7 +63,7 @@ The `operator()` member functions return the next generated value based on the U
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the LogNormal distribution, see the Wolfram MathWorld article [LogNormal Distribution](http://go.microsoft.com/fwlink/p/?linkid=400917).
+For detailed information about the LogNormal distribution, see the Wolfram MathWorld article [LogNormal Distribution](https://go.microsoft.com/fwlink/p/?linkid=400917).
 
 ## Example
 
@@ -156,7 +155,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution
+## <a name="lognormal_distribution"></a> lognormal_distribution::lognormal_distribution
 
 Constructs the distribution.
 
@@ -167,13 +166,13 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### Parameters
 
-*m*<br/>
+*m*\
 The `m` distribution parameter.
 
-*s*<br/>
+*s*\
 The `s` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The `param_type` structure used to construct the distribution.
 
 ### Remarks
@@ -184,7 +183,7 @@ The first constructor constructs an object whose stored `m` value holds the valu
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  lognormal_distribution::param_type
+## <a name="param_type"></a> lognormal_distribution::param_type
 
 Stores the parameters of the distribution.
 
@@ -202,13 +201,13 @@ struct param_type {
 
 ### Parameters
 
-*m*<br/>
+*m*\
 The `m` distribution parameter.
 
-*s*<br/>
+*s*\
 The `s` distribution parameter.
 
-*right*<br/>
+*right*\
 The `param_type` structure used to compare.
 
 ### Remarks
@@ -219,4 +218,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

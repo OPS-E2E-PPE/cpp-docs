@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3803"
 title: "Compiler Error C3803"
 ms.date: "11/04/2016"
 f1_keywords: ["C3803"]
@@ -13,7 +14,7 @@ The type of a property defined with [property](../../cpp/property-cpp.md) does n
 
 The following sample generates C3803:
 
-```
+```cpp
 // C3803.cpp
 struct A
 {

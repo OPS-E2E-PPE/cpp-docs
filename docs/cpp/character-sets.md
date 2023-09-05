@@ -1,20 +1,33 @@
 ---
-title: "Character Sets"
-ms.date: "04/12/2018"
-helpviewer_keywords: ["Character sets", "basic source character set (C++)", "universal character names", "basic execution character set (C++)"]
+description: "Learn more about: Tokens and character sets"
+title: "Tokens and character sets"
+ms.date: "12/10/2019"
+helpviewer_keywords: ["Tokens (C++)", "Character sets", "basic source character set (C++)", "universal character names", "basic execution character set (C++)"]
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
 ---
-# Character Sets
+# Tokens and character sets
 
-The text of a C++ program is stored in source files that use a particular character encoding. The C++ standard specifies a basic source character set for source files and a basic execution character set for compiled files. Visual C++ allows an additional set of locale-specific characters to be used in source files and compiled files.
+The text of a C++ program consists of tokens and *white space*. A token is the smallest element of a C++ program that is meaningful to the compiler. The C++ parser recognizes these kinds of tokens:
 
-## Character sets
+- [Keywords](../cpp/keywords-cpp.md)
+- [Identifiers](../cpp/identifiers-cpp.md)
+- [Numeric, Boolean and Pointer Literals](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
+- [String and Character Literals](../cpp/string-and-character-literals-cpp.md)
+- [User-Defined Literals](../cpp/user-defined-literals-cpp.md)
+- [Operators](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+- [Punctuators](../cpp/punctuators-cpp.md)
 
-The C++ standard specifies a *basic  source character set* that may be used in source files. To represent characters outside of this set, additional characters can be specified by using a *universal character name*. When compiled, the *basic execution character set* and *basic execution wide-character set* represent the characters and strings that can appear in a program. The Visual C++ implementation allows additional characters in source code and compiled code.
+Tokens are usually separated by *white space*, which can be one or more:
 
-### Basic source character set
+- Blanks
+- Horizontal or vertical tabs
+- New lines
+- Form feeds
+- Comments
 
-The *basic  source character set* consists of  96 characters that may be used in source files. This set includes the space character, horizontal tab, vertical tab, form feed and new-line control characters, and this set of graphical characters:
+## Basic source character set
+
+The C++ standard specifies a *basic source character set* that may be used in source files. To represent characters outside of this set, additional characters can be specified by using a *universal character name*. The MSVC implementation allows additional characters. The *basic source character set* consists of  96 characters that may be used in source files. This set includes the space character, horizontal tab, vertical tab, form feed and new-line control characters, and this set of graphical characters:
 
 `a b c d e f g h i j k l m n o p q r s t u v w x y z`
 
@@ -26,7 +39,7 @@ The *basic  source character set* consists of  96 characters that may be used in
 
 **Microsoft Specific**
 
-Visual C++ includes the `$` character as a member of the basic source character set. Visual C++ also allows an additional set of characters to be used in source files, based on the file encoding. By default, Visual Studio stores source files by using the default codepage. When source files are saved by using a locale-specific codepage or a Unicode codepage, Visual C++ allows you to use any of the characters of that code page in your source code, except for the control codes not explicitly allowed in the basic source character set. For example, you can put Japanese characters in comments, identifiers, or string literals if you save the file using a Japanese codepage. Visual C++  does not allow character sequences that cannot be translated into valid multibyte characters or Unicode code points. Depending on compiler options, not all allowed characters may appear in identifiers. For more information, see [Identifiers](../cpp/identifiers-cpp.md).
+MSVC includes the `$` character as a member of the basic source character set. MSVC also allows an additional set of characters to be used in source files, based on the file encoding. By default, Visual Studio stores source files by using the default codepage. When source files are saved by using a locale-specific codepage or a Unicode codepage, MSVC allows you to use any of the characters of that code page in your source code, except for the control codes not explicitly allowed in the basic source character set. For example, you can put Japanese characters in comments, identifiers, or string literals if you save the file using a Japanese codepage. MSVC does not allow character sequences that cannot be translated into valid multibyte characters or Unicode code points. Depending on compiler options, not all allowed characters may appear in identifiers. For more information, see [Identifiers](../cpp/identifiers-cpp.md).
 
 **END Microsoft Specific**
 
@@ -38,7 +51,7 @@ Universal character names can be used in identifiers and in string and character
 
 **Microsoft Specific**
 
-The Visual C++ compiler treats a character in universal character name form and literal form interchangeably. For example, you can declare an identifier using universal character name form, and use it in literal form:
+The Microsoft C++ compiler treats a character in universal character name form and literal form interchangeably. For example, you can declare an identifier using universal character name form, and use it in literal form:
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'
@@ -49,6 +62,6 @@ The format of extended characters on the Windows clipboard is specific to applic
 
 **END Microsoft Specific**
 
-### Basic execution character set
+### Execution character sets
 
-The *basic execution character set* and the *basic execution wide-character set* consist of all the characters in the basic source character set, and the control characters that represent alert, backspace, carriage return, and the null character. The *execution character set* and *execution wide-character set* are supersets of the basic sets. They include the implementation-defined source characters outside the basic source character set. The execution character set has a locale-specific representation.
+The *execution character sets* represent the characters and strings that can appear in a compiled program. These character sets consist of all the characters permitted in a source file, and also the control characters that represent alert, backspace, carriage return, and the null character. The execution character set has a locale-specific representation.

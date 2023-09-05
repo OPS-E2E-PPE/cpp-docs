@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Working with Window Objects"
 title: "Working with Window Objects"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["child windows [MFC], working with", "window objects [MFC], working with"]
@@ -28,7 +29,6 @@ In any case, you will need a device context for drawing. You can use the stock p
 
 - [Graphic objects](../mfc/graphic-objects.md)
 
-## See Also
+## See also
 
 [Window Objects](../mfc/window-objects.md)
-

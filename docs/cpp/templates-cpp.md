@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Templates (C++)"
 title: "Templates (C++)"
-ms.date: "11/04/2016"
+ms.date: "12/27/2019"
 f1_keywords: ["template_cpp"]
 helpviewer_keywords: ["templates, C++", "templates [C++]"]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
@@ -21,7 +22,7 @@ T minimum(const T& lhs, const T& rhs)
 }
 ```
 
-The above code describes a template for a generic function with a single type parameter *T*, whose return value and call parameters (lhs and rhs) are all of this type. You can name a type parameter anything you like, but by convention single upper case letters are most commonly used. *T* is a template parameter; the **typename** keyword says that this parameter is a placeholder for a type. When the function is called, the compiler will replace every instance of `T` with the concrete type argument that is either specified by the user or deduced by the compiler. The process in which the compiler generates a class or function from a template is referred to as  *template instantiation*; `minimum<int>` is an instantiation of the template `minimum<T>`.
+The above code describes a template for a generic function with a single type parameter *T*, whose return value and call parameters (lhs and rhs) are all of this type. You can name a type parameter anything you like, but by convention single upper case letters are most commonly used. *T* is a template parameter; the **`typename`** keyword says that this parameter is a placeholder for a type. When the function is called, the compiler will replace every instance of `T` with the concrete type argument that is either specified by the user or deduced by the compiler. The process in which the compiler generates a class or function from a template is referred to as  *template instantiation*; `minimum<int>` is an instantiation of the template `minimum<T>`.
 
 Elsewhere, a user can declare an instance of the template  that is specialized for int. Assume that get_a() and get_b() are functions that return an int:
 
@@ -37,7 +38,7 @@ However, because this is a function template and the compiler can deduce the typ
 int i = minimum(a, b);
 ```
 
-When the compiler encounters that last statement, it generates a new function in which every occurrence of *T* in the template is replaced with **int**:
+When the compiler encounters that last statement, it generates a new function in which every occurrence of *T* in the template is replaced with **`int`**:
 
 ```cpp
 int minimum(const int& lhs, const int& rhs)
@@ -58,13 +59,13 @@ There is no practical limit to the number of type parameters. Separate multiple 
 template <typename T, typename U, typename V> class Foo{};
 ```
 
-The keyword **class** is equivalent to **typename** in this context. You can express the previous example as:
+The keyword **`class`** is equivalent to **`typename`** in this context. You can express the previous example as:
 
 ```cpp
 template <class T, class U, class V> class Foo{};
 ```
 
-You can use the ellipses operator (...) to define a template that takes an arbitrary number of zero or more type parameters:
+You can use the ellipsis operator (...) to define a template that takes an arbitrary number of zero or more type parameters:
 
 ```cpp
 template<typename... Arguments> class vtclass;
@@ -74,7 +75,7 @@ vtclass<int> vtinstance2;
 vtclass<float, bool> vtinstance3;
 ```
 
-Any built-in or user-defined type can be used as a type argument. For example, you can use std::vector in the Standard Library to store ints, doubles, strings, MyClass, const MyClass*, MyClass&. The primary restriction when using templates is that a type argument must support any operations that are applied to the type parameters. For example, if we call minimum using MyClass as in this example:
+Any built-in or user-defined type can be used as a type argument. For example, you can use [std::vector](../standard-library/vector-class.md) in the Standard Library to store variables of type **`int`**, **`double`**, [std::string](../standard-library/basic-string-class.md), `MyClass`, **`const`** `MyClass`*, `MyClass&`, and so on. The primary restriction when using templates is that a type argument must support any operations that are applied to the type parameters. For example, if we call `minimum` using `MyClass` as in this example:
 
 ```cpp
 class MyClass
@@ -92,7 +93,7 @@ int main()
 }
 ```
 
-A compiler error will be generated because MyClass does not provide an overload for the < operator.
+A compiler error will be generated because `MyClass` does not provide an overload for the **<** operator.
 
 There is no inherent requirement that the type arguments for any particular template all belong to the same object hierarchy, although you can define a template that enforces such a restriction. You can combine object-oriented techniques with templates; for example, you can store a Derived* in a vector\<Base\*>.    Note that the arguments must be pointers
 
@@ -106,11 +107,11 @@ vector<MyClass*> vec;
    vec2.push_back(make_shared<MyDerived>());
 ```
 
-The basic requirements that vector and other standard library containers impose on elements of `T` is that `T` be copy-assignable and copy-constructible.
+The basic requirements that `std::vector` and other standard library containers impose on elements of `T` is that `T` be copy-assignable and copy-constructible.
 
 ## Non-type parameters
 
-Unlike generic types in other languages such as C# and Java, C++ templates support non-type parameters, also called value parameters. For example, you can provide a constant integral value to specify the length of an array, as with this example that is similar to the std::array class in the Standard Library:
+Unlike generic types in other languages such as C# and Java, C++ templates support *non-type parameters*, also called value parameters. For example, you can provide a constant integral value to specify the length of an array, as with this example that is similar to the [std::array](../standard-library/array-class-stl.md) class in the Standard Library:
 
 ```cpp
 template<typename T, size_t L>
@@ -122,13 +123,25 @@ public:
 };
 ```
 
-Note the syntax in the template declaration. The size_t value is passed in as a template argument at compile time and must be constant or a constexpr expression. You use it like this:
+Note the syntax in the template declaration. The `size_t` value is passed in as a template argument at compile time and must be **`const`** or a **`constexpr`** expression. You use it like this:
 
 ```cpp
 MyArray<MyClass*, 10> arr;
 ```
 
 Other kinds of values including pointers and references can be passed in as non-type parameters. For example, you can pass in a pointer to a function or function object to customize some operation inside the template code.
+
+### Type deduction for non-type template parameters
+
+In Visual Studio 2017 and later, and in **`/std:c++17`** mode or later, the compiler deduces the type of a non-type template argument that's declared with **`auto`**:
+
+```cpp
+template <auto x> constexpr auto constant = x;
+
+auto v1 = constant<5>;      // v1 == 5, decltype(v1) is int
+auto v2 = constant<true>;   // v2 == true, decltype(v2) is bool
+auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
+```
 
 ## <a id="template_parameters"></a> Templates as template parameters
 
@@ -194,7 +207,7 @@ int main()
 
 ## Template specialization
 
-In some cases, it isn’t possible or desirable for a template to define exactly the same code for any type. For example, you might wish to define a code path to be executed only if the type argument is a pointer, or a std::wstring, or a type derived from a particular base class.  In such cases you can define a *specialization* of the template for that particular type. When a user instantiates the template with that type, the compiler uses the specialization to generate the class, and for all other types, the compiler chooses the more general template. Specializations in which all parameters are specialized are *complete specializations*. If only some of the parameters are specialized, it is called a *partial specialization*.
+In some cases, it isn't possible or desirable for a template to define exactly the same code for any type. For example, you might wish to define a code path to be executed only if the type argument is a pointer, or a std::wstring, or a type derived from a particular base class.  In such cases you can define a *specialization* of the template for that particular type. When a user instantiates the template with that type, the compiler uses the specialization to generate the class, and for all other types, the compiler chooses the more general template. Specializations in which all parameters are specialized are *complete specializations*. If only some of the parameters are specialized, it is called a *partial specialization*.
 
 ```cpp
 template <typename K, typename V>

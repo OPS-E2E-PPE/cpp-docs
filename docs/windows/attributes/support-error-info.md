@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: support_error_info"
 title: "support_error_info (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.support_error_info"]
@@ -52,18 +53,16 @@ class CMyClass
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**class**|
+|**Applies to**|**`class`**|
 |**Repeatable**|Yes|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [COM Attributes](com-attributes.md)<br/>
 [Class Attributes](class-attributes.md)

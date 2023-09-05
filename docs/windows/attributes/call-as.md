@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: call_as"
 title: "call_as (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.call_as"]
@@ -22,7 +23,7 @@ The local function that you want to be called when a remote function is invoked.
 
 ## Remarks
 
-The **call_as** C++ attribute has the same functionality as the [call_as](/windows/desktop/Midl/call-as) MIDL attribute.
+The **call_as** C++ attribute has the same functionality as the [call_as](/windows/win32/Midl/call-as) MIDL attribute.
 
 ## Example
 
@@ -42,9 +43,7 @@ __interface IMInterface {
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface method|
 |**Repeatable**|No|
@@ -53,7 +52,7 @@ __interface IMInterface {
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Method Attributes](method-attributes.md)<br/>

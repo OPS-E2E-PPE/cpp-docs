@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3697"
 title: "Compiler Error C3697"
 ms.date: "11/04/2016"
 f1_keywords: ["C3697"]
@@ -13,7 +14,7 @@ The tracking handle (^) was applied to a qualifier for which it was not designed
 
 The following sample generates C3697:
 
-```
+```cpp
 // C3697.cpp
 // compile with: /clr
 using namespace System;

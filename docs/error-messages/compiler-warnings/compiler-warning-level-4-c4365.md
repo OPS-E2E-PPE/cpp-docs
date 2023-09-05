@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4365"
 title: "Compiler Warning (level 4) C4365"
 ms.date: "11/04/2016"
 f1_keywords: ["C4365"]
@@ -17,7 +18,7 @@ C4365 is off by default.  For more information, see [Compiler Warnings That Are 
 
 The following sample generates C4365.
 
-```
+```cpp
 // C4365.cpp
 // compile with: /W4
 #pragma warning(default:4365)

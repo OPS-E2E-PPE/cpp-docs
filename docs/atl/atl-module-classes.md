@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ATL Module Classes"
 title: "ATL Module Classes"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["CComModule class, what's changed", "ATL, module classes", "module classes"]
@@ -22,11 +23,11 @@ Earlier versions of ATL used `CComModule`. In ATL 7.0, `CComModule` functionalit
 
 - [CAtlModule](../atl/reference/catlmodule-class.md) The following `CAtlModule`-derived classes are customized to contain information required in a particular application type. Most members in these classes can be overridden:
 
-   - [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) Used in DLL applications. Provides code for the standard exports.
+  - [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) Used in DLL applications. Provides code for the standard exports.
 
-   - [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) Used in EXE applications. Provides code required in an EXE.
+  - [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) Used in EXE applications. Provides code required in an EXE.
 
-   - [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) Provides support to create Windows NT and Windows 2000 Services.
+  - [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) Provides support to create Windows NT and Windows 2000 Services.
 
 `CComModule` is still available for backward compatibility.
 
@@ -46,8 +47,7 @@ The functionality of `CComModule` was distributed into several new classes for t
 
    Init and Term methods have moved into the constructors and destructors for the module classes; there is no longer a need to call Init and Term.
 
-## See Also
+## See also
 
 [Concepts](../atl/active-template-library-atl-concepts.md)<br/>
 [Class Overview](../atl/atl-class-overview.md)
-

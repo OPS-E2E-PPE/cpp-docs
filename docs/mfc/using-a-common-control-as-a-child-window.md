@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using a Common Control as a Child Window"
 title: "Using a Common Control as a Child Window"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["controls [MFC], using as child windows", "windows [MFC], common controls as", "child windows [MFC], common controls as", "common controls [MFC], child windows", "Windows common controls [MFC], child windows"]
@@ -18,8 +19,7 @@ Any of the Windows common controls can be used as a child window of any other wi
 
 1. When you are finished with the control, use [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) to destroy the control.
 
-## See Also
+## See also
 
 [Making and Using Controls](../mfc/making-and-using-controls.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

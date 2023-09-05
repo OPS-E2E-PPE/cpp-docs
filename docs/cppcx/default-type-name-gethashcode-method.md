@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: default::(type_name)::GetHashCode Method"
 title: "default::(type_name)::GetHashCode Method"
 ms.date: "12/30/2016"
-f1_keywords: ["VCCORLIB/Platform::Object::GetHashCode"]
 ms.assetid: 58ea60f8-f820-4103-9b9b-b6635ada3fa5
 ---
 # default::(type_name)::GetHashCode Method
@@ -28,6 +28,6 @@ The hash code for this instance.
 
 **Header:** vccorlib.h
 
-## See Also
+## See also
 
 [default namespace](../cppcx/default-namespace.md)

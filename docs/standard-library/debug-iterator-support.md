@@ -1,8 +1,8 @@
 ---
+description: "Learn more about: Debug Iterator Support"
 title: "Debug Iterator Support"
 ms.date: "09/13/2018"
 helpviewer_keywords: ["Safe Libraries", "Safe Libraries, C++ Standard Library", "Safe C++ Standard Library", "C++ Standard Library, debug iterator support", "iterators, debug iterator support", "iterators, incompatible", "incompatible iterators", "debug iterator support"]
-ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
 ---
 # Debug Iterator Support
 
@@ -42,7 +42,7 @@ int main() {
 
 ## Using _ITERATOR_DEBUG_LEVEL
 
-You can use the preprocessor macro [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) to turn off the iterator debugging feature in a debug build. This program does not assert, but still triggers undefined behavior.
+You can use the preprocessor macro [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) to turn off the iterator debugging feature in a debug build. This program doesn't assert, but still triggers undefined behavior.
 
 ```cpp
 // iterator_debugging_1.cpp
@@ -73,9 +73,9 @@ int main() {
 -572662307
 ```
 
-## Unitialized iterators
+## Uninitialized iterators
 
-An assert also occurs if you attempt to use an iterator before it is initialized, as shown here:
+An assert also occurs if you attempt to use an iterator before it's initialized, as shown here:
 
 ```cpp
 // iterator_debugging_2.cpp
@@ -112,11 +112,11 @@ int main()
 }
 ```
 
-Notice that this example uses the lambda expression `[] (int& elem) { elem *= 2; }` instead of a functor. Although this choice has no bearing on the assert failure—a similar functor would cause the same failure—lambdas are a very useful way to accomplish compact function object tasks. For more information about lambda expressions, see [Lambda Expressions](../cpp/lambda-expressions-in-cpp.md).
+Notice that this example uses the lambda expression `[] (int& elem) { elem *= 2; }` instead of a functor. Although this choice has no bearing on the assert failure—a similar functor would cause the same failure—lambdas are a way to write a short block of code. For more information about lambda expressions, see [Lambda expressions](../cpp/lambda-expressions-in-cpp.md).
 
 ## Iterators going out of scope
 
-Debug iterator checks also cause an iterator variable that's declared in a **for** loop to be out of scope when the **for** loop scope ends.
+Debug iterator checks also cause an iterator variable that's declared in a **`for`** loop to be out of scope when the **`for`** loop scope ends.
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -134,7 +134,7 @@ int main() {
 
 ## Destructors for debug iterators
 
-Debug iterators have non-trivial destructors. If a destructor does not run but the object's memory is freed, access violations and data corruption might occur. Consider this example:
+Debug iterators have non-trivial destructors. If a destructor doesn't run but the object's memory is freed, access violations and data corruption might occur. Consider this example:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -152,12 +152,13 @@ struct derived : base {
 };
 
 int main() {
-  auto vect = std::vector<int>(10);
-  auto sink = new auto(std::begin(vect));
-  ::operator delete(sink); // frees the memory without calling ~iterator()
-} // access violation
+   std::vector<int> vect( 10 );
+   base * pb = new derived( vect.begin() );
+   delete pb;  // doesn't call ~derived()
+   // access violation
+}
 ```
 
 ## See also
 
-[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)<br/>
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)

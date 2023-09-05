@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_trivially_copy_assignable Class"
 title: "is_trivially_copy_assignable Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_trivially_copy_assignable"]
@@ -18,7 +19,7 @@ struct is_trivially_copy_assignable;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to query.
 
 ## Remarks
@@ -35,4 +36,4 @@ An assignment constructor for a class *T* is trivial if it is implicitly provide
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

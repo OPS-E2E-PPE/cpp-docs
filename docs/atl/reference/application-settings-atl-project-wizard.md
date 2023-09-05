@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Application Settings, ATL Project Wizard"
 title: "Application Settings, ATL Project Wizard"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.appwiz.atl.com.appset"]
@@ -48,9 +49,8 @@ Choose from one of three server types:
 
    If your ATL project contains support for COM+ 1.0 components, you can set this option. The component registrar allows your COM+ 1.0 object to obtain a list of components, register components, or unregister components (individually or all at once).
 
-## See Also
+## See also
 
 [ATL Project Wizard](../../atl/reference/atl-project-wizard.md)<br/>
 [Creating an ATL Project](../../atl/reference/creating-an-atl-project.md)<br/>
 [Default ATL Project Configurations](../../atl/reference/default-atl-project-configurations.md)
-

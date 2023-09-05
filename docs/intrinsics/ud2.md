@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: __ud2"
 title: "__ud2"
-ms.date: "11/04/2016"
+ms.date: "09/02/2019"
 f1_keywords: ["__ud2"]
 helpviewer_keywords: ["UD2 instruction", "__ud2 intrinsic"]
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
@@ -13,7 +14,7 @@ Generates an undefined instruction.
 
 ## Syntax
 
-```
+```C
 void __ud2();
 ```
 
@@ -21,7 +22,7 @@ void __ud2();
 
 The processor raises an invalid opcode exception if you execute an undefined instruction.
 
-The `__ud2` function is equivalent to the `UD2` machine instruction, and is available only in kernel mode. For more information, search for the document, "Intel Architecture Software Developer's Manual, Volume 2: Instruction Set Reference," at the [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
+The `__ud2` function is equivalent to the `UD2` machine instruction. For more information, search for the document, "Intel Architecture Software Developer's Manual, Volume 2: Instruction Set Reference," at the [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
 ## Requirements
 
@@ -37,7 +38,7 @@ The `__ud2` function is equivalent to the `UD2` machine instruction, and is avai
 
 The following example executes an undefined instruction, which raises an exception. The exception handler then changes the return code from zero to one.
 
-```
+```cpp
 // __ud2_intrinsic.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -73,6 +74,6 @@ Before __ud2(). Return code = 0.
 After __ud2().  Return code = 1.
 ```
 
-## See Also
+## See also
 
-[Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)
+[Compiler intrinsics](../intrinsics/compiler-intrinsics.md)

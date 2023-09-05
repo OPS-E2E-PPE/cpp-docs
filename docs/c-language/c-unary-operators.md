@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: C Unary Operators"
 title: "C Unary Operators"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["operators [C], unary", "unary operators"]
@@ -10,22 +11,17 @@ Unary operators appear before their operand and associate from right to left.
 
 ## Syntax
 
-*unary-expression*:
-*postfix-expression*
+*`unary-expression`*:\
+&emsp;*`postfix-expression`*\
+&emsp;**`++`** *`unary-expression`*\
+&emsp;**`--`** *`unary-expression`*\
+&emsp;*`unary-operator`* *`cast-expression`*\
+&emsp;**`sizeof`** *`unary-expression`*\
+&emsp;**`sizeof (`** *`type-name`* **`)`**
 
-**++**  *unary-expression*
+*`unary-operator`*: one of\
+&emsp;**`&`** **`*`** **`+`** **`-`** **`~`** **`!`**
 
-`--`  *unary-expression*
-
-*unary-operator cast-expression*
-
-**sizeof**  *unary-expression*
-
-**sizeof (**  *type-name*  **)**
-
-*unary-operator*: one of
-**& \* + -** `~` **!**
-
-## See Also
+## See also
 
 [C Operators](../c-language/c-operators.md)

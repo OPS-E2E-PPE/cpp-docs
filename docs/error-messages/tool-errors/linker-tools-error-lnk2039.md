@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Linker Tools Error LNK2039"
 title: "Linker Tools Error LNK2039"
 ms.date: "11/04/2016"
 f1_keywords: ["LNK2039"]
@@ -17,7 +18,7 @@ The ref class '<`type`>' is imported in the specified .obj file but is also defi
 
 1. Remove either the definition or the import.
 
-## See Also
+## See also
 
 [Linker Tools Errors and Warnings](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)<br/>
 [Linker Tools Error LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)

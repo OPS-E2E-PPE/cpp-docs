@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2675"
 title: "Compiler Error C2675"
 ms.date: "11/04/2016"
 f1_keywords: ["C2675"]
@@ -15,7 +16,7 @@ C2675 can also occur when using a unary operator, and the type does not define t
 
 The following sample generates C2675.
 
-```
+```cpp
 // C2675.cpp
 struct C {
    C(){}

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Use Events in C++/CLI"
 title: "How to: Use Events in C++/CLI"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["events [C++], accessing in interfaces"]
@@ -12,7 +13,7 @@ This article shows how to use an interface that declares an event and a function
 
 The following code example adds an event handler, invokes the event—which causes the event handler to write its name to the console—and then removes the event handler.
 
-```
+```cpp
 // mcppv2_events2.cpp
 // compile with: /clr
 using namespace System;
@@ -68,7 +69,7 @@ EventReceiver::Handler
 
 The following sample shows how to define an event's behavior when handlers are added or removed, and when an event is raised.
 
-```
+```cpp
 // mcppv2_events6.cpp
 // compile with: /clr
 using namespace System;
@@ -160,7 +161,7 @@ In event handler H2 with args 1 and 2.2
 
 This sample shows how to override the default access on the add, remove, and raise events methods:
 
-```
+```cpp
 // mcppv2_events3.cpp
 // compile with: /clr
 public delegate void f(int);
@@ -218,7 +219,7 @@ int main() {
 
 An event receiver, or any other client code, can add one or more handlers to an event.
 
-```
+```cpp
 // mcppv2_events4.cpp
 // compile with: /clr
 using namespace System;
@@ -297,7 +298,7 @@ DblClickAgain(s=System.Char[])
 
 The following sample shows how to define and use static events.
 
-```
+```cpp
 // mcppv2_events7.cpp
 // compile with: /clr
 using namespace System;
@@ -387,7 +388,7 @@ In event handler H2 with args 22 and 22.22
 
 This sample implements virtual, managed events in an interface and class:
 
-```
+```cpp
 // mcppv2_events5.cpp
 // compile with: /clr
 using namespace System;
@@ -469,9 +470,9 @@ In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-A simple event cannot be specified to override or hide a base class event.  You must define all of the event's accessor functions, and then specify the `new` or `override` keyword on each accessor function.
+A simple event cannot be specified to override or hide a base class event.  You must define all of the event's accessor functions, and then specify the **`new`** or `override` keyword on each accessor function.
 
-```
+```cpp
 // mcppv2_events5_a.cpp
 // compile with: /clr /c
 delegate void Del();
@@ -505,7 +506,7 @@ ref struct C : B {
 
 The following sample shows how to implement an abstract event.
 
-```
+```cpp
 // mcppv2_events10.cpp
 // compile with: /clr /W1
 using namespace System;
@@ -590,7 +591,7 @@ hello from Event2
 
 An event and event handler can be defined in one assembly, and consumed by another assembly.
 
-```
+```cpp
 // mcppv2_events8.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -608,7 +609,7 @@ public:
 
 This client code consumes the event:
 
-```
+```cpp
 // mcppv2_events9.cpp
 // compile with: /clr
 #using "mcppv2_events8.dll"
@@ -640,6 +641,6 @@ hello
 hello
 ```
 
-## See Also
+## See also
 
-[event](../windows/event-cpp-component-extensions.md)
+[event](../extensions/event-cpp-component-extensions.md)

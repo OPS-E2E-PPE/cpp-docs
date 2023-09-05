@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4964"
 title: "Compiler Warning (level 1) C4964"
 ms.date: "11/04/2016"
 f1_keywords: ["C4964"]
@@ -15,7 +16,7 @@ If you want .pgc files to be generated when you run your application, specify on
 
 The following sample generates C4964:
 
-```
+```cpp
 // C4964.cpp
 // compile with: /W1 /GL /link /ltcg:pgi
 // C4964 expected

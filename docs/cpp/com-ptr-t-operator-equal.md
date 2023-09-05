@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: _com_ptr_t::operator ="
 title: "_com_ptr_t::operator ="
 ms.date: "11/04/2016"
 f1_keywords: ["_com_ptr_t.operator=", "_com_ptr_t::operator="]
-helpviewer_keywords: ["operator = [C++], pointers", "= operator [C++], with specific Visual C++ objects", "operator= [C++], pointers"]
+helpviewer_keywords: ["_com_ptr_t [C++]"]
 ms.assetid: 46849455-371c-4d0f-bae4-c1f737d2ca4a
 ---
 # _com_ptr_t::operator =
@@ -30,7 +31,7 @@ _com_ptr_t& operator=(_InterfaceType* p );
 // AddRef is called to increment the reference count for the encapsulated
 // interface pointer, and Release is called to decrement the reference
 // count for the previously encapsulated pointer.
-template<> _com_ptr_t& 
+template<> _com_ptr_t&
 operator=( Interface* pInterface ) throw();
 
 // Sets a smart pointer to be a copy of another instance of the same

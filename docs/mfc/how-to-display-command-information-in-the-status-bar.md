@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Display Command Information in the Status Bar"
 title: "How to: Display Command Information in the Status Bar"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["prompts [MFC]", "displaying command status [MFC]", "status bars [MFC], message area", "status bars [MFC], displaying command information"]
@@ -12,7 +13,6 @@ You can add to this status-bar help by defining prompt strings for menu items th
 
 By default, the Application Wizard adds **AFX_IDS_IDLEMESSAGE**, the ID for a standard "Ready" message, which is displayed when the program is waiting for new messages. If you specify the Context-Sensitive Help option in the Application Wizard, the message is changed to "For Help, press F1."
 
-## See Also
+## See also
 
-[Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
-
+[Message Handling and Mapping](message-handling-and-mapping.md)

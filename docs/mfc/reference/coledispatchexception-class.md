@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleDispatchException Class"
 title: "COleDispatchException Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COleDispatchException", "AFXDISP/COleDispatchException", "AFXDISP/COleDispatchException::m_dwHelpContext", "AFXDISP/COleDispatchException::m_strDescription", "AFXDISP/COleDispatchException::m_strHelpFile", "AFXDISP/COleDispatchException::m_strSource", "AFXDISP/COleDispatchException::m_wCode"]
@@ -47,7 +48,7 @@ For more information on exceptions, see the articles [Exception Handling (MFC)](
 
 **Header:** afxdisp.h
 
-##  <a name="m_dwhelpcontext"></a>  COleDispatchException::m_dwHelpContext
+## <a name="m_dwhelpcontext"></a> COleDispatchException::m_dwHelpContext
 
 Identifies a help context in your application's help (.HLP) file.
 
@@ -63,7 +64,7 @@ This member is set by the function [AfxThrowOleDispatchException](exception-proc
 
   See the example for [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
 
-##  <a name="m_strdescription"></a>  COleDispatchException::m_strDescription
+## <a name="m_strdescription"></a> COleDispatchException::m_strDescription
 
 Contains a verbal error description, such as "Disk full."
 
@@ -79,7 +80,7 @@ This member is set by the function [AfxThrowOleDispatchException](exception-proc
 
   See the example for [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
 
-##  <a name="m_strhelpfile"></a>  COleDispatchException::m_strHelpFile
+## <a name="m_strhelpfile"></a> COleDispatchException::m_strHelpFile
 
 The framework fills in this string with the name of the application's help file.
 
@@ -87,7 +88,7 @@ The framework fills in this string with the name of the application's help file.
 CString m_strHelpFile;
 ```
 
-##  <a name="m_strsource"></a>  COleDispatchException::m_strSource
+## <a name="m_strsource"></a> COleDispatchException::m_strSource
 
 The framework fills in this string with the name of the application that generated the exception.
 
@@ -99,7 +100,7 @@ CString m_strSource;
 
   See the example for [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
 
-##  <a name="m_wcode"></a>  COleDispatchException::m_wCode
+## <a name="m_wcode"></a> COleDispatchException::m_wCode
 
 Contains an error code specific to your application.
 
@@ -111,9 +112,9 @@ WORD m_wCode;
 
 This member is set by the function [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) when an exception is thrown.
 
-## See Also
+## See also
 
-[MFC Sample CALCDRIV](../../visual-cpp-samples.md)<br/>
+[MFC Sample CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [CException Class](../../mfc/reference/cexception-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [COleDispatchDriver Class](../../mfc/reference/coledispatchdriver-class.md)<br/>

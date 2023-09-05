@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using C++ Interop (Implicit PInvoke)"
 title: "Using C++ Interop (Implicit PInvoke)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["blittable types [C++]", "platform invoke [C++], implicit", "interop [C++], features", "data marshaling [C++], C++ Interop features", "porting [C++], C++ native to .NET", "COM interfaces [C++]", "implicit platform invoke", "examples [C++], interoperability", "types [C++], blittable", "marshaling [C++], C++ Interop features", "platform invoke [C++], examples", "interoperability [C++]", "C++ Interop", "interoperability [C++], Implicit PInvoke", "C++, interop", "C++ COM Interop", ".NET [C++], porting C++ native to"]
@@ -20,7 +21,7 @@ Explicit PInvoke is supported by the .NET Framework and is available in most .NE
 
 ## C++ Interop
 
-C++ Interop is recommended over explicit PInvoke because it provides better type safety, is typically less tedious to implement, is more forgiving if the unmanaged API is modified, and makes performance enhancements possible that are not possible with explicit PInvoke. However, C++ Interop is not possible if the unmanaged source code is not available.
+C++ Interop provides better type safety, and it is typically less tedious to implement. However, C++ Interop is not an option if the unmanaged source code is not available, or for cross-platform projects.
 
 ## C++ COM Interop
 
@@ -120,7 +121,7 @@ Done
 
 - [How to: Wrap Native Class for Use by C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-For information on using delegates in an interop scenario, see [delegate  (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md).
+For information on using delegates in an interop scenario, see [delegate  (C++ Component Extensions)](../extensions/delegate-cpp-component-extensions.md).
 
 ## See also
 

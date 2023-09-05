@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Container Class::reference"
 title: "Container Class::reference"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["reference method"]
@@ -7,14 +8,13 @@ ms.assetid: ab85a9fb-c628-4761-9a5f-a0231fad7690
 # Container Class::reference
 
 > [!NOTE]
-> This topic is in the Visual C++ documentation as a nonfunctional example of containers used in the C++ Standard Library. For more information, see [C++ Standard Library Containers](../standard-library/stl-containers.md).
+> This topic is in the Microsoft C++ documentation as a nonfunctional example of containers used in the C++ Standard Library. For more information, see [C++ Standard Library Containers](../standard-library/stl-containers.md).
 
 Describes an object that can serve as a reference to an element of the controlled sequence.
 
 ## Syntax
 
-```
-
+```cpp
 typedef T2 reference;
 ```
 
@@ -24,4 +24,4 @@ It is described here as a synonym for the unspecified type `T2` (typically `Allo
 
 ## See also
 
-[Sample Container Class](../standard-library/sample-container-class.md)<br/>
+[Sample Container Class](../standard-library/sample-container-class.md)

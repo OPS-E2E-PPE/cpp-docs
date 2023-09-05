@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCStandardColorsPropertyPage Class"
 title: "CMFCStandardColorsPropertyPage Class"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["CMFCStandardColorsPropertyPage class [MFC]"]
@@ -18,16 +19,14 @@ class CMFCStandardColorsPropertyPage : public CPropertyPage
 
 ### Public Constructors
 
-|||
-|-|-|
 |Name|Description|
+|-|-|
 |`CMFCStandardColorsPropertyPage::CMFCStandardColorsPropertyPage`|Default constructor.|
 
 ### Public Methods
 
-|||
-|-|-|
 |Name|Description|
+|-|-|
 |`CMFCStandardColorsPropertyPage::CreateObject`|Used by the framework to create a dynamic instance of this class type.|
 |`CMFCStandardColorsPropertyPage::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|
 
@@ -53,7 +52,7 @@ The `CMFCColorDialog` class uses this class to display the standard color proper
 
 **Header:** afxstandardcolorspropertypage.h
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

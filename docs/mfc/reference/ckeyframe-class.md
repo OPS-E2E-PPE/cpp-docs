@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CKeyFrame Class"
 title: "CKeyFrame Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CKeyFrame", "AFXANIMATIONCONTROLLER/CKeyFrame", "AFXANIMATIONCONTROLLER/CKeyFrame::CKeyFrame", "AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboard", "AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboardAfterTransition", "AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboardAtOffset", "AFXANIMATIONCONTROLLER/CKeyFrame::GetExistingKeyframe", "AFXANIMATIONCONTROLLER/CKeyFrame::GetOffset", "AFXANIMATIONCONTROLLER/CKeyFrame::GetTransition", "AFXANIMATIONCONTROLLER/CKeyFrame::m_offset", "AFXANIMATIONCONTROLLER/CKeyFrame::m_pExistingKeyFrame", "AFXANIMATIONCONTROLLER/CKeyFrame::m_pTransition"]
@@ -58,7 +59,7 @@ This class implements an animation keyframe. A keyframe represents a moment in t
 
 **Header:** afxanimationcontroller.h
 
-##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard
+## <a name="addtostoryboard"></a> CKeyFrame::AddToStoryboard
 
 Adds a keyframe to a storyboard.
 
@@ -84,7 +85,7 @@ TRUE, if keyframe was added successfully.
 
 This method adds a keyframe to storyboard. If it depends on other keyframe or transition and bDeepAdd is TRUE, this method tries to add them recursively.
 
-##  <a name="addtostoryboardaftertransition"></a>  CKeyFrame::AddToStoryboardAfterTransition
+## <a name="addtostoryboardaftertransition"></a> CKeyFrame::AddToStoryboardAfterTransition
 
 Adds a keyframe to storyboard after transition.
 
@@ -110,7 +111,7 @@ TRUE, if keyframe was added successfully.
 
 This function is called by the framework to add a keyframe to storyboard after transition.
 
-##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset
+## <a name="addtostoryboardatoffset"></a> CKeyFrame::AddToStoryboardAtOffset
 
 Adds a keyframe to storyboard at offset.
 
@@ -136,7 +137,7 @@ TRUE, if keyframe was added successfully.
 
 This function is called by the framework to add a keyframe to storyboard at offset.
 
-##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame
+## <a name="ckeyframe"></a> CKeyFrame::CKeyFrame
 
 Constructs a keyframe that depends on a transition.
 
@@ -163,7 +164,7 @@ Offset, in seconds, from keyframe specified by pKeyframe.
 
 The constructed keyframe will represent a moment in time within a storyboard when the specified transition ends.
 
-##  <a name="getexistingkeyframe"></a>  CKeyFrame::GetExistingKeyframe
+## <a name="getexistingkeyframe"></a> CKeyFrame::GetExistingKeyframe
 
 Returns a pointer to a keyframe this keyframe depends on.
 
@@ -179,7 +180,7 @@ A valid pointer to keyframe, or NULL if this keyframe does not depend on other k
 
 This is an accessor to a keyframe this keyframe depends on.
 
-##  <a name="getoffset"></a>  CKeyFrame::GetOffset
+## <a name="getoffset"></a> CKeyFrame::GetOffset
 
 Returns an offset from other keyframe.
 
@@ -195,7 +196,7 @@ An offset in seconds from other keyframe.
 
 This method should be called to determine an offset in seconds from other keyframe.
 
-##  <a name="gettransition"></a>  CKeyFrame::GetTransition
+## <a name="gettransition"></a> CKeyFrame::GetTransition
 
 Returns a pointer to a transition this keyframe depends on.
 
@@ -211,7 +212,7 @@ A valid pointer to transition, or NULL if this keyframe does not depend on trans
 
 This is an accessor to a transition this keyframe depends on.
 
-##  <a name="m_offset"></a>  CKeyFrame::m_offset
+## <a name="m_offset"></a> CKeyFrame::m_offset
 
 Specifies offset of this keyframe from a keyframe stored in m_pExistingKeyFrame.
 
@@ -219,7 +220,7 @@ Specifies offset of this keyframe from a keyframe stored in m_pExistingKeyFrame.
 UI_ANIMATION_SECONDS m_offset;
 ```
 
-##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame
+## <a name="m_pexistingkeyframe"></a> CKeyFrame::m_pExistingKeyFrame
 
 Stores a pointer to an existing keframe. This keyframe is added to storyboard with m_offset to the existing keyframe.
 
@@ -227,7 +228,7 @@ Stores a pointer to an existing keframe. This keyframe is added to storyboard wi
 CBaseKeyFrame* m_pExistingKeyFrame;
 ```
 
-##  <a name="m_ptransition"></a>  CKeyFrame::m_pTransition
+## <a name="m_ptransition"></a> CKeyFrame::m_pTransition
 
 Stores a pointer to transtion that begins at this keyframe.
 
@@ -235,6 +236,6 @@ Stores a pointer to transtion that begins at this keyframe.
 CBaseTransition* m_pTransition;
 ```
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

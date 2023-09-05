@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: iid_is"
 title: "iid_is (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.iid_is"]
@@ -22,7 +23,7 @@ A C language expression that specifies an IID of a COM interface pointed to by a
 
 ## Remarks
 
-The **iid_is** C++ attribute has the same functionality as the [iid_is](/windows/desktop/Midl/iid-is) MIDL attribute.
+The **iid_is** C++ attribute has the same functionality as the [iid_is](/windows/win32/Midl/iid-is) MIDL attribute.
 
 ## Example
 
@@ -45,9 +46,7 @@ __interface IFireTabCtrl : IDispatch
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface parameter, data member|
 |**Repeatable**|No|
@@ -56,7 +55,7 @@ __interface IFireTabCtrl : IDispatch
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Parameter Attributes](parameter-attributes.md)

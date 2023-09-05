@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CSplitterWndEx Class"
 title: "CSplitterWndEx Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CSplitterWndEx", "AFXSPLITTERWNDEX/CSplitterWndEx", "AFXSPLITTERWNDEX/CSplitterWndEx::OnDrawSplitter"]
@@ -50,7 +51,7 @@ The `CSplitterWndEx` class is used together with the [OnDrawSplitterBorder](cmfc
 
 **Header:** afxsplitterwndex.h
 
-##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter
+## <a name="ondrawsplitter"></a> CSplitterWndEx::OnDrawSplitter
 
 Called by the framework to draw a splitter window.
 
@@ -75,7 +76,7 @@ virtual void OnDrawSplitter(
 
 ### Remarks
 
-## See Also
+## See also
 
 [Hierarchy Chart](../hierarchy-chart.md)<br/>
 [Classes](mfc-classes.md)<br/>

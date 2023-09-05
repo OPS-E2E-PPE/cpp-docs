@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: CDaoFieldInfo Structure"
 title: "CDaoFieldInfo Structure"
-ms.date: "11/04/2016"
+ms.date: "09/17/2019"
 f1_keywords: ["CDaoFieldInfo"]
 helpviewer_keywords: ["DAO (Data Access Objects), Fields collection", "CDaoFieldInfo structure [MFC]"]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
@@ -8,6 +9,8 @@ ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
 # CDaoFieldInfo Structure
 
 The `CDaoFieldInfo` structure contains information about a field object defined for data access objects (DAO).
+
+DAO is supported through Office 2013. DAO 3.6 is the final version, and it is considered obsolete.
 
 ## Syntax
 
@@ -64,7 +67,7 @@ A value that indicates the data type of the field. For details, see the topic "T
 - `dbGUID` A Globally Unique Identifier/Universally Unique Identifier used with remote procedure calls. For more information, see the topic "Type Property" in DAO Help.
 
 > [!NOTE]
->  Do not use string data types for binary data. This causes your data to pass through the Unicode/ANSI translation layer, resulting in increased overhead and possibly unexpected translation.
+> Do not use string data types for binary data. This causes your data to pass through the Unicode/ANSI translation layer, resulting in increased overhead and possibly unexpected translation.
 
 *m_lSize*<br/>
 A value that indicates the maximum size, in bytes, of a DAO field object that contains text or the fixed size of a field object that contains text or numeric values. For details, see the topic "Size Property" in DAO Help. Sizes can be one of the following values:
@@ -85,7 +88,7 @@ A value that indicates the maximum size, in bytes, of a DAO field object that co
 |`dbGUID`|16|A Globally Unique Identifier/Universally Unique Identifier used with remote procedure calls.|
 
 *m_lAttributes*<br/>
-Specifies characteristics of a field object contained by a tabledef, recordset, querydef, or index object. The value returned can be a sum of these constants, created with the C++ bitwise-OR (**&#124;**) operator:
+Specifies characteristics of a field object contained by a tabledef, recordset, querydef, or index object. The value returned can be a sum of these constants, created with the C++ bitwise-OR (**`|`**) operator:
 
 - `dbFixedField` The field size is fixed (default for Numeric fields).
 
@@ -97,7 +100,7 @@ Specifies characteristics of a field object contained by a tabledef, recordset, 
 
 - `dbDescending` The field is sorted in descending (Z - A or 100 - 0) order (applies only to a field object in a Fields collection of an index object; in MFC, index objects are themselves contained in tabledef objects). If you omit this constant, the field is sorted in ascending (A - Z or 0 - 100) order (default).
 
-When checking the setting of this property, you can use the C++ bitwise-AND operator (**&**) to test for a specific attribute. When setting multiple attributes, you can combine them by combining the appropriate constants with the bitwise-OR (**&#124;**) operator. For details, see the topic "Attributes Property" in DAO Help.
+When checking the setting of this property, you can use the C++ bitwise-AND operator (**`&`**) to test for a specific attribute. When setting multiple attributes, you can combine them by combining the appropriate constants with the bitwise-OR (**`|`**) operator. For details, see the topic "Attributes Property" in DAO Help.
 
 *m_nOrdinalPosition*<br/>
 A value that specifies the numeric order in which you want a field represented by a DAO field object to be displayed relative to other fields. You can set this property with [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield). For details, see the topic "OrdinalPosition Property" in DAO Help.
@@ -145,10 +148,9 @@ Information retrieved by the `GetFieldInfo` member function (of the class that c
 
 **Header:** afxdao.h
 
-## See Also
+## See also
 
 [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
 [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
 [CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
-

@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Walkthrough: Working with Projects and Solutions (C++)"
 title: "Walkthrough: Working with Projects and Solutions (C++)"
-ms.date: "09/14/2018"
+ms.date: 02/23/2023
 helpviewer_keywords: ["solutions [C++]", "projects [C++], about projects", "projects [C++]", "solutions [C++], about solutions"]
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
 ---
@@ -12,24 +13,43 @@ In Visual Studio, work is organized in projects and solutions. A solution can ha
 
 ## Before you start
 
-To complete this walkthrough, you need Visual Studio 2017 version 15.3 or later. If you need a copy, here's a short guide: [Install C++ support in Visual Studio](../build/vscpp-step-0-installation.md). If you haven't done it yet, follow the next steps after installation through the "Hello, World" tutorial to make sure Visual C++ is installed correctly and it all works.
+To complete this walkthrough, you need Visual Studio 2017 or later. If you need a copy, here's a short guide: [Install C++ support in Visual Studio](../build/vscpp-step-0-installation.md). If you haven't done it yet, follow the next steps after installation through the "Hello, World" tutorial to make sure the C++ components are installed correctly and it all works.
 
 It helps if you understand the fundamentals of the C++ language, and know what a compiler, linker, and debugger are used for. The tutorial also assumes that you're familiar with Windows and how to use menus, dialogs,
 
 ## Create a project
 
-To create a project, first choose a project-type template. For each project type, Visual Studio sets compiler settings and—depending on the type—generates starter code that you can modify later.
+To create a project, first choose a project-type template. For each project type, Visual Studio sets compiler settings and—depending on the type—generates starter code that you can modify later. The following steps vary depending on which version of Visual Studio you're using. To see the documentation for your preferred version of Visual Studio, use the **Version** selector control. It's found at the top of the table of contents on this page.
 
-### To create a project
+::: moniker range=">=msvc-160"
+
+### To create a project in Visual Studio
+
+1. From the main menu, choose **File** > **New** > **Project** to open the **Create a New Project** dialog box.
+
+1. At the top of the dialog, set  **Language** to **C++**, set **Platform** to **Windows**, and set **Project type** to **Console**.
+
+1. From the filtered list of project types, choose **Console App** then choose **Next**. In the next page, enter *Game* as the name for the project.
+
+   You can accept the default location in the **Location** drop-down list, enter a different location, or choose the **Browse** button to browse to a directory where you want to save the project.
+
+   When you create a project, Visual Studio puts the project in a solution. By default, the solution has the same name as the project. You can change the name in the **Solution name** box, but for this example, keep the default name.
+
+1. Choose the **Create** button to create the project.
+
+   Visual Studio creates your new solution and project files, and opens the editor for the Game.cpp source code file it generated.
+
+::: moniker-end
+
+::: moniker range="msvc-150"
+
+### To create a project in Visual Studio 2017
 
 1. On the menu bar, choose **File** > **New** > **Project**.
 
 1. In the left pane of the **New Project** dialog box, expand **Installed** and select **Visual C++**, if it isn't open already.
 
-1. In the list of installed templates in the center pane, select **Windows Console Application**.
-
-   > [!NOTE]
-   > In previous versions of Visual Studio the installed template is called **Win32 Console Application**.
+1. In the list of installed templates in the center pane, select **Console App**.
 
 1. Enter a name for the project in the **Name** box. For this example, enter *Game*.
 
@@ -40,6 +60,34 @@ To create a project, first choose a project-type template. For each project type
 1. Choose the **OK** button to create the project.
 
    Visual Studio creates your new solution and project files, and opens the editor for the Game.cpp source code file it generated.
+
+::: moniker-end
+
+::: moniker range="msvc-140"
+
+### To create a project in Visual Studio 2015
+
+1. On the menu bar, choose **File** > **New** > **Project**.
+
+1. In the left pane of the **New Project** dialog box, expand **Installed** and select **Visual C++**, if it isn't open already.
+
+1. In the list of installed templates in the center pane, select **Win32 Console Application**.
+
+1. Enter a name for the project in the **Name** box. For this example, enter *Game*.
+
+   You can accept the default location in the **Location** drop-down list, enter a different location, or choose the **Browse** button to browse to a directory where you want to save the project.
+
+   When you create a project, Visual Studio puts the project in a solution. By default, the solution has the same name as the project. You can change the name in the **Solution name** box, but for this example, keep the default name.
+
+1. Choose the **OK** button to dismiss the **New Project** dialog and start the **Win32 Application Wizard**.
+
+1. In the wizard, choose the **Next** button. On the **Application Settings** page, under **Additional options**, clear the **Precompiled header** check box.
+
+1. Choose the **Finish** button to create the project.
+
+   Visual Studio creates your new solution and project files, and opens the editor for the Game.cpp source code file it generated.
+
+::: moniker-end
 
 ## Organize projects and files
 
@@ -55,7 +103,7 @@ This part of the walkthrough shows how to add a class to the project. When you a
 
 1. In the **Add Class** dialog, enter *Cardgame* in the **Class Name** box. Don't modify the default file names and settings. Choose the **OK** button.
 
-   Visual Studio creates new files and adds them to your project. You can see them in the **Solution Explorer** window. The Cardgame.h and Cardgame.cpp files are opened in the editor.
+   Visual Studio creates new files and adds them to your project. You can see them in the **Solution Explorer** window. Visual Studio opens the Cardgame.h and Cardgame.cpp files in the editor.
 
 1. Edit the Cardgame.h file, and make these changes:
 
@@ -71,17 +119,17 @@ This part of the walkthrough shows how to add a class to the project. When you a
 
       `Cardgame();`
 
-      Modify the constructor to take one parameter of type `int`, named *players*.
+      Modify the constructor to take one parameter of type **`int`**, named *players*.
 
       <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
       `Cardgame(int players);`
 
-   - After the default destructor, add an inline declaration for a `static int` member function named *GetParticipants* that takes no parameters and returns the `totalParticipants` value.
+   - After the default destructor, add an inline declaration for a `static int` member function named `GetParticipants` that takes no parameters and returns the `totalParticipants` value.
 
       <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
       `static int GetParticipants() { return totalParticipants; }`
 
-   The Cardgame.h file should resemble the code below after you change it:
+   The Cardgame.h file should resemble this code after you change it:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
 
@@ -98,7 +146,7 @@ This part of the walkthrough shows how to add a class to the project. When you a
     };
     ```
 
-   The line `#pragma once` tells the compiler to include the header file only one time. For more information, see [once](../preprocessor/once.md). For information about other C++ keywords in the header file above, see [class](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [static](../cpp/storage-classes-cpp.md), and [public](../cpp/public-cpp.md).
+   The line `#pragma once` tells the compiler to include the header file only one time. For more information, see [`once`](../preprocessor/once.md). For information about other C++ keywords in the header file, see [`class`](../cpp/class-cpp.md), [`int`](../cpp/fundamental-types-cpp.md), [`static`](../cpp/storage-classes-cpp.md), and [`public`](../cpp/public-cpp.md).
 
 1. Choose the **Cardgame.cpp** tab at the top of the editing pane to open it for editing.
 
@@ -107,7 +155,6 @@ This part of the walkthrough shows how to add a class to the project. When you a
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
 
     ```cpp
-    #include "pch.h"
     #include "Cardgame.h"
     #include <iostream>
 
@@ -120,7 +167,7 @@ This part of the walkthrough shows how to add a class to the project. When you a
     {
         totalParticipants += players;
         cout << players << " players have started a new game.  There are now "
-             << totalParticipants << " players in total." << endl;
+             << totalParticipants << " players in total.\n";
     }
 
     Cardgame::~Cardgame()
@@ -145,7 +192,6 @@ Add some code to your app that tests the new functions.
     // Game.cpp : Defines the entry point for the console application.
     //
 
-    #include "pch.h"
     #include "Cardgame.h"
     #include <iostream>
 
@@ -205,12 +251,12 @@ Next, build the project and run the app.
 
 Congratulations, you've successfully built an app project and solution. Continue the walkthrough to learn more about how to build C++ code projects in Visual Studio.
 
-## Next Steps
+## Next steps
 
 **Previous:** [Using the Visual Studio IDE for C++ Desktop Development](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-**Next:** [Walkthrough: Building a Project (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Next:** [Walkthrough: Building a Project (C++)](../ide/walkthrough-building-a-project-cpp.md)
 
 ## See also
 
 [C++ Language Reference](../cpp/cpp-language-reference.md)<br/>
-[Building C/C++ Programs](../build/building-c-cpp-programs.md)<br/>
+[Projects and build systems](../build/projects-and-build-systems-cpp.md)<br/>

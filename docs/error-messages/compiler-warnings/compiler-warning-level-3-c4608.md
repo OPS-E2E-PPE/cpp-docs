@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4608"
 title: "Compiler Warning (level 3) C4608"
 ms.date: "11/04/2016"
 f1_keywords: ["C4608"]
@@ -13,7 +14,7 @@ Two members of the same union were initialized in an initialization list. You ca
 
 The following sample generates C4608:
 
-```
+```cpp
 // C4608.cpp
 // compile with: /W3 /c
 class X {

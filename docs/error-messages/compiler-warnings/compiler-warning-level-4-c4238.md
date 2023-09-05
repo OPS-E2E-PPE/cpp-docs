@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4238"
 title: "Compiler Warning (level 4) C4238"
 ms.date: "11/04/2016"
 f1_keywords: ["C4238"]
@@ -13,7 +14,7 @@ For compatibility with previous versions of Visual C++, Microsoft extensions (**
 
 ## Example
 
-```
+```cpp
 // C4238.cpp
 // compile with: /W4 /c
 struct C {

@@ -1,12 +1,13 @@
 ---
+description: "Learn more about: Command Routing"
 title: "Command Routing"
-ms.date: "11/04/2016"
+ms.date: "09/06/2019"
 helpviewer_keywords: ["MFC, command routing", "command handling [MFC], routing commands", "handlers [MFC]", "handlers, command [MFC]", "command routing"]
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
 ---
 # Command Routing
 
-Your responsibility in working with commands is limited to making message-map connections between commands and their handler functions, a task for which you use the Properties window. You must also write most command handlers.
+Your responsibility in working with commands is limited to making message-map connections between commands and their handler functions, a task for which you use the [MFC Class Wizard](reference/mfc-class-wizard.md). You must also write the code for the command handlers.
 
 Windows messages are usually sent to the main frame window, but command messages are then routed to other objects. The framework routes commands through a standard sequence of command-target objects, one of which is expected to have a handler for the command. Each command-target object checks its message map to see if it can handle the incoming message.
 
@@ -32,7 +33,6 @@ How expensive is this routing mechanism Compared to what your handler does in re
 
 Where numbered entries in the second column of the preceding table mention other objects, such as a document, see the corresponding item in the first column. For instance, when you read in the second column that the view forwards a command to its document, see the "Document" entry in the first column to follow the routing further.
 
-## See Also
+## See also
 
-[How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
-
+[How the Framework Calls a Handler](how-the-framework-calls-a-handler.md)

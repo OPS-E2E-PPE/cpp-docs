@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2386"
 title: "Compiler Error C2386"
 ms.date: "11/04/2016"
 f1_keywords: ["C2386"]
@@ -13,7 +14,7 @@ You tried to create a namespace alias, but the name you chose already exists.
 
 The following sample generates C2386:
 
-```
+```cpp
 // C2386.cpp
 namespace A {
    int k;

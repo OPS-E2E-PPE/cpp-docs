@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CArchiveException Class"
 title: "CArchiveException Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CArchiveException", "AFX/CArchiveException", "AFX/CArchiveException::CArchiveException", "AFX/CArchiveException::m_cause", "AFX/CArchiveException::m_strFileName"]
@@ -48,7 +49,7 @@ The `CArchiveException` class includes a public data member that indicates the c
 
 **Header:** afx.h
 
-##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException
+## <a name="carchiveexception"></a> CArchiveException::CArchiveException
 
 Constructs a `CArchiveException` object, storing the value of *cause* in the object.
 
@@ -72,7 +73,7 @@ You can create a `CArchiveException` object on the heap and throw it yourself or
 
 Do not use this constructor directly; instead, call the global function `AfxThrowArchiveException`.
 
-##  <a name="m_cause"></a>  CArchiveException::m_cause
+## <a name="m_cause"></a> CArchiveException::m_cause
 
 Specifies the cause of the exception.
 
@@ -82,7 +83,7 @@ int m_cause;
 
 ### Remarks
 
-This data member is a public variable of type **int**. Its values are defined by a `CArchiveException` enumerated type. The enumerators and their meanings are as follows:
+This data member is a public variable of type **`int`**. Its values are defined by a `CArchiveException` enumerated type. The enumerators and their meanings are as follows:
 
 - `CArchiveException::none` No error occurred.
 
@@ -106,7 +107,7 @@ This data member is a public variable of type **int**. Its values are defined by
     > [!NOTE]
     > `CArchiveException::generic` is deprecated. Use `genericException` instead. If **generic** is used in an application and built with /clr, there will be syntax errors that are not easy to decipher.
 
-##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName
+## <a name="m_strfilename"></a> CArchiveException::m_strFileName
 
 Specifies the name of the file for this exception condition.
 
@@ -114,11 +115,10 @@ Specifies the name of the file for this exception condition.
 CString m_strFileName;
 ```
 
-## See Also
+## See also
 
 [CException Class](../../mfc/reference/cexception-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CArchive Class](../../mfc/reference/carchive-class.md)<br/>
 [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)<br/>
 [Exception Processing](../../mfc/reference/exception-processing.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Settings for the Tool Tip Control"
 title: "Settings for the Tool Tip Control"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["tool tips [MFC], activating", "CToolTipCtrl class [MFC], settings"]
@@ -12,8 +13,7 @@ You can set an active tool tip to display the tool tip when the cursor is on a t
 
 Most applications contain toolbars with tools that correspond to menu commands. For such tools, it is convenient for the tool tip control to display the same text as the corresponding menu item. The system automatically strips the ampersand (&) accelerator characters from all strings passed to a tool tip control, unless the control has the TTS_NOPREFIX style.
 
-## See Also
+## See also
 
 [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

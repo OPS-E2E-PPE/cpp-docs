@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2749"
 title: "Compiler Error C2749"
 ms.date: "11/04/2016"
 f1_keywords: ["C2749"]
@@ -17,7 +18,7 @@ For more information, see [/clr (Common Language Runtime Compilation)](../../bui
 
 The following sample generates C2749:
 
-```
+```cpp
 // C2749.cpp
 // compile with: /clr:safe
 ref struct MyStruct {

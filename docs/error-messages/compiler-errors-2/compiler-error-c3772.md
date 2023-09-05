@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3772"
 title: "Compiler Error C3772"
 ms.date: "11/04/2016"
 f1_keywords: ["C3772"]
@@ -49,7 +50,7 @@ class X {
 };
 ```
 
-## See Also
+## See also
 
 [Templates](../../cpp/templates-cpp.md)<br/>
 [Template Specialization](../../cpp/template-specialization-cpp.md)

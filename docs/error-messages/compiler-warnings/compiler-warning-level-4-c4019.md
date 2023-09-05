@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4019"
 title: "Compiler Warning (level 4) C4019"
 ms.date: "11/04/2016"
 f1_keywords: ["C4019"]
@@ -15,7 +16,7 @@ This warning may be fixed if you remove the extra semicolon.
 
 ## Example
 
-```
+```c
 // C4019.c
 // compile with: /Za /W4
 #define declint( varname ) int varname;

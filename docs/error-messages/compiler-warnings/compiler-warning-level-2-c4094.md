@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 2) C4094"
 title: "Compiler Warning (level 2) C4094"
 ms.date: "11/04/2016"
 f1_keywords: ["C4094"]
@@ -13,7 +14,7 @@ The compiler detected an empty declaration using an untagged structure, union, o
 
 ## Example
 
-```
+```cpp
 // C4094.cpp
 // compile with: /W2
 struct

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3868"
 title: "Compiler Error C3868"
 ms.date: "11/04/2016"
 f1_keywords: ["C3868"]
@@ -9,13 +10,13 @@ ms.assetid: f0e45c2a-2149-4885-a03b-0d230069f03a
 
 'type': constraints on generic parameter 'parameter' differ from those on the declaration
 
-Multiple declarations must have the same generic constraints.  For more information, see [Generics](../../windows/generics-cpp-component-extensions.md).
+Multiple declarations must have the same generic constraints.  For more information, see [Generics](../../extensions/generics-cpp-component-extensions.md).
 
 ## Example
 
 The following sample generates C3868.
 
-```
+```cpp
 // C3868.cpp
 // compile with: /clr /c
 interface struct I1;

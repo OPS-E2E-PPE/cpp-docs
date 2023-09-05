@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: licensed"
 title: "licensed (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.licensed"]
@@ -17,7 +18,7 @@ Indicates that the COM object to which it applies is licensed, and must be insta
 
 ## Remarks
 
-The **licensed** C++ attribute has the same functionality as the [licensed](/windows/desktop/Midl/licensed) MIDL attribute.
+The **licensed** C++ attribute has the same functionality as the [licensed](/windows/win32/Midl/licensed) MIDL attribute.
 
 ## Example
 
@@ -42,18 +43,16 @@ public:
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**class**, **struct**|
+|**Applies to**|**`class`**, **`struct`**|
 |**Repeatable**|No|
 |**Required attributes**|`coclass`|
 |**Invalid attributes**|None|
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Class Attributes](class-attributes.md)

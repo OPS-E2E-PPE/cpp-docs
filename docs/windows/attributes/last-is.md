@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: last_is"
 title: "last_is (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.last_is"]
@@ -22,7 +23,7 @@ One or more C-language expressions. Empty argument slots are allowed.
 
 ## Remarks
 
-The **last_is** C++ attribute has the same functionality as the [last_is](/windows/desktop/Midl/last-is) MIDL attribute.
+The **last_is** C++ attribute has the same functionality as the [last_is](/windows/win32/Midl/last-is) MIDL attribute.
 
 ## Example
 
@@ -30,18 +31,16 @@ See [first_is](first-is.md) for an example of how to specify a section of an arr
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|Field in **struct** or **union**, interface parameter, interface method|
+|**Applies to**|Field in **`struct`** or **`union`**, interface parameter, interface method|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Typedef, Enum, Union, and Struct Attributes](typedef-enum-union-and-struct-attributes.md)<br/>

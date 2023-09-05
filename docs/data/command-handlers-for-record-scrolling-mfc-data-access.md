@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Command Handlers for Record Scrolling  (MFC Data Access)"
 title: "Command Handlers for Record Scrolling  (MFC Data Access)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["record views [C++], scrolling", "record scrolling [C++]", "scrolling records"]
@@ -19,8 +20,8 @@ The [CRecordView](../mfc/reference/crecordview-class.md) class provides default 
 The `OnMove` member function provides default command handling for all four commands, which move from record to record. As these commands are issued, RFX (or DFX) loads the new record into the recordset's fields and DDX moves the values into the record form's controls. For information about RFX, see [Record Field Exchange (RFX)](../data/odbc/record-field-exchange-rfx.md).
 
 > [!NOTE]
->  Be sure to use these standard command IDs for any user-interface objects associated with the standard record navigation commands.
+> Be sure to use these standard command IDs for any user-interface objects associated with the standard record navigation commands.
 
-## See Also
+## See also
 
 [Supporting Navigation in a Record View](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

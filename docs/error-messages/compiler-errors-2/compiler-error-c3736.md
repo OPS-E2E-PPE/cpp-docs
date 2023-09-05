@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3736"
 title: "Compiler Error C3736"
 ms.date: "11/04/2016"
 f1_keywords: ["C3736"]
@@ -13,7 +14,7 @@ Native and COM events must be methods. .NET events can also be data members.
 
 The following sample generates C3736:
 
-```
+```cpp
 // C3736.cpp
 struct A {
    __event int e();

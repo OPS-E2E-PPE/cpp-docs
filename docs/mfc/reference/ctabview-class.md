@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CTabView Class"
 title: "CTabView Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CTabView", "AFXTABVIEW/CTabView", "AFXTABVIEW/CTabView::AddView", "AFXTABVIEW/CTabView::FindTab", "AFXTABVIEW/CTabView::GetActiveView", "AFXTABVIEW/CTabView::GetTabControl", "AFXTABVIEW/CTabView::RemoveView", "AFXTABVIEW/CTabView::SetActiveView", "AFXTABVIEW/CTabView::IsScrollBar", "AFXTABVIEW/CTabView::OnActivateView"]
@@ -41,7 +42,7 @@ This class makes it easy to put a tabbed view into a document/view application. 
 
 For example, you might have a document that can be represented in different ways: as a spreadsheet, a chart, an editable form, and so on. You can create individual views drawing the data as needed, insert them into your `CTabView`-derived object and have them tabbed without any additional coding.
 
-[TabbedView Sample: MFC Tabbed View Application](../../visual-cpp-samples.md) illustrates usage of `CTabView`.
+[TabbedView Sample: MFC Tabbed View Application](../../overview/visual-cpp-samples.md) illustrates usage of `CTabView`.
 
 ## Example
 
@@ -53,7 +54,7 @@ The following example shows how `CTabView` is used in the TabbedView sample.
 
 **Header:** afxTabView.h
 
-##  <a name="addview"></a>  CTabView::AddView
+## <a name="addview"></a> CTabView::AddView
 
 Adds a view to the tab control.
 
@@ -87,7 +88,7 @@ A view index if this method succeeds. Otherwise, -1.
 
 Call this function to add a view to the tab control that is embedded in a frame.
 
-##  <a name="findtab"></a>  CTabView::FindTab
+## <a name="findtab"></a> CTabView::FindTab
 
 Returns the index of the specified view in the tab control.
 
@@ -108,7 +109,7 @@ The index of the view if it is found; otherwise, -1.
 
 Call this function to retrieve the index of a view that has a specified handle.
 
-##  <a name="getactiveview"></a>  CTabView::GetActiveView
+## <a name="getactiveview"></a> CTabView::GetActiveView
 
 Returns a pointer to the currently active view.
 
@@ -122,7 +123,7 @@ A valid pointer to the active view, or NULL if there is no active view.
 
 ### Remarks
 
-##  <a name="gettabcontrol"></a>  CTabView::GetTabControl
+## <a name="gettabcontrol"></a> CTabView::GetTabControl
 
 Returns a reference to the tab control associated with the view.
 
@@ -134,7 +135,7 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 
 A reference to the tab control associated with the view.
 
-##  <a name="isscrollbar"></a>  CTabView::IsScrollBar
+## <a name="isscrollbar"></a> CTabView::IsScrollBar
 
 Called by the framework when creating a tab view to determine whether the tab view has a shared horizontal scroll bar.
 
@@ -152,7 +153,7 @@ The framework calls this method when a *CTabView* object is being created.
 
 Override the *IsScrollBar* method in a *CTabView*-derived class and return TRUE if you want to create a view that has a shared horizontal scroll bar.
 
-##  <a name="onactivateview"></a>  CTabView::OnActivateView
+## <a name="onactivateview"></a> CTabView::OnActivateView
 
 Called by the framework when the tab view is made active or inactive.
 
@@ -169,7 +170,7 @@ virtual void OnActivateView(CView* view);
 
 The default implementation does nothing. Override this method in a `CTabView`-derived class to process this notification.
 
-##  <a name="removeview"></a>  CTabView::RemoveView
+## <a name="removeview"></a> CTabView::RemoveView
 
 Removes the view from the tab control.
 
@@ -188,7 +189,7 @@ The index of the removed view if this method succeeds. Otherwise -1.
 
 ### Remarks
 
-##  <a name="setactiveview"></a>  CTabView::SetActiveView
+## <a name="setactiveview"></a> CTabView::SetActiveView
 
 Makes a view active.
 
@@ -209,7 +210,7 @@ TRUE if the specified view was made active, FALSE if the view's index is invalid
 
 For more information see [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

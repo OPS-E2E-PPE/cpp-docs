@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2678"
 title: "Compiler Error C2678"
 ms.date: "11/04/2016"
 f1_keywords: ["C2678"]
@@ -11,13 +12,13 @@ binary 'operator' : no operator defined which takes a left-hand operand of type 
 
 To use the operator, you must overload it for the specified type or define a conversion to a type for which the operator is defined.
 
-## Example
-
 C2678 can occur when the left-hand operand is const-qualified but the operator is defined to take a non-const argument.
+
+## Examples
 
 The following sample generates C2678 and shows how to fix it:
 
-```
+```cpp
 // C2678a.cpp
 // Compile by using: cl /EHsc /W4 C2678a.cpp
 struct Combo {
@@ -39,13 +40,11 @@ int main() {
 }
 ```
 
-## Example
-
 C2678 can also occur if you do not pin a native member before calling a member function on it.
 
 The following sample generates C2678 and shows how to fix it.
 
-```
+```cpp
 // C2678.cpp
 // compile with: /clr /c
 struct S { int _a; };

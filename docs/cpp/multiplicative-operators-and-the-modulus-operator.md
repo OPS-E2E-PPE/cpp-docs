@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Multiplicative Operators and the Modulus Operator"
 title: "Multiplicative Operators and the Modulus Operator"
 ms.date: "11/04/2016"
 f1_keywords: ["%", "/"]
@@ -45,7 +46,7 @@ f / 0.0
 If both operands to a multiplication, division, or modulus expression have the same sign, the result is positive. Otherwise, the result is negative. The result of a modulus operation's sign is implementation-defined.
 
 > [!NOTE]
->  Since the conversions performed by the multiplicative operators do not provide for overflow or underflow conditions, information may be lost if the result of a multiplicative operation cannot be represented in the type of the operands after conversion.
+> Since the conversions performed by the multiplicative operators do not provide for overflow or underflow conditions, information may be lost if the result of a multiplicative operation cannot be represented in the type of the operands after conversion.
 
 **Microsoft Specific**
 
@@ -59,7 +60,7 @@ The relationship between the multiplicative operators is given by the identity (
 
 ## Example
 
-The following program demonstrates the multiplicative operators. Note that either operand of `10 / 3` must be explicitly cast to type **float** to avoid truncation so that both operands are of type **float** before division.
+The following program demonstrates the multiplicative operators. Note that either operand of `10 / 3` must be explicitly cast to type **`float`** to avoid truncation so that both operands are of type **`float`** before division.
 
 ```cpp
 // expre_Multiplicative_Operators.cpp

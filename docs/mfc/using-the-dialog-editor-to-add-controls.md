@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using the Dialog Editor to Add Controls"
 title: "Using the Dialog Editor to Add Controls"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["Windows common controls [MFC], adding", "dialog box controls [MFC], adding to dialog boxes", "controls [MFC], adding to dialog boxes", "Dialog editor, creating controls", "common controls [MFC], adding"]
@@ -10,8 +11,7 @@ When you create your dialog-template resource with the [dialog editor](../window
 
 You can instead [create controls by hand](../mfc/adding-controls-by-hand.md) if you want. This is more work.
 
-## See Also
+## See also
 
 [Making and Using Controls](../mfc/making-and-using-controls.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

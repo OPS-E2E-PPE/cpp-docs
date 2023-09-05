@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Adding a New Interface in an ATL Project"
 title: "Adding a New Interface in an ATL Project"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.appwiz.ATL.interface"]
@@ -17,7 +18,7 @@ You can add a new interface to your control in one of two ways: manually or usin
 
 1. On the shortcut menu, click **Add**, and then click **Implement Interface**.
 
-1. Select the interfaces to implement in the [Implement Interface Wizard](../../ide/implement-interface-wizard.md). If the interface does not exist in any available typelib, then you must add it manually to the .idl file.
+1. Select the interfaces to implement in the [Implement Interface Wizard](../../ide/implementing-an-interface-visual-cpp.md#implement-interface-wizard). If the interface does not exist in any available typelib, then you must add it manually to the .idl file.
 
 ## To add a new interface manually
 
@@ -29,11 +30,10 @@ You can add a new interface to your control in one of two ways: manually or usin
 
 1. Implement methods on the interface.
 
-## See Also
+## See also
 
 [ATL Project Wizard](../../atl/reference/atl-project-wizard.md)<br/>
-[Visual C++ Project Types](../../ide/visual-cpp-project-types.md)<br/>
-[Creating Desktop Projects By Using Application Wizards](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[C++ project types in Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Programming with ATL and C Run-Time Code](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Fundamentals of ATL COM Objects](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Default ATL Project Configurations](../../atl/reference/default-atl-project-configurations.md)

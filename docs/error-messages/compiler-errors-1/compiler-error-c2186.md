@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2186"
 title: "Compiler Error C2186"
 ms.date: "11/04/2016"
 f1_keywords: ["C2186"]
@@ -9,11 +10,11 @@ ms.assetid: 284bfb7e-ab85-4fcb-9864-1ddf7f6c94ae
 
 'operator' : illegal operand of type 'void'
 
-The operator has a `void` operand.
+The operator has a **`void`** operand.
 
 The following sample generates C2186:
 
-```
+```cpp
 // C2186.cpp
 // compile with: /c
 void func1( void );

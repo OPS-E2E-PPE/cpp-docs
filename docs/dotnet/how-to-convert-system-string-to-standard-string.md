@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Convert System::String to Standard String"
 title: "How to: Convert System::String to Standard String"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -11,7 +12,7 @@ You can convert a <xref:System.String> to `std::string` or `std::wstring`, witho
 
 ## Example
 
-```
+```cpp
 // convert_system_string.cpp
 // compile with: /clr
 #include <string>
@@ -55,6 +56,6 @@ abcd
 efgh
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

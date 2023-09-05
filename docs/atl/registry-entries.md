@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Registry Entries"
 title: "Registry Entries (ATL)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["registry, ATL services entries", "registry, application IDs"]
@@ -16,7 +17,6 @@ By default, an ATL-generated service uses its CLSID as the GUID for its AppID. U
 
 Any DCOM service also needs to create another key under `HKEY_CLASSES_ROOT\AppID`. This key is equal to the name of the EXE and acts as a cross-reference, as it contains an AppID value pointing back to the AppID entries.
 
-## See Also
+## See also
 
 [Services](../atl/atl-services.md)
-

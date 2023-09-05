@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4625"
 title: "Compiler Warning (level 4) C4625"
 ms.date: "11/04/2016"
 f1_keywords: ["C4625"]
@@ -17,7 +18,7 @@ This warning is off by default. See [Compiler Warnings That Are Off by Default](
 
 The following sample generates C4625 and shows how to fix it.
 
-```
+```cpp
 // C4625.cpp
 // compile with: /W4 /c
 #pragma warning(default : 4625)

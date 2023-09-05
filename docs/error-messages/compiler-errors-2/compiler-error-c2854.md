@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2854"
 title: "Compiler Error C2854"
 ms.date: "11/04/2016"
 f1_keywords: ["C2854"]
@@ -13,7 +14,7 @@ The `#pragma hdrstop` gives an invalid filename. The pragma can be followed by a
 
 The following sample generates C2854:
 
-```
+```cpp
 // C2854.cpp
 // compile with: /c
 #pragma hdrstop( "\\source\\pchfiles\\myheader.pch" ]   // C2854

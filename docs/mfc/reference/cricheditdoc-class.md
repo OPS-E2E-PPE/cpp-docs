@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CRichEditDoc Class"
 title: "CRichEditDoc Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CRichEditDoc", "AFXRICH/CRichEditDoc", "AFXRICH/CRichEditDoc::CreateClientItem", "AFXRICH/CRichEditDoc::GetStreamFormat", "AFXRICH/CRichEditDoc::GetView", "AFXRICH/CRichEditDoc::m_bRTF"]
@@ -39,7 +40,7 @@ A "rich edit control" is a window in which the user can enter and edit text. The
 
 This Windows Common control (and therefore the [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) and related classes) is available only to programs running under Windows 95/98 and Windows NT versions 3.51 and later.
 
-For an example of using a rich edit document in an MFC application, see the [WORDPAD](../../visual-cpp-samples.md) sample application.
+For an example of using a rich edit document in an MFC application, see the [WORDPAD](../../overview/visual-cpp-samples.md) sample application.
 
 ## Inheritance Hierarchy
 
@@ -61,7 +62,7 @@ For an example of using a rich edit document in an MFC application, see the [WOR
 
 **Header:** afxrich.h
 
-##  <a name="createclientitem"></a>  CRichEditDoc::CreateClientItem
+## <a name="createclientitem"></a> CRichEditDoc::CreateClientItem
 
 Call this function to create a `CRichEditCntrItem` object and add it to this document.
 
@@ -72,7 +73,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### Parameters
 
 *preo*<br/>
-Pointer to an [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) structure which describes an OLE item. The new `CRichEditCntrItem` object is constructed around this OLE item. If *preo* is NULL, the new client item is empty.
+Pointer to an [REOBJECT](/windows/win32/api/richole/ns-richole-reobject) structure which describes an OLE item. The new `CRichEditCntrItem` object is constructed around this OLE item. If *preo* is NULL, the new client item is empty.
 
 ### Return Value
 
@@ -82,9 +83,9 @@ Pointer to a new [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class
 
 This function does not perform any OLE initialization.
 
-For more information, see the [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) structure in the Windows SDK.
+For more information, see the [REOBJECT](/windows/win32/api/richole/ns-richole-reobject) structure in the Windows SDK.
 
-##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat
+## <a name="getstreamformat"></a> CRichEditDoc::GetStreamFormat
 
 Call this function to determine the text format for streaming the contents of the rich edit.
 
@@ -104,7 +105,7 @@ One of the following flags:
 
 The return value is based on the [m_bRTF](#m_brtf) data member. This function returns SF_RTF if `m_bRTF` is TRUE; otherwise, SF_TEXT.
 
-##  <a name="getview"></a>  CRichEditDoc::GetView
+## <a name="getview"></a> CRichEditDoc::GetView
 
 Call this function to access the [CRichEditView](../../mfc/reference/cricheditview-class.md) object associated with this `CRichEditDoc` object.
 
@@ -120,7 +121,7 @@ Pointer to the `CRichEditView` object associated with the document.
 
 The text and formatting information are contained within the `CRichEditView` object. The `CRichEditDoc` object maintains the OLE items for serialization. There should be only one `CRichEditView` for each `CRichEditDoc`.
 
-##  <a name="m_brtf"></a>  CRichEditDoc::m_bRTF
+## <a name="m_brtf"></a> CRichEditDoc::m_bRTF
 
 When TRUE, indicates that [CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin) and [CRichEditCtrl::StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout) should store paragraph and character-formatting characteristics.
 
@@ -128,9 +129,9 @@ When TRUE, indicates that [CRichEditCtrl::StreamIn](../../mfc/reference/crichedi
 BOOL m_bRTF;
 ```
 
-## See Also
+## See also
 
-[MFC Sample WORDPAD](../../visual-cpp-samples.md)<br/>
+[MFC Sample WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleServerDoc Class](../../mfc/reference/coleserverdoc-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditView Class](../../mfc/reference/cricheditview-class.md)<br/>

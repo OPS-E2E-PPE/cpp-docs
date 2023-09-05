@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 3) C4414"
 title: "Compiler Warning (level 3) C4414"
 ms.date: "11/04/2016"
 f1_keywords: ["C4414"]
@@ -13,7 +14,7 @@ Short jumps generate compact instruction which branches to an address within a l
 
 For example, the following code generates C4414:
 
-```
+```cpp
 // C4414.cpp
 // compile with: /W3 /c
 // processor: x86

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3717"
 title: "Compiler Error C3717"
 ms.date: "11/04/2016"
 f1_keywords: ["C3717"]
@@ -13,7 +14,7 @@ You declared an event method that includes an implementation. An [__event](../..
 
 The following sample generates C3717:
 
-```
+```cpp
 // C3717.cpp
 [event_source(native)]
 class CEventSrc {

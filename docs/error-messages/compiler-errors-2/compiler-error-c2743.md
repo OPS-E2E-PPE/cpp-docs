@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2743"
 title: "Compiler Error C2743"
 ms.date: "11/04/2016"
 f1_keywords: ["C2743"]
@@ -19,7 +20,7 @@ For more information, see [/clr (Common Language Runtime Compilation)](../../bui
 
 The following sample generates C2743.
 
-```
+```cpp
 // C2743.cpp
 // compile with: /clr
 public struct S {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Windows Sockets: Socket Notifications"
 title: "Windows Sockets: Socket Notifications"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["Windows Sockets [MFC], notifications", "notifications [MFC], socket", "sockets [MFC], notifications"]
@@ -32,9 +33,9 @@ You can take advantage of these notifications by overriding the notification fun
 During an operation such as receiving or sending data, a `CSocket` object becomes synchronous. During the synchronous state, any notifications meant for other sockets are queued while the current socket waits for the notification it wants. (For example, during a `Receive` call, the socket wants a notification to read.) Once the socket completes its synchronous operation and becomes asynchronous again, other sockets can begin receiving the queued notifications.
 
 > [!NOTE]
->  In `CSocket`, the `OnConnect` notification function is never called. For connections, you call `Connect`, which will return when the connection is completed (either successfully or in error). How connection notifications are handled is an MFC implementation detail.
+> In `CSocket`, the `OnConnect` notification function is never called. For connections, you call `Connect`, which will return when the connection is completed (either successfully or in error). How connection notifications are handled is an MFC implementation detail.
 
-For details about each notification function, see the function under class `CAsyncSocket` in the *MFC Reference*. For source code and information about MFC samples, see [MFC Samples](../visual-cpp-samples.md).
+For details about each notification function, see the function under class `CAsyncSocket` in the *MFC Reference*. For source code and information about MFC samples, see [MFC Samples](../overview/visual-cpp-samples.md#mfc-samples).
 
 For more information, see:
 
@@ -50,7 +51,6 @@ For more information, see:
 
 - [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md)
 
-## See Also
+## See also
 
 [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
-

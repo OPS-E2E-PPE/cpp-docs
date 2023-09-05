@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2694"
 title: "Compiler Error C2694"
 ms.date: "11/04/2016"
 f1_keywords: ["C2694"]
@@ -13,7 +14,7 @@ A virtual function was overridden, but under [/Za](../../build/reference/za-ze-d
 
 The following sample generates C2694:
 
-```
+```cpp
 // C2694.cpp
 // compile with: /Za /c
 class MyBase {

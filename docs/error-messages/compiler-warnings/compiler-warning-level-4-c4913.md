@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4913"
 title: "Compiler Warning (level 4) C4913"
 ms.date: "11/04/2016"
 f1_keywords: ["C4913"]
@@ -13,7 +14,7 @@ A call to the built-in comma operator occurred in a program that also had an ove
 
 The following code sample generates C4913:
 
-```
+```cpp
 // C4913.cpp
 // compile with: /W4
 struct A

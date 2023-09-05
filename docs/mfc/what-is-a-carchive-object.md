@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: What Is a CArchive Object"
 title: "What Is a CArchive Object"
 ms.date: "11/04/2016"
-f1_keywords: ["CArchive"]
 helpviewer_keywords: ["archive objects [MFC]", "archives [MFC], for serialization", "buffers, serializable objects", "CArchive class [MFC], about CArchive class [MFC]", "buffering, serializable objects"]
 ms.assetid: 843f1825-288d-4d89-a1fa-70e1f92d9b8b
+ms.custom: intro-overview
 ---
 # What Is a CArchive Object
 
@@ -15,7 +16,6 @@ When an archive stores objects to a file, the archive attaches the `CRuntimeClas
 
 As data is serialized to an archive, the archive accumulates the data until its buffer is full. Then the archive writes its buffer to the `CFile` object pointed to by the `CArchive` object. Similarly, as you read data from an archive, it reads data from the file to its buffer and then from the buffer to your deserialized object. This buffering reduces the number of times a hard disk is physically read, thus improving your application's performance.
 
-## See Also
+## See also
 
 [Serialization: Serializing an Object](../mfc/serialization-serializing-an-object.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2628"
 title: "Compiler Error C2628"
 ms.date: "11/04/2016"
 f1_keywords: ["C2628"]
@@ -13,7 +14,7 @@ A semicolon may be missing.
 
 The following sample generates C2628:
 
-```
+```cpp
 // C2628.cpp
 class CMyClass {}
 int main(){}   // C2628 error
@@ -21,7 +22,7 @@ int main(){}   // C2628 error
 
 Possible resolution:
 
-```
+```cpp
 // C2628b.cpp
 class CMyClass {};
 int main(){}

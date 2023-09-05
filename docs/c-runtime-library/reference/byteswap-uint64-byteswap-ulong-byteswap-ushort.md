@@ -1,14 +1,16 @@
 ---
+description: "Learn more about: _byteswap_uint64, _byteswap_ulong, _byteswap_ushort"
 title: "_byteswap_uint64, _byteswap_ulong, _byteswap_ushort"
 ms.date: "11/04/2016"
-apiname: ["_byteswap_uint64", "_byteswap_ulong", "_byteswap_ushort"]
-apilocation: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ucrtbase.dll", "api-ms-win-crt-utility-l1-1-0.dll"]
-apitype: "DLLExport"
+api_name: ["_byteswap_uint64", "_byteswap_ulong", "_byteswap_ushort"]
+api_location: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ucrtbase.dll", "api-ms-win-crt-utility-l1-1-0.dll"]
+api_type: ["DLLExport"]
+topic_type: ["apiref"]
 f1_keywords: ["byteswap_ulong", "_byteswap_ulong", "byteswap_uint64", "_byteswap_ushort", "_byteswap_uint64", "byteswap_ushort"]
 helpviewer_keywords: ["_byteswap_uint64 function", "byteswap_uint64 function", "swapping bytes", "byte swapping", "byteswap_ushort function", "_byteswap_ushort function", "bytes, swapping", "byteswap_ulong function", "_byteswap_ulong function"]
 ms.assetid: 83bda211-f02f-4cf0-8a78-d6de1f175970
 ---
-# _byteswap_uint64, _byteswap_ulong, _byteswap_ushort
+# `_byteswap_uint64`, `_byteswap_ulong`, `_byteswap_ushort`
 
 Reverses the order of bytes in an integer.
 
@@ -22,18 +24,18 @@ unsigned __int64 _byteswap_uint64 ( unsigned __int64 val );
 
 ### Parameters
 
-*val*<br/>
+*`val`*\
 The integer to reverse byte order.
 
 ## Requirements
 
-|Routine|Required header|
-|-------------|---------------------|
-|**_byteswap_ushort**|\<stdlib.h>|
-|**_byteswap_ulong**|\<stdlib.h>|
-|**_byteswap_uint64**|\<stdlib.h>|
+| Routine | Required header |
+|---|---|
+| **`_byteswap_ushort`** | `<stdlib.h>` |
+| **`_byteswap_ulong`** | `<stdlib.h>` |
+| **`_byteswap_uint64`** | `<stdlib.h>` |
 
-For more compatibility information, see [Compatibility](../../c-runtime-library/compatibility.md).
+For more compatibility information, see [Compatibility](../compatibility.md).
 
 ## Example
 
@@ -52,10 +54,10 @@ int main()
 ```
 
 ```Output
-byteswap of 102030405060708 = 807060504030201
-byteswap of 1020304 = 4030201
+byteswap of 0102030405060708 = 0807060504030201
+byteswap of 01020304 = 04030201
 ```
 
 ## See also
 
-[Universal C runtime routines by category](../../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Universal C runtime routines by category](../run-time-routines-by-category.md)

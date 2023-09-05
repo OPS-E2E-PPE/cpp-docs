@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2345"
 title: "Compiler Error C2345"
 ms.date: "11/04/2016"
 f1_keywords: ["C2345"]
@@ -13,7 +14,7 @@ You passed a value to the [align](../../cpp/align-cpp.md) keyword that is outsid
 
 The following code generates C2345
 
-```
+```cpp
 // C2345.cpp
 // compile with: /c
 __declspec(align(0)) int a;   // C2345

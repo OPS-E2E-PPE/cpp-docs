@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2004"
 title: "Compiler Error C2004"
 ms.date: "11/04/2016"
 f1_keywords: ["C2004"]
@@ -13,11 +14,11 @@ An identifier must appear in the parentheses following the preprocessor keyword.
 
 This error can also be generated as a result of compiler conformance work that was done for Visual Studio .NET 2003: missing parenthesis in preprocessor directive. If the closing parenthesis is missing from a preprocessor directive, the compiler will generate an error.
 
-## Example
+## Examples
 
 The following sample generates C2004:
 
-```
+```cpp
 // C2004.cpp
 // compile with: /DDEBUG
 #include <stdio.h>
@@ -30,11 +31,9 @@ int main()
 }
 ```
 
-## Example
-
 Possible resolution:
 
-```
+```cpp
 // C2004b.cpp
 // compile with: /DDEBUG
 #include <stdio.h>

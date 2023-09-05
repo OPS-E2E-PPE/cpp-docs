@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2492"
 title: "Compiler Error C2492"
 ms.date: "11/04/2016"
 f1_keywords: ["C2492"]
@@ -13,7 +14,7 @@ The variable is declared with the [thread](../../cpp/thread.md) attribute and wi
 
 The following sample generates C2492:
 
-```
+```cpp
 // C2492.cpp
 // compile with: /c
 class C {

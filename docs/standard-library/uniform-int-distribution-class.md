@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: uniform_int_distribution Class"
 title: "uniform_int_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::uniform_int_distribution", "random/std::uniform_int_distribution::reset", "random/std::uniform_int_distribution::a", "random/std::uniform_int_distribution::b", "random/std::uniform_int_distribution::param", "random/std::uniform_int_distribution::min", "random/std::uniform_int_distribution::max", "random/std::uniform_int_distribution::operator()", "random/std::uniform_int_distribution::param_type", "random/std::uniform_int_distribution::param_type::a", "random/std::uniform_int_distribution::param_type::b", "random/std::uniform_int_distribution::param_type::operator==", "random/std::uniform_int_distribution::param_type::operator!="]
@@ -43,17 +44,15 @@ public:
 
 ### Parameters
 
-*IntType*<br/>
-The integer result type, defaults to **int**. For possible types, see [\<random>](../standard-library/random.md).
+*IntType*\
+The integer result type, defaults to **`int`**. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes an inclusive-inclusive distribution that produces values of a user-specified integral type with a distribution so that every value is equally probable. The following table links to articles about individual members.
+The class template describes an inclusive-inclusive distribution that produces values of a user-specified integral type with a distribution so that every value is equally probable. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|
-|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|
+[uniform_int_distribution](#uniform_int_distribution)\
+[param_type](#param_type)
 
 The property member `a()` returns the currently stored minimum bound of the distribution, while `b()` returns the currently stored maximum bound. For this distribution class, these minimum and maximum values are the same as those returned by the common property functions `min()` and `max()`.
 
@@ -151,7 +150,7 @@ Distribution for 200 samples:
 
 **Namespace:** std
 
-## <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution
+## <a name="uniform_int_distribution"></a> uniform_int_distribution::uniform_int_distribution
 
 Constructs the distribution.
 
@@ -163,13 +162,13 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### Parameters
 
-*a*<br/>
+*a*\
 The lower bound for random values, inclusive.
 
-*b*<br/>
+*b*\
 The upper bound for random values, inclusive.
 
-*parm*<br/>
+*parm*\
 The `param_type` structure used to construct the distribution.
 
 ### Remarks
@@ -180,7 +179,7 @@ The first constructor constructs an object whose stored *a* value holds the valu
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  uniform_int_distribution::param_type
+## <a name="param_type"></a> uniform_int_distribution::param_type
 
 Stores the parameters of the distribution.
 
@@ -199,13 +198,13 @@ struct param_type {
 
 ### Parameters
 
-*a*<br/>
+*a*\
 The lower bound for random values, inclusive.
 
-*b*<br/>
+*b*\
 The upper bound for random values, inclusive.
 
-*right*<br/>
+*right*\
 The `param_type` object to compare to this.
 
 ### Remarks
@@ -216,4 +215,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

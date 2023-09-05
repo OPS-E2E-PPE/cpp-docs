@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Collections::MapView Class"
 title: "Platform::Collections::MapView Class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -33,7 +34,7 @@ A type that provides a function object that can compare two element values as so
 
 ### Remarks
 
-MapView is a concrete C++ implementation of the [Windows::Foundation::Collections::IMapView \<K,V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interface that is passed across the application binary interface (ABI). For more information, see [Collections (C++/CX)](../cppcx/collections-c-cx.md).
+MapView is a concrete C++ implementation of the [Windows::Foundation::Collections::IMapView \<K,V>](/uwp/api/windows.foundation.collections.imapview-2) interface that is passed across the application binary interface (ABI). For more information, see [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### Members
 
@@ -80,16 +81,15 @@ An iterator that specifies the first element in the map view.
 
 ### Remarks
 
-A convenient way to hold the iterator returned by First() is to assign the return value to a variable that is declared with the **auto** type deduction keyword. For example, `auto x = myMapView->First();`.
+A convenient way to hold the iterator returned by First() is to assign the return value to a variable that is declared with the **`auto`** type deduction keyword. For example, `auto x = myMapView->First();`.
 
-## <a name="haskey"></a>  MapView::HasKey Method
+## <a name="haskey"></a> MapView::HasKey Method
 
 Determines whether the current MapView contains the specified key.
 
 ### Syntax
 
 ```
-
 bool HasKey(K key);
 ```
 
@@ -100,9 +100,9 @@ The key used to locate the MapView element. The type of *key* is typename *K*.
 
 ### Return Value
 
-**true** if the key is found; otherwise, **false**.
+**`true`** if the key is found; otherwise, **`false`**.
 
-##  <a name="lookup"></a> MapView::Lookup Method
+## <a name="lookup"></a> MapView::Lookup Method
 
 Retrieves the value of type V that is associated with the specified key of type K.
 
@@ -121,7 +121,7 @@ The key used to locate an element in the MapView. The type of `key` is typename 
 
 The value that is paired with the `key`. The type of the return value is typename *V*.
 
-##  <a name="ctor"></a> MapView::MapView Constructor
+## <a name="ctor"></a> MapView::MapView Constructor
 
 Initializes a new instance of the MapView class.
 
@@ -162,9 +162,9 @@ The input iterator of the first element in a range of elements used to initializ
 The input iterator of the first element after a range of elements used to initialize the current MapView.
 
 *il*<br/>
-A [std::initializer_list<std::pair\<K,V>>](../standard-library/initializer-list-class.md) whose elements will be inserted into the MapView.
+A [std::initializer_list\<std::pair\<K,V>>](../standard-library/initializer-list-class.md) whose elements will be inserted into the MapView.
 
-##  <a name="size"></a> MapView::Size Method
+## <a name="size"></a> MapView::Size Method
 
 Returns the number of elements in the current MapView object.
 
@@ -178,13 +178,13 @@ virtual property unsigned int Size;
 
 The number of elements in the current MapView.
 
-##  <a name="split"></a> MapView::Split Method
+## <a name="split"></a> MapView::Split Method
 
 Divides the current MapView object into two MapView objects. This method is non-operational.
 
 ### Syntax
 
-```
+```cpp
 void Split(
    Windows::Foundation::Collections::IMapView<
                          K, V>^ * firstPartition,
@@ -204,6 +204,6 @@ The second part of the original MapView object.
 
 This method is not operational; it does nothing.
 
-## See Also
+## See also
 
 [Platform Namespace](platform-namespace-c-cx.md)

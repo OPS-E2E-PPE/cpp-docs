@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compound Statements (Blocks)"
 title: "Compound Statements (Blocks)"
 ms.date: "11/04/2016"
 f1_keywords: ["}", "{"]
@@ -17,7 +18,7 @@ A compound statement consists of zero or more statements enclosed in curly brace
 
 ## Remarks
 
-The following example uses a compound statement as the *statement* part of the **if** statement (see [The if Statement](../cpp/if-else-statement-cpp.md) for details about the syntax):
+The following example uses a compound statement as the *statement* part of the **`if`** statement (see [The if Statement](../cpp/if-else-statement-cpp.md) for details about the syntax):
 
 ```cpp
 if( Amount > 100 )
@@ -32,7 +33,7 @@ else
 ```
 
 > [!NOTE]
->  Because a declaration is a statement, a declaration can be one of the statements in the *statement-list*. As a result, names declared inside a compound statement, but not explicitly declared as static, have local scope and (for objects) lifetime. See [Scope](../cpp/scope-visual-cpp.md) for details about treatment of names with local scope.
+> Because a declaration is a statement, a declaration can be one of the statements in the *statement-list*. As a result, names declared inside a compound statement, but not explicitly declared as static, have local scope and (for objects) lifetime. See [Scope](../cpp/scope-visual-cpp.md) for details about treatment of names with local scope.
 
 ## See also
 

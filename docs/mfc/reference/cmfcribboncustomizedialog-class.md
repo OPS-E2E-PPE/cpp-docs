@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCRibbonCustomizeDialog Class"
 title: "CMFCRibbonCustomizeDialog Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCRibbonCustomizeDialog", "AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizeDialog", "AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog"]
@@ -56,7 +57,7 @@ Because this class is derived from [CMFCPropertySheet Class](../../mfc/reference
 
 **Header:** afxribboncustomizedialog.h
 
-##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog
+## <a name="cmfcribboncustomizedialog"></a> CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog
 
 Constructs a `CMFCRibbonCustomizeDialog` object.
 
@@ -84,7 +85,7 @@ The following example demonstrates how to construct a `CMFCRibbonCustomizeDialog
 
 The constructor instantiates a [CMFCRibbonCustomizePropertyPage Class](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) object and adds it to the collection of property sheet pages.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)

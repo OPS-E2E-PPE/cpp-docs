@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_fundamental Class"
 title: "is_fundamental Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_fundamental"]
@@ -18,12 +19,12 @@ struct is_fundamental;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
 ## Remarks
 
-An instance of the type predicate holds true if the type *Ty* is a fundamental type, that is, **void**, an integral type, an floating point type, or a `cv-qualified` form of one of them, otherwise it holds false.
+An instance of the type predicate holds true if the type *Ty* is a fundamental type, that is, **`void`**, an integral type, an floating point type, or a `cv-qualified` form of one of them, otherwise it holds false.
 
 ## Example
 
@@ -68,5 +69,5 @@ is_fundamental<void> == true
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound Class](../standard-library/is-compound-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_compound Class](../standard-library/is-compound-class.md)

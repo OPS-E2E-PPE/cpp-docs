@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3295"
 title: "Compiler Error C3295"
 ms.date: "11/04/2016"
 f1_keywords: ["C3295"]
@@ -15,7 +16,7 @@ Some pragmas cannot be used in a function.  See [Pragma Directives and the __Pra
 
 The following sample generates C3295.
 
-```
+```cpp
 // C3295.cpp
 int main() {
    #pragma managed   // C3295

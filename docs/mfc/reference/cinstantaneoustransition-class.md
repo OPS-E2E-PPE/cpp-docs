@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CInstantaneousTransition Class"
 title: "CInstantaneousTransition Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CInstantaneousTransition", "AFXANIMATIONCONTROLLER/CInstantaneousTransition", "AFXANIMATIONCONTROLLER/CInstantaneousTransition::CInstantaneousTransition", "AFXANIMATIONCONTROLLER/CInstantaneousTransition::Create", "AFXANIMATIONCONTROLLER/CInstantaneousTransition::m_dblFinalValue"]
@@ -51,7 +52,7 @@ During an instantaneous transition, the value of the animation variable changes 
 
 **Header:** afxanimationcontroller.h
 
-##  <a name="cinstantaneoustransition"></a>  CInstantaneousTransition::CInstantaneousTransition
+## <a name="cinstantaneoustransition"></a> CInstantaneousTransition::CInstantaneousTransition
 
 Constructs a transition object and initializes its final value.
 
@@ -64,7 +65,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
 *dblFinalValue*<br/>
 The value of the animation variable at the end of the transition.
 
-##  <a name="create"></a>  CInstantaneousTransition::Create
+## <a name="create"></a> CInstantaneousTransition::Create
 
 Calls the transition library to create encapsulated transition COM object.
 
@@ -77,13 +78,13 @@ virtual BOOL Create(
 ### Parameters
 
 *pLibrary*<br/>
-A pointer to an [IUIAnimationTransitionLibrary interface](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), which defines a library of standard transitions.
+A pointer to an [IUIAnimationTransitionLibrary interface](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), which defines a library of standard transitions.
 
 ### Return Value
 
 TRUE if transition is created successfully; otherwise FALSE.
 
-##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue
+## <a name="m_dblfinalvalue"></a> CInstantaneousTransition::m_dblFinalValue
 
 The value of the animation variable at the end of the transition.
 
@@ -91,6 +92,6 @@ The value of the animation variable at the end of the transition.
 DOUBLE m_dblFinalValue;
 ```
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

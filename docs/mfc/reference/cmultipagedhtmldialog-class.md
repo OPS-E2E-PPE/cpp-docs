@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: CMultiPageDHtmlDialog Class"
 title: "CMultiPageDHtmlDialog Class"
-ms.date: "11/04/2016"
+ms.date: "03/27/2019"
 f1_keywords: ["CMultiPageDHtmlDialog", "AFXDHTML/CMultiPageDHtmlDialog", "AFXDHTML/CMultiPageDHtmlDialog::CMultiPageDHtmlDialog"]
 helpviewer_keywords: ["CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog"]
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
@@ -22,7 +23,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 |Name|Description|
 |----------|-----------------|
 |[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Constructs a multipage (wizard-style) DHTML dialog object.|
-|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Destroys a multipage DHTML dialog object.|
+|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|Destroys a multipage DHTML dialog object.|
 
 ## Remarks
 
@@ -66,7 +67,7 @@ The pertinent parts of the class implementation (in CMyMultipageDlg.cpp):
 
 **Header:** afxdhtml.h
 
-##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
+## <a name="cmultipagedhtmldialog"></a> CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
 
 Constructs a multipage (wizard-style) DHTML dialog object.
 
@@ -101,7 +102,7 @@ Contains the ID number of a dialog-box template resource.
 *nHtmlResID*<br/>
 Contains the ID number of an HTML resource.
 
-##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog
+## <a name="_dtorcmultipagedhtmldialog"></a> CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog
 
 Destroys a multipage DHTML dialog object.
 
@@ -109,6 +110,6 @@ Destroys a multipage DHTML dialog object.
 virtual ~CMultiPageDHtmlDialog();
 ```
 
-## See Also
+## See also
 
 [CDHtmlDialog Class](../../mfc/reference/cdhtmldialog-class.md)

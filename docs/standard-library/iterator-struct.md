@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: iterator Struct"
 title: "iterator Struct"
 ms.date: "11/04/2016"
 f1_keywords: ["xutility/std::iterator"]
@@ -38,7 +39,7 @@ The template struct serves as a base type for all iterators. It defines the memb
 
 - `reference` (a synonym for the template parameter `Reference`).
 
-Note that `value_type` should not be a constant type even if `pointer` points at an object of **const** `Type` and reference designates an object of **const** `Type`.
+Note that `value_type` should not be a constant type even if `pointer` points at an object of **`const`** `Type` and reference designates an object of **`const`** `Type`.
 
 ## Example
 
@@ -52,6 +53,6 @@ See [iterator_traits](../standard-library/iterator-traits-struct.md) for an exam
 
 ## See also
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

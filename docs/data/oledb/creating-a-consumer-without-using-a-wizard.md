@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Creating a Consumer Without Using a Wizard"
 title: "Creating a Consumer Without Using a Wizard"
-ms.date: "10/12/2018"
+ms.date: "05/09/2019"
 helpviewer_keywords: ["OLE DB consumers, creating"]
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
 ---
@@ -10,7 +11,7 @@ The following example assumes that you're adding OLE DB consumer support to an e
 
 To add OLE DB consumer support without using the **ATL OLE DB Consumer Wizard**:
 
-- In your pch.h file, append the following `#include` statements:
+- In your *pch.h* file, append the following `#include` statements:
 
     ```cpp
     #include <atlbase.h>
@@ -39,7 +40,7 @@ Programmatically, a consumer typically performs the following sequence of operat
     HRESULT hr = CoInitialize(NULL);
     ```
 
-- Call [CDataSource::Open](../../data/oledb/cdatasource-open.md) or one of its variations.
+- Call [CDataSource::Open](./cdatasource-class.md#open) or one of its variations.
 
 - Open a connection to the data source, open the session, and open and initialize the rowset (and if a command, also execute it):
 
@@ -61,7 +62,7 @@ Programmatically, a consumer typically performs the following sequence of operat
     ds.Close();
     ```
 
-   If you are using a command, you might want to call `ReleaseCommand` after `Close`. The code example in [CCommand::Close](../../data/oledb/ccommand-close.md) shows how to call `Close` and `ReleaseCommand`.
+   If you are using a command, you might want to call `ReleaseCommand` after `Close`. The code example in [CCommand::Close](./ccommand-class.md#close) shows how to call `Close` and `ReleaseCommand`.
 
 - Call `CoUnInitialize` to uninitialize COM. This is called in the main code.
 
@@ -69,6 +70,6 @@ Programmatically, a consumer typically performs the following sequence of operat
     CoUninitialize();
     ```
 
-## See Also
+## See also
 
 [Creating an OLE DB Consumer](../../data/oledb/creating-an-ole-db-consumer.md)

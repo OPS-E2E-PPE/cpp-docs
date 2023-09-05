@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3003"
 title: "Compiler Error C3003"
 ms.date: "11/04/2016"
 f1_keywords: ["C3003"]
@@ -13,7 +14,7 @@ An OpenMP directive name cannot follow an OpenMP directive clause.
 
 The following sample generates C3003:
 
-```
+```c
 // C3003.c
 // compile with: /openmp
 int main()

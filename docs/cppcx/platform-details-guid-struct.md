@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Details::__GUID Struct"
 title: "Platform::Details::__GUID Struct"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -30,6 +31,6 @@ This struct is provided solely for completeness because it can be inspected with
 
 **Namespace:** Platform::Details
 
-## See Also
+## See also
 
 [Platform Namespace](platform-namespace-c-cx.md)

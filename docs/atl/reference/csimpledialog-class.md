@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CSimpleDialog Class"
 title: "CSimpleDialog Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CSimpleDialog", "ATLWIN/ATL::CSimpleDialog", "ATLWIN/ATL::CSimpleDialog::DoModal"]
@@ -51,7 +52,7 @@ See [Implementing a Dialog Box](../../atl/implementing-a-dialog-box.md) for more
 
 **Header:** atlwin.h
 
-##  <a name="domodal"></a>  CSimpleDialog::DoModal
+## <a name="domodal"></a> CSimpleDialog::DoModal
 
 Invokes a modal dialog box and returns the dialog-box result when done.
 
@@ -74,6 +75,6 @@ If the function fails, the return value is -1. To get extended error information
 
 This method handles all interaction with the user while the dialog box is active. This is what makes the dialog box modal; that is, the user cannot interact with other windows until the dialog box is closed.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

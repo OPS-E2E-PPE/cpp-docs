@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: lock_when Enum"
 title: "lock_when Enum"
 ms.date: "11/04/2016"
 ms.topic: "reference"
@@ -20,13 +21,13 @@ enum lock_when {
 
 ## Remarks
 
-When passed to [lock::lock](../dotnet/lock-lock.md), `lock_later` specifies that the lock is not to be taken now.
+When passed to [lock::lock](./lock-class.md#lock), `lock_later` specifies that the lock is not to be taken now.
 
 ## Example
 
 This example uses a single instance of a class across multiple threads.  The class uses a lock on itself to ensure that accesses to its internal data are consistent for each thread.  The main application thread uses a lock on the same instance of the class to periodically check to see if any worker threads still exist, and waits to exit until all worker threads have completed their tasks.
 
-```
+```cpp
 // msl_lock_lock_when.cpp
 // compile with: /clr
 #include <msclr/lock.h>
@@ -118,6 +119,6 @@ All threads completed.
 
 **Namespace** msclr
 
-## See Also
+## See also
 
 [lock](../dotnet/lock.md)

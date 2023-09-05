@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: bidirectional_iterator_tag Struct"
 title: "bidirectional_iterator_tag Struct"
 ms.date: "11/04/2016"
 f1_keywords: ["xutility/std::bidirectional_iterator_tag"]
@@ -33,6 +34,6 @@ See [random_access_iterator_tag](../standard-library/random-access-iterator-tag-
 
 ## See also
 
-[forward_iterator_tag Struct](../standard-library/forward-iterator-tag-struct.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[forward_iterator_tag Struct](../standard-library/forward-iterator-tag-struct.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

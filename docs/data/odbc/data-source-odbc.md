@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Data Source (ODBC)"
 title: "Data Source (ODBC)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ODBC data sources, configuring", "CDatabase class, data source connections", "ODBC data sources", "configuring ODBC data sources", "ODBC data sources, represented by CDatabase"]
@@ -18,6 +19,6 @@ The following topics explain more about data sources:
 
 - [Data Source: Determining the Schema of the Data Source (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)
 
-## See Also
+## See also
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

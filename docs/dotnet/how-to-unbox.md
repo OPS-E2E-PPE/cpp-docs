@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Unbox"
 title: "How to: Unbox"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["unboxing"]
@@ -10,7 +11,7 @@ Shows how to unbox and modify a value.
 
 ## Example
 
-```
+```cpp
 // vcmcppv2_unboxing.cpp
 // compile with: /clr
 using namespace System;
@@ -32,6 +33,6 @@ int main() {
 14
 ```
 
-## See Also
+## See also
 
-[Boxing](../windows/boxing-cpp-component-extensions.md)
+[Boxing](../extensions/boxing-cpp-component-extensions.md)

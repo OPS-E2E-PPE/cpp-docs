@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2117"
 title: "Compiler Error C2117"
 ms.date: "11/04/2016"
 f1_keywords: ["C2117"]
@@ -17,7 +18,7 @@ An array has too many initializers:
 
 The following sample generates C2117:
 
-```
+```cpp
 // C2117.cpp
 int main() {
    char abc[4] = "abcd";   // C2117

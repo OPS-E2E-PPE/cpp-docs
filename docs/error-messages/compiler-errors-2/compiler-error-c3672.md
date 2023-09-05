@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3672"
 title: "Compiler Error C3672"
 ms.date: "11/04/2016"
 f1_keywords: ["C3672"]
@@ -15,7 +16,7 @@ A destructor was called incorrectly.  For more information, see [Destructors](..
 
 The following sample generates C3672.
 
-```
+```cpp
 // C3672.cpp
 template<typename T>
 void f(T* pT) {

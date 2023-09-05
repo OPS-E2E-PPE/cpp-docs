@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: default::(type_name)::ToString Method"
 title: "default::(type_name)::ToString Method"
 ms.date: "12/30/2016"
 f1_keywords: ["VCCORLIB/Platform::Object::ToString"]
@@ -28,6 +29,6 @@ A string that represents the current object.
 
 **Header:** vccorlib.h
 
-## See Also
+## See also
 
 [default namespace](../cppcx/default-namespace.md)

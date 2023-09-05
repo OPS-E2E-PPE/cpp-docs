@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3913"
 title: "Compiler Error C3913"
 ms.date: "11/04/2016"
 f1_keywords: ["C3913"]
@@ -11,11 +12,11 @@ default property must be indexed
 
 A default property was defined incorrectly.
 
-For more information, see [property](../../windows/property-cpp-component-extensions.md).
+For more information, see [property](../../extensions/property-cpp-component-extensions.md).
 
 The following sample generates C3913:
 
-```
+```cpp
 // C3913.cpp
 // compile with: /clr /c
 ref struct X {

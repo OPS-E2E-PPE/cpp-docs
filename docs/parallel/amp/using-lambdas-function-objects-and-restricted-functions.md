@@ -1,11 +1,11 @@
 ---
+description: "Learn more about: Using Lambdas, Function Objects, and Restricted Functions"
 title: "Using Lambdas, Function Objects, and Restricted Functions"
 ms.date: "11/04/2016"
-ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
 ---
 # Using Lambdas, Function Objects, and Restricted Functions
 
-The C++ AMP code that you want to run on the accelerator is specified as an argument in a call to the [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) method. You can provide either a lambda expression or a function object (functor) as that argument. Additionally, the lambda expression or function object can call a C++ AMP-restricted function. This topic uses an array addition algorithm to demonstrate lambdas, function objects, and restricted functions. The following example shows the algorithm without C++ AMP code. Two 1-dimensional arrays of equal length are created. The corresponding integer elements are added and stored in a third 1-dimensional array. C++ AMP is not used.
+The C++ AMP code that you want to run on the accelerator is specified as an argument in a call to the [`parallel_for_each`](reference/concurrency-namespace-functions-amp.md#parallel_for_each) method. You can provide either a lambda expression or a function object (functor) as that argument. Additionally, the lambda expression or function object can call a C++ AMP-restricted function. This topic uses an array addition algorithm to demonstrate lambdas, function objects, and restricted functions. The following example shows the algorithm without C++ AMP code. Two 1-dimensional arrays of equal length are created. The corresponding integer elements are added and stored in a third 1-dimensional array. C++ AMP is not used.
 
 ```cpp
 void CpuMethod() {
@@ -149,7 +149,7 @@ void AddArraysWithFunction() {
 
 The restricted function must include `restrict(amp)` and conform to the restrictions that are described in [restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md).
 
-## See Also
+## See also
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Lambda Expression Syntax](../../cpp/lambda-expression-syntax.md)<br/>

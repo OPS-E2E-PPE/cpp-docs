@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4606"
 title: "Compiler Warning (level 1) C4606"
 ms.date: "11/04/2016"
 f1_keywords: ["C4606"]
@@ -15,7 +16,7 @@ For Code Analysis warnings, only `error`, `once`, and `default` are supported wi
 
 The following sample generates C4606.
 
-```
+```cpp
 // C4606.cpp
 // compile with: /c /W1
 #pragma warning(1: 6001)   // C4606

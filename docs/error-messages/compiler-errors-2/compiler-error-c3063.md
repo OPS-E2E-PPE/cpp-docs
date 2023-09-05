@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3063"
 title: "Compiler Error C3063"
 ms.date: "11/04/2016"
 f1_keywords: ["C3063"]
@@ -15,7 +16,7 @@ When using operators on enumerators, both operands must be of the enumeration ty
 
 The following sample generates C3063 and shows how to fix it:
 
-```
+```cpp
 // C3063.cpp
 // compile with: /clr
 enum class E { a, b } e, mask;

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::ClassNotRegisteredException Class"
 title: "Platform::ClassNotRegisteredException Class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -30,6 +31,6 @@ For more information, see the [COMException](../cppcx/platform-comexception-clas
 
 **Metadata:** platform.winmd
 
-## See Also
+## See also
 
 [Platform::COMException Class](../cppcx/platform-comexception-class.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDaoRelationFieldInfo Structure"
 title: "CDaoRelationFieldInfo Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["CDaoRelationFieldInfo"]
@@ -39,7 +40,7 @@ Call the [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelation
 
 **Header:** afxdao.h
 
-## See Also
+## See also
 
 [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoRelationInfo Structure](../../mfc/reference/cdaorelationinfo-structure.md)

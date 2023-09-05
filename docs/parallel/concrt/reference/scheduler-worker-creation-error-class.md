@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: scheduler_worker_creation_error Class"
 title: "scheduler_worker_creation_error Class"
 ms.date: "11/04/2016"
 f1_keywords: ["scheduler_worker_creation_error", "CONCRT/concurrency::scheduler_worker_creation_error", "CONCRT/concurrency::scheduler_worker_creation_error::scheduler_worker_creation_error"]
@@ -11,7 +12,7 @@ This class describes an exception thrown because of a failure to create a worker
 
 ## Syntax
 
-```
+```cpp
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
 ```
 
@@ -41,11 +42,11 @@ This exception is typically thrown when a call to the operating system to create
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> scheduler_worker_creation_error
+## <a name="ctor"></a> scheduler_worker_creation_error
 
 Constructs a `scheduler_worker_creation_error` object.
 
-```
+```cpp
 scheduler_worker_creation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -62,6 +63,6 @@ A descriptive message of the error.
 *_Hresult*<br/>
 The `HRESULT` value of the error that caused the exception.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

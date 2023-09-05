@@ -1,47 +1,129 @@
 ---
-title: "Writing and refactoring code (C++)"
-ms.date: "04/30/2018"
-ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
+title: "Edit and refactor C++ code in Visual Studio"
+description: "Use the C++ code editor in Visual Studio to format, navigate, understand and refactor your code."
+ms.date: "09/20/2022"
+ms.topic: "overview"
+ms.custom: intro-overview
 ---
-# Writing and refactoring code (C++)
+# Edit and refactor C++ code in Visual Studio
 
-The Visual C++ code editor and IDE provide many coding aids. Some are unique to C++, and some are essentially the same for all Visual Studio languages. For more information about the shared features, see [Writing Code in the Code and Text Editor](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Options for enabling and configuring C++-specific features are located under **Tools &#124; Options &#124; Text Editor &#124; C/C++**. After choosing which option you want to set, you can get more help by pressing **F1** when the dialog is in focus. For general code formatting options, type `Editor C++` into **QuickLaunch**.
-
-Experimental features, which may or may not be included in a future version of Visual Studio, are found in the [Text Editor C++ Experimental](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) dialog. In Visual Studio 2017 you can enable **Predictive IntelliSense** in this dialog.
-
-## Adding new files
-
-To add new files to a project, right-click on the project node in Solution Explorer and choose **Add &#124; New**.
-
-## Formatting options
-
-To set formatting options such as indents, brace completion, and colorization, type "C++ Formatting" into the **QuickLaunch** window. Visual Studio 2017 version 15.7 and later supports ClangFormat. You can configure it in the [C/C++ Formatting Property Page](/visualstudio/ide/reference/options-text-editor-c-cpp-formatting) under **Tools &#124; Options &#124; Text Editor &#124; C/C++ &#124; Formatting**.
-
-![C++ formatting options](media/cpp-formatting-options.png)
+Visual Studio provides several tools to help you write, edit, and refactor your code.
 
 ## IntelliSense
 
-IntelliSense is the name for a set of features that provide inline information about members, types, and function overloads. The following illustration shows the member list drop-down that appears as you type. You can press the tab key to enter the selected item text into your code file.
+IntelliSense is a powerful code completion tool that suggests symbols and code snippets for you as you type. C++ IntelliSense in Visual Studio runs in real time, analyzing your codebase as you update it and providing recommendations. As you type more characters, the list of recommended results narrows down.
 
-![C&#43;&#43; member list drop down](../ide/media/vs2015_cpp_statement_completion.png "vs2015_cpp_statement_completion")
+![Screenshot of the C plus plus member list drop down showing the methods available for string such as append, assign, and so on.](../ide/media/cpp-statement-completion.png)
 
-For complete information see [Visual C++ IntelliSense](/visualstudio/ide/visual-cpp-intellisense).
+Some symbols are omitted automatically to help narrow down the results. For example, when accessing a class object's members from outside the class, you won't be able to see private members by default, or protected members (if you aren't in the context of a child class). You can adjust the filtering by using the buttons at the bottom.
 
-## Insert Snippets
+After you choose the symbol from the drop-down list, you can autocomplete it with **Tab**, **Enter**, or one of the other commit characters (by default: `{ } [ ] ( ) . , : ; + - * / % & | ^ ! = ? @ # \`). To add or remove characters from this list,
+search for "IntelliSense" in **Quick Launch** (Ctrl + Q) and choose the **Text Editor > C/C++ > Advanced** option. The **Member List Commit Characters** option enables you to customize the list with the changes you want.
 
-A snippet is a predefined piece of source code. Right-click on a single point or on selected text to either insert a snippet or surround the selected text with the snippet. The following illustration shows the three steps to surround a selected statement with a for loop. The yellow highlights in the final image are editable fields that you access with the tab key. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).
+The **Member List Filter Mode** option controls what kinds of IntelliSense autocomplete suggestions you see. By default, it's set to **Fuzzy**. In a fuzzy search, if you have a symbol called *MyAwesomeClass*, you can type "MAC" and find the class in your autocomplete suggestions. The fuzzy algorithm sets a minimum threshold that symbols must meet to show up in the list. **Smart** filtering displays all symbols containing substrings that match what you typed. **Prefix** filtering searches for strings that begin with what you typed.
 
-![Visual C&#43;&#43; Insert Snippet Drop&#45;down](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
+For more information about C++ IntelliSense, see [Visual C++ IntelliSense](/visualstudio/ide/visual-cpp-intellisense) and [Configure a C++ project for IntelliSense](/visualstudio/ide/visual-cpp-intellisense-configuration).
+
+## IntelliCode
+
+IntelliCode is AI-assisted IntelliSense. It puts the most likely candidate at the top of your completion list. IntelliCode recommendations are based on thousands of open source projects on GitHub each with over 100 stars. When combined with the context of your code, the completion list is tailored to promote common practices.
+
+When writing C++, IntelliCode will assist when using popular libraries such as the C++ Standard Library. The context of your code is used to provide the most useful recommendations first. In the following example, the `size` member function is commonly used with the `sort` function, so it's surfaced to the top of the results list.
+
+![Screenshot of C plus plus IntelliCode dropdown which shows the members of the vector class sorted by which are most commonly used in your code.](../ide/media/intellicode-cpp.png)
+
+::: moniker range=">=msvc-160"
+
+In Visual Studio 2022 and Visual Studio 2019, IntelliCode is available as an optional component in the **C++ Desktop Development** workload. To make sure that IntelliCode is active for C++, go to **Tools** > **Options** > **IntelliCode** > **General** and set **C++ base model** to **Enabled**.
+
+::: moniker-end
+
+::: moniker range="msvc-150"
+
+In Visual Studio 2017, IntelliCode is available as an extension in the Visual Studio Marketplace.
+
+::: moniker-end
+
+## Predictive IntelliSense (Experimental)
+
+**Predictive IntelliSense** is an experimental feature that uses contextual awareness to limit the number of results displayed in the IntelliSense dropdown list. The algorithm applies type matching so that it shows only those results that match the expected type. In the simplest case, if you type `int x =` and invoke the IntelliSense dropdown, you will see only integers or functions returning integers. This feature is off by default because it's still in development. It works best with global symbols; member functions aren't yet supported. You can turn it on by typing "Predictive" in **Quick Launch** or by going to **Tools** > **Options** > **Text Editor** > **C/C++** > **Experimental** > **Enable Predictive IntelliSense**.
+
+To override **Predictive IntelliSense** and show the longer list, press **Ctrl + J**. If **Predictive IntelliSense** is on, invoking **Ctrl + J** removes the Predictive filter. Pressing **Ctrl + J** again removes the accessibility filter from Member List results where relevant. The ([+]) button under the IntelliSense dropdown list does the same thing as **Ctrl + J**. Hover over the button to see tooltip information about what is being shown.
+
+![Screenshot of C plus plus Predictive IntelliSense.](../ide/media/predictive-intellisense-cpp.png)
+
+The preceding screenshot shows several buttons under the dropdown list. These enable IntelliSense Filters for different kinds of results:
+
+- Variables and Constants
+- Functions
+- Types
+- Macros
+- Enums
+- Namespaces
+
+A button is displayed only if it's relevant to your current IntelliSense session. You typically don't see all the buttons at the same time.
+
+## Template IntelliSense
+
+The template bar is a UI element that appears when your cursor is on a template definition. It's useful because you can provide sample template arguments for intellisense that will appear when you edit the template body. For example, you could specify that a template argument is of type `std::vector<int>`. Then, when you use that argument in the template body, you'll see the members of `std::vector<int>`in intellisense.
+
+![Screenshot of the template bar which has the Add All Existing Instantiations option highlighted.](../ide/media/template-intellisense-cpp-1.png)
+
+Click the **\<T>** icon to expand/collapse the **Template Bar**. Click the pencil icon or double-click the **Template Bar** to open the **Edit** window where you specify argument types for the parameters.
+
+![Screenshot of the editing experience inside the template bar where you enter a type for each template parameter.](../ide/media/template-intellisense-cpp-3.png)
+
+The Template Bar can auto-populate parameter types based on instantiations of the template in your code. Click on **Add All Existing Instantiations** to see a list of all concrete arguments that have been used to instantiate the template throughout your code base.
+
+![Screenshot of the Template IntelliSense Results listing the different types used to instantiate template parameter C such as C = AmbientLight, C = Candle, and others.](../ide/media/template-intellisense-cpp-2.png)
+
+A window at the bottom of the editor shows where each instantiation was found, and what its arguments were. You can select an instantiation to go to the location in your code where that instantiation was found.
+
+![Screenshot of the list of instantiations of the template in your code. The instantion, file, location, and arguments are listed.](../ide/media/template-intellisense-cpp-4.png)
+
+**Template Bar** information is user-specific. It's stored in the `.vs` folder and isn't committed to source control.
+
+## Error squiggles and quick fixes
+
+If the editor detects problems with your code, it will add colored squiggles under the problem. Red squiggles indicate code that won't compile. Green squiggles indicate other kinds of problems that might still be potentially serious. You can open the **Error List** window to get more information about the problems.
+
+For some kinds of errors, and common coding patterns, the editor will offer a **Quick Fix** in the form of a light bulb that appears when you hover over the squiggle. Click the down arrow to see the suggestions.
+
+In the following example, a `vector` was declared but no definition was found, so the editor offers to include the necessary header file:
+
+![Screenshot of an error and the proposed quick fix to # include vector.](../ide/media/quick-fix-for-header-cpp.png "C++ Quick Fix")
+
+The editor also offers Quick Fixes for some refactoring opportunities. For example, if you declare a class in a header file, Visual Studio will offer to create a definition for it in a separate .cpp file.
+
+![Screenshot showing the quick fix with the Create definition of Channel Route Iterator in channels dot C P P option highlighted.](../ide/media/quick-fix.png "C++ Quick Fix")
+
+## Change tracking
+
+Whenever you make a change to a file, a yellow bar appears on the left to indicate that unsaved changes were made. When you save the file, the bar turns green. The green and yellow bars are preserved as long as the document is open in the editor. They represent the changes that were made since you last opened the document.
+
+![Screenshot of C plus plus change tracking. A yellow bar down the left appears to indicate changes.](../ide/media/change-tracking-cpp.png)
+
+## Move code
+
+You can move lines of code up and down by selecting them, holding down Alt, and pressing the **Up/Down** arrow keys.
+
+## Insert snippets
+
+A snippet is a predefined piece of source code. Right-click on a single point or on selected text and select Snippet to either insert a snippet or surround the selected text with the snippet. The following illustration shows the three steps to surround a selected statement with a for loop. The yellow highlights in the final image are editable fields that you access with the tab key. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).
+
+:::image type="complex" source="../ide/media/vs2015_cpp_surround_with.png" alt-text="Screenshot of the Insert Snippet Drop down control.":::
+A function is selected. In the dropdown that appears after a right-click on the function name, Surround With... is highlighted in yellow. In the Surround With: dropdown, the snippet for a `for` loop is selected. This results in putting a for loop around the function. The loop variable and limit are shown in yellow to indicate that they are editable fields.
+:::image-end:::
 
 ## Add Class
 
-Add a new class from the **Project** menu by using the Class Wizard.
+Add a new class from the **Project** menu, or from the context menu in **Solution Explorer**:
 
-![Add New Class in Visual C&#43;&#43;](../ide/media/vs2015_cpp_add_class.png "vs2015_cpp_add_class")
+![Screenshot of the Add New Class dialog. It has fields for the class name, accessibility, files to put the declaration and implementation, and so on.](../ide/media/vs2017-add-class.png)
 
 You can also use Class Wizard to modify or examine an existing class.
 
-![Visual C&#43;&#43; Class Wizard](../ide/media/vs2015_cpp_class_wizard.png "vs2015_cpp_class_wizard")
+![Screenshot of the Class Wizard which has options for adding methods, member variables, and much more.](../ide/media/vs2017-class-wizard.png)
 
 For more information, see [Adding Functionality with Code Wizards (C++)](../ide/adding-functionality-with-code-wizards-cpp.md).
 
@@ -49,74 +131,55 @@ For more information, see [Adding Functionality with Code Wizards (C++)](../ide/
 
 Refactorings are available under the Quick Action context menu, or by clicking on a [light bulb](/visualstudio/ide/perform-quick-actions-with-light-bulbs) in the editor.  Some are also found in the **Edit > Refactor** menu.  These features include:
 
-* [Rename](refactoring/rename.md)
-* [Extract Function](refactoring/extract-function.md)
-* [Implement Pure Virtuals](refactoring/implement-pure-virtuals.md)
-* [Create Declaration / Definition](refactoring/create-declaration-definition.md)
-* [Move Function Definition](refactoring/move-definition-location.md)
-* [Convert to Raw String Literal](refactoring/convert-to-raw-string-literal.md)
-* [Change Signature](refactoring/change-signature.md)
+- [Rename](refactoring/rename.md)
+- [Extract Function](refactoring/extract-function.md)
+- [Implement Pure Virtuals](refactoring/implement-pure-virtuals.md)
+- [Create Declaration / Definition](refactoring/create-declaration-definition.md)
+- [Move Function Definition](refactoring/move-definition-location.md)
+- [Convert to Raw String Literal](refactoring/convert-to-raw-string-literal.md)
+- [Change Signature](refactoring/change-signature.md)
 
-## Navigate and understand
+## Code style enforcement with ClangFormat and EditorConfig
 
-Visual C++ shares many code navigation features with other languages. For more information, see [Navigating Code](/visualstudio/ide/navigating-code) and [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).
+Visual Studio 2017 and later comes with built-in support for [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html), a popular code-formatting utility for C++ based on Clang/LLVM. Type "ClangFormat" into [Quick Launch](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) to set it to use one of these common formats:
 
-## QuickInfo
+- LLVM
+- Google
+- Chromium
+- Mozilla
+- WebKit
+- Visual Studio
 
-Hover over a variable to see its type information.
+You can also provide your own `.clang-format` or `_clang-format` file to apply custom rules to all code files at the same level or below.
 
-![Visual C&#43;&#43; QuickInfo](../ide/media/vs2015_cpp_quickinfo.png "vs2015_cpp_quickInfo")
+The files are easily shareable via source control, so you can enforce coding conventions across your whole development team.
 
-## Open document (Navigate to header)
+![Screenshot showing a .clang-format file which has many options such as the column limit, indent width, tab width, and so on.](../ide/media/clang-format-cpp.png)
 
-Right click on the header name in an `#include` directive and open the header file.
+Visual Studio 2017 and later also supports [EditorConfig](https://editorconfig.org/), which works in a similar way. ClangFormat, however, has more style options than EditorConfig, including rules that are specific to C++. With **EditorConfig**, you create **.editorconfig** files and place them in different folders of your codebase to specify code styles for those folders and their subfolders. An **.editorconfig** file supersedes any other **.editorconfig** files in parent folders and overwrites any formatting settings configured via **Tools** > **Options**. You can set rules for tabs vs. spaces, indent size, and more. For more information, see [Create portable, custom editor settings with EditorConfig](/visualstudio/ide/create-portable-custom-editor-options).
 
-![Visual C&#43;&#43; Open Document menu option](../ide/media/vs2015_cpp_open_document.png "vs2015_cpp_open_document")
+## Other formatting options
 
-## Peek Definition
+The **Quick Launch** search box provides the fastest way to find a setting or tool. It's located on the main menu. Just start typing and the auto-completion list will filter the results.
 
-Hover over a variable or function declaration, right-click, then choose **Peek Definition** to see an inline view of its definition. For more information, see [Peek Definition (Alt+F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12).
+![Screenshot of the Quick Launch search box. It shows searching C plus plus advanced which results in options for the text editor.](../ide/media/vs2015_cpp_quick_launch.png "Quick Launch")
 
-![Visual C&#43;&#43; Peek Definition](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
+To set formatting options such as indents, brace completion, and colorization, type "C++ Formatting" into the **Quick Launch** window.
 
-## Go To Definition
+![Screenshot showing C++ formatting options such as whether to automatically indent when you type a tab.](media/cpp-formatting-options.png)
 
-Hover over a variable or function declaration, right-click, then choose **Go To Definition** to open the document where the object is defined.
+Other formatting options are found under **Edit** > **Advanced** in the main menu.
 
-## View Call Hierarchy
+![Screenshot showing advanced editing options such a viewing white space, word wrap, commenting a selection, increasing line indent, and more.](media/edit-advanced-cpp.png)
 
-Right click on any function call and view a resursive list of all the functions that it calls, and all the functions that call it. Each function in the list can be expanded in the same way. For more information, see [Call Hierarchy](/visualstudio/ide/reference/call-hierarchy).
+Options for enabling and configuring C++-specific editing features are located under **Tools** > **Options** > **Text Editor** > **C/C++**. After choosing which option you want to set, you can get more help by pressing **F1** when the dialog is in focus. For general code formatting options, type `Editor C++` into **Quick Launch**.
 
-![Visual C&#43;&#43; Call Hierarchy](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
+![Screenshot showing the Visual Studio menu item Tools selected, and the Options menu item highlighted.](../ide/media/tools-options.png "Editor options")
 
-## Toggle Header / Code File
+Experimental features, which may or may not be included in a future version of Visual Studio, are found in the [Text Editor C++ Experimental](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) dialog. In Visual Studio 2017 and later you can enable **Predictive IntelliSense** in this dialog.
 
-Right-click and choose **Toggle Header / Code File** to switch back and forth between a header file and its associated code file.
+## See Also
 
-## Outlining
-
-Right-click anywhere in a source code file and choose **Outlining** to collapse or expand definitions and/or custom regions to make it easier to browse only the parts you are interested in. For more information, see [Outlining](/visualstudio/ide/outlining).
-
-![Visual C&#43;&#43; Outlining](../ide/media/vs2015_cpp_outlining.png "vs2015_cpp_outlining")
-
-## Scrollbar map mode
-
-Scrollbar map mode enables you to quickly scroll and browse through a code file without actually leaving your current location. Or click anywhere on the code map to go directly to that location. For more information, see [How to: Track your code by customizing the scrollbar](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
-
-![Code Map in Visual C&#43;&#43;](../ide/media/vs2015_cpp_code_map.png "vs2015_cpp_code_map")
-
-## Generate graph of include files
-
-Right click on a code file in your project and choose **Generate graph of include files** to see a graph of which files are included by other files.
-
-![Visual C&#43;&#43; graph of include files](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
-
-## F1 Help
-
-Place the cursor on or just after any type, keyword or function and press F1 to go directly to the relevant reference topic on docs.microsoft.com. F1 also works on items in the error list, and in many dialog boxes.
-
-## Quick Launch
-
-To easily navigate to any window or tool in Visual Studio, simply type its name in the Quick Launch window in the upper right corner of the UI. The auto-completion list will filter as you type.
-
-![Visual Studio Quick Launch](../ide/media/vs2015_cpp_quick_launch.png "vs2015_cpp_quick_launch")
+[Read and understand C++ code](read-and-understand-code-cpp.md)</br>
+[Navigate your C++ code base in Visual Studio](navigate-code-cpp.md)</br>
+[Collaborate with Live Share for C++](live-share-cpp.md)

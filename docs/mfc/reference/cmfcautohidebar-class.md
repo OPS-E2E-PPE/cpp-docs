@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCAutoHideBar Class"
 title: "CMFCAutoHideBar Class"
 ms.date: "10/18/2018"
 f1_keywords: ["CMFCAutoHideBar", "AFXAUTOHIDEBAR/CMFCAutoHideBar", "AFXAUTOHIDEBAR/CMFCAutoHideBar::CMFCAutoHideBar", "AFXAUTOHIDEBAR/CMFCAutoHideBar::AddAutoHideWindow", "AFXAUTOHIDEBAR/CMFCAutoHideBar::AllowShowOnPaneMenu", "AFXAUTOHIDEBAR/CMFCAutoHideBar::CalcFixedLayout", "AFXAUTOHIDEBAR/CMFCAutoHideBar::Create", "AFXAUTOHIDEBAR/CMFCAutoHideBar::GetFirstAHWindow", "AFXAUTOHIDEBAR/CMFCAutoHideBar::GetVisibleCount", "AFXAUTOHIDEBAR/CMFCAutoHideBar::OnShowControlBarMenu", "AFXAUTOHIDEBAR/CMFCAutoHideBar::RemoveAutoHideWindow", "AFXAUTOHIDEBAR/CMFCAutoHideBar::SetActiveInGroup", "AFXAUTOHIDEBAR/CMFCAutoHideBar::SetRecentVisibleState", "AFXAUTOHIDEBAR/CMFCAutoHideBar::ShowAutoHideWindow", "AFXAUTOHIDEBAR/CMFCAutoHideBar::StretchPane", "AFXAUTOHIDEBAR/CMFCAutoHideBar::UnSetAutoHideMode", "AFXAUTOHIDEBAR/CMFCAutoHideBar::UpdateVisibleState", "AFXAUTOHIDEBAR/CMFCAutoHideBar::m_nShowAHWndDelay"]
@@ -82,7 +83,7 @@ The following example demonstrates how to construct a `CMFCAutoHideBar` object a
 
 **Header:** afxautohidebar.h
 
-## <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow
+## <a name="addautohidewindow"></a> CMFCAutoHideBar::AddAutoHideWindow
 
 Adds functionality to a `CDockablePane` window that enables it to auto-hide.
 
@@ -114,7 +115,7 @@ The *dwAlignment* parameter indicates where the auto-hide button resides in the 
 
 - CBRS_ALIGN_BOTTOM
 
-## <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu
+## <a name="allowshowonpanemenu"></a> CMFCAutoHideBar::AllowShowOnPaneMenu
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -124,7 +125,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### Remarks
 
-## <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout
+## <a name="calcfixedlayout"></a> CMFCAutoHideBar::CalcFixedLayout
 
 ```
 virtual CSize CalcFixedLayout(
@@ -142,7 +143,7 @@ virtual CSize CalcFixedLayout(
 
 ### Remarks
 
-## <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar
+## <a name="cmfcautohidebar"></a> CMFCAutoHideBar::CMFCAutoHideBar
 
 Constructs a CMFCAutoHideBar object.
 
@@ -152,7 +153,7 @@ CMFCAutoHideBar();
 
 ### Remarks
 
-## <a name="create"></a>  CMFCAutoHideBar::Create
+## <a name="create"></a> CMFCAutoHideBar::Create
 
 ```
 virtual BOOL Create(
@@ -185,7 +186,7 @@ virtual BOOL Create(
 
 ### Remarks
 
-## <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow
+## <a name="getfirstahwindow"></a> CMFCAutoHideBar::GetFirstAHWindow
 
 Returns a pointer to the first auto-hide window in the application.
 
@@ -199,7 +200,7 @@ The first auto-hide window in the application, or NULL if there isn't one.
 
 ### Remarks
 
-## <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount
+## <a name="getvisiblecount"></a> CMFCAutoHideBar::GetVisibleCount
 
 Gets the number of visible auto-hide buttons.
 
@@ -213,7 +214,7 @@ Returns the number of visible auto-hide buttons.
 
 ### Remarks
 
-## <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay
+## <a name="m_nshowahwnddelay"></a> CMFCAutoHideBar::m_nShowAHWndDelay
 
 The time delay between the moment when the user places the mouse cursor over a [CMFCAutoHideButton Class](../../mfc/reference/cmfcautohidebutton-class.md) and the moment when the framework shows the associated window.
 
@@ -225,7 +226,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 
 When the user places the mouse cursor over a `CMFCAutoHideButton`, there is a slight delay before the framework displays the associated window. This parameter determines the length of that delay in milliseconds.
 
-## <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu
+## <a name="onshowcontrolbarmenu"></a> CMFCAutoHideBar::OnShowControlBarMenu
 
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
@@ -239,7 +240,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 
 ### Remarks
 
-## <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow
+## <a name="removeautohidewindow"></a> CMFCAutoHideBar::RemoveAutoHideWindow
 
 Removes and destroys the auto-hide window.
 
@@ -258,7 +259,7 @@ TRUE if successful; otherwise FALSE.
 
 ### Remarks
 
-## <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup
+## <a name="setactiveingroup"></a> CMFCAutoHideBar::SetActiveInGroup
 
 Flags an auto-hide bar as active.
 
@@ -275,9 +276,9 @@ TRUE to set to active; otherwise FALSE.
 
 See [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).
 
-## <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState
+## <a name="setrecentvisiblestate"></a> CMFCAutoHideBar::SetRecentVisibleState
 
-```
+```cpp
 void SetRecentVisibleState(BOOL bState);
 ```
 
@@ -288,7 +289,7 @@ void SetRecentVisibleState(BOOL bState);
 
 ### Remarks
 
-## <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow
+## <a name="showautohidewindow"></a> CMFCAutoHideBar::ShowAutoHideWindow
 
 Shows the auto-hide window.
 
@@ -316,7 +317,7 @@ TRUE if successful; otherwise FALSE.
 
 ### Remarks
 
-## <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane
+## <a name="stretchpane"></a> CMFCAutoHideBar::StretchPane
 
 Resizes the auto-hide bar in its collapsed state to fit the `CMFCAutoHideButton` object.
 
@@ -342,11 +343,11 @@ The resulting size of the resized pane.
 
 Derived classes can override this method to customize the behavior.
 
-## <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode
+## <a name="unsetautohidemode"></a> CMFCAutoHideBar::UnSetAutoHideMode
 
 Disables auto-hide mode for a group of auto-hide bars.
 
-```
+```cpp
 void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
 ```
 
@@ -357,17 +358,17 @@ A pointer to the first auto-hide bar in the group.
 
 ### Remarks
 
-## <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState
+## <a name="updatevisiblestate"></a> CMFCAutoHideBar::UpdateVisibleState
 
 Called by the framework when the auto-hide bar needs to be redrawn.
 
-```
+```cpp
 void UpdateVisibleState();
 ```
 
 ### Remarks
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2736"
 title: "Compiler Error C2736"
 ms.date: "11/04/2016"
 f1_keywords: ["C2736"]
@@ -13,7 +14,7 @@ The keyword is invalid in a cast.
 
 The following sample generates C2736:
 
-```
+```cpp
 // C2736.cpp
 int main() {
    return (virtual) 0;   // C2736

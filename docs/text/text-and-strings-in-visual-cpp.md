@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Text and Strings in Visual C++"
 title: "Text and Strings in Visual C++"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["globalization [C++], character sets", "programming [C++], international", "multiple language support [C++]", "Unicode [C++]", "international applications [C++], about international applications", "portability [C++]", "translation [C++], character sets", "non-European characters [C++]", "character sets [C++]", "globalization [C++]", "Japanese characters [C++]", "Kanji character support [C++]", "local character sets [C++]", "ASCII characters [C++]", "character sets [C++], about character sets", "localization [C++], character sets", "translating code [C++]", "localization [C++]", "character sets [C++], non-European", "portability [C++], character sets", "MBCS [C++], international programming"]
@@ -30,7 +31,7 @@ Demonstrates how to convert various Visual C++ string types into other strings.
 [Internationalization](../c-runtime-library/internationalization.md)<br/>
 Discusses international support in the C run-time library.
 
-[International Samples](https://github.com/Microsoft/VCSamples)<br/>
+[International Samples](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/International)<br/>
 Provides links to samples demonstrating internationalization in Visual C++.
 
 [Language and Country/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>

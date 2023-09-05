@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Semantics of Expressions"
 title: "Semantics of Expressions"
 ms.date: "11/19/2018"
 helpviewer_keywords: ["grammar, expressions", "expressions [C++], semantics", "expression evaluation", "expression evaluation, about expression evaluation"]
@@ -33,7 +34,7 @@ int main()
 54
 ```
 
-![Evaluation order in an expression](../cpp/media/vc38zv1.gif "Evaluation order in an expression") <br/>
+![Diagram of evaluation order in an expression.](../cpp/media/vc38zv1.gif "Evaluation order in an expression") <br/>
 Expression-evaluation order
 
 The order in which the expression shown in the above figure is evaluated is determined by the precedence and associativity of the operators:
@@ -46,7 +47,7 @@ The order in which the expression shown in the above figure is evaluated is dete
 
 When parentheses are used to group the subexpressions, they alter the precedence and also the order in which the expression is evaluated, as shown in the following figure.
 
-![Evaluation order of expression with parentheses](../cpp/media/vc38zv2.gif "Evaluation order of expression with parentheses") <br/>
+![Evaluation order of expression with parentheses.](../cpp/media/vc38zv2.gif "Evaluation order of expression with parentheses") <br/>
 Expression-evaluation order with parentheses
 
 Expressions such as those in the above figure are evaluated purely for their side effects — in this case, to transfer information to the standard output device.
@@ -59,10 +60,10 @@ The C++ language specifies certain compatibilities when specifying operands. The
 
 |Type expected|Types allowed|
 |-------------------|-------------------|
-|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|
-|*type* \*|*type* \*<br /> `const` *type* \*<br /> `volatile` *type* \*<br /> `volatile const` *type* \*|
-|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|
-|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|
+|*type*|**`const`** *type*<br /> **`volatile`** *type*<br /> *type*&<br /> **`const`** *type*&<br /> **`volatile`** *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|
+|*type* \*|*type* \*<br /> **`const`** *type* \*<br /> **`volatile`** *type* \*<br /> `volatile const` *type* \*|
+|**`const`** *type*|*type*<br /> **`const`** *type*<br />**`const`** *type*&|
+|**`volatile`** *type*|*type*<br /> **`volatile`** *type*<br /> **`volatile`** *type*&|
 
 Because the preceding rules can always be used in combination, a const pointer to a volatile object can be supplied where a pointer is expected.
 
@@ -78,15 +79,15 @@ func( i, ++i );
 
 The C++ language does not guarantee the order in which arguments to a function call are evaluated. Therefore, in the preceding example, `func` could receive the values 7 and 8, or 8 and 8 for its parameters, depending on whether the parameters are evaluated from left to right or from right to left.
 
-## C++ sequence points (Microsoft Specific)
+## C++ sequence points (Microsoft-specific)
 
 An expression can modify an object's value only once between consecutive "sequence points."
 
 The C++ language definition does not currently specify sequence points. Microsoft C++ uses the same sequence points as ANSI C for any expression involving C operators and not involving overloaded operators. When operators are overloaded, the semantics change from operator sequencing to function-call sequencing. Microsoft C++ uses the following sequence points:
 
-- Left operand of the logical AND operator (&&). The left operand of the logical AND operator is completely evaluated and all side effects completed before continuing. There is no guarantee that the right operand of the logical AND operator will be evaluated.
+- Left operand of the logical AND operator (`&&`). The left operand of the logical AND operator is completely evaluated and all side effects completed before continuing. There's no guarantee that the right operand of the logical AND operator will be evaluated.
 
-- Left operand of the logical OR operator (&#124;&#124;). The left operand of the logical OR operator is completely evaluated and all side effects completed before continuing. There is no guarantee that the right operand of the logical OR operator will be evaluated.
+- Left operand of the logical OR operator (`||`). The left operand of the logical OR operator is completely evaluated and all side effects completed before continuing. There's no guarantee that the right operand of the logical OR operator will be evaluated.
 
 - Left operand of the comma operator. The left operand of the comma operator is completely evaluated and all side effects completed before continuing. Both operands of the comma operator are always evaluated.
 

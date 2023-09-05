@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ODBC Driver List"
 title: "ODBC Driver List"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ODBC drivers", "ODBC drivers, list of", "drivers, ODBC"]
@@ -24,6 +25,6 @@ Visual C++ provides ODBC drivers for the following databases:
 
 For information about ODBC drivers available from Microsoft and other companies, including the ODBC Driver Pack, contact Microsoft Product Support Services.
 
-## See Also
+## See also
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

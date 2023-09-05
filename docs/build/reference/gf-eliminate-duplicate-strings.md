@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: /GF (Eliminate Duplicate Strings)"
 title: "/GF (Eliminate Duplicate Strings)"
 ms.date: "11/04/2016"
 f1_keywords: ["VC.Project.VCCLCompilerTool.StringPooling", "VC.Project.VCCLWCECompilerTool.StringPooling", "/gf"]
@@ -29,20 +30,18 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
->  The [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) option, used for Edit and Continue, automatically sets the **/GF** option.
+> The [/ZI](z7-zi-zi-debug-information-format.md) option, used for Edit and Continue, automatically sets the **/GF** option.
 
 > [!NOTE]
->  The **/GF** compiler option creates an addressable section for each unique string. And by default, an object file can contain up to 65,536 addressable sections. If your program contains more than 65,536 strings, use the [/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md) compiler option to create more sections.
+> The **/GF** compiler option creates an addressable section for each unique string. And by default, an object file can contain up to 65,536 addressable sections. If your program contains more than 65,536 strings, use the [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) compiler option to create more sections.
 
-**/GF** is in effect when [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) or **/O2** is used.
+**/GF** is in effect when [/O1](o1-o2-minimize-size-maximize-speed.md) or [/O2](o1-o2-minimize-size-maximize-speed.md) is used.
 
 ### To set this compiler option in the Visual Studio development environment
 
-1. Open the project's **Property Pages** dialog box. For details, see [Working with Project Properties](../../ide/working-with-project-properties.md).
+1. Open the project's **Property Pages** dialog box. For details, see [Set C++ compiler and build properties in Visual Studio](../working-with-project-properties.md).
 
-1. Click the **C/C++** folder.
-
-1. Click the **Code Generation** property page.
+1. Select the **Configuration Properties** > **C/C++** > **Code Generation** property page.
 
 1. Modify the **Enable String Pooling** property.
 
@@ -50,7 +49,7 @@ char *t = "This is a character buffer";
 
 - See <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>.
 
-## See Also
+## See also
 
-[Compiler Options](../../build/reference/compiler-options.md)<br/>
-[Setting Compiler Options](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[MSVC Compiler Command-Line Syntax](compiler-command-line-syntax.md)

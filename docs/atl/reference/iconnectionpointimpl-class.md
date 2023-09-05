@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IConnectionPointImpl Class"
 title: "IConnectionPointImpl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["IConnectionPointImpl", "ATLCOM/ATL::IConnectionPointImpl", "ATLCOM/ATL::IConnectionPointImpl::Advise", "ATLCOM/ATL::IConnectionPointImpl::EnumConnections", "ATLCOM/ATL::IConnectionPointImpl::GetConnectionInterface", "ATLCOM/ATL::IConnectionPointImpl::GetConnectionPointContainer", "ATLCOM/ATL::IConnectionPointImpl::Unadvise", "ATLCOM/ATL::IConnectionPointImpl::m_vec"]
@@ -63,7 +64,7 @@ For more information about using connection points in ATL, see the article [Conn
 
 **Header:** atlcom.h
 
-##  <a name="advise"></a>  IConnectionPointImpl::Advise
+## <a name="advise"></a> IConnectionPointImpl::Advise
 
 Establishes a connection between the connection point and a sink.
 
@@ -77,9 +78,9 @@ STDMETHOD(Advise)(
 
 Use [Unadvise](#unadvise) to terminate the connection call.
 
-See [IConnectionPoint::Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) in the Windows SDK.
+See [IConnectionPoint::Advise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) in the Windows SDK.
 
-##  <a name="enumconnections"></a>  IConnectionPointImpl::EnumConnections
+## <a name="enumconnections"></a> IConnectionPointImpl::EnumConnections
 
 Creates an enumerator to iterate through the connections for the connection point.
 
@@ -89,9 +90,9 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 
 ### Remarks
 
-See [IConnectionPoint::EnumConnections](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) in the Windows SDK.
+See [IConnectionPoint::EnumConnections](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) in the Windows SDK.
 
-##  <a name="getconnectioninterface"></a>  IConnectionPointImpl::GetConnectionInterface
+## <a name="getconnectioninterface"></a> IConnectionPointImpl::GetConnectionInterface
 
 Retrieves the IID of the interface represented by the connection point.
 
@@ -101,9 +102,9 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 
 ### Remarks
 
-See [IConnectionPoint::GetConnectionInterface](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface) in the Windows SDK.
+See [IConnectionPoint::GetConnectionInterface](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface) in the Windows SDK.
 
-##  <a name="getconnectionpointcontainer"></a>  IConnectionPointImpl::GetConnectionPointContainer
+## <a name="getconnectionpointcontainer"></a> IConnectionPointImpl::GetConnectionPointContainer
 
 Retrieves an interface pointer to the connectable object.
 
@@ -113,9 +114,9 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 
 ### Remarks
 
-See [IConnectionPoint::GetConnectionPointContainer](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer) in the Windows SDK.
+See [IConnectionPoint::GetConnectionPointContainer](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer) in the Windows SDK.
 
-##  <a name="m_vec"></a>  IConnectionPointImpl::m_vec
+## <a name="m_vec"></a> IConnectionPointImpl::m_vec
 
 Manages the connections between the connection point object and a sink.
 
@@ -127,7 +128,7 @@ CDV m_vec;
 
 By default, `m_vec` is of type [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md).
 
-##  <a name="unadvise"></a>  IConnectionPointImpl::Unadvise
+## <a name="unadvise"></a> IConnectionPointImpl::Unadvise
 
 Terminates a connection previously established through [Advise](#advise).
 
@@ -137,9 +138,9 @@ STDMETHOD(Unadvise)(DWORD dwCookie);
 
 ### Remarks
 
-See [IConnectionPoint::Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) in the Windows SDK.
+See [IConnectionPoint::Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) in the Windows SDK.
 
-## See Also
+## See also
 
-[IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)<br/>
+[IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

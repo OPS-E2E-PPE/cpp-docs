@@ -1,15 +1,21 @@
 ---
+description: "Learn more about: MFC Class Wizard"
 title: "MFC Class Wizard"
-ms.date: "11/04/2016"
+ms.date: "09/06/2019"
 f1_keywords: ["vc.wizards.classwizard"]
-helpviewer_keywords: ["wizards (MFC)", "MFC Class Wizard"]
-ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
+helpviewer_keywords: ["MFC Class Wizard"]
 ---
 # MFC Class Wizard
 
-Lets you add messages and message handlers to classes in your project. You can also start other wizards or add a class to your project.
+Use the **Class Wizard** to create new MFC classes, or add messages and message handlers to existing classes in your project.
 
-To open the **MFC Class Wizard**, on the **Project** menu, click **Class Wizard**. To open the wizard with a keyboard shortcut, type CTRL+SHIFT+X.
+There are three ways to open the **Class Wizard**:
+
+- On the **Project** menu, choose **Class Wizard**.
+- Type **Ctrl** > **Shift** > **X**.
+- In **Class View**, right-click on a class or the project node and choose **Class Wizard**.
+
+![Class Wizard.](media/class-wizard.png "MFC Class Wizard")
 
 ## UIElement List
 
@@ -27,9 +33,7 @@ To open the **MFC Class Wizard**, on the **Project** menu, click **Class Wizard*
 
 - **Add Class**
 
-   Lets you add a class from one of several sources.
-
-   Depending on your selection, the **MFC Add Class Wizard**, **Add Class From Typelib Wizard**, **Add Class From ActiveX Control Wizard**, or **MFC ODBC Consumer Wizard** is started.
+   Lets you add a new class to your MFC project.
 
 - **Base class**
 
@@ -61,19 +65,19 @@ To open the **MFC Class Wizard**, on the **Project** menu, click **Class Wizard*
 
    Lets you add, delete, edit, or search for a command and its message handler.
 
-   To add a handler, click **Add Handler**, or double-click an item in the **Object IDs** list or **Messages** list. The resulting function name, ID, and message are displayed in the **Member functions** list.
+   To add a handler, select **Add Handler**, or double-click an item in the **Object IDs** list or **Messages** list. The resulting function name, ID, and message are displayed in the **Member functions** list.
 
-   To delete a handler, select an item in the **Member functions** list and then click **Delete Handler**.
+   To delete a handler, select an item in the **Member functions** list and then select **Delete Handler**.
 
-   To modify a handler, double-click the corresponding item in the **Member functions** list. Or, select an item in the list box and then click **Edit Code**.
+   To modify a handler, double-click the corresponding item in the **Member functions** list. Or, select an item in the list box and then select **Edit Code**.
 
 - **Messages**
 
    Lets you add, delete, edit, or search for a message and its message handler.
 
-   To add a handler, click **Add Handler**, or double-click an item in the **Messages** list.
+   To add a handler, select **Add Handler**, or double-click an item in the **Messages** list.
 
-   To add a custom message, click **Add Custom Message** or press the Enter key, and then specify values in the **Add Custom Message** dialog box. In that dialog box, you can also select **Registered Message** to handle a window message that is guaranteed to be unique throughout the operating system.
+   To add a custom message, select **Add Custom Message** or press the Enter key, and then specify values in the **Add Custom Message** dialog box. In that dialog box, you can also select **Registered Message** to handle a window message that is guaranteed to be unique throughout the operating system.
 
 - **Virtual Functions**
 
@@ -87,14 +91,14 @@ To open the **MFC Class Wizard**, on the **Project** menu, click **Class Wizard*
 
    Lets you add, delete, or search for a method, and also go to the definition or declaration of a method.
 
-   To add a method, click **Add Method**, and then specify values in the **Add Method** dialog box.
+   To add a method, select **Add Method**, and then specify values in the **Add Method** dialog box.
 
-   To delete a method, select an item in the **Methods** list and then click **Delete Method**.
+   To delete a method, select an item in the **Methods** list and then select **Delete Method**.
 
-   To display a declaration, select an item in the **Methods** list and then click **Go to Declaration.**
+   To display a declaration, select an item in the **Methods** list and then select **Go to Declaration.**
 
-   To display a definition, double-click an item in the **Methods** list. Or, select an item in the **Methods** list and then click the **Go to Definition** button.
+   To display a definition, double-click an item in the **Methods** list. Or, select an item in the **Methods** list and then select the **Go to Definition** button.
 
-## See Also
+## See also
 
 [Adding a Class](../../ide/adding-a-class-visual-cpp.md)

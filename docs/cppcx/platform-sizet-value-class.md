@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::SizeT value class"
 title: "Platform::SizeT value class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -32,7 +33,7 @@ public ref class SizeT sealed : ValueType
 
 **Metadata:** platform.winmd
 
-## <a name="ctor"></a>  SizeT::SizeT constructor
+## <a name="ctor"></a> SizeT::SizeT constructor
 
 Initializes a new instance of SizeT with the specified value.
 
@@ -50,6 +51,6 @@ An unsigned 32-bit value.
 *value2*<br/>
 Pointer to an unsigned 32-bit value.
 
-## See Also
+## See also
 
 [Platform namespace](../cppcx/platform-namespace-c-cx.md)

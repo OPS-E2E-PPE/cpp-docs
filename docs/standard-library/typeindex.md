@@ -1,10 +1,11 @@
 ---
-title: "&lt;typeindex&gt;"
+description: "Learn more about: <typeindex>"
+title: "<typeindex>"
 ms.date: "11/04/2016"
 f1_keywords: ["<typeindex>"]
 ms.assetid: a9551137-f74b-4f02-af64-ff00214cea1f
 ---
-# &lt;typeindex&gt;
+# `<typeindex>`
 
 Include the standard header \<typeindex> to define a class and function that support the indexing of objects of class [type_info](../cpp/type-info-class.md).
 
@@ -22,6 +23,6 @@ The `type_index` class wraps a pointer to a `type_info` object to assist in inde
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

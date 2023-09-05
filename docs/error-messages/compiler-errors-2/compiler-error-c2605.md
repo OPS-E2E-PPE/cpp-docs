@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2605"
 title: "Compiler Error C2605"
 ms.date: "11/04/2016"
 f1_keywords: ["C2605"]
@@ -15,7 +16,7 @@ Certain names are reserved by the compiler for internal functions.  For more inf
 
 The following sample generates C2605.
 
-```
+```cpp
 // C2605.cpp
 // compile with: /clr /c
 ref class R {

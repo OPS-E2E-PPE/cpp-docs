@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4912"
 title: "Compiler Warning (level 1) C4912"
 ms.date: "11/04/2016"
 f1_keywords: ["C4912"]
@@ -13,7 +14,7 @@ Attributes that apply to nested UDTs (user-defined type, which could be a typede
 
 The following code shows how this warning would be generated:
 
-```
+```cpp
 // C4912.cpp
 // compile with: /W1
 #include <windows.h>

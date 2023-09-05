@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3623"
 title: "Compiler Error C3623"
 ms.date: "11/04/2016"
 f1_keywords: ["C3623"]
@@ -13,7 +14,7 @@ The use of bit fields is not permitted on variables in a managed or WinRT class.
 
 The following sample generates C3623:
 
-```
+```cpp
 // C3623.cpp
 // compile with: /clr
 using namespace System;

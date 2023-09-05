@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2425"
 title: "Compiler Error C2425"
 ms.date: "11/04/2016"
 f1_keywords: ["C2425"]
@@ -15,7 +16,7 @@ To fix this issue, replace the token with a constant literal or with a calculati
 
 The following sample generates C2425:
 
-```
+```cpp
 // C2425.cpp
 // processor: x86
 int main() {

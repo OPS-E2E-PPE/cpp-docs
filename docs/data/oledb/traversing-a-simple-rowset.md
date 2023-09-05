@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Traversing a Simple Rowset"
 title: "Traversing a Simple Rowset"
 ms.date: "10/19/2018"
 helpviewer_keywords: ["data access [C++], rowsets", "rowsets [C++], accessing", "simple rowsets", "OLE DB consumers [C++], database attributes", "accessors [C++], rowsets"]
@@ -21,7 +22,7 @@ int main()
     CTable<CAccessor<CArtists>> artists;
 
     LPCSTR clsid; // Initialize CLSID_MSDASQL here
-	LPCTSTR pName = L"NWind";
+    LPCTSTR pName = L"NWind";
 
     // Open the connection, session, and table, specifying authentication
     // using Windows NT integrated security. Hard-coding a password is a major
@@ -63,6 +64,6 @@ END_COLUMN_MAP()
 };
 ```
 
-## See Also
+## See also
 
 [Working with OLE DB Consumer Templates](../../data/oledb/working-with-ole-db-consumer-templates.md)

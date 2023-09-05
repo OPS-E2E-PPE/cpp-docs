@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: weibull_distribution Class"
 title: "weibull_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::weibull_distribution", "random/std::weibull_distribution::reset", "random/std::weibull_distribution::a", "random/std::weibull_distribution::b", "random/std::weibull_distribution::param", "random/std::weibull_distribution::min", "random/std::weibull_distribution::max", "random/std::weibull_distribution::operator()", "random/std::weibull_distribution::param_type", "random/std::weibull_distribution::param_type::a", "random/std::weibull_distribution::param_type::b", "random/std::weibull_distribution::param_type::operator==", "random/std::weibull_distribution::param_type::operator!="]
@@ -42,17 +43,15 @@ class weibull_distribution
 
 ### Parameters
 
-*RealType*<br/>
-The floating-point result type, defaults to **double**. For possible types, see [\<random>](../standard-library/random.md).
+*RealType*\
+The floating-point result type, defaults to **`double`**. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes a distribution that produces values of a user-specified floating point type, or type **double** if none is provided, distributed according to the Weibull Distribution. The following table links to articles about individual members.
+The class template describes a distribution that produces values of a user-specified floating point type, or type **`double`** if none is provided, distributed according to the Weibull Distribution. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[weibull_distribution](#weibull_distribution)|`weibull_distribution::a`|`weibull_distribution::param`|
-|`weibull_distribution::operator()`|`weibull_distribution::b`|[param_type](#param_type)|
+[weibull_distribution](#weibull_distribution)\
+[param_type](#param_type)|
 
 The property functions `a()` and `b()` return their respective values for stored distribution parameters *a* and *b*.
 
@@ -66,7 +65,7 @@ The `operator()` member functions return the next generated value based on the U
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the Weibull distribution, see the Wolfram MathWorld article [Weibull Distribution](http://mathworld.wolfram.com/WeibullDistribution.html).
+For detailed information about the Weibull distribution, see the Wolfram MathWorld article [Weibull Distribution](https://mathworld.wolfram.com/WeibullDistribution.html).
 
 ## Example
 
@@ -185,7 +184,7 @@ Distribution for 10 samples:
 
 **Namespace:** std
 
-## <a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
+## <a name="weibull_distribution"></a> weibull_distribution::weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -194,13 +193,13 @@ explicit weibull_distribution(const param_type& parm);
 
 ### Parameters
 
-*a*<br/>
+*a*\
 The `a` distribution parameter.
 
-*b*<br/>
+*b*\
 The `b` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The `param_type` structure used to construct the distribution.
 
 ### Remarks
@@ -211,7 +210,7 @@ The first constructor constructs an object whose stored `a` value holds the valu
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  weibull_distribution::param_type
+## <a name="param_type"></a> weibull_distribution::param_type
 
 Stores the parameters of the distribution.
 
@@ -229,13 +228,13 @@ struct param_type {
 
 ### Parameters
 
-*a*<br/>
+*a*\
 The `a` distribution parameter.
 
-*b*<br/>
+*b*\
 The `b` distribution parameter.
 
-*right*<br/>
+*right*\
 The `param_type` object to compare to this.
 
 ### Remarks
@@ -246,4 +245,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

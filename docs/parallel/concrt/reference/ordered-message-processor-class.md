@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ordered_message_processor Class"
 title: "ordered_message_processor Class"
 ms.date: "11/04/2016"
 f1_keywords: ["ordered_message_processor", "AGENTS/concurrency::ordered_message_processor", "AGENTS/concurrency::ordered_message_processor::ordered_message_processor", "AGENTS/concurrency::ordered_message_processor::async_send", "AGENTS/concurrency::ordered_message_processor::initialize", "AGENTS/concurrency::ordered_message_processor::initialize_batched_processing", "AGENTS/concurrency::ordered_message_processor::sync_send", "AGENTS/concurrency::ordered_message_processor::wait", "AGENTS/concurrency::ordered_message_processor::process_incoming_message"]
@@ -11,12 +12,12 @@ An `ordered_message_processor` is a `message_processor` that allows message bloc
 
 ## Syntax
 
-```
+```cpp
 template<class T>
 class ordered_message_processor : public message_processor<T>;
 ```
 
-#### Parameters
+### Parameters
 
 *T*<br/>
 The payload type of messages handled by the processor.
@@ -64,11 +65,11 @@ The payload type of messages handled by the processor.
 
 **Namespace:** concurrency
 
-##  <a name="async_send"></a> async_send
+## <a name="async_send"></a> async_send
 
 Asynchronously queues up messages and starts a processing task, if this has not been done already.
 
-```
+```cpp
 virtual void async_send(_Inout_opt_ message<T>* _Msg);
 ```
 
@@ -77,11 +78,11 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg);
 *_Msg*<br/>
 A pointer to a message.
 
-##  <a name="initialize"></a> initialize
+## <a name="initialize"></a> initialize
 
 Initializes the `ordered_message_processor` object with the appropriate callback function, scheduler and schedule group.
 
-```
+```cpp
 void initialize(
     _Inout_opt_ Scheduler* _PScheduler,
     _Inout_opt_ ScheduleGroup* _PScheduleGroup,
@@ -99,11 +100,11 @@ A pointer to the schedule group to be used for scheduling light-weight tasks.
 *_Handler*<br/>
 The handler functor invoked during callback.
 
-##  <a name="initialize_batched_processing"></a> initialize_batched_processing
+## <a name="initialize_batched_processing"></a> initialize_batched_processing
 
 Initialize batched message processing
 
-```
+```cpp
 virtual void initialize_batched_processing(
     _Handler_method const& _Processor,
     _Propagator_method const& _Propagator);
@@ -117,11 +118,11 @@ The processor functor invoked during callback.
 *_Propagator*<br/>
 The propagator functor invoked during callback.
 
-##  <a name="ctor"></a> ordered_message_processor
+## <a name="ctor"></a> ordered_message_processor
 
 Constructs an `ordered_message_processor` object.
 
-```
+```cpp
 ordered_message_processor();
 ```
 
@@ -129,11 +130,11 @@ ordered_message_processor();
 
 This `ordered_message_processor` will not schedule asynchronous or synchronous handlers until the `initialize` function is called.
 
-##  <a name="dtor"></a> ~ordered_message_processor
+## <a name="dtor"></a> ~ordered_message_processor
 
 Destroys the `ordered_message_processor` object.
 
-```
+```cpp
 virtual ~ordered_message_processor();
 ```
 
@@ -141,19 +142,19 @@ virtual ~ordered_message_processor();
 
 Waits for all outstanding asynchronous operations before destroying the processor.
 
-##  <a name="process_incoming_message"></a> process_incoming_message
+## <a name="process_incoming_message"></a> process_incoming_message
 
 The processing function that is called asynchronously. It dequeues messages and begins processing them.
 
-```
+```cpp
 virtual void process_incoming_message();
 ```
 
-##  <a name="sync_send"></a> sync_send
+## <a name="sync_send"></a> sync_send
 
 Synchronously queues up messages and starts a processing task, if this has not been done already.
 
-```
+```cpp
 virtual void sync_send(_Inout_opt_ message<T>* _Msg);
 ```
 
@@ -162,14 +163,14 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg);
 *_Msg*<br/>
 A pointer to a message.
 
-##  <a name="wait"></a> wait
+## <a name="wait"></a> wait
 
 A processor-specific spin wait used in destructors of message blocks to make sure that all asynchronous processing tasks have time to finish before destroying the block.
 
-```
+```cpp
 virtual void wait();
 ```
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

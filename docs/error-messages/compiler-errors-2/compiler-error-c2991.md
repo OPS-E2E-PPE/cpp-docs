@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2991"
 title: "Compiler Error C2991"
 ms.date: "11/04/2016"
 f1_keywords: ["C2991"]
@@ -13,7 +14,7 @@ There was a type conflict between two generic or template definitions of `parame
 
 The following sample generates C2991:
 
-```
+```cpp
 // C2991.cpp
 // compile with: /c
 template<class T, class T> struct TC {};   // C2991
@@ -23,7 +24,7 @@ template<class T, class T> struct TC {};   // C2991
 
 C2991 can also occur when using generics:
 
-```
+```cpp
 // C2991b.cpp
 // compile with: /clr /c
 generic<class T,class T> ref struct GC {};   // C2991

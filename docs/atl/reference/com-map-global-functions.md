@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COM Map Global Functions"
 title: "COM Map Global Functions"
 ms.date: "11/04/2016"
 f1_keywords: ["atlbase/ATL::AtlInternalQueryInterface", "atlbase/ATL::InlineIsEqualIUnknown"]
@@ -9,7 +10,7 @@ ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
 
 These functions provide support for COM Map `IUnknown` implementations.
 
-|||
+|Function|Description|
 |-|-|
 |[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delegates to the `IUnknown` of a nonaggregated object.|
 |[InlineIsEqualIUnknown](#inlineisequaliunknown)|Generates efficient code for comparing interfaces against `IUnknown`.|
@@ -18,7 +19,7 @@ These functions provide support for COM Map `IUnknown` implementations.
 
 **Header:** atlbase.h
 
-##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface
+## <a name="atlinternalqueryinterface"></a> AtlInternalQueryInterface
 
 Retrieves a pointer to the requested interface.
 
@@ -56,7 +57,7 @@ One of the standard HRESULT values.
 
 [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]
 
-##  <a name="inlineisequaliunknown"></a>  InlineIsEqualIUnknown
+## <a name="inlineisequaliunknown"></a> InlineIsEqualIUnknown
 
 Call this function, for the special case of testing for `IUnknown`.
 
@@ -69,7 +70,7 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
 *rguid1*<br/>
 [in] The GUID to compare to `IID_IUnknown`.
 
-## See Also
+## See also
 
 [Functions](../../atl/reference/atl-functions.md)<br/>
 [COM Map Macros](../../atl/reference/com-map-macros.md)

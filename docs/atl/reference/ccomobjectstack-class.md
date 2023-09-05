@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComObjectStack Class"
 title: "CComObjectStack Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComObjectStack", "ATLCOM/ATL::CComObjectStack", "ATLCOM/ATL::CComObjectStack::CComObjectStack", "ATLCOM/ATL::CComObjectStack::AddRef", "ATLCOM/ATL::CComObjectStack::QueryInterface", "ATLCOM/ATL::CComObjectStack::Release", "ATLCOM/ATL::CComObjectStack::m_hResFinalConstruct"]
@@ -64,7 +65,7 @@ The temporary object `Tempobj` is pushed onto the stack and automatically disapp
 
 **Header:** atlcom.h
 
-##  <a name="addref"></a>  CComObjectStack::AddRef
+## <a name="addref"></a> CComObjectStack::AddRef
 
 Returns zero.
 
@@ -80,7 +81,7 @@ Returns zero.
 
 In debug mode, calls `_ASSERTE`.
 
-##  <a name="ccomobjectstack"></a>  CComObjectStack::CComObjectStack
+## <a name="ccomobjectstack"></a> CComObjectStack::CComObjectStack
 
 The constructor.
 
@@ -92,7 +93,7 @@ CComObjectStack(void* = NULL);
 
 Calls `FinalConstruct` and then sets [m_hResFinalConstruct](#m_hresfinalconstruct) to the HRESULT returned by `FinalConstruct`. If you have not derived your base class from [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), you must supply your own `FinalConstruct` method. The destructor calls `FinalRelease`.
 
-##  <a name="dtor"></a>  CComObjectStack::~CComObjectStack
+## <a name="dtor"></a> CComObjectStack::~CComObjectStack
 
 The destructor.
 
@@ -104,7 +105,7 @@ CComObjectStack();
 
 Frees all allocated resources and calls [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
-##  <a name="m_hresfinalconstruct"></a>  CComObjectStack::m_hResFinalConstruct
+## <a name="m_hresfinalconstruct"></a> CComObjectStack::m_hResFinalConstruct
 
 Contains the HRESULT returned from calling `FinalConstruct` during construction of the `CComObjectStack` object.
 
@@ -112,7 +113,7 @@ Contains the HRESULT returned from calling `FinalConstruct` during construction 
 HRESULT    m_hResFinalConstruct;
 ```
 
-##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface
+## <a name="queryinterface"></a> CComObjectStack::QueryInterface
 
 Returns E_NOINTERFACE.
 
@@ -128,7 +129,7 @@ Returns E_NOINTERFACE.
 
 In debug mode, calls `_ASSERTE`.
 
-##  <a name="release"></a>  CComObjectStack::Release
+## <a name="release"></a> CComObjectStack::Release
 
 Returns zero.
 
@@ -144,7 +145,7 @@ Returns zero.
 
 In debug mode, calls `_ASSERTE`.
 
-## See Also
+## See also
 
 [CComAggObject Class](../../atl/reference/ccomaggobject-class.md)<br/>
 [CComObject Class](../../atl/reference/ccomobject-class.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3754"
 title: "Compiler Error C3754"
 ms.date: "11/04/2016"
 f1_keywords: ["C3754"]
@@ -15,7 +16,7 @@ A call was made to a function through a pointer to a type that does not contain 
 
 The following sample generates C3754:
 
-```
+```cpp
 // C3754a.cpp
 // compile with: /clr
 using namespace System;

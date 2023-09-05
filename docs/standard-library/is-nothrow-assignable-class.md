@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_nothrow_assignable Class"
 title: "is_nothrow_assignable Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_nothrow_assignable"]
@@ -18,15 +19,15 @@ struct is_nothrow_assignable;
 
 ### Parameters
 
-*To*<br/>
+*To*\
 The type of the object that receives the assignment.
 
-*From*<br/>
+*From*\
 The type of the object that provides the value.
 
 ## Remarks
 
-The expression `declval<To>() = declval<From>()` must be well-formed and must be known to the compiler not to throw. Both *From* and *To* must be complete types, **void**, or arrays of unknown bound.
+The expression `declval<To>() = declval<From>()` must be well-formed and must be known to the compiler not to throw. Both *From* and *To* must be complete types, **`void`**, or arrays of unknown bound.
 
 ## Requirements
 
@@ -36,4 +37,4 @@ The expression `declval<To>() = declval<From>()` must be well-formed and must be
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

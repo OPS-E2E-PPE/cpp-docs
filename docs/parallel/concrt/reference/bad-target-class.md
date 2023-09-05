@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: bad_target Class"
 title: "bad_target Class"
 ms.date: "11/04/2016"
 f1_keywords: ["bad_target", "CONCRT/concurrency::bad_target", "CONCRT/concurrency::bad_target::bad_target"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when a messaging block is given a point
 
 ## Syntax
 
-```
+```cpp
 class bad_target : public std::exception;
 ```
 
@@ -39,11 +40,11 @@ This exception is typically thrown for reasons such as a target attempting to co
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> bad_target
+## <a name="ctor"></a> bad_target
 
 Constructs a `bad_target` object.
 
-```
+```cpp
 explicit _CRTIMP bad_target(_In_z_ const char* _Message) throw();
 
 bad_target() throw();
@@ -54,8 +55,7 @@ bad_target() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [Asynchronous Message Blocks](../../../parallel/concrt/asynchronous-message-blocks.md)
-

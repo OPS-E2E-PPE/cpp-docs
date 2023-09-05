@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: poisson_distribution Class"
 title: "poisson_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::poisson_distribution", "random/std::poisson_distribution::reset", "random/std::poisson_distribution::mean", "random/std::poisson_distribution::param", "random/std::poisson_distribution::min", "random/std::poisson_distribution::max", "random/std::poisson_distribution::operator()", "random/std::poisson_distribution::param_type", "random/std::poisson_distribution::param_type::mean", "random/std::poisson_distribution::param_type::operator==", "random/std::poisson_distribution::param_type::operator!="]
@@ -42,17 +43,15 @@ public:
 
 ### Parameters
 
-*IntType*<br/>
-The integer result type, defaults to **int**. For possible types, see [\<random>](../standard-library/random.md).
+*IntType*\
+The integer result type, defaults to **`int`**. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The template class describes a distribution that produces values of a user-specified integral type with a Poisson distribution. The following table links to articles about individual members.
+The class template describes a distribution that produces values of a user-specified integral type with a Poisson distribution. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|
-|`poisson_distribution::operator()`||[param_type](#param_type)|
+[poisson_distribution](#poisson_distribution)\
+[param_type](#param_type)
 
 The property function `mean()` returns the value for stored distribution parameter *mean*.
 
@@ -66,7 +65,7 @@ The `operator()` member functions return the next generated value based on the U
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the Poisson distribution, see the Wolfram MathWorld article [Poisson Distribution](http://go.microsoft.com/fwlink/p/?linkid=401112).
+For detailed information about the Poisson distribution, see the Wolfram MathWorld article [Poisson Distribution](https://go.microsoft.com/fwlink/p/?linkid=401112).
 
 ## Example
 
@@ -171,7 +170,7 @@ Distribution for 100 samples:
 
 **Namespace:** std
 
-## <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution
+## <a name="poisson_distribution"></a> poisson_distribution::poisson_distribution
 
 Constructs the distribution.
 
@@ -182,10 +181,10 @@ explicit binomial_distribution(const param_type& parm);
 
 ### Parameters
 
-*mean*<br/>
+*mean*\
 The `mean` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The parameter structure used to construct the distribution.
 
 ### Remarks
@@ -196,7 +195,7 @@ The first constructor constructs an object whose stored `mean` value holds the v
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  poisson_distribution::param_type
+## <a name="param_type"></a> poisson_distribution::param_type
 
 Stores the parameters of the distribution.
 
@@ -223,4 +222,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

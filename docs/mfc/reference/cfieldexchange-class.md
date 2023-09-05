@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CFieldExchange Class"
 title: "CFieldExchange Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CFieldExchange", "AFXDB/CFieldExchange", "AFXDB/CFieldExchange::IsFieldType", "AFXDB/CFieldExchange::SetFieldType"]
@@ -31,9 +32,9 @@ class CFieldExchange
 Use this class if you are writing data exchange routines for custom data types or when you are implementing bulk row fetching; otherwise, you will not directly use this class. RFX and Bulk RFX exchanges data between the field data members of your recordset object and the corresponding fields of the current record on the data source.
 
 > [!NOTE]
->  If you are working with the Data Access Objects (DAO) classes rather than the Open Database Connectivity (ODBC) classes, use class [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) instead. For more information, see the article [Overview:Database Programming](../../data/data-access-programming-mfc-atl.md).
+> If you are working with the Data Access Objects (DAO) classes rather than the Open Database Connectivity (ODBC) classes, use class [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) instead. For more information, see the article [Overview:Database Programming](../../data/data-access-programming-mfc-atl.md).
 
-A `CFieldExchange` object provides the context information needed for record field exchange or bulk record field exchange to take place. `CFieldExchange` objects support a number of operations, including binding parameters and field data members and setting various flags on the fields of the current record. RFX and Bulk RFX operations are performed on recordset-class data members of types defined by the **enum** **FieldType** in `CFieldExchange`. Possible **FieldType** values are:
+A `CFieldExchange` object provides the context information needed for record field exchange or bulk record field exchange to take place. `CFieldExchange` objects support a number of operations, including binding parameters and field data members and setting various flags on the fields of the current record. RFX and Bulk RFX operations are performed on recordset-class data members of types defined by the **`enum`** **FieldType** in `CFieldExchange`. Possible **FieldType** values are:
 
 - `CFieldExchange::outputColumn` for field data members.
 
@@ -53,7 +54,7 @@ Most of the class's member functions and data members are provided for writing y
 
 **Header:** afxdb.h
 
-##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType
+## <a name="isfieldtype"></a> CFieldExchange::IsFieldType
 
 If you write your own RFX function, call `IsFieldType` at the beginning of your function to determine whether the current operation can be performed on a particular field or parameter data member type (a `CFieldExchange::outputColumn`, `CFieldExchange::inputParam`, `CFieldExchange::param`, `CFieldExchange::outputParam`, or `CFieldExchange::inoutParam`).
 
@@ -74,11 +75,11 @@ Nonzero if the current operation can be performed on the current field or parame
 
 Follow the model of the existing RFX functions.
 
-##  <a name="setfieldtype"></a>  CFieldExchange::SetFieldType
+## <a name="setfieldtype"></a> CFieldExchange::SetFieldType
 
 You need a call to `SetFieldType` in your recordset class's [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) or [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) override.
 
-```
+```cpp
 void SetFieldType(UINT nFieldType);
 ```
 
@@ -120,7 +121,7 @@ This example shows several calls to RFX functions with accompanying calls to `Se
 
 [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CRecordset Class](../../mfc/reference/crecordset-class.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2494"
 title: "Compiler Error C2494"
 ms.date: "11/04/2016"
 f1_keywords: ["C2494"]
@@ -7,13 +8,13 @@ ms.assetid: 5dfd07ab-351d-49c9-b54e-f0a104776ab8
 ---
 # Compiler Error C2494
 
-'keyword' cannot be called from within a filter expression or __finally/finally block
+> '*keyword*' cannot be called from within a filter expression or __finally/finally block
 
-You cannot use `keyword` in a `__finally` or finally block.
+You cannot use *keyword* in a **`__finally`** or **`finally`** block.
 
 The following sample generates C2494:
 
-```
+```cpp
 // C2494.cpp
 #include <malloc.h>
 
@@ -29,7 +30,7 @@ int main() {
 
 C2494 can also occur when using **/clr**.
 
-```
+```cpp
 // C2494b.cpp
 // compile with: /clr
 #include <malloc.h>

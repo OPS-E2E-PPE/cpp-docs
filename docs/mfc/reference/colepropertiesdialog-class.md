@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COlePropertiesDialog Class"
 title: "COlePropertiesDialog Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COlePropertiesDialog", "AFXODLGS/COlePropertiesDialog", "AFXODLGS/COlePropertiesDialog::COlePropertiesDialog", "AFXODLGS/COlePropertiesDialog::DoModal", "AFXODLGS/COlePropertiesDialog::OnApplyScale", "AFXODLGS/COlePropertiesDialog::m_gp", "AFXODLGS/COlePropertiesDialog::m_lp", "AFXODLGS/COlePropertiesDialog::m_op", "AFXODLGS/COlePropertiesDialog::m_psh", "AFXODLGS/COlePropertiesDialog::m_vp"]
@@ -70,7 +71,7 @@ For more information on OLE dialog boxes, see the article [Dialog Boxes in OLE](
 
 **Header:** afxodlgs.h
 
-##  <a name="colepropertiesdialog"></a>  COlePropertiesDialog::COlePropertiesDialog
+## <a name="colepropertiesdialog"></a> COlePropertiesDialog::COlePropertiesDialog
 
 Creates a `COlePropertiesDialog` object.
 
@@ -116,7 +117,7 @@ By default, the common OLE Object Properties dialog box has three default pages:
 
 To add pages beyond those provided by default, modify the [m_psh](#m_psh) member variable before exiting the constructor of your `COlePropertiesDialog`-derived class. This is an advanced implementation of the `COlePropertiesDialog` constructor.
 
-##  <a name="domodal"></a>  COlePropertiesDialog::DoModal
+## <a name="domodal"></a> COlePropertiesDialog::DoModal
 
 Call this member function to display the Windows common OLE Object Properties dialog box and allow the user to view and/or change the various properties of the document item.
 
@@ -128,11 +129,11 @@ virtual INT_PTR DoModal();
 
 IDOK or IDCANCEL if successful; otherwise 0. IDOK and IDCANCEL are constants that indicate whether the user selected the OK or Cancel button.
 
-If IDCANCEL is returned, you can call the Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) function to determine whether an error occurred.
+If IDCANCEL is returned, you can call the Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) function to determine whether an error occurred.
 
-##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp
+## <a name="m_gp"></a> COlePropertiesDialog::m_gp
 
-A structure of type [OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa), used to initialize the General page of the OLE Object Properties dialog box.
+A structure of type [OLEUIGNRLPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw), used to initialize the General page of the OLE Object Properties dialog box.
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -144,9 +145,9 @@ This page shows the type and size of an embedding and allows the user access to 
 
 For more information on the `OLEUIGNRLPROPS` structure, see the Windows SDK.
 
-##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp
+## <a name="m_lp"></a> COlePropertiesDialog::m_lp
 
-A structure of type [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa), used to initialize the Link page of the OLE Object Properties dialog box.
+A structure of type [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw), used to initialize the Link page of the OLE Object Properties dialog box.
 
 ```
 OLEUILINKPROPS m_lp;
@@ -158,9 +159,9 @@ This page shows the location of the linked item and allows the user to update, o
 
 For more information on the `OLEUILINKPROPS` structure, see the Windows SDK.
 
-##  <a name="m_op"></a>  COlePropertiesDialog::m_op
+## <a name="m_op"></a> COlePropertiesDialog::m_op
 
-A structure of type [OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa), used to initialize the common OLE Object Properties dialog box.
+A structure of type [OLEUIOBJECTPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw), used to initialize the common OLE Object Properties dialog box.
 
 ```
 OLEUIOBJECTPROPS m_op;
@@ -170,11 +171,11 @@ OLEUIOBJECTPROPS m_op;
 
 This structure contains members used to initialize the General, Link, and View pages.
 
-For more information, see the OLEUIOBJECTPROPS and [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa) structures in the Windows SDK.
+For more information, see the OLEUIOBJECTPROPS and [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw) structures in the Windows SDK.
 
-##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh
+## <a name="m_psh"></a> COlePropertiesDialog::m_psh
 
-A structure of type [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2), whose members store the characteristics of the dialog object.
+A structure of type [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2), whose members store the characteristics of the dialog object.
 
 ```
 PROPSHEETHEADER m_psh;
@@ -188,9 +189,9 @@ If you modify the `m_psh` data member directly, you will override any default be
 
 For more information on the `PROPSHEETHEADER` structure, see the Windows SDK.
 
-##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp
+## <a name="m_vp"></a> COlePropertiesDialog::m_vp
 
-A structure of type [OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa), used to initialize the View page of the OLE Object Properties dialog box.
+A structure of type [OLEUIVIEWPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw), used to initialize the View page of the OLE Object Properties dialog box.
 
 ```
 OLEUIVIEWPROPS m_vp;
@@ -202,7 +203,7 @@ This page allows the user to toggle between "content" and "iconic" views of the 
 
 For more information on the `OLEUIVIEWPROPS` structure, see the Windows SDK.
 
-##  <a name="onapplyscale"></a>  COlePropertiesDialog::OnApplyScale
+## <a name="onapplyscale"></a> COlePropertiesDialog::OnApplyScale
 
 Called by the framework when the scaling value has changed and either OK or Apply was selected.
 
@@ -233,11 +234,11 @@ Nonzero if handled; otherwise 0.
 The default implementation does nothing. You must override this function to enable the scaling controls.
 
 > [!NOTE]
->  Before the common OLE Object Properties dialog box is displayed, the framework calls this function with a NULL for *pItem* and a - 1 for *nCurrentScale*. This is done to determine if the scaling controls should be enabled.
+> Before the common OLE Object Properties dialog box is displayed, the framework calls this function with a NULL for *pItem* and a - 1 for *nCurrentScale*. This is done to determine if the scaling controls should be enabled.
 
-## See Also
+## See also
 
-[MFC Sample CIRC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CIRC](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog Class](../../mfc/reference/coledialog-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog Class](../../mfc/reference/coledialog-class.md)<br/>

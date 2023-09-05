@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Fatal Error C1070"
 title: "Fatal Error C1070"
 ms.date: "11/04/2016"
 f1_keywords: ["C1070"]
@@ -13,7 +14,7 @@ An `#if`, `#ifdef`, or `#ifndef` directive has no corresponding `#endif`.
 
 The following sample generates C1070:
 
-```
+```cpp
 // C1070.cpp
 #define TEST
 
@@ -26,7 +27,7 @@ The following sample generates C1070:
 
 Possible resolution:
 
-```
+```cpp
 // C1070b.cpp
 // compile with: /c
 #define TEST

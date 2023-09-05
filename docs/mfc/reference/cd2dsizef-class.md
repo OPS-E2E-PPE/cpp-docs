@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: CD2DSizeF Class"
 title: "CD2DSizeF Class"
-ms.date: "11/04/2016"
+ms.date: "08/29/2019"
 f1_keywords: ["CD2DSizeF", "AFXRENDERTARGET/CD2DSizeF", "AFXRENDERTARGET/CD2DSizeF::CD2DSizeF", "AFXRENDERTARGET/CD2DSizeF::IsNull"]
 helpviewer_keywords: ["CD2DSizeF [MFC], CD2DSizeF", "CD2DSizeF [MFC], IsNull"]
 ms.assetid: f486a1e1-997d-4286-8cb9-26369dc82055
@@ -45,14 +46,14 @@ class CD2DSizeF : public D2D1_SIZE_F;
 
 **Header:** afxrendertarget.h
 
-##  <a name="cd2dsizef"></a>  CD2DSizeF::CD2DSizeF
+## <a name="cd2dsizef"></a> CD2DSizeF::CD2DSizeF
 
 Constructs a CD2DSizeF object from CSize object.
 
 ```
 CD2DSizeF(const CSize& size);
 CD2DSizeF(const D2D1_SIZE_F& size);
-  CD2DSizeF(const D2D1_SIZE_F* size);
+CD2DSizeF(const D2D1_SIZE_F* size);
 
 CD2DSizeF(
     FLOAT cx = 0.,
@@ -70,7 +71,7 @@ source width
 *cy*<br/>
 source height
 
-##  <a name="isnull"></a>  CD2DSizeF::IsNull
+## <a name="isnull"></a> CD2DSizeF::IsNull
 
 Returns a Boolean value that indicates whether an expression contains no valid data (Null).
 
@@ -82,7 +83,7 @@ BOOL IsNull() const;
 
 TRUE if width and height are empty; otherwise FALSE.
 
-##  <a name="operator_csize"></a>  CD2DSizeF::operator CSize
+## <a name="operator_csize"></a> CD2DSizeF::operator CSize
 
 Converts CD2DSizeF to CSize object.
 
@@ -94,6 +95,6 @@ operator CSize();
 
 Current value of D2D size.
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

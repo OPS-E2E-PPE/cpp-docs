@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2913"
 title: "Compiler Error C2913"
 ms.date: "11/04/2016"
 f1_keywords: ["C2913"]
@@ -13,7 +14,7 @@ You cannot specialize a non-template class.
 
 The following sample generates C2913:
 
-```
+```cpp
 // C2913.cpp
 // compile with: /c
 class X{};

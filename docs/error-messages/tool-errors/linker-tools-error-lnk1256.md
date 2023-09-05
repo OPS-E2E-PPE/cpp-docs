@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Linker Tools Error LNK1256"
 title: "Linker Tools Error LNK1256"
 ms.date: "11/04/2016"
-f1_keywords: ["xml", "LNK1256"]
+f1_keywords: ["LNK1256"]
 helpviewer_keywords: ["LNK1256"]
 ms.assetid: 55b64b2b-a56b-436c-a55e-ec9c6dcb050e
 ---
@@ -17,7 +18,7 @@ Another reason for LNK1256 is a version mismatch between the linker and Alink.dl
 
 The following sample generates LNK1256:
 
-```
+```cpp
 // LNK1256.cpp
 // compile with: /clr /LD
 // LNK1256 expected

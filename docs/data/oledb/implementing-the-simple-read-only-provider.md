@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Implementing the Simple Read-Only Provider"
 title: "Implementing the Simple Read-Only Provider"
 ms.date: "10/26/2018"
 helpviewer_keywords: ["read-only provider"]
@@ -12,6 +13,6 @@ The extended example in this topic shows how to edit the wizard-created files to
 
 - [Store the strings in the provider](../../data/oledb/storing-strings-in-the-ole-db-provider.md)
 
-## See Also
+## See also
 
 [Creating a Simple Read-Only Provider](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>

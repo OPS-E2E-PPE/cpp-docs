@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Linker Tools Error LNK1561"
 title: "Linker Tools Error LNK1561"
 ms.date: "11/04/2016"
 f1_keywords: ["LNK1561"]
@@ -12,6 +13,7 @@ entry point must be defined
 The linker did not find an *entry point*, the initial function to call in your executable. By default, the linker looks for a `main` or `wmain` function for a console app, a `WinMain` or `wWinMain` function for a Windows app, or `DllMain` for a DLL that requires initialization. You can specify another function by using the [/ENTRY](../../build/reference/entry-entry-point-symbol.md) linker option.
 
 This error can have several causes:
+
 - You may not have included the file that defines your entry point in the list of files to link. Verify that the file that contains the entry point function is linked into your app.
 - You may have defined the entry point using the wrong function signature; for example, you may have misspelled or used the wrong case for the function name, or specified the return type or parameter types incorrectly.
 - You may not have specified the [/DLL](../../build/reference/dll-build-a-dll.md) option when building a DLL.

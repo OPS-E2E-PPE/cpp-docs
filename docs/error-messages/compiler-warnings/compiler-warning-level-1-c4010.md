@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4010"
 title: "Compiler Warning (level 1) C4010"
 ms.date: "11/04/2016"
 f1_keywords: ["C4010"]
@@ -15,7 +16,7 @@ Some syntax-directed editors do not indicate the line following the continuation
 
 The following sample generates C4010:
 
-```
+```cpp
 // C4010.cpp
 // compile with: /WX
 int main() {

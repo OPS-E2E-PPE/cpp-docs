@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Using CSliderCtrl"
 title: "Using CSliderCtrl"
 ms.date: "11/04/2016"
-f1_keywords: ["CSliderCtrl"]
 helpviewer_keywords: ["CSliderCtrl class [MFC], using", "slider controls [MFC], using"]
 ms.assetid: 242c7bcd-126e-4b9b-8f76-8082ad06fe73
 ---
@@ -23,7 +23,6 @@ The slider in a slider control moves in increments that you specify when you cre
 
 - [Slider Notification Messages](../mfc/slider-notification-messages.md)
 
-## See Also
+## See also
 
 [Controls](../mfc/controls-mfc.md)
-

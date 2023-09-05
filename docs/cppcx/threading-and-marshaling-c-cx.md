@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Threading and Marshaling (C++/CX)"
 title: "Threading and Marshaling (C++/CX)"
 ms.date: "12/30/2016"
 f1_keywords: ["C4451"]
@@ -17,7 +18,7 @@ A Windows Runtime class can support concurrent thread access in various ways, as
 
 - `MarshallingBehavior` attribute can have one of the values—Agile, None, or Standard as defined by the `MarshallingType` enumeration.
 
-The `ThreadingModel` attribute specifies where the class is loaded when activated: only in a user-interface thread (STA) context, only in a background thread (MTA) context, or in the context of the thread that creates the object (Both). The `MarshallingBehavior` attribute values refer to how the object behaves in the various threading contexts; in most cases, you don’t have to understand these values in detail.  Of the classes that are provided by the Windows API, about 90 percent have `ThreadingModel`=Both and `MarshallingType`=Agile. This means that they can handle low-level threading details transparently and efficiently.   When you use `ref new` to create an "agile" class, you can call methods on it from your main app thread or from one or more worker threads.  In other words, you can use an agile class—no matter whether it's provided by Windows or by a third party—from anywhere in your code. You don’t have to be concerned with the class’s threading model or marshaling behavior.
+The `ThreadingModel` attribute specifies where the class is loaded when activated: only in a user-interface thread (STA) context, only in a background thread (MTA) context, or in the context of the thread that creates the object (Both). The `MarshallingBehavior` attribute values refer to how the object behaves in the various threading contexts; in most cases, you don't have to understand these values in detail.  Of the classes that are provided by the Windows API, about 90 percent have `ThreadingModel`=Both and `MarshallingType`=Agile. This means that they can handle low-level threading details transparently and efficiently.   When you use `ref new` to create an "agile" class, you can call methods on it from your main app thread or from one or more worker threads.  In other words, you can use an agile class—no matter whether it's provided by Windows or by a third party—from anywhere in your code. You don't have to be concerned with the class's threading model or marshaling behavior.
 
 ## Consuming Windows Runtime components
 
@@ -25,12 +26,11 @@ When you create a Universal Windows Platform app, you might interact with both a
 
 ### Compiler warning C4451 when consuming non-agile classes
 
-For various reasons, some classes can't be agile. If you are accessing instances of non-agile classes from both a user-interface thread and a background thread, then take extra care to ensure correct behavior at run time. The Visual C++ compiler issues warnings when you instantiate a non-agile run-time class in your app at global scope or declare a non-agile type as a class member in a ref class that itself is marked as agile.
+For various reasons, some classes can't be agile. If you are accessing instances of non-agile classes from both a user-interface thread and a background thread, then take extra care to ensure correct behavior at run time. The Microsoft C++ compiler issues warnings when you instantiate a non-agile run-time class in your app at global scope or declare a non-agile type as a class member in a ref class that itself is marked as agile.
 
 Of the non-agile classes, the easiest to deal with are those that have `ThreadingModel`=Both and `MarshallingType`=Standard.  You can make these classes agile just by using the `Agile<T>` helper class.   The following example shows a declaration of a non-agile object of type `Windows::Security::Credentials::UI::CredentialPickerOptions^`, and the compiler warning that's issued as a result.
 
 ```
-
 ref class MyOptions
     {
     public:
@@ -62,7 +62,6 @@ If neither of those conditions apply, then you can mark the containing class as 
 The following example shows how to use `Agile<T>` so that you can safely ignore the warning.
 
 ```
-
 #include <agile.h>
 ref class MyOptions
     {
@@ -83,7 +82,7 @@ ref class MyOptions
 
 Notice that `Agile` cannot be passed as a return value or parameter in a ref class. The `Agile<T>::Get()` method returns a handle-to-object (^) that you can pass across the application binary interface (ABI) in a public method or property.
 
-In Visual C++, when you create a reference to an in-proc Windows Runtime class that has a marshaling behavior of "None", the compiler issues warning C4451 but doesn't suggest that you consider using `Platform::Agile<T>`.  The compiler can't offer any help beyond this warning, so it's your responsibility to use the class correctly and ensure that your code calls STA components only from the user-interface thread, and MTA components only from a background thread.
+When you create a reference to an in-proc Windows Runtime class that has a marshaling behavior of "None", the compiler issues warning C4451 but doesn't suggest that you consider using `Platform::Agile<T>`.  The compiler can't offer any help beyond this warning, so it's your responsibility to use the class correctly and ensure that your code calls STA components only from the user-interface thread, and MTA components only from a background thread.
 
 ## Authoring agile Windows Runtime components
 
@@ -112,7 +111,7 @@ An unsealed class must have marshaling and threading attribute settings so that 
 
 The threading and marshaling information that's required by a third-party Windows Runtime component is specified in the app manifest registration information for the component. We recommend that you make all of your Windows Runtime components agile. This ensures that client code can call your component from any thread in the app, and improves the performance of those calls because they are direct calls that have no marshaling. If you author your class in this way, then client code doesn't have to use `Platform::Agile<T>` to consume your class.
 
-## See Also
+## See also
 
-[ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)<br/>
-[MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+[ThreadingModel](/uwp/api/windows.foundation.metadata.threadingmodel)<br/>
+[MarshallingBehavior](/uwp/api/windows.foundation.metadata.marshalingbehaviorattribute)

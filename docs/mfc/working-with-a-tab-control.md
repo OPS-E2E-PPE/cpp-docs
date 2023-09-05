@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Working with a Tab Control"
 title: "Working with a Tab Control"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["CTabCtrl class [MFC], using", "tab controls [MFC], working with", "tab controls [MFC], using"]
@@ -16,8 +17,7 @@ The easiest way to use a tab control ([CTabCtrl](../mfc/reference/ctabctrl-class
 
 If the tab control object is embedded in a parent view or dialog class, the control is destroyed when the parent is destroyed.
 
-## See Also
+## See also
 
 [Using CTabCtrl](../mfc/using-ctabctrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

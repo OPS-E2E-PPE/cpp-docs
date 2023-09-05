@@ -1,13 +1,14 @@
 ---
+description: "Learn more about: pointer_to_unary_function Class"
 title: "pointer_to_unary_function Class"
-ms.date: "11/04/2016"
-f1_keywords: ["xfunctional/std::pointer_to_unary"]
+ms.date: "02/21/2019"
+f1_keywords: ["functional/std::pointer_to_unary"]
 helpviewer_keywords: ["pointer_to_unary_function function", "pointer_to_unary_function class"]
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
 ---
 # pointer_to_unary_function Class
 
-Converts a unary function pointer into an adaptable unary function.
+Converts a unary function pointer into an adaptable unary function. Deprecated in C++11, removed in C++17.
 
 ## Syntax
 
@@ -16,7 +17,6 @@ template <class Arg, class Result>
 class pointer_to_unary_function
     : public unary_function<Arg, Result>
 {
-public:
     explicit pointer_to_unary_function(Result(*pfunc)(Arg));
     Result operator()(Arg left) const;
 };
@@ -24,15 +24,15 @@ public:
 
 ### Parameters
 
-*pfunc*<br/>
+*pfunc*\
 The binary function to be converted.
 
-*left*<br/>
+*left*\
 The object that the *\*pfunc* is called on.
 
 ## Return Value
 
-The template class stores a copy of `pfunc`. It defines its member function `operator()` as returning (\* **pfunc**)(_ *Left*).
+The class template stores a copy of `pfunc`. It defines its member function `operator()` as returning (\* **pfunc**)(_ *Left*).
 
 ## Remarks
 
@@ -41,13 +41,3 @@ A unary function pointer is a function object and may be passed to any C++ Stand
 ## Example
 
 The constructor of `pointer_to_unary_function` is rarely used directly. See the helper function [ptr_fun](../standard-library/functional-functions.md#ptr_fun) for an example of how to declare and use the `pointer_to_unary_function` adaptor predicate.
-
-## Requirements
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## See also
-
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>

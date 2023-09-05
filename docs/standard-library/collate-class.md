@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: collate Class"
 title: "collate Class"
 ms.date: "11/04/2016"
 f1_keywords: ["locale/std::collate", "locale/std::collate::char_type", "locale/std::collate::string_type", "locale/std::collate::compare", "locale/std::collate::do_compare", "locale/std::collate::do_hash", "locale/std::collate::do_transform", "locale/std::collate::hash", "locale/std::collate::transform"]
@@ -7,7 +8,7 @@ ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ---
 # collate Class
 
-A template class that describes an object that can serve as a locale facet to control the ordering and grouping of characters within a string, comparisons between them and the hashing of strings.
+A class template that describes an object that can serve as a locale facet to control the ordering and grouping of characters within a string, comparisons between them and the hashing of strings.
 
 ## Syntax
 
@@ -18,7 +19,7 @@ class collate : public locale::facet;
 
 ### Parameters
 
-*CharType*<br/>
+*CharType*\
 The type used within a program to encode characters.
 
 ## Remarks
@@ -55,7 +56,7 @@ As with any locale facet, the static object ID has an initial stored value of ze
 
 **Namespace:** std
 
-## <a name="char_type"></a>  collate::char_type
+## <a name="char_type"></a> collate::char_type
 
 A type that describes a character of type `CharType`.
 
@@ -67,7 +68,7 @@ typedef CharType char_type;
 
 The type is a synonym for the template parameter `CharType`.
 
-## <a name="collate"></a>  collate::collate
+## <a name="collate"></a> collate::collate
 
 The constructor for objects of class collate that serves as a locale facet to handle string sorting conventions.
 
@@ -84,10 +85,10 @@ const char* _Locname,
 
 ### Parameters
 
-*_Refs*<br/>
+*_Refs*\
 Integer value used to specify the type of memory management for the object.
 
-*_Locname*<br/>
+*_Locname*\
 The name of the locale.
 
 ### Remarks
@@ -102,7 +103,7 @@ The possible values for the *_Refs* parameter and their significance are:
 
 The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
-## <a name="compare"></a>  collate::compare
+## <a name="compare"></a> collate::compare
 
 Compares two character sequences according to their facet-specific rules for equality or inequality.
 
@@ -115,16 +116,16 @@ int compare(const CharType* first1,
 
 ### Parameters
 
-*first1*<br/>
+*first1*\
 Pointer to the first element in the first sequence to be compared.
 
-*last1*<br/>
+*last1*\
 Pointer to the last element in the first sequence to be compared.
 
-*first2*<br/>
+*first2*\
 Pointer to the first element in the second sequence to be compared.
 
-*last2*<br/>
+*last2*\
 Pointer to the last element in the second sequence to be compared.
 
 ### Return Value
@@ -168,7 +169,7 @@ int main() {
 }
 ```
 
-## <a name="do_compare"></a>  collate::do_compare
+## <a name="do_compare"></a> collate::do_compare
 
 A virtual function called to compare two character sequences according to their facet-specific rules for equality or inequality.
 
@@ -181,16 +182,16 @@ virtual int do_compare(const CharType* first1,
 
 ### Parameters
 
-*first1*<br/>
+*first1*\
 Pointer to the first element in the first sequence to be compared.
 
-*last1*<br/>
+*last1*\
 Pointer to the last element in the first sequence to be compared.
 
-*first2*<br/>
+*first2*\
 Pointer to the first element in the second sequence to be compared.
 
-*last2*<br/>
+*last2*\
 Pointer to the last element in the second sequence to be compared.
 
 ### Return Value
@@ -211,7 +212,7 @@ The protected virtual member function compares the sequence at [ * first1, Last1
 
 See the example for [collate::compare](#compare), which calls `do_compare`.
 
-## <a name="do_hash"></a>  collate::do_hash
+## <a name="do_hash"></a> collate::do_hash
 
 A virtual function called to determine the hash value of sequences according to their facet-specific rules.
 
@@ -221,15 +222,15 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### Parameters
 
-*first*<br/>
+*first*\
 A pointer to the first character in the sequence whose has value is to be determined.
 
-*last*<br/>
+*last*\
 A pointer to the last character in the sequence whose has value is to be determined.
 
 ### Return Value
 
-A hash value of type **long** for the sequence.
+A hash value of type **`long`** for the sequence.
 
 ### Remarks
 
@@ -239,7 +240,7 @@ A hash value can be useful, for example, in distributing sequences pseudo-random
 
 See the example for [hash](#hash), which calls `do_hash`.
 
-## <a name="do_transform"></a>  collate::do_transform
+## <a name="do_transform"></a> collate::do_transform
 
 A virtual function called to convert a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.
 
@@ -249,10 +250,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### Parameters
 
-*first*<br/>
+*first*\
 A pointer to the first character in the sequence to be converted.
 
-*last*<br/>
+*last*\
 A pointer to the last character in the sequence to be converted.
 
 ### Return Value
@@ -267,7 +268,7 @@ The protected virtual member function returns an object of class [string_type](#
 
 See the example for [transform](#transform), which calls `do_transform`.
 
-## <a name="hash"></a>  collate::hash
+## <a name="hash"></a> collate::hash
 
 Determines the hash value of sequence according to their facet-specific rules.
 
@@ -277,15 +278,15 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### Parameters
 
-*first*<br/>
+*first*\
 A pointer to the first character in the sequence whose has value is to be determined.
 
-*last*<br/>
+*last*\
 A pointer to the last character in the sequence whose has value is to be determined.
 
 ### Return Value
 
-A hash value of type **long** for the sequence.
+A hash value of type **`long`** for the sequence.
 
 ### Remarks
 
@@ -321,7 +322,7 @@ int main( )
 541187293 551279837
 ```
 
-## <a name="string_type"></a>  collate::string_type
+## <a name="string_type"></a> collate::string_type
 
 A type that describes a string of type `basic_string` containing characters of type `CharType`.
 
@@ -331,13 +332,13 @@ typedef basic_string<CharType> string_type;
 
 ### Remarks
 
-The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the source sequence.
+The type describes a specialization of class template [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the source sequence.
 
 ### Example
 
 For an example of how to declare and use `string_type`, see [transform](#transform).
 
-## <a name="transform"></a>  collate::transform
+## <a name="transform"></a> collate::transform
 
 Converts a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.
 
@@ -347,10 +348,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### Parameters
 
-*first*<br/>
+*first*\
 A pointer to the first character in the sequence to be converted.
 
-*last*<br/>
+*last*\
 A pointer to the last character in the sequence to be converted.
 
 ### Return Value
@@ -405,5 +406,5 @@ int main( )
 
 ## See also
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

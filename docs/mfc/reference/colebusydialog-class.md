@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleBusyDialog Class"
 title: "COleBusyDialog Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COleBusyDialog", "AFXODLGS/COleBusyDialog", "AFXODLGS/COleBusyDialog::COleBusyDialog", "AFXODLGS/COleBusyDialog::DoModal", "AFXODLGS/COleBusyDialog::GetSelectionType", "AFXODLGS/COleBusyDialog::m_bz"]
@@ -41,9 +42,9 @@ class COleBusyDialog : public COleDialog
 Create an object of class `COleBusyDialog` when you want to call these dialog boxes. After a `COleBusyDialog` object has been constructed, you can use the [m_bz](#m_bz) structure to initialize the values or states of controls in the dialog box. The `m_bz` structure is of type OLEUIBUSY. For more information about using this dialog class, see the [DoModal](#domodal) member function.
 
 > [!NOTE]
->  Application Wizard-generated container code uses this class.
+> Application Wizard-generated container code uses this class.
 
-For more information, see the [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) structure in the Windows SDK.
+For more information, see the [OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw) structure in the Windows SDK.
 
 For more information on OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).
 
@@ -67,7 +68,7 @@ For more information on OLE-specific dialog boxes, see the article [Dialog Boxes
 
 **Header:** afxodlgs.h
 
-##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog
+## <a name="colebusydialog"></a> COleBusyDialog::COleBusyDialog
 
 This function only constructs a `COleBusyDialog` object.
 
@@ -103,9 +104,9 @@ Points to the parent or owner window object (of type `CWnd`) to which the dialog
 
 To display the dialog box, call [DoModal](#domodal).
 
-For more information, see the [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) structure in the Windows SDK.
+For more information, see the [OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw) structure in the Windows SDK.
 
-##  <a name="domodal"></a>  COleBusyDialog::DoModal
+## <a name="domodal"></a> COleBusyDialog::DoModal
 
 Call this function to display the OLE Server Busy or Server Not Responding dialog box.
 
@@ -121,7 +122,7 @@ Completion status for the dialog box. One of the following values:
 
 - IDCANCEL if the user canceled the dialog box.
 
-- IDABORT if an error occurred. If IDABORT is returned, call the `COleDialog::GetLastError` member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIBusy](/windows/desktop/api/oledlg/nf-oledlg-oleuibusya) function in the Windows SDK.
+- IDABORT if an error occurred. If IDABORT is returned, call the `COleDialog::GetLastError` member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIBusy](/windows/win32/api/oledlg/nf-oledlg-oleuibusyw) function in the Windows SDK.
 
 ### Remarks
 
@@ -129,7 +130,7 @@ If you want to initialize the various dialog box controls by setting members of 
 
 If `DoModal` returns IDOK, you can call other member functions to retrieve the settings or information that was input by the user into the dialog box.
 
-##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType
+## <a name="getselectiontype"></a> COleBusyDialog::GetSelectionType
 
 Call this function to get the selection type chosen by the user in the Server Busy dialog box.
 
@@ -161,7 +162,7 @@ Brief descriptions of these values follow:
 
 - `COleBusyDialog::callUnblocked` Call to activate the server is now unblocked.
 
-##  <a name="m_bz"></a>  COleBusyDialog::m_bz
+## <a name="m_bz"></a> COleBusyDialog::m_bz
 
 Structure of type OLEUIBUSY used to control the behavior of the Server Busy dialog box.
 
@@ -173,9 +174,9 @@ OLEUIBUSY m_bz;
 
 Members of this structure can be modified directly or through member functions.
 
-For more information, see the [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) structure in the Windows SDK.
+For more information, see the [OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw) structure in the Windows SDK.
 
-## See Also
+## See also
 
 [COleDialog Class](../../mfc/reference/coledialog-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>

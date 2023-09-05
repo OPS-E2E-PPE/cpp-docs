@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2459"
 title: "Compiler Error C2459"
 ms.date: "11/04/2016"
 f1_keywords: ["C2459"]
@@ -13,7 +14,7 @@ A class, structure, or union is redefined in its own scope by a member of an ano
 
 The following sample generates C2459:
 
-```
+```cpp
 // C2459.cpp
 // compile with: /c
 class C {

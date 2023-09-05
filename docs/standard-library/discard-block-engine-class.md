@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: discard_block_engine Class"
 title: "discard_block_engine Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::discard_block_engine"]
@@ -18,27 +19,29 @@ class discard_block_engine;
 
 ### Parameters
 
-*Engine*<br/>
+*Engine*\
 The base engine type.
 
-*P*<br/>
+*P*\
 **Block size**. The number of values in each block.
 
-*R*<br/>
+*R*\
 **Used block**. The number of values in each block that are used. The rest are discarded (`P` - `R`). **Precondition**: `0 < R ≤ P`
 
 ## Members
 
-||||
-|-|-|-|
-|`discard_block_engine::discard_block_engine`|`discard_block_engine::base`|`discard_block_engine::discard`|
-|`discard_block_engine::operator()`|`discard_block_engine::base_type`|`discard_block_engine::seed`|
+`discard_block_engine::discard_block_engine`\
+`discard_block_engine::base`\
+`discard_block_engine::base_type`\
+`discard_block_engine::discard`\
+`discard_block_engine::operator()`\
+`discard_block_engine::seed`
 
 For more information about engine members, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-This template class describes an engine adaptor that produces values by discarding some of the values returned by its base engine.
+This class template describes an engine adaptor that produces values by discarding some of the values returned by its base engine.
 
 ## Requirements
 
@@ -48,4 +51,4 @@ This template class describes an engine adaptor that produces values by discardi
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Exception Class"
 title: "Platform::Exception Class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -84,7 +85,7 @@ Use this method to create an exception out of an HRESULT that is returned, for e
 
 It is strongly recommended to use CreateException to create a strongly-typed exception rather than creating a [Platform::COMException](../cppcx/platform-comexception-class.md) that merely contains the HRESULT.
 
-## <a name="ctor"></a>  Exception::Exception Constructor
+## <a name="ctor"></a> Exception::Exception Constructor
 
 Intializes a new instance of the Exception class.
 
@@ -103,7 +104,7 @@ The error HRESULT that is represented by the exception.
 *message*<br/>
 A user-specified message, such as prescriptive text, that is associated with the exception. In general you should prefer the second overload in order to provide a descriptive message that is as specific as possible about how and why the error has occurred.
 
-## <a name="hresult"></a>  Exception::HResult Property
+## <a name="hresult"></a> Exception::HResult Property
 
 The HRESULT that corresponds to the exception.
 
@@ -114,7 +115,7 @@ public:
     property int HResult { int get(); }
 ```
 
-## Property Value
+### Property Value
 
 An HRESULT value.
 
@@ -132,7 +133,7 @@ Message that describes the error.
 public:property String^ Message;
 ```
 
-## Property Value
+### Property Value
 
 In exceptions that originate in the Windows Runtime, this is a system-supplied description of the error.
 
@@ -140,6 +141,6 @@ In exceptions that originate in the Windows Runtime, this is a system-supplied d
 
 In Windows 8, this property is read-only because exceptions in that version of the Windows Runtime are transported across the ABI only as HRESULTS. In Windows 8.1, richer exception information is transported across the ABI and you can provide a custom message that other components can access programmatically. For more information, see [Exceptions (C++/CX)](../cppcx/exceptions-c-cx.md).
 
-## See Also
+## See also
 
 [Platform namespace](../cppcx/platform-namespace-c-cx.md)

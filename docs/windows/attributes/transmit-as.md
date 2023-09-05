@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: transmit_as"
 title: "transmit_as (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.transmit_as"]
@@ -22,7 +23,7 @@ Specifies the data type that is transmitted between client and server.
 
 ## Remarks
 
-The **transmit_as** C++ attribute has the same functionality as the [transmit_as](/windows/desktop/Midl/transmit-as) MIDL attribute.
+The **transmit_as** C++ attribute has the same functionality as the [transmit_as](/windows/win32/Midl/transmit-as) MIDL attribute.
 
 ## Example
 
@@ -58,18 +59,16 @@ struct _TREE_NODE_TYPE * right;
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|**typedef**|
+|**Applies to**|**`typedef`**|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Typedef, Enum, Union, and Struct Attributes](typedef-enum-union-and-struct-attributes.md)<br/>

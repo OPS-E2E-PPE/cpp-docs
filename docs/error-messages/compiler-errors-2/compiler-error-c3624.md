@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3624"
 title: "Compiler Error C3624"
 ms.date: "11/04/2016"
 f1_keywords: ["C3624"]
@@ -15,7 +16,7 @@ An assembly (reference) needed to compile your code was not specified; pass the 
 
 The following sample generates C3624:
 
-```
+```cpp
 // C3624.cpp
 // compile with: /clr /c
 #using <System.Windows.Forms.dll>

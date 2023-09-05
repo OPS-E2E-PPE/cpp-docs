@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2878"
 title: "Compiler Error C2878"
 ms.date: "11/04/2016"
 f1_keywords: ["C2878"]
@@ -13,7 +14,7 @@ You made reference to a namespace or class that is not defined.
 
 The following sample generates C2878:
 
-```
+```cpp
 // C2878.cpp
 // compile with: /c
 namespace A {}

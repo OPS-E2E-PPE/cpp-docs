@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAtlModule Class"
 title: "CAtlModule Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAtlModule", "ATLBASE/ATL::CAtlModule", "ATLBASE/ATL::CAtlModule::CAtlModule", "ATLBASE/ATL::CAtlModule::AddCommonRGSReplacements", "ATLBASE/ATL::CAtlModule::AddTermFunc", "ATLBASE/ATL::CAtlModule::GetGITPtr", "ATLBASE/ATL::CAtlModule::GetLockCount", "ATLBASE/ATL::CAtlModule::Lock", "ATLBASE/ATL::CAtlModule::Term", "ATLBASE/ATL::CAtlModule::Unlock", "ATLBASE/ATL::CAtlModule::UpdateRegistryFromResourceD", "ATLBASE/ATL::CAtlModule::UpdateRegistryFromResourceDHelper", "ATLBASE/ATL::CAtlModule::UpdateRegistryFromResourceS", "ATLBASE/ATL::CAtlModule::m_libid", "ATLBASE/ATL::CAtlModule::m_pGIT"]
@@ -11,7 +12,7 @@ This class provides methods used by several ATL module classes.
 
 ## Syntax
 
-```
+```cpp
 class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 ```
 
@@ -64,11 +65,11 @@ This class replaces the obsolete [CComModule Class](../../atl/reference/ccommodu
 
 **Header:** atlbase.h
 
-##  <a name="addcommonrgsreplacements"></a>  CAtlModule::AddCommonRGSReplacements
+## <a name="addcommonrgsreplacements"></a> CAtlModule::AddCommonRGSReplacements
 
 Override this method to add parameters to the ATL Registry Component (Registrar) replacement map.
 
-```
+```cpp
 virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw() = 0;
 ```
 
@@ -87,11 +88,11 @@ Replaceable parameters allow a Registrar's client to specify run-time data. To d
 
 See the topic [Using Replaceable Parameters (The Registrar's Preprocessor)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) for more details.
 
-##  <a name="addtermfunc"></a>  CAtlModule::AddTermFunc
+## <a name="addtermfunc"></a> CAtlModule::AddTermFunc
 
 Adds a new function to be called when the module terminates.
 
-```
+```cpp
 HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 ```
 
@@ -107,11 +108,11 @@ User-defined data, passed to the function.
 
 Returns S_OK on success, or an error HRESULT on failure.
 
-##  <a name="catlmodule"></a>  CAtlModule::CAtlModule
+## <a name="catlmodule"></a> CAtlModule::CAtlModule
 
 The constructor.
 
-```
+```cpp
 CAtlModule() throw();
 ```
 
@@ -119,11 +120,11 @@ CAtlModule() throw();
 
 Initializes data members and initiates a critical section around the module's thread.
 
-##  <a name="dtor"></a>  CAtlModule::~CAtlModule
+## <a name="dtor"></a> CAtlModule::~CAtlModule
 
 The destructor.
 
-```
+```cpp
 ~CAtlModule() throw();
 ```
 
@@ -131,11 +132,11 @@ The destructor.
 
 Releases all data members.
 
-##  <a name="getgitptr"></a>  CAtlModule::GetGITPtr
+## <a name="getgitptr"></a> CAtlModule::GetGITPtr
 
 Retrieves a pointer to the Global Interface Table.
 
-```
+```cpp
 virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 ```
 
@@ -154,13 +155,13 @@ If the Global Interface Table object does not exist, it is created, and its addr
 
 In debug builds, an assertion error will occur if *ppGIT* is equal to NULL, or if the Global Interface Table pointer cannot be obtained.
 
-See [IGlobalInterfaceTable](/windows/desktop/api/objidl/nn-objidl-iglobalinterfacetable) for information on the Global Interface Table.
+See [IGlobalInterfaceTable](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable) for information on the Global Interface Table.
 
-##  <a name="getlockcount"></a>  CAtlModule::GetLockCount
+## <a name="getlockcount"></a> CAtlModule::GetLockCount
 
 Returns the lock count.
 
-```
+```cpp
 virtual LONG GetLockCount() throw();
 ```
 
@@ -168,11 +169,11 @@ virtual LONG GetLockCount() throw();
 
 Returns the lock count. This value may be useful for diagnostics and debugging.
 
-##  <a name="lock"></a>  CAtlModule::Lock
+## <a name="lock"></a> CAtlModule::Lock
 
 Increments the lock count.
 
-```
+```cpp
 virtual LONG Lock() throw();
 ```
 
@@ -180,27 +181,27 @@ virtual LONG Lock() throw();
 
 Increments the lock count and returns the updated value. This value may be useful for diagnostics and debugging.
 
-##  <a name="m_libid"></a>  CAtlModule::m_libid
+## <a name="m_libid"></a> CAtlModule::m_libid
 
 Contains the GUID of the current module.
 
-```
+```cpp
 static GUID m_libid;
 ```
 
-##  <a name="m_pgit"></a>  CAtlModule::m_pGIT
+## <a name="m_pgit"></a> CAtlModule::m_pGIT
 
 Pointer to the Global Interface Table.
 
-```
+```cpp
 IGlobalInterfaceTable* m_pGIT;
 ```
 
-##  <a name="term"></a>  CAtlModule::Term
+## <a name="term"></a> CAtlModule::Term
 
 Releases all data members.
 
-```
+```cpp
 void Term() throw();
 ```
 
@@ -208,11 +209,11 @@ void Term() throw();
 
 Releases all data members. This method is called by the destructor.
 
-##  <a name="unlock"></a>  CAtlModule::Unlock
+## <a name="unlock"></a> CAtlModule::Unlock
 
 Decrements the lock count.
 
-```
+```cpp
 virtual LONG Unlock() throw();
 ```
 
@@ -220,11 +221,11 @@ virtual LONG Unlock() throw();
 
 Decrements the lock count and returns the updated value. This value may be useful for diagnostics and debugging.
 
-##  <a name="updateregistryfromresourced"></a>  CAtlModule::UpdateRegistryFromResourceD
+## <a name="updateregistryfromresourced"></a> CAtlModule::UpdateRegistryFromResourceD
 
 Runs the script contained in a specified resource to register or unregister an object.
 
-```
+```cpp
 HRESULT WINAPI UpdateRegistryFromResourceD(
     UINT nResID,
     BOOL bRegister,
@@ -262,11 +263,11 @@ To statically link to the ATL Registry Component (Registrar), see [CAtlModule::U
 
 This method calls [CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper) and [IRegistrar::ResourceUnregister](iregistrar-class.md#resourceunregister).
 
-##  <a name="updateregistryfromresourcedhelper"></a>  CAtlModule::UpdateRegistryFromResourceDHelper
+## <a name="updateregistryfromresourcedhelper"></a> CAtlModule::UpdateRegistryFromResourceDHelper
 
 This method is called by `UpdateRegistryFromResourceD` to perform the registry update.
 
-```
+```cpp
 inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
     LPCOLESTR lpszRes,
     BOOL bRegister,
@@ -292,11 +293,11 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 This method provides the implementation of [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced).
 
-##  <a name="updateregistryfromresources"></a>  CAtlModule::UpdateRegistryFromResourceS
+## <a name="updateregistryfromresources"></a> CAtlModule::UpdateRegistryFromResourceS
 
 Runs the script contained in a specified resource to register or unregister an object. This method statically links to the ATL Registry Component.
 
-```
+```cpp
 HRESULT WINAPI UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
@@ -330,7 +331,7 @@ Returns S_OK on success, or an error HRESULT on failure.
 
 Similar to [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced) except `CAtlModule::UpdateRegistryFromResourceS` creates a static link to the ATL Registry Component (Registrar).
 
-## See Also
+## See also
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [Class Overview](../../atl/atl-class-overview.md)<br/>

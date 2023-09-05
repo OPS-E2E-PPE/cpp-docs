@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Property Map Macros"
 title: "Property Map Macros"
 ms.date: "11/04/2016"
-f1_keywords: ["atlcom/ATL::BEGIN_PROP_MAP", "atlcom/ATL::PROP_DATA_ENTRY", "atlcom/ATL::PROP_ENTRY_TYPE", "atlcom/ATL::PROP_ENTRY_TYPE_EX", "atlcom/ATL::PROP_PAGE", "atlcom/ATL::END_PROP_MAP"]
+f1_keywords: ["atlcom/ATL::BEGIN_PROP_MAP", "atlcom/ATL::PROP_DATA_ENTRY", "atlcom/ATL::PROP_ENTRY_TYPE", "atlcom/ATL::PROP_ENTRY_TYPE_EX", "atlcom/ATL::PROP_PAGE", "atlcom/ATL::END_PROP_MAP", "ATLCOM/BEGIN_PROP_MAP", "ATLCOM/PROP_DATA_ENTRY", "ATLCOM/PROP_ENTRY_TYPE", "ATLCOM/PROP_ENTRY_TYPE_EX", "ATLCOM/PROP_PAGE", "ATLCOM/END_PROP_MAP"]
 helpviewer_keywords: ["property maps"]
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
 ---
@@ -9,7 +10,7 @@ ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
 
 These macros define property maps and entries.
 
-|||
+|Name|Description|
 |-|-|
 |[BEGIN_PROP_MAP](#begin_prop_map)|Marks the beginning of the ATL property map.|
 |[PROP_DATA_ENTRY](#prop_data_entry)|Indicates the extent, or dimensions, of an ActiveX control.|
@@ -22,7 +23,7 @@ These macros define property maps and entries.
 
 **Header:** atlcom.h
 
-##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP
+## <a name="begin_prop_map"></a> BEGIN_PROP_MAP
 
 Marks the beginning of the object's property map.
 
@@ -47,7 +48,7 @@ BEGIN_PROP_MAP does not save out the extent (that is, the dimensions) of a prope
 
 [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]
 
-##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY
+## <a name="prop_data_entry"></a> PROP_DATA_ENTRY
 
 Indicates the extent, or dimensions, of an ActiveX control.
 
@@ -77,10 +78,10 @@ When you create an ActiveX control, the wizard inserts this macro after the prop
 In the following example, the extent of the object (`m_sizeExtent`) is being persisted.
 
 [!code-cpp[NVC_ATL_Windowing#131](../../atl/codesnippet/cpp/property-map-macros_2.h)]
-
+&nbsp;
 [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]
 
-##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE
+## <a name="prop_entry_type"></a> PROP_ENTRY_TYPE
 
 Use this macro to enter a property description, property DISPID, and property page CLSID into the object's property map.
 
@@ -112,7 +113,7 @@ The [BEGIN_PROP_MAP](#begin_prop_map) macro marks the beginning of the property 
 
 See the example for [BEGIN_PROP_MAP](#begin_prop_map).
 
-##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX
+## <a name="prop_entry_type_ex"></a> PROP_ENTRY_TYPE_EX
 
 Similar to [PROP_ENTRY_TYPE](#prop_entry_type), but allows you specify a particular IID if your object supports multiple dual interfaces.
 
@@ -149,7 +150,7 @@ The following example groups entries for `IMyDual1` followed by an entry for `IM
 
 [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]
 
-##  <a name="prop_page"></a>  PROP_PAGE
+## <a name="prop_page"></a> PROP_PAGE
 
 Use this macro to enter a property page CLSID into the object's property map.
 
@@ -167,7 +168,7 @@ PROP_PAGE(clsid)
 PROP_PAGE is similar to [PROP_ENTRY_TYPE](#prop_entry_type), but does not require a property description or DISPID.
 
 > [!NOTE]
->  If you have already entered a CLSID with PROP_ENTRY_TYPE or [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), you do not need to make an additional entry with PROP_PAGE.
+> If you have already entered a CLSID with PROP_ENTRY_TYPE or [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), you do not need to make an additional entry with PROP_PAGE.
 
 The [BEGIN_PROP_MAP](#begin_prop_map) macro marks the beginning of the property map; the [END_PROP_MAP](#end_prop_map) macro marks the end.
 
@@ -175,7 +176,7 @@ The [BEGIN_PROP_MAP](#begin_prop_map) macro marks the beginning of the property 
 
 [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]
 
-##  <a name="end_prop_map"></a>  END_PROP_MAP
+## <a name="end_prop_map"></a> END_PROP_MAP
 
 Marks the end of the object's property map.
 
@@ -191,6 +192,6 @@ When you create an object with the ATL Project Wizard, the wizard will create an
 
 See the example for [BEGIN_PROP_MAP](#begin_prop_map).
 
-## See Also
+## See also
 
 [Macros](../../atl/reference/atl-macros.md)

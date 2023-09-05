@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4817"
 title: "Compiler Warning (level 1) C4817"
 ms.date: "11/04/2016"
 f1_keywords: ["C4817"]
@@ -15,7 +16,7 @@ The wrong member access operator was used.
 
 The following sample generates C4817.
 
-```
+```cpp
 // C4817.cpp
 // compile with: /clr /W1
 using namespace System;

@@ -1,16 +1,16 @@
 ---
-title: "&lt;hash_set&gt; functions"
+description: "Learn more about: <hash_set> functions"
+title: "<hash_set> functions"
 ms.date: "11/04/2016"
 f1_keywords: ["hash_set/std::swap", "hash_set/std::swap (hash_multiset)"]
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
 ---
-# &lt;hash_set&gt; functions
+# `<hash_set>` functions
 
-|||
-|-|-|
-|[swap](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|
+[swap](#swap)\
+[swap (hash_multiset)](#swap_hash_multiset)
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> swap
 
 > [!NOTE]
 > This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).
@@ -25,10 +25,10 @@ void swap(
 
 ### Parameters
 
-*right*<br/>
+*right*\
 The hash_set providing the elements to be swapped, or the hash_set whose elements are to be exchanged with those of the hash_set *left*.
 
-*left*<br/>
+*left*\
 The hash_set whose elements are to be exchanged with those of the hash_set *right*.
 
 ### Remarks
@@ -43,7 +43,7 @@ in the algorithm class works by assignment and is a slow operation. The speciali
 
 See the code example for the member class [hash_set::swap](../standard-library/hash-set-class.md#swap) for an example that uses the template version of `swap`.
 
-## <a name="swap_hash_multiset"></a>  swap (hash_multiset)
+## <a name="swap_hash_multiset"></a> swap (hash_multiset)
 
 > [!NOTE]
 > This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).
@@ -56,10 +56,10 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### Parameters
 
-*right*<br/>
+*right*\
 The hash_multiset providing the elements to be swapped, or the hash_multiset whose elements are to be exchanged with those of the hash_multiset *left*.
 
-*left*<br/>
+*left*\
 The hash_multiset whose elements are to be exchanged with those of the hash_multiset *right*.
 
 ### Remarks
@@ -76,4 +76,4 @@ See the code example for the member class [hash_multiset::swap](../standard-libr
 
 ## See also
 
-[<hash_set>](../standard-library/hash-set.md)<br/>
+[<hash_set>](../standard-library/hash-set.md)

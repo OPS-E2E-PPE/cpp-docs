@@ -1,11 +1,12 @@
 ---
-title: "vector&lt;bool&gt;::reference Class"
+description: "Learn more about: vector<bool>::reference Class"
+title: "vector<bool>::reference Class"
 ms.date: "11/04/2016"
 f1_keywords: ["vector/vector<bool>::reference"]
 helpviewer_keywords: ["vector<bool> reference class"]
 ms.assetid: f27854f9-0ef0-4e7e-ad2e-cd53b6cb3334
 ---
-# vector&lt;bool&gt;::reference Class
+# `vector<bool>::reference` Class
 
 The `vector<bool>::reference` class is a proxy class provided by the [vector\<bool> Class](../standard-library/vector-bool-class.md) to simulate `bool&`.
 
@@ -25,7 +26,7 @@ bool& refb = vb[1];   // conversion error - do not use
 |Member function|Description|
 |-|-|
 |[flip](../standard-library/vector-bool-reference-flip.md)|Inverts the Boolean value of a vector element.|
-|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|Provides an implicit conversion from `vector<bool>::reference` to **bool**.|
+|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|Provides an implicit conversion from `vector<bool>::reference` to **`bool`**.|
 |[operator=](../standard-library/vector-bool-reference-operator-assign.md)|Assigns a Boolean value to a bit, or the value held by a referenced element to a bit.|
 
 ## Requirements
@@ -36,6 +37,6 @@ bool& refb = vb[1];   // conversion error - do not use
 
 ## See also
 
-[\<vector>](../standard-library/vector.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<vector>](../standard-library/vector.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

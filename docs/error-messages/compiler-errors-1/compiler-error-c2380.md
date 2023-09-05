@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2380"
 title: "Compiler Error C2380"
 ms.date: "11/04/2016"
 f1_keywords: ["C2380"]
@@ -13,7 +14,7 @@ A constructor returns a value or redefines the class name.
 
 The following sample generates C2326:
 
-```
+```cpp
 // C2380.cpp
 // compile with: /c
 class C {

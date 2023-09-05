@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3883"
 title: "Compiler Error C3883"
 ms.date: "11/04/2016"
 f1_keywords: ["C3883"]
@@ -13,7 +14,7 @@ A variable marked with [initonly](../../dotnet/initonly-cpp-cli.md) was not init
 
 The following sample generates C3883:
 
-```
+```cpp
 // C3883.cpp
 // compile with: /clr
 ref struct Y1 {
@@ -24,7 +25,7 @@ ref struct Y1 {
 
 The following sample demonstrates a possible resolution:
 
-```
+```cpp
 // C3883b.cpp
 // compile with: /clr /c
 ref struct Y1 {
@@ -35,7 +36,7 @@ ref struct Y1 {
 
 The following sample shows how to initialize in a static constructor:
 
-```
+```cpp
 // C3883c.cpp
 // compile with: /clr /LD
 ref struct Y1 {

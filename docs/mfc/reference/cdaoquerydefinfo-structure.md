@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CDaoQueryDefInfo Structure"
 title: "CDaoQueryDefInfo Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["CDaoQueryDefInfo"]
@@ -57,7 +58,7 @@ A value that indicates the operational type of a querydef object. The value can 
 - `dbQSPTBulk` Used with `dbQSQLPassThrough` to specify a query that does not return records.
 
 > [!NOTE]
->  To create a SQL pass-through query, you do not set the `dbQSQLPassThrough` constant. This is set automatically by the Microsoft Jet database engine when you create a querydef object and set the Connect property.
+> To create a SQL pass-through query, you do not set the `dbQSQLPassThrough` constant. This is set automatically by the Microsoft Jet database engine when you create a querydef object and set the Connect property.
 
 For more information, see the topic "Type Property" in DAO Help.
 
@@ -96,7 +97,7 @@ The date and time settings are derived from the computer on which the querydef w
 
 **Header:** afxdao.h
 
-## See Also
+## See also
 
 [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using Image Lists with Header Controls"
 title: "Using Image Lists with Header Controls"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["header controls [MFC], image lists", "CHeaderCtrl class [MFC], image lists", "image lists [MFC], header controls"]
@@ -31,9 +32,8 @@ The following procedure illustrates the details, using a pointer to a header con
 For detailed information on the parameter values used, consult the pertinent [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md).
 
 > [!NOTE]
->  It is possible to have multiple controls using the same image list. For instance, in a standard list view control, there could be an image list (of 16 x 16 pixel images) used by both the small icon view of a list view control and the header items of the list view control.
+> It is possible to have multiple controls using the same image list. For instance, in a standard list view control, there could be an image list (of 16 x 16 pixel images) used by both the small icon view of a list view control and the header items of the list view control.
 
-## See Also
+## See also
 
 [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)
-

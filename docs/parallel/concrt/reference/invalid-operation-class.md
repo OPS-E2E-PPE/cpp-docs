@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: invalid_operation Class"
 title: "invalid_operation Class"
 ms.date: "11/04/2016"
 f1_keywords: ["invalid_operation", "CONCRT/concurrency::invalid_operation", "CONCRT/concurrency::invalid_operation::invalid_operation"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when an invalid operation is performed 
 
 ## Syntax
 
-```
+```cpp
 class invalid_operation : public std::exception;
 ```
 
@@ -39,11 +40,11 @@ The various methods which throw this exception will generally document under wha
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> invalid_operation
+## <a name="ctor"></a> invalid_operation
 
 Constructs an `invalid_operation` object.
 
-```
+```cpp
 explicit _CRTIMP invalid_operation(_In_z_ const char* _Message) throw();
 
 invalid_operation() throw();
@@ -54,6 +55,6 @@ invalid_operation() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

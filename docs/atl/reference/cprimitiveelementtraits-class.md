@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CPrimitiveElementTraits Class"
 title: "CPrimitiveElementTraits Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CPrimitiveElementTraits", "ATLCOLL/ATL::CPrimitiveElementTraits", "ATLCOLL/ATL::CPrimitiveElementTraits::INARGTYPE", "ATLCOLL/ATL::CPrimitiveElementTraits::OUTARGTYPE"]
@@ -52,7 +53,7 @@ For more information, see [ATL Collection Classes](../../atl/atl-collection-clas
 
 **Header:** atlcoll.h
 
-##  <a name="inargtype"></a>  CPrimitiveElementTraits::INARGTYPE
+## <a name="inargtype"></a> CPrimitiveElementTraits::INARGTYPE
 
 The data type to use for adding elements to the collection class object.
 
@@ -60,7 +61,7 @@ The data type to use for adding elements to the collection class object.
 typedef T INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CPrimitiveElementTraits::OUTARGTYPE
+## <a name="outargtype"></a> CPrimitiveElementTraits::OUTARGTYPE
 
 The data type to use for retrieving elements from the collection class object.
 
@@ -68,7 +69,7 @@ The data type to use for retrieving elements from the collection class object.
 typedef T& OUTARGTYPE;
 ```
 
-## See Also
+## See also
 
 [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)

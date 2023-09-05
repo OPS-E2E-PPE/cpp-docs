@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: TN028: Context-Sensitive Help Support"
 title: "TN028: Context-Sensitive Help Support"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.help"]
@@ -10,7 +11,7 @@ ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
 This note describes the rules for assigning Help contexts IDs and other help issues in MFC. Context-sensitive help support requires the help compiler that is available in Visual C++.
 
 > [!NOTE]
->  In addition to implementing context-sensitive help using WinHelp, MFC also supports using HTML Help. For more information on this support and programming with HTML Help, see [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md).
+> In addition to implementing context-sensitive help using WinHelp, MFC also supports using HTML Help. For more information on this support and programming with HTML Help, see [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md).
 
 ## Types of Help Supported
 
@@ -73,7 +74,6 @@ To override this functionality and the way that a Help context is determined, yo
 ## WM_COMMANDHELP
 
 ```
-
 afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
 ```
 
@@ -102,7 +102,6 @@ If the user chooses a command from the menu, it is handled as help on that comma
 ## WM_HELPHITTEST
 
 ```
-
 afx_msg LRESULT CWnd::OnHelpHitTest(
 WPARAM, LPARAM lParam)
 ```
@@ -140,7 +139,7 @@ HID_MY_COMMAND    0x10096
 
 This format is compatible with the Help compiler's facility, which maps context IDs (the numbers on the right side) with topic names (the symbols on the left side).
 
-The source code for MAKEHM is available in the MFC Programming Utilities sample [MAKEHM](../visual-cpp-samples.md).
+The source code for MAKEHM is available in the MFC Programming Utilities sample [MAKEHM](../overview/visual-cpp-samples.md).
 
 ## Adding Help Support After Running the MFC Application Wizard
 
@@ -168,8 +167,7 @@ In the first case, the default for nIDHelp is 0, which indicates no Help for thi
 
 In the second case, the default value for nIDHelp is -1, which indicates the Help ID is the same as nIDPrompt. Help will work only if the application is Help-enabled, of course). You should provide 0 for nIDHelp if you wish that the message box have no help support. Should you want the message to be Help enabled, but desire a different help ID than nIDPrompt, simply provide a positive value for nIDHelp different from that of nIDPrompt.
 
-## See Also
+## See also
 
 [Technical Notes by Number](../mfc/technical-notes-by-number.md)<br/>
 [Technical Notes by Category](../mfc/technical-notes-by-category.md)
-

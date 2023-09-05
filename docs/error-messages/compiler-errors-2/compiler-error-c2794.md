@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2794"
 title: "Compiler Error C2794"
 ms.date: "11/04/2016"
 f1_keywords: ["C2794"]
@@ -13,7 +14,7 @@ You tried to use [super](../../cpp/super.md) to call a nonexistent member functi
 
 The following sample generates C2794
 
-```
+```cpp
 // C2794.cpp
 struct B {
    void mf();

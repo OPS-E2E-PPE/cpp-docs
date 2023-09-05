@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3175"
 title: "Compiler Error C3175"
 ms.date: "11/04/2016"
 f1_keywords: ["C3175"]
@@ -13,7 +14,7 @@ Unmanaged functions cannot call member functions of managed classes.
 
 The following sample generates C3175:
 
-```
+```cpp
 // C3175_2.cpp
 // compile with: /clr
 

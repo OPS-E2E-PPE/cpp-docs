@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: cache_suballoc Class"
 title: "cache_suballoc Class"
 ms.date: "11/04/2016"
 f1_keywords: ["allocators/stdext::cache_suballoc", "allocators/stdext::cache_suballoc::allocate", "allocators/stdext::cache_suballoc::deallocate"]
@@ -18,13 +19,12 @@ class cache_suballoc
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*Sz*|The number of elements in the array to be allocated.|
+*Sz*\
+The number of elements in the array to be allocated.
 
 ## Remarks
 
-The cache_suballoc template class stores deallocated memory blocks in a free list with unbounded length, using `freelist<sizeof(Type), max_unbounded>`, and suballocates memory blocks from a larger chunk allocated with **operator new** when the free list is empty.
+The cache_suballoc class template stores deallocated memory blocks in a free list with unbounded length, using `freelist<sizeof(Type), max_unbounded>`, and suballocates memory blocks from a larger chunk allocated with **operator new** when the free list is empty.
 
 Each chunk holds `Sz * Nelts` bytes of usable memory and the data that **operator new** and **operator delete** require. Allocated chunks are never freed.
 
@@ -47,7 +47,7 @@ Each chunk holds `Sz * Nelts` bytes of usable memory and the data that **operato
 
 **Namespace:** stdext
 
-## <a name="allocate"></a>  cache_suballoc::allocate
+## <a name="allocate"></a> cache_suballoc::allocate
 
 Allocates a block of memory.
 
@@ -57,9 +57,8 @@ void *allocate(std::size_t count);
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*count*|The number of elements in the array to be allocated.|
+*count*\
+The number of elements in the array to be allocated.
 
 ### Return Value
 
@@ -67,7 +66,7 @@ A pointer to the allocated object.
 
 ### Remarks
 
-## <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc
+## <a name="cache_suballoc"></a> cache_suballoc::cache_suballoc
 
 Constructs an object of type `cache_suballoc`.
 
@@ -77,7 +76,7 @@ cache_suballoc();
 
 ### Remarks
 
-## <a name="deallocate"></a>  cache_suballoc::deallocate
+## <a name="deallocate"></a> cache_suballoc::deallocate
 
 Frees a specified number of objects from storage beginning at a specified position.
 
@@ -87,13 +86,14 @@ void deallocate(void* ptr, std::size_t count);
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*ptr*|A pointer to the first object to be deallocated from storage.|
-|*count*|The number of objects to be deallocated from storage.|
+*ptr*\
+A pointer to the first object to be deallocated from storage.
+
+*count*\
+The number of objects to be deallocated from storage.
 
 ### Remarks
 
 ## See also
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

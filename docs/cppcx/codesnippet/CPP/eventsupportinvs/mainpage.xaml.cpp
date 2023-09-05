@@ -19,11 +19,11 @@ using namespace Windows::UI::Xaml::Input;
 using namespace Windows::UI::Xaml::Media;
 using namespace Windows::UI::Xaml::Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/p/?linkid=234238
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/p/?linkid=234238
 
 MainPage::MainPage()
 {
-	InitializeComponent();
+    InitializeComponent();
 }
 
 /// <summary>
@@ -33,7 +33,7 @@ MainPage::MainPage()
 /// property is typically used to configure the page.</param>
 void MainPage::OnNavigatedTo(NavigationEventArgs^ e)
 {
-	(void) e;	// Unused parameter
+    (void) e;    // Unused parameter
 }
 
 

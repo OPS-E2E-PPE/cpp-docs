@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Multithreading: Creating MFC User-Interface Threads"
 title: "Multithreading: Creating MFC User-Interface Threads"
 ms.date: "08/27/2018"
 f1_keywords: ["CREATE_SUSPENDED", "SECURITY_ATTRIBUTES"]
@@ -26,13 +27,13 @@ MFC provides two versions of `AfxBeginThread` through parameter overloading: one
 
 - The [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) of the class you derived from `CWinThread`.
 
-- (Optional) The desired priority level. The default is normal priority. For more information about the available priority levels, see [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) in the Windows SDK.
+- (Optional) The desired priority level. The default is normal priority. For more information about the available priority levels, see [SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) in the Windows SDK.
 
 - (Optional) The desired stack size for the thread. The default is the same size stack as the creating thread.
 
 - (Optional) CREATE_SUSPENDED if you want the thread to be created in a suspended state. The default is 0, or start the thread normally.
 
-- (Optional) The desired security attributes. The default is the same access as the parent thread. For more information about the format of this security information, see [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) in the Windows SDK.
+- (Optional) The desired security attributes. The default is the same access as the parent thread. For more information about the format of this security information, see [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) in the Windows SDK.
 
 `AfxBeginThread` does most of the work for you. It creates a new object of your class, initializes it with the information you supply, and calls [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) to start executing the thread. Checks are made throughout the procedure to make sure all objects are deallocated properly should any part of the creation fail.
 
@@ -42,8 +43,8 @@ MFC provides two versions of `AfxBeginThread` through parameter overloading: one
 
 - [Multithreading: Creating Worker Threads](multithreading-creating-worker-threads.md)
 
-- [Processes and Threads](/windows/desktop/ProcThread/processes-and-threads)
+- [Processes and Threads](/windows/win32/ProcThread/processes-and-threads)
 
-## See Also
+## See also
 
 [Multithreading with C++ and MFC](multithreading-with-cpp-and-mfc.md)

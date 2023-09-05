@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Type Library Access"
 title: "Type Library Access"
 ms.date: "11/04/2016"
-f1_keywords: ["vc.mfc.macros"]
 helpviewer_keywords: ["type libraries [MFC], accessing"]
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
 ---
@@ -13,12 +13,12 @@ The following macros allow an OLE control to provide access to its own type libr
 
 ### Type Library Access
 
-|||
+|Name|Description|
 |-|-|
 |[DECLARE_OLETYPELIB](#declare_oletypelib)|Declares a `GetTypeLib` member function of an OLE control (must be used in the class declaration).|
 |[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implements a `GetTypeLib` member function of an OLE control (must be used in the class implementation).|
 
-##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB
+## <a name="declare_oletypelib"></a> DECLARE_OLETYPELIB
 
 Declares the `GetTypeLib` member function of your control class.
 
@@ -39,7 +39,7 @@ Use this macro in the control class header file.
 
 **Header:** afxdisp.h
 
-##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB
+## <a name="implement_oletypelib"></a> IMPLEMENT_OLETYPELIB
 
 Implements the control's `GetTypeLib` member function.
 
@@ -69,6 +69,6 @@ This macro must appear in the implementation file for any control class that use
 
 **Header:** afxdisp.h
 
-## See Also
+## See also
 
 [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2529"
 title: "Compiler Error C2529"
 ms.date: "11/04/2016"
 f1_keywords: ["C2529"]
@@ -13,7 +14,7 @@ This error may be fixed by using pointer syntax and declaring a reference to a p
 
 The following sample generates C2529:
 
-```
+```cpp
 // C2529.cpp
 // compile with: /c
 int i;

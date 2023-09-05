@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2466"
 title: "Compiler Error C2466"
 ms.date: "11/04/2016"
 f1_keywords: ["C2466"]
@@ -13,7 +14,7 @@ An array is allocated or declared with size zero. The constant expression for th
 
 The following sample generates C2466:
 
-```
+```cpp
 // C2466.cpp
 // compile with: /c
 int i[0];   // C2466

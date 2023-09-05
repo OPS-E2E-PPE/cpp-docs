@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Schema  (MFC Data Access)"
 title: "Schema  (MFC Data Access)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["structures [C++], database", "databases [C++], schema", "database schema [C++], about database schemas", "database schema [C++]", "schemas [C++], database", "structures [C++]"]
@@ -10,7 +11,7 @@ A database schema describes the current structure of the tables and database vie
 
 You can also supplement the wizard-generated code to deal with a database whose schema is not entirely known at compile time. For more information, see [Recordset: Dynamically Binding Data Columns (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-## See Also
+## See also
 
 [Data Access Programming (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [SQL](../data/odbc/sql.md)<br/>

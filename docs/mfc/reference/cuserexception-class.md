@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CUserException Class"
 title: "CUserException Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CUserException"]
@@ -41,7 +42,7 @@ For more information on using `CUserException`, see the article [Exception Handl
 
 **Header:** afxwin.h
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CException Class](../../mfc/reference/cexception-class.md)

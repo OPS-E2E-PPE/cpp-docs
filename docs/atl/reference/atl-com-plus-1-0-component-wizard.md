@@ -1,18 +1,23 @@
 ---
+description: "Learn more about: ATL COM+ 1.0 Component Wizard"
 title: "ATL COM+ 1.0 Component Wizard"
-ms.date: "10/03/2018"
-f1_keywords: ["vc.codewiz.class.atl.mts.overview"]
-helpviewer_keywords: ["ATL projects, adding components", "ATL COM+ 1.0 Component Wizard"]
+ms.date: "05/08/2019"
+helpviewer_keywords: ["ATL projects, adding components"]
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
 ---
 # ATL COM+ 1.0 Component Wizard
 
+::: moniker range=">=msvc-160"
+
+This wizard is not available in Visual Studio 2019 and later.
+
+::: moniker-end
+
+::: moniker range="<=msvc-150"
+
 Use this wizard to add an object to your project that supports COM+ 1.0 services, including transactions.
 
 You can specify whether the object supports dual interfaces and Automation. You can also indicate support for the error information interface, enhanced object control, transactions, and asynchronous message queuing.
-
-> [!WARNING]
-> In Visual Studio 2017 version 15.9 this code wizard is deprecated and will be removed in a future version of Visual Studio. This wizard is rarely used. General support for ATL and MFC is not impacted by the removal of this wizard. If you would like to share your feedback about this deprecation, please complete [this survey](https://www.surveymonkey.com/r/QDWKKCN). Your feedback matters to us.
 
 ## Remarks
 
@@ -50,7 +55,7 @@ Specify the names for the object, interface, and classes to be added to your pro
 
    Any objects you add following setting this option are designated as attributed by default (the check box is selected). You can clear this box to add an object that does not use attributes.
 
-   See [Application Settings, ATL Project Wizard](../../atl/reference/application-settings-atl-project-wizard.md) and [Basic Mechanics of Attributes](../../windows/basic-mechanics-of-attributes.md) for more information.
+   See [Application Settings, ATL Project Wizard](../../atl/reference/application-settings-atl-project-wizard.md) and [Basic mechanics of attributes](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) for more information.
 
 ### COM
 
@@ -61,7 +66,7 @@ Provides information about the COM functionality for the object.
    Sets the name of the component class that contains a list of interfaces supported by the object.
 
 > [!NOTE]
->  If you create your project using attributes, or if you indicate on this wizard page that the COM+ 1.0 component uses attributes, you cannot change this option because ATL does not include the `coclass` attribute.
+> If you create your project using attributes, or if you indicate on this wizard page that the COM+ 1.0 component uses attributes, you cannot change this option because ATL does not include the `coclass` attribute.
 
 - **Type**
 
@@ -75,7 +80,8 @@ Provides information about the COM functionality for the object.
 
    Sets the name that containers can use instead of the CLSID of the object.
 
-## See Also
+::: moniker-end
+
+## See also
 
 [ATL COM+ 1.0 Component](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
-

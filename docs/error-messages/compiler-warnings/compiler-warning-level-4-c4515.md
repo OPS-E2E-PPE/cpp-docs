@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4515"
 title: "Compiler Warning (level 4) C4515"
 ms.date: "11/04/2016"
 f1_keywords: ["C4515"]
@@ -13,7 +14,7 @@ A namespace is used recursively.
 
 The following sample generates C4515:
 
-```
+```cpp
 // C4515.cpp
 // compile with: /W4
 namespace A

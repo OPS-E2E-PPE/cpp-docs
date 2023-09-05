@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2636"
 title: "Compiler Error C2636"
 ms.date: "11/04/2016"
 f1_keywords: ["C2636"]
@@ -13,7 +14,7 @@ A pointer to a reference member was declared.
 
 The following sample generates C2636:
 
-```
+```cpp
 // C2636.cpp
 struct S {};
 int main() {

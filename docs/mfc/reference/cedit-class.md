@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CEdit Class"
 title: "CEdit Class"
 ms.date: "09/12/2018"
 f1_keywords: ["CEdit", "AFXWIN/CEdit", "AFXWIN/CEdit::CEdit", "AFXWIN/CEdit::CanUndo", "AFXWIN/CEdit::CharFromPos", "AFXWIN/CEdit::Clear", "AFXWIN/CEdit::Copy", "AFXWIN/CEdit::Create", "AFXWIN/CEdit::Cut", "AFXWIN/CEdit::EmptyUndoBuffer", "AFXWIN/CEdit::FmtLines", "AFXWIN/CEdit::GetCueBanner", "AFXWIN/CEdit::GetFirstVisibleLine", "AFXWIN/CEdit::GetHandle", "AFXWIN/CEdit::GetHighlight", "AFXWIN/CEdit::GetLimitText", "AFXWIN/CEdit::GetLine", "AFXWIN/CEdit::GetLineCount", "AFXWIN/CEdit::GetMargins", "AFXWIN/CEdit::GetModify", "AFXWIN/CEdit::GetPasswordChar", "AFXWIN/CEdit::GetRect", "AFXWIN/CEdit::GetSel", "AFXWIN/CEdit::HideBalloonTip", "AFXWIN/CEdit::LimitText", "AFXWIN/CEdit::LineFromChar", "AFXWIN/CEdit::LineIndex", "AFXWIN/CEdit::LineLength", "AFXWIN/CEdit::LineScroll", "AFXWIN/CEdit::Paste", "AFXWIN/CEdit::PosFromChar", "AFXWIN/CEdit::ReplaceSel", "AFXWIN/CEdit::SetCueBanner", "AFXWIN/CEdit::SetHandle", "AFXWIN/CEdit::SetHighlight", "AFXWIN/CEdit::SetLimitText", "AFXWIN/CEdit::SetMargins", "AFXWIN/CEdit::SetModify", "AFXWIN/CEdit::SetPasswordChar", "AFXWIN/CEdit::SetReadOnly", "AFXWIN/CEdit::SetRect", "AFXWIN/CEdit::SetRectNP", "AFXWIN/CEdit::SetSel", "AFXWIN/CEdit::SetTabStops", "AFXWIN/CEdit::ShowBalloonTip", "AFXWIN/CEdit::Undo"]
@@ -115,9 +116,9 @@ If you create a `CEdit` object within a dialog box, the `CEdit` object is automa
 
 If you create a `CEdit` object from a dialog resource using the dialog editor, the `CEdit` object is automatically destroyed when the user closes the dialog box.
 
-If you create a `CEdit` object within a window, you may also need to destroy it. If you create the `CEdit` object on the stack, it is destroyed automatically. If you create the `CEdit` object on the heap by using the **new** function, you must call **delete** on the object to destroy it when the user terminates the Windows edit control. If you allocate any memory in the `CEdit` object, override the `CEdit` destructor to dispose of the allocations.
+If you create a `CEdit` object within a window, you may also need to destroy it. If you create the `CEdit` object on the stack, it is destroyed automatically. If you create the `CEdit` object on the heap by using the **`new`** function, you must call **`delete`** on the object to destroy it when the user terminates the Windows edit control. If you allocate any memory in the `CEdit` object, override the `CEdit` destructor to dispose of the allocations.
 
-To modify certain styles in an edit control (such as ES_READONLY) you must send specific messages to the control instead of using [ModifyStyle](cwnd-class.md#modifystyle). See [Edit Control Styles](/windows/desktop/Controls/edit-control-styles) in the Windows SDK.
+To modify certain styles in an edit control (such as ES_READONLY) you must send specific messages to the control instead of using [ModifyStyle](cwnd-class.md#modifystyle). See [Edit Control Styles](/windows/win32/Controls/edit-control-styles) in the Windows SDK.
 
 For more information on `CEdit`, see [Controls](../../mfc/controls-mfc.md).
 
@@ -135,7 +136,7 @@ For more information on `CEdit`, see [Controls](../../mfc/controls-mfc.md).
 
 **Header:** afxwin.h
 
-##  <a name="canundo"></a>  CEdit::CanUndo
+## <a name="canundo"></a> CEdit::CanUndo
 
 Call this function to determine if the last edit operation can be undone.
 
@@ -149,13 +150,13 @@ Nonzero if the last edit operation can be undone by a call to the `Undo` member 
 
 ### Remarks
 
-For more information, see [EM_CANUNDO](/windows/desktop/Controls/em-canundo) in the Windows SDK.
+For more information, see [EM_CANUNDO](/windows/win32/Controls/em-canundo) in the Windows SDK.
 
 ### Example
 
   See the example for [CEdit::Undo](#undo).
 
-##  <a name="cedit"></a>  CEdit::CEdit
+## <a name="cedit"></a> CEdit::CEdit
 
 Constructs a `CEdit` object.
 
@@ -171,7 +172,7 @@ Use [Create](#create) to construct the Windows edit control.
 
 [!code-cpp[NVC_MFC_CEdit#1](../../mfc/reference/codesnippet/cpp/cedit-class_1.cpp)]
 
-##  <a name="charfrompos"></a>  CEdit::CharFromPos
+## <a name="charfrompos"></a> CEdit::CharFromPos
 
 Call this function to retrieve the zero-based line and character indices of the character nearest the specified point in this `CEdit` control
 
@@ -191,19 +192,19 @@ The character index in the low-order WORD, and the line index in the high-order 
 ### Remarks
 
 > [!NOTE]
->  This member function is available beginning with Windows 95 and Windows NT 4.0.
+> This member function is available beginning with Windows 95 and Windows NT 4.0.
 
-For more information, see [EM_CHARFROMPOS](/windows/desktop/Controls/em-charfrompos) in the Windows SDK.
+For more information, see [EM_CHARFROMPOS](/windows/win32/Controls/em-charfrompos) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#3](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]
 
-##  <a name="clear"></a>  CEdit::Clear
+## <a name="clear"></a> CEdit::Clear
 
 Call this function to delete (clear) the current selection (if any) in the edit control.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -213,29 +214,29 @@ The deletion performed by `Clear` can be undone by calling the [Undo](#undo) mem
 
 To delete the current selection and place the deleted contents into the Clipboard, call the [Cut](#cut) member function.
 
-For more information, see [WM_CLEAR](/windows/desktop/dataxchg/wm-clear) in the Windows SDK.
+For more information, see [WM_CLEAR](/windows/win32/dataxchg/wm-clear) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#4](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]
 
-##  <a name="copy"></a>  CEdit::Copy
+## <a name="copy"></a> CEdit::Copy
 
 Call this function to coy the current selection (if any) in the edit control to the Clipboard in CF_TEXT format.
 
-```
+```cpp
 void Copy();
 ```
 
 ### Remarks
 
-For more information, see [WM_COPY](/windows/desktop/dataxchg/wm-copy) in the Windows SDK.
+For more information, see [WM_COPY](/windows/win32/dataxchg/wm-copy) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#5](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]
 
-##  <a name="create"></a>  CEdit::Create
+## <a name="create"></a> CEdit::Create
 
 Creates the Windows edit control and attaches it to the `CEdit` object.
 
@@ -269,7 +270,7 @@ Nonzero if initialization is successful; otherwise 0.
 
 You construct a `CEdit` object in two steps. First, call the `CEdit` constructor and then call `Create`, which creates the Windows edit control and attaches it to the `CEdit` object.
 
-When `Create` executes, Windows sends the [WM_NCCREATE](/windows/desktop/winmsg/wm-nccreate), [WM_NCCALCSIZE](/windows/desktop/winmsg/wm-nccalcsize), [WM_CREATE](/windows/desktop/winmsg/wm-create), and [WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo) messages to the edit control.
+When `Create` executes, Windows sends the [WM_NCCREATE](/windows/win32/winmsg/wm-nccreate), [WM_NCCALCSIZE](/windows/win32/winmsg/wm-nccalcsize), [WM_CREATE](/windows/win32/winmsg/wm-create), and [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo) messages to the edit control.
 
 These messages are handled by default by the [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate), and [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) member functions in the `CWnd` base class. To extend the default message handling, derive a class from `CEdit`, add a message map to the new class, and override the above message-handler member functions. Override `OnCreate`, for example, to perform needed initialization for the new class.
 
@@ -289,11 +290,11 @@ Apply the following [window styles](styles-used-by-mfc.md#window-styles) to an e
 
 [!code-cpp[NVC_MFC_CEdit#2](../../mfc/reference/codesnippet/cpp/cedit-class_5.cpp)]
 
-##  <a name="cut"></a>  CEdit::Cut
+## <a name="cut"></a> CEdit::Cut
 
 Call this function to delete (cut) the current selection (if any) in the edit control and copy the deleted text to the Clipboard in CF_TEXT format.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -303,17 +304,17 @@ The deletion performed by `Cut` can be undone by calling the [Undo](#undo) membe
 
 To delete the current selection without placing the deleted text into the Clipboard, call the [Clear](#clear) member function.
 
-For more information, see [WM_CUT](/windows/desktop/dataxchg/wm-cut) in the Windows SDK.
+For more information, see [WM_CUT](/windows/win32/dataxchg/wm-cut) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#6](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]
 
-##  <a name="emptyundobuffer"></a>  CEdit::EmptyUndoBuffer
+## <a name="emptyundobuffer"></a> CEdit::EmptyUndoBuffer
 
 Call this function to reset (clear) the undo flag of an edit control.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -323,13 +324,13 @@ The edit control will now be unable to undo the last operation. The undo flag is
 
 The undo flag is automatically cleared whenever the [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) or [SetHandle](#sethandle)`CWnd` member functions are called.
 
-For more information, see [EM_EMPTYUNDOBUFFER](/windows/desktop/Controls/em-emptyundobuffer) in the Windows SDK.
+For more information, see [EM_EMPTYUNDOBUFFER](/windows/win32/Controls/em-emptyundobuffer) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#7](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]
 
-##  <a name="fmtlines"></a>  CEdit::FmtLines
+## <a name="fmtlines"></a> CEdit::FmtLines
 
 Call this function to set the inclusion of soft line-break characters on or off within a multiple-line edit control.
 
@@ -348,19 +349,19 @@ Nonzero if any formatting occurs; otherwise 0.
 
 ### Remarks
 
-A soft line break consists of two carriage returns and a linefeed inserted at the end of a line that is broken because of word wrapping. A hard line break consists of one carriage return and a linefeed. Lines that end with a hard line break are not affected by `FmtLines`.
+A soft line break consists of two carriage returns and a line feed inserted at the end of a line that is broken because of word wrapping. A hard line break consists of one carriage return and a line feed. Lines that end with a hard line break are not affected by `FmtLines`.
 
 Windows will only respond if the `CEdit` object is a multiple-line edit control.
 
-`FmtLines` only affects the buffer returned by [GetHandle](#gethandle) and the text returned by [WM_GETTEXT](/windows/desktop/winmsg/wm-gettext). It has no impact on the display of the text within the edit control.
+`FmtLines` only affects the buffer returned by [GetHandle](#gethandle) and the text returned by [WM_GETTEXT](/windows/win32/winmsg/wm-gettext). It has no impact on the display of the text within the edit control.
 
-For more information, see [EM_FMTLINES](/windows/desktop/Controls/em-fmtlines) in the Windows SDK.
+For more information, see [EM_FMTLINES](/windows/win32/Controls/em-fmtlines) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#8](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]
 
-##  <a name="getcuebanner"></a>  CEdit::GetCueBanner
+## <a name="getcuebanner"></a> CEdit::GetCueBanner
 
 Retrieves the text that is displayed as the text cue, or tip, in an edit control when the control is empty.
 
@@ -388,9 +389,9 @@ For the second overload, a [CString](../../atl-mfc-shared/using-cstring.md) that
 
 ### Remarks
 
-This method sends the [EM_GETCUEBANNER](/windows/desktop/Controls/em-getcuebanner) message, which is described in the Windows SDK. For more information, see the [Edit_GetCueBannerText](/windows/desktop/api/commctrl/nf-commctrl-edit_getcuebannertext) macro.
+This method sends the [EM_GETCUEBANNER](/windows/win32/Controls/em-getcuebanner) message, which is described in the Windows SDK. For more information, see the [Edit_GetCueBannerText](/windows/win32/api/commctrl/nf-commctrl-edit_getcuebannertext) macro.
 
-##  <a name="getfirstvisibleline"></a>  CEdit::GetFirstVisibleLine
+## <a name="getfirstvisibleline"></a> CEdit::GetFirstVisibleLine
 
 Call this function to determine the topmost visible line in an edit control.
 
@@ -404,13 +405,13 @@ The zero-based index of the topmost visible line. For single-line edit controls,
 
 ### Remarks
 
-For more information, see [EM_GETFIRSTVISIBLELINE](/windows/desktop/Controls/em-getfirstvisibleline) in the Windows SDK.
+For more information, see [EM_GETFIRSTVISIBLELINE](/windows/win32/Controls/em-getfirstvisibleline) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#9](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]
 
-##  <a name="gethandle"></a>  CEdit::GetHandle
+## <a name="gethandle"></a> CEdit::GetHandle
 
 Call this function to retrieve a handle to the memory currently allocated for a multiple-line edit control.
 
@@ -433,13 +434,13 @@ Call `GetHandle` for a multiple-line edit control in a dialog box only if the di
 > [!NOTE]
 > `GetHandle` will not work with Windows 95/98. If you call `GetHandle` in Windows 95/98, it will return NULL. `GetHandle` will work as documented under Windows NT, versions 3.51 and later.
 
-For more information, see [EM_GETHANDLE](/windows/desktop/Controls/em-gethandle) in the Windows SDK.
+For more information, see [EM_GETHANDLE](/windows/win32/Controls/em-gethandle) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#10](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]
 
-##  <a name="gethighlight"></a>  CEdit::GetHighlight
+## <a name="gethighlight"></a> CEdit::GetHighlight
 
 Gets the indexes of the first and last characters in a range of text that is highlighted in the current edit control.
 
@@ -451,10 +452,11 @@ BOOL GetHighlight(
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*pichStart*|[out] Zero-based index of the first character in the range of text that is highlighted.|
-|*pichEnd*|[out] Zero-based index of the last character in the range of text that is highlighted.|
+*pichStart*\
+[out] Zero-based index of the first character in the range of text that is highlighted.
+
+*pichEnd*\
+[out] Zero-based index of the last character in the range of text that is highlighted.
 
 ### Return Value
 
@@ -462,9 +464,9 @@ TRUE if this method is successful; otherwise, FALSE.
 
 ### Remarks
 
-This method sends the [EM_GETHILITE](/windows/desktop/Controls/em-gethilite) message, which is described in the Windows SDK. Both `SetHighlight` and `GetHighlight` are currently enabled for UNICODE builds only.
+This method sends the [EM_GETHILITE](/windows/win32/Controls/em-gethilite) message, which is described in the Windows SDK. Both `SetHighlight` and `GetHighlight` are currently enabled for UNICODE builds only.
 
-##  <a name="getlimittext"></a>  CEdit::GetLimitText
+## <a name="getlimittext"></a> CEdit::GetLimitText
 
 Call this member function to get the text limit for this `CEdit` object.
 
@@ -474,22 +476,22 @@ UINT GetLimitText() const;
 
 ### Return Value
 
-The current text limit, in bytes, for this `CEdit` object.
+The current text limit, in TCHARs, for this `CEdit` object.
 
 ### Remarks
 
-The text limit is the maximum amount of text, in bytes, that the edit control can accept.
+The text limit is the maximum amount of text, in TCHARs, that the edit control can accept.
 
 > [!NOTE]
->  This member function is available beginning with Windows 95 and Windows NT 4.0.
+> This member function is available beginning with Windows 95 and Windows NT 4.0.
 
-For more information, see [EM_GETLIMITTEXT](/windows/desktop/Controls/em-getlimittext) in the Windows SDK.
+For more information, see [EM_GETLIMITTEXT](/windows/win32/Controls/em-getlimittext) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]
 
-##  <a name="getline"></a>  CEdit::GetLine
+## <a name="getline"></a> CEdit::GetLine
 
 Call this function to retrieve a line of text from an edit control and places it in *lpszBuffer*.
 
@@ -510,26 +512,26 @@ int GetLine(
 Specifies the line number to retrieve from a multiple-line edit control. Line numbers are zero-based; a value of 0 specifies the first line. This parameter is ignored by a single-line edit control.
 
 *lpszBuffer*<br/>
-Points to the buffer that receives a copy of the line. The first word of the buffer must specify the maximum number of characters that can be copied to the buffer.
+Points to the buffer that receives a copy of the line. The first word of the buffer must specify the maximum number of TCHARs that can be copied to the buffer.
 
 *nMaxLength*<br/>
-Specifies the maximum number of bytes that can be copied to the buffer. `GetLine` places this value in the first word of *lpszBuffer* before making the call to Windows.
+Specifies the maximum number of TCHAR characters that can be copied to the buffer. `GetLine` places this value in the first word of *lpszBuffer* before making the call to Windows.
 
 ### Return Value
 
-The number of bytes actually copied. The return value is 0 if the line number specified by *nIndex* is greater than the number of lines in the edit control.
+The number of characters actually copied. The return value is 0 if the line number specified by *nIndex* is greater than the number of lines in the edit control.
 
 ### Remarks
 
 The copied line does not contain a null-termination character.
 
-For more information, see [EM_GETLINE](/windows/desktop/Controls/em-getline) in the Windows SDK.
+For more information, see [EM_GETLINE](/windows/win32/Controls/em-getline) in the Windows SDK.
 
 ### Example
 
   See the example for [CEdit::GetLineCount](#getlinecount).
 
-##  <a name="getlinecount"></a>  CEdit::GetLineCount
+## <a name="getlinecount"></a> CEdit::GetLineCount
 
 Call this function to retrieve the number of lines in a multiple-line edit control.
 
@@ -545,13 +547,13 @@ An integer containing the number of lines in the multiple-line edit control. If 
 
 `GetLineCount` is only processed by multiple-line edit controls.
 
-For more information, see [EM_GETLINECOUNT](/windows/desktop/Controls/em-getlinecount) in the Windows SDK.
+For more information, see [EM_GETLINECOUNT](/windows/win32/Controls/em-getlinecount) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#12](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]
 
-##  <a name="getmargins"></a>  CEdit::GetMargins
+## <a name="getmargins"></a> CEdit::GetMargins
 
 Call this member function to retrieve the left and right margins of this edit control.
 
@@ -568,15 +570,15 @@ The width of the left margin in the low-order WORD and the width of the right ma
 Margins are measured in pixels.
 
 > [!NOTE]
->  This member function is available beginning with Windows 95 and Windows NT 4.0.
+> This member function is available beginning with Windows 95 and Windows NT 4.0.
 
-For more information, see [EM_GETMARGINS](/windows/desktop/Controls/em-getmargins) in the Windows SDK.
+For more information, see [EM_GETMARGINS](/windows/win32/Controls/em-getmargins) in the Windows SDK.
 
 ### Example
 
   See the example for [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).
 
-##  <a name="getmodify"></a>  CEdit::GetModify
+## <a name="getmodify"></a> CEdit::GetModify
 
 Call this function to determine whether the contents of an edit control have been modified.
 
@@ -592,13 +594,13 @@ Nonzero if the edit-control contents have been modified; 0 if they have remained
 
 Windows maintains an internal flag indicating whether the contents of the edit control have been changed. This flag is cleared when the edit control is first created and may also be cleared by calling the [SetModify](#setmodify) member function.
 
-For more information, see [EM_GETMODIFY](/windows/desktop/Controls/em-getmodify) in the Windows SDK.
+For more information, see [EM_GETMODIFY](/windows/win32/Controls/em-getmodify) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#13](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]
 
-##  <a name="getpasswordchar"></a>  CEdit::GetPasswordChar
+## <a name="getpasswordchar"></a> CEdit::GetPasswordChar
 
 Call this function to retrieve the password character that is displayed in an edit control when the user enters text.
 
@@ -612,19 +614,19 @@ Specifies the character to be displayed instead of the character that the user t
 
 ### Remarks
 
-If you create the edit control with the ES_PASSWORD style, the DLL that supports the control determines the default password character. The manifest or the [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) method determines which DLL supports the edit control. If user32.dll supports the edit control, the default password character is ASTERISK ('*', U+002A). If comctl32.dll version 6 supports the edit control, the default character is BLACK CIRCLE ('●', U+25CF). For more information about which DLL and version supports the common controls, see [Shell and Common Controls Versions](https://msdn.microsoft.com/library/windows/desktop/bb776779).
+If you create the edit control with the ES_PASSWORD style, the DLL that supports the control determines the default password character. The manifest or the [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) method determines which DLL supports the edit control. If user32.dll supports the edit control, the default password character is ASTERISK ('*', U+002A). If comctl32.dll version 6 supports the edit control, the default character is BLACK CIRCLE ('●', U+25CF). For more information about which DLL and version supports the common controls, see [Shell and Common Controls Versions](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\)).
 
-This method sends the [EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar) message, which is described in the Windows SDK.
+This method sends the [EM_GETPASSWORDCHAR](/windows/win32/Controls/em-getpasswordchar) message, which is described in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#14](../../mfc/reference/codesnippet/cpp/cedit-class_14.cpp)]
 
-##  <a name="getrect"></a>  CEdit::GetRect
+## <a name="getrect"></a> CEdit::GetRect
 
 Call this function to get the formatting rectangle of an edit control.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -639,13 +641,13 @@ The formatting rectangle is the limiting rectangle of the text, which is indepen
 
 The formatting rectangle of a multiple-line edit control can be modified by the [SetRect](#setrect) and [SetRectNP](#setrectnp) member functions.
 
-For more information, see [EM_GETRECT](/windows/desktop/Controls/em-getrect) in the Windows SDK.
+For more information, see [EM_GETRECT](/windows/win32/Controls/em-getrect) in the Windows SDK.
 
 ### Example
 
   See the example for [CEdit::LimitText](#limittext).
 
-##  <a name="getsel"></a>  CEdit::GetSel
+## <a name="getsel"></a> CEdit::GetSel
 
 Call this function to get the starting and ending character positions of the current selection (if any) in an edit control, using either the return value or the parameters.
 
@@ -671,13 +673,13 @@ The version that returns a DWORD returns a value that contains the starting posi
 
 ### Remarks
 
-For more information, see [EM_GETSEL](/windows/desktop/Controls/em-getsel) in the Windows SDK.
+For more information, see [EM_GETSEL](/windows/win32/Controls/em-getsel) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#15](../../mfc/reference/codesnippet/cpp/cedit-class_15.cpp)]
 
-##  <a name="hideballoontip"></a>  CEdit::HideBalloonTip
+## <a name="hideballoontip"></a> CEdit::HideBalloonTip
 
 Hides any balloon tip associated with the current edit control.
 
@@ -691,35 +693,35 @@ TRUE if this method is successful; otherwise, FALSE.
 
 ### Remarks
 
-This function sends the [EM_HIDEBALLOONTIP](/windows/desktop/Controls/em-hideballoontip) message, which is described in the Windows SDK.
+This function sends the [EM_HIDEBALLOONTIP](/windows/win32/Controls/em-hideballoontip) message, which is described in the Windows SDK.
 
-##  <a name="limittext"></a>  CEdit::LimitText
+## <a name="limittext"></a> CEdit::LimitText
 
 Call this function to limit the length of the text that the user may enter into an edit control.
 
-```
+```cpp
 void LimitText(int nChars = 0);
 ```
 
 ### Parameters
 
 *nChars*<br/>
-Specifies the length (in bytes) of the text that the user can enter. If this parameter is 0, the text length is set to UINT_MAX bytes. This is the default behavior.
+Specifies the length (in TCHARs) of the text that the user can enter. If this parameter is 0, the text length is set to UINT_MAX bytes. This is the default behavior.
 
 ### Remarks
 
 Changing the text limit restricts only the text the user can enter. It has no effect on any text already in the edit control, nor does it affect the length of the text copied to the edit control by the [SetWindowText](cwnd-class.md#setwindowtext) member function in `CWnd`. If an application uses the `SetWindowText` function to place more text into an edit control than is specified in the call to `LimitText`, the user can delete any of the text within the edit control. However, the text limit will prevent the user from replacing the existing text with new text, unless deleting the current selection causes the text to fall below the text limit.
 
 > [!NOTE]
->  In Win32 (Windows NT and Windows 95/98), [SetLimitText](#setlimittext) replaces this function.
+> In Win32 (Windows NT and Windows 95/98), [SetLimitText](#setlimittext) replaces this function.
 
-For more information, see [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext) in the Windows SDK.
+For more information, see [EM_LIMITTEXT](/windows/win32/Controls/em-limittext) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#17](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]
 
-##  <a name="linefromchar"></a>  CEdit::LineFromChar
+## <a name="linefromchar"></a> CEdit::LineFromChar
 
 Call this function to retrieve the line number of the line that contains the specified character index.
 
@@ -742,13 +744,13 @@ A character index is the number of characters from the beginning of the edit con
 
 This member function is only used by multiple-line edit controls.
 
-For more information, see [EM_LINEFROMCHAR](/windows/desktop/Controls/em-linefromchar) in the Windows SDK.
+For more information, see [EM_LINEFROMCHAR](/windows/win32/Controls/em-linefromchar) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#18](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]
 
-##  <a name="lineindex"></a>  CEdit::LineIndex
+## <a name="lineindex"></a> CEdit::LineIndex
 
 Call this function to retrieve the character index of a line within a multiple-line edit control.
 
@@ -771,13 +773,13 @@ The character index is the number of characters from the beginning of the edit c
 
 This member function is only processed by multiple-line edit controls.
 
-For more information, see [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) in the Windows SDK.
+For more information, see [EM_LINEINDEX](/windows/win32/controls/em-lineindex) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#19](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]
 
-##  <a name="linelength"></a>  CEdit::LineLength
+## <a name="linelength"></a> CEdit::LineLength
 
 Retrieves the length of a line in an edit control.
 
@@ -800,21 +802,21 @@ If the *nLine* parameter is more than the number of characters in the control, t
 
 If the *nLine* parameter is -1, the return value is the number of unselected characters in the lines that contain selected characters. For example, if the selection extends from the fourth character of one line through the eighth character from the end of the next line, the return value is 10. That is, three characters on the first line and seven on the next.
 
-For more information about the TCHAR type, see the TCHAR row in the table in [Windows Data Types](/windows/desktop/WinProg/windows-data-types).
+For more information about the TCHAR type, see the TCHAR row in the table in [Windows Data Types](/windows/win32/WinProg/windows-data-types).
 
 ### Remarks
 
-This method is supported by the [EM_LINELENGTH](/windows/desktop/Controls/em-linelength) message, which is described in the Windows SDK.
+This method is supported by the [EM_LINELENGTH](/windows/win32/Controls/em-linelength) message, which is described in the Windows SDK.
 
 ### Example
 
   See the example for [CEdit::LineIndex](#lineindex).
 
-##  <a name="linescroll"></a>  CEdit::LineScroll
+## <a name="linescroll"></a> CEdit::LineScroll
 
 Call this function to scroll the text of a multiple-line edit control.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -836,17 +838,17 @@ The edit control does not scroll vertically past the last line of text in the ed
 
 `LineScroll` can be used to scroll horizontally past the last character of any line.
 
-For more information, see [EM_LINESCROLL](/windows/desktop/Controls/em-linescroll) in the Windows SDK.
+For more information, see [EM_LINESCROLL](/windows/win32/Controls/em-linescroll) in the Windows SDK.
 
 ### Example
 
   See the example for [CEdit::GetFirstVisibleLine](#getfirstvisibleline).
 
-##  <a name="paste"></a>  CEdit::Paste
+## <a name="paste"></a> CEdit::Paste
 
 Call this function to insert the data from the Clipboard into the `CEdit` at the insertion point.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -854,13 +856,13 @@ void Paste();
 
 Data is inserted only if the Clipboard contains data in CF_TEXT format.
 
-For more information, see [WM_PASTE](/windows/desktop/dataxchg/wm-paste) in the Windows SDK.
+For more information, see [WM_PASTE](/windows/win32/dataxchg/wm-paste) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#20](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]
 
-##  <a name="posfromchar"></a>  CEdit::PosFromChar
+## <a name="posfromchar"></a> CEdit::PosFromChar
 
 Call this function to get the position (top-left corner) of a given character within this `CEdit` object.
 
@@ -882,19 +884,19 @@ The coordinates of the top-left corner of the character specified by *nChar*.
 The character is specified by giving its zero-based index value. If *nChar* is greater than the index of the last character in this `CEdit` object, the return value specifies the coordinates of the character position just past the last character in this `CEdit` object.
 
 > [!NOTE]
->  This member function is available beginning with Windows 95 and Windows NT 4.0.
+> This member function is available beginning with Windows 95 and Windows NT 4.0.
 
-For more information, see [EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) in the Windows SDK.
+For more information, see [EM_POSFROMCHAR](/windows/win32/Controls/em-posfromchar) in the Windows SDK.
 
 ### Example
 
   See the example for [CEdit::LineFromChar](#linefromchar).
 
-##  <a name="replacesel"></a>  CEdit::ReplaceSel
+## <a name="replacesel"></a> CEdit::ReplaceSel
 
 Call this function to replace the current selection in an edit control with the text specified by *lpszNewText*.
 
-```
+```cpp
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 
@@ -912,13 +914,13 @@ Replaces only a portion of the text in an edit control. If you want to replace a
 
 If there is no current selection, the replacement text is inserted at the current cursor location.
 
-For more information, see [EM_REPLACESEL](/windows/desktop/Controls/em-replacesel) in the Windows SDK.
+For more information, see [EM_REPLACESEL](/windows/win32/Controls/em-replacesel) in the Windows SDK.
 
 ### Example
 
   See the example for [CEdit::LineIndex](#lineindex).
 
-##  <a name="setcuebanner"></a>  CEdit::SetCueBanner
+## <a name="setcuebanner"></a> CEdit::SetCueBanner
 
 Sets the text that is displayed as the text cue, or tip, in an edit control when the control is empty.
 
@@ -948,7 +950,7 @@ TRUE if the method is successful; otherwise FALSE.
 
 ### Remarks
 
-This method sends the [EM_SETCUEBANNER](/windows/desktop/Controls/em-setcuebanner) message, which is described in the Windows SDK. For more information, see the [Edit_SetCueBannerTextFocused](/windows/desktop/api/commctrl/nf-commctrl-edit_setcuebannertextfocused) macro.
+This method sends the [EM_SETCUEBANNER](/windows/win32/Controls/em-setcuebanner) message, which is described in the Windows SDK. For more information, see the [Edit_SetCueBannerTextFocused](/windows/win32/api/commctrl/nf-commctrl-edit_setcuebannertextfocused) macro.
 
 ### Example
 
@@ -956,18 +958,18 @@ The following example demonstrates the [CEdit::SetCueBanner](#setcuebanner) meth
 
 [!code-cpp[NVC_MFC_CEdit_s1#2](../../mfc/reference/codesnippet/cpp/cedit-class_20.cpp)]
 
-##  <a name="sethandle"></a>  CEdit::SetHandle
+## <a name="sethandle"></a> CEdit::SetHandle
 
 Call this function to set the handle to the local memory that will be used by a multiple-line edit control.
 
-```
+```cpp
 void SetHandle(HLOCAL hBuffer);
 ```
 
 ### Parameters
 
 *hBuffer*<br/>
-Contains a handle to the local memory. This handle must have been created by a previous call to the [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) Windows function using the LMEM_MOVEABLE flag. The memory is assumed to contain a null-terminated string. If this is not the case, the first byte of the allocated memory should be set to 0.
+Contains a handle to the local memory. This handle must have been created by a previous call to the [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc) Windows function using the LMEM_MOVEABLE flag. The memory is assumed to contain a null-terminated string. If this is not the case, the first byte of the allocated memory should be set to 0.
 
 ### Remarks
 
@@ -984,17 +986,17 @@ You can use this member function in a multiple-line edit control in a dialog box
 > [!NOTE]
 > `GetHandle` will not work with Windows 95/98. If you call `GetHandle` in Windows 95/98, it will return NULL. `GetHandle` will work as documented under Windows NT, versions 3.51 and later.
 
-For more information, see [EM_SETHANDLE](/windows/desktop/Controls/em-sethandle), [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc), and [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) in the Windows SDK.
+For more information, see [EM_SETHANDLE](/windows/win32/Controls/em-sethandle), [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc), and [LocalFree](/windows/win32/api/winbase/nf-winbase-localfree) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#22](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]
 
-##  <a name="sethighlight"></a>  CEdit::SetHighlight
+## <a name="sethighlight"></a> CEdit::SetHighlight
 
 Highlights a range of text that is displayed in the current edit control.
 
-```
+```cpp
 void SetHighlight(
     int ichStart,
     int ichEnd);
@@ -1002,20 +1004,21 @@ void SetHighlight(
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*ichStart*|[in] Zero-based index of the first character in the range of text to highlight.|
-|*ichEnd*|[in] Zero-based index of the last character in the range of text to highlight.|
+*ichStart*\
+[in] Zero-based index of the first character in the range of text to highlight.
+
+*ichEnd*\
+[in] Zero-based index of the last character in the range of text to highlight.
 
 ### Remarks
 
-This method sends the [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) message, which is described in the Windows SDK.  This method sends the [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) message, which is described in the Windows SDK. Both `SetHighlight` and `GetHighlight` are enabled for UNICODE builds only.
+This method sends the [EM_SETHILITE](/windows/win32/Controls/em-sethilite) message, which is described in the Windows SDK.  This method sends the [EM_SETHILITE](/windows/win32/Controls/em-sethilite) message, which is described in the Windows SDK. Both `SetHighlight` and `GetHighlight` are enabled for UNICODE builds only.
 
-##  <a name="setlimittext"></a>  CEdit::SetLimitText
+## <a name="setlimittext"></a> CEdit::SetLimitText
 
 Call this member function to set the text limit for this `CEdit` object.
 
-```
+```cpp
 void SetLimitText(UINT nMax);
 ```
 
@@ -1032,17 +1035,17 @@ Changing the text limit restricts only the text the user can enter. It has no ef
 
 This function replaces [LimitText](#limittext) in Win32.
 
-For more information, see [EM_SETLIMITTEXT](/windows/desktop/Controls/em-setlimittext) in the Windows SDK.
+For more information, see [EM_SETLIMITTEXT](/windows/win32/Controls/em-setlimittext) in the Windows SDK.
 
 ### Example
 
   See the example for [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).
 
-##  <a name="setmargins"></a>  CEdit::SetMargins
+## <a name="setmargins"></a> CEdit::SetMargins
 
 Call this method to set the left and right margins of this edit control.
 
-```
+```cpp
 void SetMargins(
     UINT nLeft,
     UINT nRight);
@@ -1059,19 +1062,19 @@ The width of the new right margin, in pixels.
 ### Remarks
 
 > [!NOTE]
->  This member function is available beginning with Windows 95 and Windows NT 4.0.
+> This member function is available beginning with Windows 95 and Windows NT 4.0.
 
-For more information, see [EM_SETMARGINS](/windows/desktop/Controls/em-setmargins) in the Windows SDK.
+For more information, see [EM_SETMARGINS](/windows/win32/Controls/em-setmargins) in the Windows SDK.
 
 ### Example
 
   See the example for [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).
 
-##  <a name="setmodify"></a>  CEdit::SetModify
+## <a name="setmodify"></a> CEdit::SetModify
 
 Call this function to set or clear the modified flag for an edit control.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1084,17 +1087,17 @@ A value of TRUE indicates that the text has been modified, and a value of FALSE 
 
 The modified flag indicates whether or not the text within the edit control has been modified. It is automatically set whenever the user changes the text. Its value may be retrieved with the [GetModify](#getmodify) member function.
 
-For more information, see [EM_SETMODIFY](/windows/desktop/Controls/em-setmodify) in the Windows SDK.
+For more information, see [EM_SETMODIFY](/windows/win32/Controls/em-setmodify) in the Windows SDK.
 
 ### Example
 
   See the example for [CEdit::GetModify](#getmodify).
 
-##  <a name="setpasswordchar"></a>  CEdit::SetPasswordChar
+## <a name="setpasswordchar"></a> CEdit::SetPasswordChar
 
 Call this function to set or remove a password character displayed in an edit control when the user types text.
 
-```
+```cpp
 void SetPasswordChar(TCHAR ch);
 ```
 
@@ -1113,13 +1116,13 @@ When the `SetPasswordChar` member function is called, `CEdit` will redraw all vi
 
 If the edit control is created with the [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) style, the default password character is set to an asterisk ( <strong>\*</strong>). This style is removed if `SetPasswordChar` is called with *ch* set to 0.
 
-For more information, see [EM_SETPASSWORDCHAR](/windows/desktop/Controls/em-setpasswordchar) in the Windows SDK.
+For more information, see [EM_SETPASSWORDCHAR](/windows/win32/Controls/em-setpasswordchar) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#16](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]
 
-##  <a name="setreadonly"></a>  CEdit::SetReadOnly
+## <a name="setreadonly"></a> CEdit::SetReadOnly
 
 Calls this function to set the read-only state of an edit control.
 
@@ -1140,17 +1143,17 @@ Nonzero if the operation is successful, or 0 if an error occurs.
 
 The current setting can be found by testing the [ES_READONLY](styles-used-by-mfc.md#edit-styles) flag in the return value of [CWnd::GetStyle](cwnd-class.md#getstyle).
 
-For more information, see [EM_SETREADONLY](/windows/desktop/Controls/em-setreadonly) in the Windows SDK.
+For more information, see [EM_SETREADONLY](/windows/win32/Controls/em-setreadonly) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#23](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]
 
-##  <a name="setrect"></a>  CEdit::SetRect
+## <a name="setrect"></a> CEdit::SetRect
 
 Call this function to set the dimensions of a rectangle using the specified coordinates.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1169,17 +1172,17 @@ If the edit control has no scroll bar, text will be clipped, not wrapped, if the
 
 When `SetRect` is called, the edit control's text is also reformatted and redisplayed.
 
-For more information, see [EM_SETRECT](/windows/desktop/Controls/em-setrect) in the Windows SDK.
+For more information, see [EM_SETRECT](/windows/win32/Controls/em-setrect) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#24](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]
 
-##  <a name="setrectnp"></a>  CEdit::SetRectNP
+## <a name="setrectnp"></a> CEdit::SetRectNP
 
 Call this function to set the formatting rectangle of a multiple-line edit control.
 
-```
+```cpp
 void SetRectNP(LPCRECT lpRect);
 ```
 
@@ -1200,17 +1203,17 @@ If the edit control has no scroll bar, text will be clipped, not wrapped, if the
 
 This member is processed only by multiple-line edit controls.
 
-For more information, see [EM_SETRECTNP](/windows/desktop/Controls/em-setrectnp) in the Windows SDK.
+For more information, see [EM_SETRECTNP](/windows/win32/Controls/em-setrectnp) in the Windows SDK.
 
 ### Example
 
   See the example for [CEdit::SetRect](#setrect).
 
-##  <a name="setsel"></a>  CEdit::SetSel
+## <a name="setsel"></a> CEdit::SetSel
 
 Call this function to select a range of characters in an edit control.
 
-```
+```cpp
 void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
@@ -1237,17 +1240,17 @@ Specifies the ending position.
 
 ### Remarks
 
-For more information, see [EM_SETSEL](/windows/desktop/Controls/em-setsel) in the Windows SDK.
+For more information, see [EM_SETSEL](/windows/win32/Controls/em-setsel) in the Windows SDK.
 
 ### Example
 
   See the example for [CEdit::GetSel](#getsel).
 
-##  <a name="settabstops"></a>  CEdit::SetTabStops
+## <a name="settabstops"></a> CEdit::SetTabStops
 
 Call this function to set the tab stops in a multiple-line edit control.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 
@@ -1281,13 +1284,13 @@ This member function is only processed by multiple-line edit controls.
 
 `SetTabStops` does not automatically redraw the edit window. If you change the tab stops for text already in the edit control, call [CWnd::InvalidateRect](cwnd-class.md#invalidaterect) to redraw the edit window.
 
-For more information, see [EM_SETTABSTOPS](/windows/desktop/Controls/em-settabstops) and [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) in the Windows SDK.
+For more information, see [EM_SETTABSTOPS](/windows/win32/Controls/em-settabstops) and [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) in the Windows SDK.
 
 ### Example
 
   See the example for [CEditView::SetTabStops](ceditview-class.md#settabstops).
 
-##  <a name="showballoontip"></a>  CEdit::ShowBalloonTip
+## <a name="showballoontip"></a> CEdit::ShowBalloonTip
 
 Displays a balloon tip that is associated with the current edit control.
 
@@ -1302,12 +1305,17 @@ BOOL ShowBalloonTip(
 
 ### Parameters
 
-|Parameter|Description|
-|---------------|-----------------|
-|*pEditBalloonTip*|[in] Pointer to an [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) structure that describes the balloon tip.|
-|*lpszTitle*|[in] Pointer to a Unicode string that contains the title of the balloon tip.|
-|*lpszText*|[in] Pointer to a Unicode string that contains the balloon tip text.|
-|*ttiIcon*|[in] An **INT** that specifies the type of icon to associate with the balloon tip. The default value is TTI_NONE. For more information, see the `ttiIcon` member of the [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) structure.|
+*pEditBalloonTip*\
+[in] Pointer to an [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) structure that describes the balloon tip.
+
+*lpszTitle*\
+[in] Pointer to a Unicode string that contains the title of the balloon tip.
+
+*lpszText*\
+[in] Pointer to a Unicode string that contains the balloon tip text.
+
+*ttiIcon*\
+[in] An **INT** that specifies the type of icon to associate with the balloon tip. The default value is TTI_NONE. For more information, see the `ttiIcon` member of the [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) structure.
 
 ### Return Value
 
@@ -1315,21 +1323,19 @@ TRUE if this method is successful; otherwise, FALSE.
 
 ### Remarks
 
-This function sends the [EM_SHOWBALLOONTIP](/windows/desktop/Controls/em-showballoontip) message, which is described in the Windows SDK. For more information, see the [Edit_ShowBalloonTip](/windows/desktop/api/commctrl/nf-commctrl-edit_showballoontip) macro.
+This function sends the [EM_SHOWBALLOONTIP](/windows/win32/Controls/em-showballoontip) message, which is described in the Windows SDK. For more information, see the [Edit_ShowBalloonTip](/windows/win32/api/commctrl/nf-commctrl-edit_showballoontip) macro.
 
 ### Example
 
-The following code example defines a variable, `m_cedit`, that is used to access the current edit control. This variable is used in the next example.
+The first code example defines a variable, `m_cedit`, that is used to access the current edit control. This variable is used in the next example.
 
 [!code-cpp[NVC_MFC_CEdit_s1#1](../../mfc/reference/codesnippet/cpp/cedit-class_25.h)]
 
-### Example
-
-The following code example displays a balloon tip for an edit control. The [CEdit::ShowBalloonTip](#showballoontip) method specifies a title and balloon tip text.
+The next code example displays a balloon tip for an edit control. The [CEdit::ShowBalloonTip](#showballoontip) method specifies a title and balloon tip text.
 
 [!code-cpp[NVC_MFC_CEdit_s1#3](../../mfc/reference/codesnippet/cpp/cedit-class_26.cpp)]
 
-##  <a name="undo"></a>  CEdit::Undo
+## <a name="undo"></a> CEdit::Undo
 
 Call this function to undo the last edit-control operation.
 
@@ -1345,16 +1351,16 @@ For a single-line edit control, the return value is always nonzero. For a multip
 
 An undo operation can also be undone. For example, you can restore deleted text with the first call to `Undo`. As long as there is no intervening edit operation, you can remove the text again with a second call to `Undo`.
 
-For more information, see [EM_UNDO](/windows/desktop/Controls/em-undo) in the Windows SDK.
+For more information, see [EM_UNDO](/windows/win32/Controls/em-undo) in the Windows SDK.
 
 ### Example
 
 [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]
 
-## See Also
+## See also
 
-[MFC Sample CALCDRIV](../../visual-cpp-samples.md)<br/>
-[MFC Sample CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[MFC Sample CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd Class](../../mfc/reference/cwnd-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CWnd Class](cwnd-class.md)<br/>

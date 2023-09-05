@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: importlib"
 title: "importlib (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.importlib"]
@@ -22,7 +23,7 @@ The name of a .tlb file, in quotes, that you want imported into the type library
 
 ## Remarks
 
-The **importlib** C++ attribute causes an `importlib` statement to be placed in the library block of the generated .idl file. The **importlib** attribute has the same functionality as the [importlib](/windows/desktop/Midl/importlib) MIDL attribute.
+The **importlib** C++ attribute causes an `importlib` statement to be placed in the library block of the generated .idl file. The **importlib** attribute has the same functionality as the [importlib](/windows/win32/Midl/importlib) MIDL attribute.
 
 ## Example
 
@@ -37,9 +38,7 @@ The following code shows an example of how to use **importlib**:
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Anywhere|
 |**Repeatable**|No|
@@ -48,7 +47,7 @@ The following code shows an example of how to use **importlib**:
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [Compiler Attributes](compiler-attributes.md)<br/>
 [Stand-Alone Attributes](stand-alone-attributes.md)<br/>

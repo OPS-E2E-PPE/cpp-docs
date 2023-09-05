@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3874"
 title: "Compiler Error C3874"
 ms.date: "11/04/2016"
 f1_keywords: ["C3874"]
@@ -13,7 +14,7 @@ A function does not have the return type that was expected by the compiler.
 
 The following sample generates C3874:
 
-```
+```cpp
 // C3874b.cpp
 double main()
 {   // C3874

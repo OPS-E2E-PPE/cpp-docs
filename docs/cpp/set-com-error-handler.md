@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: _set_com_error_handler"
 title: "_set_com_error_handler"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["_set_com_error_handler function"]
@@ -6,13 +7,11 @@ ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
 ---
 # _set_com_error_handler
 
-**Microsoft Specific**
-
-Replaces the default function that is used for COM error-handling.
+Replaces the default function that is used for COM error-handling. **_set_com_error_handler** is Microsoft-specific.
 
 ## Syntax
 
-```
+```cpp
 void __stdcall _set_com_error_handler(
    void (__stdcall *pHandler)(
       HRESULT hr,
@@ -83,7 +82,7 @@ Exception raised: Unable to establish the connection!
 
 **Header:** \<comdef.h>
 
-**Lib:** If the **wchar_t is Native Type** compiler option is on, use comsuppw.lib or comsuppwd.lib. If **wchar_t is Native Type** is off, use comsupp.lib. For more information, see [/Zc:wchar_t (wchar_t Is Native Type)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**Lib:** If the **/Zc:wchar_t** compiler option is specified (the default), use comsuppw.lib or comsuppwd.lib. If the **/Zc:wchar_t-** compiler option is specified, use comsupp.lib. For more information, including how to set this option in the IDE, see [/Zc:wchar_t (wchar_t Is Native Type)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## See also
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Introduction to COM"
 title: "Introduction to COM"
 ms.custom: "index-page"
 ms.date: "11/04/2016"
@@ -23,8 +24,7 @@ Fundamental to COM are these concepts:
 
 - [Aggregation](../atl/aggregation.md) — a way in which one object can make use of another.
 
-## See Also
+## See also
 
 [Introduction to COM and ATL](../atl/introduction-to-com-and-atl.md)<br/>
-[The Component Object Model](/windows/desktop/com/the-component-object-model)
-
+[The Component Object Model](/windows/win32/com/the-component-object-model)

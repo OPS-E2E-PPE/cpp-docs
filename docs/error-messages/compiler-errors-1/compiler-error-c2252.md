@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2252"
 title: "Compiler Error C2252"
 ms.date: "11/04/2016"
 f1_keywords: ["C2252"]
@@ -13,7 +14,7 @@ The compiler detected a problem with an explicit instantiation of a template.  F
 
 The following sample generates C2252:
 
-```
+```cpp
 // C2252.cpp
 class A {
 public:

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning C4972"
 title: "Compiler Warning C4972"
 ms.date: "11/04/2016"
 f1_keywords: ["C4972"]
@@ -11,13 +12,13 @@ Directly modifying or treating the result of an unbox operation as an lvalue is 
 
 Dereferencing a handle to a value type, also known as unboxing, and then assigning to it is not verifiable.
 
-For more information, see [Boxing](../../windows/boxing-cpp-component-extensions.md).
+For more information, see [Boxing](../../extensions/boxing-cpp-component-extensions.md).
 
 ## Example
 
 The following sample generates C4972.
 
-```
+```cpp
 // C4972.cpp
 // compile with: /clr:safe
 using namespace System;

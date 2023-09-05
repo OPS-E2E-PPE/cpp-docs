@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Expression Statement (C)"
 title: "Expression Statement (C)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["statements, expression", "expression statements"]
@@ -10,10 +11,10 @@ When an expression statement is executed, the expression is evaluated according 
 
 ## Syntax
 
-*expression-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**
+*`expression-statement`*:\
+&emsp;*`expression`*<sub>opt</sub> **`;`**
 
-All side effects from the expression evaluation are completed before the next statement is executed. An empty expression statement is called a null statement. See [The Null Statement](../c-language/null-statement-c.md) for more information.
+All side effects from the expression evaluation are completed before the next statement is executed. An empty expression statement is called a null statement. For more information, see [The Null Statement](../c-language/null-statement-c.md).
 
 These examples demonstrate expression statements.
 
@@ -27,6 +28,6 @@ y = z = ( f( x ) + 3 );   /* A function-call expression        */
 
 In the last statement, the function-call expression, the value of the expression, which includes any value returned by the function, is increased by 3 and then assigned to both the variables `y` and `z`.
 
-## See Also
+## See also
 
 [Statements](../c-language/statements-c.md)

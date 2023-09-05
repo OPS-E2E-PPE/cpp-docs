@@ -1,24 +1,78 @@
 ---
-title: "Configure a Linux CMake project in Visual Studio"
-description: "How to configure a Linux CMake project in Visual Studio"
-ms.date: "07/20/2018"
+title: "Create a CMake Linux project in Visual Studio"
+description: "How to create a Linux CMake project in Visual Studio"
+ms.date: "08/06/2020"
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
 ---
+# Create a CMake Linux project in Visual Studio
 
-# Configure a Linux CMake project
+::: moniker range="msvc-140"
+Linux support is available in Visual Studio 2017 and later. To see the documentation for these versions, set the **Version** drop-down located above the table of contents to **Visual Studio 2017** or **Visual Studio 2019**.
+::: moniker-end
 
-**Visual Studio 2017 version 15.4 and later**<br/>
-When you install the Linux C++ workload for Visual Studio, CMake support for Linux is selected by default. You can now work on your existing code base that uses CMake without having to convert it to a Visual Studio project. If your code base is cross-platform, you can target both Windows and Linux from within Visual Studio.
+::: moniker range=">=msvc-150"
 
-This topic assumes you have basic familiarity with CMake support in Visual Studio. For more information, see [CMake Tools for Visual C++](../ide/cmake-tools-for-visual-cpp.md). For more information about CMake itself, see [Build, Test and Package Your Software With CMake](https://cmake.org/).
+We recommend you use CMake for projects that are cross-platform or will be made open-source. You can use CMake projects to build and debug the same source code on Windows, the Windows Subsystem for Linux (WSL), and remote systems.
 
-> [!NOTE]
-> The CMake support in Visual Studio requires the server mode support that was introduced in CMake 3.8. For a Microsoft-provided CMake variant download the latest prebuilt binaries at [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). In Visual Studio 2019 the prebuilt binaries can be automatically deployed (see [Download prebuilt CMake binaries](#download-prebuilt-cmake-binaries)).
+## Before you begin
 
-## Open a folder
+First, make sure you have the Visual Studio Linux workload installed, including the CMake component. That's the **Linux development with C++** workload in the Visual Studio installer. See [Install the C++ Linux workload in Visual Studio](download-install-and-setup-the-linux-development-workload.md) if you aren't sure you have that installed.
 
-To get started, choose **File** > **Open** > **Folder** from the main menu or else type `devenv.exe <foldername>` on the command line. The folder you open should have a CMakeLists.txt file in it, along with your source code.
-The following example shows a simple CMakeLists.txt file and .cpp file:
+Also, make sure the following are installed on the remote machine:
+
+- gcc
+- gdb
+- rsync
+- zip
+- ninja-build (Visual Studio 2019 or above)
+::: moniker-end
+
+::: moniker range="msvc-150"
+The CMake support in Visual Studio requires server mode support introduced in CMake 3.8. For a Microsoft-provided CMake variant, download the latest prebuilt binaries at [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
+
+The binaries are installed in `~/.vs/cmake`. After deploying the binaries, your project automatically regenerates. If the CMake specified by the `cmakeExecutable` field in *CMakeSettings.json* is invalid (it doesn't exist or is an unsupported version), and the prebuilt binaries are present, Visual Studio ignores `cmakeExecutable` and uses the prebuilt binaries.
+
+Visual Studio 2017 can't create a CMake project from scratch, but you can open a folder that contains an existing CMake project, as described in the next section.
+::: moniker-end
+
+::: moniker range=">=msvc-160"
+You can use Visual Studio 2019 to build and debug on a remote Linux system or WSL, and CMake will be invoked on that system. Cmake version 3.14 or later should be installed on the target machine.
+
+Make sure that the target machine has a recent version of CMake. Often, the version offered by a distribution's default package manager isn't recent enough to support all the features required by Visual Studio. Visual Studio 2019 detects whether a recent version of CMake is installed on the Linux system. If none is found, Visual Studio shows an info-bar at the top of the editor pane. It offers to install CMake for you from [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
+
+With Visual Studio 2019, you can create a CMake project from scratch, or open an existing CMake project. To create a new CMake project, follow the instructions below. Or skip ahead to [Open a CMake project folder](#open-a-cmake-project-folder) if you already have a CMake project.
+
+## Create a new Linux CMake project
+
+To create a new Linux CMake project in Visual Studio 2019:
+
+1. Select **File > New Project** in Visual Studio, or press **Ctrl + Shift + N**.
+1. Set the **Language** to **C++** and search for "CMake". Then choose **Next**. Enter a **Name** and **Location**, and choose **Create**.
+
+Alternatively, you can open your own CMake project in Visual Studio 2019. The following section explains how.
+
+Visual Studio creates a minimal *CMakeLists.txt* file with only the name of the executable and the minimum CMake version required. You can manually edit this file however you like; Visual Studio will never overwrite your changes.
+
+To help you make sense of, edit, and author your CMake scripts in Visual Studio 2019, refer to the following resources:
+
+- [In-editor documentation for CMake in Visual Studio](https://devblogs.microsoft.com/cppblog/in-editor-documentation-for-cmake-in-visual-studio/)
+- [Code navigation for CMake scripts](https://devblogs.microsoft.com/cppblog/code-navigation-for-cmake-scripts/)
+- [Easily Add, Remove, and Rename Files and Targets in CMake Projects](https://devblogs.microsoft.com/cppblog/easily-add-remove-and-rename-files-and-targets-in-cmake-projects/)
+::: moniker-end
+
+::: moniker range=">=msvc-150"
+
+## Open a CMake project folder
+
+When you open a folder that contains an existing CMake project, Visual Studio uses variables in the CMake cache to automatically configure IntelliSense and builds. Local configuration and debugging settings get stored in JSON files. You can optionally share these files with others who are using Visual Studio.
+
+Visual Studio doesn't modify the *CMakeLists.txt* files. This allows others working on the same project to continue to use their existing tools. Visual Studio does regenerate the cache when you save edits to *CMakeLists.txt*, or in some cases, to *CMakeSettings.json*. If you're using an **Existing Cache** configuration, then Visual Studio doesn't modify the cache.
+
+For general information about CMake support in Visual Studio, see [CMake projects in Visual Studio](../build/cmake-projects-in-visual-studio.md). Read that before continuing here.
+
+To get started, choose **File** > **Open** > **Folder** from the main menu or else type `devenv.exe <foldername>` in a [developer command prompt](../build/building-on-the-command-line.md) window. The folder you open should have a *CMakeLists.txt* file in it, along with your source code.
+
+The following example shows a simple *CMakeLists.txt* file and .cpp file:
 
 ```cpp
 // hello.cpp
@@ -27,88 +81,23 @@ The following example shows a simple CMakeLists.txt file and .cpp file:
 
 int main(int argc, char* argv[])
 {
-    std::cout << "Hello from Linux CMake" << std::endl;
+    std::cout << "Hello from Linux CMake \n";
 }
 ```
 
-CMakeLists.txt:
+*CMakeLists.txt*:
 
-```cmd
+```txt
+cmake_minimum_required(VERSION 3.8)
 project (hello-cmake)
 add_executable(hello-cmake hello.cpp)
 ```
 
-## Choose a Linux target
+## Next steps
 
-As soon as you open the folder, Visual Studio parses the CMakeLists.txt file and specifies a Windows target of **x86-Debug**. To target Linux, change the project settings to **Linux-Debug** or **Linux-Release**.
+[Configure a Linux CMake project](cmake-linux-configure.md)
 
-By default, Visual Studio chooses the first remote system in the list under **Tools** > **Options** > **Cross Platform** > **Connection Manager**. If no remote connections are found, you are prompted to create one.
+## See also
 
-After you specify a Linux target, your source is copied to your Linux machine. Then, CMake is run on the Linux machine to generate the CMake cache for your project.
-
-![Generate CMake cache on Linux](media/cmake-linux-1.png "Generate the CMake cache on Linux")
-
-**Visual Studio 2017 version 15.7 and later:**<br/>
-To provide IntelliSense support for remote headers, Visual Studio automatically copies them to a directory on your local Windows machine. For more information, see [IntelliSense for remote headers](configure-a-linux-project.md#remote_intellisense).
-
-## Debug the project
-
-To debug your code on the remote system, set a breakpoint, select the CMake target as the startup item in the toolbar menu next to the project setting, and choose **&#x23f5; Start** on the toolbar, or press F5.
-
-To customize your program’s command line arguments, right-click on the executable in **Solution Explorer** and select **Debug and Launch Settings**. This opens or creates a launch.vs.json configuration file that contains information about your program. To specify additional arguments, add them in the `args` JSON array. For more information, see [Open Folder projects in Visual C++](../ide/non-msbuild-projects.md).
-
-## Configure CMake settings for Linux
-
-To change the default CMake settings, choose **CMake | Change CMake Settings | CMakeLists.txt** from the main menu, or right-click CMakeSettings.txt in **Solution Explorer** and choose **Change CMake Settings**. Visual Studio then creates a new file in your folder called `CMakeSettings.json` that is populated with the default configurations that are listed in the project settings menu item. The following example shows the default configuration for Linux-Debug based on the previous code example:
-
-```json
-{
-      "name": "Linux-Debug",
-      "generator": "Unix Makefiles",
-      "remoteMachineName": "${defaultRemoteMachineName}",
-      "configurationType": "Debug",
-      "remoteCMakeListsRoot": "/var/tmp/src/${workspaceHash}/${name}",
-      "cmakeExecutable": "/usr/local/bin/cmake",
-      "buildRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
-      "installRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
-      "remoteBuildRoot": "/var/tmp/build/${workspaceHash}/build/${name}",
-      "remoteInstallRoot": "/var/tmp/build/${workspaceHash}/install/${name}",
-      "remoteCopySources": true,
-      "remoteCopySourcesOutputVerbosity": "Normal",
-      "remoteCopySourcesConcurrentCopies": "10",
-      "remoteCopySourcesMethod": "rsync",
-      "remoteCopySourcesExclusionList": [".vs", ".git"],
-      "rsyncCommandArgs" : "-t --delete --delete-excluded",
-      "remoteCopyBuildOutput" : "false",
-      "cmakeCommandArgs": "",
-      "buildCommandArgs": "",
-      "ctestCommandArgs": "",
-      "inheritEnvironments": [ "linux-x64" ]
-}
-```
-
-The `name` value can be whatever you like. The `remoteMachineName` value specifies which remote system to target, in case you have more than one. IntelliSense is enabled for this field to help you select the right system. The field `remoteCMakeListsRoot` specifies where your project sources will be copied to on the remote system. The field `remoteBuildRoot` is where the build output will be generated on your remote system. That output is also copied locally to the location specified by `buildRoot`. The `remoteInstallRoot` and `installRoot` fields are similar to `remoteBuildRoot` and `buildRoot`, except they apply when doing a cmake install. The `remoteCopySources` entry controls whether or not your local sources are copied to the remote machine. You might set this to false if you have a lot of files and you're already syncing the sources yourself. The `remoteCopyOutputVerbosity` value controls the verbosity of the copy step in case you need to diagnose errors. The `remoteCopySourcesConcurrentCopies` entry controls how many processes are spawned to do the copy. The `remoteCopySourcesMethod` value can be one of rsync or sftp. The `remoteCopySourcesExclusionList` field allows you to control what gets copied to the remote machine. The `rsyncCommandArgs` value lets you control the rsync method of copying. The `remoteCopyBuildOutput` field controls whether or not the remote build output is copied to your local build folder.
-
-There are also some optional settings you can use for more control:
-
-```json
-{
-      "remotePreBuildCommand": "",
-      "remotePreGenerateCommand": "",
-      "remotePostBuildCommand": "",
-}
-```
-
-These options allow you to run commands on the remote box before and after building, and before CMake generation. They can be any valid command on the remote box. Output is piped back to Visual Studio.
-
-## Download prebuilt CMake binaries
-
-Your Linux distro may have an older version of CMake. The CMake support in Visual Studio requires the server mode support that was introduced in CMake 3.8. For a Microsoft-provided CMake variant download the latest prebuilt binaries at [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
-
-**Visual Studio 2019**<br/>
-If a valid CMake is not found on the remote machine an infobar will appear and provide an option to automatically deploy the prebuilt CMake binaries. The binaries will be installed to `~/.vs/cmake`. After deploying the binaries, your project will automatically regenerate. Note that if the CMake specified by the `cmakeExecutable` field in `CMakeSettings.json` is invalid (doesn't exist or is an unsupported version) and the prebuilt binaries are present Visual Studio will ignore `cmakeExecutable` and use the prebuilt binaries.
-
-## See Also
-
-[Working with Project Properties](../ide/working-with-project-properties.md)<br/>
-[CMake Tools for Visual C++](../ide/cmake-tools-for-visual-cpp.md)
+[CMake Projects in Visual Studio](../build/cmake-projects-in-visual-studio.md)<br/>
+::: moniker-end

@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Platform::ArrayReference Class"
 title: "Platform::ArrayReference Class"
-ms.date: "12/30/2016"
+ms.date: "10/16/2019"
 ms.topic: "reference"
 f1_keywords: ["VCCORLIB/Platform::ArrayReference::ArrayReference"]
 helpviewer_keywords: ["Platform::ArrayReference Class"]
@@ -47,7 +48,7 @@ By using `ArrayReference` to fill a C-style array, you avoid the extra copy oper
 
 **Header:** vccorlib.h
 
-## <a name="ctor"></a>  ArrayReference::ArrayReference Constructor
+## <a name="ctor"></a> ArrayReference::ArrayReference Constructor
 
 Initializes a new instance of the [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) class.
 
@@ -71,7 +72,7 @@ An `ArrayReference` object whose data will be moved to initialize the new instan
 
 ### Remarks
 
-## <a name="operator-assign"></a>  ArrayReference::operator= Operator
+## <a name="operator-assign"></a> ArrayReference::operator= Operator
 
 Assigns the specified object to the current [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) object by using move semantics.
 
@@ -94,7 +95,7 @@ A reference to an object of type `ArrayReference`.
 
 `Platform::ArrayReference` is a standard C++ class template, not a ref class.
 
-## <a name="operator-call"></a>  ArrayReference::operator() Operator
+## <a name="operator-call"></a> ArrayReference::operator() Operator
 
 Converts the current [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) object back to a [Platform::Array](../cppcx/platform-array-class.md) class.
 
@@ -110,8 +111,8 @@ A handle-to-object of type `Array<TArg>^`
 
 ### Remarks
 
-[Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) and [Platform::Array](../cppcx/platform-array-class.md) are standard C++ class templates, not ref classes.
+[Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) is a standard C++ class template, and [Platform::Array](../cppcx/platform-array-class.md) is a ref class.
 
-## See Also
+## See also
 
 [Platform namespace](../cppcx/platform-namespace-c-cx.md)

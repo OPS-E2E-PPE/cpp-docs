@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Asynchronous Message Blocks"
 title: "Asynchronous Message Blocks"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["non-greedy join [Concurrency Runtime]", "asynchronous message blocks", "greedy join [Concurrency Runtime]"]
@@ -8,7 +9,7 @@ ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
 
 The Agents Library provides several message-block types that enable you to propagate messages among application components in a thread-safe manner. These message-block types are often used with the various message-passing routines, such as [concurrency::send](reference/concurrency-namespace-functions.md#send), [concurrency::asend](reference/concurrency-namespace-functions.md#asend), [concurrency::receive](reference/concurrency-namespace-functions.md#receive), and [concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive). For more information about the message passing routines that are defined by the Agents Library, see [Message Passing Functions](../../parallel/concrt/message-passing-functions.md).
 
-##  <a name="top"></a> Sections
+## <a name="top"></a> Sections
 
 This topic contains the following sections:
 
@@ -38,7 +39,7 @@ This topic contains the following sections:
 
 - [Message Reservation](#reservation)
 
-##  <a name="sources_and_targets"></a> Sources and Targets
+## <a name="sources_and_targets"></a> Sources and Targets
 
 Sources and targets are two important participants in message passing. A *source* refers to an endpoint of communication that sends messages. A *target* refers to an endpoint of communication that receives messages. You can think of a source as an endpoint that you read from and a target as an endpoint that you write to. Applications connect sources and targets together to form *messaging networks*.
 
@@ -46,7 +47,7 @@ The Agents Library uses two abstract classes to represent sources and targets: [
 
 [[Top](#top)]
 
-##  <a name="propagation"></a> Message Propagation
+## <a name="propagation"></a> Message Propagation
 
 *Message propagation* is the act of sending a message from one component to another. When a message block is offered a message, it can accept, decline, or postpone that message. Every message block type stores and transmits messages in different ways. For example, the `unbounded_buffer` class stores an unlimited number of messages, the `overwrite_buffer` class stores a single message at a time, and the transformer class stores an altered version of each message. These message block types are described in more detail later in this document.
 
@@ -58,7 +59,7 @@ Applications connect sources and targets together to form messaging networks. Ty
 
 [[Top](#top)]
 
-##  <a name="overview"></a> Overview of Message Block Types
+## <a name="overview"></a> Overview of Message Block Types
 
 The following table briefly describes the role of the important message-block types.
 
@@ -114,7 +115,7 @@ The following sections describe the message-block types in more detail.
 
 [[Top](#top)]
 
-##  <a name="unbounded_buffer"></a> unbounded_buffer Class
+## <a name="unbounded_buffer"></a> unbounded_buffer Class
 
 The [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) class represents a general-purpose asynchronous messaging structure. This class stores a first in, first out (FIFO) queue of messages that can be written to by multiple sources or read from by multiple targets. When a target receives a message from an `unbounded_buffer` object, that message is removed from the message queue. Therefore, although an `unbounded_buffer` object can have multiple targets, only one target will receive each message. The `unbounded_buffer` class is useful when you want to pass multiple messages to another component, and that component must receive each message.
 
@@ -134,7 +135,7 @@ For a complete example that shows how to use the `unbounded_buffer` class, see [
 
 [[Top](#top)]
 
-##  <a name="overwrite_buffer"></a> overwrite_buffer Class
+## <a name="overwrite_buffer"></a> overwrite_buffer Class
 
 The [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) class resembles the `unbounded_buffer` class, except that an `overwrite_buffer` object stores just one message. In addition, when a target receives a message from an `overwrite_buffer` object, that message is not removed from the buffer. Therefore, multiple targets receive a copy of the message.
 
@@ -156,7 +157,7 @@ For a complete example that shows how to use the `overwrite_buffer` class, see [
 
 [[Top](#top)]
 
-##  <a name="single_assignment"></a> single_assignment Class
+## <a name="single_assignment"></a> single_assignment Class
 
 The [concurrency::single_assignment](../../parallel/concrt/reference/single-assignment-class.md) class resembles the `overwrite_buffer` class, except that a `single_assignment` object can be written to one time only. Like the `overwrite_buffer` class, when a target receives a message from a `single_assignment` object, that message is not removed from that object. Therefore, multiple targets receive a copy of the message. The `single_assignment` class is useful when you want to broadcast one message to multiple components.
 
@@ -176,7 +177,7 @@ For a complete example that shows how to use the `single_assignment` class, see 
 
 [[Top](#top)]
 
-##  <a name="call"></a> call Class
+## <a name="call"></a> call Class
 
 The [concurrency::call](../../parallel/concrt/reference/call-class.md) class acts as a message receiver that performs a work function when it receives data. This work function can be a lambda expression, a function object, or a function pointer. A `call` object behaves differently than an ordinary function call because it acts in parallel to other components that send messages to it. If a `call` object is performing work when it receives a message, it adds that message to a queue. Every `call` object processes queued messages in the order in which they are received.
 
@@ -196,7 +197,7 @@ For a complete example that shows how to use the `call` class, see [How to: Prov
 
 [[Top](#top)]
 
-##  <a name="transformer"></a> transformer Class
+## <a name="transformer"></a> transformer Class
 
 The [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) class acts as both a message receiver and as a message sender. The `transformer` class resembles the `call` class because it performs a user-defined work function when it receives data. However, the `transformer` class also sends the result of the work function to receiver objects. Like a `call` object, a `transformer` object acts in parallel to other components that send messages to it. If a `transformer` object is performing work when it receives a message, it adds that message to a queue. Every `transformer` object processes its queued messages in the order in which they are received.
 
@@ -206,7 +207,7 @@ Unlike all other asynchronous message block types that are provided by the Agent
 
 ### Example
 
-The following example shows the basic structure of how to work with the `transformer` class. This example creates a `transformer` object that multiples each input `int` value by 0.33 in order to produce a `double` value as output. The example then receives the transformed values from the same `transformer` object and prints them to the console.
+The following example shows the basic structure of how to work with the `transformer` class. This example creates a `transformer` object that multiples each input **`int`** value by 0.33 in order to produce a **`double`** value as output. The example then receives the transformed values from the same `transformer` object and prints them to the console.
 
 [!code-cpp[concrt-transformer-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_5.cpp)]
 
@@ -220,7 +221,7 @@ For a complete example that shows how to use the `transformer` class, see [How t
 
 [[Top](#top)]
 
-##  <a name="choice"></a> choice Class
+## <a name="choice"></a> choice Class
 
 The [concurrency::choice](../../parallel/concrt/reference/choice-class.md) class selects the first available message from a set of sources. The `choice` class represents a control-flow mechanism instead of a dataflow mechanism (the topic [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) describes the differences between dataflow and control-flow).
 
@@ -250,7 +251,7 @@ For a complete example that shows how to use the `choice` class, see [How to: Se
 
 [[Top](#top)]
 
-##  <a name="join"></a> join and multitype_join Classes
+## <a name="join"></a> join and multitype_join Classes
 
 The [concurrency::join](../../parallel/concrt/reference/join-class.md) and [concurrency::multitype_join](../../parallel/concrt/reference/multitype-join-class.md) classes let you wait for each member of a set of sources to receive a message. The `join` class acts on source objects that have a common message type. The `multitype_join` class acts on source objects that can have different message types.
 
@@ -282,13 +283,13 @@ For complete examples that show how to use the `join` class, see [How to: Select
 
 [[Top](#top)]
 
-##  <a name="timer"></a> timer Class
+## <a name="timer"></a> timer Class
 
 The concurrency::[timer class](../../parallel/concrt/reference/timer-class.md) acts as a message source. A `timer` object sends a message to a target after a specified period of time has elapsed. The `timer` class is useful when you must delay sending a message or you want to send a message at a regular interval.
 
 The `timer` class sends its message to just one target. If you set the `_PTarget` parameter in the constructor to `NULL`, you can later specify the target by calling the [concurrency::ISource::link_target](reference/source-block-class.md#link_target) method.
 
-A `timer` object can be repeating or non-repeating. To create a repeating timer, pass **true** for the `_Repeating` parameter when you call the constructor. Otherwise, pass **false** for the `_Repeating` parameter to create a non-repeating timer. If the timer is repeating, it sends the same message to its target after each interval.
+A `timer` object can be repeating or non-repeating. To create a repeating timer, pass **`true`** for the `_Repeating` parameter when you call the constructor. Otherwise, pass **`false`** for the `_Repeating` parameter to create a non-repeating timer. If the timer is repeating, it sends the same message to its target after each interval.
 
 The Agents Library creates `timer` objects in the non-started state. To start a timer object, call the [concurrency::timer::start](reference/timer-class.md#start) method. To stop a `timer` object, destroy the object or call the [concurrency::timer::stop](reference/timer-class.md#stop) method. To pause a repeating timer, call the [concurrency::timer::pause](reference/timer-class.md#pause) method.
 
@@ -308,7 +309,7 @@ For a complete example that shows how to use the `timer` class, see [How to: Sen
 
 [[Top](#top)]
 
-##  <a name="filtering"></a> Message Filtering
+## <a name="filtering"></a> Message Filtering
 
 When you create a message block object, you can supply a *filter function* that determines whether the message block accepts or rejects a message. A filter function is a useful way to guarantee that a message block receives only certain values.
 
@@ -335,7 +336,7 @@ Message filtering supports the *dataflow* programming model, in which components
 
 [[Top](#top)]
 
-##  <a name="reservation"></a> Message Reservation
+## <a name="reservation"></a> Message Reservation
 
 *Message reservation* enables a message block to reserve a message for later use. Typically, message reservation is not used directly. However, understanding message reservation can help you better understand the behavior of some of the predefined message block types.
 
@@ -347,7 +348,6 @@ You can use message reservation when you implement your own custom message block
 
 [[Top](#top)]
 
-## See Also
+## See also
 
 [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Elements of C"
 title: "Elements of C"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["lexical conventions", "conventions, lexical"]
@@ -26,10 +27,10 @@ The following topics are discussed:
 
 - [Punctuation and special characters](../c-language/punctuation-and-special-characters.md)
 
-The section also includes reference tables for [Trigraphs](../c-language/trigraphs.md), [Limits on Floating-Point Constants](../c-language/limits-on-floating-point-constants.md), [C++ Integer Limits](../c-language/cpp-integer-limits.md), and [Escape Sequences](../c-language/escape-sequences.md).
+The section also includes reference tables for [Trigraphs](../c-language/trigraphs.md), [Limits on Floating-Point Constants](../c-language/limits-on-floating-point-constants.md), [C and C++ Integer Limits](../c-language/cpp-integer-limits.md), and [Escape Sequences](../c-language/escape-sequences.md).
 
-Operators are symbols (both single characters and character combinations) that specify how values are to be manipulated. Each symbol is interpreted as a single unit, called a token. For more information, see [Operators](../c-language/c-operators.md).
+Operators (as both single characters and character combinations) are symbols that specify how values are to be manipulated. Each symbol is interpreted as a single unit, called a token. For more information, see [Operators](../c-language/c-operators.md).
 
-## See Also
+## See also
 
 [C Language Reference](../c-language/c-language-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2040"
 title: "Compiler Error C2040"
 ms.date: "11/04/2016"
 f1_keywords: ["C2040"]
@@ -13,7 +14,7 @@ An expression involving the specified operands has incompatible operand types or
 
 This sample generates C2040 and shows how to fix it.
 
-```
+```cpp
 // C2040.cpp
 // Compile by using: cl /c /W3 C2040.cpp
 bool test() {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: defaultcollelem"
 title: "defaultcollelem"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.defaultcollelem"]
@@ -17,7 +18,7 @@ Used for Visual Basic code optimization.
 
 ## Remarks
 
-The **defaultcollelem** C++ attribute has the same functionality as the [defaultcollelem](/windows/desktop/Midl/defaultcollelem) MIDL attribute.
+The **defaultcollelem** C++ attribute has the same functionality as the [defaultcollelem](/windows/win32/Midl/defaultcollelem) MIDL attribute.
 
 ## Example
 
@@ -38,9 +39,7 @@ __interface IMyForm
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|Interface method|
 |**Repeatable**|No|
@@ -49,7 +48,7 @@ __interface IMyForm
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Method Attributes](method-attributes.md)

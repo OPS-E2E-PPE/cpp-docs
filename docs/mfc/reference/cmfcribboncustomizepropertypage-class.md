@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCRibbonCustomizePropertyPage Class"
 title: "CMFCRibbonCustomizePropertyPage Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCRibbonCustomizePropertyPage", "AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage", "AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage", "AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::AddCustomCategory", "AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::OnOK"]
@@ -19,17 +20,15 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 
 ### Public Constructors
 
-|||
-|-|-|
 |Name|Description|
+|-|-|
 |[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|Constructs a `CMFCRibbonCustomizePropertyPage` object.|
 |`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|Destructor.|
 
 ### Public Methods
 
-|||
-|-|-|
 |Name|Description|
+|-|-|
 |[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Adds a custom category to the **Commands** combo box.|
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|Used by the framework to create a dynamic instance of this class type.|
 |`CMFCRibbonCustomizePropertyPage::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|
@@ -65,11 +64,11 @@ The following example demonstrates how to construct a `CMFCRibbonCustomizeProper
 
 **Header:** afxribboncustomizedialog.h
 
-##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory
+## <a name="addcustomcategory"></a> CMFCRibbonCustomizePropertyPage::AddCustomCategory
 
 Adds a custom category to the **Commands** combo box.
 
-```
+```cpp
 void AddCustomCategory(
     LPCTSTR lpszName,
     const CList<UINT, UINT>& lstIDS);
@@ -77,17 +76,17 @@ void AddCustomCategory(
 
 ### Parameters
 
-|||
-|-|-|
-|Parameter|Description|
-|*lpszName*|[in] Specifies the custom category name.|
-|*lstIDS*|[in] Contains ribbon command IDs to be shown in the custom category.|
+*lpszName*\
+[in] Specifies the custom category name.
+
+*lstIDS*\
+[in] Contains ribbon command IDs to be shown in the custom category.
 
 ### Remarks
 
 This method adds a category named *lpszName* to the **Commands** combo box. When the user selects the category, the commands specified in *lstIDS* appear in the command list.
 
-##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
+## <a name="cmfcribboncustomizepropertypage"></a> CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
 
 Constructs a `CMFCRibbonCustomizePropertyPage` object.
 
@@ -100,7 +99,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 *pRibbonBar*<br/>
 [in] A pointer to a ribbon control for which the options to customize.
 
-##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK
+## <a name="onok"></a> CMFCRibbonCustomizePropertyPage::OnOK
 
 Calleld by the system when a user clicks **OK** on the **Customize** dialog box.
 
@@ -112,7 +111,7 @@ virtual void OnOK();
 
 The default implementation applies the options selected in the **Customize** dialog box to the Quick Access Toolbar.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)

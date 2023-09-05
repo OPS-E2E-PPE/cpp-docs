@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: invalid_compute_domain Class"
 title: "invalid_compute_domain Class"
 ms.date: "11/04/2016"
 f1_keywords: ["invalid_compute_domain", "AMPRT/invalid_compute_domain", "AMPRT/Concurrency::invalid_compute_domain::invalid_compute_domain"]
@@ -11,7 +12,7 @@ The exception that's thrown when the runtime can't start a kernel by using the c
 
 ## Syntax
 
-```
+```cpp
 class invalid_compute_domain : public runtime_exception;
 ```
 
@@ -41,9 +42,9 @@ class invalid_compute_domain : public runtime_exception;
 
 Initializes a new instance of the class.
 
-## Syntax
+### Syntax
 
-```
+```cpp
 explicit invalid_compute_domain(
     const char * _Message ) throw();
 
@@ -59,6 +60,6 @@ A description of the error.
 
 An instance of the `invalid_compute_domain` class
 
-## See Also
+## See also
 
 [Concurrency Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)

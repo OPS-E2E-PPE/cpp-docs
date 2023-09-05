@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Sample Container Class"
 title: "Sample Container Class"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["container classes [C++]"]
@@ -7,7 +8,7 @@ ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
 # Sample Container Class
 
 > [!NOTE]
-> This topic is in the Visual C++ documentation as a nonfunctional example of containers used in the C++ Standard Library. For more information, see [C++ Standard Library Containers](../standard-library/stl-containers.md).
+> This topic is in the Microsoft C++ documentation as a nonfunctional example of containers used in the C++ Standard Library. For more information, see [C++ Standard Library Containers](../standard-library/stl-containers.md).
 
 Describes an object that controls a varying-length sequence of elements, typically of type `Ty`. The sequence is stored in different ways, depending on the actual container.
 
@@ -23,7 +24,7 @@ A few additional caveats:
 
 The container classes defined by C++ Standard Library satisfy several additional requirements, as described in the following paragraphs.
 
-Container template class [list](../standard-library/list-class.md) provides deterministic, and useful, behavior even in the presence of the exceptions described above. For example, if an exception is thrown during the insertion of one or more elements, the container is left unaltered and the exception is rethrown.
+Container class template [list](../standard-library/list-class.md) provides deterministic, and useful, behavior even in the presence of the exceptions described above. For example, if an exception is thrown during the insertion of one or more elements, the container is left unaltered and the exception is rethrown.
 
 For *all* the container classes defined by C++ Standard Library, if an exception is thrown during calls to the following member functions, `insert`, `push_back`, or `push_front`, the container is left unaltered and the exception is rethrown.
 
@@ -69,4 +70,4 @@ In this implementation, however, containers do not make such simplifying assumpt
 
 ## See also
 
-[\<sample container>](../standard-library/sample-container.md)<br/>
+[\<sample container>](../standard-library/sample-container.md)

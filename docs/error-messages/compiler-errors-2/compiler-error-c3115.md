@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3115"
 title: "Compiler Error C3115"
 ms.date: "11/04/2016"
 f1_keywords: ["C3115"]
@@ -15,7 +16,7 @@ An attribute was applied to a construct for which it was not intended.  See [Att
 
 The following sample generates C3115.
 
-```
+```cpp
 // C3115.cpp
 // compile with: /c
 #include <unknwn.h>

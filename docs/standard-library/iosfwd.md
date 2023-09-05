@@ -1,13 +1,14 @@
 ---
-title: "&lt;iosfwd&gt;"
+description: "Learn more about: <iosfwd>"
+title: "<iosfwd>"
 ms.date: "11/04/2016"
 f1_keywords: ["<iosfwd>"]
 helpviewer_keywords: ["iosfwd header"]
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
 ---
-# &lt;iosfwd&gt;
+# `<iosfwd>`
 
-Declares forward references to several template classes used throughout iostreams. All such template classes are defined in other standard headers. You include this header explicitly only when you need one of its declarations, but not its definition.
+Declares forward references to several class templates used throughout iostreams. All such class templates are defined in other standard headers. You include this header explicitly only when you need one of its declarations, but not its definition.
 
 ## Syntax
 
@@ -22,7 +23,7 @@ typedef T1 streamoff;
 typedef T2 streamsize;
 typedef fpos streampos;
 
-// wchar_t TYPE DEFINITIONS
+// char TYPE DEFINITIONS
 typedef basic_ios<char, char_traits<char>> ios;
 typedef basic_streambuf<char, char_traits<char>> streambuf;
 typedef basic_istream<char, char_traits<char>> istream;
@@ -51,10 +52,9 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
-};
 ```
 
-## Forward Declarations/Template Classes
+## Forward declarations and class templates
 
 ```cpp
 template <class _Statetype>
@@ -120,7 +120,7 @@ class basic_fstream;
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream Programming](../standard-library/iostream-programming.md)<br/>
-[iostreams Conventions](../standard-library/iostreams-conventions.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream Programming](../standard-library/iostream-programming.md)\
+[iostreams Conventions](../standard-library/iostreams-conventions.md)

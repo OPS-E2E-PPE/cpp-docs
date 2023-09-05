@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Enhancing the Simple Read-Only Provider"
 title: "Enhancing the Simple Read-Only Provider"
 ms.date: "10/26/2018"
 helpviewer_keywords: ["read-only poviders [C++]", "IRowsetLocate class", "IRowsetLocate class, adding to OLE DB template providers", "simple read-only poviders [C++]"]
@@ -16,6 +17,6 @@ The example in the following topics enhances the row-fetching mechanism by addin
 
 - [Dynamically determine the columns returned to the consumer](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
 
-## See Also
+## See also
 
 [Creating a Simple Read-Only Provider](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>

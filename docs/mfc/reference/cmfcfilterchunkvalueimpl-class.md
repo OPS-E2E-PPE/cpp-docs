@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCFilterChunkValueImpl Class"
 title: "CMFCFilterChunkValueImpl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCFilterChunkValueImpl", "AFXWIN/CMFCFilterChunkValueImpl", "AFXWIN/CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl", "AFXWIN/CMFCFilterChunkValueImpl::Clear", "AFXWIN/CMFCFilterChunkValueImpl::CopyChunk", "AFXWIN/CMFCFilterChunkValueImpl::CopyFrom", "AFXWIN/CMFCFilterChunkValueImpl::GetChunkGUID", "AFXWIN/CMFCFilterChunkValueImpl::GetChunkPID", "AFXWIN/CMFCFilterChunkValueImpl::GetChunkType", "AFXWIN/CMFCFilterChunkValueImpl::GetString", "AFXWIN/CMFCFilterChunkValueImpl::GetValue", "AFXWIN/CMFCFilterChunkValueImpl::GetValueNoAlloc", "AFXWIN/CMFCFilterChunkValueImpl::IsValid", "AFXWIN/CMFCFilterChunkValueImpl::SetBoolValue", "AFXWIN/CMFCFilterChunkValueImpl::SetDwordValue", "AFXWIN/CMFCFilterChunkValueImpl::SetFileTimeValue", "AFXWIN/CMFCFilterChunkValueImpl::SetInt64Value", "AFXWIN/CMFCFilterChunkValueImpl::SetIntValue", "AFXWIN/CMFCFilterChunkValueImpl::SetLongValue", "AFXWIN/CMFCFilterChunkValueImpl::SetSystemTimeValue", "AFXWIN/CMFCFilterChunkValueImpl::SetTextValue", "AFXWIN/CMFCFilterChunkValueImpl::SetChunk"]
@@ -77,17 +78,17 @@ hr = chunk.SetFileTimeValue(PKEY_ItemDate, ftLastModified);
 
 **Header:** afxwin.h
 
-##  <a name="clear"></a>  CMFCFilterChunkValueImpl::Clear
+## <a name="clear"></a> CMFCFilterChunkValueImpl::Clear
 
 Clears the ChunkValue.
 
-```
+```cpp
 void Clear();
 ```
 
 ### Remarks
 
-##  <a name="cmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl
+## <a name="cmfcfilterchunkvalueimpl"></a> CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl
 
 Constructs the object.
 
@@ -97,7 +98,7 @@ CMFCFilterChunkValueImpl();
 
 ### Remarks
 
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl
+## <a name="_dtorcmfcfilterchunkvalueimpl"></a> CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl
 
 Destructs the object.
 
@@ -107,7 +108,7 @@ virtual ~CMFCFilterChunkValueImpl();
 
 ### Remarks
 
-##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk
+## <a name="copychunk"></a> CMFCFilterChunkValueImpl::CopyChunk
 
 Copies this chunk to a structure describing the characteristics of a chunk.
 
@@ -126,11 +127,11 @@ S_OK if successful; otherwise an error code.
 
 ### Remarks
 
-##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom
+## <a name="copyfrom"></a> CMFCFilterChunkValueImpl::CopyFrom
 
 Initializes this chunk value from the other value.
 
-```
+```cpp
 void CopyFrom (IFilterChunkValue* pValue);
 ```
 
@@ -141,7 +142,7 @@ Specifies the source value to copy from.
 
 ### Remarks
 
-##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID
+## <a name="getchunkguid"></a> CMFCFilterChunkValueImpl::GetChunkGUID
 
 Retrieves the chunk GUID.
 
@@ -155,7 +156,7 @@ A reference to a GUID identifying the chunk.
 
 ### Remarks
 
-##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID
+## <a name="getchunkpid"></a> CMFCFilterChunkValueImpl::GetChunkPID
 
 Retrieves the chunk PID (property ID).
 
@@ -169,7 +170,7 @@ A DWORD value containing the property ID.
 
 ### Remarks
 
-##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType
+## <a name="getchunktype"></a> CMFCFilterChunkValueImpl::GetChunkType
 
 Retrieves the chunk type.
 
@@ -183,7 +184,7 @@ A CHUNKSTATE enumerated value, which specifies whether the current chunk is a te
 
 ### Remarks
 
-##  <a name="getstring"></a>  CMFCFilterChunkValueImpl::GetString
+## <a name="getstring"></a> CMFCFilterChunkValueImpl::GetString
 
 Retrieves the string value.
 
@@ -197,7 +198,7 @@ A string containing the chunk value.
 
 ### Remarks
 
-##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue
+## <a name="getvalue"></a> CMFCFilterChunkValueImpl::GetValue
 
 Retrieves the value as an allocated propvariant.
 
@@ -216,7 +217,7 @@ S_OK if PROPVARIANT was allocated successfully and the chunk value was successfu
 
 ### Remarks
 
-##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc
+## <a name="getvaluenoalloc"></a> CMFCFilterChunkValueImpl::GetValueNoAlloc
 
 Returns the non-allocated (internal value) value.
 
@@ -230,7 +231,7 @@ Returns the current chunk value.
 
 ### Remarks
 
-##  <a name="isvalid"></a>  CMFCFilterChunkValueImpl::IsValid
+## <a name="isvalid"></a> CMFCFilterChunkValueImpl::IsValid
 
 Checks whether this property value is valid or not.
 
@@ -244,7 +245,7 @@ TRUE if the current chunk value is valid; otherwise FALSE.
 
 ### Remarks
 
-##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue
+## <a name="setboolvalue"></a> CMFCFilterChunkValueImpl::SetBoolValue
 
 Overloaded. Sets the property by key to a Boolean.
 
@@ -297,7 +298,7 @@ S_OK if successful; otherwise an error code.
 
 ### Remarks
 
-##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk
+## <a name="setchunk"></a> CMFCFilterChunkValueImpl::SetChunk
 
 A helper function that sets the chunk's common properties.
 
@@ -337,7 +338,7 @@ S_OK if successful; otherwise error code.
 
 ### Remarks
 
-##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue
+## <a name="setdwordvalue"></a> CMFCFilterChunkValueImpl::SetDwordValue
 
 Set the property by key to a DWORD.
 
@@ -381,7 +382,7 @@ S_OK if successful; otherwise an error code.
 
 ### Remarks
 
-##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue
+## <a name="setfiletimevalue"></a> CMFCFilterChunkValueImpl::SetFileTimeValue
 
 Set the property by key to a filetime.
 
@@ -425,7 +426,7 @@ S_OK if successful; otherwise an error code.
 
 ### Remarks
 
-##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value
+## <a name="setint64value"></a> CMFCFilterChunkValueImpl::SetInt64Value
 
 Set the property by key to an int64.
 
@@ -469,7 +470,7 @@ S_OK if successful; otherwise an error code.
 
 ### Remarks
 
-##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue
+## <a name="setintvalue"></a> CMFCFilterChunkValueImpl::SetIntValue
 
 Set the property by key to an int.
 
@@ -513,7 +514,7 @@ S_OK if successful; otherwise an error code.
 
 ### Remarks
 
-##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue
+## <a name="setlongvalue"></a> CMFCFilterChunkValueImpl::SetLongValue
 
 Set the property by key to a LONG.
 
@@ -557,7 +558,7 @@ S_OK if successful; otherwise an error code.
 
 ### Remarks
 
-##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue
+## <a name="setsystemtimevalue"></a> CMFCFilterChunkValueImpl::SetSystemTimeValue
 
 Sets the property by key to a SystemTime.
 
@@ -601,7 +602,7 @@ S_OK if successful; otherwise an error code.
 
 ### Remarks
 
-##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue
+## <a name="settextvalue"></a> CMFCFilterChunkValueImpl::SetTextValue
 
 Sets the property by key to a Unicode string.
 
@@ -645,6 +646,6 @@ S_OK if successful; otherwise an error code.
 
 ### Remarks
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

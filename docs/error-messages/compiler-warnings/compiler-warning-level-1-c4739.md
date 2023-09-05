@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (Level 1) C4739"
 title: "Compiler Warning (Level 1) C4739"
 ms.date: "11/04/2016"
 f1_keywords: ["C4739"]
@@ -15,7 +16,7 @@ To resolve this warning, only assign a value to a variable whose size can accomm
 
 The following sample generates C4739:
 
-```
+```cpp
 // C4739.cpp
 // compile with: /RTCs /Zi /W1 /c
 char *pc;

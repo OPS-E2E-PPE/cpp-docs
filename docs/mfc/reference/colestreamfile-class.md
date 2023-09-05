@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleStreamFile Class"
 title: "COleStreamFile Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COleStreamFile", "AFXOLE/COleStreamFile", "AFXOLE/COleStreamFile::COleStreamFile", "AFXOLE/COleStreamFile::Attach", "AFXOLE/COleStreamFile::CreateMemoryStream", "AFXOLE/COleStreamFile::CreateStream", "AFXOLE/COleStreamFile::Detach", "AFXOLE/COleStreamFile::GetStream", "AFXOLE/COleStreamFile::OpenStream"]
@@ -42,7 +43,7 @@ An `IStorage` object must exist before the stream can be opened or created unles
 
 For more information about manipulating streams and storages, see the article [Containers: Compound Files](../../mfc/containers-compound-files.md)..
 
-For more information, see [IStream](/windows/desktop/api/objidl/nn-objidl-istream) and [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) in the Windows SDK.
+For more information, see [IStream](/windows/win32/api/objidl/nn-objidl-istream) and [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) in the Windows SDK.
 
 ## Inheritance Hierarchy
 
@@ -56,11 +57,11 @@ For more information, see [IStream](/windows/desktop/api/objidl/nn-objidl-istrea
 
 **Header:** afxole.h
 
-##  <a name="attach"></a>  COleStreamFile::Attach
+## <a name="attach"></a> COleStreamFile::Attach
 
 Associates the supplied OLE stream with the `COleStreamFile` object.
 
-```
+```cpp
 void Attach(LPSTREAM lpStream);
 ```
 
@@ -73,9 +74,9 @@ Points to the OLE stream (`IStream`) to be associated with the object. Cannot be
 
 The object must not already be associated with an OLE stream.
 
-For more information, see [IStream](/windows/desktop/api/objidl/nn-objidl-istream) in the Windows SDK.
+For more information, see [IStream](/windows/win32/api/objidl/nn-objidl-istream) in the Windows SDK.
 
-##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile
+## <a name="colestreamfile"></a> COleStreamFile::COleStreamFile
 
 Creates a `COleStreamFile` object.
 
@@ -92,9 +93,9 @@ Pointer to the OLE stream to be associated with the object.
 
 If *lpStream* is NULL, the object is not associated with an OLE stream, otherwise, the object is associated with the supplied OLE stream.
 
-For more information, see [IStream](/windows/desktop/api/objidl/nn-objidl-istream) in the Windows SDK.
+For more information, see [IStream](/windows/win32/api/objidl/nn-objidl-istream) in the Windows SDK.
 
-##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream
+## <a name="creatememorystream"></a> COleStreamFile::CreateMemoryStream
 
 Safely creates a new stream out of global, shared memory where a failure is a normal, expected condition.
 
@@ -115,9 +116,9 @@ Nonzero if the stream is created successfully; otherwise 0.
 
 The memory is allocated by the OLE subsystem.
 
-For more information, see [CreateStreamOnHGlobal](/windows/desktop/api/combaseapi/nf-combaseapi-createstreamonhglobal) in the Windows SDK.
+For more information, see [CreateStreamOnHGlobal](/windows/win32/api/combaseapi/nf-combaseapi-createstreamonhglobal) in the Windows SDK.
 
-##  <a name="createstream"></a>  COleStreamFile::CreateStream
+## <a name="createstream"></a> COleStreamFile::CreateStream
 
 Safely creates a new stream in the supplied storage object where a failure is a normal, expected condition.
 
@@ -151,9 +152,9 @@ Nonzero if the stream is created successfully; otherwise 0.
 
 A file exception will be thrown if the open fails and *pError* is not NULL.
 
-For more information, see [IStorage::CreateStream](/windows/desktop/api/objidl/nf-objidl-istorage-createstream) in the Windows SDK.
+For more information, see [IStorage::CreateStream](/windows/win32/api/objidl/nf-objidl-istorage-createstream) in the Windows SDK.
 
-##  <a name="detach"></a>  COleStreamFile::Detach
+## <a name="detach"></a> COleStreamFile::Detach
 
 Disassociates the stream from the object without closing the stream.
 
@@ -169,9 +170,9 @@ A pointer to the stream (`IStream`) that was associated with the object.
 
 The stream must be closed in some other fashion before the program terminates.
 
-For more information, see [IStream](/windows/desktop/api/objidl/nn-objidl-istream) in the Windows SDK.
+For more information, see [IStream](/windows/win32/api/objidl/nn-objidl-istream) in the Windows SDK.
 
-##  <a name="getstream"></a>  COleStreamFile::GetStream
+## <a name="getstream"></a> COleStreamFile::GetStream
 
 Call this function to return a pointer to current stream.
 
@@ -181,9 +182,9 @@ IStream* GetStream() const;
 
 ### Return Value
 
-A pointer to the current stream interface ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)).
+A pointer to the current stream interface ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)).
 
-##  <a name="openstream"></a>  COleStreamFile::OpenStream
+## <a name="openstream"></a> COleStreamFile::OpenStream
 
 Opens an existing stream.
 
@@ -217,10 +218,9 @@ Nonzero if the stream is opened successfully; otherwise 0.
 
 A file exception will be thrown if the open fails and *pError* is not NULL.
 
-For more information, see [IStorage::OpenStream](/windows/desktop/api/objidl/nf-objidl-istorage-openstream) in the Windows SDK.
+For more information, see [IStorage::OpenStream](/windows/win32/api/objidl/nf-objidl-istorage-openstream) in the Windows SDK.
 
-## See Also
+## See also
 
 [CFile Class](../../mfc/reference/cfile-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

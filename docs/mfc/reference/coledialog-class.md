@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: COleDialog Class"
 title: "COleDialog Class"
 ms.date: "11/04/2016"
 f1_keywords: ["COleDialog", "AFXODLGS/COleDialog", "AFXODLGS/COleDialog::GetLastError"]
@@ -65,7 +66,7 @@ For more information about OLE-specific dialog boxes, see the article [Dialog Bo
 
 **Header:** afxodlgs.h
 
-##  <a name="getlasterror"></a>  COleDialog::GetLastError
+## <a name="getlasterror"></a> COleDialog::GetLastError
 
 Call the `GetLastError` member function to get additional error information when `DoModal` returns IDABORT.
 
@@ -81,8 +82,7 @@ The error codes returned by `GetLastError` depend on the specific dialog box dis
 
 See the `DoModal` member function in the derived classes for information about specific error messages.
 
-## See Also
+## See also
 
 [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

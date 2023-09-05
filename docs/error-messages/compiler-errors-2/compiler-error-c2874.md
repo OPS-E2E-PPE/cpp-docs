@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2874"
 title: "Compiler Error C2874"
 ms.date: "11/04/2016"
 f1_keywords: ["C2874"]
@@ -13,7 +14,7 @@ The declaration causes the same item to be defined twice.
 
 The following sample generates C2874:
 
-```
+```cpp
 // C2874.cpp
 namespace Z {
    int i;

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2047"
 title: "Compiler Error C2047"
 ms.date: "11/04/2016"
 f1_keywords: ["C2047"]
@@ -9,11 +10,11 @@ ms.assetid: 686a5a81-3857-4753-84a0-5c2e7149cbee
 
 illegal default
 
-The keyword `default` can appear only in a `switch` statement.
+The keyword **`default`** can appear only in a **`switch`** statement.
 
 The following sample generates C2047:
 
-```
+```cpp
 // C2047.cpp
 int main() {
    int i = 0;
@@ -27,7 +28,7 @@ int main() {
 
 Possible resolution:
 
-```
+```cpp
 // C2047b.cpp
 int main() {
    int i = 0;

@@ -1,13 +1,16 @@
 ---
+description: "Learn more about: insert_iterator Class"
 title: "insert_iterator Class"
-ms.date: "11/04/2016"
+ms.date: 06/15/2022
 f1_keywords: ["iterator/std::insert_iterator", "iterator/std::insert_iterator::container_type", "iterator/std::insert_iterator::reference"]
 helpviewer_keywords: ["std::insert_iterator [C++]", "std::insert_iterator [C++], container_type", "std::insert_iterator [C++], reference"]
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
+ms.custom: devdivchpfy22
 ---
+
 # insert_iterator Class
 
-Describes an iterator adaptor that satisfies the requirements of an output iterator. It inserts, rather than overwrites, elements into a sequence and thus provides semantics that are different from the overwrite semantics provided by the iterators of the C++ sequence and associative containers. The `insert_iterator` class is templatized on the type of container being adapted.
+Describes an iterator adaptor that satisfies the requirements of an output iterator. It inserts, rather than overwrites, elements into a sequence. Thus it provides semantics that are different from the overwrite semantics provided by the iterators of the C++ sequence and associative containers. The `insert_iterator` class is templatized on the type of container being adapted.
 
 ## Syntax
 
@@ -18,7 +21,7 @@ class insert_iterator;
 
 ### Parameters
 
-*Container*<br/>
+*Container*\
 The type of container into which elements are to be inserted by an `insert_iterator`.
 
 ## Remarks
@@ -52,7 +55,7 @@ The container of type `Container` must satisfy the requirements for a variable-s
 
 **Namespace:** std
 
-## <a name="container_type"></a>  insert_iterator::container_type
+## <a name="container_type"></a> insert_iterator::container_type
 
 A type that represents the container into which a general insertion is to be made.
 
@@ -94,7 +97,7 @@ The list L2 is: ( 40 20 10 ).
 */
 ```
 
-## <a name="insert_iterator"></a>  insert_iterator::insert_iterator
+## <a name="insert_iterator"></a> insert_iterator::insert_iterator
 
 Constructs an `insert_iterator` that inserts an element into a specified position in a container.
 
@@ -104,10 +107,10 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### Parameters
 
-*_Cont*<br/>
+*_Cont*\
 The container into which the `insert_iterator` is to insert elements.
 
-*_It*<br/>
+*_It*\
 The position for the insertion.
 
 ### Remarks
@@ -160,7 +163,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>  insert_iterator::operator*
+## <a name="op_star"></a> insert_iterator::operator*
 
 Dereferences the insert iterator returning the element is addresses.
 
@@ -174,7 +177,7 @@ The member function returns the value of the element addressed.
 
 ### Remarks
 
-Used to implement the output iterator expression **\*Iter** = **value**. If `Iter` is an iterator that addresses an element in a sequence, then **\*Iter** = **value** replaces that element with value and does not change the total number of elements in the sequence.
+Used to implement the output iterator expression **\*Iter** = **value**. If `Iter` is an iterator that addresses an element in a sequence, then **\*Iter** = **value** replaces that element with value and doesn't change the total number of elements in the sequence.
 
 ### Example
 
@@ -220,7 +223,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="op_add_add"></a>  insert_iterator::operator++
+## <a name="op_add_add"></a> insert_iterator::operator++
 
 Increments the `insert_iterator` to the next location into which a value may be stored.
 
@@ -284,7 +287,7 @@ After the insertions, the vector vec becomes:
 */
 ```
 
-## <a name="op_eq"></a>  insert_iterator::operator=
+## <a name="op_eq"></a> insert_iterator::operator=
 
 Inserts a value into the container and returns the iterator updated to point to the new element.
 
@@ -298,7 +301,7 @@ insert_iterator<Container>& operator=(
 
 ### Parameters
 
-*val*<br/>
+*val*\
 The value to be assigned to the container.
 
 ### Return Value
@@ -313,7 +316,7 @@ The first member operator evaluates
 
 `++Iter;`
 
-then returns `*this`.
+then returns **`*this`**.
 
 The second member operator evaluates
 
@@ -321,7 +324,7 @@ The second member operator evaluates
 
 `++Iter;`
 
-then returns `*this`.
+then returns **`*this`**.
 
 ### Example
 
@@ -367,7 +370,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="reference"></a>  insert_iterator::reference
+## <a name="reference"></a> insert_iterator::reference
 
 A type that provides a reference to an element in a sequence controlled by the associated container.
 
@@ -417,6 +420,6 @@ The first element in the list L is: 10.
 
 ## See also
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

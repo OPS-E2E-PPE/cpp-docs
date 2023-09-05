@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: User Button Handlers"
 title: "User Button Handlers"
 ms.date: "11/04/2016"
 f1_keywords: ["ON_BN_HILITE", "ON_BN_DOUBLECLICKED", "ON_BN_CLICKED", "ON_BN_PAINT", "ON_BN_DISABLE", "ON_BN_UNHILITE"]
@@ -18,7 +19,6 @@ The following map entries correspond to the function prototypes.
 |ON_BN_PAINT( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
 |ON_BN_UNHILITE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|
 
-## See Also
+## See also
 
 [Message Maps](../../mfc/reference/message-maps-mfc.md)
-

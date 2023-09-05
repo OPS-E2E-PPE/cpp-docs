@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2297"
 title: "Compiler Error C2297"
 ms.date: "11/04/2016"
 f1_keywords: ["C2297"]
@@ -15,7 +16,7 @@ For example, the compiler may see a declaration where you intended a function ca
 
 The following sample generates C2297:
 
-```
+```cpp
 // C2297.cpp
 struct MyStruct {
    struct Help {

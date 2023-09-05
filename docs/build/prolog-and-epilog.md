@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: x64 prolog and epilog"
 title: "x64 prolog and epilog"
 ms.date: "12/17/2018" 
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
@@ -81,12 +82,12 @@ In practice, when a frame pointer is used, there is no good reason to adjust RSP
     ret
 ```
 
-These forms are the only legal ones for an epilog. It must consist of either an `add RSP,constant` or `lea RSP,constant[FPReg]`, followed by a series of zero or more 8-byte register pops and a `return` or a `jmp`. (Only a subset of `jmp` statements are allowable in the epilog. The subset is exclusively the class of `jmp` statements with ModRM memory references where ModRM mod field value is 00. The use of `jmp` statements in the epilog with ModRM mod field value 01 or 10 is prohibited. See Table A-15 in the AMD x86-64 Architecture Programmer’s Manual Volume 3: General Purpose and System Instructions, for more info on the allowable ModRM references.) No other code can appear. In particular, nothing can be scheduled within an epilog, including loading of a return value.
+These forms are the only legal ones for an epilog. It must consist of either an `add RSP,constant` or `lea RSP,constant[FPReg]`, followed by a series of zero or more 8-byte register pops and a `return` or a `jmp`. (Only a subset of `jmp` statements are allowable in the epilog. The subset is exclusively the class of `jmp` statements with ModRM memory references where ModRM mod field value is 00. The use of `jmp` statements in the epilog with ModRM mod field value 01 or 10 is prohibited. See Table A-15 in the AMD x86-64 Architecture Programmer's Manual Volume 3: General Purpose and System Instructions, for more info on the allowable ModRM references.) No other code can appear. In particular, nothing can be scheduled within an epilog, including loading of a return value.
 
 When a frame pointer is not used, the epilog must use `add RSP,constant` to deallocate the fixed part of the stack. It may not use `lea RSP,constant[RSP]` instead. This restriction exists so the unwind code has fewer patterns to recognize when searching for epilogs.
 
 Following these rules allows the unwind code to determine that an epilog is currently being executed and to simulate execution of the remainder of the epilog to allow recreating the context of the calling function.
 
-## See Also
+## See also
 
-[x64 software conventions](../build/x64-software-conventions.md)
+[x64 Software Conventions](x64-software-conventions.md)

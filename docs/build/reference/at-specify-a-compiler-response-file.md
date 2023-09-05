@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: @ (Specify a Compiler Response File)"
 title: "@ (Specify a Compiler Response File)"
 ms.date: "11/04/2016"
 f1_keywords: ["@"]
@@ -34,7 +35,7 @@ From the command line you can specify as many response file options (for example
 
 - This compiler option cannot be changed programmatically.
 
-## See Also
+## See also
 
-[Compiler Options](../../build/reference/compiler-options.md)<br/>
-[Setting Compiler Options](../../build/reference/setting-compiler-options.md)
+[MSVC Compiler Options](compiler-options.md)<br/>
+[MSVC Compiler Command-Line Syntax](compiler-command-line-syntax.md)

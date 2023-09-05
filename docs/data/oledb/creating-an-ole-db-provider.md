@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Creating an OLE DB Provider"
 title: "Creating an OLE DB Provider"
 ms.date: "10/13/2018"
 helpviewer_keywords: ["OLE DB providers, creating", "OLE DB provider templates, creating providers"]
@@ -28,7 +29,7 @@ The basic steps are as follows:
    > [!NOTE]
    > By default, the wizards generate code that is OLE DB level 0 compliant. To ensure that your application remains level 0 compliant, do not remove any of the wizard-generated interfaces from the code.
 
-## See Also
+## See also
 
 [CatDB Sample: Data Source Schema Browser](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
 [DBViewer Sample: Database Browser](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)

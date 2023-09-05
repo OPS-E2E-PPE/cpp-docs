@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Using OLE DB Record Views"
 title: "Using OLE DB Record Views"
 ms.date: "10/24/2018"
 helpviewer_keywords: ["OLE DB record views", "COleDBRecordView class, overview", "rowsets, record views", "record views, record view objects", "OLE DB, record views", "MFC, record views"]
@@ -19,7 +20,7 @@ The view displays the fields of the `CRowset` object in the dialog's controls. T
 
 You can use DDX functions with `COleDbRecordView` to get data directly from the database recordset and display it in a dialog control. Use the **DDX_**<strong>\*</strong> methods (such as `DDX_Text`), not the **DDX_Field**<strong>\*</strong> functions (such as `DDX_FieldText`) with `COleDbRecordView`.
 
-## See Also
+## See also
 
 [Using Accessors](../../data/oledb/using-accessors.md)<br/>
 [COleDBRecordView Class](../../mfc/reference/coledbrecordview-class.md)<br/>

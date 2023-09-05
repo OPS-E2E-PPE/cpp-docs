@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Metadata Namespace"
 title: "Platform::Metadata Namespace"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -39,6 +40,6 @@ Although this namespace is intended for internal use, browsers can display the f
 
 **Namespace:** Platform::Metadata
 
-## See Also
+## See also
 
 [Platform Namespace](platform-namespace-c-cx.md)

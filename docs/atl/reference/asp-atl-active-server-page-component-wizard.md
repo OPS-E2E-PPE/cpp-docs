@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ASP, ATL Active Server Page Component Wizard"
 title: "ASP, ATL Active Server Page Component Wizard"
 ms.date: "11/04/2016"
 f1_keywords: ["vc.codewiz.class.atl.asp.asp"]
@@ -15,7 +16,7 @@ Use this page of the ATL Active Server Page Component Wizard to specify optional
 
 - **OnStartPage/OnEndPage**
 
-   [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) is called the first time the script tries to access the object. **OnEndPage** is called when the object is finished processing the script.
+   [OnStartPage](/previous-versions//ms691624\(v=vs.85\)) is called the first time the script tries to access the object. **OnEndPage** is called when the object is finished processing the script.
 
 - **Intrinsic object**
 
@@ -29,8 +30,7 @@ Use this page of the ATL Active Server Page Component Wizard to specify optional
 |**Application**|Provides access to the Active Server Pages intrinsic **Application** object. The **Application** object manages state that is shared across multiple ASP objects.|
 |**Server**|Provides access to the Active Server Pages intrinsic **Server** object. The **Server** object allows you to create other ASP objects.|
 
-## See Also
+## See also
 
 [ATL Active Server Page Component Wizard](../../atl/reference/atl-active-server-page-component-wizard.md)<br/>
 [ATL Active Server Page Component](../../atl/reference/adding-an-atl-active-server-page-component.md)
-

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2550"
 title: "Compiler Error C2550"
 ms.date: "11/04/2016"
 f1_keywords: ["C2550"]
@@ -13,7 +14,7 @@ A base class initializer list is used on the definition of a function that is no
 
 The following sample generates C2550:
 
-```
+```cpp
 // C2550.cpp
 // compile with: /c
 class C {

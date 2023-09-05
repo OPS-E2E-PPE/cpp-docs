@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Hosting a Windows Form User Control as an MFC Dialog Box"
 title: "Hosting a Windows Form User Control as an MFC Dialog Box"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["MFC [C++], Windows Forms support", "Windows Forms [C++], hosting as MFC Dialog", "hosting Windows Forms control [C++]"]
@@ -9,8 +10,6 @@ ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
 MFC provides the template class [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) so that you can host a Windows Forms user control (<xref:System.Windows.Forms.UserControl>) in a modal or modeless MFC dialog box. `CWinFormsDialog` is derived from the MFC class [CDialog](../mfc/reference/cdialog-class.md), so the dialog box can be launched as modal or modeless.
 
 The process that `CWinFormsDialog` uses to host the user control is the similar to that described in [Hosting a Windows Form User Control in an MFC Dialog Box](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). However, `CWinFormsDialog` manages the initialization and hosting of the user control so that it does not have to be programmed manually.
-
-For a sample application that shows Windows Forms used with MFC, see [MFC and Windows Forms Integration](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
 
 ### To create the MFC host application
 
@@ -26,13 +25,13 @@ For a sample application that shows Windows Forms used with MFC, see [MFC and Wi
 
    In **Solution Explorer**, right-click the **MFC03** project node, and choose **Properties**. The **Property Pages** dialog box appears.
 
-   In the **Property Pages** dialog box, in the **Configuration Properties** tree control, select **General**, then in the **Project Defaults** section, set **Common Language Runtime support** to **Common Language Runtime Support (/clr)**. Click **OK**.
+   In the **Property Pages** dialog box, select **Configuration Properties** > **General**. In the **Project Defaults** section, set **Common Language Runtime support** to **Common Language Runtime Support (/clr)**. Choose **OK**.
 
 1. Add a reference to the .NET control.
 
    In **Solution Explorer**, right-click the **MFC03** project node and choose **Add**, **References**. In the **Property Page**, click **Add New Reference**, select WindowsControlLibrary1 (under the **Projects** tab), and click **OK**. This adds a reference in the form of a [/FU](../build/reference/fu-name-forced-hash-using-file.md) compiler option so that the program will compile; it also copies WindowsControlLibrary1.dll into the `MFC03` project directory so that the program will run.
 
-1. Add `#include <afxwinforms.h>` to stdafx.h, at the end of the existing `#include` statements.
+1. Add `#include <afxwinforms.h>` to *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier), at the end of the existing `#include` statements.
 
 1. Add a new class that subclasses `CDialog`.
 
@@ -125,7 +124,7 @@ For a sample application that shows Windows Forms used with MFC, see [MFC and Wi
 
 1. Build and run the project.
 
-## See Also
+## See also
 
 <xref:System.Windows.Forms.UserControl?displayProperty=fullName>
 [Using a Windows Form User Control in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)

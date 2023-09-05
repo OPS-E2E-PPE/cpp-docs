@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Working with a Header Control"
 title: "Working with a Header Control"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["header controls [MFC], working with", "header controls"]
@@ -18,8 +19,7 @@ The easy way to use a header control ([CHeaderCtrl](../mfc/reference/cheaderctrl
 
 If the header control object is embedded in a parent view or dialog class, the control is destroyed when the parent is destroyed.
 
-## See Also
+## See also
 
 [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
 [Controls](../mfc/controls-mfc.md)
-

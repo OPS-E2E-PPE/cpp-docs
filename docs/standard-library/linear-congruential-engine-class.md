@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: linear_congruential_engine Class"
 title: "linear_congruential_engine Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::linear_congruential_engine"]
@@ -37,24 +38,26 @@ class linear_congruential_engine{
 
 ### Parameters
 
-*UIntType*<br/>
+*UIntType*\
 The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).
 
-*A*<br/>
+*A*\
 **Multiplier**. **Precondition**: See Remarks section.
 
-*C*<br/>
+*C*\
 **Increment**. **Precondition**: See Remarks section.
 
-*M*<br/>
+*M*\
 **Modulus**. **Precondition**: See remarks.
 
 ## Members
 
-||||
-|-|-|-|
-|`linear_congruential_engine::linear_congruential_engine`|`linear_congruential_engine::min`|`linear_congruential_engine::discard`|
-|`linear_congruential_engine::operator()`|`linear_congruential_engine::max`|`linear_congruential_engine::seed`|
+`linear_congruential_engine::linear_congruential_engine`
+`linear_congruential_engine::discard`\
+`linear_congruential_engine::max`\
+`linear_congruential_engine::min`\
+`linear_congruential_engine::operator()`\
+`linear_congruential_engine::seed`
 
 `default_seed` is a member constant, defined as `1u`, used as the default parameter value for `linear_congruential_engine::seed` and the single value constructor.
 
@@ -62,7 +65,7 @@ For more information about engine members, see [\<random>](../standard-library/r
 
 ## Remarks
 
-The `linear_congruential_engine` template class is the simplest generator engine, but not the fastest or highest quality. An improvement over this engine is the [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Neither of these engines is as fast or with as high quality results as the [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+The `linear_congruential_engine` class template is the simplest generator engine, but not the fastest or highest quality. An improvement over this engine is the [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Neither of these engines is as fast or with as high quality results as the [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
 This engine produces values of a user-specified unsigned integral type using the recurrence relation ( *period*) `x(i) = (A * x(i-1) + C) mod M`.
 
@@ -84,7 +87,7 @@ typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_ra
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;
 ```
 
-For detailed information about the linear congruential engine algorithm, see the Wikipedia article [Linear congruential generator](http://go.microsoft.com/fwlink/p/?linkid=402446).
+For detailed information about the linear congruential engine algorithm, see the Wikipedia article [Linear congruential generator](https://go.microsoft.com/fwlink/p/?linkid=402446).
 
 ## Requirements
 
@@ -94,4 +97,4 @@ For detailed information about the linear congruential engine algorithm, see the
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3483"
 title: "Compiler Error C3483"
 ms.date: "11/04/2016"
 f1_keywords: ["C3483"]
@@ -19,7 +20,7 @@ You passed the same variable to the capture list of a lambda expression more tha
 
 The following example generates C3483 because the variable `n` appears more than one time in the capture list of the lambda expression:
 
-```
+```cpp
 // C3483.cpp
 
 int main()
@@ -29,6 +30,6 @@ int main()
 }
 ```
 
-## See Also
+## See also
 
 [Lambda Expressions](../../cpp/lambda-expressions-in-cpp.md)

@@ -1,13 +1,16 @@
 ---
+description: "Learn more about: ostream_iterator Class"
 title: "ostream_iterator Class"
-ms.date: "11/04/2016"
+ms.date: 06/17/2022
 f1_keywords: ["iterator/std::ostream_iterator", "iterator/std::ostream_iterator::char_type", "iterator/std::ostream_iterator::ostream_type", "iterator/std::ostream_iterator::traits_type"]
 helpviewer_keywords: ["std::ostream_iterator [C++]", "std::ostream_iterator [C++], char_type", "std::ostream_iterator [C++], ostream_type", "std::ostream_iterator [C++], traits_type"]
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
+ms.custom: devdivchpfy22
 ---
+
 # ostream_iterator Class
 
-The template class ostream_iterator describes an output iterator object that writes successive elements onto the output stream with the extraction `operator <<`.
+The class template ostream_iterator describes an output iterator object that writes successive elements onto the output stream with the extraction `operator <<`.
 
 ## Syntax
 
@@ -18,13 +21,13 @@ class ostream_iterator
 
 ### Parameters
 
-*Type*<br/>
+*Type*\
 The type of object to be inserted into the output stream.
 
-*CharType*<br/>
-The type that represents the character type for the `ostream_iterator`. This argument is optional and the default value is **char**.
+*CharType*\
+The type that represents the character type for the `ostream_iterator`. This argument is optional and the default value is **`char`**.
 
-*Traits*<br/>
+*Traits*\
 The type that represents the character type for the `ostream_iterator`. This argument is optional and the default value is `char_traits`\< *CharType>.*
 
 The ostream_iterator class must satisfy the requirements for an output iterator. Algorithms can be written directly to output streams using an `ostream_iterator`.
@@ -57,7 +60,7 @@ The ostream_iterator class must satisfy the requirements for an output iterator.
 
 **Namespace:** std
 
-## <a name="char_type"></a>  ostream_iterator::char_type
+## <a name="char_type"></a> ostream_iterator::char_type
 
 A type that provides for the character type of the iterator.
 
@@ -106,7 +109,7 @@ by intOut are:
 */
 ```
 
-## <a name="op_star"></a>  ostream_iterator::operator*
+## <a name="op_star"></a> ostream_iterator::operator*
 
 Dereferencing operator used to implement the output iterator expression \* *ii* = *x*.
 
@@ -120,7 +123,7 @@ A reference to the `ostream_iterator`.
 
 ### Remarks
 
-The requirements for an output iterator that the `ostream_iterator` must satisfy require only the expression \* *ii* = *t* be valid and says nothing about the **operator** or the `operator=` on their own. The member operator in this implementation returns **\*this**.
+The requirements for an output iterator that the `ostream_iterator` must satisfy require only the expression \* *ii* = *t* be valid and says nothing about the **`operator`** or the `operator=` on their own. The member operator in this implementation returns **`*this`**.
 
 ### Example
 
@@ -155,7 +158,7 @@ Elements written to output stream:
 */
 ```
 
-## <a name="op_add_add"></a>  ostream_iterator::operator++
+## <a name="op_add_add"></a> ostream_iterator::operator++
 
 A nonfunctional increment operator that returns an `ostream_iterator` to the same object it addressed before the operation was called.
 
@@ -170,7 +173,7 @@ A reference to the `ostream_iterator`.
 
 ### Remarks
 
-These member operators both return **\*this**.
+These member operators both return **`*this`**.
 
 ### Example
 
@@ -205,7 +208,7 @@ Elements written to output stream:
 */
 ```
 
-## <a name="op_eq"></a>  ostream_iterator::operator=
+## <a name="op_eq"></a> ostream_iterator::operator=
 
 Assignment operator used to implement the output_iterator expression \* `i` = `x` for writing to an output stream.
 
@@ -215,7 +218,7 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### Parameters
 
-*val*<br/>
+*val*\
 The value of the object of type `Type` to be inserted into the output stream.
 
 ### Return Value
@@ -224,7 +227,7 @@ The operator inserts *val* into the output stream associated with the object, fo
 
 ### Remarks
 
-The requirements for an output iterator that the `ostream_iterator` must satisfy require only the expression \* `ii` = `t` be valid and says nothing about the operator or the operator= on their own. This member operator returns `*this`.
+The requirements for an output iterator that the `ostream_iterator` must satisfy require only the expression \* `ii` = `t` be valid and says nothing about the operator or the operator= on their own. This member operator returns **`*this`**.
 
 ### Example
 
@@ -259,7 +262,7 @@ Elements written to output stream:
 */
 ```
 
-## <a name="ostream_iterator"></a>  ostream_iterator::ostream_iterator
+## <a name="ostream_iterator"></a> ostream_iterator::ostream_iterator
 
 Constructs an `ostream_iterator` that is initialized and delimited to write to the output stream.
 
@@ -274,10 +277,10 @@ ostream_iterator(
 
 ### Parameters
 
-*_Ostr*<br/>
+*_Ostr*\
 The output stream of type [ostream_iterator::ostream_type](#ostream_type) to be iterated over.
 
-*_Delimiter*<br/>
+*_Delimiter*\
 The delimiter that is inserted into the output stream between values.
 
 ### Remarks
@@ -333,7 +336,7 @@ Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :
 */
 ```
 
-## <a name="ostream_type"></a>  ostream_iterator::ostream_type
+## <a name="ostream_type"></a> ostream_iterator::ostream_type
 
 A type that provides for the stream type of the iterator.
 
@@ -349,7 +352,7 @@ The type is a synonym for [basic_ostream](../standard-library/basic-ostream-clas
 
 See [ostream_iterator](#ostream_iterator) for an example of how to declare and use `ostream_type`.
 
-## <a name="traits_type"></a>  ostream_iterator::traits_type
+## <a name="traits_type"></a> ostream_iterator::traits_type
 
 A type that provides for the character traits type of the iterator.
 
@@ -401,6 +404,6 @@ by intOut are:
 
 ## See also
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)

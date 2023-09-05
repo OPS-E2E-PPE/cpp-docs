@@ -1,14 +1,16 @@
 ---
+description: "Learn more about: _fpreset"
 title: "_fpreset"
 ms.date: "04/05/2018"
-apiname: ["_fpreset"]
-apilocation: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ucrtbase.dll", "api-ms-win-crt-runtime-l1-1-0.dll"]
-apitype: "DLLExport"
+api_name: ["_fpreset"]
+api_location: ["msvcrt.dll", "msvcr80.dll", "msvcr90.dll", "msvcr100.dll", "msvcr100_clr0400.dll", "msvcr110.dll", "msvcr110_clr0400.dll", "msvcr120.dll", "msvcr120_clr0400.dll", "ucrtbase.dll", "api-ms-win-crt-runtime-l1-1-0.dll"]
+api_type: ["DLLExport"]
+topic_type: ["apiref"]
 f1_keywords: ["_fpreset", "fpreset"]
 helpviewer_keywords: ["fpreset function", "floating-point numbers, resetting math package", "_fpreset function"]
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
 ---
-# _fpreset
+# `_fpreset`
 
 Resets the floating-point package.
 
@@ -20,17 +22,17 @@ void _fpreset( void );
 
 ## Remarks
 
-The **_fpreset** function reinitializes the floating-point math package. **_fpreset** is usually used with **signal**, **system**, or the **_exec** or **_spawn** functions. If a program traps floating-point error signals (**SIGFPE**) with **signal**, it can safely recover from floating-point errors by invoking **_fpreset** and using **longjmp**.
+The **`_fpreset`** function reinitializes the floating-point math package. **`_fpreset`** is often used with `signal`, `system`, or the `_exec` or `_spawn` functions. If a program traps floating-point error signals (`SIGFPE`) with `signal`, it can safely recover from floating-point errors by invoking **`_fpreset`** and using `longjmp`.
 
 This function is deprecated when compiling with [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) because the common language runtime only supports the default floating-point precision.
 
 ## Requirements
 
-|Function|Required header|
-|--------------|---------------------|
-|**_fpreset**|\<float.h>|
+| Function | Required header |
+|---|---|
+| **`_fpreset`** | \<float.h> |
 
-For more compatibility information, see [Compatibility](../../c-runtime-library/compatibility.md).
+For more compatibility information, see [Compatibility](../compatibility.md).
 
 ## Example
 
@@ -148,8 +150,8 @@ Error 131: Divide by zero
 
 ## See also
 
-[Floating-Point Support](../../c-runtime-library/floating-point-support.md)<br/>
-[_exec, _wexec Functions](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[signal](signal.md)<br/>
-[_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
-[system, _wsystem](system-wsystem.md)<br/>
+[Math and floating-point support](../floating-point-support.md)\
+[`_exec`, `_wexec` functions](../exec-wexec-functions.md)\
+[`signal`](signal.md)\
+[`_spawn`, `_wspawn` functions](../spawn-wspawn-functions.md)\
+[`system`, `_wsystem`](system-wsystem.md)

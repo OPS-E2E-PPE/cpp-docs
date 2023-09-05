@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Linker Tools Warning LNK4247"
 title: "Linker Tools Warning LNK4247"
 ms.date: "11/04/2016"
 f1_keywords: ["LNK4247"]
@@ -27,7 +28,7 @@ To resolve this warning:
 
 The following sample generates LNK4247
 
-```
+```cpp
 // LNK4247.cpp
 // compile with: /clr /c
 // post-build command: link /CLRTHREADATTRIBUTE:STA LNK4247.obj /entry:functionTitle /SUBSYSTEM:Console

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: short_vector_traits Structure"
 title: "short_vector_traits Structure"
 ms.date: "11/04/2016"
 f1_keywords: ["short_vector_traits", "AMP_SHORT_VECTORS/short_vector_traits", "AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits", "AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant"]
@@ -6,11 +7,11 @@ ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
 ---
 # short_vector_traits Structure
 
-short_vector_traits allows retrival of the underlying vector length and scalar type of a short vector type or a scalar type
+short_vector_traits allows retrieval of the underlying vector length and scalar type of a short vector type or a scalar type
 
 ## Syntax
 
-```
+```cpp
 template<
     typename T
 >
@@ -65,7 +66,7 @@ template<>
 struct short_vector_traits<double_4>;
 ```
 
-#### Parameters
+### Parameters
 
 `T`
 
@@ -99,18 +100,18 @@ struct short_vector_traits<double_4>;
 
 **Namespace:** Concurrency::graphics
 
-##  <a name="ctor"></a>  short_vector_traits::short_vector_traits Constructor
+## <a name="ctor"></a> short_vector_traits::short_vector_traits Constructor
 
-```
+```cpp
 short_vector_traits();
 ```
 
-##  <a name="size"></a>  short_vector_traits::size Constant
+## <a name="size"></a> short_vector_traits::size Constant
 
-```
+```cpp
 static int const size = 1;
 ```
 
-## See Also
+## See also
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

@@ -1,11 +1,15 @@
 ---
+description: "Learn more about: Using accelerator and accelerator_view Objects"
 title: "Using accelerator and accelerator_view Objects"
 ms.date: "11/04/2016"
-ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
 ---
 # Using accelerator and accelerator_view Objects
 
 You can use the [accelerator](../../parallel/amp/reference/accelerator-class.md) and [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) classes to specify the device or emulator to run your C++ AMP code on. A system might have several devices or emulators that differ by amount of memory, shared memory support, debugging support, or double-precision support. C++ Accelerated Massive Parallelism (C++ AMP) provides APIs that you can use to examine the available accelerators, set one as the default, specify multiple accelerator_views for multiple calls to parallel_for_each, and perform special debugging tasks.
+
+> [!NOTE]
+> C++ AMP headers are deprecated starting with Visual Studio 2022 version 17.0.
+> Including any AMP headers will generate build errors. Define `_SILENCE_AMP_DEPRECATION_WARNINGS` before including any AMP headers to silence the warnings.
 
 ## Using the Default Accelerator
 
@@ -13,7 +17,7 @@ The C++ AMP runtime picks a default accelerator, unless you write code to pick a
 
 1. If the app is running in debug mode, an accelerator that supports debugging.
 
-2. Otherwise, the accelerator that's specified by the CPPAMP_DEFAULT_ACCELERATOR environment variable, if it's set.
+2. Otherwise, the accelerator that's specified by the `CPPAMP_DEFAULT_ACCELERATOR` environment variable, if it's set.
 
 3. Otherwise, a non-emulated device.
 
@@ -21,7 +25,7 @@ The C++ AMP runtime picks a default accelerator, unless you write code to pick a
 
 5. Otherwise, a device that's not attached to the display.
 
-Additionally, the runtime specifies an `access_type` of `access_type_auto` for the default accelerator. This means that the default accelerator uses shared memory if it’s supported and if its performance characteristics (bandwidth and latency) are known to be the same as dedicated (non-shared) memory.
+Additionally, the runtime specifies an `access_type` of `access_type_auto` for the default accelerator. This means that the default accelerator uses shared memory if it's supported and if its performance characteristics (bandwidth and latency) are known to be the same as dedicated (non-shared) memory.
 
 You can determine the properties of the default accelerator by constructing the default accelerator and examining its properties. The following code example prints the path, amount of accelerator memory, shared memory support, double-precision support, and limited double-precision support of the default accelerator.
 
@@ -88,7 +92,7 @@ void pick_with_most_memory()
 
 ## Shared Memory
 
-Shared memory is memory that can be accessed by both the CPU and the accelerator. The use of shared memory eliminates or significantly reduces the overhead of copying data between the CPU and the accelerator. Although the memory is shared, it cannot be accessed concurrently by both the CPU and the accelerator, and doing so causes undefined behavior. The accelerator property [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) returns **true** if the accelerator supports shared memory, and the [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) property gets the default [access_type](reference/concurrency-namespace-enums-amp.md#access_type) for memory allocated on the `accelerator`—for example, **array**s associated with the `accelerator`, or `array_view` objects accessed on the `accelerator`.
+Shared memory is memory that can be accessed by both the CPU and the accelerator. The use of shared memory eliminates or significantly reduces the overhead of copying data between the CPU and the accelerator. Although the memory is shared, it cannot be accessed concurrently by both the CPU and the accelerator, and doing so causes undefined behavior. The accelerator property [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) returns **`true`** if the accelerator supports shared memory, and the [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) property gets the default [access_type](reference/concurrency-namespace-enums-amp.md#access_type) for memory allocated on the `accelerator`—for example, **array**s associated with the `accelerator`, or `array_view` objects accessed on the `accelerator`.
 
 The C++ AMP runtime automatically chooses the best default `access_type` for each `accelerator`, but the performance characteristics (bandwidth and latency) of shared memory can be worse than those of dedicated (non-shared) accelerator memory when reading from the CPU, writing from the CPU, or both. If shared memory performs as well as dedicated memory for reading and writing from the CPU, the runtime defaults to `access_type_read_write`; otherwise, the runtime chooses a more conservative default `access_type`, and allows the app to override it if the memory access patterns of its computation kernels benefit from a different `access_type`.
 
@@ -104,7 +108,7 @@ int main()
 {
     accelerator acc = accelerator(accelerator::default_accelerator);
 
-    // Early out if the default accelerator doesn’t support shared memory.
+    // Early out if the default accelerator doesn't support shared memory.
     if (!acc.supports_cpu_shared_memory)
     {
         std::cout << "The default accelerator does not support shared memory" << std::endl;
@@ -116,16 +120,16 @@ int main()
 
     // Create an accelerator_view from the default accelerator. The
     // accelerator_view reflects the default_cpu_access_type of the
-    // accelerator it’s associated with.
+    // accelerator it's associated with.
     accelerator_view acc_v = acc.default_view;
 }
 ```
 
-An `accelerator_view` always reflects the `default_cpu_access_type` of the `accelerator` it’s associated with, and it provides no interface to override or change its `access_type`.
+An `accelerator_view` always reflects the `default_cpu_access_type` of the `accelerator` it's associated with, and it provides no interface to override or change its `access_type`.
 
 ## Changing the Default Accelerator
 
-You can change the default accelerator by calling the `accelerator::set_default` method. You can change the default accelerator only once per app execution and you must change it before any code is executed on the GPU. Any subsequent function calls to change the accelerator return **false**. If you want to use a different accelerator in a call to `parallel_for_each`, read the "Using Multiple Accelerators" section in this article. The following code example sets the default accelerator to one that is not emulated, is not connected to a display, and supports double-precision.
+You can change the default accelerator by calling the `accelerator::set_default` method. You can change the default accelerator only once per app execution and you must change it before any code is executed on the GPU. Any subsequent function calls to change the accelerator return **`false`**. If you want to use a different accelerator in a call to `parallel_for_each`, read the "Using Multiple Accelerators" section in this article. The following code example sets the default accelerator to one that is not emulated, is not connected to a display, and supports double-precision.
 
 ```cpp
 bool pick_accelerator()
@@ -166,13 +170,13 @@ The device paths of three special accelerators are available as properties of th
 
 - [accelerator::direct3d_warp Data Member](reference/accelerator-class.md#direct3d_warp): This accelerator provides a fallback solution for executing C++ AMP code on multi-core CPUs that use Streaming SIMD Extensions (SSE).
 
-- [accelerator::cpu_accelerator Data Member](reference/accelerator-class.md#cpu_accelerator): You can use this accelerator for setting up staging arrays. It cannot execute C++ AMP code. For more information, see the [Staging Arrays in C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) post on the Parallel Programming in Native Code blog.
+- [accelerator::cpu_accelerator Data Member](reference/accelerator-class.md#cpu_accelerator): You can use this accelerator for setting up staging arrays. It cannot execute C++ AMP code. For more information, see the [Staging Arrays in C++ AMP](/archive/blogs/nativeconcurrency/staging-arrays-in-c-amp) post on the Parallel Programming in Native Code blog.
 
 ## Interoperability
 
-The C++ AMP runtime supports interoperability between the `accelerator_view` class and the Direct3D [ID3D11Device interface](/windows/desktop/api/d3d11/nn-d3d11-id3d11device). The [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) method takes an `IUnknown` interface and returns an `accelerator_view` object. The [get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device) method takes an `accelerator_view` object and returns an `IUnknown` interface.
+The C++ AMP runtime supports interoperability between the `accelerator_view` class and the Direct3D [ID3D11Device interface](/windows/win32/api/d3d11/nn-d3d11-id3d11device). The [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) method takes an `IUnknown` interface and returns an `accelerator_view` object. The [get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device) method takes an `accelerator_view` object and returns an `IUnknown` interface.
 
-## See Also
+## See also
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Debugging GPU Code](/visualstudio/debugger/debugging-gpu-code)<br/>

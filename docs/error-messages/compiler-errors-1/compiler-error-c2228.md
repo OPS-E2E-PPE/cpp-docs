@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2228"
 title: "Compiler Error C2228"
 ms.date: "11/04/2016"
 f1_keywords: ["C2228"]
@@ -13,7 +14,7 @@ The operand to the left of the period (.) is not a class, structure, or union.
 
 The following sample generates C2228:
 
-```
+```cpp
 // C2228.cpp
 int i;
 struct S {

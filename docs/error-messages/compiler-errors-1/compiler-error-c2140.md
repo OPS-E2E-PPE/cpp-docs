@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2140"
 title: "Compiler Error C2140"
 ms.date: "11/04/2016"
 f1_keywords: ["C2140"]
@@ -11,13 +12,13 @@ ms.assetid: d44a0500-002c-4632-9e5e-c71c3a473ec4
 
 An invalid type specifier was passed to a type trait.
 
-For more information, see [Compiler Support for Type Traits](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+For more information, see [Compiler Support for Type Traits](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 ## Example
 
 The following sample generates C2140.
 
-```
+```cpp
 // C2140.cpp
 // compile with: /clr /c
 template <class T>

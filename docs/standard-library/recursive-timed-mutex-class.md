@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: recursive_timed_mutex Class"
 title: "recursive_timed_mutex Class"
 ms.date: "11/04/2016"
 f1_keywords: ["mutex/std::recursive_timed_mutex", "mutex/std::recursive_timed_mutex::recursive_timed_mutex", "mutex/std::recursive_timed_mutex::lock", "mutex/std::recursive_timed_mutex::try_lock", "mutex/std::recursive_timed_mutex::try_lock_for", "mutex/std::recursive_timed_mutex::try_lock_until", "mutex/std::recursive_timed_mutex::unlock"]
@@ -40,7 +41,7 @@ class recursive_timed_mutex;
 
 **Namespace:** std
 
-## <a name="lock"></a>  lock
+## <a name="lock"></a> lock
 
 Blocks the calling thread until the thread obtains ownership of the `mutex`.
 
@@ -52,7 +53,7 @@ void lock();
 
 If the calling thread already owns the `mutex`, the method returns immediately, and the previous lock remains in effect.
 
-## <a name="recursive_timed_mutex"></a>  recursive_timed_mutex Constructor
+## <a name="recursive_timed_mutex"></a> recursive_timed_mutex Constructor
 
 Constructs a `recursive_timed_mutex` object that is not locked.
 
@@ -72,7 +73,7 @@ Releases any resources that are used by the `recursive_timed_mutex` object.
 
 If the object is locked when the destructor runs, the behavior is undefined.
 
-## <a name="try_lock"></a>  try_lock
+## <a name="try_lock"></a> try_lock
 
 Attempts to obtain ownership of the `mutex` without blocking.
 
@@ -82,13 +83,13 @@ bool try_lock() noexcept;
 
 ### Return Value
 
-**true** if the method successfully obtained ownership of the `mutex` or if the calling thread already owns the `mutex`; otherwise, **false**.
+**`true`** if the method successfully obtained ownership of the `mutex` or if the calling thread already owns the `mutex`; otherwise, **`false`**.
 
 ### Remarks
 
-If the calling thread already owns the `mutex`, the function immediately returns **true**, and the previous lock remains in effect.
+If the calling thread already owns the `mutex`, the function immediately returns **`true`**, and the previous lock remains in effect.
 
-## <a name="try_lock_for"></a>  try_lock_for
+## <a name="try_lock_for"></a> try_lock_for
 
 Attempts to obtain ownership of the `mutex` without blocking.
 
@@ -99,18 +100,18 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### Parameters
 
-*Rel_time*<br/>
+*Rel_time*\
 A [chrono::duration](../standard-library/duration-class.md) object that specifies the maximum amount of time that the method attempts to obtain ownership of the `mutex`.
 
 ### Return Value
 
-**true** if the method successfully obtains ownership of the `mutex` or if the calling thread already owns the `mutex`; otherwise, **false**.
+**`true`** if the method successfully obtains ownership of the `mutex` or if the calling thread already owns the `mutex`; otherwise, **`false`**.
 
 ### Remarks
 
-If the calling thread already owns the `mutex`, the method immediately returns **true**, and the previous lock remains in effect.
+If the calling thread already owns the `mutex`, the method immediately returns **`true`**, and the previous lock remains in effect.
 
-## <a name="try_lock_until"></a>  try_lock_until
+## <a name="try_lock_until"></a> try_lock_until
 
 Attempts to obtain ownership of the `mutex` without blocking.
 
@@ -123,18 +124,18 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### Parameters
 
-*Abs_time*<br/>
+*Abs_time*\
 A point in time that specifies the threshold after which the method no longer attempts to obtain ownership of the `mutex`.
 
 ### Return Value
 
-**true** if the method successfully obtains ownership of the `mutex` or if the calling thread already owns the `mutex`; otherwise, **false**.
+**`true`** if the method successfully obtains ownership of the `mutex` or if the calling thread already owns the `mutex`; otherwise, **`false`**.
 
 ### Remarks
 
-If the calling thread already owns the `mutex`, the method immediately returns **true**, and the previous lock remains in effect.
+If the calling thread already owns the `mutex`, the method immediately returns **`true`**, and the previous lock remains in effect.
 
-## <a name="unlock"></a>  unlock
+## <a name="unlock"></a> unlock
 
 Releases ownership of the `mutex`.
 
@@ -150,5 +151,5 @@ If the calling thread does not own the `mutex`, the behavior is undefined.
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

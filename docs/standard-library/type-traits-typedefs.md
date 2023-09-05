@@ -1,16 +1,16 @@
 ---
-title: "&lt;type_traits&gt; typedefs"
+description: "Learn more about: <type_traits> typedefs"
+title: "<type_traits> typedefs"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::false_type", "xtr1common/std::false_type", "type_traits/std::true_type", "xtr1common/std::true_type"]
 ms.assetid: 8ac040ca-ed2d-4570-adc9-cb5626530053
 ---
-# &lt;type_traits&gt; typedefs
+# `<type_traits>` typedefs
 
-|||
-|-|-|
-|[false_type](#false_type)|[true_type](#true_type)|
+[false_type](#false_type)\
+[true_type](#true_type)
 
-## <a name="false_type"></a>  false_type Typedef
+## <a name="false_type"></a> false_type Typedef
 
 Holds integral constant with false value.
 
@@ -43,7 +43,7 @@ false_type == false
 true_type == true
 ```
 
-## <a name="true_type"></a>  true_type Typedef
+## <a name="true_type"></a> true_type Typedef
 
 Holds integral constant with true value.
 
@@ -80,4 +80,4 @@ true_type == true
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

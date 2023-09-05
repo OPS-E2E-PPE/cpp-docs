@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: remove_extent Class"
 title: "remove_extent Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::remove_extent"]
@@ -21,7 +22,7 @@ using remove_extent_t = typename remove_extent<T>::type;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to modify.
 
 ## Remarks
@@ -63,5 +64,5 @@ remove_extent_t<int[5][10]> == int [10]
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_all_extents Class](../standard-library/remove-all-extents-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_all_extents Class](../standard-library/remove-all-extents-class.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: rank Class"
 title: "rank Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::rank"]
@@ -18,7 +19,7 @@ struct rank;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
 ## Remarks
@@ -60,5 +61,5 @@ rank<int[5][10]> == 2
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[extent Class](../standard-library/extent-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[extent Class](../standard-library/extent-class.md)

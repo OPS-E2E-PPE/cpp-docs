@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Redistributing ODBC Components to Your Customers"
 title: "Redistributing ODBC Components to Your Customers"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ODBC components, redistributing", "ODBC, distributing components", "components [C++], distributing", "ODBC Administrator", "components [C++]", "components [C++], redistributing"]
@@ -20,7 +21,7 @@ The following topics provide more information about using ODBC with the database
 
 - [ODBC: Calling ODBC API Functions Directly](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
 
-## See Also
+## See also
 
 [ODBC Basics](../../data/odbc/odbc-basics.md)<br/>
 [ODBC Administrator](../../data/odbc/odbc-administrator.md)

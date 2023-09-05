@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2791"
 title: "Compiler Error C2791"
 ms.date: "11/04/2016"
 f1_keywords: ["C2791"]
@@ -13,7 +14,7 @@ The keyword [super](../../cpp/super.md) was used within the context of a member 
 
 The following sample generates C2791:
 
-```
+```cpp
 // C2791.cpp
 struct D {
    void mf() {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Customizing the Appearance of a Toolbar Control"
 title: "Customizing the Appearance of a Toolbar Control"
 ms.date: "11/04/2016"
 f1_keywords: ["TBSTYLE_"]
@@ -18,7 +19,7 @@ The following styles affect the "3D" aspect of the toolbar buttons and the place
 - **TBSTYLE_LIST** Places button text to the right of button bitmaps.
 
 > [!NOTE]
->  To prevent repaint problems, the **TBSTYLE_FLAT** and **TBSTYLE_TRANSPARENT** styles should be set before the toolbar object is visible.
+> To prevent repaint problems, the **TBSTYLE_FLAT** and **TBSTYLE_TRANSPARENT** styles should be set before the toolbar object is visible.
 
 The following styles determine if the toolbar allows a user to reposition individual buttons within a toolbar object using drag and drop:
 
@@ -37,10 +38,9 @@ The remaining styles affect visual and nonvisual aspects of the toolbar object:
 
 - **TBSTYLE_TOOLTIPS** Creates a tool tip control that an application can use to display descriptive text for the buttons in the toolbar.
 
-For a complete listing of toolbar styles and extended styles, see [Toolbar Control and Button Styles](/windows/desktop/Controls/toolbar-control-and-button-styles) and [Toolbar Extended Styles](/windows/desktop/Controls/toolbar-extended-styles) in the Windows SDK.
+For a complete listing of toolbar styles and extended styles, see [Toolbar Control and Button Styles](/windows/win32/Controls/toolbar-control-and-button-styles) and [Toolbar Extended Styles](/windows/win32/Controls/toolbar-extended-styles) in the Windows SDK.
 
-## See Also
+## See also
 
-[Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
-[Controls](../mfc/controls-mfc.md)
-
+[Using CToolBarCtrl](using-ctoolbarctrl.md)<br/>
+[Controls](controls-mfc.md)

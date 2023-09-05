@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4074"
 title: "Compiler Warning (level 1) C4074"
 ms.date: "11/04/2016"
 f1_keywords: ["C4074"]
@@ -13,7 +14,7 @@ The compiler initialization area, which is specified by [#pragma init_seg](../..
 
 The following sample generates C4074:
 
-```
+```cpp
 // C4074.cpp
 // compile with: /W1
 #pragma init_seg( compiler )   // C4074

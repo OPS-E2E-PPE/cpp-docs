@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: __getcallerseflags"
 title: "__getcallerseflags"
-ms.date: "11/04/2016"
+ms.date: "09/02/2019"
 f1_keywords: ["_getcallerseflags", "_getcallerseflags_cpp"]
 helpviewer_keywords: ["_getcallerseflags intrinsic"]
 ms.assetid: 2386596f-33aa-4cc7-b026-5a834637270a
@@ -13,11 +14,11 @@ Returns the EFLAGS value from the caller's context.
 
 ## Syntax
 
-```
+```C
 unsigned int __getcallerseflags(void);
 ```
 
-## Return Value
+## Return value
 
 EFLAGS value from the caller's context.
 
@@ -35,7 +36,7 @@ This routine is only available as an intrinsic.
 
 ## Example
 
-```
+```cpp
 // getcallerseflags.cpp
 // processor: x86, x64
 
@@ -71,6 +72,6 @@ EFLAGS 0x206
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
-[Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)
+[Compiler intrinsics](../intrinsics/compiler-intrinsics.md)

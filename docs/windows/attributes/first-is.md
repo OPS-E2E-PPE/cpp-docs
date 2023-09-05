@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: first_is"
 title: "first_is (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.first_is"]
@@ -22,7 +23,7 @@ One or more C-language expressions. Empty argument slots are allowed.
 
 ## Remarks
 
-The **first_is** C++ attribute has the same functionality as the [first_is](/windows/desktop/Midl/first-is) MIDL attribute.
+The **first_is** C++ attribute has the same functionality as the [first_is](/windows/win32/Midl/first-is) MIDL attribute.
 
 ## Example
 
@@ -50,18 +51,16 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|Field in **struct** or **union**, interface parameter, interface method|
+|**Applies to**|Field in **`struct`** or **`union`**, interface parameter, interface method|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Typedef, Enum, Union, and Struct Attributes](typedef-enum-union-and-struct-attributes.md)<br/>

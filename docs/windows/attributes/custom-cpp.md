@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: custom (C++)"
 title: "custom (C++)"
 ms.date: "11/04/2016"
 f1_keywords: ["vc-attr.custom"]
@@ -30,22 +31,20 @@ A value that can be put into a variant.
 
 The **custom** C++ attribute will cause information to be placed into the type library. You will need a tool that reads the custom value from type library.
 
-The **custom** attribute has the same functionality as the [custom](/windows/desktop/Midl/custom) MIDL attribute.
+The **custom** attribute has the same functionality as the [custom](/windows/win32/Midl/custom) MIDL attribute.
 
 ## Requirements
 
 ### Attribute Context
 
-|||
-|-|-|
-|**Applies to**|Non-COM **interface**, **class**, **enum**s, `idl_module` methods, interface members, interface parameters, **typedef**s, **union**s, **struct**s|
-|**Repeatable**|Yes|
-|**Required attributes**|**coclass** (when used on class)|
-|**Invalid attributes**|None|
+- **Applies to**: Non-COM `interface`, `idl_module` methods, interface members, interface parameters, **`typedef`**, **`class`**, **`enum`**, **`union`**, and **`struct`** types.
+- **Repeatable**: Yes.
+- **Required attributes**: **coclass** (when used on class).
+- **Invalid attributes**: None.
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Stand-Alone Attributes](stand-alone-attributes.md)<br/>

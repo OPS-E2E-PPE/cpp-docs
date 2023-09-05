@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Explicitly Request Boxing"
 title: "How to: Explicitly Request Boxing"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["boxing, explicitly requesting"]
@@ -10,7 +11,7 @@ You can explicitly request boxing by assigning a variable to a variable of type 
 
 ## Example
 
-```
+```cpp
 // vcmcppv2_explicit_boxing3.cpp
 // compile with: /clr
 using namespace System;
@@ -38,6 +39,6 @@ f(Object^ o)
 f(Object^ o)
 ```
 
-## See Also
+## See also
 
-[Boxing](../windows/boxing-cpp-component-extensions.md)
+[Boxing](../extensions/boxing-cpp-component-extensions.md)

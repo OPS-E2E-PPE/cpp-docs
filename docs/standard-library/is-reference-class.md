@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_reference Class"
 title: "is_reference Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_reference"]
@@ -18,7 +19,7 @@ struct is_reference;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
 ## Remarks
@@ -68,5 +69,5 @@ is_reference<int(&)()> == true
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_pointer Class](../standard-library/is-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_pointer Class](../standard-library/is-pointer-class.md)

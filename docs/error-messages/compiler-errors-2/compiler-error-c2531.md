@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2531"
 title: "Compiler Error C2531"
 ms.date: "11/04/2016"
 f1_keywords: ["C2531"]
@@ -13,7 +14,7 @@ References to bit fields are not allowed.
 
 The following sample generates C2531:
 
-```
+```cpp
 // C2531.cpp
 // compile with: /c
 class P {

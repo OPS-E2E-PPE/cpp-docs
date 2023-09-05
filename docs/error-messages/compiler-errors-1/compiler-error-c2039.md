@@ -1,21 +1,21 @@
 ---
+description: "Learn more about: Compiler Error C2039"
 title: "Compiler Error C2039"
-ms.date: "11/04/2016"
+ms.date: "8/1/2023"
 f1_keywords: ["C2039"]
 helpviewer_keywords: ["C2039"]
-ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
 ---
 # Compiler Error C2039
 
-'identifier1' : is not a member of 'identifier2'
+`'identifier1' : is not a member of 'identifier2'`
 
 The code incorrectly calls or refers to a member of a structure, class, or union.
 
-## Example
+## Examples
 
-The following sample generates C2039.
+The following sample generates C2039:
 
-```
+```cpp
 // C2039.cpp
 struct S {
    int mem0;
@@ -27,11 +27,9 @@ int main() {
 }
 ```
 
-## Example
+The following sample generates C2039:
 
-The following sample generates C2039.
-
-```
+```cpp
 // C2039_b.cpp
 // compile with: /clr
 using namespace System;
@@ -42,11 +40,9 @@ int main() {
 }
 ```
 
-## Example
+The following sample generates C2039:
 
-The following sample generates C2039.
-
-```
+```cpp
 // C2039_c.cpp
 // compile with: /clr /c
 ref struct S {
@@ -60,11 +56,9 @@ int S::get_Count() { return 0; }   // C2039
 int S::Count::get() { return 0; }   // OK
 ```
 
-## Example
+C2039 can also occur if you attempt to access a default indexer incorrectly. To demonstrate, this code defines a C# component that is used by the C++/CLI code that follows:
 
-C2039 can also occur if you attempt to access a default indexer incorrectly. The following sample defines a component authored in C#.
-
-```
+```c#
 // C2039_d.cs
 // compile with: /target:library
 // a C# program
@@ -77,11 +71,9 @@ public class B {
 };
 ```
 
-## Example
+The following sample generates C2039 when it uses the previously defined C# component's default indexer incorrectly from C++/CLI:
 
-The following sample generates C2039.
-
-```
+```cpp
 // C2039_e.cpp
 // compile with: /clr
 using namespace System;
@@ -96,11 +88,9 @@ int main() {
 }
 ```
 
-## Example
+C2039 can also occur if you use generics. The following sample generates C2039:
 
-C2039 can also occur if you use generics. The following sample generates C2039.
-
-```
+```cpp
 // C2039_f.cpp
 // compile with: /clr
 interface class I {};
@@ -121,13 +111,11 @@ int main() {
 }
 ```
 
-## Example
-
 C2039 can occur when you try to release managed or unmanaged resources. For more information, see [Destructors and finalizers](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
-The following sample generates C2039.
+The following sample generates C2039:
 
-```
+```cpp
 // C2039_g.cpp
 // compile with: /clr
 using namespace System;

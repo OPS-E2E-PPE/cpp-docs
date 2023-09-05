@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2798"
 title: "Compiler Error C2798"
 ms.date: "11/04/2016"
 f1_keywords: ["C2798"]
@@ -17,7 +18,7 @@ Multiple inherited structures contain the member you referenced with [super](../
 
 The following sample generates C2798:
 
-```
+```cpp
 // C2798.cpp
 struct B1 {
    int i;

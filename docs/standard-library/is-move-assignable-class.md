@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_move_assignable Class"
 title: "is_move_assignable Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_move_assignable"]
@@ -18,7 +19,7 @@ struct is_move_assignable;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to query.
 
 ## Remarks
@@ -33,4 +34,4 @@ A type is move assignable if an rvalue reference to the type can be assigned to 
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

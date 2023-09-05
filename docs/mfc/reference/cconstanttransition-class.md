@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CConstantTransition Class"
 title: "CConstantTransition Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CConstantTransition", "AFXANIMATIONCONTROLLER/CConstantTransition", "AFXANIMATIONCONTROLLER/CConstantTransition::CConstantTransition", "AFXANIMATIONCONTROLLER/CConstantTransition::Create", "AFXANIMATIONCONTROLLER/CConstantTransition::m_duration"]
@@ -51,7 +52,7 @@ During a constant transition, the value of an animation variable remains at the 
 
 **Header:** afxanimationcontroller.h
 
-##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition
+## <a name="cconstanttransition"></a> CConstantTransition::CConstantTransition
 
 Constructs a transition object and initializes its duration.
 
@@ -64,7 +65,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
 *duration*<br/>
 The duration of the transition.
 
-##  <a name="create"></a>  CConstantTransition::Create
+## <a name="create"></a> CConstantTransition::Create
 
 Calls the transition library to create encapsulated transition COM object.
 
@@ -77,13 +78,13 @@ virtual BOOL Create(
 ### Parameters
 
 *pLibrary*<br/>
-A pointer to an [IUIAnimationTransitionLibrary interface](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), which defines a library of standard transitions.
+A pointer to an [IUIAnimationTransitionLibrary interface](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), which defines a library of standard transitions.
 
 ### Return Value
 
 TRUE if transition is created successfully; otherwise FALSE.
 
-##  <a name="m_duration"></a>  CConstantTransition::m_duration
+## <a name="m_duration"></a> CConstantTransition::m_duration
 
 The duration of the transition.
 
@@ -91,6 +92,6 @@ The duration of the transition.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CCustomTransition Class"
 title: "CCustomTransition Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CCustomTransition", "AFXANIMATIONCONTROLLER/CCustomTransition", "AFXANIMATIONCONTROLLER/CCustomTransition::CCustomTransition", "AFXANIMATIONCONTROLLER/CCustomTransition::Create", "AFXANIMATIONCONTROLLER/CCustomTransition::SetInitialValue", "AFXANIMATIONCONTROLLER/CCustomTransition::SetInitialVelocity", "AFXANIMATIONCONTROLLER/CCustomTransition::m_bInitialValueSpecified", "AFXANIMATIONCONTROLLER/CCustomTransition::m_bInitialVelocitySpecified", "AFXANIMATIONCONTROLLER/CCustomTransition::m_initialValue", "AFXANIMATIONCONTROLLER/CCustomTransition::m_initialVelocity", "AFXANIMATIONCONTROLLER/CCustomTransition::m_pInterpolator"]
@@ -57,7 +58,7 @@ The CCustomTransitions class allows developers to implement custom transitions. 
 
 **Header:** afxanimationcontroller.h
 
-##  <a name="ccustomtransition"></a>  CCustomTransition::CCustomTransition
+## <a name="ccustomtransition"></a> CCustomTransition::CCustomTransition
 
 Constructs a custom transition object.
 
@@ -70,7 +71,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
 *pInterpolator*<br/>
 A pointer to custom interpolator.
 
-##  <a name="create"></a>  CCustomTransition::Create
+## <a name="create"></a> CCustomTransition::Create
 
 Calls the transition library to create encapsulated transition COM object.
 
@@ -91,7 +92,7 @@ A pointer to transition factory, which is responsible for creation of custom tra
 
 This method also can set initial value and initial velocity to be applied to an animation variable, which is associated with this transition. For this purpose you have to call SetInitialValue and SetInitialVelocity before the framework creates the encapsulated transition COM object (it happens when you call CAnimationController::AnimateGroup).
 
-##  <a name="m_binitialvaluespecified"></a>  CCustomTransition::m_bInitialValueSpecified
+## <a name="m_binitialvaluespecified"></a> CCustomTransition::m_bInitialValueSpecified
 
 Specifies whether the initial value was specified with SetInitialValue.
 
@@ -99,7 +100,7 @@ Specifies whether the initial value was specified with SetInitialValue.
 BOOL m_bInitialValueSpecified;
 ```
 
-##  <a name="m_binitialvelocityspecified"></a>  CCustomTransition::m_bInitialVelocitySpecified
+## <a name="m_binitialvelocityspecified"></a> CCustomTransition::m_bInitialVelocitySpecified
 
 Specifies whether the initial velocity was specified with SetInitialVelocity.
 
@@ -107,7 +108,7 @@ Specifies whether the initial velocity was specified with SetInitialVelocity.
 BOOL m_bInitialVelocitySpecified;
 ```
 
-##  <a name="m_initialvalue"></a>  CCustomTransition::m_initialValue
+## <a name="m_initialvalue"></a> CCustomTransition::m_initialValue
 
 Stores the initial value.
 
@@ -115,7 +116,7 @@ Stores the initial value.
 DOUBLE m_initialValue;
 ```
 
-##  <a name="m_initialvelocity"></a>  CCustomTransition::m_initialVelocity
+## <a name="m_initialvelocity"></a> CCustomTransition::m_initialVelocity
 
 Stores the initial velocity.
 
@@ -123,7 +124,7 @@ Stores the initial velocity.
 DOUBLE m_initialVelocity;
 ```
 
-##  <a name="m_pinterpolator"></a>  CCustomTransition::m_pInterpolator
+## <a name="m_pinterpolator"></a> CCustomTransition::m_pInterpolator
 
 Stores a pointer to a custom interpolator.
 
@@ -131,11 +132,11 @@ Stores a pointer to a custom interpolator.
 CCustomInterpolator* m_pInterpolator;
 ```
 
-##  <a name="setinitialvalue"></a>  CCustomTransition::SetInitialValue
+## <a name="setinitialvalue"></a> CCustomTransition::SetInitialValue
 
 Sets an initial value, which will be applied to an animation variable associated with this transition.
 
-```
+```cpp
 void SetInitialValue(DOUBLE initialValue);
 ```
 
@@ -143,11 +144,11 @@ void SetInitialValue(DOUBLE initialValue);
 
 *initialValue*
 
-##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity
+## <a name="setinitialvelocity"></a> CCustomTransition::SetInitialVelocity
 
 Sets an initial velocity, which will be applied to an animation variable associated with this transition.
 
-```
+```cpp
 void SetInitialVelocity(DOUBLE initialVelocity);
 ```
 
@@ -155,6 +156,6 @@ void SetInitialVelocity(DOUBLE initialVelocity);
 
 *initialVelocity*
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

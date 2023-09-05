@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: improper_scheduler_attach Class"
 title: "improper_scheduler_attach Class"
 ms.date: "11/04/2016"
 f1_keywords: ["improper_scheduler_attach", "CONCRT/concurrency::improper_scheduler_attach", "CONCRT/concurrency::improper_scheduler_attach::improper_scheduler_attach"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when the `Attach` method is called on a
 
 ## Syntax
 
-```
+```cpp
 class improper_scheduler_attach : public std::exception;
 ```
 
@@ -35,11 +36,11 @@ class improper_scheduler_attach : public std::exception;
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> improper_scheduler_attach
+## <a name="ctor"></a> improper_scheduler_attach
 
 Constructs an `improper_scheduler_attach` object.
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_attach(_In_z_ const char* _Message) throw();
 
 improper_scheduler_attach() throw();
@@ -50,7 +51,7 @@ improper_scheduler_attach() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [Scheduler Class](scheduler-class.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCRibbonLinkCtrl Class"
 title: "CMFCRibbonLinkCtrl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCRibbonLinkCtrl", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::CopyFrom", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::GetCompactSize", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::GetLink", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::GetRegularSize", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::GetToolTipText", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::IsDrawTooltipImage", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::OnDraw", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::OnDrawMenuImage", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::OnMouseMove", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::OnSetIcon", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::OpenLink", "AFXRIBBONLINKCTRL/CMFCRibbonLinkCtrl::SetLink"]
@@ -47,15 +48,16 @@ After you create a hyperlink, add it to a panel by calling [CMFCRibbonPanel::Add
 
 ## Inheritance Hierarchy
 
-[CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
-
-[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)\
+&emsp;└&nbsp;[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)\
+&emsp;&emsp;└&nbsp;[CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)
 
 ## Requirements
 
 **Header:** afxRibbonLinkCtrl.h
 
-##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl
+## <a name="cmfcribbonlinkctrl"></a> CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl
 
 Constructs and initializes a [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) object.
 
@@ -79,11 +81,11 @@ CMFCRibbonLinkCtrl(
 
 ### Example
 
-The following example demonstrates how to use the constructor of the `CMFCRibbonLinkCtrl` class. This code snippet is part of the [Ribbon Gadgets sample](../../visual-cpp-samples.md).
+The following example demonstrates how to use the constructor of the `CMFCRibbonLinkCtrl` class. This code snippet is part of the [Ribbon Gadgets sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]
 
-##  <a name="copyfrom"></a>  CMFCRibbonLinkCtrl::CopyFrom
+## <a name="copyfrom"></a> CMFCRibbonLinkCtrl::CopyFrom
 
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -95,7 +97,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### Remarks
 
-##  <a name="getcompactsize"></a>  CMFCRibbonLinkCtrl::GetCompactSize
+## <a name="getcompactsize"></a> CMFCRibbonLinkCtrl::GetCompactSize
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -109,7 +111,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### Remarks
 
-##  <a name="getlink"></a>  CMFCRibbonLinkCtrl::GetLink
+## <a name="getlink"></a> CMFCRibbonLinkCtrl::GetLink
 
 Returns the value of the hyperlink.
 
@@ -123,7 +125,7 @@ The current value of the hyperlink.
 
 ### Remarks
 
-##  <a name="getregularsize"></a>  CMFCRibbonLinkCtrl::GetRegularSize
+## <a name="getregularsize"></a> CMFCRibbonLinkCtrl::GetRegularSize
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -137,7 +139,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### Remarks
 
-##  <a name="gettooltiptext"></a>  CMFCRibbonLinkCtrl::GetToolTipText
+## <a name="gettooltiptext"></a> CMFCRibbonLinkCtrl::GetToolTipText
 
 ```
 virtual CString GetToolTipText() const;
@@ -147,7 +149,7 @@ virtual CString GetToolTipText() const;
 
 ### Remarks
 
-##  <a name="ondrawmenuimage"></a>  CMFCRibbonLinkCtrl::OnDrawMenuImage
+## <a name="ondrawmenuimage"></a> CMFCRibbonLinkCtrl::OnDrawMenuImage
 
 ```
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -155,14 +157,14 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### Parameters
 
-[in] *CDC&#42;*<br/>
+[in] *`CDC*`*<br/>
 [in] *CRect*<br/>
 
 ### Return Value
 
 ### Remarks
 
-##  <a name="isdrawtooltipimage"></a>  CMFCRibbonLinkCtrl::IsDrawTooltipImage
+## <a name="isdrawtooltipimage"></a> CMFCRibbonLinkCtrl::IsDrawTooltipImage
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -172,7 +174,7 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ### Remarks
 
-##  <a name="ondraw"></a>  CMFCRibbonLinkCtrl::OnDraw
+## <a name="ondraw"></a> CMFCRibbonLinkCtrl::OnDraw
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -184,7 +186,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### Remarks
 
-##  <a name="onmousemove"></a>  CMFCRibbonLinkCtrl::OnMouseMove
+## <a name="onmousemove"></a> CMFCRibbonLinkCtrl::OnMouseMove
 
 ```
 virtual void OnMouseMove(CPoint point);
@@ -196,7 +198,7 @@ virtual void OnMouseMove(CPoint point);
 
 ### Remarks
 
-##  <a name="onseticon"></a>  CMFCRibbonLinkCtrl::OnSetIcon
+## <a name="onseticon"></a> CMFCRibbonLinkCtrl::OnSetIcon
 
 ```
 virtual void OnSetIcon();
@@ -204,7 +206,7 @@ virtual void OnSetIcon();
 
 ### Remarks
 
-##  <a name="openlink"></a>  CMFCRibbonLinkCtrl::OpenLink
+## <a name="openlink"></a> CMFCRibbonLinkCtrl::OpenLink
 
 Opens the Web page specified in the hyperlink.
 
@@ -220,11 +222,11 @@ TRUE if the associated webpage was opened successfully; otherwise, FALSE.
 
 Opens a webpage using the hyperlink associated with the `CMFCRibbonLinkCtrl` object.
 
-##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink
+## <a name="setlink"></a> CMFCRibbonLinkCtrl::SetLink
 
 Sets the value of the hyperlink.
 
-```
+```cpp
 void SetLink(LPCTSTR lpszLink);
 ```
 
@@ -233,7 +235,7 @@ void SetLink(LPCTSTR lpszLink);
 *lpszLink*<br/>
 [in] Specifies the hyperlink text.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

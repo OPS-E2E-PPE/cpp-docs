@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Providing Flicker-Free Activation"
 title: "Providing Flicker-Free Activation"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["MFC ActiveX controls [MFC], flicker-free", "flicker, MFC ActiveX controls", "activation [MFC], flicker-free"]
@@ -16,7 +17,6 @@ The code to include this flag is automatically generated if you select the **Fli
 
 If you are using windowless activation, this optimization has no effect.
 
-## See Also
+## See also
 
 [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
-

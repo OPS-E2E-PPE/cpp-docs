@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: context_unblock_unbalanced Class"
 title: "context_unblock_unbalanced Class"
 ms.date: "11/04/2016"
 f1_keywords: ["context_unblock_unbalanced", "CONCRT/concurrency::context_unblock_unbalanced", "CONCRT/concurrency::context_unblock_unbalanced::context_unblock_unbalanced"]
@@ -11,7 +12,7 @@ This class describes an exception thrown when calls to the `Block` and `Unblock`
 
 ## Syntax
 
-```
+```cpp
 class context_unblock_unbalanced : public std::exception;
 ```
 
@@ -39,11 +40,11 @@ Calls to the `Block` and `Unblock` methods of a `Context` object must always be 
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> context_unblock_unbalanced
+## <a name="ctor"></a> context_unblock_unbalanced
 
 Constructs a `context_unblock_unbalanced` object.
 
-```
+```cpp
 explicit _CRTIMP context_unblock_unbalanced(_In_z_ const char* _Message) throw();
 
 context_unblock_unbalanced() throw();
@@ -54,6 +55,6 @@ context_unblock_unbalanced() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

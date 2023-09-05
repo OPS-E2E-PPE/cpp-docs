@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CInvalidArgException Class"
 title: "CInvalidArgException Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CInvalidArgException", "AFX/CInvalidArgException", "AFX/CInvalidArgException::CInvalidArgException"]
@@ -43,7 +44,7 @@ For more information on Exception Handling, see the [CException Class](../../mfc
 
 **Header:** afx.h
 
-##  <a name="cinvalidargexception"></a>  CInvalidArgException::CInvalidArgException
+## <a name="cinvalidargexception"></a> CInvalidArgException::CInvalidArgException
 
 The constructor.
 
@@ -55,7 +56,7 @@ CInvalidArgException();
 
 Do not use this constructor directly; call the global function **AfxThrowInvalidArgException**.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CSimpleException Class](../../mfc/reference/csimpleexception-class.md)

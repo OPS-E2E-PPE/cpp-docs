@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3210"
 title: "Compiler Error C3210"
 ms.date: "11/04/2016"
 f1_keywords: ["C3210"]
@@ -15,7 +16,7 @@ A [using declaration](../../cpp/using-declaration.md) was specified incorrectly.
 
 The following sample generates C3210.
 
-```
+```cpp
 // C3210.cpp
 // compile with: /c
 struct A {

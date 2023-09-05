@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: C Character Constants"
 title: "C Character Constants"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["characters, constants", "(') single quotation mark", "constants, character", "single quotation mark"]
@@ -10,45 +11,36 @@ A "character constant" is formed by enclosing a single character from the repres
 
 ## Syntax
 
-*character-constant*:
-**'** *c-char-sequence* **'**
+*`character-constant`*:\
+&emsp;**`'`** *`c-char-sequence`* **`'`**\
+&emsp;**`L'`** *`c-char-sequence`* **`'`**
 
-**L'** *c-char-sequence* **'**
+*`c-char-sequence`*:\
+&emsp;*`c-char`*\
+&emsp;*`c-char-sequence`* *`c-char`*
 
-*c-char-sequence*:
-*c-char*
+*`c-char`*:\
+&emsp;Any member of the source character set except the single quotation mark (**`'`**), backslash (**`\`**), or newline character\
+&emsp;*`escape-sequence`*
 
-*c-char-sequence c-char*
+*`escape-sequence`*:\
+&emsp;*`simple-escape-sequence`*\
+&emsp;*`octal-escape-sequence`*\
+&emsp;*`hexadecimal-escape-sequence`*
 
-*c-char*:
-Any member of the source character set except the single quotation mark (**'**), backslash (**\\**), or newline character
+*`simple-escape-sequence`*: one of\
+&emsp;**`\a`** **`\b`** **`\f`** **`\n`** **`\r`** **`\t`** **`\v`**\
+&emsp;**`\'`** **`\"`** **`\\`** **`\?`**
 
-*escape-sequence*
+*`octal-escape-sequence`*:\
+&emsp;**`\`** *`octal-digit`*\
+&emsp;**`\`** *`octal-digit`* *`octal-digit`*\
+&emsp;**`\`** *`octal-digit`* *`octal-digit`* *`octal-digit`*
 
-*escape-sequence*:
-*simple-escape-sequence*
+*`hexadecimal-escape-sequence`*:\
+&emsp;**`\x`**  *`hexadecimal-digit`*\
+&emsp;*`hexadecimal-escape-sequence`* *`hexadecimal-digit`*
 
-*octal-escape-sequence*
-
-*hexadecimal-escape-sequence*
-
-*simple-escape-sequence*: one of
-**\a \b \f \n \r \t \v**
-
-**\\' \\" \\\ \\?**
-
-*octal-escape-sequence*:
-**\\**  *octal-digit*
-
-**\\**  *octal-digit octal-digit*
-
-**\\**  *octal-digit octal-digit octal-digit*
-
-*hexadecimal-escape-sequence*:
-**\x**  *hexadecimal-digit*
-
-*hexadecimal-escape-sequence hexadecimal-digit*
-
-## See Also
+## See also
 
 [C Constants](../c-language/c-constants.md)

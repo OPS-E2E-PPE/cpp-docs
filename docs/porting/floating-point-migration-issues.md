@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Floating-point migration issues"
 title: "Floating-point migration issues"
 ms.date: "05/17/2017"
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
@@ -25,6 +26,6 @@ In most cases, the floating-point changes in the newest compilers and libraries 
 
 ## See also
 
-[Upgrading Projects from Earlier Versions of Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Upgrading projects from earlier versions of Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Overview of potential upgrade issues (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Visual C++ change history 2003 - 2015](visual-cpp-change-history-2003-2015.md)

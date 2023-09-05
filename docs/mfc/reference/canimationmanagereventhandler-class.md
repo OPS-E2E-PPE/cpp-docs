@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAnimationManagerEventHandler Class"
 title: "CAnimationManagerEventHandler Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAnimationManagerEventHandler", "AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler", "AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::CAnimationManagerEventHandler", "AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::CreateInstance", "AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::OnManagerStatusChanged", "AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::SetAnimationController"]
@@ -47,7 +48,7 @@ This event handler is created and passed to IUIAnimationManager::SetManagerEvent
 
 **Header:** afxanimationcontroller.h
 
-##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler
+## <a name="canimationmanagereventhandler"></a> CAnimationManagerEventHandler::CAnimationManagerEventHandler
 
 Visual Studio 2010 SP1 is required.
 
@@ -57,7 +58,7 @@ Constructs a CAnimationManagerEventHandler object.
 CAnimationManagerEventHandler();
 ```
 
-##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance
+## <a name="createinstance"></a> CAnimationManagerEventHandler::CreateInstance
 
 Visual Studio 2010 SP1 is required.
 
@@ -81,7 +82,7 @@ Output. If the method succeeds it contains a pointer to COM object that will han
 
 If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.
 
-##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged
+## <a name="onmanagerstatuschanged"></a> CAnimationManagerEventHandler::OnManagerStatusChanged
 
 Visual Studio 2010 SP1 is required.
 
@@ -89,8 +90,8 @@ Called when a status of animation manager has changed.
 
 ```
 IFACEMETHOD(OnManagerStatusChanged)(
-  UI_ANIMATION_MANAGER_STATUS newStatus,
-  UI_ANIMATION_MANAGER_STATUS previousStatus);
+    UI_ANIMATION_MANAGER_STATUS newStatus,
+    UI_ANIMATION_MANAGER_STATUS previousStatus);
 ```
 
 ### Parameters
@@ -105,13 +106,13 @@ Previous status.
 
 Current implementation always returns S_OK;
 
-##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController
+## <a name="setanimationcontroller"></a> CAnimationManagerEventHandler::SetAnimationController
 
 Visual Studio 2010 SP1 is required.
 
 Stores a pointer to animation controller to route events.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
@@ -120,6 +121,6 @@ void SetAnimationController(CAnimationController* pAnimationController);
 *pAnimationController*<br/>
 A pointer to animation controller, which will receive events.
 
-## See Also
+## See also
 
 [Classes](../../mfc/reference/mfc-classes.md)

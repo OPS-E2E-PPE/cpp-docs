@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CWin32Heap Class"
 title: "CWin32Heap Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CWin32Heap", "ATLMEM/ATL::CWin32Heap", "ATLMEM/ATL::CWin32Heap::CWin32Heap", "ATLMEM/ATL::CWin32Heap::Allocate", "ATLMEM/ATL::CWin32Heap::Attach", "ATLMEM/ATL::CWin32Heap::Detach", "ATLMEM/ATL::CWin32Heap::Free", "ATLMEM/ATL::CWin32Heap::GetSize", "ATLMEM/ATL::CWin32Heap::Reallocate", "ATLMEM/ATL::CWin32Heap::m_bOwnHeap", "ATLMEM/ATL::CWin32Heap::m_hHeap"]
@@ -10,7 +11,7 @@ ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
 This class implements [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) using the Win32 heap allocation functions.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -47,7 +48,7 @@ class CWin32Heap : public IAtlMemMgr
 
 ## Remarks
 
-`CWin32Heap` implements memory allocation methods using the Win32 heap allocation functions, including [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc) and [HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree). Unlike other Heap classes, `CWin32Heap` requires a valid heap handle to be provided before memory is allocated: the other classes default to using the process heap. The handle can be supplied to the constructor or to the [CWin32Heap::Attach](#attach) method. See the [CWin32Heap::CWin32Heap](#cwin32heap) method for more details.
+`CWin32Heap` implements memory allocation methods using the Win32 heap allocation functions, including [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapalloc) and [HeapFree](/windows/win32/api/heapapi/nf-heapapi-heapfree). Unlike other Heap classes, `CWin32Heap` requires a valid heap handle to be provided before memory is allocated: the other classes default to using the process heap. The handle can be supplied to the constructor or to the [CWin32Heap::Attach](#attach) method. See the [CWin32Heap::CWin32Heap](#cwin32heap) method for more details.
 
 ## Example
 
@@ -63,7 +64,7 @@ See the example for [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 **Header:** atlmem.h
 
-##  <a name="allocate"></a>  CWin32Heap::Allocate
+## <a name="allocate"></a> CWin32Heap::Allocate
 
 Allocates a block of memory from the heap object.
 
@@ -84,13 +85,13 @@ Returns a pointer to the newly allocated memory block.
 
 Call [CWin32Heap::Free](#free) or [CWin32Heap::Reallocate](#reallocate) to free the memory allocated by this method.
 
-Implemented using [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc).
+Implemented using [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapalloc).
 
-##  <a name="attach"></a>  CWin32Heap::Attach
+## <a name="attach"></a> CWin32Heap::Attach
 
 Attaches the heap object to an existing heap.
 
-```
+```cpp
 void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ```
 
@@ -106,7 +107,7 @@ A flag indicating if the `CWin32Heap` object is to take ownership over the resou
 
 If *bTakeOwnership* is TRUE, the `CWin32Heap` object is responsible for deleting the heap handle.
 
-##  <a name="cwin32heap"></a>  CWin32Heap::CWin32Heap
+## <a name="cwin32heap"></a> CWin32Heap::CWin32Heap
 
 The constructor.
 
@@ -149,9 +150,9 @@ If a heap is required where operations are all performed from a single thread, t
 
 The parameter HEAP_NO_SERIALIZE specifies that mutual exclusion will not be used when the heap functions allocate and free memory, with an according increase in performance.
 
-The third parameter defaults to 0, which allows the heap to grow as required. See [HeapCreate](/windows/desktop/api/heapapi/nf-heapapi-heapcreate) for an explanation of the memory sizes and flags.
+The third parameter defaults to 0, which allows the heap to grow as required. See [HeapCreate](/windows/win32/api/heapapi/nf-heapapi-heapcreate) for an explanation of the memory sizes and flags.
 
-##  <a name="dtor"></a>  CWin32Heap::~CWin32Heap
+## <a name="dtor"></a> CWin32Heap::~CWin32Heap
 
 The destructor.
 
@@ -163,7 +164,7 @@ The destructor.
 
 Destroys the heap handle if the `CWin32Heap` object has ownership of the heap.
 
-##  <a name="detach"></a>  CWin32Heap::Detach
+## <a name="detach"></a> CWin32Heap::Detach
 
 Detaches the heap object from an existing heap.
 
@@ -175,7 +176,7 @@ HANDLE Detach() throw();
 
 Returns the handle to the heap to which the object was previously attached.
 
-##  <a name="free"></a>  CWin32Heap::Free
+## <a name="free"></a> CWin32Heap::Free
 
 Frees memory previously allocated from the heap by [CWin32Heap::Allocate](#allocate) or [CWin32Heap::Reallocate](#reallocate).
 
@@ -188,7 +189,7 @@ virtual void Free(void* p) throw();
 *p*<br/>
 Pointer to the block of memory to free. NULL is a valid value and does nothing.
 
-##  <a name="getsize"></a>  CWin32Heap::GetSize
+## <a name="getsize"></a> CWin32Heap::GetSize
 
 Returns the size of a memory block allocated from the heap object.
 
@@ -205,7 +206,7 @@ Pointer to the memory block whose size the method will obtain. This is a pointer
 
 Returns the size, in bytes, of the allocated memory block.
 
-##  <a name="m_bownheap"></a>  CWin32Heap::m_bOwnHeap
+## <a name="m_bownheap"></a> CWin32Heap::m_bOwnHeap
 
 A flag used to determine current ownership of the heap handle stored in [m_hHeap](#m_hheap).
 
@@ -213,7 +214,7 @@ A flag used to determine current ownership of the heap handle stored in [m_hHeap
 bool m_bOwnHeap;
 ```
 
-##  <a name="m_hheap"></a>  CWin32Heap::m_hHeap
+## <a name="m_hheap"></a> CWin32Heap::m_hHeap
 
 Handle to the heap object.
 
@@ -225,7 +226,7 @@ HANDLE m_hHeap;
 
 A variable used to store a handle to the heap object.
 
-##  <a name="reallocate"></a>  CWin32Heap::Reallocate
+## <a name="reallocate"></a> CWin32Heap::Reallocate
 
 Reallocates a block of memory from the heap object.
 
@@ -249,7 +250,7 @@ Returns a pointer to the newly allocated memory block.
 
 If *p* is NULL, it's assumed that the memory block has not yet been allocated and [CWin32Heap::Allocate](#allocate) is called, with an argument of *nBytes*.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)<br/>
 [IAtlMemMgr Class](../../atl/reference/iatlmemmgr-class.md)<br/>

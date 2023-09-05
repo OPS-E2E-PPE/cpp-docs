@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComEnumImpl Class"
 title: "CComEnumImpl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComEnumImpl", "ATLCOM/ATL::CComEnumImpl", "ATLCOM/ATL::CComEnumImpl::CComEnumImpl", "ATLCOM/ATL::CComEnumImpl::Clone", "ATLCOM/ATL::CComEnumImpl::Init", "ATLCOM/ATL::CComEnumImpl::Next", "ATLCOM/ATL::CComEnumImpl::Reset", "ATLCOM/ATL::CComEnumImpl::Skip", "ATLCOM/ATL::CComEnumImpl::m_begin", "ATLCOM/ATL::CComEnumImpl::m_dwFlags", "ATLCOM/ATL::CComEnumImpl::m_end", "ATLCOM/ATL::CComEnumImpl::m_iter", "ATLCOM/ATL::CComEnumImpl::m_spUnk"]
@@ -20,7 +21,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 #### Parameters
 
 *Base*<br/>
-A COM enumerator interface. See [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) for an example.
+A COM enumerator interface. See [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) for an example.
 
 *piid*<br/>
 A pointer to the interface ID of the enumerator interface.
@@ -62,10 +63,10 @@ A homogeneous [copy policy class](../../atl/atl-copy-policy-classes.md).
 
 ## Remarks
 
-See [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) for an example of method implementations. `CComEnumImpl` provides the implementation for a COM enumerator interface where the items being enumerated are stored in an array. This class is analogous to the `IEnumOnSTLImpl` class, which provides an implementation of an enumerator interface based on a C++ Standard Library container.
+See [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) for an example of method implementations. `CComEnumImpl` provides the implementation for a COM enumerator interface where the items being enumerated are stored in an array. This class is analogous to the `IEnumOnSTLImpl` class, which provides an implementation of an enumerator interface based on a C++ Standard Library container.
 
 > [!NOTE]
->  For details on further differences between `CComEnumImpl` and `IEnumOnSTLImpl`, see [CComEnumImpl::Init](#init).
+> For details on further differences between `CComEnumImpl` and `IEnumOnSTLImpl`, see [CComEnumImpl::Init](#init).
 
 Typically, you will *not* need to create your own enumerator class by deriving from this interface implementation. If you want to use an ATL-supplied enumerator based on an array, it is more common to create an instance of [CComEnum](../../atl/reference/ccomenum-class.md).
 
@@ -83,7 +84,7 @@ For more information, see [ATL Collections and Enumerators](../../atl/atl-collec
 
 **Header:** atlcom.h
 
-##  <a name="ccomenumimpl"></a>  CComEnumImpl::CComEnumImpl
+## <a name="ccomenumimpl"></a> CComEnumImpl::CComEnumImpl
 
 The constructor.
 
@@ -91,7 +92,7 @@ The constructor.
 CComEnumImpl();
 ```
 
-##  <a name="dtor"></a>  CComEnumImpl::~CComEnumImpl
+## <a name="dtor"></a> CComEnumImpl::~CComEnumImpl
 
 The destructor.
 
@@ -99,7 +100,7 @@ The destructor.
 ~CComEnumImpl();
 ```
 
-##  <a name="init"></a>  CComEnumImpl::Init
+## <a name="init"></a> CComEnumImpl::Init
 
 You must call this method before passing a pointer to the enumerator interface back to any clients.
 
@@ -148,14 +149,14 @@ enum CComEnumFlags
 
 `AtlFlagNoCopy` means that the array's lifetime is not controlled by the enumerator. In this case, either the array will be static or the object identified by *pUnk* will be responsible for freeing the array when it's no longer needed.
 
-`AtlFlagTakeOwnership` means that the destruction of the array is to be controlled by the enumerator. In this case, the array must have been dynamically allocated using **new**. The enumerator will delete the array in its destructor. Typically, you would pass NULL for *pUnk*, although you can still pass a valid pointer if you need to be notified of the destruction of the enumerator for some reason.
+`AtlFlagTakeOwnership` means that the destruction of the array is to be controlled by the enumerator. In this case, the array must have been dynamically allocated using **`new`**. The enumerator will delete the array in its destructor. Typically, you would pass NULL for *pUnk*, although you can still pass a valid pointer if you need to be notified of the destruction of the enumerator for some reason.
 
 `AtlFlagCopy` means that a new array is to be created by copying the array passed to `Init`. The new array's lifetime is to be controlled by the enumerator. The enumerator will delete the array in its destructor. Typically, you would pass NULL for *pUnk*, although you can still pass a valid pointer if you need to be notified of the destruction of the enumerator for some reason.
 
 > [!NOTE]
->  The prototype of this method specifies the array elements as being of type `T`, where `T` was defined as a template parameter to the class. This is the same type that is exposed by means of the COM interface method [CComEnumImpl::Next](#next). The implication of this is that, unlike [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), this class does not support different storage and exposed data types. The data type of elements in the array must be the same as the data type exposed by means of the COM interface.
+> The prototype of this method specifies the array elements as being of type `T`, where `T` was defined as a template parameter to the class. This is the same type that is exposed by means of the COM interface method [CComEnumImpl::Next](#next). The implication of this is that, unlike [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), this class does not support different storage and exposed data types. The data type of elements in the array must be the same as the data type exposed by means of the COM interface.
 
-##  <a name="clone"></a>  CComEnumImpl::Clone
+## <a name="clone"></a> CComEnumImpl::Clone
 
 This method provides the implementation of the **Clone** method by creating an object of type `CComEnum`, initializing it with the same array and iterator used by the current object, and returning the interface on the newly created object.
 
@@ -176,7 +177,7 @@ A standard HRESULT value.
 
 Note that cloned enumerators never make their own copy (or take ownership) of the data used by the original enumerator. If necessary, cloned enumerators will keep the original enumerator alive (using a COM reference) to ensure that the data is available for as long as they need it.
 
-##  <a name="m_spunk"></a>  CComEnumImpl::m_spUnk
+## <a name="m_spunk"></a> CComEnumImpl::m_spUnk
 
 This smart pointer maintains a reference on the object passed to [CComEnumImpl::Init](#init), ensuring that it remains alive during the lifetime of the enumerator.
 
@@ -184,7 +185,7 @@ This smart pointer maintains a reference on the object passed to [CComEnumImpl::
 CComPtr<IUnknown> m_spUnk;
 ```
 
-##  <a name="m_begin"></a>  CComEnumImpl::m_begin
+## <a name="m_begin"></a> CComEnumImpl::m_begin
 
 A pointer to the location just beyond the last element of the array containing the items to be enumerated.
 
@@ -192,7 +193,7 @@ A pointer to the location just beyond the last element of the array containing t
 T* m_begin;
 ```
 
-##  <a name="m_end"></a>  CComEnumImpl::m_end
+## <a name="m_end"></a> CComEnumImpl::m_end
 
 A pointer to the first element of the array containing the items to be enumerated.
 
@@ -200,7 +201,7 @@ A pointer to the first element of the array containing the items to be enumerate
 T* m_end;
 ```
 
-##  <a name="m_iter"></a>  CComEnumImpl::m_iter
+## <a name="m_iter"></a> CComEnumImpl::m_iter
 
 A pointer to the current element of the array containing the items to be enumerated.
 
@@ -208,7 +209,7 @@ A pointer to the current element of the array containing the items to be enumera
 T* m_iter;
 ```
 
-##  <a name="m_dwflags"></a>  CComEnumImpl::m_dwFlags
+## <a name="m_dwflags"></a> CComEnumImpl::m_dwFlags
 
 The flags passed to [CComEnumImpl::Init](#init).
 
@@ -216,7 +217,7 @@ The flags passed to [CComEnumImpl::Init](#init).
 DWORD m_dwFlags;
 ```
 
-##  <a name="next"></a>  CComEnumImpl::Next
+## <a name="next"></a> CComEnumImpl::Next
 
 This method provides the implementation of the **Next** method.
 
@@ -239,7 +240,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 
 A standard HRESULT value.
 
-##  <a name="reset"></a>  CComEnumImpl::Reset
+## <a name="reset"></a> CComEnumImpl::Reset
 
 This method provides the implementation of the **Reset** method.
 
@@ -251,7 +252,7 @@ STDMETHOD(Reset)(void);
 
 A standard HRESULT value.
 
-##  <a name="skip"></a>  CComEnumImpl::Skip
+## <a name="skip"></a> CComEnumImpl::Skip
 
 This method provides the implementation of the **Skip** method.
 
@@ -272,7 +273,7 @@ A standard HRESULT value.
 
 Returns E_INVALIDARG if *celt* is zero, returns S_FALSE if less than *celt* elements are returned, returns S_OK otherwise.
 
-## See Also
+## See also
 
 [IEnumOnSTLImpl Class](../../atl/reference/ienumonstlimpl-class.md)<br/>
 [CComEnum Class](../../atl/reference/ccomenum-class.md)<br/>

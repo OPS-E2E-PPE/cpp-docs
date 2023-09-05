@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: C++ Program Startup and Termination"
 title: "C++ Program Startup and Termination"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["C++ Standard Library, program startup and termination", "terminating execution", "Function Main procedures", "control text streams", "startup code, and C++ program termination", "main function, program startup"]
@@ -24,5 +25,5 @@ As with C, returning from `main` or calling `exit` calls all functions registere
 
 ## See also
 
-[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)<br/>
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)

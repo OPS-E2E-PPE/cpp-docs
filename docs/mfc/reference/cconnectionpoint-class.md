@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CConnectionPoint Class"
 title: "CConnectionPoint Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CConnectionPoint", "AFXDISP/CConnectionPoint", "AFXDISP/CConnectionPoint::CConnectionPoint", "AFXDISP/CConnectionPoint::GetConnections", "AFXDISP/CConnectionPoint::GetContainer", "AFXDISP/CConnectionPoint::GetIID", "AFXDISP/CConnectionPoint::GetMaxConnections", "AFXDISP/CConnectionPoint::GetNextConnection", "AFXDISP/CConnectionPoint::GetStartPosition", "AFXDISP/CConnectionPoint::OnAdvise", "AFXDISP/CConnectionPoint::QuerySinkInterface"]
@@ -44,7 +45,7 @@ A connection consists of two parts: the object calling the interface, called the
 
 By default, a `COleControl`-derived class implements two connection points: one for events and one for property change notifications. These connections are used, respectively, for event firing and for notifying a sink (for example, the control's container) when a property value has changed. Support is also provided for OLE controls to implement additional connection points. For each additional connection point implemented in your control class, you must declare a "connection part" that implements the connection point. If you implement one or more connection points, you also need to declare a single "connection map" in your control class.
 
-The following example demonstrates a simple connection map and one connection point for the `Sample` OLE control, consisting of two fragments of code: the first portion declares the connection map and point; the second implements this map and point. The first fragment is inserted into the declaration of the control class, under the **protected** section:
+The following example demonstrates a simple connection map and one connection point for the `Sample` OLE control, consisting of two fragments of code: the first portion declares the connection map and point; the second implements this map and point. The first fragment is inserted into the declaration of the control class, under the **`protected`** section:
 
 [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]
 
@@ -76,7 +77,7 @@ For more information on using `CConnectionPoint`, see the article [Connection Po
 
 **Header:** afxdisp.h
 
-##  <a name="cconnectionpoint"></a>  CConnectionPoint::CConnectionPoint
+## <a name="cconnectionpoint"></a> CConnectionPoint::CConnectionPoint
 
 Constructs a `CConnectionPoint` object.
 
@@ -84,7 +85,7 @@ Constructs a `CConnectionPoint` object.
 CConnectionPoint();
 ```
 
-##  <a name="getconnections"></a>  CConnectionPoint::GetConnections
+## <a name="getconnections"></a> CConnectionPoint::GetConnections
 
 Call this function to retrieve all active connections for a connection point.
 
@@ -96,7 +97,7 @@ const CPtrArray* GetConnections();
 
 A pointer to an array of active connections (sinks). Some of the pointers in the array may be NULL. Each non-NULL pointer in this array can be safely converted to a pointer to the sink interface using a cast operator.
 
-##  <a name="getcontainer"></a>  CConnectionPoint::GetContainer
+## <a name="getcontainer"></a> CConnectionPoint::GetContainer
 
 Called by the framework to retrieve the `IConnectionPointContainer` for the connection point.
 
@@ -112,7 +113,7 @@ If successful, a pointer to the container; otherwise NULL.
 
 This function is typically implemented by the BEGIN_CONNECTION_PART macro.
 
-##  <a name="getiid"></a>  CConnectionPoint::GetIID
+## <a name="getiid"></a> CConnectionPoint::GetIID
 
 Called by the framework to retrieve the interface ID of a connection point.
 
@@ -128,7 +129,7 @@ A reference to the connection point's interface ID.
 
 Override this function to return the interface ID for this connection point.
 
-##  <a name="getmaxconnections"></a>  CConnectionPoint::GetMaxConnections
+## <a name="getmaxconnections"></a> CConnectionPoint::GetMaxConnections
 
 Called by the framework to retrieve the maximum number of connections supported by the connection point.
 
@@ -146,7 +147,7 @@ The default implementation returns -1, indicating no limit.
 
 Override this function if you want to limit the number of sinks that can connect to your control.
 
-##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection
+## <a name="getnextconnection"></a> CConnectionPoint::GetNextConnection
 
 Retrieves a pointer to the connection element at *pos*.
 
@@ -171,7 +172,7 @@ This function is most useful for iterating through all the elements in the conne
 
 [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]
 
-##  <a name="getstartposition"></a>  CConnectionPoint::GetStartPosition
+## <a name="getstartposition"></a> CConnectionPoint::GetStartPosition
 
 Starts a map iteration by returning a POSITION value that can be passed to a [GetNextConnection](#getnextconnection) call.
 
@@ -191,7 +192,7 @@ The iteration sequence is not predictable; therefore, the "first element in the 
 
   See the example for [CConnectionPoint::GetNextConnection](#getnextconnection).
 
-##  <a name="onadvise"></a>  CConnectionPoint::OnAdvise
+## <a name="onadvise"></a> CConnectionPoint::OnAdvise
 
 Called by the framework when a connection is being established or broken.
 
@@ -210,7 +211,7 @@ The default implementation does nothing.
 
 Override this function if you want notification when sinks connect to or disconnect from your connection point.
 
-##  <a name="querysinkinterface"></a>  CConnectionPoint::QuerySinkInterface
+## <a name="querysinkinterface"></a> CConnectionPoint::QuerySinkInterface
 
 Retrieves a pointer to the requested sink interface.
 
@@ -232,8 +233,7 @@ A pointer to the interface pointer identified by *pUnkSink*. If the object does 
 
 A standard HRESULT value.
 
-## See Also
+## See also
 
 [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)
-

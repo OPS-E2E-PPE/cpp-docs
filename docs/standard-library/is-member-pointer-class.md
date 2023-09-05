@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: is_member_pointer Class"
 title: "is_member_pointer Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::is_member_pointer"]
@@ -18,7 +19,7 @@ struct is_member_pointer;
 
 ### Parameters
 
-*Ty*<br/>
+*Ty*\
 The type to query.
 
 ## Remarks
@@ -76,7 +77,7 @@ is_member_pointer<int (functional::*)()> == true
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_function_pointer Class](../standard-library/is-member-function-pointer-class.md)<br/>
-[is_member_object_pointer Class](../standard-library/is-member-object-pointer-class.md)<br/>
-[is_pointer Class](../standard-library/is-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_member_function_pointer Class](../standard-library/is-member-function-pointer-class.md)\
+[is_member_object_pointer Class](../standard-library/is-member-object-pointer-class.md)\
+[is_pointer Class](../standard-library/is-pointer-class.md)

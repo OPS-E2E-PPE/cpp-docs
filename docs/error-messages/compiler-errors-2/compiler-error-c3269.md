@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3269"
 title: "Compiler Error C3269"
 ms.date: "11/04/2016"
 f1_keywords: ["C3269"]
@@ -13,7 +14,7 @@ Managed and WinRT class member functions cannot declare variable-length paramete
 
 The following sample generates C3269 and shows how to fix it:
 
-```
+```cpp
 // C3269_2.cpp
 // compile with: /clr
 

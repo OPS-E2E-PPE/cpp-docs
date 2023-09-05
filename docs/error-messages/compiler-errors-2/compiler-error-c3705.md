@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3705"
 title: "Compiler Error C3705"
 ms.date: "11/04/2016"
 f1_keywords: ["C3705"]
@@ -13,7 +14,7 @@ You must define an event interface to use COM events. Note that the `#include` l
 
 The following sample generates C3705:
 
-```
+```cpp
 // C3705.cpp
 // compile with: /c
 #define _ATL_ATTRIBUTES 1

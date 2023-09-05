@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Windows Sockets Classes"
 title: "Windows Sockets Classes"
 ms.date: "11/04/2016"
-f1_keywords: ["vc.classes.net"]
 helpviewer_keywords: ["sockets classes [MFC]", "Windows Sockets [MFC], classes"]
 ms.assetid: 58b9ab8d-9e44-4db3-8265-e04e713d2e9a
 ---
@@ -18,7 +18,6 @@ Higher level abstraction derived from `CAsyncSocket`. It operates synchronously.
 [CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
 Provides a `CFile` interface to a Windows Socket.
 
-## See Also
+## See also
 
 [Class Overview](../mfc/class-library-overview.md)
-

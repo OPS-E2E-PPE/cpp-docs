@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2162"
 title: "Compiler Error C2162"
 ms.date: "11/04/2016"
 f1_keywords: ["C2162"]
@@ -15,7 +16,7 @@ The token following a stringizing operator (#) is not a formal parameter name.
 
 The following sample generates C2162:
 
-```
+```cpp
 // C2162.cpp
 // compile with: /c
 #include <stdio.h>

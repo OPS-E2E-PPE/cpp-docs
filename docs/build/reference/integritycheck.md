@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: /INTEGRITYCHECK"
 title: "/INTEGRITYCHECK"
 ms.date: "12/28/2017"
 f1_keywords: ["/INTEGRITYCHECK"]
@@ -16,4 +17,4 @@ In the header of the DLL file or executable file, this option sets a flag that r
 
 ## See also
 
-[EDITBIN Options](../../build/reference/editbin-options.md)
+[EDITBIN Options](editbin-options.md)

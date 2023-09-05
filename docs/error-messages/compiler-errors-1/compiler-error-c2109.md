@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2109"
 title: "Compiler Error C2109"
 ms.date: "11/04/2016"
 f1_keywords: ["C2109"]
@@ -13,7 +14,7 @@ The subscript was used on a variable that was not an array.
 
 The following sample generates C2109:
 
-```
+```cpp
 // C2109.cpp
 int main() {
    int a, b[10] = {0};

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: bernoulli_distribution Class"
 title: "bernoulli_distribution Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::bernoulli_distribution", "random/std::bernoulli_distribution::reset", "random/std::bernoulli_distribution::p", "random/std::bernoulli_distribution::param", "random/std::bernoulli_distribution::min", "random/std::bernoulli_distribution::max", "random/std::bernoulli_distribution::operator()", "random/std::bernoulli_distribution::param_type", "random/std::bernoulli_distribution::param_type::p", "random/std::bernoulli_distribution::param_type::operator==", "random/std::bernoulli_distribution::param_type::operator!="]
@@ -41,17 +42,15 @@ public:
 
 ### Parameters
 
-*URNG*<br/>
+*URNG*\
 The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).
 
 ## Remarks
 
-The class describes a distribution that produces values of type **bool**, distributed according to the Bernoulli distribution discrete probability function. The following table links to articles about individual members.
+The class describes a distribution that produces values of type **`bool`**, distributed according to the Bernoulli distribution discrete probability function. The following table links to articles about individual members.
 
-||||
-|-|-|-|
-|[bernoulli_distribution](#bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|
-|`bernoulli_distribution::operator()`||[param_type](#param_type)|
+[bernoulli_distribution](#bernoulli_distribution)\
+[param_type](#param_type)
 
 The property member `p()` returns the currently stored distribution parameter value `p`.
 
@@ -65,7 +64,7 @@ The `operator()` member functions return the next generated value based on the U
 
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
 
-For detailed information about the Bernoulli distribution discrete probability function, see the Wolfram MathWorld article [Bernoulli Distribution](http://go.microsoft.com/fwlink/p/?linkid=398467).
+For detailed information about the Bernoulli distribution discrete probability function, see the Wolfram MathWorld article [Bernoulli Distribution](https://go.microsoft.com/fwlink/p/?linkid=398467).
 
 ## Example
 
@@ -133,7 +132,7 @@ true :::::::::::::::::::::::::::::::::::::::::
 
 **Namespace:** std
 
-## <a name="bernoulli_distribution"></a>  bernoulli_distribution::bernoulli_distribution
+## <a name="bernoulli_distribution"></a> bernoulli_distribution::bernoulli_distribution
 
 Constructs the distribution.
 
@@ -144,10 +143,10 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### Parameters
 
-*p*<br/>
+*p*\
 The stored `p` distribution parameter.
 
-*parm*<br/>
+*parm*\
 The `param_type` structure used to construct the distribution.
 
 ### Remarks
@@ -158,7 +157,7 @@ The first constructor constructs an object whose stored `p` value holds the valu
 
 The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.
 
-## <a name="param_type"></a>  bernoulli_distribution::param_type
+## <a name="param_type"></a> bernoulli_distribution::param_type
 
 Contains the parameters of the distribution.
 
@@ -173,7 +172,7 @@ struct param_type {
 
 ### Parameters
 
-*p*<br/>
+*p*\
 The stored `p` distribution parameter.
 
 ### Remarks
@@ -184,4 +183,4 @@ This structure can be passed to the distribution's class constructor at instanti
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

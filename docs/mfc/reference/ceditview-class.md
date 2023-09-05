@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CEditView Class"
 title: "CEditView Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CEditView", "AFXEXT/CEditView", "AFXEXT/CEditView::CEditView", "AFXEXT/CEditView::FindText", "AFXEXT/CEditView::GetBufferLength", "AFXEXT/CEditView::GetEditCtrl", "AFXEXT/CEditView::GetPrinterFont", "AFXEXT/CEditView::GetSelectedText", "AFXEXT/CEditView::LockBuffer", "AFXEXT/CEditView::PrintInsideRect", "AFXEXT/CEditView::SerializeRaw", "AFXEXT/CEditView::SetPrinterFont", "AFXEXT/CEditView::SetTabStops", "AFXEXT/CEditView::UnlockBuffer", "AFXEXT/CEditView::OnFindNext", "AFXEXT/CEditView::OnReplaceAll", "AFXEXT/CEditView::OnReplaceSel", "AFXEXT/CEditView::OnTextNotFound", "AFXEXT/CEditView::dwStyleDefault"]
@@ -70,7 +71,7 @@ Create objects of type `CEditView` if you want an edit window with the added fun
 
 The default implementation of class `CEditView` handles the following commands: ID_EDIT_SELECT_ALL, ID_EDIT_FIND, ID_EDIT_REPLACE, ID_EDIT_REPEAT, and ID_FILE_PRINT.
 
-The default character limit for `CEditView` is (1024 \* 1024 - 1 = 1048575). This can be changed by calling the EM_LIMITTEXT function of the underlying edit control. However, the limits are different depending on the operating system and the type of edit control (single or multiline). For more information on these limits, see [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext).
+The default character limit for `CEditView` is (1024 \* 1024 - 1 = 1048575). This can be changed by calling the EM_LIMITTEXT function of the underlying edit control. However, the limits are different depending on the operating system and the type of edit control (single or multiline). For more information on these limits, see [EM_LIMITTEXT](/windows/win32/Controls/em-limittext).
 
 To change this limit in your control, override the `OnCreate()` function for your `CEditView` class and insert the following line of code:
 
@@ -104,7 +105,7 @@ For more information on `CEditView`, see [Derived View Classes Available in MFC]
 
 **Header:** afxext.h
 
-##  <a name="ceditview"></a>  CEditView::CEditView
+## <a name="ceditview"></a> CEditView::CEditView
 
 Constructs an object of type `CEditView`.
 
@@ -116,7 +117,7 @@ CEditView();
 
 After constructing the object, you must call the [CWnd::Create](../../mfc/reference/cwnd-class.md#create) function before the edit control is used. If you derive a class from `CEditView` and add it to the template using `CWinApp::AddDocTemplate`, the framework calls both this constructor and the `Create` function.
 
-##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault
+## <a name="dwstyledefault"></a> CEditView::dwStyleDefault
 
 Contains the default style of the `CEditView` object.
 
@@ -128,7 +129,7 @@ static const DWORD dwStyleDefault;
 
 Pass this static member as the *dwStyle* parameter of the `Create` function to obtain the default style for the `CEditView` object.
 
-##  <a name="findtext"></a>  CEditView::FindText
+## <a name="findtext"></a> CEditView::FindText
 
 Call the `FindText` function to search the `CEditView` object's text buffer.
 
@@ -160,7 +161,7 @@ This function searches the text in the buffer for the text specified by *lpszFin
 
 You normally do not need to call the `FindText` function unless you override `OnFindNext`, which calls `FindText`.
 
-##  <a name="getbufferlength"></a>  CEditView::GetBufferLength
+## <a name="getbufferlength"></a> CEditView::GetBufferLength
 
 Call this member function to obtain the number of characters currently in the edit control's buffer, not including the null terminator.
 
@@ -172,7 +173,7 @@ UINT GetBufferLength() const;
 
 The length of the string in the buffer.
 
-##  <a name="geteditctrl"></a>  CEditView::GetEditCtrl
+## <a name="geteditctrl"></a> CEditView::GetEditCtrl
 
 Call `GetEditCtrl` to get a reference to the edit control used by the edit view.
 
@@ -189,13 +190,13 @@ A reference to a `CEdit` object.
 This control is of type [CEdit](../../mfc/reference/cedit-class.md), so you can manipulate the Windows edit control directly using the `CEdit` member functions.
 
 > [!CAUTION]
->  Using the `CEdit` object can change the state of the underlying Windows edit control. For example, you should not change the tab settings using the [CEdit::SetTabStops](../../mfc/reference/cedit-class.md#settabstops) function because `CEditView` caches these settings for use both in the edit control and in printing. Instead, use [CEditView::SetTabStops](#settabstops).
+> Using the `CEdit` object can change the state of the underlying Windows edit control. For example, you should not change the tab settings using the [CEdit::SetTabStops](../../mfc/reference/cedit-class.md#settabstops) function because `CEditView` caches these settings for use both in the edit control and in printing. Instead, use [CEditView::SetTabStops](#settabstops).
 
 ### Example
 
 [!code-cpp[NVC_MFCDocView#66](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]
 
-##  <a name="getprinterfont"></a>  CEditView::GetPrinterFont
+## <a name="getprinterfont"></a> CEditView::GetPrinterFont
 
 Call `GetPrinterFont` to get a pointer to a [CFont](../../mfc/reference/cfont-class.md) object that describes the current printer font.
 
@@ -213,11 +214,11 @@ If the printer font has not been set, the default printing behavior of the `CEdi
 
 Use this function to determine the current printer font. If it is not the desired printer font, use [CEditView::SetPrinterFont](#setprinterfont) to change it.
 
-##  <a name="getselectedtext"></a>  CEditView::GetSelectedText
+## <a name="getselectedtext"></a> CEditView::GetSelectedText
 
 Call `GetSelectedText` to copy the selected text into a `CString` object, up to the end of the selection or the character preceding the first carriage-return character in the selection.
 
-```
+```cpp
 void GetSelectedText(CString& strResult) const;
 ```
 
@@ -226,7 +227,7 @@ void GetSelectedText(CString& strResult) const;
 *strResult*<br/>
 A reference to the `CString` object that is to receive the selected text.
 
-##  <a name="lockbuffer"></a>  CEditView::LockBuffer
+## <a name="lockbuffer"></a> CEditView::LockBuffer
 
 Call this member function to obtain a pointer to the buffer. The buffer should not be modified.
 
@@ -238,7 +239,7 @@ LPCTSTR LockBuffer() const;
 
 A pointer to the edit control's buffer.
 
-##  <a name="onfindnext"></a>  CEditView::OnFindNext
+## <a name="onfindnext"></a> CEditView::OnFindNext
 
 Searches the text in the buffer for the text specified by *lpszFind*, in the direction specified by *bNext*, with case sensitivity specified by *bCase*.
 
@@ -266,7 +267,7 @@ The search starts at the beginning of the current selection and is accomplished 
 
 Override `OnFindNext` to change the way a `CEditView`-derived object searches text. `CEditView` calls `OnFindNext` when the user chooses the Find Next button in the standard Find dialog box.
 
-##  <a name="onreplaceall"></a>  CEditView::OnReplaceAll
+## <a name="onreplaceall"></a> CEditView::OnReplaceAll
 
 `CEditView` calls `OnReplaceAll` when the user selects the Replace All button in the standard Replace dialog box.
 
@@ -296,7 +297,7 @@ If the current selection does not match *lpszFind*, the selection is updated to 
 
 Override `OnReplaceAll` to change the way a `CEditView`-derived object replaces text.
 
-##  <a name="onreplacesel"></a>  CEditView::OnReplaceSel
+## <a name="onreplacesel"></a> CEditView::OnReplaceSel
 
 `CEditView` calls `OnReplaceSel` when the user selects the Replace button in the standard Replace dialog box.
 
@@ -328,7 +329,7 @@ After replacing the selection, this function searches the text in the buffer for
 
 Override `OnReplaceSel` to change the way a `CEditView`-derived object replaces the selected text.
 
-##  <a name="ontextnotfound"></a>  CEditView::OnTextNotFound
+## <a name="ontextnotfound"></a> CEditView::OnTextNotFound
 
 Override this function to change the default implementation, which calls the Windows function `MessageBeep`.
 
@@ -341,7 +342,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 *lpszFind*<br/>
 The text to be found.
 
-##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect
+## <a name="printinsiderect"></a> CEditView::PrintInsideRect
 
 Call `PrintInsideRect` to print text in the rectangle specified by *rectLayout*.
 
@@ -359,7 +360,7 @@ UINT PrintInsideRect(
 Pointer to the printer device context.
 
 *rectLayout*<br/>
-Reference to a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or [RECT structure](/windows/desktop/api/windef/ns-windef-tagrect) specifying the rectangle in which the text is to be rendered.
+Reference to a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or [RECT structure](/windows/win32/api/windef/ns-windef-rect) specifying the rectangle in which the text is to be rendered.
 
 *nIndexStart*<br/>
 Index within the buffer of the first character to be rendered.
@@ -377,11 +378,11 @@ If the `CEditView` control does not have the style ES_AUTOHSCROLL, text is wrapp
 
 The `rect.bottom` element of the *rectLayout* object is changed so that the rectangle's dimensions define the part of the original rectangle that is occupied by the text.
 
-##  <a name="serializeraw"></a>  CEditView::SerializeRaw
+## <a name="serializeraw"></a> CEditView::SerializeRaw
 
 Call `SerializeRaw` to have a `CArchive` object read or write the text in the `CEditView` object to a text file.
 
-```
+```cpp
 void SerializeRaw(CArchive& ar);
 ```
 
@@ -394,11 +395,11 @@ Reference to the `CArchive` object that stores the serialized text.
 
 `SerializeRaw` differs from `CEditView`'s internal implementation of `Serialize` in that it reads and writes only the text, without preceding object-description data.
 
-##  <a name="setprinterfont"></a>  CEditView::SetPrinterFont
+## <a name="setprinterfont"></a> CEditView::SetPrinterFont
 
 Call `SetPrinterFont` to set the printer font to the font specified by *pFont*.
 
-```
+```cpp
 void SetPrinterFont(CFont* pFont);
 ```
 
@@ -411,11 +412,11 @@ A pointer to an object of type `CFont`. If NULL, the font used for printing is b
 
 If you want your view to always use a particular font for printing, include a call to `SetPrinterFont` in your class's `OnPreparePrinting` function. This virtual function is called before printing occurs, so the font change takes place before the view's contents are printed.
 
-##  <a name="settabstops"></a>  CEditView::SetTabStops
+## <a name="settabstops"></a> CEditView::SetTabStops
 
 Call this function to set the tab stops used for display and printing.
 
-```
+```cpp
 void SetTabStops(int nTabStops);
 ```
 
@@ -436,11 +437,11 @@ This code fragment sets the tab stops in the control to every fourth character b
 
 [!code-cpp[NVC_MFCDocView#67](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]
 
-##  <a name="unlockbuffer"></a>  CEditView::UnlockBuffer
+## <a name="unlockbuffer"></a> CEditView::UnlockBuffer
 
 Call this member function to unlock the buffer.
 
-```
+```cpp
 void UnlockBuffer() const;
 ```
 
@@ -448,9 +449,9 @@ void UnlockBuffer() const;
 
 Call `UnlockBuffer` after you have finished using the pointer returned by [LockBuffer](#lockbuffer).
 
-## See Also
+## See also
 
-[MFC Sample SUPERPAD](../../visual-cpp-samples.md)<br/>
+[MFC Sample SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView Class](../../mfc/reference/cctrlview-class.md)<br/>
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [CEdit Class](../../mfc/reference/cedit-class.md)<br/>

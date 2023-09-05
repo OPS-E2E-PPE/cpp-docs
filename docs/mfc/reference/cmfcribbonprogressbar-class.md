@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CMFCRibbonProgressBar Class"
 title: "CMFCRibbonProgressBar Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CMFCRibbonProgressBar", "AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar", "AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::CMFCRibbonProgressBar", "AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetPos", "AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetRangeMax", "AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetRangeMin", "AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetRegularSize", "AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::IsInfiniteMode", "AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::OnDraw", "AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetInfiniteMode", "AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetPos", "AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetRange"]
@@ -43,7 +44,7 @@ A `CMFCRibbonProgressBar` can operate in two modes: regular and infinite. In reg
 
 ## Example
 
-The following example demonstrates how to use various methods in the `CMFCRibbonProgressBar` class. The example shows how to set the progress bar to work in infinite mode (where the completion time of an operation is unknown), set the minimum and maximum values for the progress bar, and set the current position of the progress bar. This code snippet is part of the [MS Office 2007 Demo sample](../../visual-cpp-samples.md).
+The following example demonstrates how to use various methods in the `CMFCRibbonProgressBar` class. The example shows how to set the progress bar to work in infinite mode (where the completion time of an operation is unknown), set the minimum and maximum values for the progress bar, and set the current position of the progress bar. This code snippet is part of the [MS Office 2007 Demo sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
@@ -59,7 +60,7 @@ The following example demonstrates how to use various methods in the `CMFCRibbon
 
 **Header:** afxRibbonProgressBar.h
 
-##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar
+## <a name="cmfcribbonprogressbar"></a> CMFCRibbonProgressBar::CMFCRibbonProgressBar
 
 Constructs and initializes a [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) object.
 
@@ -83,7 +84,7 @@ CMFCRibbonProgressBar(
 *nHeight*<br/>
 [in] Specifies the height, in pixels, of the ribbon progress bar.
 
-##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos
+## <a name="getpos"></a> CMFCRibbonProgressBar::GetPos
 
 Returns the current position of the progress bar.
 
@@ -99,7 +100,7 @@ A value representing the current position of the progress bar.
 
 The range being set must be within the range specified by the [CMFCRibbonProgressBar::SetRange](#setrange) method.
 
-##  <a name="getrangemax"></a>  CMFCRibbonProgressBar::GetRangeMax
+## <a name="getrangemax"></a> CMFCRibbonProgressBar::GetRangeMax
 
 Returns the progress bar's current maximum value.
 
@@ -113,7 +114,7 @@ The maximum value of the current range.
 
 ### Remarks
 
-##  <a name="getrangemin"></a>  CMFCRibbonProgressBar::GetRangeMin
+## <a name="getrangemin"></a> CMFCRibbonProgressBar::GetRangeMin
 
 Returns the progress bar's current minimum range value.
 
@@ -125,7 +126,7 @@ int GetRangeMin() const;
 
 The minimum value of the current range.
 
-##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize
+## <a name="getregularsize"></a> CMFCRibbonProgressBar::GetRegularSize
 
 For more detail see the source code located in the **VC\\atlmfc\\src\\mfc** folder of your Visual Studio installation.
 
@@ -141,7 +142,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### Remarks
 
-##  <a name="isinfinitemode"></a>  CMFCRibbonProgressBar::IsInfiniteMode
+## <a name="isinfinitemode"></a> CMFCRibbonProgressBar::IsInfiniteMode
 
 Specifies whether the progress bar is working in infinite mode.
 
@@ -157,7 +158,7 @@ TRUE if the progress bar is in infinite mode; otherwise, FALSE.
 
 In infinite mode, the progress bar fills repeatedly from the minimum value to the maximum value. You might use infinite mode to indicate that an operation is ongoing, but that the completion time is unknown.
 
-##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw
+## <a name="ondraw"></a> CMFCRibbonProgressBar::OnDraw
 
 For more detail see the source code located in the **VC\\atlmfc\\src\\mfc** folder of your Visual Studio installation.
 
@@ -171,11 +172,11 @@ virtual void OnDraw(CDC* pDC);
 
 ### Remarks
 
-##  <a name="setinfinitemode"></a>  CMFCRibbonProgressBar::SetInfiniteMode
+## <a name="setinfinitemode"></a> CMFCRibbonProgressBar::SetInfiniteMode
 
 Sets the progress bar to work in infinite mode.
 
-```
+```cpp
 void SetInfiniteMode(BOOL bSet = TRUE);
 ```
 
@@ -188,11 +189,11 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 
 Usually, if the progress bar is in infinite mode, it is telling the user that an operation is ongoing, but that the completion time is unknown. Thus, the progress bar fills repeatedly from the minimum value to the maximum value.
 
-##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos
+## <a name="setpos"></a> CMFCRibbonProgressBar::SetPos
 
 Sets the current position of the progress bar.
 
-```
+```cpp
 void SetPos(
     int nPos,
     BOOL bRedraw = TRUE);
@@ -210,11 +211,11 @@ void SetPos(
 
 The range being set must be within the range specified by the [CMFCRibbonProgressBar::SetRange](#setrange) method.
 
-##  <a name="setrange"></a>  CMFCRibbonProgressBar::SetRange
+## <a name="setrange"></a> CMFCRibbonProgressBar::SetRange
 
 Sets the minimum and maximum values for the progress bar.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax);
@@ -232,7 +233,7 @@ void SetRange(
 
 Use this method to define the range of the progress bar by setting minimum and maximum values.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Type float"
 title: "Type float"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["type float", "exponent length", "float keyword [C]", "mantissas, length", "floating-point numbers, float type", "ranges, floating-point types", "floating-point numbers, variables", "lengths, mantissa", "double data type, type float", "IEEE floating-point representation", "lengths, exponent"]
@@ -63,6 +64,6 @@ In the following example (which uses the declarations from the preceding example
 f_longer = f_short * f_short;
 ```
 
-## See Also
+## See also
 
 [Storage of Basic Types](../c-language/storage-of-basic-types.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CSacl Class"
 title: "CSacl Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CSacl", "ATLSECURITY/ATL::CSacl", "ATLSECURITY/ATL::CSacl::CSacl", "ATLSECURITY/ATL::CSacl::AddAuditAce", "ATLSECURITY/ATL::CSacl::GetAceCount", "ATLSECURITY/ATL::CSacl::RemoveAce", "ATLSECURITY/ATL::CSacl::RemoveAllAces"]
@@ -10,7 +11,7 @@ ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
 This class is a wrapper for a SACL (system access-control list) structure.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -50,7 +51,7 @@ To set or retrieve the SACL in an object's security descriptor, the SE_SECURITY_
 
 Use the class methods provided to add, remove, create, and delete ACEs from the `SACL` object. See also [AtlGetSacl](security-global-functions.md#atlgetsacl) and [AtlSetSacl](security-global-functions.md#atlsetsacl).
 
-For an introduction to the access control model in Windows, see [Access Control](/windows/desktop/SecAuthZ/access-control) in the Windows SDK.
+For an introduction to the access control model in Windows, see [Access Control](/windows/win32/SecAuthZ/access-control) in the Windows SDK.
 
 ## Inheritance Hierarchy
 
@@ -62,7 +63,7 @@ For an introduction to the access control model in Windows, see [Access Control]
 
 **Header:** atlsecurity.h
 
-##  <a name="addauditace"></a>  CSacl::AddAuditAce
+## <a name="addauditace"></a> CSacl::AddAuditAce
 
 Adds an audit access-control entry (ACE) to the `CSacl` object.
 
@@ -115,9 +116,9 @@ Returns TRUE if the ACE is added to the `CSacl` object, FALSE on failure.
 
 A `CSacl` object contains access-control entries (ACEs) that specify the types of access attempts that generate audit records in the security event log. This method adds such an ACE to the `CSacl` object.
 
-See [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) for a description of the various flags which can be set in the *AceFlags* parameter.
+See [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) for a description of the various flags which can be set in the *AceFlags* parameter.
 
-##  <a name="csacl"></a>  CSacl::CSacl
+## <a name="csacl"></a> CSacl::CSacl
 
 The constructor.
 
@@ -135,7 +136,7 @@ An existing `ACL` (access-control list) structure.
 
 The `CSacl` object can be optionally created using an existing `ACL` structure. Ensure that this parameter is a system access-control list (SACL) and not a discretionary access-control list (DACL). In debug builds, if a DACL is supplied an assertion will occur. In release builds any entries from a DACL are ignored.
 
-##  <a name="dtor"></a>  CSacl::~CSacl
+## <a name="dtor"></a> CSacl::~CSacl
 
 The destructor.
 
@@ -147,7 +148,7 @@ The destructor.
 
 The destructor frees any resources acquired by the object, including all access-control entries (ACEs).
 
-##  <a name="getacecount"></a>  CSacl::GetAceCount
+## <a name="getacecount"></a> CSacl::GetAceCount
 
 Returns the number of access-control entries (ACEs) in the `CSacl` object.
 
@@ -159,7 +160,7 @@ UINT GetAceCount() const throw();
 
 Returns the number of ACEs contained in the `CSacl` object.
 
-##  <a name="operator_eq"></a>  CSacl::operator =
+## <a name="operator_eq"></a> CSacl::operator =
 
 Assignment operator.
 
@@ -176,11 +177,11 @@ The `ACL` (access-control list) to assign to the existing object.
 
 Returns a reference to the updated `CSacl` object. Ensure that the `ACL` parameter is actually a system access-control list (SACL) and not a discretionary access-control list (DACL). In debug builds an assertion will occur, and in release builds the `ACL` parameter will be ignored.
 
-##  <a name="removeace"></a>  CSacl::RemoveAce
+## <a name="removeace"></a> CSacl::RemoveAce
 
 Removes a specific ACE (access-control entry) from the `CSacl` object.
 
-```
+```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
@@ -193,11 +194,11 @@ Index to the ACE entry to remove.
 
 This method is derived from [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).
 
-##  <a name="removeallaces"></a>  CSacl::RemoveAllAces
+## <a name="removeallaces"></a> CSacl::RemoveAllAces
 
 Removes all of the access-control entries (ACEs) contained in the `CSacl` object.
 
-```
+```cpp
 void RemoveAllAces() throw();
 ```
 
@@ -205,10 +206,10 @@ void RemoveAllAces() throw();
 
 Removes every `ACE` structure (if any) in the `CSacl` object.
 
-## See Also
+## See also
 
 [CAcl Class](../../atl/reference/cacl-class.md)<br/>
-[ACLs](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[ACEs](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[ACLs](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[ACEs](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [Class Overview](../../atl/atl-class-overview.md)<br/>
 [Security Global Functions](../../atl/reference/security-global-functions.md)

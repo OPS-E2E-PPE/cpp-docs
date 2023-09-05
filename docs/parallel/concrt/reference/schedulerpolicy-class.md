@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: SchedulerPolicy Class"
 title: "SchedulerPolicy Class"
 ms.date: "11/04/2016"
 f1_keywords: ["SchedulerPolicy", "concrt/concurrency::SchedulerPolicy", "concrt/concurrency::SchedulerPolicy::SchedulerPolicy", "concrt/concurrency::SchedulerPolicy::GetPolicyValue", "concrt/concurrency::SchedulerPolicy::SetConcurrencyLimits", "concrt/concurrency::SchedulerPolicy::SetPolicyValue"]
@@ -11,7 +12,7 @@ The `SchedulerPolicy` class contains a set of key/value pairs, one for each poli
 
 ## Syntax
 
-```
+```cpp
 class SchedulerPolicy;
 ```
 
@@ -52,11 +53,11 @@ For more information about the policies which can be controlled using the `Sched
 
 **Namespace:** concurrency
 
-##  <a name="getpolicyvalue"></a> GetPolicyValue
+## <a name="getpolicyvalue"></a> GetPolicyValue
 
 Retrieves the value of the policy key supplied as the `key` parameter.
 
-```
+```cpp
 unsigned int GetPolicyValue(PolicyElementKey key) const;
 ```
 
@@ -67,17 +68,17 @@ The policy key to retrieve a value for.
 
 ### Return Value
 
-If the key specified by the `key` parameter is supported, the policy value for the key cast to an `unsigned int`.
+If the key specified by the `key` parameter is supported, the policy value for the key cast to an **`unsigned int`**.
 
 ### Remarks
 
 The method will throw [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) for an invalid policy key.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a> operator=
 
 Assigns the scheduler policy from another scheduler policy.
 
-```
+```cpp
 SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ```
 
@@ -94,11 +95,11 @@ A reference to the scheduler policy.
 
 Often, the most convenient way to define a new scheduler policy is to copy an existing policy and modify it using the `SetPolicyValue` or `SetConcurrencyLimits` methods.
 
-##  <a name="ctor"></a> SchedulerPolicy
+## <a name="ctor"></a> SchedulerPolicy
 
 Constructs a new scheduler policy and populates it with values for [policy keys](concurrency-namespace-enums.md) supported by Concurrency Runtime schedulers and the Resource Manager.
 
-```
+```cpp
 SchedulerPolicy();
 
 SchedulerPolicy(
@@ -125,19 +126,19 @@ The second constructor creates a new scheduler policy that uses a named-paramete
 
 The third constructor is a copy constructor. Often, the most convenient way to define a new scheduler policy is to copy an existing policy and modify it using the `SetPolicyValue` or `SetConcurrencyLimits` methods.
 
-##  <a name="dtor"></a> ~SchedulerPolicy
+## <a name="dtor"></a> ~SchedulerPolicy
 
 Destroys a scheduler policy.
 
-```
+```cpp
 ~SchedulerPolicy();
 ```
 
-##  <a name="setconcurrencylimits"></a> SetConcurrencyLimits
+## <a name="setconcurrencylimits"></a> SetConcurrencyLimits
 
 Simultaneously sets the `MinConcurrency` and `MaxConcurrency` policies on the `SchedulerPolicy` object.
 
-```
+```cpp
 void SetConcurrencyLimits(
     unsigned int _MinConcurrency,
     unsigned int _MaxConcurrency = MaxExecutionResources);
@@ -157,11 +158,11 @@ The method will throw [invalid_scheduler_policy_thread_specification](invalid-sc
 
 The method can also throw [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) for other invalid values.
 
-##  <a name="setpolicyvalue"></a> SetPolicyValue
+## <a name="setpolicyvalue"></a> SetPolicyValue
 
 Sets the value of the policy key supplied as the `key` parameter and returns the old value.
 
-```
+```cpp
 unsigned int SetPolicyValue(
     PolicyElementKey key,
     unsigned int value);
@@ -177,7 +178,7 @@ The value to set the policy key to.
 
 ### Return Value
 
-If the key specified by the `key` parameter is supported, the old policy value for the key cast to an `unsigned int`.
+If the key specified by the `key` parameter is supported, the old policy value for the key cast to an **`unsigned int`**.
 
 ### Remarks
 
@@ -187,11 +188,10 @@ The method will throw [invalid_scheduler_policy_value](invalid-scheduler-policy-
 
 Note that this method is not allowed to set the `MinConcurrency` or `MaxConcurrency` policies. To set these values, use the [SetConcurrencyLimits](#setconcurrencylimits) method.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [CurrentScheduler Class](currentscheduler-class.md)<br/>
 [Scheduler Class](scheduler-class.md)<br/>
 [Task Scheduler](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

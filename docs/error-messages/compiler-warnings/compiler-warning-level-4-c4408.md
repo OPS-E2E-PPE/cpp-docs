@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 4) C4408"
 title: "Compiler Warning (level 4) C4408"
 ms.date: "11/04/2016"
 f1_keywords: ["C4408"]
@@ -13,7 +14,7 @@ An anonymous struct or union must have at least one data member.
 
 The following sample generates C4408:
 
-```
+```cpp
 // C4408.cpp
 // compile with: /W4 /LD
 static union

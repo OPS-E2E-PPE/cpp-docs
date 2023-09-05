@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4674"
 title: "Compiler Warning (level 1) C4674"
 ms.date: "11/04/2016"
 f1_keywords: ["C4674"]
@@ -15,7 +16,7 @@ The signature of a conversion operator was not correct. The method is not consid
 
 The following sample generates C4674.
 
-```
+```cpp
 // C4674.cpp
 // compile with: /clr /WX /W1 /LD
 ref class G {

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CAtlAutoThreadModuleT Class"
 title: "CAtlAutoThreadModuleT Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAtlAutoThreadModuleT", "ATLBASE/ATL::CAtlAutoThreadModuleT", "ATLBASE/ATL::CAtlAutoThreadModuleT::GetDefaultThreads"]
@@ -10,18 +11,18 @@ ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
 This class provides methods for implementing a thread-pooled, apartment-model COM server.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
-```
+```cpp
 template <class T,
          class ThreadAllocator = CComSimpleThreadAllocator,
          DWORD dwWait = INFINITE>
 class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```
 
-#### Parameters
+### Parameters
 
 *T*<br/>
 The class which will implement the COM server.
@@ -45,7 +46,7 @@ Specifies the time-out interval, in milliseconds. The default is INFINITE, which
 The class [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) derives from `CAtlAutoThreadModuleT` in order to implement a thread-pooled, apartment-model COM server. It replaces the obsolete class [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
 
 > [!NOTE]
->  This class should not be used in a DLL, as the default *dwWait* value of INFINITE will cause a deadlock when the DLL is unloaded.
+> This class should not be used in a DLL, as the default *dwWait* value of INFINITE will cause a deadlock when the DLL is unloaded.
 
 ## Inheritance Hierarchy
 
@@ -57,11 +58,11 @@ The class [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.
 
 **Header:** atlbase.h
 
-##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads
+## <a name="getdefaultthreads"></a> CAtlAutoThreadModuleT::GetDefaultThreads
 
 This static function dynamically calculates and returns the maximum number of threads for the EXE module, based on the number of processors.
 
-```
+```cpp
 static int GetDefaultThreads();
 ```
 
@@ -73,7 +74,7 @@ The number of threads to be created in the EXE module.
 
 Override this method if you want to use a different method for calculating the number of threads. By default, the number of threads is based on the number of processors.
 
-## See Also
+## See also
 
 [IAtlAutoThreadModule Class](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)<br/>

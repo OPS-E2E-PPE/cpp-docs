@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Double Thunking (C++)"
 title: "Double Thunking (C++)"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["double thunks", "interop [C++], double thunking", "mixed assemblies [C++], double thunking", "/clr compiler option [C++], double thunking", "interoperability [C++], double thunking"]
@@ -16,9 +17,9 @@ One resolution is to tell the compiler not to generate a native entry point for 
 
 Similarly, if you export ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) a managed function, a native entry point is generated and any function that imports and calls that function will call through the native entry point. To avoid double thunking in this situation, do not use native export/import semantics; simply reference the metadata via `#using` (see [#using Directive](../preprocessor/hash-using-directive-cpp.md)).
 
-The compiler has been updated to reduce unnecessary double thunking. For example, any function with a managed type in the signature (including return type) will implicitly be marked as `__clrcall`. For more information on double thunk elimination, see [https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx](https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).
+The compiler has been updated to reduce unnecessary double thunking. For example, any function with a managed type in the signature (including return type) will implicitly be marked as `__clrcall`.
 
-## Example
+## Example: Double thunking
 
 ### Description
 
@@ -26,7 +27,7 @@ The following sample demonstrates double thunking. When compiled native (without
 
 ### Code
 
-```
+```cpp
 // double_thunking.cpp
 // compile with: /clr
 #include <stdio.h>
@@ -76,15 +77,15 @@ after calling struct S
 __thiscall T::~T(void)
 ```
 
-## Example
+## Example: Effect of double thunking
 
 ### Description
 
-The previous sample demonstrated the existence of double thunking. This sample shows its effect. The `for` loop calls the virtual function and the program reports execution time. The slowest time is reported when the program is compiled with **/clr**. The fastest times are reported when compiling without **/clr** or if the virtual function is declared with `__clrcall`.
+The previous sample demonstrated the existence of double thunking. This sample shows its effect. The **`for`** loop calls the virtual function and the program reports execution time. The slowest time is reported when the program is compiled with **/clr**. The fastest times are reported when compiling without **/clr** or if the virtual function is declared with `__clrcall`.
 
 ### Code
 
-```
+```cpp
 // double_thunking_2.cpp
 // compile with: /clr
 #include <time.h>
@@ -126,6 +127,6 @@ int main() {
 after calling struct S
 ```
 
-## See Also
+## See also
 
 [Mixed (Native and Managed) Assemblies](../dotnet/mixed-native-and-managed-assemblies.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Limits on Floating-Point Constants"
 title: "Limits on Floating-Point Constants"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ranges, floating-point constants", "floating-point constants, limits", "FLOAT.H header file", "constants, floating-point", "limits, floating-point constants", "floating-point numbers, floating limits"]
@@ -32,6 +33,6 @@ Note that the information in the above table may differ in future implementation
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
 [C Floating-Point Constants](../c-language/c-floating-point-constants.md)

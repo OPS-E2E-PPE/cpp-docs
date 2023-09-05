@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: /MIDL (Specify MIDL Command Line Options)"
 title: "/MIDL (Specify MIDL Command Line Options)"
 ms.date: "09/05/2018"
 f1_keywords: ["/midl", "VC.Project.VCLinkerTool.MidlCommandFile"]
@@ -16,7 +17,7 @@ Specifies a response file for MIDL command line options
 ## Arguments
 
 *file*<br/>
-The name of the file that contains [MIDL command line options](/windows/desktop/Midl/general-midl-command-line-syntax).
+The name of the file that contains [MIDL command line options](/windows/win32/Midl/general-midl-command-line-syntax).
 
 ## Remarks
 
@@ -26,7 +27,7 @@ The file should contain one MIDL command-line option per line.
 
 ### To set this linker option in the Visual Studio development environment
 
-1. Open the project's **Property Pages** dialog box. For details, see [Setting Visual C++ Project Properties](../../ide/working-with-project-properties.md).
+1. Open the project's **Property Pages** dialog box. For details, see [Set C++ compiler and build properties in Visual Studio](../working-with-project-properties.md).
 
 1. Select the **Configuration Properties** > **Linker** > **Embedded IDL** property page.
 
@@ -36,11 +37,11 @@ The file should contain one MIDL command-line option per line.
 
 - See <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile%2A>.
 
-## See Also
+## See also
 
-[Setting Linker Options](../../build/reference/setting-linker-options.md)<br/>
-[Linker Options](../../build/reference/linker-options.md)<br/>
-[/IDLOUT (Name MIDL Output Files)](../../build/reference/idlout-name-midl-output-files.md)<br/>
-[/IGNOREIDL (Don't Process Attributes into MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/TLBOUT (Name .TLB File)](../../build/reference/tlbout-name-dot-tlb-file.md)<br/>
-[Building an Attributed Program](../../windows/building-an-attributed-program.md)
+[MSVC linker reference](linking.md)<br/>
+[MSVC Linker Options](linker-options.md)<br/>
+[/IDLOUT (Name MIDL Output Files)](idlout-name-midl-output-files.md)<br/>
+[/IGNOREIDL (Don't Process Attributes into MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/TLBOUT (Name .TLB File)](tlbout-name-dot-tlb-file.md)<br/>
+[Building an Attributed Program](../../windows/attributes/cpp-attributes-com-net.md)

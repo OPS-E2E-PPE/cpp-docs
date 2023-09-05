@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2846"
 title: "Compiler Error C2846"
 ms.date: "11/04/2016"
 f1_keywords: ["C2846"]
@@ -13,7 +14,7 @@ A Visual C++ [interface](../../cpp/interface.md) cannot have a constructor.
 
 The following sample generates C2846:
 
-```
+```cpp
 // C2846.cpp
 // compile with: /c
 __interface C {

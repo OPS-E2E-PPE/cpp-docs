@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: add_lvalue_reference Class"
 title: "add_lvalue_reference Class"
 ms.date: "11/04/2016"
 f1_keywords: ["type_traits/std::add_lvalue_reference"]
@@ -21,7 +22,7 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 
 ### Parameters
 
-*T*<br/>
+*T*\
 The type to modify.
 
 ## Remarks
@@ -59,5 +60,5 @@ add_lvalue_reference_t<int> == int
 
 ## See also
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_reference Class](../standard-library/remove-reference-class.md)<br/>
+[<type_traits>](type-traits.md)\
+[remove_reference Class](remove-reference-class.md)

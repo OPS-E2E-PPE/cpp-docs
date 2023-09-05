@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: mersenne_twister_engine Class"
 title: "mersenne_twister_engine Class"
 ms.date: "11/04/2016"
 f1_keywords: ["random/std::mersenne_twister_engine"]
@@ -21,39 +22,41 @@ class mersenne_twister_engine;
 
 ### Parameters
 
-*UIntType*<br/>
+*UIntType*\
 The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).
 
-*W*<br/>
+*W*\
 **Word size**. Size of each word, in bits, of the state sequence. **Precondition**: `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N*<br/>
+*N*\
 **State size**. The number of elements (values) in the state sequence.
 
-*M*<br/>
+*M*\
 **Shift size**. The number of elements to skip during each twist. **Precondition**: `0 < M ≤ N`
 
-*R*<br/>
+*R*\
 **Mask bits**. **Precondition**: `R ≤ W`
 
-*A*<br/>
+*A*\
 **XOR mask**. **Precondition**: `A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L*<br/>
+*U*, *S*, *T*, *L*\
 **Tempering shift parameters**. Used as shift values during scrambling (tempering). Precondition: `U,S,T,L ≤ W`
 
-*D*, *B*, *C*<br/>
+*D*, *B*, *C*\
 **Tempering bit mask parameters**. Used as bit mask values during scrambling (tempering). Precondition: `D,B,C ≤ (1u<<W) - 1u`
 
-*F*<br/>
+*F*\
 **Initialization multiplier**. Used to help with initialization of the sequence. Precondition: `F ≤ (1u<<W) - 1u`
 
 ## Members
 
-||||
-|-|-|-|
-|`mersenne_twister_engine::mersenne_twister_engine`|`mersenne_twister_engine::min`|`mersenne_twister_engine::discard`|
-|`mersenne_twister_engine::operator()`|`mersenne_twister_engine::max`|`mersenne_twister_engine::seed`|
+`mersenne_twister_engine::mersenne_twister_engine`\
+`mersenne_twister_engine::discard`\
+`mersenne_twister_engine::max`\
+`mersenne_twister_engine::min`\
+`mersenne_twister_engine::operator()`\
+`mersenne_twister_engine::seed`
 
 `default_seed` is a member constant, defined as `5489u`, used as the default parameter value for `mersenne_twister_engine::seed` and the single value constructor.
 
@@ -61,7 +64,7 @@ For more information about engine members, see [\<random>](../standard-library/r
 
 ## Remarks
 
-This template class describes a random number engine, returning values on the closed interval [ `0`, `2`<sup>W</sup> - `1`]. It holds a large integral value with `W * (N - 1) + R` bits. It extracts *W* bits at a time from this large value, and when it has used all the bits it twists the large value by shifting and mixing the bits so that it has a new set of bits to extract from. The engine's state is the last `N` `W`-bit values used if `operator()` has been called at least *N* times, otherwise the `M` `W`-bit values that have been used and the last `N - M` values of the seed.
+This class template describes a random number engine, returning values on the closed interval [ `0`, `2`<sup>W</sup> - `1`]. It holds a large integral value with `W * (N - 1) + R` bits. It extracts *W* bits at a time from this large value, and when it has used all the bits it twists the large value by shifting and mixing the bits so that it has a new set of bits to extract from. The engine's state is the last `N` `W`-bit values used if `operator()` has been called at least *N* times, otherwise the `M` `W`-bit values that have been used and the last `N - M` values of the seed.
 
 The generator twists the large value that it holds by using a twisted generalized feedback shift register defined by shift values *N* and *M*, a twist value *R*, and a conditional XOR-mask *A*. Additionally, the bits of the raw shift register are scrambled (tempered) according to a bit-scrambling matrix defined by values *U*, *D*, *S*, *B*, *T*, *C*, and *L*.
 
@@ -91,7 +94,7 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;
 ```
 
-For detailed information about the Mersenne twister algorithm, see the Wikipedia article [Mersenne twister](http://go.microsoft.com/fwlink/p/?linkid=402356).
+For detailed information about the Mersenne twister algorithm, see the Wikipedia article [Mersenne twister](https://go.microsoft.com/fwlink/p/?linkid=402356).
 
 ## Example
 
@@ -105,4 +108,4 @@ For a code example, see [\<random>](../standard-library/random.md).
 
 ## See also
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

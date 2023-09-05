@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: How to: Detect /clr Compilation"
 title: "How to: Detect -clr Compilation"
 ms.custom: "get-started-article"
 ms.date: "11/04/2016"
@@ -13,7 +14,7 @@ For more information about macros, see [Predefined Macros](../preprocessor/prede
 
 ## Example
 
-```
+```cpp
 // detect_CLR_compilation.cpp
 // compile with: /clr
 #include <stdio.h>
@@ -27,6 +28,6 @@ int main() {
 }
 ```
 
-## See Also
+## See also
 
 [Using C++ Interop (Implicit PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

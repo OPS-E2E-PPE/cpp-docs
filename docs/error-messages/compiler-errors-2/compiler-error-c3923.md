@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3923"
 title: "Compiler Error C3923"
 ms.date: "11/04/2016"
 f1_keywords: ["C3923"]
@@ -13,7 +14,7 @@ ms.assetid: db8838e9-6344-4cd6-83e0-a8abeb12c4c0
 
 The following sample generates C3923.
 
-```
+```cpp
 // C3923.cpp
 // compile with: /clr /c
 ref struct x {

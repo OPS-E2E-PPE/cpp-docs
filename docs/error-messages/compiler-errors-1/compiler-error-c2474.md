@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2474"
 title: "Compiler Error C2474"
 ms.date: "11/04/2016"
 f1_keywords: ["C2474"]
@@ -15,7 +16,7 @@ The compiler expected to find a semicolon, and was unable to determine your inte
 
 The following sample generates C2474.
 
-```
+```cpp
 // C2474.cpp
 // compile with: /clr /c
 

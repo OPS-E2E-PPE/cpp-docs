@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CKeyboardManager Class"
 title: "CKeyboardManager Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CKeyboardManager", "AFXKEYBOARDMANAGER/CKeyboardManager", "AFXKEYBOARDMANAGER/CKeyboardManager::CKeyboardManager", "AFXKEYBOARDMANAGER/CKeyboardManager::CleanUp", "AFXKEYBOARDMANAGER/CKeyboardManager::FindDefaultAccelerator", "AFXKEYBOARDMANAGER/CKeyboardManager::IsKeyHandled", "AFXKEYBOARDMANAGER/CKeyboardManager::IsKeyPrintable", "AFXKEYBOARDMANAGER/CKeyboardManager::IsShowAllAccelerators", "AFXKEYBOARDMANAGER/CKeyboardManager::LoadState", "AFXKEYBOARDMANAGER/CKeyboardManager::ResetAll", "AFXKEYBOARDMANAGER/CKeyboardManager::SaveState", "AFXKEYBOARDMANAGER/CKeyboardManager::ShowAllAccelerators", "AFXKEYBOARDMANAGER/CKeyboardManager::TranslateCharToUpper", "AFXKEYBOARDMANAGER/CKeyboardManager::UpdateAccelTable"]
@@ -19,16 +20,14 @@ class CKeyboardManager : public CObject
 
 ### Public Constructors
 
-|||
-|-|-|
 |Name|Description|
+|-|-|
 |[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Constructs a `CKeyboardManager` object.|
 
 ### Public Methods
 
-|||
-|-|-|
 |Name|Description|
+|-|-|
 |[CKeyboardManager::CleanUp](#cleanup)|Clears the shortcut key tables.|
 |[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Retrieves the default shortcut key for the specified command and window.|
 |[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Determines whether a key is handled by the accelerator table.|
@@ -49,7 +48,7 @@ You should not create a `CKeyboardManager` object manually. It will be created a
 
 ## Example
 
-The following example demonstrates how to retrieve a pointer to a `CKeyboardManager` object from a `CWinAppEx` class, and how to show all the shortcut keys associated with menu commands. This code snippet is part of the [Custom Pages sample](../../visual-cpp-samples.md).
+The following example demonstrates how to retrieve a pointer to a `CKeyboardManager` object from a `CWinAppEx` class, and how to show all the shortcut keys associated with menu commands. This code snippet is part of the [Custom Pages sample](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 
@@ -63,7 +62,7 @@ The following example demonstrates how to retrieve a pointer to a `CKeyboardMana
 
 **Header:** afxkeyboardmanager.h
 
-##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager
+## <a name="ckeyboardmanager"></a> CKeyboardManager::CKeyboardManager
 
 Constructs a `CKeyboardManager` object.
 
@@ -75,7 +74,7 @@ CKeyboardManager();
 
 In most cases, you do not have to create a `CKeyboardManager` directly. By default, the framework creates one for you. To get a pointer to the `CKeyboardManager`, call [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). If you do create one manually, you must initialize it with the method [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).
 
-##  <a name="cleanup"></a>  CKeyboardManager::CleanUp
+## <a name="cleanup"></a> CKeyboardManager::CleanUp
 
 Frees the `CKeyboardManager` resources and clears all shortcut key mappings.
 
@@ -89,7 +88,7 @@ For more information about shortcut keys, see [Keyboard and Mouse Customization]
 
 You do not have to call this function when your application exits because the framework calls it automatically during application exit.
 
-##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator
+## <a name="finddefaultaccelerator"></a> CKeyboardManager::FindDefaultAccelerator
 
 Retrieves the default shortcut key for the specified command and window.
 
@@ -123,7 +122,7 @@ Nonzero if the shortcut is found; otherwise 0.
 
 This method looks up the command specified by *uiCmd* and retrieves the default shortcut key. Then the method takes the string associated with this shortcut key and writes the value to the *str* parameter.
 
-##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled
+## <a name="iskeyhandled"></a> CKeyboardManager::IsKeyHandled
 
 Determines whether the specified key is handled by the [CKeyboardManager Class](../../mfc/reference/ckeyboardmanager-class.md).
 
@@ -137,13 +136,17 @@ static BOOL __stdcall IsKeyHandled(
 
 ### Parameters
 
-|||
-|-|-|
-|Parameter|Description|
-|*nKey*|[in] The key to check.|
-|*fVirt*|[in] Specifies the behavior of the shortcut key. For a list of possible values, see [ACCEL Structure](/windows/desktop/api/winuser/ns-winuser-tagaccel).|
-|*pWndFrame*|[in] A frame window. This method determines whether a shortcut key is handled in this frame.|
-|*bIsDefaultFrame*|[in] A Boolean parameter that indicates whether *pWndFrame* is the default frame window.|
+*nKey*\
+[in] The key to check.
+
+*fVirt*\
+[in] Specifies the behavior of the shortcut key. For a list of possible values, see [ACCEL Structure](/windows/win32/api/winuser/ns-winuser-accel).
+
+*pWndFrame*\
+[in] A frame window. This method determines whether a shortcut key is handled in this frame.
+
+*bIsDefaultFrame*\
+[in] A Boolean parameter that indicates whether *pWndFrame* is the default frame window.
 
 ### Return Value
 
@@ -153,7 +156,7 @@ TRUE if the shortcut key is handled. FALSE if the key is not handled or if *pWnd
 
 The input parameters must match the entry in the accelerator table both for *nKey* and *fVirt* to determine whether a shortcut key is handled in *pWndFrame*.
 
-##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable
+## <a name="iskeyprintable"></a> CKeyboardManager::IsKeyPrintable
 
 Indicates whether a character is printable.
 
@@ -163,10 +166,8 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 
 ### Parameters
 
-|||
-|-|-|
-|Parameter|Description|
-|*nChar*|[in] The character that this method checks.|
+*nChar*\
+[in] The character that this method checks.
 
 ### Return Value
 
@@ -174,9 +175,9 @@ Nonzero if the character is printable, zero if it is not.
 
 ### Remarks
 
-This method fails if a call to [GetKeyboardState](/windows/desktop/api/winuser/nf-winuser-getkeyboardstate) fails.
+This method fails if a call to [GetKeyboardState](/windows/win32/api/winuser/nf-winuser-getkeyboardstate) fails.
 
-##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators
+## <a name="isshowallaccelerators"></a> CKeyboardManager::IsShowAllAccelerators
 
 Indicates whether menus show all the shortcut keys associated with menu commands or only the default shortcut keys.
 
@@ -192,7 +193,7 @@ Nonzero if the application lists all the shortcut keys for menu commands; 0 if t
 
 The application lists the shortcut keys for menu commands in the menu bar. Use the function [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) to control whether the application lists all the shortcut keys or just the default shortcut keys.
 
-##  <a name="loadstate"></a>  CKeyboardManager::LoadState
+## <a name="loadstate"></a> CKeyboardManager::LoadState
 
 Loads the shortcut key tables from the Windows registry.
 
@@ -220,11 +221,11 @@ If the *lpszProfileName* parameter is NULL, this method checks the default regis
 
 If you do not specify a default window, the main frame window of your application will be used.
 
-##  <a name="resetall"></a>  CKeyboardManager::ResetAll
+## <a name="resetall"></a> CKeyboardManager::ResetAll
 
 Reloads the shortcut key tables from the application resource.
 
-```
+```cpp
 void ResetAll();
 ```
 
@@ -232,7 +233,7 @@ void ResetAll();
 
 This function clears the shortcuts stored in the `CKeyboardManager` instance. It will then reload the state of the keyboard manager from the application resource.
 
-##  <a name="savestate"></a>  CKeyboardManager::SaveState
+## <a name="savestate"></a> CKeyboardManager::SaveState
 
 Saves the shortcut key tables to the Windows registry.
 
@@ -260,7 +261,7 @@ If the *lpszProfileName* parameter is NULL, this method will write the `CKeyboar
 
 If you do not specify a default window, the main frame window will be used as the default window.
 
-##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators
+## <a name="showallaccelerators"></a> CKeyboardManager::ShowAllAccelerators
 
 Shows all the shortcut keys associated with menu commands.
 
@@ -284,7 +285,7 @@ By default, if a command has more than one shortcut key associated with it, only
 
 The shortcut keys will be listed next to the command in the menu bar. If all the shortcut keys are displayed, the string provided by *lpszDelimiter* will separate individual shortcut keys.
 
-##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper
+## <a name="translatechartoupper"></a> CKeyboardManager::TranslateCharToUpper
 
 Converts a character to its upper register.
 
@@ -301,7 +302,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 
 The character that is the upper register of the input parameter.
 
-##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable
+## <a name="updateacceltable"></a> CKeyboardManager::UpdateAccelTable
 
 Updates a shortcut key table with a new shortcut key table.
 
@@ -343,11 +344,10 @@ Nonzero if the method is successful; otherwise 0.
 
 Use this function to replace the existing shortcut table with new shortcut keys for several frame window objects. The function receives a document template as a parameter to obtain access to all frame window objects connected to the given document template.
 
-## See Also
+## See also
 
 [Hierarchy Chart](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [Keyboard and Mouse Customization](../../mfc/keyboard-and-mouse-customization.md)
-

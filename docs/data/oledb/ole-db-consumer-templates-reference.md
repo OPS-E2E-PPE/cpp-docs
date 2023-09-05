@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: OLE DB Consumer Templates Reference"
 title: "OLE DB Consumer Templates Reference"
 ms.date: "11/04/2016"
-f1_keywords: ["vc-attr.db_param", "vc-attr.db_column", "vc-attr.db_accessor", "vc-attr.db_command", "vc-attr.db_table", "vc.templates.ole", "vc-attr.db_source"]
 helpviewer_keywords: ["OLE DB consumer templates, classes"]
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
 ---
@@ -126,7 +126,7 @@ Used as an index for accessing data in a rowset.
 [CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)<br/>
 Used to retrieve OLE DB error information.
 
-## See Also
+## See also
 
 [OLE DB Provider Templates Reference](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [OLE DB Templates](../../data/oledb/ole-db-templates.md)

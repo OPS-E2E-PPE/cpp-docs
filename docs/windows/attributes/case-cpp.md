@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: case (C++)"
 title: "case  (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.case"]
@@ -7,7 +8,7 @@ ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
 ---
 # case (C++)
 
-Used with the [switch_type](switch-type.md) attribute in a **union**.
+Used with the [switch_type](switch-type.md) attribute in a **`union`**.
 
 ## Syntax
 
@@ -20,13 +21,13 @@ Used with the [switch_type](switch-type.md) attribute in a **union**.
 *value*<br/>
 A possible input value for which you want to provide processing. The type of **value** can be one of the following types:
 
-- `int`
+- **`int`**
 
-- `char`
+- **`char`**
 
 - `boolean`
 
-- `enum`
+- **`enum`**
 
 or an identifier of such a type.
 
@@ -57,18 +58,16 @@ struct SizedValue2 {
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
-|**Applies to**|Member of a **class** or **struct**|
+|**Applies to**|Member of a **`class`** or **`struct`**|
 |**Repeatable**|No|
 |**Required attributes**|None|
 |**Invalid attributes**|None|
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Typedef, Enum, Union, and Struct Attributes](typedef-enum-union-and-struct-attributes.md)<br/>

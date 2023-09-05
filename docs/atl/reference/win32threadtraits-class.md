@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Win32ThreadTraits Class"
 title: "Win32ThreadTraits Class"
 ms.date: "11/04/2016"
 f1_keywords: ["Win32ThreadTraits", "ATLBASE/ATL::Win32ThreadTraits", "ATLBASE/ATL::Win32ThreadTraits::CreateThread"]
@@ -10,7 +11,7 @@ ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
 This class provides the creation function for a Windows thread. Use this class if the thread will not use CRT functions.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -28,7 +29,7 @@ class Win32ThreadTraits
 
 ## Remarks
 
-Thread traits are classes that provide a creation function for a particular type of thread. The creation function has the same signature and semantics as the Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) function.
+Thread traits are classes that provide a creation function for a particular type of thread. The creation function has the same signature and semantics as the Windows [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) function.
 
 Thread traits are used by the following classes:
 
@@ -42,7 +43,7 @@ If the thread will be using CRT functions, use [CRTThreadTraits](../../atl/refer
 
 **Header:** atlbase.h
 
-##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread
+## <a name="createthread"></a> Win32ThreadTraits::CreateThread
 
 Call this function to create a thread that should not use CRT functions.
 
@@ -78,14 +79,14 @@ The creation flags (0 or CREATE_SUSPENDED).
 
 ### Return Value
 
-Returns the handle to the newly created thread or NULL on failure. Call [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) to get extended error information.
+Returns the handle to the newly created thread or NULL on failure. Call [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) to get extended error information.
 
 ### Remarks
 
-See [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) for further information on the parameters to this function.
+See [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) for further information on the parameters to this function.
 
 This function calls `CreateThread` to create the thread.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

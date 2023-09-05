@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: /TLS"
 title: "/TLS"
 ms.date: "11/04/2016"
 f1_keywords: ["/TLS"]
@@ -17,6 +18,6 @@ If a program does not use thread local storage, its image will not contain a TLS
 
 IMAGE_TLS_DIRECTORY is defined in winnt.h.
 
-## See Also
+## See also
 
-[DUMPBIN Options](../../build/reference/dumpbin-options.md)
+[DUMPBIN Options](dumpbin-options.md)

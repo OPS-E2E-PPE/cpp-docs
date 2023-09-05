@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: hash Class"
 title: "hash Class"
 ms.date: "11/04/2016"
-f1_keywords: ["functional/std::hash", "bitset/std::hash", "memory/std::hash", "string/std::hash", "system_error/std::hash", "thread/std::hash", "typeindex/std::hash", "vector/std::hash", "XSTDDEF/std::hash", "xstring/std::hash"]
+f1_keywords: ["functional/std::hash", "bitset/std::hash", "memory/std::hash", "string/std::hash", "system_error/std::hash", "vector/std::hash", "XSTDDEF/std::hash", "xstring/std::hash"]
 helpviewer_keywords: ["std::hash [C++]", "std::hash [C++]", "std::hash [C++]", "std::hash [C++]", "std::hash [C++]", "std::hash [C++]", "std::hash [C++]", "std::hash [C++]", "std::hash [C++]"]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
 ---
@@ -20,7 +21,7 @@ struct hash {
 
 ## Remarks
 
-The function object defines a hash function, suitable for mapping values of type *Ty* to a distribution of index values. The member `operator()` returns a hash code for *val*, suitable for use with template classes `unordered_map`, `unordered_multimap`, `unordered_set`, and `unordered_multiset`. The standard library provides specializations for basic types: *Ty* may be any scalar type, including pointer types and enumeration types. In addition, there are specializations for the library types `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant`, and `vector<bool>`.
+The function object defines a hash function, suitable for mapping values of type *Ty* to a distribution of index values. The member `operator()` returns a hash code for *val*, suitable for use with class templates `unordered_map`, `unordered_multimap`, `unordered_set`, and `unordered_multiset`. The standard library provides specializations for basic types: *Ty* may be any scalar type, including pointer types and enumeration types. In addition, there are specializations for the library types `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant`, and `vector<bool>`.
 
 ## Example
 
@@ -53,7 +54,7 @@ int main()
 
 ## See also
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
-[unordered_multimap Class](../standard-library/unordered-multimap-class.md)<br/>
-[unordered_multiset Class](../standard-library/unordered-multiset-class.md)<br/>
-[<unordered_set>](../standard-library/unordered-set.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)\
+[unordered_multimap Class](../standard-library/unordered-multimap-class.md)\
+[unordered_multiset Class](../standard-library/unordered-multiset-class.md)\
+[<unordered_set>](../standard-library/unordered-set.md)

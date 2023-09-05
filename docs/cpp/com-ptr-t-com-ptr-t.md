@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: _com_ptr_t::_com_ptr_t"
 title: "_com_ptr_t::_com_ptr_t"
 ms.date: "11/04/2016"
 f1_keywords: ["_com_ptr_t::_com_ptr_t"]
@@ -13,7 +14,7 @@ Constructs a **_com_ptr_t** object.
 
 ## Syntax
 
-```
+```cpp
 // Default constructor.
 // Constructs a NULL smart pointer.
 _com_ptr_t() throw();
@@ -59,15 +60,15 @@ _com_ptr_t(
 // this smart pointer's interface type. If QueryInterface fails with
 // an E_NOINTERFACE error, a NULL smart pointer is constructed.
 explicit _com_ptr_t(
-   const CLSID& clsid, 
-   IUnknown* pOuter = NULL, 
+   const CLSID& clsid,
+   IUnknown* pOuter = NULL,
    DWORD dwClsContext = CLSCTX_ALL
 );
 
 // Calls CoCreateClass with provided CLSID retrieved from string.
 explicit _com_ptr_t(
-   LPCWSTR str, 
-   IUnknown* pOuter = NULL, 
+   LPCWSTR str,
+   IUnknown* pOuter = NULL,
    DWORD dwClsContext = CLSCTX_ALL
 );
 
@@ -84,19 +85,19 @@ explicit _com_ptr_t(
 );
 
 // Saves the interface.
-template<> 
+template<>
 _com_ptr_t(
    Interface* pInterface
 ) throw();
 
 // Make sure correct ctor is called
-template<> 
+template<>
 _com_ptr_t(
    LPSTR str
 );
 
 // Make sure correct ctor is called
-template<> 
+template<>
 _com_ptr_t(
    LPWSTR str
 );
@@ -106,7 +107,7 @@ _com_ptr_t(
 // find an interface pointer of this smart pointer's type. If
 // QueryInterface fails with an E_NOINTERFACE error, a NULL smart
 // pointer is constructed.
-template<typename _OtherIID> 
+template<typename _OtherIID>
 _com_ptr_t(
    const _com_ptr_t<_OtherIID>& p
 );
@@ -119,19 +120,19 @@ _com_ptr_t(
 
 // Disable conversion using _com_ptr_t* specialization of
 // template<typename _InterfaceType> _com_ptr_t(_InterfaceType* p)
-template<> 
+template<>
 explicit _com_ptr_t(
    _com_ptr_t* p
 );
 ```
 
-#### Parameters
+### Parameters
 
 *pInterface*<br/>
 A raw interface pointer.
 
 *fAddRef*<br/>
-If TRUE, `AddRef` is called to increment the reference count of the encapsulated interface pointer.
+If **`true`**, `AddRef` is called to increment the reference count of the encapsulated interface pointer.
 
 *cp*<br/>
 A **_com_ptr_t** object.
@@ -152,7 +153,9 @@ Context for running executable code.
 A multibyte string that holds either a `CLSID` (starting with "**{**") or a `ProgID`.
 
 *pOuter*<br/>
-The outer unknown for [aggregation](/windows/desktop/com/aggregation).
+The outer unknown for [aggregation](/windows/win32/com/aggregation).
+
+**END Microsoft Specific**
 
 ## See also
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: affinity_partitioner Class"
 title: "affinity_partitioner Class"
 ms.date: "11/04/2016"
 f1_keywords: ["affinity_partitioner", "PPL/concurrency::affinity_partitioner", "PPL/concurrency::affinity_partitioner::affinity_partitioner"]
@@ -11,7 +12,7 @@ The `affinity_partitioner` class is similar to the `static_partitioner` class, b
 
 ## Syntax
 
-```
+```cpp
 class affinity_partitioner;
 ```
 
@@ -34,22 +35,22 @@ class affinity_partitioner;
 
 **Namespace:** concurrency
 
-##  <a name="dtor"></a> ~affinity_partitioner
+## <a name="dtor"></a> ~affinity_partitioner
 
 Destroys an `affinity_partitioner` object.
 
-```
+```cpp
 ~affinity_partitioner();
 ```
 
-##  <a name="ctor"></a> affinity_partitioner
+## <a name="ctor"></a> affinity_partitioner
 
 Constructs an `affinity_partitioner` object.
 
-```
+```cpp
 affinity_partitioner();
 ```
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

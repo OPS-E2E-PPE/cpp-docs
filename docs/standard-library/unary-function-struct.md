@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: unary_function Struct"
 title: "unary_function Struct"
 ms.date: "11/04/2016"
 f1_keywords: ["functional/std::unary"]
@@ -21,7 +22,7 @@ struct unary_function
 
 ## Remarks
 
-The template struct serves as a base for classes that define a member function of the form **result_type**`operator()`( **constargument_type&**) **const**.
+The template struct serves as a base for classes that define a member function of the form `result_type operator()( constargument_type& ) const`.
 
 All such derived unary functions can refer to their sole argument type as **argument_type** and their return type as **result_type**.
 
@@ -69,19 +70,9 @@ int main()
     cout << "The number of elements in v1 greater than 10 is: "
          << result1 << "." << endl;
 }
-/* Output:
-The vector v1 = ( 0 5 10 15 20 25 )
-The number of elements in v1 greater than 10 is: 3.
-*/
 ```
 
-## Requirements
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## See also
-
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)<br/>
+```Output
+The vector v1 = ( 0 5 10 15 20 25 )
+The number of elements in v1 greater than 10 is: 3.
+```

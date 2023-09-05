@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2064"
 title: "Compiler Error C2064"
 ms.date: "11/04/2016"
 f1_keywords: ["C2064"]
@@ -13,7 +14,7 @@ A call is made to a function through an expression. The expression does not eval
 
 In this example, the code attempts to call non-functions as functions. The following sample generates C2064:
 
-```
+```cpp
 // C2064.cpp
 int i, j;
 char* p;
@@ -25,7 +26,7 @@ void func() {
 
 You must call pointers to non-static member functions from the context of an object instance. The following sample generates C2064, and shows how to fix it:
 
-```
+```cpp
 // C2064b.cpp
 struct C {
    void func1(){}
@@ -44,7 +45,7 @@ int main() {
 
 Within a class, member function pointers must also indicate the calling object context. The following sample generates C2064 and shows how to fix it:
 
-```
+```cpp
 // C2064d.cpp
 // Compile by using: cl /c /W4 C2064d.cpp
 struct C {

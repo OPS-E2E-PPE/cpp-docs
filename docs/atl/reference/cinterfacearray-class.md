@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CInterfaceArray Class"
 title: "CInterfaceArray Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CInterfaceArray", "ATLCOLL/ATL::CInterfaceArray", "ATLCOLL/ATL::CInterfaceArray::CInterfaceArray"]
@@ -50,7 +51,7 @@ For more information, see [ATL Collection Classes](../../atl/atl-collection-clas
 
 **Header:** atlcoll.h
 
-##  <a name="cinterfacearray"></a>  CInterfaceArray::CInterfaceArray
+## <a name="cinterfacearray"></a> CInterfaceArray::CInterfaceArray
 
 The constructor.
 
@@ -62,7 +63,7 @@ CInterfaceArray() throw();
 
 Initializes the smart pointer array.
 
-## See Also
+## See also
 
 [CAtlArray Class](../../atl/reference/catlarray-class.md)<br/>
 [CComQIPtr Class](../../atl/reference/ccomqiptr-class.md)<br/>

@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: LIB Output Files"
 title: "LIB Output Files"
 ms.date: "11/04/2016"
-f1_keywords: ["Lib"]
 helpviewer_keywords: ["output files, LIB"]
 ms.assetid: e73d2f9b-a42d-402b-b7e3-3a94bebb317e
 ---
@@ -15,6 +15,6 @@ The output files produced by LIB depend on the mode in which it is being used, a
 |Extracting a member with /EXTRACT|Object (.obj) file|
 |Building an export file and import library with /DEF|Import library (.lib) and export (.exp) file|
 
-## See Also
+## See also
 
-[Overview of LIB](../../build/reference/overview-of-lib.md)
+[Overview of LIB](overview-of-lib.md)

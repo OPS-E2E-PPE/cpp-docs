@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CElementTraitsBase Class"
 title: "CElementTraitsBase Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CElementTraitsBase", "ATLCOLL/ATL::CElementTraitsBase", "ATLCOLL/ATL::CElementTraitsBase::INARGTYPE", "ATLCOLL/ATL::CElementTraitsBase::OUTARGTYPE", "ATLCOLL/ATL::CElementTraitsBase::CopyElements", "ATLCOLL/ATL::CElementTraitsBase::RelocateElements"]
@@ -47,7 +48,7 @@ For more information, see [ATL Collection Classes](../../atl/atl-collection-clas
 
 **Header:** atlcoll.h
 
-##  <a name="copyelements"></a>  CElementTraitsBase::CopyElements
+## <a name="copyelements"></a> CElementTraitsBase::CopyElements
 
 Call this method to copy elements stored in a collection class object.
 
@@ -73,7 +74,7 @@ The number of elements to copy.
 
 The source and destination elements should not overlap.
 
-##  <a name="inargtype"></a>  CElementTraitsBase::INARGTYPE
+## <a name="inargtype"></a> CElementTraitsBase::INARGTYPE
 
 The data type to use for adding elements to the collection.
 
@@ -81,7 +82,7 @@ The data type to use for adding elements to the collection.
 typedef const T& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CElementTraitsBase::OUTARGTYPE
+## <a name="outargtype"></a> CElementTraitsBase::OUTARGTYPE
 
 The data type to use for retrieving elements from the collection.
 
@@ -89,7 +90,7 @@ The data type to use for retrieving elements from the collection.
 typedef T& OUTARGTYPE;
 ```
 
-##  <a name="relocateelements"></a>  CElementTraitsBase::RelocateElements
+## <a name="relocateelements"></a> CElementTraitsBase::RelocateElements
 
 Call this method to relocate elements stored in a collection class object.
 
@@ -115,6 +116,6 @@ The number of elements to relocate.
 
 This method calls [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), which is sufficient for most data types. If the objects being moved contain pointers to their own members, this method will need to be overridden.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

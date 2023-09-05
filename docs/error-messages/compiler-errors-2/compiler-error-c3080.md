@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3080"
 title: "Compiler Error C3080"
 ms.date: "11/04/2016"
 f1_keywords: ["C3080"]
@@ -15,7 +16,7 @@ For more information, see [Destructors and finalizers in How to: Define and cons
 
 The following sample generates C3080.
 
-```
+```cpp
 // C3080.cpp
 // compile with: /clr /c
 ref struct rs {

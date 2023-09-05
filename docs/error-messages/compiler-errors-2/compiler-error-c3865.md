@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3865"
 title: "Compiler Error C3865"
 ms.date: "11/04/2016"
 f1_keywords: ["C3865"]
@@ -15,7 +16,7 @@ For more information, see [Calling Conventions](../../cpp/calling-conventions.md
 
 The following sample generates C3865:
 
-```
+```cpp
 // C3865.cpp
 // compile with: /clr
 // processor: x86

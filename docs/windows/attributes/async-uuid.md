@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: async_uuid"
 title: "async_uuid (C++ COM Attribute)"
 ms.date: "10/02/2018"
 f1_keywords: ["vc-attr.async_uuid"]
@@ -22,7 +23,7 @@ A UUID that identifies the version of the interface.
 
 ## Remarks
 
-The **async_uuid** C++ attribute has the same functionality as the [async_uuid](/windows/desktop/Midl/async-uuid) MIDL attribute.
+The **async_uuid** C++ attribute has the same functionality as the [async_uuid](/windows/win32/Midl/async-uuid) MIDL attribute.
 
 ## Example
 
@@ -40,9 +41,7 @@ __interface ICustom {
 
 ## Requirements
 
-### Attribute Context
-
-|||
+| Attribute context | Value |
 |-|-|
 |**Applies to**|`interface`|
 |**Repeatable**|No|
@@ -51,7 +50,7 @@ __interface ICustom {
 
 For more information about the attribute contexts, see [Attribute Contexts](cpp-attributes-com-net.md#contexts).
 
-## See Also
+## See also
 
 [IDL Attributes](idl-attributes.md)<br/>
 [Interface Attributes](interface-attributes.md)

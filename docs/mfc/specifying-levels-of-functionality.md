@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Specifying Levels of Functionality"
 title: "Specifying Levels of Functionality"
 ms.date: "11/06/2018"
 helpviewer_keywords: ["CObject class [MFC], adding functionality to derived classes", "runtime [MFC], class information", "serialization [MFC], Cobject", "dynamic creation support", "levels [MFC], functionality in CObject", "run-time class [MFC], information support", "levels [MFC]"]
@@ -61,6 +62,6 @@ For a general description of `CObject` functionality, see the article [Deriving 
 
 For more details on how to enable serialization when you derive your class from `CObject`, see the articles [Files in MFC](../mfc/files-in-mfc.md) and [Serialization](../mfc/serialization-in-mfc.md).
 
-## See Also
+## See also
 
 [Deriving a Class from CObject](../mfc/deriving-a-class-from-cobject.md)

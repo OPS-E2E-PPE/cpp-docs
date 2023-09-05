@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3536"
 title: "Compiler Error C3536"
 ms.date: "11/04/2016"
 f1_keywords: ["C3536"]
@@ -19,7 +20,7 @@ The indicated symbol cannot be used before it is initialized. In practice, this 
 
 The following example yields C3536 because each variable is initialized with itself.
 
-```
+```cpp
 // C3536.cpp
 // Compile with /Zc:auto
 int main()
@@ -33,6 +34,6 @@ int main()
 };
 ```
 
-## See Also
+## See also
 
-[auto Keyword](../../cpp/auto-keyword.md)
+[auto Keyword](../../cpp/auto-cpp.md)

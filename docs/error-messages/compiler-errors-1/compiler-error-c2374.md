@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2374"
 title: "Compiler Error C2374"
 ms.date: "11/04/2016"
 f1_keywords: ["C2374"]
@@ -13,7 +14,7 @@ The identifier is initialized more than once.
 
 The following sample generates C2374:
 
-```
+```cpp
 // C2374.cpp
 // compile with: /c
 int i = 0;

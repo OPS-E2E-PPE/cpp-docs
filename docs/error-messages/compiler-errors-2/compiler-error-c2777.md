@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2777"
 title: "Compiler Error C2777"
 ms.date: "11/04/2016"
 f1_keywords: ["C2777"]
@@ -13,7 +14,7 @@ A [property](../../cpp/property-cpp.md) declspec modifier had more than one `put
 
 The following sample generates C2777:
 
-```
+```cpp
 // C2777.cpp
 struct A {
    __declspec(property(put=PutProp,put=PutPropToo))   // C2777

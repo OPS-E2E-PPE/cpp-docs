@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Platform::Delegate Class"
 title: "Platform::Delegate Class"
 ms.date: "12/30/2016"
 ms.topic: "reference"
@@ -22,7 +23,7 @@ The Delegate class has the Equals(), GetHashCode(), and ToString() methods deriv
 
 ### Remarks
 
-Use the [delegate](../windows/delegate-cpp-component-extensions.md) keyword to create delegates; do not use Platform::Delegate explicitly. For more information, see [Delegates](../cppcx/delegates-c-cx.md). For an example of how to create and consume a delegate, see [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Use the [delegate](../extensions/delegate-cpp-component-extensions.md) keyword to create delegates; do not use Platform::Delegate explicitly. For more information, see [Delegates](../cppcx/delegates-c-cx.md). For an example of how to create and consume a delegate, see [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 ### Requirements
 
@@ -34,6 +35,6 @@ Use the [delegate](../windows/delegate-cpp-component-extensions.md) keyword to c
 
 **Metadata:** platform.winmd
 
-## See Also
+## See also
 
 [Platform namespace](../cppcx/platform-namespace-c-cx.md)

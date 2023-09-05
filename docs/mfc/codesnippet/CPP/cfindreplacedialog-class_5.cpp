@@ -4,24 +4,22 @@ LRESULT CMyRichEditView::OnFindReplace(WPARAM wparam, LPARAM lparam)
 
    CFindReplaceDialog *pDlg = CFindReplaceDialog::GetNotifier(lparam);
 
-   if( NULL != pDlg )
+   if (NULL != pDlg)
    {
-      // Use pDlg as a pointer to the existing FindReplace dlg to 
+      // Use pDlg as a pointer to the existing FindReplace dlg to
       // call CFindReplaceDialog member functions
-      if(pDlg->IsTerminating())
+      if (pDlg->IsTerminating())
       {
-         CString   csFindString;
-         CString   csReplaceString;
-         
+         CString csFindString;
+         CString csReplaceString;
+
          csFindString = pDlg->GetFindString();
          csReplaceString = pDlg->GetReplaceString();
 
-         VERIFY(AfxGetApp()->WriteProfileString( AfxGetApp()->m_pszAppName,
-            _T("FindString"), csFindString));
          VERIFY(AfxGetApp()->WriteProfileString(AfxGetApp()->m_pszAppName,
-            _T("ReplaceString"), csReplaceString));
-
-         VERIFY(pDlg->DestroyWindow());
+                                                _T("FindString"), csFindString));
+         VERIFY(AfxGetApp()->WriteProfileString(AfxGetApp()->m_pszAppName,
+                                                _T("ReplaceString"), csReplaceString));
       }
    }
 

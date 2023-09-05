@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Upgrading an Existing ActiveX Control"
 title: "Upgrading an Existing ActiveX Control"
-ms.date: "09/12/2018"
+ms.date: 11/03/2021
 helpviewer_keywords: ["ActiveX controls [MFC], Internet", "LPK files for Internet controls", "safe for scripting and initialization (controls)", "OLE controls [MFC], upgrading to ActiveX", "CAB files, for ActiveX controls", "Internet applications [MFC], ActiveX controls", "Internet applications [MFC], packaging code for download", "upgrading ActiveX controls", "licensing ActiveX controls"]
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
 ---
@@ -9,7 +10,7 @@ ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
 Existing ActiveX controls (formerly OLE controls) can be used on the Internet without modification. However, you may want to modify controls to improve their performance.
 
 > [!IMPORTANT]
-> ActiveX is a legacy technology that should not be used for new development. For more information about modern technologies that supersede ActiveX, see [ActiveX Controls](activex-controls.md).
+> ActiveX is a legacy technology that should not be used for new development. For more information about modern technologies that supersede ActiveX, see [ActiveX Controls](activex-controls.md). Support for ActiveX controls was deprecated in later versions of Internet Explorer, and is not supported by modern browsers. Microsoft no longer supplies web-accessible ActiveX components.
 
 When using your control on a Web page, there are additional considerations. The .ocx file and all supporting files must be on the target machine or be downloaded across the Internet. This makes code size and download time an important consideration. Downloads can be packaged in a signed .cab file. You can mark your control as safe for scripting, and as safe for initializing.
 
@@ -29,9 +30,9 @@ This article discusses the following topics:
 
 You can also add optimizations, as described in [ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md). Monikers can be used to download properties and large BLOBs asynchronously, as described in [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md).
 
-##  <a name="_core_packaging_code_for_downloading"></a> Packaging Code for Downloading
+## <a name="_core_packaging_code_for_downloading"></a> Packaging Code for Downloading
 
-For more information on this subject, see [Packaging ActiveX Controls](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29).
+For more information on this subject, see [Packaging ActiveX Controls](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29).
 
 ### The CODEBASE Tag
 
@@ -40,7 +41,7 @@ ActiveX controls are embedded in Web pages using the `<OBJECT>` tag. The `CODEBA
 ### Using the CODEBASE Tag with an OCX File
 
 ```
-CODEBASE="http://example.microsoft.com/mycontrol.ocx#version=4,
+CODEBASE="http://example.contoso.com/mycontrol.ocx#version=4,
     70,
     0,
     1086"
@@ -51,7 +52,7 @@ This solution downloads only the control's .ocx file, and requires any supportin
 ### Using the CODEBASE Tag with an INF File
 
 ```
-CODEBASE="http://example.microsoft.com/trustme.inf"
+CODEBASE="http://example.contoso.com/trustme.inf"
 ```
 
 An .inf file will control the installation of an .ocx and its supporting files. This method is not recommended because it is not possible to sign an .inf file (see [Signing Code](#_core_signing_code) for pointers on code signing).
@@ -59,7 +60,7 @@ An .inf file will control the installation of an .ocx and its supporting files. 
 ### Using the CODEBASE Tag with a CAB File
 
 ```
-CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
+CODEBASE="http://example.contoso.com/acontrol.cab#version=1,
     2,
     0,
     0"
@@ -69,20 +70,20 @@ Cabinet files are the recommended way to package ActiveX controls that use MFC. 
 
 ### Creating CAB Files
 
-Tools to create cabinet files are now part of the [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk).
+Tools to create cabinet files are now part of the [Windows SDK](https://dev.windows.com/downloads/windows-sdk).
 
 The cabinet file pointed to by `CODEBASE` should contain the .ocx file for your ActiveX control and an .inf file to control its installation. You create the cabinet file by specifying the name of your control file and an .inf file. Do not include dependent DLLs that may already exist on the system in this cabinet file. For example, the MFC DLLs are packaged in a separate cabinet file and referred to by the controlling .inf file.
 
-For details on how to create a CAB file, see [Creating a CAB File](/windows/desktop/devnotes/cabinet-api-functions).
+For details on how to create a CAB file, see [Creating a CAB File](/windows/win32/devnotes/cabinet-api-functions).
 
 ### The INF File
 
-The following example, spindial.inf, lists the supporting files and the version information needed for the MFC Spindial control. Notice the location for the MFC DLLs is a Microsoft Web site. The mfc42.cab is provided and signed by Microsoft.
+The following example, spindial.inf, lists the supporting files and the version information needed for the MFC Spindial control. The mfc42.cab is provided and signed by Microsoft.
 
 ```
 Contents of spindial.inf:
 [mfc42installer]
-file-win32-x86=http://activex.microsoft.com/controls/vc/mfc42.cab
+file-win32-x86=http://example.contoso.com/controls/vc/mfc42.cab
 [Olepro32.dll] - FileVersion=5,
     0,
     4261,
@@ -104,7 +105,7 @@ The following example illustrates using the `<OBJECT>` tag to package the MFC Sp
 ```
 <OBJECT ID="Spindial1" WIDTH=100 HEIGHT=51
     CLASSID="CLSID:06889605-B8D0-101A-91F1-00608CEAD5B3"
-    CODEBASE="http://example.microsoft.com/spindial.cab#Version=1,0,0,001">
+    CODEBASE="http://example.contoso.com/spindial.cab#Version=1,0,0,001">
 <PARAM NAME="_Version" VALUE="65536">
 <PARAM NAME="_ExtentX" VALUE="2646">
 <PARAM NAME="_ExtentY" VALUE="1323">
@@ -127,7 +128,7 @@ Note here that the `#Version` information specified with a CAB file applies to t
 
 Depending on the version specified, you can force download of your control. For complete specifications of the `OBJECT` tag including the *CODEBASE* parameter, see the W3C reference.
 
-##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Marking a Control Safe for Scripting and Initializing
+## <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Marking a Control Safe for Scripting and Initializing
 
 ActiveX controls used in Web pages should be marked as safe for scripting and safe for initializing if they are in fact safe. A safe control will not perform disk IO or access the memory or registers of a machine directly.
 
@@ -152,7 +153,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}
 ```
 
-##  <a name="_core_licensing_issues"></a> Licensing Issues
+## <a name="_core_licensing_issues"></a> Licensing Issues
 
 If you want to use a licensed control on a Web page, you must verify that the license agreement allows its use on the Internet and create a license package file (LPK) for it.
 
@@ -166,7 +167,7 @@ To use a licensed ActiveX control in Internet Explorer, you must check the vendo
 
 - Use of the Codebase parameter
 
-To use a licensed control in an HTML page on a nonlicensed machine, you must generate a license package file (LPK). The LPK file contains run-time licenses for licensed controls in the HTML page. This file is generated via LPK_TOOL.EXE which comes with the ActiveX SDK. For more information, see the MSDN Web site at [http://msdn.microsoft.com](http://msdn.microsoft.com).
+To use a licensed control in an HTML page on a nonlicensed machine, you must generate a license package file (LPK). The LPK file contains run-time licenses for licensed controls in the HTML page. This file is generated via LPK_TOOL.EXE which comes with the ActiveX SDK.
 
 #### To create an LPK file
 
@@ -207,17 +208,17 @@ To use a licensed control in an HTML page on a nonlicensed machine, you must gen
 
 For more information about control licensing, see [ActiveX Controls: Licensing an ActiveX Control](../mfc/mfc-activex-controls-licensing-an-activex-control.md).
 
-##  <a name="_core_signing_code"></a> Signing Code
+## <a name="_core_signing_code"></a> Signing Code
 
 Code signing is designed to identify the source of code, and to guarantee that the code has not changed since it was signed. Depending on browser safety settings, users may be warned before the code is downloaded. Users may choose to trust certain certificate owners or companies, in which case code signed by those trusted will be downloaded without warning. Code is digitally signed to avoid tampering.
 
-Make sure your final code is signed so that your control can be automatically downloaded without displaying trust warning messages. For details on how to sign code, check the documentation on Authenticode in the ActiveX SDK and see [Signing a CAB File](/windows/desktop/devnotes/cabinet-api-functions).
+Make sure your final code is signed so that your control can be automatically downloaded without displaying trust warning messages. For details on how to sign code, check the documentation on Authenticode in the ActiveX SDK and see [Signing a CAB File](/windows/win32/devnotes/cabinet-api-functions).
 
 Depending on trust and browser safety level settings, a certificate may be displayed to identify the signing person or company. If the safety level is none, or if the signed control's certificate owner is trusted, a certificate will not be displayed. See [Internet Explorer Browser Safety Levels and Control Behavior](#_core_internet_explorer_browser_safety_levels_and_control_behavior) for details on how the browser safety setting will determine whether your control is downloaded and a certificate displayed.
 
 Digital signing guarantees code has not changed since it's been signed. A hash of the code is taken and embedded in the certificate. This hash is later compared with a hash of the code taken after the code is downloaded but before it runs. Companies such as Verisign can supply private and public keys needed to sign code. The ActiveX SDK ships with MakeCert, a utility for creating test certificates.
 
-##  <a name="_core_managing_the_palette"></a> Managing the Palette
+## <a name="_core_managing_the_palette"></a> Managing the Palette
 
 Containers determine the palette and make it available as an ambient property, **DISPID_AMBIENT_PALETTE**. A container (for example, Internet Explorer) chooses a palette that is used by all ActiveX controls on a page to determine their own palette. This prevents display flickering and presents a consistent appearance.
 
@@ -229,7 +230,7 @@ Under OCX 96 guidelines, a control must always realize its palette in the backgr
 
 Older containers that do not use the ambient palette property will send WM_QUERYNEWPALETTE and WM_PALETTECHANGED messages. A control can override `OnQueryNewPalette` and `OnPaletteChanged` to handle these messages.
 
-##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Internet Explorer Browser Safety Levels and Control Behavior
+## <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Internet Explorer Browser Safety Levels and Control Behavior
 
 A browser has options for safety level, configurable by the user. Because Web pages can contain active content that might potentially harm a user's computer, browsers allow the user to select options for safety level. Depending on the way a browser implements safety levels, a control may not be downloaded at all, or will display a certificate or a warning message to allow the user to choose at run time whether or not to download the control. The behavior of ActiveX controls under high, medium, and low safety levels on Internet Explorer is listed below.
 
@@ -255,9 +256,8 @@ A browser has options for safety level, configurable by the user. Because Web pa
 
 - Scripting and persistence occur without warning.
 
-## See Also
+## See also
 
 [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)<br/>
 [MFC ActiveX Controls: Licensing an ActiveX Control](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
-

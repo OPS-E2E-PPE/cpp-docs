@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2914"
 title: "Compiler Error C2914"
 ms.date: "11/04/2016"
 f1_keywords: ["C2914"]
@@ -13,7 +14,7 @@ The compiler cannot determine which overloaded functions to use for a generic or
 
 The following sample generates C2914:
 
-```
+```cpp
 // C2914.cpp
 // compile with: /c
 void f(int);
@@ -26,7 +27,7 @@ void h() { g(f); }   // C2914
 
 C2914 can also occur when using generics.  The following sample generates C2914:
 
-```
+```cpp
 // C2914b.cpp
 // compile with: /clr /c
 void f(int);

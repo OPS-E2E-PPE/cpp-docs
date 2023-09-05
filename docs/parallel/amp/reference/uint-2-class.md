@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: uint_2 Class"
 title: "uint_2 Class"
 ms.date: "11/04/2016"
 f1_keywords: ["amp_short_vectors/Concurrency::graphics::uint_2::set_xy", "amp_short_vectors/Concurrency::graphics::uint_2::y", "amp_short_vectors/Concurrency::graphics::uint_2::gr", "amp_short_vectors/Concurrency::graphics::uint_2::operator-", "amp_short_vectors/Concurrency::graphics::uint_2::get_x", "amp_short_vectors/Concurrency::graphics::uint_2::operator-=", "amp_short_vectors/Concurrency::graphics::uint_2::r", "amp_short_vectors/Concurrency::graphics::uint_2::yx", "amp_short_vectors/Concurrency::graphics::uint_2::operator--", "amp_short_vectors/Concurrency::graphics::uint_2::set_yx", "amp_short_vectors/Concurrency::graphics::uint_2::operator=", "amp_short_vectors/Concurrency::graphics::uint_2::set_x", "amp_short_vectors/Concurrency::graphics::uint_2::operator+=", "amp_short_vectors/Concurrency::graphics::uint_2::get_y", "amp_short_vectors/Concurrency::graphics::uint_2::xy", "amp_short_vectors/Concurrency::graphics::uint_2::x", "amp_short_vectors/Concurrency::graphics::uint_2::get_xy", "amp_short_vectors/Concurrency::graphics::uint_2::set_y", "amp_short_vectors/Concurrency::graphics::uint_2", "amp_short_vectors/Concurrency::graphics::uint_2::operator*=", "amp_short_vectors/Concurrency::graphics::uint_2::get_yx", "amp_short_vectors/Concurrency::graphics::uint_2::operator/=", "amp_short_vectors/Concurrency::graphics::uint_2::g", "amp_short_vectors/Concurrency::graphics::uint_2::operator++", "amp_short_vectors/Concurrency::graphics::uint_2::rg"]
@@ -10,7 +11,7 @@ Represents a short vector of two unsigned integers.
 
 ## Syntax
 
-```
+```cpp
 class uint_2;
 ```
 
@@ -55,7 +56,7 @@ class uint_2;
 |uint_2::operator*=||
 |uint_2::operator/=||
 |uint_2::operator^=||
-|uint_2::operator&#124;=||
+|uint_2::operator\|=||
 |uint_2::operator~||
 |uint_2::operator++||
 |uint_2::operator+=||
@@ -93,11 +94,11 @@ class uint_2;
 
 **Namespace:** Concurrency::graphics
 
-##  <a name="ctor"></a> uint_2
+## <a name="ctor"></a> uint_2
 
 Default constructor, initializes all elements with 0.
 
-```
+```cpp
 uint_2() restrict(amp,
     cpu);
 
@@ -149,12 +150,12 @@ The value for initialization.
 *_Other*<br/>
 The object used to initialize.
 
-##  <a name="uint_2__size"></a> size
+## <a name="uint_2__size"></a> size
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## See Also
+## See also
 
 [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)

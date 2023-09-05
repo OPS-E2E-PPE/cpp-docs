@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2582"
 title: "Compiler Error C2582"
 ms.date: "11/04/2016"
 f1_keywords: ["C2582"]
@@ -13,7 +14,7 @@ An attempt was made to assign to an object that does not have an assignment oper
 
 The following sample generates C2582:
 
-```
+```cpp
 // C2582.cpp
 // compile with: /clr
 using namespace System;

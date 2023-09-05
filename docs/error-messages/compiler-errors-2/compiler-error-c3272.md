@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3272"
 title: "Compiler Error C3272"
 ms.date: "11/04/2016"
 f1_keywords: ["C3272"]
@@ -13,7 +14,7 @@ When `StructLayout(LayoutKind::Explicit)` is in effect, fields must be marked wi
 
 The following sample generates C3272:
 
-```
+```cpp
 // C3272_2.cpp
 // compile with: /clr /c
 using namespace System;

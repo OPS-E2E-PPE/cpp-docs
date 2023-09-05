@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CW2WEX Class"
 title: "CW2WEX Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CW2WEX", "ATLCONV/ATL::CW2WEX", "ATLCONV/ATL::CW2WEX::CW2WEX", "ATLCONV/ATL::CW2WEX::m_psz", "ATLCONV/ATL::CW2WEX::m_szBuffer"]
@@ -10,7 +11,7 @@ ms.assetid: 46262e56-e0d2-41fe-855b-0b67ecc8fcd7
 This class is used by the string conversion macros CW2TEX and CT2WEX, and the typedef CW2W.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -76,7 +77,7 @@ See [ATL and MFC String Conversion Macros](string-conversion-macros.md) for an e
 
 **Header:** atlconv.h
 
-##  <a name="cw2wex"></a>  CW2WEX::CW2WEX
+## <a name="cw2wex"></a> CW2WEX::CW2WEX
 
 The constructor.
 
@@ -97,7 +98,7 @@ The code page. Not used in this class.
 
 Creates the buffer required for the translation.
 
-##  <a name="dtor"></a>  CW2WEX::~CW2WEX
+## <a name="dtor"></a> CW2WEX::~CW2WEX
 
 The destructor..
 
@@ -109,7 +110,7 @@ The destructor..
 
 Frees the allocated buffer.
 
-##  <a name="m_psz"></a>  CW2WEX::m_psz
+## <a name="m_psz"></a> CW2WEX::m_psz
 
 The data member that stores the source string.
 
@@ -117,7 +118,7 @@ The data member that stores the source string.
 LPWSTR m_psz;
 ```
 
-##  <a name="m_szbuffer"></a>  CW2WEX::m_szBuffer
+## <a name="m_szbuffer"></a> CW2WEX::m_szBuffer
 
 The static buffer, used to store the converted string.
 
@@ -125,7 +126,7 @@ The static buffer, used to store the converted string.
 wchar_t m_szBuffer[t_nBufferLength];
 ```
 
-##  <a name="operator_lpwstr"></a>  CW2WEX::operator LPWSTR
+## <a name="operator_lpwstr"></a> CW2WEX::operator LPWSTR
 
 Cast operator.
 
@@ -137,7 +138,7 @@ operator LPWSTR() const throw();
 
 Returns the text string as type LPWSTR.
 
-## See Also
+## See also
 
 [CA2AEX Class](../../atl/reference/ca2aex-class.md)<br/>
 [CA2CAEX Class](../../atl/reference/ca2caex-class.md)<br/>

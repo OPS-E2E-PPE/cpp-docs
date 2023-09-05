@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4810"
 title: "Compiler Warning (level 1) C4810"
 ms.date: "11/04/2016"
 f1_keywords: ["C4810"]
@@ -13,7 +14,7 @@ This warning is issued when you use the **show** option of the [pack](../../prep
 
 For example, the following code shows how the C4810 warning works with the pack pragma:
 
-```
+```cpp
 // C4810.cpp
 // compile with: /W1 /LD
 // C4810 expected

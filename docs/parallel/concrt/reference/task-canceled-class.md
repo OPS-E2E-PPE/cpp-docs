@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: task_canceled Class"
 title: "task_canceled Class"
 ms.date: "11/04/2016"
 f1_keywords: ["task_canceled", "CONCRT/concurrency::task_canceled", "CONCRT/concurrency::task_canceled::task_canceled"]
@@ -11,7 +12,7 @@ This class describes an exception thrown by the PPL tasks layer in order to forc
 
 ## Syntax
 
-```
+```cpp
 class task_canceled : public std::exception;
 ```
 
@@ -35,11 +36,11 @@ class task_canceled : public std::exception;
 
 **Namespace:** concurrency
 
-##  <a name="ctor"></a> task_canceled
+## <a name="ctor"></a> task_canceled
 
 Constructs a `task_canceled` object.
 
-```
+```cpp
 explicit _CRTIMP task_canceled(_In_z_ const char* _Message) throw();
 
 task_canceled() throw();
@@ -50,6 +51,6 @@ task_canceled() throw();
 *_Message*<br/>
 A descriptive message of the error.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2054"
 title: "Compiler Error C2054"
 ms.date: "11/04/2016"
 f1_keywords: ["C2054"]
@@ -15,14 +16,14 @@ This error can be caused by omitting an equal sign (=) on a complex initializati
 
 The following sample generates C2054:
 
-```
+```c
 // C2054.c
 int array1[] { 1, 2, 3 };   // C2054, missing =
 ```
 
 Possible resolution:
 
-```
+```c
 // C2054b.c
 int main() {
    int array2[] = { 1, 2, 3 };

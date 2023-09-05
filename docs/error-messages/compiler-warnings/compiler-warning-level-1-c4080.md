@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Warning (level 1) C4080"
 title: "Compiler Warning (level 1) C4080"
 ms.date: "11/04/2016"
 f1_keywords: ["C4080"]
@@ -13,7 +14,7 @@ The name of the segment in [#pragma alloc_text](../../preprocessor/alloc-text.md
 
 The following sample generates C4080:
 
-```
+```cpp
 // C4080.cpp
 // compile with: /W1
 extern "C" void func(void);

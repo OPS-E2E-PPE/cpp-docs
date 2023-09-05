@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ODBC Basics"
 title: "ODBC Basics"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["ODBC cursor library [ODBC], ODBC components", "ODBC components", "ODBC components, required components", "ODBC, about ODBC", "ODBC, components"]
@@ -54,6 +55,6 @@ The database classes support any data source for which you have an ODBC driver. 
 
 For a list of ODBC drivers included in this version of Visual C++ and for information about obtaining additional drivers, see [ODBC Driver List](../../data/odbc/odbc-driver-list.md).
 
-## See Also
+## See also
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

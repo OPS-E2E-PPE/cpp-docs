@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3022"
 title: "Compiler Error C3022"
 ms.date: "11/04/2016"
 f1_keywords: ["C3022"]
@@ -13,7 +14,7 @@ An unsupported value was passed to a clause.
 
 The following sample generates C3022:
 
-```
+```cpp
 // C3022.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

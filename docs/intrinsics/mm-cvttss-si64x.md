@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: _mm_cvttss_si64x"
 title: "_mm_cvttss_si64x"
-ms.date: "11/04/2016"
+ms.date: "09/02/2019"
 f1_keywords: ["_mm_cvttss_si64x"]
 helpviewer_keywords: ["_mm_cvttss_si64x intrinsic", "cvttss2si instruction"]
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
@@ -13,18 +14,18 @@ Emits the x64 extended version of the Convert with Truncation Single-Precision F
 
 ## Syntax
 
-```
+```C
 __int64 _mm_cvttss_si64x(
    __m128 value
 );
 ```
 
-#### Parameters
+### Parameters
 
-*value*<br/>
-[in] An `__m128` structure containing single-precision floating-point values.
+*value*\
+[in] An **`__m128`** structure containing single-precision floating-point values.
 
-## Return Value
+## Return value
 
 The result of the conversion of the first floating-point value to a 64-bit integer.
 
@@ -38,13 +39,13 @@ The result of the conversion of the first floating-point value to a 64-bit integ
 
 ## Remarks
 
-The intrinsic differs from `_mm_cvtss_si64x` only in that inexact conversions are truncated toward zero. Because the `__m128` structure represents an XMM register, the instruction generated moves data from an XMM register into system memory.
+The intrinsic differs from `_mm_cvtss_si64x` only in that inexact conversions are truncated toward zero. Because the **`__m128`** structure represents an XMM register, the instruction generated moves data from an XMM register into system memory.
 
 This routine is only available as an intrinsic.
 
 ## Example
 
-```
+```cpp
 // _mm_cvttss_si64x.cpp
 // processor: x64
 #include <intrin.h>
@@ -78,7 +79,7 @@ int main()
 
 **END Microsoft Specific**
 
-## See Also
+## See also
 
-[__m128](../cpp/m128.md)<br/>
-[Compiler Intrinsics](../intrinsics/compiler-intrinsics.md)
+[__m128](../cpp/m128.md)\
+[Compiler intrinsics](../intrinsics/compiler-intrinsics.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Deprecated ANSI APIs"
 title: "Deprecated ANSI APIs"
 ms.date: "11/04/2016"
 helpviewer_keywords: ["MFC, ANSI deprecated methods"]
@@ -143,7 +144,6 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 
-## See Also
+## See also
 
-[Build Requirements for Windows Vista Common Controls](../mfc/build-requirements-for-windows-vista-common-controls.md)
-
+[Build Requirements for Windows Vista Common Controls](build-requirements-for-windows-vista-common-controls.md)

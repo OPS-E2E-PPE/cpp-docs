@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: lock_guard Class"
 title: "lock_guard Class"
 ms.date: "11/04/2016"
 f1_keywords: ["mutex/std::lock_guard", "mutex/std::lock_guard::lock_guard"]
@@ -40,7 +41,7 @@ The template argument `Mutex` must name a *mutex type*.
 
 **Namespace:** std
 
-## <a name="lock_guard"></a>  lock_guard::lock_guard Constructor
+## <a name="lock_guard"></a> lock_guard::lock_guard Constructor
 
 Constructs a `lock_guard` object.
 
@@ -52,7 +53,7 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### Parameters
 
-*Mtx*<br/>
+*Mtx*\
 A *mutex type* object.
 
 ### Remarks
@@ -61,7 +62,7 @@ The first constructor constructs an object of type `lock_guard` and locks *Mtx*.
 
 The second constructor does not lock *Mtx*. *Mtx* must be locked when this constructor is called. The constructor throws no exceptions.
 
-## <a name="dtorlock_guard_destructor"></a>  lock_guard::~lock_guard Destructor
+## <a name="dtorlock_guard_destructor"></a> lock_guard::~lock_guard Destructor
 
 Unlocks the `mutex` that was passed to the constructor.
 
@@ -75,5 +76,5 @@ If the `mutex` does not exist when the destructor runs, the behavior is undefine
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

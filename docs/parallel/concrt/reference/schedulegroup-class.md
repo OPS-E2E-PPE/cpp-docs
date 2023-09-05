@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ScheduleGroup Class"
 title: "ScheduleGroup Class"
 ms.date: "11/04/2016"
 f1_keywords: ["ScheduleGroup", "CONCRT/concurrency::ScheduleGroup", "CONCRT/concurrency::ScheduleGroup::Id", "CONCRT/concurrency::ScheduleGroup::Reference", "CONCRT/concurrency::ScheduleGroup::Release", "CONCRT/concurrency::ScheduleGroup::ScheduleTask"]
@@ -11,7 +12,7 @@ Represents an abstraction for a schedule group. Schedule groups organize a set o
 
 ## Syntax
 
-```
+```cpp
 class ScheduleGroup;
 ```
 
@@ -42,11 +43,11 @@ class ScheduleGroup;
 
 **Namespace:** concurrency
 
-##  <a name="id"></a> Id
+## <a name="id"></a> Id
 
 Returns an identifier for the schedule group that is unique within the scheduler to which the group belongs.
 
-```
+```cpp
 virtual unsigned int Id() const = 0;
 ```
 
@@ -54,11 +55,11 @@ virtual unsigned int Id() const = 0;
 
 An identifier for the schedule group that is unique within the scheduler to which the group belongs.
 
-##  <a name="operator_delete"></a> operator delete
+## <a name="operator_delete"></a> operator delete
 
 A `ScheduleGroup` object is destroyed internally by the runtime when all external references to it are released. It cannot be explicitly deleted.
 
-```
+```cpp
 void operator delete(
     void* _PObject);
 
@@ -74,11 +75,11 @@ const char *,
 *_PObject*<br/>
 A pointer to the object to be deleted.
 
-##  <a name="reference"></a> Reference
+## <a name="reference"></a> Reference
 
 Increments the schedule group reference count.
 
-```
+```cpp
 virtual unsigned int Reference() = 0;
 ```
 
@@ -90,11 +91,11 @@ The newly incremented reference count.
 
 This is typically used to manage the lifetime of the schedule group for composition. When the reference count of a schedule group falls to zero, the schedule group is deleted by the runtime. A schedule group created using either the [CurrentScheduler::CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) method, or the [Scheduler::CreateScheduleGroup](scheduler-class.md#createschedulegroup) method starts out with a reference count of one.
 
-##  <a name="release"></a> Release
+## <a name="release"></a> Release
 
 Decrements the scheduler group reference count.
 
-```
+```cpp
 virtual unsigned int Release() = 0;
 ```
 
@@ -108,17 +109,17 @@ This is typically used to manage the lifetime of the schedule group for composit
 
 A schedule group is associated with a particular scheduler instance. You must ensure that all references to the schedule group are released before all references to the scheduler are released, because the latter could result in the scheduler being destroyed. Doing otherwise results in undefined behavior.
 
-##  <a name="dtor"></a> ~ScheduleGroup
+## <a name="dtor"></a> ~ScheduleGroup
 
-```
+```cpp
 virtual ~ScheduleGroup();
 ```
 
-##  <a name="scheduletask"></a> ScheduleTask
+## <a name="scheduletask"></a> ScheduleTask
 
 Schedules a light-weight task within the schedule group.
 
-```
+```cpp
 virtual void ScheduleTask(
     TaskProc _Proc,
     _Inout_opt_ void* _Data) = 0;
@@ -136,10 +137,9 @@ A void pointer to the data that will be passed as a parameter to the body of the
 
 Calling the `ScheduleTask` method implicitly places a reference count on the schedule group which is removed by the runtime at an appropriate time after the task executes.
 
-## See Also
+## See also
 
 [concurrency Namespace](concurrency-namespace.md)<br/>
 [CurrentScheduler Class](currentscheduler-class.md)<br/>
 [Scheduler Class](scheduler-class.md)<br/>
 [Task Scheduler](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

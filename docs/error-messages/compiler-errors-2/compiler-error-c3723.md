@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C3723"
 title: "Compiler Error C3723"
 ms.date: "11/04/2016"
 f1_keywords: ["C3723"]
@@ -7,13 +8,13 @@ ms.assetid: ef0fb1ff-3f9a-4093-a6b6-894d1ab0c4b9
 ---
 # Compiler Error C3723
 
-'function': could not resolve event
+> 'function': could not resolve event
 
 `function` could not resolve which event to call.
 
 The following sample generates C3723:
 
-```
+```cpp
 // C3723.cpp
 struct A {
    // To resolve, comment void f(int); and uncomment the __event function
@@ -34,11 +35,11 @@ int main() {
 }
 ```
 
-`__hook` and `__unhook` are not compatible with /clr programming.  Use the += and -= operators instead.
+**`__hook`** and **`__unhook`** are not compatible with **`/clr`** programming.  Use the += and -= operators instead.
 
 The following sample generates C3723:
 
-```
+```cpp
 // C3723b.cpp
 // compile with: /clr
 using namespace System;

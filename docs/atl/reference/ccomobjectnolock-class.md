@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CComObjectNoLock Class"
 title: "CComObjectNoLock Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CComObjectNoLock", "ATLCOM/ATL::CComObjectNoLock", "ATLCOM/ATL::CComObjectNoLock::CComObjectNoLock", "ATLCOM/ATL::CComObjectNoLock::AddRef", "ATLCOM/ATL::CComObjectNoLock::QueryInterface", "ATLCOM/ATL::CComObjectNoLock::Release"]
@@ -40,7 +41,7 @@ Your class, derived from [CComObjectRoot](../../atl/reference/ccomobjectroot-cla
 
 ## Remarks
 
-`CComObjectNoLock` is similar to [CComObject](../../atl/reference/ccomobject-class.md) in that it implements [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) for a nonaggregated object; however, `CComObjectNoLock` does not increment the module lock count in the constructor.
+`CComObjectNoLock` is similar to [CComObject](../../atl/reference/ccomobject-class.md) in that it implements [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) for a nonaggregated object; however, `CComObjectNoLock` does not increment the module lock count in the constructor.
 
 ATL uses `CComObjectNoLock` internally for class factories. In general, you will not use this class directly.
 
@@ -54,7 +55,7 @@ ATL uses `CComObjectNoLock` internally for class factories. In general, you will
 
 **Header:** atlcom.h
 
-##  <a name="addref"></a>  CComObjectNoLock::AddRef
+## <a name="addref"></a> CComObjectNoLock::AddRef
 
 Increments the reference count on the object.
 
@@ -66,7 +67,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 A value that may be useful for diagnostics or testing.
 
-##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock
+## <a name="ccomobjectnolock"></a> CComObjectNoLock::CComObjectNoLock
 
 The constructor. Unlike [CComObject](../../atl/reference/ccomobject-class.md), does not increment the module lock count.
 
@@ -79,7 +80,7 @@ CComObjectNoLock(void* = NULL);
 <em>void\*</em><br/>
 [in] This unnamed parameter is not used. It exists for symmetry with other `CComXXXObjectXXX` constructors.
 
-##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock
+## <a name="dtor"></a> CComObjectNoLock::~CComObjectNoLock
 
 The destructor.
 
@@ -91,7 +92,7 @@ The destructor.
 
 Frees all allocated resources and calls [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
-##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface
+## <a name="queryinterface"></a> CComObjectNoLock::QueryInterface
 
 Retrieves a pointer to the requested interface.
 
@@ -111,7 +112,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 A standard HRESULT value.
 
-##  <a name="release"></a>  CComObjectNoLock::Release
+## <a name="release"></a> CComObjectNoLock::Release
 
 Decrements the reference count on the object.
 
@@ -123,6 +124,6 @@ STDMETHOD_(ULONG, Release)();
 
 In debug builds, `Release` returns a value that may be useful for diagnostics or testing. In non-debug builds, `Release` always returns 0.
 
-## See Also
+## See also
 
 [Class Overview](../../atl/atl-class-overview.md)

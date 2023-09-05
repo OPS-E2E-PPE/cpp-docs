@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2032"
 title: "Compiler Error C2032"
 ms.date: "11/04/2016"
 f1_keywords: ["C2032"]
@@ -13,7 +14,7 @@ The structure or union has a member function, which is allowed in C++ but not in
 
 The following sample generates C2032:
 
-```
+```c
 // C2032.c
 struct z {
    int i;
@@ -23,7 +24,7 @@ struct z {
 
 Possible resolution:
 
-```
+```c
 // C2032b.c
 // compile with: /c
 struct z {

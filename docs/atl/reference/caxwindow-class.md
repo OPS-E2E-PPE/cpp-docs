@@ -1,16 +1,23 @@
 ---
+description: "Learn more about: CAxWindow Class"
 title: "CAxWindow Class"
 ms.date: "11/04/2016"
 f1_keywords: ["CAxWindow", "ATLWIN/ATL::CAxWindow", "ATLWIN/ATL::AttachControl", "ATLWIN/ATL::CreateControl", "ATLWIN/ATL::CreateControlEx", "ATLWIN/ATL::GetWndClassName", "ATLWIN/ATL::QueryControl", "ATLWIN/ATL::QueryHost", "ATLWIN/ATL::SetExternalDispatch", "ATLWIN/ATL::SetExternalUIHandler"]
 helpviewer_keywords: ["CAxWindow class", "ATL, hosting ActiveX controls"]
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
+api_type:
+- DllExport
+api_location:
+- atlhost.dll
+api_name:
+- CAxWindow::CreateControlEx
 ---
 # CAxWindow Class
 
 This class provides methods for manipulating a window hosting an ActiveX control.
 
 > [!IMPORTANT]
->  This class and its members cannot be used in applications that execute in the Windows Runtime.
+> This class and its members cannot be used in applications that execute in the Windows Runtime.
 
 ## Syntax
 
@@ -22,7 +29,7 @@ class CAxWindow : public CWindow
 
 ### Methods
 
-|||
+|Function|Description|
 |-|-|
 |[AttachControl](#attachcontrol)|Attaches an existing ActiveX control to the `CAxWindow` object.|
 |[CAxWindow](#caxwindow)|Constructs a `CAxWindow` object.|
@@ -36,7 +43,7 @@ class CAxWindow : public CWindow
 
 ### Operators
 
-|||
+|Operator|Description|
 |-|-|
 |[operator =](#operator_eq)|Assigns an HWND to an existing `CAxWindow` object.|
 
@@ -54,7 +61,7 @@ If you need to change the base class, you can use `CAxWindowT` and specify the n
 
 **Header:** atlwin.h
 
-##  <a name="attachcontrol"></a>  CAxWindow::AttachControl
+## <a name="attachcontrol"></a> CAxWindow::AttachControl
 
 Creates a new host object if one isn't already present and attaches the specified control to the host.
 
@@ -80,7 +87,7 @@ A standard HRESULT value.
 
 The control object being attached must be correctly initialized before calling `AttachControl`.
 
-##  <a name="caxwindow"></a>  CAxWindow::CAxWindow
+## <a name="caxwindow"></a> CAxWindow::CAxWindow
 
 Constructs a `CAxWindow` object using an existing window object handle.
 
@@ -93,7 +100,7 @@ CAxWindow(HWND hWnd = NULL);
 *hWnd*<br/>
 A handle to an existing window object.
 
-##  <a name="createcontrol"></a>  CAxWindow::CreateControl
+## <a name="createcontrol"></a> CAxWindow::CreateControl
 
 Creates an ActiveX control, initializes it, and hosts it in the specified window.
 
@@ -114,18 +121,18 @@ HRESULT CreateControl(
 *lpszName*<br/>
 A pointer to a string to create the control. Must be formatted in one of the following ways:
 
-- A ProgID such as "MSCAL.Calendar.7"
+- A ProgID such as `"MSCAL.Calendar.7"`
 
-- A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- A CLSID such as `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- A URL such as "<http://www.microsoft.com>"
+- A URL such as `"<https://www.microsoft.com>"`
 
-- A reference to an Active document such as "file://\\\Documents\MyDoc.doc"
+- A reference to an Active document such as `"file://\\\Documents\MyDoc.doc"`
 
-- A fragment of HTML such as "MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"
+- A fragment of HTML such as `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" must precede the HTML fragment so that it is designated as being an MSHTML stream. Only the ProgID and CLSID are supported in Windows Mobile platforms. Windows CE embedded platforms, other than Windows Mobile with support for CE IE support all types including ProgID, CLSID, URL, reference to active document, and fragment of HTML.
+   > `"MSHTML:"` must precede the HTML fragment so that it is designated as being an MSHTML stream. Only the ProgID and CLSID are supported in Windows Mobile platforms. Windows CE embedded platforms, other than Windows Mobile with support for CE IE support all types including ProgID, CLSID, URL, reference to active document, and fragment of HTML.
 
 *pStream*<br/>
 [in] A pointer to a stream that is used to initialize the properties of the control. Can be NULL.
@@ -152,9 +159,9 @@ See [CAxWindow2T::CreateControlLic](../../atl/reference/caxwindow2t-class.md#cre
 
 ### Example
 
-See [Hosting ActiveX Controls Using ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) for a sample that uses `CreateControl`.
+See [Hosting ActiveX Controls Using ATL AXHost](../../atl/atl-control-containment-faq.yml#hosting-activex-controls-using-atl-axhost) for a sample that uses `CreateControl`.
 
-##  <a name="createcontrolex"></a>  CAxWindow::CreateControlEx
+## <a name="createcontrolex"></a> CAxWindow::CreateControlEx
 
 Creates an ActiveX control, initializes it, and hosts it in the specified window.
 
@@ -181,18 +188,18 @@ HRESULT CreateControlEx(
 *lpszName*<br/>
 A pointer to a string to create the control. Must be formatted in one of the following ways:
 
-- A ProgID such as "MSCAL.Calendar.7"
+- A ProgID such as `"MSCAL.Calendar.7"`
 
-- A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- A CLSID such as `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- A URL such as "<http://www.microsoft.com>"
+- A URL such as `"<https://www.microsoft.com>"`
 
-- A reference to an Active document such as "file://\\\Documents\MyDoc.doc"
+- A reference to an Active document such as `"file://\\\Documents\MyDoc.doc"`
 
-- A fragment of HTML such as "MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"
+- A fragment of HTML such as `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" must precede the HTML fragment so that it is designated as being an MSHTML stream. Only the ProgID and CLSID are supported in Windows Mobile platforms. Windows CE embedded platforms, other than Windows Mobile with support for CE IE support all types including ProgID, CLSID, URL, reference to active document, and fragment of HTML.
+   > `"MSHTML:"` must precede the HTML fragment so that it is designated as being an MSHTML stream. Only the ProgID and CLSID are supported in Windows Mobile platforms. Windows CE embedded platforms, other than Windows Mobile with support for CE IE support all types including ProgID, CLSID, URL, reference to active document, and fragment of HTML.
 
 *pStream*<br/>
 [in] A pointer to a stream that is used to initialize the properties of the control. Can be NULL.
@@ -224,9 +231,9 @@ See [CAxWindow2T::CreateControlLicEx](../../atl/reference/caxwindow2t-class.md#c
 
 ### Example
 
-See [Hosting ActiveX Controls Using ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) for a sample that uses `CreateControlEx`.
+See [Hosting ActiveX Controls Using ATL AXHost](../../atl/atl-control-containment-faq.yml#hosting-activex-controls-using-atl-axhost) for a sample that uses `CreateControlEx`.
 
-##  <a name="getwndclassname"></a>  CAxWindow::GetWndClassName
+## <a name="getwndclassname"></a> CAxWindow::GetWndClassName
 
 Retrieves the name of the window class.
 
@@ -238,7 +245,7 @@ static LPCTSTR GetWndClassName();
 
 A pointer to a string containing the name of the window class that can host nonlicensed ActiveX controls.
 
-##  <a name="operator_eq"></a>  CAxWindow::operator =
+## <a name="operator_eq"></a> CAxWindow::operator =
 
 Assigns an HWND to an existing `CAxWindow` object.
 
@@ -255,7 +262,7 @@ A handle to an existing window.
 
 Returns a reference to the current `CAxWindow` object.
 
-##  <a name="querycontrol"></a>  CAxWindow::QueryControl
+## <a name="querycontrol"></a> CAxWindow::QueryControl
 
 Retrieves the specified interface of the hosted control.
 
@@ -280,7 +287,7 @@ HRESULT QueryControl(Q** ppUnk);
 
 A standard HRESULT value.
 
-##  <a name="queryhost"></a>  CAxWindow::QueryHost
+## <a name="queryhost"></a> CAxWindow::QueryHost
 
 Returns the specified interface of the host.
 
@@ -309,7 +316,7 @@ A standard HRESULT value.
 
 The interface of the host allows access to the underlying functionality of the window-hosting code, implemented by `AxWin`.
 
-##  <a name="setexternaldispatch"></a>  CAxWindow::SetExternalDispatch
+## <a name="setexternaldispatch"></a> CAxWindow::SetExternalDispatch
 
 Sets the external dispatch interface for the `CAxWindow` object.
 
@@ -326,7 +333,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 A standard HRESULT value.
 
-##  <a name="setexternaluihandler"></a>  CAxWindow::SetExternalUIHandler
+## <a name="setexternaluihandler"></a> CAxWindow::SetExternalUIHandler
 
 Sets the external [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) interface for the `CAxWindow` object.
 
@@ -347,11 +354,10 @@ A standard HRESULT value.
 
 The external `IDocHostUIHandlerDispatch` interface is used by controls that query the host's site for the `IDocHostUIHandlerDispatch` interface. The WebBrowser control is one control that does this.
 
-## See Also
+## See also
 
-[ATLCON Sample](../../visual-cpp-samples.md)<br/>
+[ATLCON Sample](../../overview/visual-cpp-samples.md)<br/>
 [CWindow Class](../../atl/reference/cwindow-class.md)<br/>
 [Composite Control Fundamentals](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Class Overview](../../atl/atl-class-overview.md)<br/>
-[Control Containment FAQ](../../atl/atl-control-containment-faq.md)
-
+[Control Containment FAQ](../../atl/atl-control-containment-faq.yml)

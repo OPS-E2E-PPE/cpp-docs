@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2695"
 title: "Compiler Error C2695"
 ms.date: "11/04/2016"
 f1_keywords: ["C2695"]
@@ -13,7 +14,7 @@ The signature of a function in a derived class cannot override a function in a b
 
 The following sample generates C2695:
 
-```
+```cpp
 // C2695.cpp
 class C {
    virtual void __fastcall func();

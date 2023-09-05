@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Compiler Error C2648"
 title: "Compiler Error C2648"
 ms.date: "11/04/2016"
 f1_keywords: ["C2648"]
@@ -13,7 +14,7 @@ A non-static member is used as a default parameter.
 
 The following sample generates C2648:
 
-```
+```cpp
 // C2648.cpp
 // compile with: /c
 class C {

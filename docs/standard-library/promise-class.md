@@ -1,9 +1,11 @@
 ---
+description: "Learn more about: promise Class"
 title: "promise Class"
-ms.date: "10/18/2018"
+ms.date: 06/17/2022
 f1_keywords: ["future/std::promise", "future/std::promise::promise", "future/std::promise::get_future", "future/std::promise::set_exception", "future/std::promise::set_exception_at_thread_exit", "future/std::promise::set_value", "future/std::promise::set_value_at_thread_exit", "future/std::promise::swap"]
 ms.assetid: 2931558c-d94a-4ba1-ac4f-20bf7b6e23f9
 helpviewer_keywords: ["std::promise [C++]", "std::promise [C++], promise", "std::promise [C++], get_future", "std::promise [C++], set_exception", "std::promise [C++], set_exception_at_thread_exit", "std::promise [C++], set_value", "std::promise [C++], set_value_at_thread_exit", "std::promise [C++], swap"]
+ms.custom: devdivchpfy22
 ---
 # promise Class
 
@@ -43,7 +45,7 @@ class promise;
 
 ## Inheritance Hierarchy
 
-*promise*<br/>
+*promise*
 
 ## Requirements
 
@@ -51,7 +53,7 @@ class promise;
 
 **Namespace:** std
 
-## <a name="get_future"></a>  promise::get_future
+## <a name="get_future"></a> promise::get_future
 
 Returns a [future](../standard-library/future-class.md) object that has the same *associated asynchronous state* as this promise.
 
@@ -65,7 +67,7 @@ If the promise object is empty, this method throws a [future_error](../standard-
 
 If this method has already been called for a promise object that has the same associated asynchronous state, the method throws a `future_error` that has an `error_code` of `future_already_retrieved`.
 
-## <a name="op_eq"></a>  promise::operator=
+## <a name="op_eq"></a> promise::operator=
 
 Transfers the *associated asynchronous state* from a specified `promise` object.
 
@@ -75,7 +77,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### Parameters
 
-*Other*<br/>
+*Other*\
 A `promise` object.
 
 ### Return Value
@@ -86,7 +88,7 @@ A `promise` object.
 
 This operator transfers the associated asynchronous state from *Other*. After the transfer, *Other* is *empty*.
 
-## <a name="promise"></a>  promise::promise Constructor
+## <a name="promise"></a> promise::promise Constructor
 
 Constructs a `promise` object.
 
@@ -99,10 +101,10 @@ promise(promise&& Other) noexcept;
 
 ### Parameters
 
-*Al*<br/>
-A memory allocator. See [\<allocators>](../standard-library/allocators-header.md) for more information.
+*Al*\
+A memory allocator. For more information about allocators, see [\<allocators>](../standard-library/allocators-header.md).
 
-*Other*<br/>
+*Other*\
 A `promise` object.
 
 ### Remarks
@@ -113,7 +115,7 @@ The second constructor constructs an empty `promise` object and uses *Al* for me
 
 The third constructor constructs a `promise` object and transfers the associated asynchronous state from *Other*, and leaves *Other* empty.
 
-## <a name="set_exception"></a>  promise::set_exception
+## <a name="set_exception"></a> promise::set_exception
 
 Atomically stores an exception as the result of this `promise` object and sets the *associated asynchronous state* to *ready*.
 
@@ -123,7 +125,7 @@ void set_exception(exception_ptr Exc);
 
 ### Parameters
 
-*Exc*<br/>
+*Exc*\
 An [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) that's stored by this method as the exception result.
 
 ### Remarks
@@ -134,7 +136,7 @@ If `set_exception`, [set_exception_at_thread_exit](#set_exception_at_thread_exit
 
 As a result of this method, any threads that are blocked on the associated asynchronous state become unblocked.
 
-## <a name="set_exception_at_thread_exit"></a>  promise::set_exception_at_thread_exit
+## <a name="set_exception_at_thread_exit"></a> promise::set_exception_at_thread_exit
 
 Atomically sets the result of this `promise` to indicate an exception, delivering the notification only after all thread-local objects in the current thread have been destroyed (usually at thread exit).
 
@@ -144,7 +146,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### Parameters
 
-*Exc*<br/>
+*Exc*\
 An [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) that's stored by this method as the exception result.
 
 ### Remarks
@@ -153,9 +155,9 @@ If the promise object has no *associated asynchronous state*, this method throws
 
 If [set_exception](#set_exception), `set_exception_at_thread_exit`, [set_value](#set_value), or [set_value_at_thread_exit](#set_value_at_thread_exit) has already been called for a `promise` object that has the same associated asynchronous state, this method throws a `future_error` that has an error code of `promise_already_satisfied`.
 
-In contrast to [set_exception](#set_exception), this method does not set the associated asynchronous state to ready until after all thread-local objects in the current thread have been destroyed. Typically, threads that are blocked on the associated asynchronous state are not unblocked until the current thread exits.
+In contrast to [set_exception](#set_exception), this method doesn't set the associated asynchronous state to ready until after all thread-local objects in the current thread have been destroyed. Typically, threads that are blocked on the associated asynchronous state aren't unblocked until the current thread exits.
 
-## <a name="set_value"></a>  promise::set_value
+## <a name="set_value"></a> promise::set_value
 
 Atomically stores a value as the result of this `promise` object and sets the *associated asynchronous state* to *ready*.
 
@@ -168,7 +170,7 @@ void promise<void>::set_value();
 
 ### Parameters
 
-*Val*<br/>
+*Val*\
 The value to be stored as the result.
 
 ### Remarks
@@ -179,15 +181,15 @@ If [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exceptio
 
 As a result of this method, any threads that are blocked on the associated asynchronous state become unblocked.
 
-The first method also throws any exception that is thrown when *Val* is copied into the associated asynchronous state. In this situation, the associated asynchronous state is not set to ready.
+The first method also throws any exception that is thrown when *Val* is copied into the associated asynchronous state. In this situation, the associated asynchronous state isn't set to ready.
 
-The second method also throws any exception that is thrown when *Val* is moved into the associated asynchronous state. In this situation, the associated asynchronous state is not set to ready.
+The second method also throws any exception that is thrown when *Val* is moved into the associated asynchronous state. In this situation, the associated asynchronous state isn't set to ready.
 
 For the partial specialization `promise<Ty&>`, the stored value is in effect a reference to *Val*.
 
 For the specialization `promise<void>`, no stored value exists.
 
-## <a name="set_value_at_thread_exit"></a>  promise::set_value_at_thread_exit
+## <a name="set_value_at_thread_exit"></a> promise::set_value_at_thread_exit
 
 Atomically stores a value as the result of this `promise` object.
 
@@ -200,7 +202,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ### Parameters
 
-*Val*<br/>
+*Val*\
 The value to be stored as the result.
 
 ### Remarks
@@ -209,7 +211,7 @@ If the promise object has no *associated asynchronous state*, this method throws
 
 If [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value), or `set_value_at_thread_exit` has already been called for a `promise` object that has the same associated asynchronous state, this method throws a `future_error` that has an error code of `promise_already_satisfied`.
 
-In contrast to `set_value`, the associated asynchronous state is not set to ready until after all thread-local objects in the current thread have been destroyed. Typically, threads that are blocked on the associated asynchronous state are not unblocked until the current thread exits.
+In contrast to `set_value`, the associated asynchronous state isn't set to ready until after all thread-local objects in the current thread have been destroyed. Typically, threads that are blocked on the associated asynchronous state aren't unblocked until the current thread exits.
 
 The first method also throws any exception that is thrown when *Val* is copied into the associated asynchronous state.
 
@@ -219,7 +221,7 @@ For the partial specialization `promise<Ty&>`, the stored value is effectively a
 
 For the specialization `promise<void>`, no stored value exists.
 
-## <a name="swap"></a>  promise::swap
+## <a name="swap"></a> promise::swap
 
 Exchanges the *associated asynchronous state* of this promise object with that of a specified object.
 
@@ -229,9 +231,9 @@ void swap(promise& Other) noexcept;
 
 ### Parameters
 
-*Other*<br/>
+*Other*\
 A `promise` object.
 
 ## See also
 
-[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
